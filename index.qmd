@@ -22,15 +22,9 @@ format:
   html:
     toc: true  # Enables TOC on this page
     toc-depth: 3
-    html-math-method: mathjax  # Ensure proper rendering
 bibliography: references.bib  # Link to your BibTeX file
 csl: apa.csl  # Optional: Use a specific citation style (e.g., APA)
-execute:
-  echo: false  # Hide code chunks
 ---
-```{r}
-cat('<button onclick="window.print()">📄 Print / Save as PDF</button>')
-```
 
 # Executive Summary
 

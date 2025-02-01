@@ -228,11 +228,6 @@ div.csl-indent {
 </header>
 
 
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>&lt;button onclick="window.print()"&gt;📄 Print / Save as PDF&lt;/button&gt;</code></pre>
-</div>
-</div>
 <section id="executive-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive Summary</h1>
 <p>Federal agencies like the USDA track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like <a href="https://democratizingdata.ai/tools/dashboards/">DemocratizingData.ai</a> and <a href="https://www.nass.usda.gov/Data_Visualization/5W/index.php">NASS’s 5’s Data Usage Dashboard</a>. This report presents a methodology for comparing citation databases as potential data sources for identifying dataset mentions within research papers, using Scopus and OpenAlex as a test case. The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, Dimensions, and Microsoft Academic, to name a few.</p>
@@ -302,6 +297,46 @@ Mongeon, P., &amp; Paul-Hus, A. (2016). The journal coverage of web of science a
 Visser, M., Van Eck, N. J., &amp; Waltman, L. (2021). Large-scale comparison of bibliographic data sources: Scopus, web of science, dimensions, crossref, and microsoft academic. <em>Quantitative Science Studies</em>, <em>2</em>(1), 20–41. <a href="https://doi.org/10.1162/qss_a_00112">https://doi.org/10.1162/qss_a_00112</a>
 </div>
 </div></section></div></main> <!-- /main -->
+document.addEventListener("DOMContentLoaded", function() {
+
+    let printButton = document.createElement("button");
+
+    printButton.innerHTML = "📄 Print / Save as PDF";
+
+    printButton.style.position = "fixed";
+
+    printButton.style.bottom = "20px";
+
+    printButton.style.right = "20px";
+
+    printButton.style.padding = "10px 15px";
+
+    printButton.style.fontSize = "16px";
+
+    printButton.style.backgroundColor = "#007bff";
+
+    printButton.style.color = "#fff";
+
+    printButton.style.border = "none";
+
+    printButton.style.borderRadius = "5px";
+
+    printButton.style.cursor = "pointer";
+
+    
+
+    printButton.onclick = function() {
+
+        window.print();
+
+    };
+
+    
+
+    document.body.appendChild(printButton);
+
+});
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
