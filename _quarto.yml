@@ -8,10 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Technical Report
-      - href: about.qmd
-        text: Contributors
       - href: appendices.qmd
         text: Appendices
+      - href: about.qmd
+        text: Contributors
     right:
       - icon: github
         href: "https://github.com/laurenchenarides/compare_scopus_openalex_report"
