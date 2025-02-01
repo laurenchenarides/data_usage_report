@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Technical Report: Methodology for Comparing Citation Database Coverage of Dataset Usage"
+  title: "Citation Database Assessment"
   navbar:
     left:
       - href: index.qmd
@@ -20,4 +20,11 @@ format:
     highlight-style: github  # Code highlighting style
 
 editor: visual
+
+author: 
+  - name: "Lauren Chenarides"
+  - name: "Calvin Bryan"
+  - name: "Rafael Ladislau"
+  - name: "Julia Lane"
+  - name: "Ming Wang"
 

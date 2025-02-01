@@ -1,5 +1,14 @@
 ---
-title: "compare_scopus_openalex_report"
+title: "Technical Report: Methodology for Comparing Citation Database Coverage of Dataset Usage"
+author: 
+  - name: "Lauren Chenarides"
+    email: "Lauren.Chenarides@colostate.edu"
+    affiliation: "Colorado State University"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-depth: 3
 ---
 
 This is a Quarto website.
