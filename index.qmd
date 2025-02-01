@@ -68,4 +68,6 @@ For tracking USDA dataset usage, these concepts directly apply. Accurate trackin
 
 To solve this tracking challenge, methods have been developed that scan publication text for dataset mentions [@lane2022data]. The scope and accuracy of our dataset tracking depends on what publications we can access and analyze. Because different databases curate content in different ways, it creates variation in what dataset mentions they capture and their frequency. Variations in content across sources affect our ability to accurately track dataset impact and adoption. The DemocratizingData.ai platform, for example, uses bibliometric data to monitor these dataset usage patterns, helping USDA understand how its data supports research. By comparing how different citation databases track this information, we can better understand their strengths and limitations for monitoring research impact.
 
+
+
 # References

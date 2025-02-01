@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs  # Ensure Quarto builds into /docs for GitHub Pages
 
 website:
   title: "Citation Database Assessment"
