@@ -83,7 +83,7 @@ Our methodology provides a systematic approach for assessing citation databases�
 
 The methods described in this report can be applied to other citation databases as alternatives to current data sources.
 
-# Data Sources
+# Inputs for Analysis
 
 ## USDA Datasets *Lauren/Julia*
 
@@ -101,15 +101,25 @@ These records represented the main data assets (the parent record). These record
 
 Before the run to create the seed corpus was conducted, a further list of assets was identified. This includes some terms that had been searched for in the Year 1 USDA project (e.g. Census of Agriculture and Agricultural Resource Management Survey) alongside some associated acronyms e.g. FoodAPS. It proved possible to incorporate these late additions. In total these added an additional 20 search terms, comprising 12 main (parent) records and a further 8 alias records.
 
-Once the data assets and aliases were defined, the team identified the set of documents within which to conduct the search (i.e., the “search space”). This was done by first creating a seed corpus, as described below, and then using the seed corpus to infer the types of publications in which the targeted data assets would most likely be found.
+Through consultation with USDA stakeholders and recognition that agricultural economists represent a significant user group of USDA-produced datasets, we identified 13 key datasets to feature on the dashboard. This selection emerged from a broader review of USDA data assets that included over 2,000 ERS records and 21 NASS reports, as described above. The selected datasets represent those most frequently used in agricultural economics research, spanning topics from farm management to food security. @tbl-usda-datasets presents these datasets, their producing agencies, and brief descriptions.
 
-There are several factors that motivate the use of a restricted search space. Although an increasing number of research publications cite datasets in a standard way, data citation has not been adopted as a uniform practice in the research community. Consequently, searches of publication metadata (e.g., the publication reference list) alone is not sufficient. A full text search is required to find all citations of the relevant data assets. However, full text searching is much more intensive in terms of computation, and more expensive in terms of the validation process. As a consequence, the search space is restricted to balance recall and precision. Increasing recall means more of the data assets will be found and hence will provide a broader picture of the data asset’s impact. However, increasing recall comes at the expense of precision, i.e., it will result in more false positives. No matter how attractive achieving high levels of recall may be, that objective rapidly becomes prohibitive in terms of both cost (subject matter expert effort) and time. These three inputs were then combined to provide one list of data assets that could be used in the subsequent process steps. The combined list comprised 2,006 parent records and a further 1,996 aliases (some of which were acronyms). There was therefore a total of 4,002 search terms.
+| Dataset Name | Produced By | Description |
+|:-----------------------|:-----------------------|:-----------------------|
+| [Census of Agriculture](https://www.nass.usda.gov/AgCensus/) | NASS | Conducted every five years, it provides comprehensive data on U.S. farms, ranches, and producers. |
+| [Agricultural Resource Management Survey (ARMS)](https://www.ers.usda.gov/data-products/arms-farm-financial-and-crop-production-practices/) | ERS | A USDA survey on farm financials, production practices, and resource use. |
+| [Food Acquisition and Purchase Survey (FoodAPS)](https://www.ers.usda.gov/data-products/foodaps-national-household-food-acquisition-and-purchase-survey/) | ERS | A nationally representative survey tracking U.S. household food purchases and acquisitions. |
+| [Current Population Survey Food Security Supplement (CPS-FSS)](https://www.ers.usda.gov/data-products/food-security-in-the-united-states) | ERS | An annual supplement to the Current Population Survey (CPS) measuring U.S. household food security. |
+| [Food Access Research Atlas (FARA)](https://www.ers.usda.gov/data-products/food-access-research-atlas/) | ERS | A USDA tool mapping food access based on store locations and socioeconomic data. |
+| [Rural-Urban Continuum Code (RUCC)](https://www.ers.usda.gov/data-products/rural-urban-continuum-codes/) | ERS | A classification system distinguishing U.S. counties by rural and urban characteristics. |
+| [Household Food Security Survey Module](https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/survey-tools/) | ERS | A USDA survey module used to assess food insecurity levels in households. |
+| [Local Food Marketing Practices Survey](https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Local_Food/) | NASS | A USDA survey on U.S. farms' local food sales, direct-to-consumer marketing, and supply chains. |
+| [Farm to School Census](https://farmtoschoolcensus.fns.usda.gov/) | FNS | A USDA survey tracking school food procurement and local farm partnerships. |
+| [Quarterly Food at Home Price Database (QFAHPD)](https://www.ers.usda.gov/data-products/quarterly-food-at-home-price-database/) | ERS | A database of U.S. retail food prices by product, region, and time. |
+| [Tenure Ownership and Transition of Agricultural Land (TOTAL)](https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/TOTAL/) | NASS | A survey collecting data on farmland ownership, leasing, and transfer. |
+| [Transition of Agricultural Land Survey](https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/TOTAL/) | NASS | A component of TOTAL that examines farmland ownership changes and succession plans. |
+| [Information Resources, Inc. (IRI) InfoScan](https://www.iriworldwide.com/en-us/solutions/consumer-panel/infoscan) | Circana (formerly IRI) | A commercial scanner dataset tracking retail food and consumer goods purchases. |
 
-Following the Machine Learning routines and during the review of the results, some ambiguities were found in the Data Asset list leading to a set of post-search refinements. In a search list of the scale being dealt with (over 4,000) records, finding these ambiguities was not unexpected.
-
-Specifically, in the original list a small number of duplicate alias terms were noted and these were consolidated. A specific example was multiple entries for the data asset “Measuring Access to Food in Tanzania: A Food Basket Approach” and its aliases. Furthermore, it was noted a small number of aliases were attributed to the wrong parent. These were corrected. These changes resulted in a data asset, as at 22 December 2023, that had 3,991 parent and alias records.
-
-Finally, and again only following the original Kaggle search, it was noted that terms relating to Rural Urban Continuum Codes and Quick Stats had not featured in the original list. An additional eight terms were therefore added as an incremental addition to the list on 29 December 2023. These eight terms comprised two parent records with a further six associated aliases. A specific additional search was conducted for these eight records as explained later.
+: List of USDA Datasets {#tbl-usda-datasets}
 
 ## Scopus *Lauren*
 
@@ -128,6 +138,16 @@ Our analysis builds a hierarchical understanding of how USDA datasets appear in 
 Before conducting this analysis, we perform a series of steps to prepare the data. This includes extracting dataset mentions from publication text, disambiguating author names to identify distinct individuals, standardizing institution names, and developing methods to match records across the two databases. The following sections detail these preparatory steps.
 
 ## Dataset Extraction in Scopus *Julia*
+
+Once the data assets (@tbl-usda-datasets) and aliases were defined, the team identified the set of documents within which to conduct the search (i.e., the “search space”). This was done by first creating a seed corpus, as described below, and then using the seed corpus to infer the types of publications in which the targeted data assets would most likely be found.
+
+There are several factors that motivate the use of a restricted search space. Although an increasing number of research publications cite datasets in a standard way, data citation has not been adopted as a uniform practice in the research community. Consequently, searches of publication metadata (e.g., the publication reference list) alone is not sufficient. A full text search is required to find all citations of the relevant data assets. However, full text searching is much more intensive in terms of computation, and more expensive in terms of the validation process. As a consequence, the search space is restricted to balance recall and precision. Increasing recall means more of the data assets will be found and hence will provide a broader picture of the data asset’s impact. However, increasing recall comes at the expense of precision, i.e., it will result in more false positives. No matter how attractive achieving high levels of recall may be, that objective rapidly becomes prohibitive in terms of both cost (subject matter expert effort) and time. These three inputs were then combined to provide one list of data assets that could be used in the subsequent process steps. The combined list comprised 2,006 parent records and a further 1,996 aliases (some of which were acronyms). There was therefore a total of 4,002 search terms.
+
+Following the Machine Learning routines and during the review of the results, some ambiguities were found in the Data Asset list leading to a set of post-search refinements. In a search list of the scale being dealt with (over 4,000) records, finding these ambiguities was not unexpected.
+
+Specifically, in the original list a small number of duplicate alias terms were noted and these were consolidated. A specific example was multiple entries for the data asset “Measuring Access to Food in Tanzania: A Food Basket Approach” and its aliases. Furthermore, it was noted a small number of aliases were attributed to the wrong parent. These were corrected. These changes resulted in a data asset, as at 22 December 2023, that had 3,991 parent and alias records.
+
+Finally, and again only following the original Kaggle search, it was noted that terms relating to Rural Urban Continuum Codes and Quick Stats had not featured in the original list. An additional eight terms were therefore added as an incremental addition to the list on 29 December 2023. These eight terms comprised two parent records with a further six associated aliases. A specific additional search was conducted for these eight records as explained later.
 
 ### Creating a Seed Corpus
 
@@ -153,11 +173,12 @@ As well as recording the entities, the number of records associated with them th
 The results of the seed corpus generation (i.e. the entities and record counts) were provided for review to Professor Julia Lane on 15 November 2023. Based on that review, the following table provides a summary of i) decisions were taken with regards to the parameters to be used for creation of the search corpus ii) the implications of that decision on search corpus
 
 | Parameter | Seed Corpus Detection | Consequence / Implication for Seed Corpus |
-|------------------------|------------------------|------------------------|
-| SciVal Topics | Include those SciVal Topics where the article count in the Seed Corpus |  |
-| was 7 or more | All articles associated with 262 SciVal Topics |  |
+|:-----------------------|:-----------------------|:-----------------------|
+| SciVal Topics | Include those SciVal Topics where the article count in the Seed Corpus | All articles associated with 262 SciVal Topics |
 | Journals | Include those Journals where the article count in the Seed Corpus was 7 or more | All articles associated with 280 journals |
-| Authors | Include those with US affiliation | All articles associated with the US-affiliated 769 Top Authors |
+| Top Authors | Include those with US affiliation | All articles associated with the US-affiliated 769 Top Authors |
+
+: Creating a Seed Corpus {#tbl-seed-corpus}
 
 ### Creating the Full Text Search Corpus
 
@@ -170,7 +191,7 @@ In summary, the USDA full text search corpus was created using Scopus, with a pu
 The full text records associated with the USDA search corpus is shown below:
 
 |   | Number of Records |
-|------------------------------------|------------------------------------|
+|:----------------------------------|:----------------------------------:|
 | 2017-2023 Articles from Topics | 726,423 |
 | 2017-2023 Articles from Journals | 1,537,851 |
 | 2017-2023 Articles from Top Authors | 21,938 |
@@ -178,7 +199,7 @@ The full text records associated with the USDA search corpus is shown below:
 | Deduplicated articles where we have full text | 1,630,958 |
 | Deduplicated articles where we have full text and are licensed to search | 1,450,086 |
 
-: Temp
+: Full Text Records Associated with USDA Search Corpus {#tbl-usda-full-text}
 
 ### Scopus References Search Corpus
 
@@ -218,13 +239,13 @@ The Kaggle routines were run in early December 2023 with the process completing 
 A summary of some of the key results from the Full Text search is provided in the Table below:
 
 | Process Step Outputs | Number of Records |
-|------------------------------------|------------------------------------|
+|:----------------------------------|:----------------------------------:|
 | Number of unique Scopus publications identified by the three Kaggle algorithms | 635,831 |
 | Number of unique publications identified after Fuzzy text matching to target data assets | 4,104 |
 | Number of target data assets matched in the above publications | 4,392[^2] |
 | Number of snippets generated | 14,377[^3] |
 
-: Temp
+: Full Text Search Generated by Kaggle Routine {#tbl-kaggle-full-text}
 
 [^2]: Explanatory Note 1: A publication may contain references to more than one target data assets. It may also contain multiple references to the same target data asset. As an example, a publication may contain the following references to target assets (Data Asset A = 3 references, Data Asset B = 2 references, Data asset C = 4 reference then in this field three target data assets, the value included would be “3”.
 
@@ -237,12 +258,12 @@ The reference search employs an exact text string matching routine across the re
 Because of the issues associated with generic terms, the same flags as applied in the Machine Learning step were also applied here.
 
 | Process Step Outputs | Number of Records |
-|------------------------------------|------------------------------------|
+|:----------------------------------|:----------------------------------:|
 | Number of unique Scopus publications identified in reference search | 25,588 |
 | Number of those publications that were unique to the reference search (i.e. not found by Kaggle models). | 22,818 |
 | Number of target data assets matched with the above publications | 34,526 |
 
-: Temp
+: Number of Records from Scopus References Search Routine {#tbl-scopus-refs}
 
 ### Post Processing Adjustments – RUCC and QuickStat Increment
 
@@ -255,34 +276,14 @@ Note that the RUCC and Quickstat increment was applied after the Kaggle routines
 
 Describe Rafael’s methodology for searching for dataset names in OpenAlex articles and additional steps Cal did to pull data from the OpenAlex API
 
-# Data Processing
+# Metadata Processing
 
 ## Author Disambiguation *Cal/Lauren*
 
 ## Institution Disambiguation *Cal/Ming/Lauren*
 
-# Matching Methods
-
-Matching methods:
-
-1.  Rule-based matching for exact matches
-2.  Probabilistic matching for handling variations
-3.  Machine learning methods for complex cases
-
-| Method | Considerations | Example | Pros | Cons |
-|----|----|----|----|----|
-| Searching for dataset names within Scopus |  |  |  |  |
-| Searching for dataset names within OpenAlex | “Location” field set to “journal” |  |  |  |
-| Disambiguation of authors |  |  |  |  |
-| Disambiguation of institutions |  |  |  |  |
-| Standardization of institutions |  |  |  |  |
-| Searching based on the frequency of dataset appearance in journals |  |  |  |  |
-| MORE . . . |  |  |  |  |
-| Filtering on keywords to determine themes |  |  |  |  |
-
-: Summary of Methods
-
 # Results from Metadata Cleaning
+
 *This section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset*
 
 ## Journal Identification *Cal*
@@ -293,7 +294,29 @@ Matching methods:
 
 ## Institution Standardization *Ming*
 
+# Matching Methods
+
+Matching methods:
+
+1.  Rule-based matching for exact matches
+2.  Probabilistic matching for handling variations
+3.  Machine learning methods for complex cases
+
+| Method | Considerations | Example | Pros | Cons |
+|:--------------|:--------------|:--------------|:--------------|:--------------|
+| Searching for dataset names within Scopus |  |  |  |  |
+| Searching for dataset names within OpenAlex | “Location” field set to “journal” |  |  |  |
+| Disambiguation of authors |  |  |  |  |
+| Disambiguation of institutions |  |  |  |  |
+| Standardization of institutions |  |  |  |  |
+| Searching based on the frequency of dataset appearance in journals |  |  |  |  |
+| MORE . . . |  |  |  |  |
+| Filtering on keywords to determine themes |  |  |  |  |
+
+: Summary of Methods {#tbl-methods-summary}
+
 # Results from Database Comparison
+
 *This section presents results after matching (which type varies – deterministic vs fuzzy)*
 
 ## Journal Coverage *Cal*
@@ -316,7 +339,6 @@ Matching methods:
 
 ### Patterns over Time *Cal/Lauren*
 
-
 # Recommendations
 
 ## Technical Recommendations
@@ -327,12 +349,11 @@ This report analyzes USDA dataset usage patterns across both platforms and recom
 
 Given the small percentage of MSI’s represented in our institutional analysis (@sec-inst-rep), it is evident that user engagement is central to increasing utilization rates of the datasets, regardless of Scopus or OpenAlex platform.
 
-
 ## Potential Future Collaborations *Lauren/Julia*
 
-- Inter-agency Cooperative Frameworks 
-- Artificial Intelligence and Machine Learning Integration 
-- National Artificial Intelligence Research Resource (NAIRR) Pilot 
+-   Inter-agency Cooperative Frameworks
+-   Artificial Intelligence and Machine Learning Integration
+-   National Artificial Intelligence Research Resource (NAIRR) Pilot
 
 # Conclusion and Next Steps *Lauren*
 
