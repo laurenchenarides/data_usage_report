@@ -23,6 +23,7 @@ format:
     theme: default  # You can customize this
     number-sections: true  # Number sections if desired
     highlight-style: github  # Code highlighting style
+    css: styles.css
 
 editor: visual
 
