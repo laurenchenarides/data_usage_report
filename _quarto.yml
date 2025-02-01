@@ -9,6 +9,10 @@ website:
         text: Technical Report
       - href: about.qmd
         text: Contributors
+    right:
+      - icon: github
+        href: "https://github.com/laurenchenarides/compare_scopus_openalex_report"
+        aria-label: "GitHub Repository"
 
 format:
   html:
