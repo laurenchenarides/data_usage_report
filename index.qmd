@@ -68,6 +68,42 @@ For tracking USDA dataset usage, these concepts directly apply. Accurate trackin
 
 To solve this tracking challenge, methods have been developed that scan publication text for dataset mentions [@lane2022data]. The scope and accuracy of our dataset tracking depends on what publications we can access and analyze. Because different databases curate content in different ways, it creates variation in what dataset mentions they capture and their frequency. Variations in content across sources affect our ability to accurately track dataset impact and adoption. The DemocratizingData.ai platform, for example, uses bibliometric data to monitor these dataset usage patterns, helping USDA understand how its data supports research. By comparing how different citation databases track this information, we can better understand their strengths and limitations for monitoring research impact.
 
+# Project Background
+
+The DemocratizingData.ai platform currently uses Scopus, a fee-based service, to track USDA dataset usage. OpenAlex, an open-source alternative, offers potential cost savings and broader access. Moving to OpenAlex would reduce operational costs while maintaining public access to USDA’s dataset usage metrics. However, the decision to transition from Scopus to OpenAlex requires systematic evaluation of their coverage and data quality.
+
+Initial comparisons between Scopus and OpenAlex revealed unexpected patterns in coverage overlap. These findings suggested that simply replacing one database with another might affect the platform’s ability to track dataset usage accurately. This led to the development of a methodology for comparing citation databases, focusing on four key areas:
+
+1. Journal coverage: Determining which journals each platform indexes
+2. Publication tracking: Comparing how each platform captures publications within indexed journals
+3. Author identification: Evaluating how each platform handles author names and affiliations
+4. Institution recognition: Determining how each platform records and standardizes institutional information
+
+Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. Beyond platform comparison, this methodology examines inclusivity in research coverage, particularly representation of MSIs. This component helps identify potential gaps in dataset accessibility and adoption across different types of research institutions.
+
+The methods described in this report can be applied to other citation databases as alternatives to current data sources.
+
+# Data Sources
+
+## USDA Datasets *Lauren*
+
+## Scopus *Lauren*
+
+## OpenAlex *Lauren*
+
+## IPEDS *Ming*
+
+## MSI Data *Ming*
+
+
+# Methodology
+
+Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus  and OpenAlex, the two citation databases in question. We start at the journal level, identifying which journals publish research using USDA data to establish publication patterns across different research fields. We then examine individual publications within these journals, focusing on how researchers use and cite USDA datasets in their work. At a more granular level, we analyze the authors who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors). Finally, we examine the institutions themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.
+
+Before conducting this analysis, we perform a series of steps to prepare the data. This includes extracting dataset mentions from publication text, disambiguating author names to identify distinct individuals, standardizing institution names, and developing methods to match records across the two databases. The following sections detail these preparatory steps.
+
+## Dataset Extraction in Scopus *Julia*
+
 
 
 # References

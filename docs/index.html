@@ -146,7 +146,20 @@ div.csl-indent {
   <ul>
   <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="header-section-number">1</span> Executive Summary</a></li>
   <li><a href="#terminology" id="toc-terminology" class="nav-link" data-scroll-target="#terminology"><span class="header-section-number">2</span> Terminology</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3</span> References</a></li>
+  <li><a href="#project-background" id="toc-project-background" class="nav-link" data-scroll-target="#project-background"><span class="header-section-number">3</span> Project Background</a></li>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources"><span class="header-section-number">4</span> Data Sources</a>
+  <ul class="collapse">
+  <li><a href="#usda-datasets-lauren" id="toc-usda-datasets-lauren" class="nav-link" data-scroll-target="#usda-datasets-lauren"><span class="header-section-number">4.1</span> USDA Datasets <em>Lauren</em></a></li>
+  <li><a href="#scopus-lauren" id="toc-scopus-lauren" class="nav-link" data-scroll-target="#scopus-lauren"><span class="header-section-number">4.2</span> Scopus <em>Lauren</em></a></li>
+  <li><a href="#openalex-lauren" id="toc-openalex-lauren" class="nav-link" data-scroll-target="#openalex-lauren"><span class="header-section-number">4.3</span> OpenAlex <em>Lauren</em></a></li>
+  <li><a href="#ipeds-ming" id="toc-ipeds-ming" class="nav-link" data-scroll-target="#ipeds-ming"><span class="header-section-number">4.4</span> IPEDS <em>Ming</em></a></li>
+  <li><a href="#msi-data-ming" id="toc-msi-data-ming" class="nav-link" data-scroll-target="#msi-data-ming"><span class="header-section-number">4.5</span> MSI Data <em>Ming</em></a></li>
+  </ul></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">5</span> Methodology</a>
+  <ul class="collapse">
+  <li><a href="#dataset-extraction-in-scopus-julia" id="toc-dataset-extraction-in-scopus-julia" class="nav-link" data-scroll-target="#dataset-extraction-in-scopus-julia"><span class="header-section-number">5.1</span> Dataset Extraction in Scopus <em>Julia</em></a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">6</span> References</a></li>
   </ul>
 </nav>
 </nav>
@@ -264,14 +277,53 @@ div.csl-indent {
 <p>For tracking USDA dataset usage, these concepts directly apply. Accurate tracking of dataset usage in scientific literature serves multiple purposes. For federal agencies like the USDA, it helps monitor the return on public data investments, find gaps in dataset use, plan future data collection, and support evidence-based policy decisions. This tracking requires reliable citation data from citation databases. Unlike standard citations, researchers often reference datasets within the text of their publications rather than citing them formally. This makes tracking dataset usage more complex.</p>
 <p>To solve this tracking challenge, methods have been developed that scan publication text for dataset mentions <span class="citation" data-cites="lane2022data">(<a href="#ref-lane2022data" role="doc-biblioref">Lane et al., 2022</a>)</span>. The scope and accuracy of our dataset tracking depends on what publications we can access and analyze. Because different databases curate content in different ways, it creates variation in what dataset mentions they capture and their frequency. Variations in content across sources affect our ability to accurately track dataset impact and adoption. The DemocratizingData.ai platform, for example, uses bibliometric data to monitor these dataset usage patterns, helping USDA understand how its data supports research. By comparing how different citation databases track this information, we can better understand their strengths and limitations for monitoring research impact.</p>
 </section>
-<section id="references" class="level1" data-number="3">
+<section id="project-background" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Project Background</h1>
+<p>The DemocratizingData.ai platform currently uses Scopus, a fee-based service, to track USDA dataset usage. OpenAlex, an open-source alternative, offers potential cost savings and broader access. Moving to OpenAlex would reduce operational costs while maintaining public access to USDA’s dataset usage metrics. However, the decision to transition from Scopus to OpenAlex requires systematic evaluation of their coverage and data quality.</p>
+<p>Initial comparisons between Scopus and OpenAlex revealed unexpected patterns in coverage overlap. These findings suggested that simply replacing one database with another might affect the platform’s ability to track dataset usage accurately. This led to the development of a methodology for comparing citation databases, focusing on four key areas:</p>
+<ol type="1">
+<li>Journal coverage: Determining which journals each platform indexes</li>
+<li>Publication tracking: Comparing how each platform captures publications within indexed journals</li>
+<li>Author identification: Evaluating how each platform handles author names and affiliations</li>
+<li>Institution recognition: Determining how each platform records and standardizes institutional information</li>
+</ol>
+<p>Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. Beyond platform comparison, this methodology examines inclusivity in research coverage, particularly representation of MSIs. This component helps identify potential gaps in dataset accessibility and adoption across different types of research institutions.</p>
+<p>The methods described in this report can be applied to other citation databases as alternatives to current data sources.</p>
+</section>
+<section id="data-sources" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Data Sources</h1>
+<section id="usda-datasets-lauren" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="usda-datasets-lauren"><span class="header-section-number">4.1</span> USDA Datasets <em>Lauren</em></h2>
+</section>
+<section id="scopus-lauren" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="scopus-lauren"><span class="header-section-number">4.2</span> Scopus <em>Lauren</em></h2>
+</section>
+<section id="openalex-lauren" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="openalex-lauren"><span class="header-section-number">4.3</span> OpenAlex <em>Lauren</em></h2>
+</section>
+<section id="ipeds-ming" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="ipeds-ming"><span class="header-section-number">4.4</span> IPEDS <em>Ming</em></h2>
+</section>
+<section id="msi-data-ming" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="msi-data-ming"><span class="header-section-number">4.5</span> MSI Data <em>Ming</em></h2>
+</section>
+</section>
+<section id="methodology" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Methodology</h1>
+<p>Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus and OpenAlex, the two citation databases in question. We start at the journal level, identifying which journals publish research using USDA data to establish publication patterns across different research fields. We then examine individual publications within these journals, focusing on how researchers use and cite USDA datasets in their work. At a more granular level, we analyze the authors who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors). Finally, we examine the institutions themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.</p>
+<p>Before conducting this analysis, we perform a series of steps to prepare the data. This includes extracting dataset mentions from publication text, disambiguating author names to identify distinct individuals, standardizing institution names, and developing methods to match records across the two databases. The following sections detail these preparatory steps.</p>
+<section id="dataset-extraction-in-scopus-julia" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="dataset-extraction-in-scopus-julia"><span class="header-section-number">5.1</span> Dataset Extraction in Scopus <em>Julia</em></h2>
+</section>
+</section>
+<section id="references" class="level1" data-number="6">
 
 
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">3 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">6 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-broadus1987toward" class="csl-entry" role="listitem">
 Broadus, R. N. (1987). Toward a definition of <span>“bibliometrics.”</span> <em>Scientometrics</em>, <em>12</em>, 373–379. <a href="https://doi.org/10.1007/bf02016680">https://doi.org/10.1007/bf02016680</a>
 </div>
