@@ -10,7 +10,7 @@ This section describes the process of construction CSV files extracted from a SQ
 
 Below is a detailed explanation of each CSV file and how they relate to one another:
 
-### 1. **publication.csv**
+### **publication.csv**
 
 - **Description**: This file contains information about publications, which are the central entities in this dataset.
 - **Key Columns**:
@@ -27,7 +27,7 @@ Below is a detailed explanation of each CSV file and how they relate to one anot
 | 321613 | New estimates for CRNA vacancies                                     |                          | 2009 | 4     |
 | 321614 | Crossing county lines: The impact of crash location and driver's...  | 10.1016/j.aap.2006...    | 2006 | 7     |
 
-### 2. **dataset_alias.csv**
+### **dataset_alias.csv**
 
 - **Description**: Contains all the aliases (alternative names) of datasets. This helps in identifying datasets that might be referred to by different names in publications.
 - **Key Columns**:
@@ -47,7 +47,7 @@ Below is a detailed explanation of each CSV file and how they relate to one anot
 | 1676 | 87       | 89              | Census of Agriculture                              |
 | 1673 | 12       | 282             | ARMS Farm Financial and Crop Production Practices  |
 
-### 3. **dyad.csv**
+### **dyad.csv**
 
 - **Description**: Represents the mentions of dataset aliases found within publications. Acts as a linking table between `publication.csv` and `dataset_alias.csv`.
 - **Key Columns**:
@@ -63,7 +63,7 @@ Below is a detailed explanation of each CSV file and how they relate to one anot
 | 2569 | 1211491        | 87       | census of agriculture      |
 | 2573 | 1199598        | 88       | usda census of agriculture |
 
-### 4. **model.csv**
+### **model.csv**
 
 - **Description**: Lists the different models or methods used to identify dataset mentions within publications.
 - **Key Columns**:
@@ -84,7 +84,7 @@ These are the models we are focusing on to compare with data extracted from Open
 | 1  | string_matching |
 | 5  | refmatch        |
 
-### 5. **dyad_model.csv**
+### **dyad_model.csv**
 
 - **Description**: Connects dyads with the models that identified them. Allows filtering dyads based on the models used.
 - **Key Columns**:
@@ -218,7 +218,7 @@ The search in OpenAlex was performed using the same aliases and flag terms appli
 
 Below is a detailed explanation of the SQL Server-related CSV files and how they relate to one another:
 
-### 1. **publication.csv**
+### **publication.csv**
 
 - **Description**: This file contains information about publications, which are the central entities in this dataset.
 - **Key Columns**:
@@ -235,9 +235,9 @@ Below is a detailed explanation of the SQL Server-related CSV files and how they
 |--------|----------------------------------------------------------------------|--------------------------|------|-------|
 | 321613 | New estimates for CRNA vacancies                                     |                          | 2009 | 4     |
 | 321614 | Crossing county lines: The impact of crash location and driver's...  | 10.1016/j.aap.2006...    | 2006 | 7     |
-\~~~
 
-### 2. **dataset_alias.csv**
+
+### **dataset_alias.csv**
 
 - **Description**: Contains all the aliases (alternative names) of datasets. This helps in identifying datasets that might be referred to by different names in publications.
 - **Key Columns**:
@@ -257,9 +257,9 @@ Below is a detailed explanation of the SQL Server-related CSV files and how they
 |------|----------|-----------------|----------------------------------------------------|
 | 1676 | 87       | 89              | Census of Agriculture                              |
 | 1673 | 12       | 282             | ARMS Farm Financial and Crop Production Practices  |
-\~~~
 
-### 3. **dyad.csv**
+
+### **dyad.csv**
 
 - **Description**: Represents the mentions of dataset aliases found within publications. Acts as a linking table between `publication.csv` and `dataset_alias.csv`.
 - **Key Columns**:
@@ -275,9 +275,9 @@ Below is a detailed explanation of the SQL Server-related CSV files and how they
 |------|----------------|----------|----------------------------|
 | 2569 | 1211491        | 87       | census of agriculture      |
 | 2573 | 1199598        | 88       | usda census of agriculture |
-\~~~
 
-### 4. **model.csv**
+
+### **model.csv**
 
 - **Description**: Lists the different models or methods used to identify dataset mentions within publications.
 - **Key Columns**:
@@ -298,9 +298,9 @@ These are the models we are focusing on to compare with data extracted from Open
 |----|-----------------|
 | 1  | string_matching |
 | 5  | refmatch        |
-\~~~
 
-### 5. **dyad_model.csv**
+
+### **dyad_model.csv**
 
 - **Description**: Connects dyads with the models that identified them. Allows filtering dyads based on the models used.
 - **Key Columns**:
@@ -319,7 +319,6 @@ These are the models we are focusing on to compare with data extracted from Open
 | 4928 | 2569    | 1        | 2.0   |
 | 4929 | 2569    | 4        | 1.0   |
 | 4930 | 2569    | 2        | 1.0   |
-\~~~
 
 
 ## How the Files are Related
@@ -409,7 +408,7 @@ Since we're interested in mentions identified by the **`string_matching`** and *
 |----------|-----------------|---------------------------|
 | 87       | 89              | Census of Agriculture     |
 | 88       | 89              | USDA Census of Agriculture |
-\~~~
+
 
 **From `dyad.csv`**:
 
@@ -418,7 +417,7 @@ Since we're interested in mentions identified by the **`string_matching`** and *
 |------|----------------|----------|----------------------------|
 | 2569 | 1211491        | 87       | census of agriculture      |
 | 2573 | 1199598        | 88       | usda census of agriculture |
-\~~~
+
 
 **From `dyad_model.csv`** (filtered for `model_id` 1 or 5):
 
@@ -427,7 +426,7 @@ Since we're interested in mentions identified by the **`string_matching`** and *
 |---------|----------|
 | 2569    | 1        |
 | 2573    | 5        |
-\~~~
+
 
 **Resulting Publications**:
 

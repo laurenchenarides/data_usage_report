@@ -67,7 +67,7 @@
     "href": "index.html#dataset-extraction-in-openalex-rafaellaurenjuliacal",
     "title": "Methodology for Comparing Citation Database Coverage of Dataset Usage",
     "section": "5.2 Dataset Extraction in OpenAlex Rafael/Lauren/Julia/Cal",
-    "text": "5.2 Dataset Extraction in OpenAlex Rafael/Lauren/Julia/Cal\nDescribe Rafael’s methodology for searching for dataset names in OpenAlex articles and additional steps Cal did to pull data from the OpenAlex API\nRefer to ?@sec-app-openalex in the Appendix."
+    "text": "5.2 Dataset Extraction in OpenAlex Rafael/Lauren/Julia/Cal\nDescribe Rafael’s methodology for searching for dataset names in OpenAlex articles and additional steps Cal did to pull data from the OpenAlex API\nTo collect publications mentioning the NASS Census of Agriculture from the OpenAlex Catalog, I conducted a string search using a predefined set of dataset aliases: “Census of Agriculture,” “USDA Census,” “NASS Census,” “Agricultural Census,” and “AG Census.” To minimize false positives, I applied several filters: the publications had to be in English, published between 2017 and 2024, and include at least one author affiliated with an American institution. Additionally, to ensure that the publications were indeed referring to the correct dataset, I required that they also contain specific flag terms within the full text body, such as “USDA,” “US Department of Agriculture,” “United States Department of Agriculture,” “NASS,” or “National Agricultural Statistics Service.”\nThis method closely mirrors the approach used in the USDA Briefing Book sent by Julia (Appendix 1: Data Search), where a similar string search was applied to the Scopus catalog. In the Scopus analysis, the string search was performed primarily on the references text body rather than the full text and was executed only within a seed corpus. In contrast, our search in OpenAlex was conducted across the entire OpenAlex database. Notably, the references string search in Scopus identified over 80% of the findings, as documented in the briefing book, highlighting the effectiveness of this approach.\nRefer to the Appendix for additional details on file construction."
   },
   {
     "objectID": "index.html#author-disambiguation-callauren",
@@ -304,35 +304,42 @@
     "objectID": "appendices.html#how-to-extract-publications-for-a-specific-dataset-1",
     "href": "appendices.html#how-to-extract-publications-for-a-specific-dataset-1",
     "title": "Appendices",
-    "section": "2.2 How to Extract Publications for a Specific Dataset",
-    "text": "2.2 How to Extract Publications for a Specific Dataset\nTo find all publications associated with a particular dataset, such as the NASS Census of Agriculture, follow these steps:\n\nIdentify the Main Alias:\n\nFind the alias_id where alias_id equals parent_alias_id for the dataset.\nFor NASS Census of Agriculture, the main alias has alias_id = 89.\n\nGet All Aliases:\n\nIn dataset_alias.csv, filter rows where parent_alias_id equals 89.\nThis gives you all aliases associated with the NASS Census of Agriculture dataset.\n\nLink Aliases to Publications:\n\nIn dyad.csv, filter rows where alias_id matches any of the alias_ids obtained in step 2.\nThis will give you publication_ids of publications mentioning any alias of the dataset.\n\nRetrieve Publication Details:\n\nUsing the publication_ids from step 3, retrieve the corresponding records from publication.csv."
+    "section": "2.3 How to Extract Publications for a Specific Dataset",
+    "text": "2.3 How to Extract Publications for a Specific Dataset\nTo find all publications associated with a particular dataset, such as the NASS Census of Agriculture, follow these steps:\n\nIdentify the Main Alias:\n\nFind the alias_id where alias_id equals parent_alias_id for the dataset.\nFor NASS Census of Agriculture, the main alias has alias_id = 89.\n\nGet All Aliases:\n\nIn dataset_alias.csv, filter rows where parent_alias_id equals 89.\nThis gives you all aliases associated with the NASS Census of Agriculture dataset.\n\nLink Aliases to Publications:\n\nIn dyad.csv, filter rows where alias_id matches any of the alias_ids obtained in step 2.\nThis will give you publication_ids of publications mentioning any alias of the dataset.\n\nRetrieve Publication Details:\n\nUsing the publication_ids from step 3, retrieve the corresponding records from publication.csv."
   },
   {
     "objectID": "appendices.html#filtering-publications-by-specific-models-1",
     "href": "appendices.html#filtering-publications-by-specific-models-1",
     "title": "Appendices",
-    "section": "2.3 Filtering Publications by Specific Models",
-    "text": "2.3 Filtering Publications by Specific Models\nSince we’re interested in mentions identified by the string_matching and refmatch models (models with id 1 and 5), follow these steps:\n\nFilter Dyads by Model:\n\nIn dyad_model.csv, filter rows where model_id is 1 or 5.\nThis gives you dyad_ids linked to these models.\n\nGet Relevant Dyads:\n\nPerform an inner join with dyad.csv on dyad_id.\nThis filters dyads to only those identified by the specified models.\n\nProceed as Before:\n\nContinue with the steps in the previous section, but using the filtered dyads from step 2."
+    "section": "2.4 Filtering Publications by Specific Models",
+    "text": "2.4 Filtering Publications by Specific Models\nSince we’re interested in mentions identified by the string_matching and refmatch models (models with id 1 and 5), follow these steps:\n\nFilter Dyads by Model:\n\nIn dyad_model.csv, filter rows where model_id is 1 or 5.\nThis gives you dyad_ids linked to these models.\n\nGet Relevant Dyads:\n\nPerform an inner join with dyad.csv on dyad_id.\nThis filters dyads to only those identified by the specified models.\n\nProceed as Before:\n\nContinue with the steps in the previous section, but using the filtered dyads from step 2."
   },
   {
     "objectID": "appendices.html#practical-example-1",
     "href": "appendices.html#practical-example-1",
     "title": "Appendices",
-    "section": "2.4 Practical Example",
-    "text": "2.4 Practical Example\nObjective: Find all publications mentioning the NASS Census of Agriculture dataset using the string_matching and refmatch models.\nSteps:\n\nFind Main Alias ID:\n\nMain alias alias_id = 89.\n\nGet All Aliases:\n\nFrom dataset_alias.csv, extract all alias_ids where parent_alias_id = 89.\n\nFilter Dyads by Models:\n\nFrom dyad_model.csv, get dyad_ids where model_id is 1 or 5.\n\nGet Dyads for Dataset:\n\nFrom dyad.csv, select rows where:\n\nalias_id is in the list from step 2, and\nid (dyad_id) is in the list from step 3.\n\n\nRetrieve Publications:\n\nUse publication_ids from the filtered dyads to get detailed information from publication.csv."
+    "section": "2.5 Practical Example",
+    "text": "2.5 Practical Example\nObjective: Find all publications mentioning the NASS Census of Agriculture dataset using the string_matching and refmatch models.\nSteps:\n\nFind Main Alias ID:\n\nMain alias alias_id = 89.\n\nGet All Aliases:\n\nFrom dataset_alias.csv, extract all alias_ids where parent_alias_id = 89.\n\nFilter Dyads by Models:\n\nFrom dyad_model.csv, get dyad_ids where model_id is 1 or 5.\n\nGet Dyads for Dataset:\n\nFrom dyad.csv, select rows where:\n\nalias_id is in the list from step 2, and\nid (dyad_id) is in the list from step 3.\n\n\nRetrieve Publications:\n\nUse publication_ids from the filtered dyads to get detailed information from publication.csv."
   },
   {
     "objectID": "appendices.html#sample-data-illustration-1",
     "href": "appendices.html#sample-data-illustration-1",
     "title": "Appendices",
-    "section": "2.5 Sample Data Illustration",
-    "text": "2.5 Sample Data Illustration\nFrom dataset_alias.csv:\n\n\n\n\nalias_id\nparent_alias_id\nalias\n\n\n\n\n87\n89\nCensus of Agriculture\n\n\n88\n89\nUSDA Census of Agriculture\n\n\n\n~~~\nFrom dyad.csv:\n\n\n\n\nid\npublication_id\nalias_id\nmention_candidate\n\n\n\n\n2569\n1211491\n87\ncensus of agriculture\n\n\n2573\n1199598\n88\nusda census of agriculture\n\n\n\n~~~\nFrom dyad_model.csv (filtered for model_id 1 or 5):\n\n\n\n\ndyad_id\nmodel_id\n\n\n\n\n2569\n1\n\n\n2573\n5\n\n\n\n~~~\nResulting Publications:\n\nPublications with id 1211491 and 1199598 from publication.csv."
+    "section": "2.6 Sample Data Illustration",
+    "text": "2.6 Sample Data Illustration\nFrom dataset_alias.csv:\n\n\n\n\nalias_id\nparent_alias_id\nalias\n\n\n\n\n87\n89\nCensus of Agriculture\n\n\n88\n89\nUSDA Census of Agriculture\n\n\n\n~~~\nFrom dyad.csv:\n\n\n\n\nid\npublication_id\nalias_id\nmention_candidate\n\n\n\n\n2569\n1211491\n87\ncensus of agriculture\n\n\n2573\n1199598\n88\nusda census of agriculture\n\n\n\n~~~\nFrom dyad_model.csv (filtered for model_id 1 or 5):\n\n\n\n\ndyad_id\nmodel_id\n\n\n\n\n2569\n1\n\n\n2573\n5\n\n\n\n~~~\nResulting Publications:\n\nPublications with id 1211491 and 1199598 from publication.csv."
   },
   {
     "objectID": "appendices.html#conclusion-1",
     "href": "appendices.html#conclusion-1",
     "title": "Appendices",
-    "section": "2.6 Conclusion",
-    "text": "2.6 Conclusion\nBy following the steps outlined above, you can effectively navigate the dataset to extract publications related to specific datasets and identified by particular models. This structured approach allows for targeted analysis and comparison with data from sources like OpenAlex.\nKeep in mind that the OpenAlex data now may associate a single publication with multiple datasets, and due to the direct application of aliases and flag terms (with no optimizations), certain datasets like the NASS Census of Agriculture might show fewer publications than before."
+    "section": "2.7 Conclusion",
+    "text": "2.7 Conclusion\nBy following the steps outlined above, you can effectively navigate the dataset to extract publications related to specific datasets and identified by particular models. This structured approach allows for targeted analysis and comparison with data from sources like OpenAlex.\nKeep in mind that the OpenAlex data now may associate a single publication with multiple datasets, and due to the direct application of aliases and flag terms (with no optimizations), certain datasets like the NASS Census of Agriculture might show fewer publications than before."
+  },
+  {
+    "objectID": "appendices.html#how-the-files-are-related",
+    "href": "appendices.html#how-the-files-are-related",
+    "title": "Appendices",
+    "section": "2.2 How the Files are Related",
+    "text": "2.2 How the Files are Related\nThe files are structured to represent entities (publications, journals, institutions, authors) and their relationships. The main publication data is in publications_main.csv, and the details about journals, institutions, and authors are in their respective files. The link files (publication_journal_links.csv, publication_institution_links.csv, publication_author_links.csv) represent the many-to-many relationships between publications and these entities.\nBy using the OpenAlex identifiers, you can join these files to perform comprehensive analyses. For example:\n\nTo find all publications by a specific author, you can use authors.csv to find the author’s author_openalex_id and then use publication_author_links.csv to find the associated publications.\nTo analyze the distribution of publications across journals, you can join publications_main.csv, publication_journal_links.csv, and journals.csv on publication_openalex_id and journal_openalex_id."
   }
 ]
