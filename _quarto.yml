@@ -25,8 +25,11 @@ format:
     theme: default  # You can customize this
     number-sections: true  # Number sections if desired
     highlight-style: github  # Code highlighting style
-
+    
 editor: visual
+
+execute:
+  freeze: auto  # Ensures all references are updated
 
 author: 
   - name: "Lauren Chenarides, Ph.D."
