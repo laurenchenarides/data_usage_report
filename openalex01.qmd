@@ -1,0 +1,9 @@
+## Dataset Extraction in OpenAlex *Rafael/Lauren/Julia/Cal*
+
+*Describe Rafael’s methodology for searching for dataset names in OpenAlex articles and additional steps Cal did to pull data from the OpenAlex API*
+
+To collect publications mentioning the NASS Census of Agriculture from the OpenAlex Catalog, I conducted a string search using a predefined set of dataset aliases: “Census of Agriculture,” “USDA Census,” “NASS Census,” “Agricultural Census,” and “AG Census.” To minimize false positives, I applied several filters: the publications had to be in English, published between 2017 and 2024, and include at least one author affiliated with an American institution. Additionally, to ensure that the publications were indeed referring to the correct dataset, I required that they also contain specific flag terms within the full text body, such as “USDA,” “US Department of Agriculture,” “United States Department of Agriculture,” “NASS,” or “National Agricultural Statistics Service.”
+
+This method closely mirrors the approach used in the USDA Briefing Book sent by Julia (Appendix 1: Data Search), where a similar string search was applied to the Scopus catalog. In the Scopus analysis, the string search was performed primarily on the references text body rather than the full text and was executed only within a seed corpus. In contrast, our search in OpenAlex was conducted across the entire OpenAlex database. Notably, the references string search in Scopus identified over 80% of the findings, as documented in the briefing book, highlighting the effectiveness of this approach.
+
+Refer to the [Appendix](appendices.html#sec-app-openalex) for additional details on file construction.
