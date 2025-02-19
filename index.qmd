@@ -104,7 +104,7 @@ Before the run to create the seed corpus was conducted, a further list of assets
 Through consultation with USDA stakeholders and recognition that agricultural economists represent a significant user group of USDA-produced datasets, we identified 13 key datasets to feature on the dashboard. This selection emerged from a broader review of USDA data assets that included over 2,000 ERS records and 21 NASS reports, as described above. The selected datasets represent those most frequently used in agricultural economics research, spanning topics from farm management to food security. @tbl-usda-datasets presents these datasets, their producing agencies, and brief descriptions.
 
 | Dataset Name | Produced By | Description |
-|:-----------------------|:-----------------------|:-----------------------|
+|:---|:---|:---|
 | [Census of Agriculture](https://www.nass.usda.gov/AgCensus/) | NASS | Conducted every five years, it provides comprehensive data on U.S. farms, ranches, and producers. |
 | [Agricultural Resource Management Survey (ARMS)](https://www.ers.usda.gov/data-products/arms-farm-financial-and-crop-production-practices/) | ERS | A USDA survey on farm financials, production practices, and resource use. |
 | [Food Acquisition and Purchase Survey (FoodAPS)](https://www.ers.usda.gov/data-products/foodaps-national-household-food-acquisition-and-purchase-survey/) | ERS | A nationally representative survey tracking U.S. household food purchases and acquisitions. |
@@ -173,7 +173,7 @@ As well as recording the entities, the number of records associated with them th
 The results of the seed corpus generation (i.e. the entities and record counts) were provided for review to Professor Julia Lane on 15 November 2023. Based on that review, the following table provides a summary of i) decisions were taken with regards to the parameters to be used for creation of the search corpus ii) the implications of that decision on search corpus
 
 | Parameter | Seed Corpus Detection | Consequence / Implication for Seed Corpus |
-|:-----------------------|:-----------------------|:-----------------------|
+|:---|:---|:---|
 | SciVal Topics | Include those SciVal Topics where the article count in the Seed Corpus | All articles associated with 262 SciVal Topics |
 | Journals | Include those Journals where the article count in the Seed Corpus was 7 or more | All articles associated with 280 journals |
 | Top Authors | Include those with US affiliation | All articles associated with the US-affiliated 769 Top Authors |
@@ -191,7 +191,7 @@ In summary, the USDA full text search corpus was created using Scopus, with a pu
 The full text records associated with the USDA search corpus is shown below:
 
 |   | Number of Records |
-|:----------------------------------|:----------------------------------:|
+|:---|:--:|
 | 2017-2023 Articles from Topics | 726,423 |
 | 2017-2023 Articles from Journals | 1,537,851 |
 | 2017-2023 Articles from Top Authors | 21,938 |
@@ -239,7 +239,7 @@ The Kaggle routines were run in early December 2023 with the process completing 
 A summary of some of the key results from the Full Text search is provided in the Table below:
 
 | Process Step Outputs | Number of Records |
-|:----------------------------------|:----------------------------------:|
+|:---|:--:|
 | Number of unique Scopus publications identified by the three Kaggle algorithms | 635,831 |
 | Number of unique publications identified after Fuzzy text matching to target data assets | 4,104 |
 | Number of target data assets matched in the above publications | 4,392[^2] |
@@ -258,7 +258,7 @@ The reference search employs an exact text string matching routine across the re
 Because of the issues associated with generic terms, the same flags as applied in the Machine Learning step were also applied here.
 
 | Process Step Outputs | Number of Records |
-|:----------------------------------|:----------------------------------:|
+|:---|:--:|
 | Number of unique Scopus publications identified in reference search | 25,588 |
 | Number of those publications that were unique to the reference search (i.e. not found by Kaggle models). | 22,818 |
 | Number of target data assets matched with the above publications | 34,526 |
@@ -309,7 +309,7 @@ Matching methods:
 3.  Machine learning methods for complex cases
 
 | Method | Considerations | Example | Pros | Cons |
-|:--------------|:--------------|:--------------|:--------------|:--------------|
+|:---|:---|:---|:---|:---|
 | Searching for dataset names within Scopus |  |  |  |  |
 | Searching for dataset names within OpenAlex | “Location” field set to “journal” |  |  |  |
 | Disambiguation of authors |  |  |  |  |

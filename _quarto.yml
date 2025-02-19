@@ -26,7 +26,7 @@ format:
     number-sections: true  # Number sections if desired
     highlight-style: github  # Code highlighting style
     
-editor: visual
+editor: source
 
 execute:
   freeze: auto  # Ensures all references are updated
