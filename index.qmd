@@ -129,7 +129,7 @@ The process of deriving the list of publications consists of five steps:
 
 **4. Disambiguation Process** (@sec-disambiguation)
 
-- Pre-process and clean publication metadata for each citation database.
+- Pre-process and clean publication metadata generated from each citation database.
 - Standardize journal, institution, and author names.
 - Deduplicate records.
 
