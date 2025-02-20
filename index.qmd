@@ -28,7 +28,7 @@ csl: apa.csl  # Optional: Use a specific citation style (e.g., APA)
 
 # Executive Summary
 
-Federal agencies like the USDA track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like [DemocratizingData.ai](https://democratizingdata.ai/tools/dashboards/) and [NASS’s 5’s Data Usage Dashboard](https://www.nass.usda.gov/Data_Visualization/5W/index.php). This report presents a methodology for comparing citation databases as potential data sources for identifying dataset mentions within research papers, using Scopus, OpenAlex, and Dimensions as test cases. The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.
+Federal agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like [DemocratizingData.ai](https://democratizingdata.ai/tools/dashboards/) and [NASS’s 5’s Data Usage Dashboard](https://www.nass.usda.gov/Data_Visualization/5W/index.php). This report presents a methodology for comparing citation databases as potential data sources for identifying dataset mentions within research papers, using Scopus, OpenAlex, and Dimensions as test cases. The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.
 
 Citation databases track academic research output. Different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports. Tracking dataset usage requires developing methods that scan publication text for dataset mentions. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. Not to mention, dataset tracking requires reliable citation data from citation databases.
 
@@ -61,7 +61,7 @@ The methodology produced these reusable components:
 
 # Terminology
 
-Citation databases form the foundation of modern research tracking and analysis. Digital repositories, like the test cases featured here, systematically catalog scholarly publications and their references to each other [@debellis2009bibliometrics]. Citation databases differ in their approaches to curating and maintaining this information. Some focus exclusively on peer-reviewed journal articles with strict inclusion criteria, while others index a broader range of research outputs including preprints, technical reports, and conference proceedings [@martin2021google; @mongeon2016journal]. These curation approaches affect how comprehensively each database captures research impact [@visser2021large].
+Citation databases form the foundation of modern research tracking and analysis. Digital repositories, like the test cases featured in this report, systematically catalog scholarly publications and their references to each other [@debellis2009bibliometrics]. Citation databases differ in their approaches to curating and maintaining this information. Some focus exclusively on peer-reviewed journal articles with strict inclusion criteria, while others index a broader range of research outputs including preprints, technical reports, and conference proceedings [@martin2021google; @mongeon2016journal]. These curation approaches affect how comprehensively each database captures research impact [@visser2021large].
 
 Understanding how these databases work requires familiarity with bibliometrics - the statistical analysis of published works and their impact [@broadus1987toward]. Bibliometric analysis examines patterns in publication, citation networks, and research influence [@hood2001literature]. The field emerged from early citation indices, which mapped relationships between papers through their references [@garfield1955citation].
 
@@ -75,7 +75,7 @@ The DemocratizingData.ai platform currently uses Scopus, a fee-based service, to
 
 Initial comparisons between Scopus and OpenAlex revealed unexpected patterns in coverage overlap. These findings suggested that simply replacing one database with another might affect the platform’s ability to track dataset usage accurately.
 
-This led to the development of a methodology for comparing citation databases, focusing on four key areas:
+This led to the development of a methodology for comparing citation databases, focusing on four areas:
 
 1.  Journal coverage: Determining which journals each platform indexes
 2.  Publication tracking: Comparing how each platform captures publications within indexed journals
@@ -88,13 +88,62 @@ Our methodology provides a systematic approach for assessing citation databases�
 
 The methods described in this report can be applied to other citation databases as alternatives to current data sources.
 
+## Scopus {#sec-scopus}
+
+## OpenAlex {#sec-openalex}
+
+## Dimensions {#sec-dimensions}
+
 # Analysis Workflow
 
+## Overview 
 
+The workflow we developed systematically evaluates how different citation databases track USDA dataset mentions in research papers. In searching for dataset mentions, the goal is to identify a set of publications that can be compared across the citation database test cases.
 
-# Inputs for Analysis
+The process of deriving the list of publications consists of four steps:
 
-## USDA Datasets *Lauren/Julia*
+**1. Define Data Assets and Aliases** (@sec-data)
+
+- Identify key USDA datasets that need to be tracked.
+- Collect official dataset names along with common abbreviations, acronyms, and alternative references used in research.
+
+Result: A structured list of dataset names and aliases to be used for search queries.
+
+**2. Create a Seed Corpus** (@sec-seed-corpus)
+
+- Identify variations in how datasets are referenced in research papers.
+- Compile a list of dataset names, acronyms, and alternative phrasings.
+
+Result: A comprehensive vocabulary to standardize dataset mentions.
+
+**3. Dataset Extraction** (@sec-data-extraction)
+
+- Extract dataset mentions using multiple search strategies:
+  - Machine Learning Models: Apply Kaggle competition models trained to detect dataset mentions.
+  - Full-Text (String) Search: Scan entire research articles for relevant dataset names.
+  - Reference Search: Identify dataset citations within research references.
+
+Result: Different extraction methods yield different sets of publication results.
+
+**4. Disambiguation Process** (@sec-disambiguation)
+
+- Pre-process and clean extracted data for each citation database.
+- Resolve inconsistencies in author names and institutional affiliations through deduplication.
+- Standardize institution names using external reference data (e.g., IPEDS).
+
+Result: Clean datasets, removed of duplicates and inconsistencies, which are used to link publications, authors, and institutions across citation databases.
+
+**5. Comparison across Databases** (@sec-matching)
+
+- Compare dataset coverage across Scopus, OpenAlex, and Dimensions.
+- Apply fuzzy matching techniques to identify overlapping and unique dataset mentions.
+- Analyze differences in journal coverage, citation patterns, and author affiliations.
+
+Result: In generating these statistics, we can evaluate the impact of switching databases on dataset tracking accuracy.
+
+## Step 1: Define Data Assets and Aliases {#sec-data}
+
+The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These datasets are widely used in agricultural economics and food systems research. The goal of this step is to compile a structured list of dataset names and their commonly used variations to achieve adequate search coverage.
 
 ### National Agricultural Statistics Service (NASS) Data Assets
 
@@ -128,15 +177,23 @@ Through consultation with USDA stakeholders and recognition that agricultural ec
 
 : List of USDA Data Assets {#tbl-usda-datasets}
 
-## Scopus {#sec-scopus}
+## Step 2: Create a Seed Corpus {#sec-seed-corpus}
 
-## OpenAlex {#sec-openalex}
+Once the data assets (@tbl-usda-datasets) and aliases were defined, the team identified the set of documents within which to conduct the search (i.e., the “search space”). This was done by first creating a seed corpus, as described below, and then using the seed corpus to infer the types of publications in which the targeted data assets would most likely be found.
 
-## Dimensions {#sec-dimensions}
+::: {.panel-tabset}
 
-# Dataset Extraction
+{{< include scopus01.qmd >}}
 
-Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus[^1] and OpenAlex, the two citation databases in question. We start at the journal level, identifying which journals publish research using USDA data to establish publication patterns across different research fields. We then examine individual publications within these journals, focusing on how researchers use and cite USDA datasets in their work. At a more granular level, we analyze the authors who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors). Finally, we examine the institutions themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.
+{{< include openalex01.qmd >}}
+
+{{< include dimensions01.qmd >}}
+
+:::
+
+## Step 3: Dataset Extraction {#sec-data-extraction}
+
+Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus[^1], OpenAlex, and Dimensions. We start at the journal level, identifying which journals publish research using USDA data to establish publication patterns across different research fields. We then examine individual publications within these journals, focusing on how researchers use and cite USDA datasets in their work. At a more granular level, we analyze the authors who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors). Finally, we examine the institutions themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.
 
 [^1]: The Scopus work was generated by a team provided under contract to USDA (NASS and ERS), which included NYU, Rafael Ladislau, and Elsevier.
 
@@ -154,47 +211,35 @@ Before conducting this analysis, we perform a series of steps to prepare the dat
 
 
 
-# Metadata Pre-Processing
+## Step 4: Disambiguation Process {#sec-disambiguation}
 
 ::: {.panel-tabset}
 
-## Scopus
-::: {include="scopus02.qmd"}
-:::
+{{< include scopus02.qmd >}}
 
-## OpenAlex
-::: {include="openalex02.qmd"}
-:::
+{{< include openalex02.qmd >}}
 
-## Dimensions
-::: {include="dimensions02.qmd"}
-:::
+{{< include dimensions02.qmd >}}
 
 :::
 
-# Results from Metadata Pre-Processing
+### Results from Disambiguation
 
 *This section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset*
 
 ::: {.panel-tabset}
 
-## Scopus
-::: {include="scopus03.qmd"}
-:::
+{{< include scopus02r.qmd >}}
 
-## OpenAlex
-::: {include="openalex03.qmd"}
-:::
+{{< include openalex02r.qmd >}}
 
-## Dimensions
-::: {include="dimensions03.qmd"}
-:::
+{{< include dimensions02r.qmd >}}
 
 :::
 
 
 
-# Matching Methods
+## Step 5: Comparison across Datasets {#sec-matching}
 
 Matching methods:
 
@@ -215,23 +260,27 @@ Matching methods:
 
 : Summary of Methods {#tbl-methods-summary}
 
-# Results from Database Comparison
+::: {.panel-tabset}
+
+{{< include scopus03.qmd >}}
+
+{{< include openalex03.qmd >}}
+
+{{< include dimensions03.qmd >}}
+
+:::
+
+### Results from Database Comparison
 
 *This section presents results after matching (which type varies – deterministic vs fuzzy)*
 
 ::: {.panel-tabset}
 
-## Scopus
-::: {include="scopus04.qmd"}
-:::
+{{< include scopus03r.qmd >}}
 
-## OpenAlex
-::: {include="openalex04.qmd"}
-:::
+{{< include openalex03r.qmd >}}
 
-## Dimensions
-::: {include="dimensions04.qmd"}
-:::
+{{< include dimensions03r.qmd >}}
 
 :::
 
@@ -244,7 +293,7 @@ Matching methods:
 
 This report analyzes USDA dataset usage patterns across both platforms and recommends specific strategies for expanding dataset use in underrepresented research communities.
 
-Given the small percentage of MSI’s represented in our institutional analysis (@sec-inst-rep), it is evident that user engagement is central to increasing utilization rates of the datasets, regardless of Scopus or OpenAlex platform.
+Given the small percentage of MSI’s represented in our institutional analysis, it is evident that user engagement is central to increasing usage rates of the datasets, regardless of citation database.
 
 # Conclusion and Next Steps
 

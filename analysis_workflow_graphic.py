@@ -21,13 +21,13 @@ fig, ax = plt.subplots(figsize=(10, 6))
 
 # Create process flowchart
 for i, (step, desc) in enumerate(zip(steps, descriptions)):
-    ax.text(0.5, 1 - i * 0.25, step, fontsize=12, ha="center", va="center",
+    ax.text(0.5, 1 - i * 0.3, step, fontsize=12, ha="center", va="center",
             bbox=dict(boxstyle="round,pad=0.3", edgecolor="black", facecolor="lightblue"))
-    ax.text(0.5, 1 - i * 0.25 - 0.07, desc, fontsize=10, ha="center", va="center")
+    ax.text(0.5, 1 - i * 0.3 - 0.07, desc, fontsize=10, ha="center", va="center")
 
 # Arrows between steps
 for i in range(len(steps) - 1):
-    ax.annotate("", xy=(0.5, 1 - (i + 1) * 0.25 + 0.05), xytext=(0.5, 1 - i * 0.25 - 0.05),
+    ax.annotate("", xy=(0.5, 1 - (i + 1) * 0.3 + 0.05), xytext=(0.5, 1 - i * 0.3 - 0.05),
                 arrowprops=dict(arrowstyle="->", lw=1.5))
 
 # Remove axes

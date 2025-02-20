@@ -28,7 +28,3 @@ virtualenv_install(envname = "my-python",
                    ignore_installed = FALSE,
                    pip_options = character())
 
-virtualenv_install(envname = "my-python",
-                   "sklearn",
-                   ignore_installed = FALSE,
-                   pip_options = character())

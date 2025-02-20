@@ -1,12 +1,12 @@
-## Results from Metadata Pre-Processing
+## Dimensions
 
-## Journal Identification 
+### Journal Identification 
 
-## Author Disambiguation 
+### Author Disambiguation 
 
-## Institution Disambiguation 
+### Institution Disambiguation 
 
-### IPEDS *Ming*
+#### IPEDS *Ming*
 
-### MSI Data *Ming*
+#### MSI Data *Ming*
 
