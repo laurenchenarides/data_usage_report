@@ -11,7 +11,7 @@
 <meta name="author" content="Rafael Ladislau">
 <meta name="author" content="Julia Lane, Ph.D.">
 <meta name="author" content="Ming Wang">
-<meta name="dcterms.date" content="2025-02-19">
+<meta name="dcterms.date" content="2025-02-20">
 
 <title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
@@ -157,9 +157,9 @@ div.csl-indent {
   <li><a href="#national-agricultural-statistics-service-nass-data-assets" id="toc-national-agricultural-statistics-service-nass-data-assets" class="nav-link" data-scroll-target="#national-agricultural-statistics-service-nass-data-assets"><span class="header-section-number">4.1.1</span> National Agricultural Statistics Service (NASS) Data Assets</a></li>
   <li><a href="#economic-research-service-ers-data-assets" id="toc-economic-research-service-ers-data-assets" class="nav-link" data-scroll-target="#economic-research-service-ers-data-assets"><span class="header-section-number">4.1.2</span> Economic Research Service (ERS) Data Assets</a></li>
   </ul></li>
-  <li><a href="#scopus" id="toc-scopus" class="nav-link" data-scroll-target="#scopus"><span class="header-section-number">4.2</span> Scopus</a></li>
-  <li><a href="#openalex" id="toc-openalex" class="nav-link" data-scroll-target="#openalex"><span class="header-section-number">4.3</span> OpenAlex</a></li>
-  <li><a href="#dimensions" id="toc-dimensions" class="nav-link" data-scroll-target="#dimensions"><span class="header-section-number">4.4</span> Dimensions</a></li>
+  <li><a href="#sec-scopus" id="toc-sec-scopus" class="nav-link" data-scroll-target="#sec-scopus"><span class="header-section-number">4.2</span> Scopus</a></li>
+  <li><a href="#sec-openalex" id="toc-sec-openalex" class="nav-link" data-scroll-target="#sec-openalex"><span class="header-section-number">4.3</span> OpenAlex</a></li>
+  <li><a href="#sec-dimensions" id="toc-sec-dimensions" class="nav-link" data-scroll-target="#sec-dimensions"><span class="header-section-number">4.4</span> Dimensions</a></li>
   </ul></li>
   <li><a href="#dataset-extraction" id="toc-dataset-extraction" class="nav-link" data-scroll-target="#dataset-extraction"><span class="header-section-number">5</span> Dataset Extraction</a></li>
   <li><a href="#metadata-pre-processing" id="toc-metadata-pre-processing" class="nav-link" data-scroll-target="#metadata-pre-processing"><span class="header-section-number">6</span> Metadata Pre-Processing</a></li>
@@ -242,7 +242,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 19, 2025</p>
+      <p class="date">February 20, 2025</p>
     </div>
   </div>
   
@@ -256,9 +256,9 @@ div.csl-indent {
 
 <section id="executive-summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Executive Summary</h1>
-<p>Federal agencies like the USDA track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like <a href="https://democratizingdata.ai/tools/dashboards/">DemocratizingData.ai</a> and <a href="https://www.nass.usda.gov/Data_Visualization/5W/index.php">NASS’s 5’s Data Usage Dashboard</a>. This report presents a methodology for comparing citation databases as potential data sources for identifying dataset mentions within research papers, using Scopus, OpenAlex, and Dimensions as a test case. The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.</p>
+<p>Federal agencies like the USDA track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like <a href="https://democratizingdata.ai/tools/dashboards/">DemocratizingData.ai</a> and <a href="https://www.nass.usda.gov/Data_Visualization/5W/index.php">NASS’s 5’s Data Usage Dashboard</a>. This report presents a methodology for comparing citation databases as potential data sources for identifying dataset mentions within research papers, using Scopus, OpenAlex, and Dimensions as test cases. The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.</p>
 <p>Citation databases track academic research output. Different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports. Tracking dataset usage requires developing methods that scan publication text for dataset mentions. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. Not to mention, dataset tracking requires reliable citation data from citation databases.</p>
-<p>The <strong>three</strong> citation databases we are comparing are Elsevier’s Scopus, OurResearch’s OpenAlex, and Digital Science’s Dimensions.ai. Scopus charges for access to its citation database. It focuses on peer-reviewed literature and provides metadata about authors, institutions, and citations for academic journals. OpenAlex, an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. Dimensions…ADD HERE.</p>
+<p>The <strong>three</strong> citation databases we are comparing are Elsevier’s Scopus, OurResearch’s OpenAlex, and Digital Science’s Dimensions.ai. <strong>Scopus</strong> (<a href="#sec-scopus" class="quarto-xref">Section&nbsp;4.2</a>) charges for access to its citation database. It focuses on peer-reviewed literature and provides metadata about authors, institutions, and citations for academic journals. <strong>OpenAlex</strong> (<a href="#sec-openalex" class="quarto-xref">Section&nbsp;4.3</a>), an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. <strong>Dimensions</strong> (<a href="#sec-dimensions" class="quarto-xref">Section&nbsp;4.4</a>), developed by Digital Science, offers a hybrid model that provides both free and subscription-based access to its citation database. Unlike Scopus, which primarily indexes peer-reviewed journal articles, and OpenAlex, which emphasizes open-access content, Dimensions aggregates a broad spectrum of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. It integrates citation data with funding information, making it a useful tool for assessing the impact of research beyond traditional academic publishing.</p>
 <p>Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. We developed procedures for:</p>
 <ul>
 <li>Identifying publication coverage across citation databases</li>
@@ -286,7 +286,7 @@ div.csl-indent {
 </section>
 <section id="terminology" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Terminology</h1>
-<p>Citation databases form the foundation of modern research tracking and analysis. Digital repositories, like Scopus and OpenAlex, systematically catalog scholarly publications and their references to each other <span class="citation" data-cites="debellis2009bibliometrics">(<a href="#ref-debellis2009bibliometrics" role="doc-biblioref">De Bellis, 2009</a>)</span>. Citation databases differ in their approaches to curating and maintaining this information. Some focus exclusively on peer-reviewed journal articles with strict inclusion criteria, while others index a broader range of research outputs including preprints, technical reports, and conference proceedings <span class="citation" data-cites="martin2021google mongeon2016journal">(<a href="#ref-martin2021google" role="doc-biblioref">Martín-Martín et al., 2021</a>; <a href="#ref-mongeon2016journal" role="doc-biblioref">Mongeon &amp; Paul-Hus, 2016</a>)</span>. These curation approaches affect how comprehensively each database captures research impact <span class="citation" data-cites="visser2021large">(<a href="#ref-visser2021large" role="doc-biblioref">Visser et al., 2021</a>)</span>.</p>
+<p>Citation databases form the foundation of modern research tracking and analysis. Digital repositories, like the test cases featured here, systematically catalog scholarly publications and their references to each other <span class="citation" data-cites="debellis2009bibliometrics">(<a href="#ref-debellis2009bibliometrics" role="doc-biblioref">De Bellis, 2009</a>)</span>. Citation databases differ in their approaches to curating and maintaining this information. Some focus exclusively on peer-reviewed journal articles with strict inclusion criteria, while others index a broader range of research outputs including preprints, technical reports, and conference proceedings <span class="citation" data-cites="martin2021google mongeon2016journal">(<a href="#ref-martin2021google" role="doc-biblioref">Martín-Martín et al., 2021</a>; <a href="#ref-mongeon2016journal" role="doc-biblioref">Mongeon &amp; Paul-Hus, 2016</a>)</span>. These curation approaches affect how comprehensively each database captures research impact <span class="citation" data-cites="visser2021large">(<a href="#ref-visser2021large" role="doc-biblioref">Visser et al., 2021</a>)</span>.</p>
 <p>Understanding how these databases work requires familiarity with bibliometrics - the statistical analysis of published works and their impact <span class="citation" data-cites="broadus1987toward">(<a href="#ref-broadus1987toward" role="doc-biblioref">Broadus, 1987</a>)</span>. Bibliometric analysis examines patterns in publication, citation networks, and research influence <span class="citation" data-cites="hood2001literature">(<a href="#ref-hood2001literature" role="doc-biblioref">Hood &amp; Wilson, 2001</a>)</span>. The field emerged from early citation indices, which mapped relationships between papers through their references <span class="citation" data-cites="garfield1955citation">(<a href="#ref-garfield1955citation" role="doc-biblioref">Garfield, 1955</a>)</span>.</p>
 <p>For tracking USDA dataset usage, these concepts directly apply. Accurate tracking of dataset usage in scientific literature serves multiple purposes. For federal agencies like the USDA, it helps monitor the return on public data investments, find gaps in dataset use, plan future data collection, and support evidence-based policy decisions. This tracking requires reliable citation data from citation databases. Unlike standard citations, researchers often reference datasets within the text of their publications rather than citing them formally. This makes tracking dataset usage more complex.</p>
 <p>To solve this tracking challenge, methods have been developed that scan publication text for dataset mentions <span class="citation" data-cites="lane2022data">(<a href="#ref-lane2022data" role="doc-biblioref">Lane et al., 2022</a>)</span>. The scope and accuracy of our dataset tracking depends on what publications we can access and analyze. Because different databases curate content in different ways, it creates variation in what dataset mentions they capture and their frequency. Variations in content across sources affect our ability to accurately track dataset impact and adoption. The DemocratizingData.ai platform, for example, uses bibliometric data to monitor these dataset usage patterns, helping USDA understand how its data supports research. By comparing how different citation databases track this information, we can better understand their strengths and limitations for monitoring research impact.</p>
@@ -294,14 +294,16 @@ div.csl-indent {
 <section id="project-background" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Project Background</h1>
 <p>The DemocratizingData.ai platform currently uses Scopus, a fee-based service, to track USDA dataset usage. OpenAlex, an open-source alternative, offers potential cost savings and broader access. Moving to OpenAlex would reduce operational costs while maintaining public access to USDA’s dataset usage metrics. However, the decision to transition from Scopus to OpenAlex requires systematic evaluation of their coverage and data quality.</p>
-<p>Initial comparisons between Scopus and OpenAlex revealed unexpected patterns in coverage overlap. These findings suggested that simply replacing one database with another might affect the platform’s ability to track dataset usage accurately. This led to the development of a methodology for comparing citation databases, focusing on four key areas:</p>
+<p>Initial comparisons between Scopus and OpenAlex revealed unexpected patterns in coverage overlap. These findings suggested that simply replacing one database with another might affect the platform’s ability to track dataset usage accurately.</p>
+<p>This led to the development of a methodology for comparing citation databases, focusing on four key areas:</p>
 <ol type="1">
 <li>Journal coverage: Determining which journals each platform indexes</li>
 <li>Publication tracking: Comparing how each platform captures publications within indexed journals</li>
 <li>Author identification: Evaluating how each platform handles author names and affiliations</li>
 <li>Institution recognition: Determining how each platform records and standardizes institutional information</li>
 </ol>
-<p>Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. Beyond platform comparison, this methodology examines inclusivity in research coverage, particularly representation of MSIs. This component helps identify potential gaps in dataset accessibility and adoption across different types of research institutions.</p>
+<p>Research partners at the University of Utah have access to Dimensions. The scope of work expanded to include Dimensions alongside Scopus and OpenAlex. This inclusion provides a more comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms.</p>
+<p>Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. Beyond platform comparison, this methodology examines differences in research coverage, particularly the presence of MSIs. This component helps identify variations in dataset coverage and usage across different types of research institutions.</p>
 <p>The methods described in this report can be applied to other citation databases as alternatives to current data sources.</p>
 </section>
 <section id="inputs-for-analysis" class="level1" data-number="4">
@@ -405,14 +407,14 @@ Table&nbsp;1: List of USDA Data Assets
 </div>
 </section>
 </section>
-<section id="scopus" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="scopus"><span class="header-section-number">4.2</span> Scopus</h2>
+<section id="sec-scopus" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-scopus"><span class="header-section-number">4.2</span> Scopus</h2>
 </section>
-<section id="openalex" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="openalex"><span class="header-section-number">4.3</span> OpenAlex</h2>
+<section id="sec-openalex" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-openalex"><span class="header-section-number">4.3</span> OpenAlex</h2>
 </section>
-<section id="dimensions" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="dimensions"><span class="header-section-number">4.4</span> Dimensions</h2>
+<section id="sec-dimensions" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-dimensions"><span class="header-section-number">4.4</span> Dimensions</h2>
 </section>
 </section>
 <section id="dataset-extraction" class="level1" data-number="5">
