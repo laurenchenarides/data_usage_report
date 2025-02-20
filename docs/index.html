@@ -155,7 +155,7 @@ div.csl-indent {
   <li><a href="#sec-openalex" id="toc-sec-openalex" class="nav-link" data-scroll-target="#sec-openalex"><span class="header-section-number">3.2</span> OpenAlex</a></li>
   <li><a href="#sec-dimensions" id="toc-sec-dimensions" class="nav-link" data-scroll-target="#sec-dimensions"><span class="header-section-number">3.3</span> Dimensions</a></li>
   </ul></li>
-  <li><a href="#analysis-workflow" id="toc-analysis-workflow" class="nav-link" data-scroll-target="#analysis-workflow"><span class="header-section-number">4</span> Analysis Workflow</a>
+  <li><a href="#project-workflow" id="toc-project-workflow" class="nav-link" data-scroll-target="#project-workflow"><span class="header-section-number">4</span> Project Workflow</a>
   <ul class="collapse">
   <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">4.1</span> Overview</a></li>
   <li><a href="#sec-data" id="toc-sec-data" class="nav-link" data-scroll-target="#sec-data"><span class="header-section-number">4.2</span> Step 1: Define Data Assets and Aliases</a>
@@ -323,52 +323,54 @@ div.csl-indent {
 <h2 data-number="3.3" class="anchored" data-anchor-id="sec-dimensions"><span class="header-section-number">3.3</span> Dimensions</h2>
 </section>
 </section>
-<section id="analysis-workflow" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Analysis Workflow</h1>
+<section id="project-workflow" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Project Workflow</h1>
 <section id="overview" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">4.1</span> Overview</h2>
-<p>The workflow we developed systematically evaluates how different citation databases track USDA dataset mentions in research papers. In searching for dataset mentions, the goal is to identify a set of publications that can be compared across the citation database test cases.</p>
-<p>The process of deriving the list of publications consists of four steps:</p>
+<p>The project workflow outlines the steps involved to evaluate how different citation databases track USDA dataset mentions in research papers. In searching for dataset mentions, the goal is to identify a set of publications that can be compared across the citation database test cases.</p>
+<p>The process of deriving the list of publications consists of five steps:</p>
 <p><strong>1. Define Data Assets and Aliases</strong> (<a href="#sec-data" class="quarto-xref">Section&nbsp;4.2</a>)</p>
 <ul>
-<li>Identify key USDA datasets that need to be tracked.</li>
-<li>Collect official dataset names along with common abbreviations, acronyms, and alternative references used in research.</li>
+<li>Identify USDA datasets that will be searched for and tracked.</li>
+<li>Collect official dataset names along with common abbreviations, acronyms, and alternative references used.</li>
 </ul>
-<p>Result: A structured list of dataset names and aliases to be used for search queries.</p>
+<p><strong>Result:</strong> A structured list of dataset names and aliases to be used for search strategies.</p>
 <p><strong>2. Create a Seed Corpus</strong> (<a href="#sec-seed-corpus" class="quarto-xref">Section&nbsp;4.3</a>)</p>
 <ul>
-<li>Identify variations in how datasets are referenced in research papers.</li>
-<li>Compile a list of dataset names, acronyms, and alternative phrasings.</li>
+<li>Collect an initial set of publications.</li>
+<li>Analyze how datasets are referenced.</li>
+<li>Determine how well the dataset name variations (from Step 1) are retreived from the publications.</li>
+<li>Adjust searches to improve accuracy.</li>
 </ul>
-<p>Result: A comprehensive vocabulary to standardize dataset mentions.</p>
+<p><strong>Result:</strong> A set of seed publications to inform dataset extraction procedure.</p>
 <p><strong>3. Dataset Extraction</strong> (<a href="#sec-data-extraction" class="quarto-xref">Section&nbsp;4.4</a>)</p>
 <ul>
-<li>Extract dataset mentions using multiple search strategies:
+<li>Extract dataset mentions using various search strategies:
 <ul>
 <li>Machine Learning Models: Apply Kaggle competition models trained to detect dataset mentions.</li>
-<li>Full-Text (String) Search: Scan entire research articles for relevant dataset names.</li>
-<li>Reference Search: Identify dataset citations within research references.</li>
+<li>Full-Text (String) Search: Scan entire articles for relevant dataset names.</li>
+<li>Reference Search: Identify dataset citations within publication references.</li>
 </ul></li>
 </ul>
-<p>Result: Different extraction methods yield different sets of publication results.</p>
+<p><strong>Result:</strong> Different extraction methods yield different sets of publication results.</p>
 <p><strong>4. Disambiguation Process</strong> (<a href="#sec-disambiguation" class="quarto-xref">Section&nbsp;4.5</a>)</p>
 <ul>
-<li>Pre-process and clean extracted data for each citation database.</li>
-<li>Resolve inconsistencies in author names and institutional affiliations through deduplication.</li>
-<li>Standardize institution names using external reference data (e.g., IPEDS).</li>
+<li>Pre-process and clean publication metadata for each citation database.</li>
+<li>Standardize journal, institution, and author names.</li>
+<li>Deduplicate records.</li>
 </ul>
-<p>Result: Clean datasets, removed of duplicates and inconsistencies, which are used to link publications, authors, and institutions across citation databases.</p>
+<p><strong>Result:</strong> Cleaned publication metadata, removed of duplicates, inconsistencies, and missing information.</p>
 <p><strong>5. Comparison across Databases</strong> (<a href="#sec-matching" class="quarto-xref">Section&nbsp;4.6</a>)</p>
 <ul>
 <li>Compare dataset coverage across Scopus, OpenAlex, and Dimensions.</li>
 <li>Apply fuzzy matching techniques to identify overlapping and unique dataset mentions.</li>
 <li>Analyze differences in journal coverage, citation patterns, and author affiliations.</li>
 </ul>
-<p>Result: In generating these statistics, we can evaluate the impact of switching databases on dataset tracking accuracy.</p>
+<p><strong>Result:</strong> In generating these statistics, we can evaluate the impact of switching databases on dataset tracking accuracy.</p>
 </section>
 <section id="sec-data" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="sec-data"><span class="header-section-number">4.2</span> Step 1: Define Data Assets and Aliases</h2>
-<p>The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These datasets are widely used in agricultural economics and food systems research. The goal of this step is to compile a structured list of dataset names and their commonly used variations to achieve adequate search coverage.</p>
+<p>The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These datasets are widely used in agricultural economics and food systems research. The goal of this step is to compile a structured list of dataset names and their commonly used variations.</p>
 <section id="national-agricultural-statistics-service-nass-data-assets" class="level3" data-number="4.2.1">
 <h3 data-number="4.2.1" class="anchored" data-anchor-id="national-agricultural-statistics-service-nass-data-assets"><span class="header-section-number">4.2.1</span> National Agricultural Statistics Service (NASS) Data Assets</h3>
 <p>In late July 2023, an initial set of 21 reports were received containing a report name and a URL link to the Cornell database. The names of these reports were characterized be being very generic in nature e.g.&nbsp;“Agricultural Prices” and “Farm Labor”. This input was analysed and transformed into a list that also contained ISSN inputs and which appended generic names with the term report. An ISSN term was identified for each of the 21 reports. The report names were characterized as the main data asset (the parent record) and the ISSNs and URLs were used as aliases. There were 43 such aliases. In total there were therefore 64 (43 + 21) search terms associated with this input.</p>

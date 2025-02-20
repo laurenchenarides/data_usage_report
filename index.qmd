@@ -94,44 +94,46 @@ The methods described in this report can be applied to other citation databases 
 
 ## Dimensions {#sec-dimensions}
 
-# Analysis Workflow
+# Project Workflow
 
 ## Overview 
 
-The workflow we developed systematically evaluates how different citation databases track USDA dataset mentions in research papers. In searching for dataset mentions, the goal is to identify a set of publications that can be compared across the citation database test cases.
+The project workflow outlines the steps involved to evaluate how different citation databases track USDA dataset mentions in research papers. In searching for dataset mentions, the goal is to identify a set of publications that can be compared across the citation database test cases.
 
-The process of deriving the list of publications consists of four steps:
+The process of deriving the list of publications consists of five steps:
 
 **1. Define Data Assets and Aliases** (@sec-data)
 
-- Identify key USDA datasets that need to be tracked.
-- Collect official dataset names along with common abbreviations, acronyms, and alternative references used in research.
+- Identify USDA datasets that will be searched for and tracked.
+- Collect official dataset names along with common abbreviations, acronyms, and alternative references used.
 
-Result: A structured list of dataset names and aliases to be used for search queries.
+**Result:** A structured list of dataset names and aliases to be used for search strategies.
 
 **2. Create a Seed Corpus** (@sec-seed-corpus)
 
-- Identify variations in how datasets are referenced in research papers.
-- Compile a list of dataset names, acronyms, and alternative phrasings.
+- Collect an initial set of publications.
+- Analyze how datasets are referenced.
+- Determine how well the dataset name variations (from Step 1) are retreived from the publications.
+- Adjust searches to improve accuracy.
 
-Result: A comprehensive vocabulary to standardize dataset mentions.
+**Result:** A set of seed publications to inform dataset extraction procedure.
 
 **3. Dataset Extraction** (@sec-data-extraction)
 
-- Extract dataset mentions using multiple search strategies:
+- Extract dataset mentions using various search strategies:
   - Machine Learning Models: Apply Kaggle competition models trained to detect dataset mentions.
-  - Full-Text (String) Search: Scan entire research articles for relevant dataset names.
-  - Reference Search: Identify dataset citations within research references.
+  - Full-Text (String) Search: Scan entire articles for relevant dataset names.
+  - Reference Search: Identify dataset citations within publication references.
 
-Result: Different extraction methods yield different sets of publication results.
+**Result:** Different extraction methods yield different sets of publication results.
 
 **4. Disambiguation Process** (@sec-disambiguation)
 
-- Pre-process and clean extracted data for each citation database.
-- Resolve inconsistencies in author names and institutional affiliations through deduplication.
-- Standardize institution names using external reference data (e.g., IPEDS).
+- Pre-process and clean publication metadata for each citation database.
+- Standardize journal, institution, and author names.
+- Deduplicate records.
 
-Result: Clean datasets, removed of duplicates and inconsistencies, which are used to link publications, authors, and institutions across citation databases.
+**Result:** Cleaned publication metadata, removed of duplicates, inconsistencies, and missing information.
 
 **5. Comparison across Databases** (@sec-matching)
 
@@ -139,11 +141,11 @@ Result: Clean datasets, removed of duplicates and inconsistencies, which are use
 - Apply fuzzy matching techniques to identify overlapping and unique dataset mentions.
 - Analyze differences in journal coverage, citation patterns, and author affiliations.
 
-Result: In generating these statistics, we can evaluate the impact of switching databases on dataset tracking accuracy.
+**Result:** In generating these statistics, we can evaluate the impact of switching databases on dataset tracking accuracy.
 
 ## Step 1: Define Data Assets and Aliases {#sec-data}
 
-The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These datasets are widely used in agricultural economics and food systems research. The goal of this step is to compile a structured list of dataset names and their commonly used variations to achieve adequate search coverage.
+The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These datasets are widely used in agricultural economics and food systems research. The goal of this step is to compile a structured list of dataset names and their commonly used variations.
 
 ### National Agricultural Statistics Service (NASS) Data Assets
 
