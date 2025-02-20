@@ -18,10 +18,6 @@ author:
     email: "Ming.Wang@colostate.edu"
     affiliation: "Colorado State University"
 date: last-modified  # Auto-updates based on Git commits
-include-in-header:
-  - scopus01.qmd
-  - openalex01.qmd
-  - dimensions01.qmd
 format:
   html:
     toc: true  # Enables TOC on this page
@@ -140,20 +136,15 @@ Before conducting this analysis, we perform a series of steps to prepare the dat
 
 ::: {.panel-tabset}
 
-## Scopus
-```{=markdown}
-`r paste(readLines("scopus.qmd"), collapse="\n")`
-```
+{{< include scopus01.qmd >}}
 
-## OpenAlex
-::: {include="openalex01.qmd"}
-:::
+{{< include openalex01.qmd >}}
 
-## Dimensions
-::: {include="dimensions01.qmd"}
-:::
+{{< include dimensions01.qmd >}}
 
 :::
+
+
 
 # Metadata Pre-Processing
 
@@ -220,25 +211,22 @@ Matching methods:
 
 *This section presents results after matching (which type varies – deterministic vs fuzzy)*
 
-## Journal Coverage *Cal*
+::: {.panel-tabset}
 
-## Publication Coverage *Cal*
+## Scopus
+::: {include="scopus04.qmd"}
+:::
 
-## Author Coverage *Cal*
+## OpenAlex
+::: {include="openalex04.qmd"}
+:::
 
-## Institution Coverage *Ming*
+## Dimensions
+::: {include="dimensions04.qmd"}
+:::
 
-## Insitutional Representation *Ming*
+:::
 
-### Geographic Coverage *Ming*
-
-### Institution Types *Ming* {#sec-inst-rep}
-
-## Thematic Analysis *Cal/Lauren*
-
-### Publication Topics *Cal/Lauren*
-
-### Patterns over Time *Cal/Lauren*
 
 # Recommendations
 

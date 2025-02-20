@@ -1,4 +1,4 @@
-## Dataset Extraction in Scopus *Julia*
+## Scopus
 
 Once the data assets (@tbl-usda-datasets) and aliases were defined, the team identified the set of documents within which to conduct the search (i.e., the “search space”). This was done by first creating a seed corpus, as described below, and then using the seed corpus to infer the types of publications in which the targeted data assets would most likely be found.
 

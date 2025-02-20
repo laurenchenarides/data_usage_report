@@ -1,4 +1,4 @@
-## Dataset Extraction in OpenAlex *Rafael/Lauren/Julia/Cal*
+## OpenAlex
 
 *Describe Rafael’s methodology for searching for dataset names in OpenAlex articles and additional steps Cal did to pull data from the OpenAlex API*
 
