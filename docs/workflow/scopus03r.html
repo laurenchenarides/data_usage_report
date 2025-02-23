@@ -12,7 +12,7 @@
 <meta name="author" content="Julia Lane, Ph.D.">
 <meta name="author" content="Ming Wang">
 
-<title>scopus02r – Citation Database Assessment</title>
+<title>scopus03r – Citation Database Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -28,22 +28,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Citation Database Assessment</span>
     </a>
   </div>
@@ -93,15 +93,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Technical Report</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">Contributors</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./appendices.html"> 
+    <a class="nav-link" href="../appendices.html"> 
 <span class="menu-text">Appendices</span></a>
   </li>  
 </ul>
@@ -126,11 +126,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#metadata-processing" id="toc-metadata-processing" class="nav-link active" data-scroll-target="#metadata-processing"><span class="header-section-number">1</span> Metadata Processing</a>
+  <li><a href="#scopus" id="toc-scopus" class="nav-link active" data-scroll-target="#scopus"><span class="header-section-number">1</span> Scopus</a>
   <ul class="collapse">
-  <li><a href="#disambiguating-journals" id="toc-disambiguating-journals" class="nav-link" data-scroll-target="#disambiguating-journals"><span class="header-section-number">1.1</span> Disambiguating Journals</a></li>
-  <li><a href="#disambiguating-authors" id="toc-disambiguating-authors" class="nav-link" data-scroll-target="#disambiguating-authors"><span class="header-section-number">1.2</span> Disambiguating Authors</a></li>
-  <li><a href="#disambiguating-institutions" id="toc-disambiguating-institutions" class="nav-link" data-scroll-target="#disambiguating-institutions"><span class="header-section-number">1.3</span> Disambiguating Institutions</a></li>
+  <li><a href="#journal-coverage-cal" id="toc-journal-coverage-cal" class="nav-link" data-scroll-target="#journal-coverage-cal"><span class="header-section-number">1.1</span> Journal Coverage <em>Cal</em></a></li>
+  <li><a href="#publication-coverage-cal" id="toc-publication-coverage-cal" class="nav-link" data-scroll-target="#publication-coverage-cal"><span class="header-section-number">1.2</span> Publication Coverage <em>Cal</em></a></li>
+  <li><a href="#author-coverage-cal" id="toc-author-coverage-cal" class="nav-link" data-scroll-target="#author-coverage-cal"><span class="header-section-number">1.3</span> Author Coverage <em>Cal</em></a></li>
+  <li><a href="#institution-coverage-ming" id="toc-institution-coverage-ming" class="nav-link" data-scroll-target="#institution-coverage-ming"><span class="header-section-number">1.4</span> Institution Coverage <em>Ming</em></a></li>
+  <li><a href="#insitutional-representation-ming" id="toc-insitutional-representation-ming" class="nav-link" data-scroll-target="#insitutional-representation-ming"><span class="header-section-number">1.5</span> Insitutional Representation <em>Ming</em></a></li>
+  <li><a href="#thematic-analysis-callauren" id="toc-thematic-analysis-callauren" class="nav-link" data-scroll-target="#thematic-analysis-callauren"><span class="header-section-number">1.6</span> Thematic Analysis <em>Cal/Lauren</em></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -205,18 +208,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="metadata-processing" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="metadata-processing"><span class="header-section-number">1</span> Metadata Processing</h2>
-<section id="disambiguating-journals" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="disambiguating-journals"><span class="header-section-number">1.1</span> Disambiguating Journals</h3>
+<section id="scopus" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="scopus"><span class="header-section-number">1</span> Scopus</h2>
+<section id="journal-coverage-cal" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="journal-coverage-cal"><span class="header-section-number">1.1</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="disambiguating-authors" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="disambiguating-authors"><span class="header-section-number">1.2</span> Disambiguating Authors</h3>
+<section id="publication-coverage-cal" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="publication-coverage-cal"><span class="header-section-number">1.2</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="disambiguating-institutions" class="level3" data-number="1.3">
-<h3 data-number="1.3" class="anchored" data-anchor-id="disambiguating-institutions"><span class="header-section-number">1.3</span> Disambiguating Institutions</h3>
+<section id="author-coverage-cal" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="author-coverage-cal"><span class="header-section-number">1.3</span> Author Coverage <em>Cal</em></h3>
+</section>
+<section id="institution-coverage-ming" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="institution-coverage-ming"><span class="header-section-number">1.4</span> Institution Coverage <em>Ming</em></h3>
+</section>
+<section id="insitutional-representation-ming" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="insitutional-representation-ming"><span class="header-section-number">1.5</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming" class="level4" data-number="1.5.1">
+<h4 data-number="1.5.1" class="anchored" data-anchor-id="geographic-coverage-ming"><span class="header-section-number">1.5.1</span> Geographic Coverage <em>Ming</em></h4>
+</section>
+<section id="sec-inst-rep" class="level4" data-number="1.5.2">
+<h4 data-number="1.5.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">1.5.2</span> Institution Types <em>Ming</em></h4>
+</section>
+</section>
+<section id="thematic-analysis-callauren" class="level3" data-number="1.6">
+<h3 data-number="1.6" class="anchored" data-anchor-id="thematic-analysis-callauren"><span class="header-section-number">1.6</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren" class="level4" data-number="1.6.1">
+<h4 data-number="1.6.1" class="anchored" data-anchor-id="publication-topics-callauren"><span class="header-section-number">1.6.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+</section>
+<section id="patterns-over-time-callauren" class="level4" data-number="1.6.2">
+<h4 data-number="1.6.2" class="anchored" data-anchor-id="patterns-over-time-callauren"><span class="header-section-number">1.6.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
 
 
+</section>
 </section>
 </section>
 

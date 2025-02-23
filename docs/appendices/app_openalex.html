@@ -6,13 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Lauren Chenarides, Ph.D.">
-<meta name="author" content="Calvin Bryan, Ph.D.">
-<meta name="author" content="Rafael Ladislau">
-<meta name="author" content="Julia Lane, Ph.D.">
-<meta name="author" content="Ming Wang">
 
-<title>dimensions03r – Citation Database Assessment</title>
+<title>app_openalex – Citation Database Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -28,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Citation Database Assessment</span>
     </a>
   </div>
@@ -93,15 +88,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Technical Report</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">Contributors</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./appendices.html"> 
+    <a class="nav-link" href="../appendices.html"> 
 <span class="menu-text">Appendices</span></a>
   </li>  
 </ul>
@@ -126,14 +117,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dimensions" id="toc-dimensions" class="nav-link active" data-scroll-target="#dimensions"><span class="header-section-number">1</span> Dimensions</a>
+  <li><a href="#sec-app-openalex" id="toc-sec-app-openalex" class="nav-link active" data-scroll-target="#sec-app-openalex"><span class="header-section-number">1</span> OpenAlex</a>
   <ul class="collapse">
-  <li><a href="#journal-coverage-cal" id="toc-journal-coverage-cal" class="nav-link" data-scroll-target="#journal-coverage-cal"><span class="header-section-number">1.1</span> Journal Coverage <em>Cal</em></a></li>
-  <li><a href="#publication-coverage-cal" id="toc-publication-coverage-cal" class="nav-link" data-scroll-target="#publication-coverage-cal"><span class="header-section-number">1.2</span> Publication Coverage <em>Cal</em></a></li>
-  <li><a href="#author-coverage-cal" id="toc-author-coverage-cal" class="nav-link" data-scroll-target="#author-coverage-cal"><span class="header-section-number">1.3</span> Author Coverage <em>Cal</em></a></li>
-  <li><a href="#institution-coverage-ming" id="toc-institution-coverage-ming" class="nav-link" data-scroll-target="#institution-coverage-ming"><span class="header-section-number">1.4</span> Institution Coverage <em>Ming</em></a></li>
-  <li><a href="#insitutional-representation-ming" id="toc-insitutional-representation-ming" class="nav-link" data-scroll-target="#insitutional-representation-ming"><span class="header-section-number">1.5</span> Insitutional Representation <em>Ming</em></a></li>
-  <li><a href="#thematic-analysis-callauren" id="toc-thematic-analysis-callauren" class="nav-link" data-scroll-target="#thematic-analysis-callauren"><span class="header-section-number">1.6</span> Thematic Analysis <em>Cal/Lauren</em></a></li>
+  <li><a href="#publication.csv" id="toc-publication.csv" class="nav-link" data-scroll-target="#publication.csv"><span class="header-section-number">1.1</span> <strong>publication.csv</strong></a></li>
+  <li><a href="#dataset_alias.csv" id="toc-dataset_alias.csv" class="nav-link" data-scroll-target="#dataset_alias.csv"><span class="header-section-number">1.2</span> <strong>dataset_alias.csv</strong></a></li>
+  <li><a href="#dyad.csv" id="toc-dyad.csv" class="nav-link" data-scroll-target="#dyad.csv"><span class="header-section-number">1.3</span> <strong>dyad.csv</strong></a></li>
+  <li><a href="#model.csv" id="toc-model.csv" class="nav-link" data-scroll-target="#model.csv"><span class="header-section-number">1.4</span> <strong>model.csv</strong></a></li>
+  <li><a href="#dyad_model.csv" id="toc-dyad_model.csv" class="nav-link" data-scroll-target="#dyad_model.csv"><span class="header-section-number">1.5</span> <strong>dyad_model.csv</strong></a></li>
+  <li><a href="#how-the-files-are-related" id="toc-how-the-files-are-related" class="nav-link" data-scroll-target="#how-the-files-are-related"><span class="header-section-number">1.6</span> How the Files are Related</a></li>
+  <li><a href="#how-to-extract-publications-for-a-specific-dataset" id="toc-how-to-extract-publications-for-a-specific-dataset" class="nav-link" data-scroll-target="#how-to-extract-publications-for-a-specific-dataset"><span class="header-section-number">1.7</span> How to Extract Publications for a Specific Dataset</a></li>
+  <li><a href="#filtering-publications-by-specific-models" id="toc-filtering-publications-by-specific-models" class="nav-link" data-scroll-target="#filtering-publications-by-specific-models"><span class="header-section-number">1.8</span> Filtering Publications by Specific Models</a></li>
+  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example"><span class="header-section-number">1.9</span> Practical Example</a></li>
+  <li><a href="#sample-data-illustration" id="toc-sample-data-illustration" class="nav-link" data-scroll-target="#sample-data-illustration"><span class="header-section-number">1.10</span> Sample Data Illustration</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -145,102 +140,403 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-</div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Authors</div>
-  <div class="quarto-title-meta-heading">Affiliations</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">Lauren Chenarides, Ph.D. <a href="mailto:Lauren.Chenarides@colostate.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Colorado State University
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Calvin Bryan, Ph.D. <a href="mailto:calvinrbryan@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Colorado State University
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Rafael Ladislau <a href="mailto:rafa.ladis@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            RL Desenvolvimento de Sistemas LTDA
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Julia Lane, Ph.D. <a href="mailto:julia.lane@nyu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            New York University
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Ming Wang <a href="mailto:Ming.Wang@colostate.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Colorado State University
-          </p>
-      </div>
-  </div>
 
-<div class="quarto-title-meta">
-
-      
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="dimensions" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="dimensions"><span class="header-section-number">1</span> Dimensions</h2>
-<section id="journal-coverage-cal" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="journal-coverage-cal"><span class="header-section-number">1.1</span> Journal Coverage <em>Cal</em></h3>
+<section id="sec-app-openalex" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="sec-app-openalex"><span class="header-section-number">1</span> OpenAlex</h2>
+<p>This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.</p>
+<p>Unlike the initial dataset from Scopus, the OpenAlex publications can be associated with multiple datasets. Two new files are introduced:</p>
+<ul>
+<li><strong>dataset.csv</strong>: Lists all datasets identified in OpenAlex. This contains details of all USDA datasets.</li>
+<li><strong>publication_dataset_links.csv</strong>: Connects publications with one or more datasets in the OpenAlex data. Indicates which publications are associated with which datasets.</li>
+</ul>
+<p>The search in OpenAlex was performed using the same aliases and flag terms applied in the Scopus data, without any optimization. As a consequence, the “NASS Census of Agriculture” dataset currently shows fewer publications than in the previous sample due to this direct, unoptimized search approach.</p>
+<p>Below is a detailed explanation of the SQL Server-related CSV files and how they relate to one another:</p>
+<section id="publication.csv" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="publication.csv"><span class="header-section-number">1.1</span> <strong>publication.csv</strong></h3>
+<ul>
+<li><strong>Description</strong>: This file contains information about publications, which are the central entities in this dataset.</li>
+<li><strong>Key Columns</strong>:
+<ul>
+<li><code>id</code>: Unique identifier for each publication.</li>
+<li><code>title</code>: Title of the publication.</li>
+<li><code>doi</code>: Digital Object Identifier of the publication.</li>
+<li><code>year</code> and <code>month</code>: Publication date.</li>
+<li>Other metadata such as <code>citation_count</code>, <code>pub_type</code>, etc.</li>
+</ul></li>
+</ul>
+<p><strong>Sample Data</strong>:</p>
+<!--\~~~markdown-->
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 59%">
+<col style="width: 22%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>id</th>
+<th>title</th>
+<th>doi</th>
+<th>year</th>
+<th>month</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>321613</td>
+<td>New estimates for CRNA vacancies</td>
+<td></td>
+<td>2009</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>321614</td>
+<td>Crossing county lines: The impact of crash location and driver’s…</td>
+<td>10.1016/j.aap.2006…</td>
+<td>2006</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="publication-coverage-cal" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="publication-coverage-cal"><span class="header-section-number">1.2</span> Publication Coverage <em>Cal</em></h3>
+<section id="dataset_alias.csv" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="dataset_alias.csv"><span class="header-section-number">1.2</span> <strong>dataset_alias.csv</strong></h3>
+<ul>
+<li><strong>Description</strong>: Contains all the aliases (alternative names) of datasets. This helps in identifying datasets that might be referred to by different names in publications.</li>
+<li><strong>Key Columns</strong>:
+<ul>
+<li><code>alias_id</code>: Unique identifier for each alias.</li>
+<li><code>parent_alias_id</code>: Identifies the main alias for a dataset. If <code>parent_alias_id</code> equals <code>alias_id</code>, it is the primary alias.</li>
+<li><code>alias</code>: The alias name of the dataset.</li>
+</ul></li>
+</ul>
+<p><strong>How to Use</strong>:</p>
+<ul>
+<li>To find the main alias of a dataset, look for rows where <code>alias_id</code> equals <code>parent_alias_id</code>.</li>
+<li>To find all aliases of a dataset, filter by <code>parent_alias_id</code> corresponding to the main alias.</li>
+</ul>
+<p><strong>Sample Data</strong>:</p>
+<!--\~~~markdown-->
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 11%">
+<col style="width: 20%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>id</th>
+<th>alias_id</th>
+<th>parent_alias_id</th>
+<th>alias</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1676</td>
+<td>87</td>
+<td>89</td>
+<td>Census of Agriculture</td>
+</tr>
+<tr class="even">
+<td>1673</td>
+<td>12</td>
+<td>282</td>
+<td>ARMS Farm Financial and Crop Production Practices</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="author-coverage-cal" class="level3" data-number="1.3">
-<h3 data-number="1.3" class="anchored" data-anchor-id="author-coverage-cal"><span class="header-section-number">1.3</span> Author Coverage <em>Cal</em></h3>
+<section id="dyad.csv" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="dyad.csv"><span class="header-section-number">1.3</span> <strong>dyad.csv</strong></h3>
+<ul>
+<li><strong>Description</strong>: Represents the mentions of dataset aliases found within publications. Acts as a linking table between <code>publication.csv</code> and <code>dataset_alias.csv</code>.</li>
+<li><strong>Key Columns</strong>:
+<ul>
+<li><code>id</code>: Unique identifier for each dyad (mention).</li>
+<li><code>publication_id</code>: References the <code>id</code> in <code>publication.csv</code>.</li>
+<li><code>alias_id</code>: References the <code>alias_id</code> in <code>dataset_alias.csv</code>.</li>
+<li><code>mention_candidate</code>: The actual text mentioning the dataset in the publication.</li>
+</ul></li>
+</ul>
+<p><strong>Sample Data</strong>:</p>
+<!--\~~~markdown-->
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>id</th>
+<th>publication_id</th>
+<th>alias_id</th>
+<th>mention_candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2569</td>
+<td>1211491</td>
+<td>87</td>
+<td>census of agriculture</td>
+</tr>
+<tr class="even">
+<td>2573</td>
+<td>1199598</td>
+<td>88</td>
+<td>usda census of agriculture</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="institution-coverage-ming" class="level3" data-number="1.4">
-<h3 data-number="1.4" class="anchored" data-anchor-id="institution-coverage-ming"><span class="header-section-number">1.4</span> Institution Coverage <em>Ming</em></h3>
+<section id="model.csv" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="model.csv"><span class="header-section-number">1.4</span> <strong>model.csv</strong></h3>
+<ul>
+<li><strong>Description</strong>: Lists the different models or methods used to identify dataset mentions within publications.</li>
+<li><strong>Key Columns</strong>:
+<ul>
+<li><code>id</code>: Unique identifier for each model.</li>
+<li><code>name</code>: Name of the model (e.g., <code>string_matching</code>, <code>refmatch</code>).</li>
+</ul></li>
+</ul>
+<p><strong>Relevant Models</strong>:</p>
+<ul>
+<li><strong>Model ID 1</strong>: <code>string_matching</code></li>
+<li><strong>Model ID 5</strong>: <code>refmatch</code></li>
+</ul>
+<p>These are the models we are focusing on to compare with data extracted from OpenAlex, as no Kaggle model has been applied there.</p>
+<p><strong>Sample Data</strong>:</p>
+<!--\~~~markdown-->
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>id</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>string_matching</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>refmatch</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="insitutional-representation-ming" class="level3" data-number="1.5">
-<h3 data-number="1.5" class="anchored" data-anchor-id="insitutional-representation-ming"><span class="header-section-number">1.5</span> Insitutional Representation <em>Ming</em></h3>
-<section id="geographic-coverage-ming" class="level4" data-number="1.5.1">
-<h4 data-number="1.5.1" class="anchored" data-anchor-id="geographic-coverage-ming"><span class="header-section-number">1.5.1</span> Geographic Coverage <em>Ming</em></h4>
+<section id="dyad_model.csv" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="dyad_model.csv"><span class="header-section-number">1.5</span> <strong>dyad_model.csv</strong></h3>
+<ul>
+<li><strong>Description</strong>: Connects dyads with the models that identified them. Allows filtering dyads based on the models used.</li>
+<li><strong>Key Columns</strong>:
+<ul>
+<li><code>dyad_id</code>: References the <code>id</code> in <code>dyad.csv</code>.</li>
+<li><code>model_id</code>: References the <code>id</code> in <code>model.csv</code>.</li>
+</ul></li>
+</ul>
+<p><strong>How to Use</strong>:</p>
+<ul>
+<li>To filter dyads (and thus publications) identified by specific models, perform an inner join with <code>dyad.csv</code> on <code>dyad_id</code> and filter by <code>model_id</code>.</li>
+</ul>
+<p><strong>Sample Data</strong>:</p>
+<!--\~~~markdown-->
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>id</th>
+<th>dyad_id</th>
+<th>model_id</th>
+<th>score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4928</td>
+<td>2569</td>
+<td>1</td>
+<td>2.0</td>
+</tr>
+<tr class="even">
+<td>4929</td>
+<td>2569</td>
+<td>4</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td>4930</td>
+<td>2569</td>
+<td>2</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="sec-inst-rep" class="level4" data-number="1.5.2">
-<h4 data-number="1.5.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">1.5.2</span> Institution Types <em>Ming</em></h4>
+<section id="how-the-files-are-related" class="level3" data-number="1.6">
+<h3 data-number="1.6" class="anchored" data-anchor-id="how-the-files-are-related"><span class="header-section-number">1.6</span> How the Files are Related</h3>
+<p>The files are structured to represent entities (publications, journals, institutions, authors) and their relationships. The main publication data is in <code>publications_main.csv</code>, and the details about journals, institutions, and authors are in their respective files. The link files (<code>publication_journal_links.csv</code>, <code>publication_institution_links.csv</code>, <code>publication_author_links.csv</code>) represent the many-to-many relationships between publications and these entities.</p>
+<p>By using the OpenAlex identifiers, you can join these files to perform comprehensive analyses. For example:</p>
+<ul>
+<li>To find all publications by a specific author, you can use <code>authors.csv</code> to find the author’s <code>author_openalex_id</code> and then use <code>publication_author_links.csv</code> to find the associated publications.</li>
+<li>To analyze the distribution of publications across journals, you can join <code>publications_main.csv</code>, <code>publication_journal_links.csv</code>, and <code>journals.csv</code> on <code>publication_openalex_id</code> and <code>journal_openalex_id</code>.</li>
+</ul>
 </section>
+<section id="how-to-extract-publications-for-a-specific-dataset" class="level3" data-number="1.7">
+<h3 data-number="1.7" class="anchored" data-anchor-id="how-to-extract-publications-for-a-specific-dataset"><span class="header-section-number">1.7</span> How to Extract Publications for a Specific Dataset</h3>
+<p>To find all publications associated with a particular dataset, such as the <strong>NASS Census of Agriculture</strong>, follow these steps:</p>
+<ol type="1">
+<li><p><strong>Identify the Main Alias</strong>:</p>
+<ul>
+<li>Find the <code>alias_id</code> where <code>alias_id</code> equals <code>parent_alias_id</code> for the dataset.</li>
+<li>For <strong>NASS Census of Agriculture</strong>, the main alias has <code>alias_id</code> = <strong>89</strong>.</li>
+</ul></li>
+<li><p><strong>Get All Aliases</strong>:</p>
+<ul>
+<li>In <code>dataset_alias.csv</code>, filter rows where <code>parent_alias_id</code> equals <strong>89</strong>.</li>
+<li>This gives you all aliases associated with the <strong>NASS Census of Agriculture</strong> dataset.</li>
+</ul></li>
+<li><p><strong>Link Aliases to Publications</strong>:</p>
+<ul>
+<li>In <code>dyad.csv</code>, filter rows where <code>alias_id</code> matches any of the <code>alias_id</code>s obtained in step 2.</li>
+<li>This will give you <code>publication_id</code>s of publications mentioning any alias of the dataset.</li>
+</ul></li>
+<li><p><strong>Retrieve Publication Details</strong>:</p>
+<ul>
+<li>Using the <code>publication_id</code>s from step 3, retrieve the corresponding records from <code>publication.csv</code>.</li>
+</ul></li>
+</ol>
 </section>
-<section id="thematic-analysis-callauren" class="level3" data-number="1.6">
-<h3 data-number="1.6" class="anchored" data-anchor-id="thematic-analysis-callauren"><span class="header-section-number">1.6</span> Thematic Analysis <em>Cal/Lauren</em></h3>
-<section id="publication-topics-callauren" class="level4" data-number="1.6.1">
-<h4 data-number="1.6.1" class="anchored" data-anchor-id="publication-topics-callauren"><span class="header-section-number">1.6.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+<section id="filtering-publications-by-specific-models" class="level3" data-number="1.8">
+<h3 data-number="1.8" class="anchored" data-anchor-id="filtering-publications-by-specific-models"><span class="header-section-number">1.8</span> Filtering Publications by Specific Models</h3>
+<p>Since we’re interested in mentions identified by the <strong><code>string_matching</code></strong> and <strong><code>refmatch</code></strong> models (models with <code>id</code> 1 and 5), follow these steps:</p>
+<ol type="1">
+<li><p><strong>Filter Dyads by Model</strong>:</p>
+<ul>
+<li>In <code>dyad_model.csv</code>, filter rows where <code>model_id</code> is <strong>1</strong> or <strong>5</strong>.</li>
+<li>This gives you <code>dyad_id</code>s linked to these models.</li>
+</ul></li>
+<li><p><strong>Get Relevant Dyads</strong>:</p>
+<ul>
+<li>Perform an inner join with <code>dyad.csv</code> on <code>dyad_id</code>.</li>
+<li>This filters dyads to only those identified by the specified models.</li>
+</ul></li>
+<li><p><strong>Proceed as Before</strong>:</p>
+<ul>
+<li>Continue with the steps in the previous section, but using the filtered dyads from step 2.</li>
+</ul></li>
+</ol>
 </section>
-<section id="patterns-over-time-callauren" class="level4" data-number="1.6.2">
-<h4 data-number="1.6.2" class="anchored" data-anchor-id="patterns-over-time-callauren"><span class="header-section-number">1.6.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+<section id="practical-example" class="level3" data-number="1.9">
+<h3 data-number="1.9" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">1.9</span> Practical Example</h3>
+<p><strong>Objective</strong>: Find all publications mentioning the <strong>NASS Census of Agriculture</strong> dataset using the <code>string_matching</code> and <code>refmatch</code> models.</p>
+<p><strong>Steps</strong>:</p>
+<ol type="1">
+<li><p><strong>Find Main Alias ID</strong>:</p>
+<ul>
+<li>Main alias <code>alias_id</code> = <strong>89</strong>.</li>
+</ul></li>
+<li><p><strong>Get All Aliases</strong>:</p>
+<ul>
+<li>From <code>dataset_alias.csv</code>, extract all <code>alias_id</code>s where <code>parent_alias_id</code> = <strong>89</strong>.</li>
+</ul></li>
+<li><p><strong>Filter Dyads by Models</strong>:</p>
+<ul>
+<li>From <code>dyad_model.csv</code>, get <code>dyad_id</code>s where <code>model_id</code> is <strong>1</strong> or <strong>5</strong>.</li>
+</ul></li>
+<li><p><strong>Get Dyads for Dataset</strong>:</p>
+<ul>
+<li>From <code>dyad.csv</code>, select rows where:
+<ul>
+<li><code>alias_id</code> is in the list from step 2, and</li>
+<li><code>id</code> (dyad_id) is in the list from step 3.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Retrieve Publications</strong>:</p>
+<ul>
+<li>Use <code>publication_id</code>s from the filtered dyads to get detailed information from <code>publication.csv</code>.</li>
+</ul></li>
+</ol>
+</section>
+<section id="sample-data-illustration" class="level3" data-number="1.10">
+<h3 data-number="1.10" class="anchored" data-anchor-id="sample-data-illustration"><span class="header-section-number">1.10</span> Sample Data Illustration</h3>
+<p><strong>From <code>dataset_alias.csv</code></strong>:</p>
+<!--\~~~markdown-->
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>alias_id</th>
+<th>parent_alias_id</th>
+<th>alias</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>87</td>
+<td>89</td>
+<td>Census of Agriculture</td>
+</tr>
+<tr class="even">
+<td>88</td>
+<td>89</td>
+<td>USDA Census of Agriculture</td>
+</tr>
+</tbody>
+</table>
+<p><strong>From <code>dyad.csv</code></strong>:</p>
+<!--\~~~markdown-->
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>id</th>
+<th>publication_id</th>
+<th>alias_id</th>
+<th>mention_candidate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2569</td>
+<td>1211491</td>
+<td>87</td>
+<td>census of agriculture</td>
+</tr>
+<tr class="even">
+<td>2573</td>
+<td>1199598</td>
+<td>88</td>
+<td>usda census of agriculture</td>
+</tr>
+</tbody>
+</table>
+<p><strong>From <code>dyad_model.csv</code></strong> (filtered for <code>model_id</code> 1 or 5):</p>
+<!--\~~~markdown-->
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>dyad_id</th>
+<th>model_id</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2569</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>2573</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resulting Publications</strong>:</p>
+<ul>
+<li>Publications with <code>id</code> <strong>1211491</strong> and <strong>1199598</strong> from <code>publication.csv</code>.</li>
+</ul>
 
 
-</section>
 </section>
 </section>
 

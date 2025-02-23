@@ -11,7 +11,7 @@
 <meta name="author" content="Rafael Ladislau">
 <meta name="author" content="Julia Lane, Ph.D.">
 <meta name="author" content="Ming Wang">
-<meta name="dcterms.date" content="2025-02-20">
+<meta name="dcterms.date" content="2025-02-23">
 
 <title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
@@ -118,10 +118,6 @@ div.csl-indent {
 <span class="menu-text">Technical Report</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">Contributors</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./appendices.html"> 
 <span class="menu-text">Appendices</span></a>
   </li>  
@@ -162,6 +158,7 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#national-agricultural-statistics-service-nass-data-assets" id="toc-national-agricultural-statistics-service-nass-data-assets" class="nav-link" data-scroll-target="#national-agricultural-statistics-service-nass-data-assets"><span class="header-section-number">4.2.1</span> National Agricultural Statistics Service (NASS) Data Assets</a></li>
   <li><a href="#economic-research-service-ers-data-assets" id="toc-economic-research-service-ers-data-assets" class="nav-link" data-scroll-target="#economic-research-service-ers-data-assets"><span class="header-section-number">4.2.2</span> Economic Research Service (ERS) Data Assets</a></li>
+  <li><a href="#final-list-of-usda-data-assets" id="toc-final-list-of-usda-data-assets" class="nav-link" data-scroll-target="#final-list-of-usda-data-assets"><span class="header-section-number">4.2.3</span> Final List of USDA Data Assets</a></li>
   </ul></li>
   <li><a href="#sec-seed-corpus" id="toc-sec-seed-corpus" class="nav-link" data-scroll-target="#sec-seed-corpus"><span class="header-section-number">4.3</span> Step 2: Create a Seed Corpus</a></li>
   <li><a href="#sec-data-extraction" id="toc-sec-data-extraction" class="nav-link" data-scroll-target="#sec-data-extraction"><span class="header-section-number">4.4</span> Step 3: Dataset Extraction</a></li>
@@ -250,7 +247,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 20, 2025</p>
+      <p class="date">February 23, 2025</p>
     </div>
   </div>
   
@@ -370,17 +367,62 @@ div.csl-indent {
 </section>
 <section id="sec-data" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="sec-data"><span class="header-section-number">4.2</span> Step 1: Define Data Assets and Aliases</h2>
-<p>The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These datasets are widely used in agricultural economics and food systems research. The goal of this step is to compile a structured list of dataset names and their commonly used variations.</p>
+<p>The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These data assets are widely used in agricultural economics and food systems research. The goal of this step is to compile a structured list of dataset names and their commonly used variations.</p>
 <section id="national-agricultural-statistics-service-nass-data-assets" class="level3" data-number="4.2.1">
 <h3 data-number="4.2.1" class="anchored" data-anchor-id="national-agricultural-statistics-service-nass-data-assets"><span class="header-section-number">4.2.1</span> National Agricultural Statistics Service (NASS) Data Assets</h3>
-<p>In late July 2023, an initial set of 21 reports were received containing a report name and a URL link to the Cornell database. The names of these reports were characterized be being very generic in nature e.g.&nbsp;“Agricultural Prices” and “Farm Labor”. This input was analysed and transformed into a list that also contained ISSN inputs and which appended generic names with the term report. An ISSN term was identified for each of the 21 reports. The report names were characterized as the main data asset (the parent record) and the ISSNs and URLs were used as aliases. There were 43 such aliases. In total there were therefore 64 (43 + 21) search terms associated with this input.</p>
+<p>In late July 2023, an initial set of 21 reports were received containing a report name and a URL link to database curated by Cornell University. These reports are part of the USDA’s efforts to track data usage across various research applications. However, the names of these reports were highly generic, making it difficult to precisely identify them in citation databases. Examples include reports titled “Agricultural Prices” and “Farm Labor,” which lack specificity when compared to more structured dataset identifiers.</p>
+<p><strong>Data Processing and Standardization</strong></p>
+<p>To improve identification and searchability, the input was analyzed and transformed into a structured list that included:</p>
+<ul>
+<li>International Standard Serial Numbers (ISSNs): Each of the 21 reports was assigned an ISSN, where available, to provide a standardized identifier.</li>
+<li>Alias Creation: Generic report names were appended with the term report to better distinguish them from other similarly named publications in research literature.</li>
+<li>Expanded Search Terms: Additional variations of dataset names were included to account for different citation styles and possible ways authors reference these reports.</li>
+</ul>
+<p>The final dataset classification involved:</p>
+<ul>
+<li>Main Data Asset (Parent Record): The original 21 reports, each representing a distinct dataset.</li>
+<li>Aliases: ISSNs and URLs served as aliases to improve retrieval accuracy.</li>
+<li>Search Term Expansion: Combining report names with different citation formats led to a total of 64 search terms (21 parent records + 43 aliases).</li>
+</ul>
+<p>This standardization process improved the efficiency of identifying NASS datasets across publications indexed by citation databases such as Scopus, OpenAlex, and Dimensions.</p>
 </section>
 <section id="economic-research-service-ers-data-assets" class="level3" data-number="4.2.2">
 <h3 data-number="4.2.2" class="anchored" data-anchor-id="economic-research-service-ers-data-assets"><span class="header-section-number">4.2.2</span> Economic Research Service (ERS) Data Assets</h3>
-<p>The list of ERS Data Assets was provided during October 2023. In the original list 2,103 records were provided, many of which also had identified aliases. The list was reviewed by professor Julia Lane and 144 records were removed on the basis that they were not amendable for use within the Machine Learning routines. That review was completed on 29 October. The principal reasons for exclusion were terms either being too generic or they were too specific (and likely to be references within a broader report). Examples of the former were records such as “Milk”, “Cotton” and “CSV Format of National Data “. Examples of the latter were records such as “Table 15—Agricultural chemical input” and “Southeast: 1982-91 1992-97”. Once these records were removed, a total of 1,959 records were left from this input.</p>
-<p>These records represented the main data assets (the parent record). These records were then subject to review to identify their associated aliases. Unlike the NASS data assets, it was not possible to reliably find an ISSNs of DoIs for these assets. However, for each of these records, a URL link had been provided and these were used as aliases. There were this a further 1,959 terms used as an alias. In total there were therefore 3,918 (1,959 + 1,959) search terms associated with this input.</p>
-<p>Before the run to create the seed corpus was conducted, a further list of assets was identified. This includes some terms that had been searched for in the Year 1 USDA project (e.g.&nbsp;Census of Agriculture and Agricultural Resource Management Survey) alongside some associated acronyms e.g.&nbsp;FoodAPS. It proved possible to incorporate these late additions. In total these added an additional 20 search terms, comprising 12 main (parent) records and a further 8 alias records.</p>
-<p>Through consultation with USDA stakeholders and recognition that agricultural economists represent a significant user group of USDA-produced datasets, we identified 13 key datasets to feature on the dashboard. This selection emerged from a broader review of USDA data assets that included over 2,000 ERS records and 21 NASS reports, as described above. The selected datasets represent those most frequently used in agricultural economics research, spanning topics from farm management to food security. <a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a> presents these datasets, their producing agencies, and brief descriptions.</p>
+<p>The process of identifying ERS data assets occurred in two phases: (1) an initial dataset compilation, and (2) a refinement process incorporating feedback from a team of agricultural economists at Colorado State University (CSU). This process was meant to yield a list of data assets was both comprehensive and relevant to the research community tracking USDA dataset usage.</p>
+<p><strong>Phase 1: Initial Compilation of ERS Data Assets</strong></p>
+<p>In October 2023, an initial list of 2,103 ERS records was compiled. These records included dataset names and, in some cases, associated aliases. The list was then reviewed by Professor Julia Lane, who identified and removed 144 records that were not suitable for machine learning-based dataset tracking.</p>
+<p><strong>Reasons for Exclusion:</strong></p>
+<ul>
+<li>Records were too generic – Terms such as “Milk, Cotton, and CSV Format of National Data” were too broad to be meaningfully identified in citation databases.</li>
+<li>Records were too specific – Entries such as “Table 15—Agricultural Chemical Input” and “Southeast: 1982-91, 1992-97” were references within broader reports rather than standalone data assets.</li>
+</ul>
+<p>After these exclusions, the remaining 1,959 records represented the initial list of ERS data assets.</p>
+<p><strong>Phase 2: Refinement with CSU Team</strong></p>
+<p>A team of agricultural economists at CSU were consulted to refine the list so that it accurately captured key USDA datasets that may have been overlooked in the initial process. This involved:</p>
+<ul>
+<li>Reviewing dataset usage in prior USDA research – Identifying which datasets were frequently cited.</li>
+<li>Cross-checking with known data users – Ensuring that key datasets used by agricultural economists were included.</li>
+<li>Expanding alias definitions – Recognizing dataset acronyms and alternative naming conventions.</li>
+</ul>
+<p>As part of this process, an additional set of assets was incorporated, including datasets that had been previously identified in the Year 1 USDA project. Notably, datasets such as the Census of Agriculture and the Agricultural Resource Management Survey (ARMS) were added, along with key acronyms like FoodAPS. This phase contributed:</p>
+<ul>
+<li>12 new parent records</li>
+<li>8 additional alias records</li>
+<li>Total: 20 new search terms</li>
+</ul>
+<p><strong>Final Data Asset Identification</strong></p>
+<p>Unlike NASS data assets, which had ISSNs and DOIs, ERS datasets were primarily linked through URLs. The final structured dataset included:</p>
+<ul>
+<li>1,959 parent records (main ERS datasets)</li>
+<li>1,959 alias records (URLs serving as dataset identifiers)</li>
+<li>20 additional records from the CSU consultation</li>
+<li>Total: 3,918 search terms</li>
+</ul>
+<p>Through this two-phase process, the list of ERS data assets evolved from an initial broad set of records into a refined, structured collection of datasets that could be effectively tracked across citation databases.</p>
+</section>
+<section id="final-list-of-usda-data-assets" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="final-list-of-usda-data-assets"><span class="header-section-number">4.2.3</span> Final List of USDA Data Assets</h3>
+<p>The data assets represent those most frequently used in agricultural economics research, spanning topics from farm management to food security. The final set of data assets, their producing agencies, and descriptions are presented in <a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a>.</p>
 <div id="tbl-usda-datasets" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-usda-datasets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -470,17 +512,23 @@ Table&nbsp;1: List of USDA Data Assets
 </section>
 <section id="sec-seed-corpus" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="sec-seed-corpus"><span class="header-section-number">4.3</span> Step 2: Create a Seed Corpus</h2>
-<p>Once the data assets (<a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a>) and aliases were defined, the team identified the set of documents within which to conduct the search (i.e., the “search space”). This was done by first creating a seed corpus, as described below, and then using the seed corpus to infer the types of publications in which the targeted data assets would most likely be found.</p>
+<p>After defining the data assets and aliases in Step 1 (<a href="#sec-data" class="quarto-xref">Section&nbsp;4.2</a>), the next step is to identify where these datasets are referenced in research publications. For <strong>Scopus</strong>, this involved creating a seed corpus to establish a targeted search space, balancing recall (capturing relevant mentions) and precision (minimizing false positives). This process included a restricted search strategy, using both reference lists and full-text searches, as well as machine learning-assisted review and manual refinements to resolve ambiguities, consolidate duplicate aliases, and incorporate missing terms. The refined seed corpus then informed the data extraction step.</p>
+<p>This seed corpus approach was only applied to Scopus; for OpenAlex and Dimensions, this procedure was not conducted, and dataset extraction was instead performed through string searches across their entire publication records, described in <a href="#sec-data-extraction" class="quarto-xref">Section&nbsp;4.4</a>.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>There are several factors that motivate the use of a restricted search space. Although an increasing number of research publications cite datasets in a standard way, data citation has not been adopted as a uniform practice in the research community. Consequently, searches of publication metadata (e.g., the publication reference list) alone is not sufficient. A full text search is required to find all citations of the relevant data assets. However, full text searching is much more intensive in terms of computation, and more expensive in terms of the validation process. As a consequence, the search space is restricted to balance recall and precision. Increasing recall means more of the data assets will be found and hence will provide a broader picture of the data asset’s impact. However, increasing recall comes at the expense of precision, i.e., it will result in more false positives. No matter how attractive achieving high levels of recall may be, that objective rapidly becomes prohibitive in terms of both cost (subject matter expert effort) and time. These three inputs were then combined to provide one list of data assets that could be used in the subsequent process steps. The combined list comprised 2,006 parent records and a further 1,996 aliases (some of which were acronyms). There was therefore a total of 4,002 search terms.</p>
+<section id="rationale" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="rationale"><span class="header-section-number">4.3.1</span> Rationale</h3>
+<p>There are several factors that motivate the use of a restricted search space. Although an increasing number of research publications cite datasets in a standard way, data citation has not been adopted as a uniform practice in the research community. Consequently, searches of publication metadata (e.g., the publication reference list) alone is not sufficient. A full text search is required to find all citations of the relevant data assets. However, full text searching is much more intensive in terms of computation, and more expensive in terms of the validation process. As a consequence, the search space is restricted to balance recall and precision.</p>
+<p>Increasing recall means more of the data assets will be found and hence will provide a broader picture of the data asset’s impact. However, increasing recall comes at the expense of precision, i.e., it will result in more false positives. No matter how attractive achieving high levels of recall may be, that objective rapidly becomes prohibitive in terms of both cost (subject matter expert effort) and time.</p>
+<p>These three inputs were then combined to provide one list of data assets that could be used in the subsequent process steps. The combined list comprised 2,006 parent records and a further 1,996 aliases (some of which were acronyms). There was therefore a total of 4,002 search terms.</p>
 <p>Following the Machine Learning routines and during the review of the results, some ambiguities were found in the Data Asset list leading to a set of post-search refinements. In a search list of the scale being dealt with (over 4,000) records, finding these ambiguities was not unexpected.</p>
 <p>Specifically, in the original list a small number of duplicate alias terms were noted and these were consolidated. A specific example was multiple entries for the data asset “Measuring Access to Food in Tanzania: A Food Basket Approach” and its aliases. Furthermore, it was noted a small number of aliases were attributed to the wrong parent. These were corrected. These changes resulted in a data asset, as at 22 December 2023, that had 3,991 parent and alias records.</p>
 <p>Finally, and again only following the original Kaggle search, it was noted that terms relating to Rural Urban Continuum Codes and Quick Stats had not featured in the original list. An additional eight terms were therefore added as an incremental addition to the list on 29 December 2023. These eight terms comprised two parent records with a further six associated aliases. A specific additional search was conducted for these eight records as explained later.</p>
-<section id="creating-a-seed-corpus" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="creating-a-seed-corpus"><span class="header-section-number">4.3.1</span> Creating a Seed Corpus</h3>
+</section>
+<section id="creating-a-seed-corpus" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="creating-a-seed-corpus"><span class="header-section-number">4.3.2</span> Creating a Seed Corpus</h3>
 <p>The process of creating the search corpus, that is, the body of texts that will be searched, begins with the creation of a seed corpus. The purpose of the seed corpus is to define the parameters that can be used for creating the final search corpus. The seed corpus is, to a first approximation, created by text matching the name for each parent data asset and its aliases with: i) full-text records in ScienceDirect which are within a specified range of publication years and ii) the reference section for Scopus records that are within the specified range of publication years. For the USDA Year 2 project, the date range period was publications produced between 2017 and 2023 (inclusive).</p>
 <p>Because some of the alias terms are very generic and/or otherwise could result in false positives, they are either excluded from the seed corpus process or only included where they are associated with a flag. In this respect,</p>
 <ul>
@@ -538,8 +586,28 @@ Table&nbsp;2: Creating a Seed Corpus
 </figure>
 </div>
 </section>
-<section id="creating-the-full-text-search-corpus" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="creating-the-full-text-search-corpus"><span class="header-section-number">4.3.2</span> Creating the Full Text Search Corpus</h3>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><em>The seed corpus approach was only applied to Scopus.</em></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><em>The seed corpus approach was only applied to Scopus.</em></p>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-data-extraction" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-data-extraction"><span class="header-section-number">4.4</span> Step 3: Dataset Extraction</h2>
+<p>Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, OpenAlex, and Dimensions. We start at the journal level, identifying which journals publish research using USDA data to establish publication patterns across different research fields. We then examine individual publications within these journals, focusing on how researchers use and cite USDA datasets in their work. At a more granular level, we analyze the authors who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors). Finally, we examine the institutions themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.</p>
+<p>Before conducting this analysis, we perform a series of steps to prepare the data. This includes extracting dataset mentions from publication text, disambiguating author names to identify distinct individuals, standardizing institution names, and developing methods to match records across the two databases. The following sections detail these preparatory steps.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Dimensions</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<section id="search-routines" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="search-routines"><span class="header-section-number">4.4.1</span> Search Routines</h3>
+<section id="full-text-search-corpus" class="level4" data-number="4.4.1.1">
+<h4 data-number="4.4.1.1" class="anchored" data-anchor-id="full-text-search-corpus"><span class="header-section-number">4.4.1.1</span> 1. Full Text Search Corpus</h4>
 <p>The search of full text upon which we apply the Machine Learning algorithm relies on the availability of Scopus.</p>
 <p>Scopus is a large, curated abstract and citation database of scientific literature including scientific journals, books, and conference proceedings. Around 11,000 new records are added each day from over 7,000 publishers worldwide. Elsevier is also licensed to access the full text of publications from many, although not all, of these publishers for internal analysis (the full text is not licensed for public use). Where the appropriate licenses do not exist, the records are excluded from the search. To provide some context in this respect, for calendar year 2022, Elsevier estimates that full text records exist for 91% of records published and captured in that year. With license restrictions also considered, the estimate is that it is possible to undertake full text searches on approximately 82% of the total records for that year.</p>
 <p>In summary, the USDA full text search corpus was created using Scopus, with a publication year range of 2017 to 2023 inclusive and using the Topics, Journals and Top Authors as defined in the Table above.</p>
@@ -592,25 +660,13 @@ Table&nbsp;3: Full Text Records Associated with USDA Search Corpus
 </figure>
 </div>
 </section>
-<section id="scopus-references-search-corpus" class="level3" data-number="4.3.3">
-<h3 data-number="4.3.3" class="anchored" data-anchor-id="scopus-references-search-corpus"><span class="header-section-number">4.3.3</span> Scopus References Search Corpus</h3>
+<section id="references-search-corpus" class="level4" data-number="4.4.1.2">
+<h4 data-number="4.4.1.2" class="anchored" data-anchor-id="references-search-corpus"><span class="header-section-number">4.4.1.2</span> 2. References Search Corpus</h4>
 <p>A search through the references list of Scopus records is also undertaken as a separate and distinct step from the full text search. The search corpus here is broader than for full text, as there are no license conditions restricting the search. In addition, because references contain highly structured data, it is feasible to search through all of Scopus, as the computational limitations of full-text search do not apply.</p>
 <p>Because of this, all Scopus records within the publication date range are searched. For the USDA search period of 2017 to 2023, this amounted to 25,110,182 records.</p>
 </section>
-<section id="running-the-search-routines" class="level3" data-number="4.3.4">
-<h3 data-number="4.3.4" class="anchored" data-anchor-id="running-the-search-routines"><span class="header-section-number">4.3.4</span> Running the Search Routines</h3>
-<p>The process of running the search routines is to identify a candidate match with the list of data assets. The candidate match is effectively the “publication ID – dataset ID” combination and is referred to as a dyad. For any given publication, there may be multiple dyads.</p>
-<p>Identifying references to datasets within scientific publications is inherently difficult for a number of reasons including:</p>
-<ol type="1">
-<li>No defined format for dataset references: Datasets are often not cited formally and rather are referred to using unpredictable textual context and formats.</li>
-<li>Name disambiguation: Datasets can be referred to by their full name, acronym, and many other valid ways. For instance, the dataset “Rural-Urban Continuum Codes” may also be referred to as “Rural Urban Continuum Codes” or “RUCC” or by using a URL reference,</li>
-<li>Conflicts with other terms and phrases: Contextual cues need to be used to ensure, for example, that a data asset such as “Feed Outlook” is indeed the relevant USDA reference.</li>
-<li>Simple spelling and other invalid references: Ideally, search algorithms need to allow for “fuzzy” matching to catch slightly misspelled or mis-named datasets.</li>
-</ol>
-<p>To address this challenge, the project employed the top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative.</p>
-</section>
-<section id="machine-learning-kaggle-routines-full-text-search" class="level3" data-number="4.3.5">
-<h3 data-number="4.3.5" class="anchored" data-anchor-id="machine-learning-kaggle-routines-full-text-search"><span class="header-section-number">4.3.5</span> Machine Learning (Kaggle) Routines (Full Text Search)</h3>
+<section id="machine-learning-kaggle-routines-full-text-search" class="level4" data-number="4.4.1.3">
+<h4 data-number="4.4.1.3" class="anchored" data-anchor-id="machine-learning-kaggle-routines-full-text-search"><span class="header-section-number">4.4.1.3</span> 3. Machine Learning (Kaggle) Routines (Full Text Search)</h4>
 <p>The three models differ in their approaches, strengths, and weaknesses, and the strategy was to use all three to generate results, aggregating and filtering the results to achieve a synergy that would outperform any of the models individually. The same Kaggle models that were used in support of the Year 1 USDA project were employed on the data assets available to this project.</p>
 <p>The models are applied to the full text search corpus and generate a series of outputs identifying potential dataset matches. For two of the Kaggle models, the focus is on identifying general data assets so many matches will be generated that are not relevant to USDA and its target data assets. Thus, a further fuzzy text matching routine is applied to the Kaggle output to produce a subset of candidate matches (dyads) that are linked to the target data assets.</p>
 <p>As well as producing metadata for the publications and associated dyads, the process records the Kaggle record that produced the dyad and the scores associated with the matching routines. In addition, for all returned records where publisher licensing allows, a snippet is produced. The snippet is a fragment of text that shows both the referenced dataset and the contextual text that surrounds it, to provide human validators sufficient context to enable them to determine the validity of that candidate reference. The machine learning phase of the project therefore aims to locate all mentions of the target data assets within the search corpus of full text publications and to provide the candidate matches along with their snippets of text to a database that can facilitate subsequent validation by subject matter experts.</p>
@@ -649,11 +705,11 @@ Table&nbsp;4: Full Text Search Generated by Kaggle Routine
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Number of target data assets matched in the above publications</td>
-<td style="text-align: center;">4,392<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+<td style="text-align: center;">4,392<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Number of snippets generated</td>
-<td style="text-align: center;">14,377<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
+<td style="text-align: center;">14,377<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></td>
 </tr>
 </tbody>
 </table>
@@ -661,8 +717,21 @@ Table&nbsp;4: Full Text Search Generated by Kaggle Routine
 </figure>
 </div>
 </section>
-<section id="scopus-references-search-routine" class="level3" data-number="4.3.6">
-<h3 data-number="4.3.6" class="anchored" data-anchor-id="scopus-references-search-routine"><span class="header-section-number">4.3.6</span> Scopus References Search Routine</h3>
+</section>
+<section id="running-the-search-routines" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="running-the-search-routines"><span class="header-section-number">4.4.2</span> Running the Search Routines</h3>
+<p>The process of running the search routines is to identify a candidate match with the list of data assets. The candidate match is effectively the “publication ID – dataset ID” combination and is referred to as a dyad. For any given publication, there may be multiple dyads.</p>
+<p>Identifying references to datasets within scientific publications is inherently difficult for a number of reasons including:</p>
+<ol type="1">
+<li>No defined format for dataset references: Datasets are often not cited formally and rather are referred to using unpredictable textual context and formats.</li>
+<li>Name disambiguation: Datasets can be referred to by their full name, acronym, and many other valid ways. For instance, the dataset “Rural-Urban Continuum Codes” may also be referred to as “Rural Urban Continuum Codes” or “RUCC” or by using a URL reference,</li>
+<li>Conflicts with other terms and phrases: Contextual cues need to be used to ensure, for example, that a data asset such as “Feed Outlook” is indeed the relevant USDA reference.</li>
+<li>Simple spelling and other invalid references: Ideally, search algorithms need to allow for “fuzzy” matching to catch slightly misspelled or mis-named datasets.</li>
+</ol>
+<p>To address this challenge, the project employed the top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative.</p>
+</section>
+<section id="scopus-references-search-routine" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="scopus-references-search-routine"><span class="header-section-number">4.4.3</span> Scopus References Search Routine</h3>
 <p>The reference search employs an exact text string matching routine across the references of the identified Scopus records.</p>
 <p>Because of the issues associated with generic terms, the same flags as applied in the Machine Learning step were also applied here.</p>
 <div id="tbl-scopus-refs" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -701,263 +770,8 @@ Table&nbsp;5: Number of Records from Scopus References Search Routine
 </figure>
 </div>
 </section>
-<section id="post-processing-adjustments-rucc-and-quickstat-increment" class="level3" data-number="4.3.7">
-<h3 data-number="4.3.7" class="anchored" data-anchor-id="post-processing-adjustments-rucc-and-quickstat-increment"><span class="header-section-number">4.3.7</span> Post Processing Adjustments – RUCC and QuickStat Increment</h3>
-<p>Note that the RUCC and Quickstat increment was applied after the Kaggle routines were initially run. The process for running that increment involved two steps:</p>
-<ul>
-<li>A new search of the Scopus reference search corpus using the RUCC and Quickstat aliases.</li>
-<li>A fuzzy text search of the Kaggle output that had been generated using the RUCC and Quickstat aliases.</li>
-</ul>
-</section>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p><em>Describe Rafael’s methodology for searching for dataset names in OpenAlex articles and additional steps Cal did to pull data from the OpenAlex API</em></p>
-<p>To collect publications mentioning the NASS Census of Agriculture from the OpenAlex Catalog, I conducted a string search using a predefined set of dataset aliases: “Census of Agriculture,” “USDA Census,” “NASS Census,” “Agricultural Census,” and “AG Census.” To minimize false positives, I applied several filters: the publications had to be in English, published between 2017 and 2024, and include at least one author affiliated with an American institution. Additionally, to ensure that the publications were indeed referring to the correct dataset, I required that they also contain specific flag terms within the full text body, such as “USDA,” “US Department of Agriculture,” “United States Department of Agriculture,” “NASS,” or “National Agricultural Statistics Service.”</p>
-<p>This method closely mirrors the approach used in the USDA Briefing Book sent by Julia (Appendix 1: Data Search), where a similar string search was applied to the Scopus catalog. In the Scopus analysis, the string search was performed primarily on the references text body rather than the full text and was executed only within a seed corpus. In contrast, our search in OpenAlex was conducted across the entire OpenAlex database. Notably, the references string search in Scopus identified over 80% of the findings, as documented in the briefing book, highlighting the effectiveness of this approach.</p>
-<p>Refer to the <a href="appendices.html#sec-app-openalex">Appendix</a> for additional details on file construction.</p>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-
-</div>
-</div>
-</div>
-</section>
-<section id="sec-data-extraction" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="sec-data-extraction"><span class="header-section-number">4.4</span> Step 3: Dataset Extraction</h2>
-<p>Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, OpenAlex, and Dimensions. We start at the journal level, identifying which journals publish research using USDA data to establish publication patterns across different research fields. We then examine individual publications within these journals, focusing on how researchers use and cite USDA datasets in their work. At a more granular level, we analyze the authors who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors). Finally, we examine the institutions themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.</p>
-<p>Before conducting this analysis, we perform a series of steps to prepare the data. This includes extracting dataset mentions from publication text, disambiguating author names to identify distinct individuals, standardizing institution names, and developing methods to match records across the two databases. The following sections detail these preparatory steps.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Dimensions</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>There are several factors that motivate the use of a restricted search space. Although an increasing number of research publications cite datasets in a standard way, data citation has not been adopted as a uniform practice in the research community. Consequently, searches of publication metadata (e.g., the publication reference list) alone is not sufficient. A full text search is required to find all citations of the relevant data assets. However, full text searching is much more intensive in terms of computation, and more expensive in terms of the validation process. As a consequence, the search space is restricted to balance recall and precision. Increasing recall means more of the data assets will be found and hence will provide a broader picture of the data asset’s impact. However, increasing recall comes at the expense of precision, i.e., it will result in more false positives. No matter how attractive achieving high levels of recall may be, that objective rapidly becomes prohibitive in terms of both cost (subject matter expert effort) and time. These three inputs were then combined to provide one list of data assets that could be used in the subsequent process steps. The combined list comprised 2,006 parent records and a further 1,996 aliases (some of which were acronyms). There was therefore a total of 4,002 search terms.</p>
-<p>Following the Machine Learning routines and during the review of the results, some ambiguities were found in the Data Asset list leading to a set of post-search refinements. In a search list of the scale being dealt with (over 4,000) records, finding these ambiguities was not unexpected.</p>
-<p>Specifically, in the original list a small number of duplicate alias terms were noted and these were consolidated. A specific example was multiple entries for the data asset “Measuring Access to Food in Tanzania: A Food Basket Approach” and its aliases. Furthermore, it was noted a small number of aliases were attributed to the wrong parent. These were corrected. These changes resulted in a data asset, as at 22 December 2023, that had 3,991 parent and alias records.</p>
-<p>Finally, and again only following the original Kaggle search, it was noted that terms relating to Rural Urban Continuum Codes and Quick Stats had not featured in the original list. An additional eight terms were therefore added as an incremental addition to the list on 29 December 2023. These eight terms comprised two parent records with a further six associated aliases. A specific additional search was conducted for these eight records as explained later.</p>
-<section id="creating-a-seed-corpus-1" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="creating-a-seed-corpus-1"><span class="header-section-number">4.4.1</span> Creating a Seed Corpus</h3>
-<p>The process of creating the search corpus, that is, the body of texts that will be searched, begins with the creation of a seed corpus. The purpose of the seed corpus is to define the parameters that can be used for creating the final search corpus. The seed corpus is, to a first approximation, created by text matching the name for each parent data asset and its aliases with: i) full-text records in ScienceDirect which are within a specified range of publication years and ii) the reference section for Scopus records that are within the specified range of publication years. For the USDA Year 2 project, the date range period was publications produced between 2017 and 2023 (inclusive).</p>
-<p>Because some of the alias terms are very generic and/or otherwise could result in false positives, they are either excluded from the seed corpus process or only included where they are associated with a flag. In this respect,</p>
-<ul>
-<li>12 aliases from the total of 4,002 were excluded completely from both the seed corpus creation reference search and the ScienceDirect search.</li>
-<li>71 aliases were included in the search with a flag term i.e.&nbsp;they returned results only when associated with one or more flag terms. The flag terms were: NASS, USDA, US Department of Agriculture, United States Department of Agriculture, National Agricultural Statistics Service</li>
-</ul>
-<p>The search through ScienceDirect and Scopus references resulted in a set of research publication records matched to the data asset names and aliases. Of the 3,990 (4,002 – 12) aliases included in the search, 328 were found in the references and 163 in ScienceDirect. Of course, there are overlaps between these two datasets and the number of unique data assets found within the seed corpus was 334.</p>
-<p>The metadata associated with these publications provides insight into what types of research are leveraging these data assets. The “entities” used for this purpose were as follows:</p>
-<ul>
-<li>SciVal Topic – 2,699 unique topics in the seed corpus</li>
-<li>Journal – 2,650 unique journals in the seed corpus</li>
-<li>Top Authors – Authors are grouped by numbers of output in seed corpus and the top 1,000 are selected. In our sample 769 relevant authors were from USA.</li>
-</ul>
-<p>It should be noted that Scopus Topics are intended to identify the subject area most likely to use these data assets. These topics are intended to uncover clusters of researchers likely to use similar resources, such as datasets, based on the citation links between their work. It should also be noted that in the Year 1 USDA project, the seed corpus was created just be reviewing list of target journals.</p>
-<p>As well as recording the entities, the number of records associated with them that was found in the seed corpus is also collected. This provides the basis by which a filtering can be undertaken to focus down on those entities that should be used in search corpus creation.</p>
-<p>The results of the seed corpus generation (i.e.&nbsp;the entities and record counts) were provided for review to Professor Julia Lane on 15 November 2023. Based on that review, the following table provides a summary of i) decisions were taken with regards to the parameters to be used for creation of the search corpus ii) the implications of that decision on search corpus</p>
-<div id="tbl-seed-corpus" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-seed-corpus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;6: Creating a Seed Corpus
-</figcaption>
-<div aria-describedby="tbl-seed-corpus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: left;">Seed Corpus Detection</th>
-<th style="text-align: left;">Consequence / Implication for Seed Corpus</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">SciVal Topics</td>
-<td style="text-align: left;">Include those SciVal Topics where the article count in the Seed Corpus</td>
-<td style="text-align: left;">All articles associated with 262 SciVal Topics</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Journals</td>
-<td style="text-align: left;">Include those Journals where the article count in the Seed Corpus was 7 or more</td>
-<td style="text-align: left;">All articles associated with 280 journals</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Top Authors</td>
-<td style="text-align: left;">Include those with US affiliation</td>
-<td style="text-align: left;">All articles associated with the US-affiliated 769 Top Authors</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="creating-the-full-text-search-corpus-1" class="level3" data-number="4.4.2">
-<h3 data-number="4.4.2" class="anchored" data-anchor-id="creating-the-full-text-search-corpus-1"><span class="header-section-number">4.4.2</span> Creating the Full Text Search Corpus</h3>
-<p>The search of full text upon which we apply the Machine Learning algorithm relies on the availability of Scopus.</p>
-<p>Scopus is a large, curated abstract and citation database of scientific literature including scientific journals, books, and conference proceedings. Around 11,000 new records are added each day from over 7,000 publishers worldwide. Elsevier is also licensed to access the full text of publications from many, although not all, of these publishers for internal analysis (the full text is not licensed for public use). Where the appropriate licenses do not exist, the records are excluded from the search. To provide some context in this respect, for calendar year 2022, Elsevier estimates that full text records exist for 91% of records published and captured in that year. With license restrictions also considered, the estimate is that it is possible to undertake full text searches on approximately 82% of the total records for that year.</p>
-<p>In summary, the USDA full text search corpus was created using Scopus, with a publication year range of 2017 to 2023 inclusive and using the Topics, Journals and Top Authors as defined in the Table above.</p>
-<p>The full text records associated with the USDA search corpus is shown below:</p>
-<div id="tbl-usda-full-text" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-usda-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;7: Full Text Records Associated with USDA Search Corpus
-</figcaption>
-<div aria-describedby="tbl-usda-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: center;">Number of Records</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">2017-2023 Articles from Topics</td>
-<td style="text-align: center;">726,423</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2017-2023 Articles from Journals</td>
-<td style="text-align: center;">1,537,851</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2017-2023 Articles from Top Authors</td>
-<td style="text-align: center;">21,938</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">De-duplicated Articles from Above</td>
-<td style="text-align: center;">2,089,728</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Deduplicated articles where we have full text</td>
-<td style="text-align: center;">1,630,958</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Deduplicated articles where we have full text and are licensed to search</td>
-<td style="text-align: center;">1,450,086</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="scopus-references-search-corpus-1" class="level3" data-number="4.4.3">
-<h3 data-number="4.4.3" class="anchored" data-anchor-id="scopus-references-search-corpus-1"><span class="header-section-number">4.4.3</span> Scopus References Search Corpus</h3>
-<p>A search through the references list of Scopus records is also undertaken as a separate and distinct step from the full text search. The search corpus here is broader than for full text, as there are no license conditions restricting the search. In addition, because references contain highly structured data, it is feasible to search through all of Scopus, as the computational limitations of full-text search do not apply.</p>
-<p>Because of this, all Scopus records within the publication date range are searched. For the USDA search period of 2017 to 2023, this amounted to 25,110,182 records.</p>
-</section>
-<section id="running-the-search-routines-1" class="level3" data-number="4.4.4">
-<h3 data-number="4.4.4" class="anchored" data-anchor-id="running-the-search-routines-1"><span class="header-section-number">4.4.4</span> Running the Search Routines</h3>
-<p>The process of running the search routines is to identify a candidate match with the list of data assets. The candidate match is effectively the “publication ID – dataset ID” combination and is referred to as a dyad. For any given publication, there may be multiple dyads.</p>
-<p>Identifying references to datasets within scientific publications is inherently difficult for a number of reasons including:</p>
-<ol type="1">
-<li>No defined format for dataset references: Datasets are often not cited formally and rather are referred to using unpredictable textual context and formats.</li>
-<li>Name disambiguation: Datasets can be referred to by their full name, acronym, and many other valid ways. For instance, the dataset “Rural-Urban Continuum Codes” may also be referred to as “Rural Urban Continuum Codes” or “RUCC” or by using a URL reference,</li>
-<li>Conflicts with other terms and phrases: Contextual cues need to be used to ensure, for example, that a data asset such as “Feed Outlook” is indeed the relevant USDA reference.</li>
-<li>Simple spelling and other invalid references: Ideally, search algorithms need to allow for “fuzzy” matching to catch slightly misspelled or mis-named datasets.</li>
-</ol>
-<p>To address this challenge, the project employed the top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative.</p>
-</section>
-<section id="machine-learning-kaggle-routines-full-text-search-1" class="level3" data-number="4.4.5">
-<h3 data-number="4.4.5" class="anchored" data-anchor-id="machine-learning-kaggle-routines-full-text-search-1"><span class="header-section-number">4.4.5</span> Machine Learning (Kaggle) Routines (Full Text Search)</h3>
-<p>The three models differ in their approaches, strengths, and weaknesses, and the strategy was to use all three to generate results, aggregating and filtering the results to achieve a synergy that would outperform any of the models individually. The same Kaggle models that were used in support of the Year 1 USDA project were employed on the data assets available to this project.</p>
-<p>The models are applied to the full text search corpus and generate a series of outputs identifying potential dataset matches. For two of the Kaggle models, the focus is on identifying general data assets so many matches will be generated that are not relevant to USDA and its target data assets. Thus, a further fuzzy text matching routine is applied to the Kaggle output to produce a subset of candidate matches (dyads) that are linked to the target data assets.</p>
-<p>As well as producing metadata for the publications and associated dyads, the process records the Kaggle record that produced the dyad and the scores associated with the matching routines. In addition, for all returned records where publisher licensing allows, a snippet is produced. The snippet is a fragment of text that shows both the referenced dataset and the contextual text that surrounds it, to provide human validators sufficient context to enable them to determine the validity of that candidate reference. The machine learning phase of the project therefore aims to locate all mentions of the target data assets within the search corpus of full text publications and to provide the candidate matches along with their snippets of text to a database that can facilitate subsequent validation by subject matter experts.</p>
-<p>With a focus on data assets rather than datasets and with some of the name aliases comprising short acronyms and/or very generic terms, there is a risk that high levels of false positives would be generated. For example, one of the search terms was “Crop Progress Report”. There are likely to many other countries beyond the US that all issue reports on Crop Progress. Hence, as well as searching for the terms, a set of flags/filters were also included thus ensuring dyads could be identified which also had the flagged terms. Typically, the filters chosen were linked either to focusing on the agency or to focusing on the research produced in the US. Specifically, for the full text search in the USDA project, the following terms were employed as filters:</p>
-<blockquote class="blockquote">
-<p>NASS, USDA, US Department of Agriculture, United States Department of Agriculture, National Agricultural Statistics Service, Economic Research Service</p>
-</blockquote>
-<p>In total, the use of flags was identified as being appropriate for 112 of the data assets.</p>
-<p>The Kaggle routines were run in early December 2023 with the process completing on 14 December.</p>
-<p>A summary of some of the key results from the Full Text search is provided in the Table below:</p>
-<div id="tbl-kaggle-full-text" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-kaggle-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;8: Full Text Search Generated by Kaggle Routine
-</figcaption>
-<div aria-describedby="tbl-kaggle-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Process Step Outputs</th>
-<th style="text-align: center;">Number of Records</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Number of unique Scopus publications identified by the three Kaggle algorithms</td>
-<td style="text-align: center;">635,831</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Number of unique publications identified after Fuzzy text matching to target data assets</td>
-<td style="text-align: center;">4,104</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Number of target data assets matched in the above publications</td>
-<td style="text-align: center;">4,392<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Number of snippets generated</td>
-<td style="text-align: center;">14,377<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="scopus-references-search-routine-1" class="level3" data-number="4.4.6">
-<h3 data-number="4.4.6" class="anchored" data-anchor-id="scopus-references-search-routine-1"><span class="header-section-number">4.4.6</span> Scopus References Search Routine</h3>
-<p>The reference search employs an exact text string matching routine across the references of the identified Scopus records.</p>
-<p>Because of the issues associated with generic terms, the same flags as applied in the Machine Learning step were also applied here.</p>
-<div id="tbl-scopus-refs" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-scopus-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;9: Number of Records from Scopus References Search Routine
-</figcaption>
-<div aria-describedby="tbl-scopus-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Process Step Outputs</th>
-<th style="text-align: center;">Number of Records</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Number of unique Scopus publications identified in reference search</td>
-<td style="text-align: center;">25,588</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Number of those publications that were unique to the reference search (i.e.&nbsp;not found by Kaggle models).</td>
-<td style="text-align: center;">22,818</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Number of target data assets matched with the above publications</td>
-<td style="text-align: center;">34,526</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="post-processing-adjustments-rucc-and-quickstat-increment-1" class="level3" data-number="4.4.7">
-<h3 data-number="4.4.7" class="anchored" data-anchor-id="post-processing-adjustments-rucc-and-quickstat-increment-1"><span class="header-section-number">4.4.7</span> Post Processing Adjustments – RUCC and QuickStat Increment</h3>
+<section id="post-processing-adjustments-rucc-and-quickstat-increment" class="level3" data-number="4.4.4">
+<h3 data-number="4.4.4" class="anchored" data-anchor-id="post-processing-adjustments-rucc-and-quickstat-increment"><span class="header-section-number">4.4.4</span> Post Processing Adjustments – RUCC and QuickStat Increment</h3>
 <p>Note that the RUCC and Quickstat increment was applied after the Kaggle routines were initially run. The process for running that increment involved two steps:</p>
 <ul>
 <li>A new search of the Scopus reference search corpus using the RUCC and Quickstat aliases.</li>
@@ -980,39 +794,57 @@ Table&nbsp;9: Number of Records from Scopus References Search Routine
 <section id="sec-disambiguation" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="sec-disambiguation"><span class="header-section-number">4.5</span> Step 4: Disambiguation Process</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Metadata Processing</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Metadata Processing</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Metadata Processing</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<section id="disambiguating-journals" class="level3" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="disambiguating-journals"><span class="header-section-number">4.5.1</span> Disambiguating Journals</h3>
+<section id="journal-identification" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="journal-identification"><span class="header-section-number">4.5.1</span> Journal Identification</h3>
 </section>
-<section id="disambiguating-authors" class="level3" data-number="4.5.2">
-<h3 data-number="4.5.2" class="anchored" data-anchor-id="disambiguating-authors"><span class="header-section-number">4.5.2</span> Disambiguating Authors</h3>
+<section id="author-disambiguation" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="author-disambiguation"><span class="header-section-number">4.5.2</span> Author Disambiguation</h3>
 </section>
-<section id="disambiguating-institutions" class="level3" data-number="4.5.3">
-<h3 data-number="4.5.3" class="anchored" data-anchor-id="disambiguating-institutions"><span class="header-section-number">4.5.3</span> Disambiguating Institutions</h3>
+<section id="institution-disambiguation" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="institution-disambiguation"><span class="header-section-number">4.5.3</span> Institution Disambiguation</h3>
+<section id="ipeds-ming" class="level4" data-number="4.5.3.1">
+<h4 data-number="4.5.3.1" class="anchored" data-anchor-id="ipeds-ming"><span class="header-section-number">4.5.3.1</span> IPEDS <em>Ming</em></h4>
+</section>
+<section id="msi-data-ming" class="level4" data-number="4.5.3.2">
+<h4 data-number="4.5.3.2" class="anchored" data-anchor-id="msi-data-ming"><span class="header-section-number">4.5.3.2</span> MSI Data <em>Ming</em></h4>
+</section>
 </section>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<section id="disambiguating-journals-1" class="level3" data-number="4.5.4">
-<h3 data-number="4.5.4" class="anchored" data-anchor-id="disambiguating-journals-1"><span class="header-section-number">4.5.4</span> Disambiguating Journals</h3>
+<section id="journal-identification-1" class="level3" data-number="4.5.4">
+<h3 data-number="4.5.4" class="anchored" data-anchor-id="journal-identification-1"><span class="header-section-number">4.5.4</span> Journal Identification</h3>
 </section>
-<section id="disambiguating-authors-1" class="level3" data-number="4.5.5">
-<h3 data-number="4.5.5" class="anchored" data-anchor-id="disambiguating-authors-1"><span class="header-section-number">4.5.5</span> Disambiguating Authors</h3>
+<section id="author-disambiguation-1" class="level3" data-number="4.5.5">
+<h3 data-number="4.5.5" class="anchored" data-anchor-id="author-disambiguation-1"><span class="header-section-number">4.5.5</span> Author Disambiguation</h3>
 </section>
-<section id="disambiguating-institutions-1" class="level3" data-number="4.5.6">
-<h3 data-number="4.5.6" class="anchored" data-anchor-id="disambiguating-institutions-1"><span class="header-section-number">4.5.6</span> Disambiguating Institutions</h3>
+<section id="institution-disambiguation-1" class="level3" data-number="4.5.6">
+<h3 data-number="4.5.6" class="anchored" data-anchor-id="institution-disambiguation-1"><span class="header-section-number">4.5.6</span> Institution Disambiguation</h3>
+<section id="ipeds-ming-1" class="level4" data-number="4.5.6.1">
+<h4 data-number="4.5.6.1" class="anchored" data-anchor-id="ipeds-ming-1"><span class="header-section-number">4.5.6.1</span> IPEDS <em>Ming</em></h4>
+</section>
+<section id="msi-data-ming-1" class="level4" data-number="4.5.6.2">
+<h4 data-number="4.5.6.2" class="anchored" data-anchor-id="msi-data-ming-1"><span class="header-section-number">4.5.6.2</span> MSI Data *Ming**</h4>
+</section>
 </section>
 </div>
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
-<section id="disambiguating-journals-2" class="level3" data-number="4.5.7">
-<h3 data-number="4.5.7" class="anchored" data-anchor-id="disambiguating-journals-2"><span class="header-section-number">4.5.7</span> Disambiguating Journals</h3>
+<section id="journal-identification-2" class="level3" data-number="4.5.7">
+<h3 data-number="4.5.7" class="anchored" data-anchor-id="journal-identification-2"><span class="header-section-number">4.5.7</span> Journal Identification</h3>
 </section>
-<section id="disambiguating-authors-2" class="level3" data-number="4.5.8">
-<h3 data-number="4.5.8" class="anchored" data-anchor-id="disambiguating-authors-2"><span class="header-section-number">4.5.8</span> Disambiguating Authors</h3>
+<section id="author-disambiguation-2" class="level3" data-number="4.5.8">
+<h3 data-number="4.5.8" class="anchored" data-anchor-id="author-disambiguation-2"><span class="header-section-number">4.5.8</span> Author Disambiguation</h3>
 </section>
-<section id="disambiguating-institutions-2" class="level3" data-number="4.5.9">
-<h3 data-number="4.5.9" class="anchored" data-anchor-id="disambiguating-institutions-2"><span class="header-section-number">4.5.9</span> Disambiguating Institutions</h3>
+<section id="institution-disambiguation-2" class="level3" data-number="4.5.9">
+<h3 data-number="4.5.9" class="anchored" data-anchor-id="institution-disambiguation-2"><span class="header-section-number">4.5.9</span> Institution Disambiguation</h3>
+<section id="ipeds-ming-2" class="level4" data-number="4.5.9.1">
+<h4 data-number="4.5.9.1" class="anchored" data-anchor-id="ipeds-ming-2"><span class="header-section-number">4.5.9.1</span> IPEDS <em>Ming</em></h4>
+</section>
+<section id="msi-data-ming-2" class="level4" data-number="4.5.9.2">
+<h4 data-number="4.5.9.2" class="anchored" data-anchor-id="msi-data-ming-2"><span class="header-section-number">4.5.9.2</span> MSI Data <em>Ming</em></h4>
+</section>
 </section>
 </div>
 </div>
@@ -1021,39 +853,102 @@ Table&nbsp;9: Number of Records from Scopus References Search Routine
 <h3 data-number="4.5.10" class="anchored" data-anchor-id="results-from-disambiguation"><span class="header-section-number">4.5.10</span> Results from Disambiguation</h3>
 <p><em>This section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset</em></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Metadata Processing</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Metadata Processing</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Metadata Processing</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
-<section id="disambiguating-journals-3" class="level3" data-number="4.5.11">
-<h3 data-number="4.5.11" class="anchored" data-anchor-id="disambiguating-journals-3"><span class="header-section-number">4.5.11</span> Disambiguating Journals</h3>
+<section id="journal-coverage-cal" class="level3" data-number="4.5.11">
+<h3 data-number="4.5.11" class="anchored" data-anchor-id="journal-coverage-cal"><span class="header-section-number">4.5.11</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="disambiguating-authors-3" class="level3" data-number="4.5.12">
-<h3 data-number="4.5.12" class="anchored" data-anchor-id="disambiguating-authors-3"><span class="header-section-number">4.5.12</span> Disambiguating Authors</h3>
+<section id="publication-coverage-cal" class="level3" data-number="4.5.12">
+<h3 data-number="4.5.12" class="anchored" data-anchor-id="publication-coverage-cal"><span class="header-section-number">4.5.12</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="disambiguating-institutions-3" class="level3" data-number="4.5.13">
-<h3 data-number="4.5.13" class="anchored" data-anchor-id="disambiguating-institutions-3"><span class="header-section-number">4.5.13</span> Disambiguating Institutions</h3>
+<section id="author-coverage-cal" class="level3" data-number="4.5.13">
+<h3 data-number="4.5.13" class="anchored" data-anchor-id="author-coverage-cal"><span class="header-section-number">4.5.13</span> Author Coverage <em>Cal</em></h3>
+</section>
+<section id="institution-coverage-ming" class="level3" data-number="4.5.14">
+<h3 data-number="4.5.14" class="anchored" data-anchor-id="institution-coverage-ming"><span class="header-section-number">4.5.14</span> Institution Coverage <em>Ming</em></h3>
+</section>
+<section id="insitutional-representation-ming" class="level3" data-number="4.5.15">
+<h3 data-number="4.5.15" class="anchored" data-anchor-id="insitutional-representation-ming"><span class="header-section-number">4.5.15</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming" class="level4" data-number="4.5.15.1">
+<h4 data-number="4.5.15.1" class="anchored" data-anchor-id="geographic-coverage-ming"><span class="header-section-number">4.5.15.1</span> Geographic Coverage <em>Ming</em></h4>
+</section>
+<section id="sec-inst-rep" class="level4" data-number="4.5.15.2">
+<h4 data-number="4.5.15.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.5.15.2</span> Institution Types <em>Ming</em></h4>
+</section>
+</section>
+<section id="thematic-analysis-callauren" class="level3" data-number="4.5.16">
+<h3 data-number="4.5.16" class="anchored" data-anchor-id="thematic-analysis-callauren"><span class="header-section-number">4.5.16</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren" class="level4" data-number="4.5.16.1">
+<h4 data-number="4.5.16.1" class="anchored" data-anchor-id="publication-topics-callauren"><span class="header-section-number">4.5.16.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+</section>
+<section id="patterns-over-time-callauren" class="level4" data-number="4.5.16.2">
+<h4 data-number="4.5.16.2" class="anchored" data-anchor-id="patterns-over-time-callauren"><span class="header-section-number">4.5.16.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+</section>
 </section>
 </div>
 <div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<section id="disambiguating-journals-4" class="level3" data-number="4.5.14">
-<h3 data-number="4.5.14" class="anchored" data-anchor-id="disambiguating-journals-4"><span class="header-section-number">4.5.14</span> Disambiguating Journals</h3>
+<section id="journal-coverage-cal-1" class="level3" data-number="4.5.17">
+<h3 data-number="4.5.17" class="anchored" data-anchor-id="journal-coverage-cal-1"><span class="header-section-number">4.5.17</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="disambiguating-authors-4" class="level3" data-number="4.5.15">
-<h3 data-number="4.5.15" class="anchored" data-anchor-id="disambiguating-authors-4"><span class="header-section-number">4.5.15</span> Disambiguating Authors</h3>
+<section id="publication-coverage-cal-1" class="level3" data-number="4.5.18">
+<h3 data-number="4.5.18" class="anchored" data-anchor-id="publication-coverage-cal-1"><span class="header-section-number">4.5.18</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="disambiguating-institutions-4" class="level3" data-number="4.5.16">
-<h3 data-number="4.5.16" class="anchored" data-anchor-id="disambiguating-institutions-4"><span class="header-section-number">4.5.16</span> Disambiguating Institutions</h3>
+<section id="author-coverage-cal-1" class="level3" data-number="4.5.19">
+<h3 data-number="4.5.19" class="anchored" data-anchor-id="author-coverage-cal-1"><span class="header-section-number">4.5.19</span> Author Coverage <em>Cal</em></h3>
+</section>
+<section id="institution-coverage-ming-1" class="level3" data-number="4.5.20">
+<h3 data-number="4.5.20" class="anchored" data-anchor-id="institution-coverage-ming-1"><span class="header-section-number">4.5.20</span> Institution Coverage <em>Ming</em></h3>
+</section>
+<section id="insitutional-representation-ming-1" class="level3" data-number="4.5.21">
+<h3 data-number="4.5.21" class="anchored" data-anchor-id="insitutional-representation-ming-1"><span class="header-section-number">4.5.21</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming-1" class="level4" data-number="4.5.21.1">
+<h4 data-number="4.5.21.1" class="anchored" data-anchor-id="geographic-coverage-ming-1"><span class="header-section-number">4.5.21.1</span> Geographic Coverage <em>Ming</em></h4>
+</section>
+<section id="sec-inst-rep" class="level4" data-number="4.5.21.2">
+<h4 data-number="4.5.21.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.5.21.2</span> Institution Types <em>Ming</em></h4>
+</section>
+</section>
+<section id="thematic-analysis-callauren-1" class="level3" data-number="4.5.22">
+<h3 data-number="4.5.22" class="anchored" data-anchor-id="thematic-analysis-callauren-1"><span class="header-section-number">4.5.22</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren-1" class="level4" data-number="4.5.22.1">
+<h4 data-number="4.5.22.1" class="anchored" data-anchor-id="publication-topics-callauren-1"><span class="header-section-number">4.5.22.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+</section>
+<section id="patterns-over-time-callauren-1" class="level4" data-number="4.5.22.2">
+<h4 data-number="4.5.22.2" class="anchored" data-anchor-id="patterns-over-time-callauren-1"><span class="header-section-number">4.5.22.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+</section>
 </section>
 </div>
 <div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
-<section id="disambiguating-journals-5" class="level3" data-number="4.5.17">
-<h3 data-number="4.5.17" class="anchored" data-anchor-id="disambiguating-journals-5"><span class="header-section-number">4.5.17</span> Disambiguating Journals</h3>
+<section id="journal-coverage-cal-2" class="level3" data-number="4.5.23">
+<h3 data-number="4.5.23" class="anchored" data-anchor-id="journal-coverage-cal-2"><span class="header-section-number">4.5.23</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="disambiguating-authors-5" class="level3" data-number="4.5.18">
-<h3 data-number="4.5.18" class="anchored" data-anchor-id="disambiguating-authors-5"><span class="header-section-number">4.5.18</span> Disambiguating Authors</h3>
+<section id="publication-coverage-cal-2" class="level3" data-number="4.5.24">
+<h3 data-number="4.5.24" class="anchored" data-anchor-id="publication-coverage-cal-2"><span class="header-section-number">4.5.24</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="disambiguating-institutions-5" class="level3" data-number="4.5.19">
-<h3 data-number="4.5.19" class="anchored" data-anchor-id="disambiguating-institutions-5"><span class="header-section-number">4.5.19</span> Disambiguating Institutions</h3>
+<section id="author-coverage-cal-2" class="level3" data-number="4.5.25">
+<h3 data-number="4.5.25" class="anchored" data-anchor-id="author-coverage-cal-2"><span class="header-section-number">4.5.25</span> Author Coverage <em>Cal</em></h3>
+</section>
+<section id="institution-coverage-ming-2" class="level3" data-number="4.5.26">
+<h3 data-number="4.5.26" class="anchored" data-anchor-id="institution-coverage-ming-2"><span class="header-section-number">4.5.26</span> Institution Coverage <em>Ming</em></h3>
+</section>
+<section id="insitutional-representation-ming-2" class="level3" data-number="4.5.27">
+<h3 data-number="4.5.27" class="anchored" data-anchor-id="insitutional-representation-ming-2"><span class="header-section-number">4.5.27</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming-2" class="level4" data-number="4.5.27.1">
+<h4 data-number="4.5.27.1" class="anchored" data-anchor-id="geographic-coverage-ming-2"><span class="header-section-number">4.5.27.1</span> Geographic Coverage <em>Ming</em></h4>
+</section>
+<section id="sec-inst-rep" class="level4" data-number="4.5.27.2">
+<h4 data-number="4.5.27.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.5.27.2</span> Institution Types <em>Ming</em></h4>
+</section>
+</section>
+<section id="thematic-analysis-callauren-2" class="level3" data-number="4.5.28">
+<h3 data-number="4.5.28" class="anchored" data-anchor-id="thematic-analysis-callauren-2"><span class="header-section-number">4.5.28</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren-2" class="level4" data-number="4.5.28.1">
+<h4 data-number="4.5.28.1" class="anchored" data-anchor-id="publication-topics-callauren-2"><span class="header-section-number">4.5.28.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+</section>
+<section id="patterns-over-time-callauren-2" class="level4" data-number="4.5.28.2">
+<h4 data-number="4.5.28.2" class="anchored" data-anchor-id="patterns-over-time-callauren-2"><span class="header-section-number">4.5.28.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+</section>
 </section>
 </div>
 </div>
@@ -1071,7 +966,7 @@ Table&nbsp;9: Number of Records from Scopus References Search Routine
 <div id="tbl-methods-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-methods-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;10: Summary of Methods
+Table&nbsp;6: Summary of Methods
 </figcaption>
 <div aria-describedby="tbl-methods-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -1157,53 +1052,53 @@ Table&nbsp;10: Summary of Methods
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
 <div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
-<section id="journal-identification" class="level3" data-number="4.6.1">
-<h3 data-number="4.6.1" class="anchored" data-anchor-id="journal-identification"><span class="header-section-number">4.6.1</span> Journal Identification</h3>
+<section id="journal-identification-3" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="journal-identification-3"><span class="header-section-number">4.6.1</span> Journal Identification</h3>
 </section>
-<section id="author-disambiguation" class="level3" data-number="4.6.2">
-<h3 data-number="4.6.2" class="anchored" data-anchor-id="author-disambiguation"><span class="header-section-number">4.6.2</span> Author Disambiguation</h3>
+<section id="author-disambiguation-3" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="author-disambiguation-3"><span class="header-section-number">4.6.2</span> Author Disambiguation</h3>
 </section>
-<section id="institution-disambiguation" class="level3" data-number="4.6.3">
-<h3 data-number="4.6.3" class="anchored" data-anchor-id="institution-disambiguation"><span class="header-section-number">4.6.3</span> Institution Disambiguation</h3>
-<section id="ipeds-ming" class="level4" data-number="4.6.3.1">
-<h4 data-number="4.6.3.1" class="anchored" data-anchor-id="ipeds-ming"><span class="header-section-number">4.6.3.1</span> IPEDS <em>Ming</em></h4>
+<section id="institution-disambiguation-3" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="institution-disambiguation-3"><span class="header-section-number">4.6.3</span> Institution Disambiguation</h3>
+<section id="ipeds-ming-3" class="level4" data-number="4.6.3.1">
+<h4 data-number="4.6.3.1" class="anchored" data-anchor-id="ipeds-ming-3"><span class="header-section-number">4.6.3.1</span> IPEDS <em>Ming</em></h4>
 </section>
-<section id="msi-data-ming" class="level4" data-number="4.6.3.2">
-<h4 data-number="4.6.3.2" class="anchored" data-anchor-id="msi-data-ming"><span class="header-section-number">4.6.3.2</span> MSI Data <em>Ming</em></h4>
+<section id="msi-data-ming-3" class="level4" data-number="4.6.3.2">
+<h4 data-number="4.6.3.2" class="anchored" data-anchor-id="msi-data-ming-3"><span class="header-section-number">4.6.3.2</span> MSI Data <em>Ming</em></h4>
 </section>
 </section>
 </div>
 <div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
-<section id="journal-identification-1" class="level3" data-number="4.6.4">
-<h3 data-number="4.6.4" class="anchored" data-anchor-id="journal-identification-1"><span class="header-section-number">4.6.4</span> Journal Identification</h3>
+<section id="journal-identification-4" class="level3" data-number="4.6.4">
+<h3 data-number="4.6.4" class="anchored" data-anchor-id="journal-identification-4"><span class="header-section-number">4.6.4</span> Journal Identification</h3>
 </section>
-<section id="author-disambiguation-1" class="level3" data-number="4.6.5">
-<h3 data-number="4.6.5" class="anchored" data-anchor-id="author-disambiguation-1"><span class="header-section-number">4.6.5</span> Author Disambiguation</h3>
+<section id="author-disambiguation-4" class="level3" data-number="4.6.5">
+<h3 data-number="4.6.5" class="anchored" data-anchor-id="author-disambiguation-4"><span class="header-section-number">4.6.5</span> Author Disambiguation</h3>
 </section>
-<section id="institution-disambiguation-1" class="level3" data-number="4.6.6">
-<h3 data-number="4.6.6" class="anchored" data-anchor-id="institution-disambiguation-1"><span class="header-section-number">4.6.6</span> Institution Disambiguation</h3>
-<section id="ipeds-ming-1" class="level4" data-number="4.6.6.1">
-<h4 data-number="4.6.6.1" class="anchored" data-anchor-id="ipeds-ming-1"><span class="header-section-number">4.6.6.1</span> IPEDS <em>Ming</em></h4>
+<section id="institution-disambiguation-4" class="level3" data-number="4.6.6">
+<h3 data-number="4.6.6" class="anchored" data-anchor-id="institution-disambiguation-4"><span class="header-section-number">4.6.6</span> Institution Disambiguation</h3>
+<section id="ipeds-ming-4" class="level4" data-number="4.6.6.1">
+<h4 data-number="4.6.6.1" class="anchored" data-anchor-id="ipeds-ming-4"><span class="header-section-number">4.6.6.1</span> IPEDS <em>Ming</em></h4>
 </section>
-<section id="msi-data-ming-1" class="level4" data-number="4.6.6.2">
-<h4 data-number="4.6.6.2" class="anchored" data-anchor-id="msi-data-ming-1"><span class="header-section-number">4.6.6.2</span> MSI Data *Ming**</h4>
+<section id="msi-data-ming-4" class="level4" data-number="4.6.6.2">
+<h4 data-number="4.6.6.2" class="anchored" data-anchor-id="msi-data-ming-4"><span class="header-section-number">4.6.6.2</span> MSI Data *Ming**</h4>
 </section>
 </section>
 </div>
 <div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
-<section id="journal-identification-2" class="level3" data-number="4.6.7">
-<h3 data-number="4.6.7" class="anchored" data-anchor-id="journal-identification-2"><span class="header-section-number">4.6.7</span> Journal Identification</h3>
+<section id="journal-identification-5" class="level3" data-number="4.6.7">
+<h3 data-number="4.6.7" class="anchored" data-anchor-id="journal-identification-5"><span class="header-section-number">4.6.7</span> Journal Identification</h3>
 </section>
-<section id="author-disambiguation-2" class="level3" data-number="4.6.8">
-<h3 data-number="4.6.8" class="anchored" data-anchor-id="author-disambiguation-2"><span class="header-section-number">4.6.8</span> Author Disambiguation</h3>
+<section id="author-disambiguation-5" class="level3" data-number="4.6.8">
+<h3 data-number="4.6.8" class="anchored" data-anchor-id="author-disambiguation-5"><span class="header-section-number">4.6.8</span> Author Disambiguation</h3>
 </section>
-<section id="institution-disambiguation-2" class="level3" data-number="4.6.9">
-<h3 data-number="4.6.9" class="anchored" data-anchor-id="institution-disambiguation-2"><span class="header-section-number">4.6.9</span> Institution Disambiguation</h3>
-<section id="ipeds-ming-2" class="level4" data-number="4.6.9.1">
-<h4 data-number="4.6.9.1" class="anchored" data-anchor-id="ipeds-ming-2"><span class="header-section-number">4.6.9.1</span> IPEDS <em>Ming</em></h4>
+<section id="institution-disambiguation-5" class="level3" data-number="4.6.9">
+<h3 data-number="4.6.9" class="anchored" data-anchor-id="institution-disambiguation-5"><span class="header-section-number">4.6.9</span> Institution Disambiguation</h3>
+<section id="ipeds-ming-5" class="level4" data-number="4.6.9.1">
+<h4 data-number="4.6.9.1" class="anchored" data-anchor-id="ipeds-ming-5"><span class="header-section-number">4.6.9.1</span> IPEDS <em>Ming</em></h4>
 </section>
-<section id="msi-data-ming-2" class="level4" data-number="4.6.9.2">
-<h4 data-number="4.6.9.2" class="anchored" data-anchor-id="msi-data-ming-2"><span class="header-section-number">4.6.9.2</span> MSI Data <em>Ming</em></h4>
+<section id="msi-data-ming-5" class="level4" data-number="4.6.9.2">
+<h4 data-number="4.6.9.2" class="anchored" data-anchor-id="msi-data-ming-5"><span class="header-section-number">4.6.9.2</span> MSI Data <em>Ming</em></h4>
 </section>
 </section>
 </div>
@@ -1216,98 +1111,98 @@ Table&nbsp;10: Summary of Methods
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
 <div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
-<section id="journal-coverage-cal" class="level3" data-number="4.6.11">
-<h3 data-number="4.6.11" class="anchored" data-anchor-id="journal-coverage-cal"><span class="header-section-number">4.6.11</span> Journal Coverage <em>Cal</em></h3>
+<section id="journal-coverage-cal-3" class="level3" data-number="4.6.11">
+<h3 data-number="4.6.11" class="anchored" data-anchor-id="journal-coverage-cal-3"><span class="header-section-number">4.6.11</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="publication-coverage-cal" class="level3" data-number="4.6.12">
-<h3 data-number="4.6.12" class="anchored" data-anchor-id="publication-coverage-cal"><span class="header-section-number">4.6.12</span> Publication Coverage <em>Cal</em></h3>
+<section id="publication-coverage-cal-3" class="level3" data-number="4.6.12">
+<h3 data-number="4.6.12" class="anchored" data-anchor-id="publication-coverage-cal-3"><span class="header-section-number">4.6.12</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="author-coverage-cal" class="level3" data-number="4.6.13">
-<h3 data-number="4.6.13" class="anchored" data-anchor-id="author-coverage-cal"><span class="header-section-number">4.6.13</span> Author Coverage <em>Cal</em></h3>
+<section id="author-coverage-cal-3" class="level3" data-number="4.6.13">
+<h3 data-number="4.6.13" class="anchored" data-anchor-id="author-coverage-cal-3"><span class="header-section-number">4.6.13</span> Author Coverage <em>Cal</em></h3>
 </section>
-<section id="institution-coverage-ming" class="level3" data-number="4.6.14">
-<h3 data-number="4.6.14" class="anchored" data-anchor-id="institution-coverage-ming"><span class="header-section-number">4.6.14</span> Institution Coverage <em>Ming</em></h3>
+<section id="institution-coverage-ming-3" class="level3" data-number="4.6.14">
+<h3 data-number="4.6.14" class="anchored" data-anchor-id="institution-coverage-ming-3"><span class="header-section-number">4.6.14</span> Institution Coverage <em>Ming</em></h3>
 </section>
-<section id="insitutional-representation-ming" class="level3" data-number="4.6.15">
-<h3 data-number="4.6.15" class="anchored" data-anchor-id="insitutional-representation-ming"><span class="header-section-number">4.6.15</span> Insitutional Representation <em>Ming</em></h3>
-<section id="geographic-coverage-ming" class="level4" data-number="4.6.15.1">
-<h4 data-number="4.6.15.1" class="anchored" data-anchor-id="geographic-coverage-ming"><span class="header-section-number">4.6.15.1</span> Geographic Coverage <em>Ming</em></h4>
+<section id="insitutional-representation-ming-3" class="level3" data-number="4.6.15">
+<h3 data-number="4.6.15" class="anchored" data-anchor-id="insitutional-representation-ming-3"><span class="header-section-number">4.6.15</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming-3" class="level4" data-number="4.6.15.1">
+<h4 data-number="4.6.15.1" class="anchored" data-anchor-id="geographic-coverage-ming-3"><span class="header-section-number">4.6.15.1</span> Geographic Coverage <em>Ming</em></h4>
 </section>
 <section id="sec-inst-rep" class="level4" data-number="4.6.15.2">
 <h4 data-number="4.6.15.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.6.15.2</span> Institution Types <em>Ming</em></h4>
 </section>
 </section>
-<section id="thematic-analysis-callauren" class="level3" data-number="4.6.16">
-<h3 data-number="4.6.16" class="anchored" data-anchor-id="thematic-analysis-callauren"><span class="header-section-number">4.6.16</span> Thematic Analysis <em>Cal/Lauren</em></h3>
-<section id="publication-topics-callauren" class="level4" data-number="4.6.16.1">
-<h4 data-number="4.6.16.1" class="anchored" data-anchor-id="publication-topics-callauren"><span class="header-section-number">4.6.16.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+<section id="thematic-analysis-callauren-3" class="level3" data-number="4.6.16">
+<h3 data-number="4.6.16" class="anchored" data-anchor-id="thematic-analysis-callauren-3"><span class="header-section-number">4.6.16</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren-3" class="level4" data-number="4.6.16.1">
+<h4 data-number="4.6.16.1" class="anchored" data-anchor-id="publication-topics-callauren-3"><span class="header-section-number">4.6.16.1</span> Publication Topics <em>Cal/Lauren</em></h4>
 </section>
-<section id="patterns-over-time-callauren" class="level4" data-number="4.6.16.2">
-<h4 data-number="4.6.16.2" class="anchored" data-anchor-id="patterns-over-time-callauren"><span class="header-section-number">4.6.16.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+<section id="patterns-over-time-callauren-3" class="level4" data-number="4.6.16.2">
+<h4 data-number="4.6.16.2" class="anchored" data-anchor-id="patterns-over-time-callauren-3"><span class="header-section-number">4.6.16.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
 </section>
 </section>
 </div>
 <div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
-<section id="journal-coverage-cal-1" class="level3" data-number="4.6.17">
-<h3 data-number="4.6.17" class="anchored" data-anchor-id="journal-coverage-cal-1"><span class="header-section-number">4.6.17</span> Journal Coverage <em>Cal</em></h3>
+<section id="journal-coverage-cal-4" class="level3" data-number="4.6.17">
+<h3 data-number="4.6.17" class="anchored" data-anchor-id="journal-coverage-cal-4"><span class="header-section-number">4.6.17</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="publication-coverage-cal-1" class="level3" data-number="4.6.18">
-<h3 data-number="4.6.18" class="anchored" data-anchor-id="publication-coverage-cal-1"><span class="header-section-number">4.6.18</span> Publication Coverage <em>Cal</em></h3>
+<section id="publication-coverage-cal-4" class="level3" data-number="4.6.18">
+<h3 data-number="4.6.18" class="anchored" data-anchor-id="publication-coverage-cal-4"><span class="header-section-number">4.6.18</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="author-coverage-cal-1" class="level3" data-number="4.6.19">
-<h3 data-number="4.6.19" class="anchored" data-anchor-id="author-coverage-cal-1"><span class="header-section-number">4.6.19</span> Author Coverage <em>Cal</em></h3>
+<section id="author-coverage-cal-4" class="level3" data-number="4.6.19">
+<h3 data-number="4.6.19" class="anchored" data-anchor-id="author-coverage-cal-4"><span class="header-section-number">4.6.19</span> Author Coverage <em>Cal</em></h3>
 </section>
-<section id="institution-coverage-ming-1" class="level3" data-number="4.6.20">
-<h3 data-number="4.6.20" class="anchored" data-anchor-id="institution-coverage-ming-1"><span class="header-section-number">4.6.20</span> Institution Coverage <em>Ming</em></h3>
+<section id="institution-coverage-ming-4" class="level3" data-number="4.6.20">
+<h3 data-number="4.6.20" class="anchored" data-anchor-id="institution-coverage-ming-4"><span class="header-section-number">4.6.20</span> Institution Coverage <em>Ming</em></h3>
 </section>
-<section id="insitutional-representation-ming-1" class="level3" data-number="4.6.21">
-<h3 data-number="4.6.21" class="anchored" data-anchor-id="insitutional-representation-ming-1"><span class="header-section-number">4.6.21</span> Insitutional Representation <em>Ming</em></h3>
-<section id="geographic-coverage-ming-1" class="level4" data-number="4.6.21.1">
-<h4 data-number="4.6.21.1" class="anchored" data-anchor-id="geographic-coverage-ming-1"><span class="header-section-number">4.6.21.1</span> Geographic Coverage <em>Ming</em></h4>
+<section id="insitutional-representation-ming-4" class="level3" data-number="4.6.21">
+<h3 data-number="4.6.21" class="anchored" data-anchor-id="insitutional-representation-ming-4"><span class="header-section-number">4.6.21</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming-4" class="level4" data-number="4.6.21.1">
+<h4 data-number="4.6.21.1" class="anchored" data-anchor-id="geographic-coverage-ming-4"><span class="header-section-number">4.6.21.1</span> Geographic Coverage <em>Ming</em></h4>
 </section>
 <section id="sec-inst-rep" class="level4" data-number="4.6.21.2">
 <h4 data-number="4.6.21.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.6.21.2</span> Institution Types <em>Ming</em></h4>
 </section>
 </section>
-<section id="thematic-analysis-callauren-1" class="level3" data-number="4.6.22">
-<h3 data-number="4.6.22" class="anchored" data-anchor-id="thematic-analysis-callauren-1"><span class="header-section-number">4.6.22</span> Thematic Analysis <em>Cal/Lauren</em></h3>
-<section id="publication-topics-callauren-1" class="level4" data-number="4.6.22.1">
-<h4 data-number="4.6.22.1" class="anchored" data-anchor-id="publication-topics-callauren-1"><span class="header-section-number">4.6.22.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+<section id="thematic-analysis-callauren-4" class="level3" data-number="4.6.22">
+<h3 data-number="4.6.22" class="anchored" data-anchor-id="thematic-analysis-callauren-4"><span class="header-section-number">4.6.22</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren-4" class="level4" data-number="4.6.22.1">
+<h4 data-number="4.6.22.1" class="anchored" data-anchor-id="publication-topics-callauren-4"><span class="header-section-number">4.6.22.1</span> Publication Topics <em>Cal/Lauren</em></h4>
 </section>
-<section id="patterns-over-time-callauren-1" class="level4" data-number="4.6.22.2">
-<h4 data-number="4.6.22.2" class="anchored" data-anchor-id="patterns-over-time-callauren-1"><span class="header-section-number">4.6.22.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+<section id="patterns-over-time-callauren-4" class="level4" data-number="4.6.22.2">
+<h4 data-number="4.6.22.2" class="anchored" data-anchor-id="patterns-over-time-callauren-4"><span class="header-section-number">4.6.22.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
 </section>
 </section>
 </div>
 <div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
-<section id="journal-coverage-cal-2" class="level3" data-number="4.6.23">
-<h3 data-number="4.6.23" class="anchored" data-anchor-id="journal-coverage-cal-2"><span class="header-section-number">4.6.23</span> Journal Coverage <em>Cal</em></h3>
+<section id="journal-coverage-cal-5" class="level3" data-number="4.6.23">
+<h3 data-number="4.6.23" class="anchored" data-anchor-id="journal-coverage-cal-5"><span class="header-section-number">4.6.23</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="publication-coverage-cal-2" class="level3" data-number="4.6.24">
-<h3 data-number="4.6.24" class="anchored" data-anchor-id="publication-coverage-cal-2"><span class="header-section-number">4.6.24</span> Publication Coverage <em>Cal</em></h3>
+<section id="publication-coverage-cal-5" class="level3" data-number="4.6.24">
+<h3 data-number="4.6.24" class="anchored" data-anchor-id="publication-coverage-cal-5"><span class="header-section-number">4.6.24</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="author-coverage-cal-2" class="level3" data-number="4.6.25">
-<h3 data-number="4.6.25" class="anchored" data-anchor-id="author-coverage-cal-2"><span class="header-section-number">4.6.25</span> Author Coverage <em>Cal</em></h3>
+<section id="author-coverage-cal-5" class="level3" data-number="4.6.25">
+<h3 data-number="4.6.25" class="anchored" data-anchor-id="author-coverage-cal-5"><span class="header-section-number">4.6.25</span> Author Coverage <em>Cal</em></h3>
 </section>
-<section id="institution-coverage-ming-2" class="level3" data-number="4.6.26">
-<h3 data-number="4.6.26" class="anchored" data-anchor-id="institution-coverage-ming-2"><span class="header-section-number">4.6.26</span> Institution Coverage <em>Ming</em></h3>
+<section id="institution-coverage-ming-5" class="level3" data-number="4.6.26">
+<h3 data-number="4.6.26" class="anchored" data-anchor-id="institution-coverage-ming-5"><span class="header-section-number">4.6.26</span> Institution Coverage <em>Ming</em></h3>
 </section>
-<section id="insitutional-representation-ming-2" class="level3" data-number="4.6.27">
-<h3 data-number="4.6.27" class="anchored" data-anchor-id="insitutional-representation-ming-2"><span class="header-section-number">4.6.27</span> Insitutional Representation <em>Ming</em></h3>
-<section id="geographic-coverage-ming-2" class="level4" data-number="4.6.27.1">
-<h4 data-number="4.6.27.1" class="anchored" data-anchor-id="geographic-coverage-ming-2"><span class="header-section-number">4.6.27.1</span> Geographic Coverage <em>Ming</em></h4>
+<section id="insitutional-representation-ming-5" class="level3" data-number="4.6.27">
+<h3 data-number="4.6.27" class="anchored" data-anchor-id="insitutional-representation-ming-5"><span class="header-section-number">4.6.27</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming-5" class="level4" data-number="4.6.27.1">
+<h4 data-number="4.6.27.1" class="anchored" data-anchor-id="geographic-coverage-ming-5"><span class="header-section-number">4.6.27.1</span> Geographic Coverage <em>Ming</em></h4>
 </section>
 <section id="sec-inst-rep" class="level4" data-number="4.6.27.2">
 <h4 data-number="4.6.27.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.6.27.2</span> Institution Types <em>Ming</em></h4>
 </section>
 </section>
-<section id="thematic-analysis-callauren-2" class="level3" data-number="4.6.28">
-<h3 data-number="4.6.28" class="anchored" data-anchor-id="thematic-analysis-callauren-2"><span class="header-section-number">4.6.28</span> Thematic Analysis <em>Cal/Lauren</em></h3>
-<section id="publication-topics-callauren-2" class="level4" data-number="4.6.28.1">
-<h4 data-number="4.6.28.1" class="anchored" data-anchor-id="publication-topics-callauren-2"><span class="header-section-number">4.6.28.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+<section id="thematic-analysis-callauren-5" class="level3" data-number="4.6.28">
+<h3 data-number="4.6.28" class="anchored" data-anchor-id="thematic-analysis-callauren-5"><span class="header-section-number">4.6.28</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren-5" class="level4" data-number="4.6.28.1">
+<h4 data-number="4.6.28.1" class="anchored" data-anchor-id="publication-topics-callauren-5"><span class="header-section-number">4.6.28.1</span> Publication Topics <em>Cal/Lauren</em></h4>
 </section>
-<section id="patterns-over-time-callauren-2" class="level4" data-number="4.6.28.2">
-<h4 data-number="4.6.28.2" class="anchored" data-anchor-id="patterns-over-time-callauren-2"><span class="header-section-number">4.6.28.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+<section id="patterns-over-time-callauren-5" class="level4" data-number="4.6.28.2">
+<h4 data-number="4.6.28.2" class="anchored" data-anchor-id="patterns-over-time-callauren-5"><span class="header-section-number">4.6.28.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
 </section>
 </section>
 </div>
@@ -1366,11 +1261,9 @@ Visser, M., Van Eck, N. J., &amp; Waltman, L. (2021). Large-scale comparison of 
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Explanatory Note 1: A publication may contain references to more than one target data assets. It may also contain multiple references to the same target data asset. As an example, a publication may contain the following references to target assets (Data Asset A = 3 references, Data Asset B = 2 references, Data asset C = 4 reference then in this field three target data assets, the value included would be “3”.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Explanatory Note 2: For the same publication as in Explanatory Note 1, the value here would be 9 provided the license for the publication allowed for snippet generation.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>The Scopus work was generated by a team provided under contract to USDA (NASS and ERS), which included NYU, Rafael Ladislau, and Elsevier.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Explanatory Note 1: A publication may contain references to more than one target data assets. It may also contain multiple references to the same target data asset. As an example, a publication may contain the following references to target assets (Data Asset A = 3 references, Data Asset B = 2 references, Data asset C = 4 reference then in this field three target data assets, the value included would be “3”.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Explanatory Note 2: For the same publication as in Explanatory Note 1, the value here would be 9 provided the license for the publication allowed for snippet generation.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>The Scopus work was generated by a team provided under contract to USDA (NASS and ERS), which included NYU, Rafael Ladislau, and Elsevier.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Explanatory Note 1: A publication may contain references to more than one target data assets. It may also contain multiple references to the same target data asset. As an example, a publication may contain the following references to target assets (Data Asset A = 3 references, Data Asset B = 2 references, Data asset C = 4 reference then in this field three target data assets, the value included would be “3”.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Explanatory Note 2: For the same publication as in Explanatory Note 1, the value here would be 9 provided the license for the publication allowed for snippet generation.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

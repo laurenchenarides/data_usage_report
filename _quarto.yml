@@ -8,8 +8,6 @@ website:
     left:
       - href: index.qmd
         text: Technical Report
-      - href: about.qmd
-        text: Contributors
       - href: appendices.qmd
         text: Appendices
     right:
@@ -25,26 +23,10 @@ format:
     theme: default  # You can customize this
     number-sections: true  # Number sections if desired
     highlight-style: github  # Code highlighting style
+    author-title: false
     
 editor: source
 
 execute:
   freeze: auto  # Ensures all references are updated
-
-author: 
-  - name: "Lauren Chenarides, Ph.D."
-    email: "Lauren.Chenarides@colostate.edu"
-    affiliation: "Colorado State University"
-  - name: "Calvin Bryan, Ph.D."
-    email: "calvinrbryan@gmail.com"
-    affiliation: "Colorado State University"    
-  - name: "Rafael Ladislau"
-    email: "rafa.ladis@gmail.com"
-    affiliation: "RL Desenvolvimento de Sistemas LTDA"
-  - name: "Julia Lane, Ph.D."
-    email: "julia.lane@nyu.edu"
-    affiliation: "New York University"
-  - name: "Ming Wang"
-    email: "Ming.Wang@colostate.edu"
-    affiliation: "Colorado State University"
 

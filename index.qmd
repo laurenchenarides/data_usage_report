@@ -145,21 +145,72 @@ The process of deriving the list of publications consists of five steps:
 
 ## Step 1: Define Data Assets and Aliases {#sec-data}
 
-The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These datasets are widely used in agricultural economics and food systems research. The goal of this step is to compile a structured list of dataset names and their commonly used variations.
+The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These data assets are widely used in agricultural economics and food systems research. The goal of this step is to compile a structured list of dataset names and their commonly used variations.
 
 ### National Agricultural Statistics Service (NASS) Data Assets
 
-In late July 2023, an initial set of 21 reports were received containing a report name and a URL link to the Cornell database. The names of these reports were characterized be being very generic in nature e.g. “Agricultural Prices” and “Farm Labor”. This input was analysed and transformed into a list that also contained ISSN inputs and which appended generic names with the term report. An ISSN term was identified for each of the 21 reports. The report names were characterized as the main data asset (the parent record) and the ISSNs and URLs were used as aliases. There were 43 such aliases. In total there were therefore 64 (43 + 21) search terms associated with this input.
+In late July 2023, an initial set of 21 reports were received containing a report name and a URL link to database curated by Cornell University. These reports are part of the USDA's efforts to track data usage across various research applications. However, the names of these reports were highly generic, making it difficult to precisely identify them in citation databases. Examples include reports titled "Agricultural Prices" and "Farm Labor," which lack specificity when compared to more structured dataset identifiers.
+
+**Data Processing and Standardization**
+
+To improve identification and searchability, the input was analyzed and transformed into a structured list that included:
+
+- International Standard Serial Numbers (ISSNs): Each of the 21 reports was assigned an ISSN, where available, to provide a standardized identifier.
+- Alias Creation: Generic report names were appended with the term report to better distinguish them from other similarly named publications in research literature.
+- Expanded Search Terms: Additional variations of dataset names were included to account for different citation styles and possible ways authors reference these reports.
+
+The final dataset classification involved:
+
+- Main Data Asset (Parent Record): The original 21 reports, each representing a distinct dataset.
+- Aliases: ISSNs and URLs served as aliases to improve retrieval accuracy.
+- Search Term Expansion: Combining report names with different citation formats led to a total of 64 search terms (21 parent records + 43 aliases).
+
+This standardization process improved the efficiency of identifying NASS datasets across publications indexed by citation databases such as Scopus, OpenAlex, and Dimensions. 
 
 ### Economic Research Service (ERS) Data Assets
 
-The list of ERS Data Assets was provided during October 2023. In the original list 2,103 records were provided, many of which also had identified aliases. The list was reviewed by professor Julia Lane and 144 records were removed on the basis that they were not amendable for use within the Machine Learning routines. That review was completed on 29 October. The principal reasons for exclusion were terms either being too generic or they were too specific (and likely to be references within a broader report). Examples of the former were records such as “Milk”, “Cotton” and “CSV Format of National Data “. Examples of the latter were records such as “Table 15—Agricultural chemical input” and “Southeast: 1982-91 1992-97”. Once these records were removed, a total of 1,959 records were left from this input.
+The process of identifying ERS data assets occurred in two phases: (1) an initial dataset compilation, and (2) a refinement process incorporating feedback from a team of agricultural economists at Colorado State University (CSU). This process was meant to yield a list of data assets was both comprehensive and relevant to the research community tracking USDA dataset usage.
 
-These records represented the main data assets (the parent record). These records were then subject to review to identify their associated aliases. Unlike the NASS data assets, it was not possible to reliably find an ISSNs of DoIs for these assets. However, for each of these records, a URL link had been provided and these were used as aliases. There were this a further 1,959 terms used as an alias. In total there were therefore 3,918 (1,959 + 1,959) search terms associated with this input.
+**Phase 1: Initial Compilation of ERS Data Assets**
 
-Before the run to create the seed corpus was conducted, a further list of assets was identified. This includes some terms that had been searched for in the Year 1 USDA project (e.g. Census of Agriculture and Agricultural Resource Management Survey) alongside some associated acronyms e.g. FoodAPS. It proved possible to incorporate these late additions. In total these added an additional 20 search terms, comprising 12 main (parent) records and a further 8 alias records.
+In October 2023, an initial list of 2,103 ERS records was compiled. These records included dataset names and, in some cases, associated aliases. The list was then reviewed by Professor Julia Lane, who identified and removed 144 records that were not suitable for machine learning-based dataset tracking.
 
-Through consultation with USDA stakeholders and recognition that agricultural economists represent a significant user group of USDA-produced datasets, we identified 13 key datasets to feature on the dashboard. This selection emerged from a broader review of USDA data assets that included over 2,000 ERS records and 21 NASS reports, as described above. The selected datasets represent those most frequently used in agricultural economics research, spanning topics from farm management to food security. @tbl-usda-datasets presents these datasets, their producing agencies, and brief descriptions.
+**Reasons for Exclusion:**
+
+- Records were too generic – Terms such as "Milk, Cotton, and CSV Format of National Data" were too broad to be meaningfully identified in citation databases.
+- Records were too specific – Entries such as "Table 15—Agricultural Chemical Input" and "Southeast: 1982-91, 1992-97" were references within broader reports rather than standalone data assets.
+
+After these exclusions, the remaining 1,959 records represented the initial list of ERS data assets.
+
+**Phase 2: Refinement with CSU Team**
+
+A team of agricultural economists at CSU were consulted to refine the list so that it accurately captured key USDA datasets that may have been overlooked in the initial process. This involved:
+
+- Reviewing dataset usage in prior USDA research – Identifying which datasets were frequently cited.
+- Cross-checking with known data users – Ensuring that key datasets used by agricultural economists were included.
+- Expanding alias definitions – Recognizing dataset acronyms and alternative naming conventions.
+
+As part of this process, an additional set of assets was incorporated, including datasets that had been previously identified in the Year 1 USDA project. Notably, datasets such as the Census of Agriculture and the Agricultural Resource Management Survey (ARMS) were added, along with key acronyms like FoodAPS. 
+This phase contributed:
+
+- 12 new parent records
+- 8 additional alias records
+- Total: 20 new search terms
+
+**Final Data Asset Identification**
+
+Unlike NASS data assets, which had ISSNs and DOIs, ERS datasets were primarily linked through URLs. The final structured dataset included:
+
+- 1,959 parent records (main ERS datasets)
+- 1,959 alias records (URLs serving as dataset identifiers)
+- 20 additional records from the CSU consultation
+- Total: 3,918 search terms
+
+Through this two-phase process, the list of ERS data assets evolved from an initial broad set of records into a refined, structured collection of datasets that could be effectively tracked across citation databases. 
+
+### Final List of USDA Data Assets
+
+The data assets represent those most frequently used in agricultural economics research, spanning topics from farm management to food security. The final set of data assets, their producing agencies, and descriptions are presented in @tbl-usda-datasets.
 
 | Dataset Name | Produced By | Description |
 |:---|:---|:---|
@@ -181,15 +232,17 @@ Through consultation with USDA stakeholders and recognition that agricultural ec
 
 ## Step 2: Create a Seed Corpus {#sec-seed-corpus}
 
-Once the data assets (@tbl-usda-datasets) and aliases were defined, the team identified the set of documents within which to conduct the search (i.e., the “search space”). This was done by first creating a seed corpus, as described below, and then using the seed corpus to infer the types of publications in which the targeted data assets would most likely be found.
+After defining the data assets and aliases in Step 1 (@sec-data), the next step is to identify where these datasets are referenced in research publications. For **Scopus**, this involved creating a seed corpus to establish a targeted search space, balancing recall (capturing relevant mentions) and precision (minimizing false positives). This process included a restricted search strategy, using both reference lists and full-text searches, as well as machine learning-assisted review and manual refinements to resolve ambiguities, consolidate duplicate aliases, and incorporate missing terms. The refined seed corpus then informed the data extraction step. 
+
+This seed corpus approach was only applied to Scopus; for OpenAlex and Dimensions, this procedure was not conducted, and dataset extraction was instead performed through string searches across their entire publication records, described in @sec-data-extraction.
 
 ::: {.panel-tabset}
 
-{{< include scopus01.qmd >}}
+{{< include workflow/scopus01.qmd >}}
 
-{{< include openalex01.qmd >}}
+{{< include workflow/openalex01.qmd >}}
 
-{{< include dimensions01.qmd >}}
+{{< include workflow/dimensions01.qmd >}}
 
 :::
 
@@ -203,11 +256,11 @@ Before conducting this analysis, we perform a series of steps to prepare the dat
 
 ::: {.panel-tabset}
 
-{{< include scopus01.qmd >}}
+{{< include workflow/scopus02.qmd >}}
 
-{{< include openalex01.qmd >}}
+{{< include workflow/openalex02.qmd >}}
 
-{{< include dimensions01.qmd >}}
+{{< include workflow/dimensions02.qmd >}}
 
 :::
 
@@ -217,11 +270,11 @@ Before conducting this analysis, we perform a series of steps to prepare the dat
 
 ::: {.panel-tabset}
 
-{{< include scopus02.qmd >}}
+{{< include workflow/scopus03.qmd >}}
 
-{{< include openalex02.qmd >}}
+{{< include workflow/openalex03.qmd >}}
 
-{{< include dimensions02.qmd >}}
+{{< include workflow/dimensions03.qmd >}}
 
 :::
 
@@ -231,11 +284,11 @@ Before conducting this analysis, we perform a series of steps to prepare the dat
 
 ::: {.panel-tabset}
 
-{{< include scopus02r.qmd >}}
+{{< include workflow/scopus03r.qmd >}}
 
-{{< include openalex02r.qmd >}}
+{{< include workflow/openalex03r.qmd >}}
 
-{{< include dimensions02r.qmd >}}
+{{< include workflow/dimensions03r.qmd >}}
 
 :::
 
@@ -264,11 +317,11 @@ Matching methods:
 
 ::: {.panel-tabset}
 
-{{< include scopus03.qmd >}}
+{{< include workflow/scopus03.qmd >}}
 
-{{< include openalex03.qmd >}}
+{{< include workflow/openalex03.qmd >}}
 
-{{< include dimensions03.qmd >}}
+{{< include workflow/dimensions03.qmd >}}
 
 :::
 
@@ -278,11 +331,11 @@ Matching methods:
 
 ::: {.panel-tabset}
 
-{{< include scopus03r.qmd >}}
+{{< include workflow/scopus03r.qmd >}}
 
-{{< include openalex03r.qmd >}}
+{{< include workflow/openalex03r.qmd >}}
 
-{{< include dimensions03r.qmd >}}
+{{< include workflow/dimensions03r.qmd >}}
 
 :::
 
