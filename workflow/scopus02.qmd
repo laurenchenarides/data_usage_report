@@ -1,16 +1,29 @@
 ## Scopus
 
-### Search Routines 
+### Search Routines {.unnumbered}
 
-#### 1. Full Text Search Corpus
+The search routines for Scopus were designed to systematically identify mentions of USDA data assets across a vast collection of academic publications. Multiple approaches were used to maximize dataset identification. These included (1) full-text searches, which leveraged Scopus's licensed access to retrieve dataset mentions directly from publication text, (2) reference searches, which scanned citation lists for dataset appearances, and (3) machine learning models, which applied text-matching algorithms to improve accuracy.
 
-The search of full text upon which we apply the Machine Learning algorithm relies on the availability of Scopus.
+::: {.callout-note title="Process of Running Search Routines"}
+The process of running the search routines is to identify a candidate match with the list of data assets. The candidate match is effectively the “publication ID – dataset ID” combination and is referred to as a **dyad**. For any given publication, there may be multiple dyads.
+
+Identifying references to datasets within scientific publications is inherently difficult for a number of reasons including:
+
+1.  No defined format for dataset references: Datasets are often not cited formally and rather are referred to using unpredictable textual context and formats.
+2.  Name disambiguation: Datasets can be referred to by their full name, acronym, and many other valid ways. For instance, the dataset “Rural-Urban Continuum Codes” may also be referred to as “Rural Urban Continuum Codes” or “RUCC” or by using a URL reference,
+3.  Conflicts with other terms and phrases: Contextual cues need to be used to ensure, for example, that a data asset such as “Feed Outlook” is indeed the relevant USDA reference.
+4.  Simple spelling and other invalid references: Ideally, search algorithms need to allow for “fuzzy” matching to catch slightly misspelled or mis-named datasets.
+
+To address this challenge, the project employed the top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative.
+:::
+
+#### 1. Full Text Search Corpus {.unnumbered}
 
 Scopus is a large, curated abstract and citation database of scientific literature including scientific journals, books, and conference proceedings. Around 11,000 new records are added each day from over 7,000 publishers worldwide. Elsevier is also licensed to access the full text of publications from many, although not all, of these publishers for internal analysis (the full text is not licensed for public use). Where the appropriate licenses do not exist, the records are excluded from the search. To provide some context in this respect, for calendar year 2022, Elsevier estimates that full text records exist for 91% of records published and captured in that year. With license restrictions also considered, the estimate is that it is possible to undertake full text searches on approximately 82% of the total records for that year.
 
-In summary, the USDA full text search corpus was created using Scopus, with a publication year range of 2017 to 2023 inclusive and using the Topics, Journals and Top Authors as defined in the Table above.
+The USDA full text search corpus was created using Scopus, with a publication year range of 2017 to 2023 inclusive and using the Topics, Journals and Top Authors.
 
-The full text records associated with the USDA search corpus is shown below:
+The full text records associated with the USDA search corpus is shown in @tbl-usda-full-text:
 
 |   | Number of Records |
 |:---|:--:|
@@ -23,16 +36,27 @@ The full text records associated with the USDA search corpus is shown below:
 
 : Full Text Records Associated with USDA Search Corpus {#tbl-usda-full-text}
 
-#### 2. References Search Corpus
+#### 2. References Search Corpus {.unnumbered}
 
 A search through the references list of Scopus records is also undertaken as a separate and distinct step from the full text search. The search corpus here is broader than for full text, as there are no license conditions restricting the search. In addition, because references contain highly structured data, it is feasible to search through all of Scopus, as the computational limitations of full-text search do not apply.
 
 Because of this, all Scopus records within the publication date range are searched. For the USDA search period of 2017 to 2023, this amounted to 25,110,182 records.
 
+The reference search employs an exact text string matching routine across the references of the identified Scopus records.
 
-#### 3. Machine Learning (Kaggle) Routines (Full Text Search)
+Because of the issues associated with generic terms, the same flags as applied in the Machine Learning step were also applied here.
 
-The three models differ in their approaches, strengths, and weaknesses, and the strategy was to use all three to generate results, aggregating and filtering the results to achieve a synergy that would outperform any of the models individually. The same Kaggle models that were used in support of the Year 1 USDA project were employed on the data assets available to this project.
+| Process Step Outputs | Number of Records |
+|:---|:--:|
+| Number of unique Scopus publications identified in reference search | 25,588 |
+| Number of those publications that were unique to the reference search (i.e. not found by Kaggle models). | 22,818 |
+| Number of target data assets matched with the above publications | 34,526 |
+
+: Number of Records from Scopus References Search Routine {#tbl-scopus-refs}
+
+#### 3. Machine Learning (Kaggle) Routines (Full Text Search) {.unnumbered}
+
+The top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative differ in their approaches, strengths, and weaknesses, and the strategy was to use all three to generate results, aggregating and filtering the results to achieve a synergy that would outperform any of the models individually. The same Kaggle models that were used in support of the Year 1 USDA project were employed on the data assets available to this project.
 
 The models are applied to the full text search corpus and generate a series of outputs identifying potential dataset matches. For two of the Kaggle models, the focus is on identifying general data assets so many matches will be generated that are not relevant to USDA and its target data assets. Thus, a further fuzzy text matching routine is applied to the Kaggle output to produce a subset of candidate matches (dyads) that are linked to the target data assets.
 
@@ -46,7 +70,7 @@ In total, the use of flags was identified as being appropriate for 112 of the da
 
 The Kaggle routines were run in early December 2023 with the process completing on 14 December.
 
-A summary of some of the key results from the Full Text search is provided in the Table below:
+A summary of some of the key results from the Full Text search is provided in @tbl-kaggle-full-text:
 
 | Process Step Outputs | Number of Records |
 |:---|:--:|
@@ -61,38 +85,13 @@ A summary of some of the key results from the Full Text search is provided in th
 
 [^3]: Explanatory Note 2: For the same publication as in Explanatory Note 1, the value here would be 9 provided the license for the publication allowed for snippet generation.
 
-### Running the Search Routines
-
-The process of running the search routines is to identify a candidate match with the list of data assets. The candidate match is effectively the “publication ID – dataset ID” combination and is referred to as a dyad. For any given publication, there may be multiple dyads.
-
-Identifying references to datasets within scientific publications is inherently difficult for a number of reasons including:
-
-1.  No defined format for dataset references: Datasets are often not cited formally and rather are referred to using unpredictable textual context and formats.
-2.  Name disambiguation: Datasets can be referred to by their full name, acronym, and many other valid ways. For instance, the dataset “Rural-Urban Continuum Codes” may also be referred to as “Rural Urban Continuum Codes” or “RUCC” or by using a URL reference,
-3.  Conflicts with other terms and phrases: Contextual cues need to be used to ensure, for example, that a data asset such as “Feed Outlook” is indeed the relevant USDA reference.
-4.  Simple spelling and other invalid references: Ideally, search algorithms need to allow for “fuzzy” matching to catch slightly misspelled or mis-named datasets.
-
-To address this challenge, the project employed the top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative.
-
-
-### Scopus References Search Routine
-
-The reference search employs an exact text string matching routine across the references of the identified Scopus records.
-
-Because of the issues associated with generic terms, the same flags as applied in the Machine Learning step were also applied here.
-
-| Process Step Outputs | Number of Records |
-|:---|:--:|
-| Number of unique Scopus publications identified in reference search | 25,588 |
-| Number of those publications that were unique to the reference search (i.e. not found by Kaggle models). | 22,818 |
-| Number of target data assets matched with the above publications | 34,526 |
-
-: Number of Records from Scopus References Search Routine {#tbl-scopus-refs}
-
-
-### Post Processing Adjustments – RUCC and QuickStat Increment
+**Post Processing Adjustments – RUCC and QuickStat Increment**
 
 Note that the RUCC and Quickstat increment was applied after the Kaggle routines were initially run. The process for running that increment involved two steps:
 
 -   A new search of the Scopus reference search corpus using the RUCC and Quickstat aliases.
 -   A fuzzy text search of the Kaggle output that had been generated using the RUCC and Quickstat aliases.
+
+<p style="text-align: center;">
+  <a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
+</p>

@@ -1,6 +1,6 @@
 ## Scopus
 
-### Rationale
+### Rationale {.unnumbered}
 
 There are several factors that motivate the use of a restricted search space. Although an increasing number of research publications cite datasets in a standard way, data citation has not been adopted as a uniform practice in the research community. Consequently, searches of publication metadata (e.g., the publication reference list) alone is not sufficient. A full text search is required to find all citations of the relevant data assets. However, full text searching is much more intensive in terms of computation, and more expensive in terms of the validation process. As a consequence, the search space is restricted to balance recall and precision. 
 
@@ -8,16 +8,12 @@ Increasing recall means more of the data assets will be found and hence will pro
 
 These three inputs were then combined to provide one list of data assets that could be used in the subsequent process steps. The combined list comprised 2,006 parent records and a further 1,996 aliases (some of which were acronyms). There was therefore a total of 4,002 search terms.
 
-Following the Machine Learning routines and during the review of the results, some ambiguities were found in the Data Asset list leading to a set of post-search refinements. In a search list of the scale being dealt with (over 4,000) records, finding these ambiguities was not unexpected.
+### Creating a Seed Corpus {.unnumbered}
 
-Specifically, in the original list a small number of duplicate alias terms were noted and these were consolidated. A specific example was multiple entries for the data asset “Measuring Access to Food in Tanzania: A Food Basket Approach” and its aliases. Furthermore, it was noted a small number of aliases were attributed to the wrong parent. These were corrected. These changes resulted in a data asset, as at 22 December 2023, that had 3,991 parent and alias records.
+The process of creating the search corpus, that is, the body of texts that will be searched, begins with the creation of a seed corpus. The purpose of the seed corpus is to define the parameters that can be used for creating the final search corpus. The seed corpus is, to a first approximation, created by text matching the name for each parent data asset and its aliases with: 
 
-Finally, and again only following the original Kaggle search, it was noted that terms relating to Rural Urban Continuum Codes and Quick Stats had not featured in the original list. An additional eight terms were therefore added as an incremental addition to the list on 29 December 2023. These eight terms comprised two parent records with a further six associated aliases. A specific additional search was conducted for these eight records as explained later.
-
-
-### Creating a Seed Corpus
-
-The process of creating the search corpus, that is, the body of texts that will be searched, begins with the creation of a seed corpus. The purpose of the seed corpus is to define the parameters that can be used for creating the final search corpus. The seed corpus is, to a first approximation, created by text matching the name for each parent data asset and its aliases with: i) full-text records in ScienceDirect which are within a specified range of publication years and ii) the reference section for Scopus records that are within the specified range of publication years. For the USDA Year 2 project, the date range period was publications produced between 2017 and 2023 (inclusive).
+i) full-text records in ScienceDirect which are within a specified range of publication years, and 
+ii) the reference section for Scopus records that are within the specified range of publication years. For the USDA Year 2 project, the date range period was publications produced between 2017 and 2023 (inclusive).
 
 Because some of the alias terms are very generic and/or otherwise could result in false positives, they are either excluded from the seed corpus process or only included where they are associated with a flag. In this respect,
 
@@ -36,7 +32,10 @@ It should be noted that Scopus Topics are intended to identify the subject area 
 
 As well as recording the entities, the number of records associated with them that was found in the seed corpus is also collected. This provides the basis by which a filtering can be undertaken to focus down on those entities that should be used in search corpus creation.
 
-The results of the seed corpus generation (i.e. the entities and record counts) were provided for review to Professor Julia Lane on 15 November 2023. Based on that review, the following table provides a summary of i) decisions were taken with regards to the parameters to be used for creation of the search corpus ii) the implications of that decision on search corpus
+The results of the seed corpus generation (i.e. the entities and record counts) were provided for review to Professor Julia Lane on 15 November 2023. Based on that review, the following table provides a summary of 
+
+i) decisions were taken with regards to the parameters to be used for creation of the search corpus, and 
+ii) the implications of that decision on search corpus
 
 | Parameter | Seed Corpus Detection | Consequence / Implication for Seed Corpus |
 |:---|:---|:---|
@@ -46,5 +45,14 @@ The results of the seed corpus generation (i.e. the entities and record counts) 
 
 : Creating a Seed Corpus {#tbl-seed-corpus}
 
+### Refinement of Seed Corpus {.unnumbered}
+ 
+Following the Machine Learning routines and during the review of the results, some ambiguities were found in the Data Asset list leading to a set of post-search refinements. In a search list of the scale being dealt with (over 4,000) records, finding these ambiguities was not unexpected.
 
+Specifically, in the original list a small number of duplicate alias terms were noted and these were consolidated. A specific example was multiple entries for the data asset "Measuring Access to Food in Tanzania: A Food Basket Approach" and its aliases. Furthermore, it was noted a small number of aliases were attributed to the wrong parent. These were corrected. These changes resulted in a data asset, as at 22 December 2023, that had 3,991 parent and alias records.
 
+Finally, and again only following the original Kaggle search, it was noted that terms relating to Rural Urban Continuum Codes and Quick Stats had not featured in the original list. An additional eight terms were therefore added as an incremental addition to the list on 29 December 2023. These eight terms comprised two parent records with a further six associated aliases. A specific additional search was conducted for these eight records as explained later.
+
+<p style="text-align: center;">
+  <a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
+</p>

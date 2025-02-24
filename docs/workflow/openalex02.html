@@ -6,11 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Lauren Chenarides, Ph.D.">
-<meta name="author" content="Calvin Bryan, Ph.D.">
-<meta name="author" content="Rafael Ladislau">
-<meta name="author" content="Julia Lane, Ph.D.">
-<meta name="author" content="Ming Wang">
 
 <title>openalex02 – Citation Database Assessment</title>
 <style>
@@ -97,10 +92,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Technical Report</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">Contributors</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../appendices.html"> 
 <span class="menu-text">Appendices</span></a>
   </li>  
@@ -126,12 +117,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#metadata-processing" id="toc-metadata-processing" class="nav-link active" data-scroll-target="#metadata-processing"><span class="header-section-number">1</span> Metadata Processing</a>
-  <ul class="collapse">
-  <li><a href="#disambiguating-journals" id="toc-disambiguating-journals" class="nav-link" data-scroll-target="#disambiguating-journals"><span class="header-section-number">1.1</span> Disambiguating Journals</a></li>
-  <li><a href="#disambiguating-authors" id="toc-disambiguating-authors" class="nav-link" data-scroll-target="#disambiguating-authors"><span class="header-section-number">1.2</span> Disambiguating Authors</a></li>
-  <li><a href="#disambiguating-institutions" id="toc-disambiguating-institutions" class="nav-link" data-scroll-target="#disambiguating-institutions"><span class="header-section-number">1.3</span> Disambiguating Institutions</a></li>
-  </ul></li>
+  <li><a href="#openalex" id="toc-openalex" class="nav-link active" data-scroll-target="#openalex"><span class="header-section-number">1</span> OpenAlex</a></li>
   </ul>
 </nav>
 </nav>
@@ -142,82 +128,17 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-</div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Authors</div>
-  <div class="quarto-title-meta-heading">Affiliations</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">Lauren Chenarides, Ph.D. <a href="mailto:Lauren.Chenarides@colostate.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Colorado State University
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Calvin Bryan, Ph.D. <a href="mailto:calvinrbryan@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Colorado State University
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Rafael Ladislau <a href="mailto:rafa.ladis@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            RL Desenvolvimento de Sistemas LTDA
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Julia Lane, Ph.D. <a href="mailto:julia.lane@nyu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            New York University
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Ming Wang <a href="mailto:Ming.Wang@colostate.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Colorado State University
-          </p>
-      </div>
-  </div>
 
-<div class="quarto-title-meta">
-
-      
-  
-    
-  </div>
-  
+<section id="openalex" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="openalex"><span class="header-section-number">1</span> OpenAlex</h2>
+<p><em>Describe Rafael’s methodology for searching for dataset names in OpenAlex articles and additional steps Cal did to pull data from the OpenAlex API</em></p>
+<p>To collect publications mentioning the NASS Census of Agriculture from the OpenAlex Catalog, I conducted a string search using a predefined set of dataset aliases: “Census of Agriculture,” “USDA Census,” “NASS Census,” “Agricultural Census,” and “AG Census.” To minimize false positives, I applied several filters: the publications had to be in English, published between 2017 and 2024, and include at least one author affiliated with an American institution. Additionally, to ensure that the publications were indeed referring to the correct dataset, I required that they also contain specific flag terms within the full text body, such as “USDA,” “US Department of Agriculture,” “United States Department of Agriculture,” “NASS,” or “National Agricultural Statistics Service.”</p>
+<p>This method closely mirrors the approach used in the USDA Briefing Book sent by Julia (Appendix 1: Data Search), where a similar string search was applied to the Scopus catalog. In the Scopus analysis, the string search was performed primarily on the references text body rather than the full text and was executed only within a seed corpus. In contrast, our search in OpenAlex was conducted across the entire OpenAlex database. Notably, the references string search in Scopus identified over 80% of the findings, as documented in the briefing book, highlighting the effectiveness of this approach.</p>
+<p>Refer to the <a href="appendices.html#sec-app-openalex">Appendix</a> for additional details on file construction.</p>
 
 
-</header>
-
-
-<section id="metadata-processing" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="metadata-processing"><span class="header-section-number">1</span> Metadata Processing</h2>
-<section id="disambiguating-journals" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="disambiguating-journals"><span class="header-section-number">1.1</span> Disambiguating Journals</h3>
-</section>
-<section id="disambiguating-authors" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="disambiguating-authors"><span class="header-section-number">1.2</span> Disambiguating Authors</h3>
-</section>
-<section id="disambiguating-institutions" class="level3" data-number="1.3">
-<h3 data-number="1.3" class="anchored" data-anchor-id="disambiguating-institutions"><span class="header-section-number">1.3</span> Disambiguating Institutions</h3>
-
-
-</section>
 </section>
 
 </main> <!-- /main -->

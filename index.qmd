@@ -82,7 +82,7 @@ This led to the development of a methodology for comparing citation databases, f
 3.  Author identification: Evaluating how each platform handles author names and affiliations
 4.  Institution recognition: Determining how each platform records and standardizes institutional information
 
-Research partners at the University of Utah have access to Dimensions. The scope of work expanded to include Dimensions alongside Scopus and OpenAlex. This inclusion provides a more comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms. 
+Research partners at the University of Utah have access to Dimensions. The scope of work expanded to include Dimensions alongside Scopus and OpenAlex. This inclusion provides a more comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms.
 
 Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. Beyond platform comparison, this methodology examines differences in research coverage, particularly the presence of MSIs. This component helps identify variations in dataset coverage and usage across different types of research institutions.
 
@@ -94,54 +94,54 @@ The methods described in this report can be applied to other citation databases 
 
 ## Dimensions {#sec-dimensions}
 
-# Project Workflow
-
-## Overview 
+# Project Workflow {#sec-workflow-overview}
 
 The project workflow outlines the steps involved to evaluate how different citation databases track USDA dataset mentions in research papers. In searching for dataset mentions, the goal is to identify a set of publications that can be compared across the citation database test cases.
 
-The process of deriving the list of publications consists of five steps:
+![](workflow/workflow.jpg)
+
+The process of deriving the list of publications from a citation database consists of five steps:
 
 **1. Define Data Assets and Aliases** (@sec-data)
 
-- Identify USDA datasets that will be searched for and tracked.
-- Collect official dataset names along with common abbreviations, acronyms, and alternative references used.
+-   Identify USDA datasets that will be searched for and tracked.
+-   Collect official dataset names along with common abbreviations, acronyms, and alternative references used.
 
 **Result:** A structured list of dataset names and aliases to be used for search strategies.
 
 **2. Create a Seed Corpus** (@sec-seed-corpus)
 
-- Collect an initial set of publications.
-- Analyze how datasets are referenced.
-- Determine how well the dataset name variations (from Step 1) are retreived from the publications.
-- Adjust searches to improve accuracy.
+-   Collect an initial set of publications.
+-   Analyze how datasets are referenced.
+-   Determine how well the dataset name variations (from Step 1) are retreived from the publications.
+-   Adjust searches to improve accuracy.
 
-**Result:** A set of seed publications to inform dataset extraction procedure.
+**Result:** A set of seed publications to inform dataset identification and search procedures.
 
-**3. Dataset Extraction** (@sec-data-extraction)
+**3. Identify Datasets via Search Routines** (@sec-data-idn)
 
-- Extract dataset mentions using various search strategies:
-  - Machine Learning Models: Apply Kaggle competition models trained to detect dataset mentions.
-  - Full-Text (String) Search: Scan entire articles for relevant dataset names.
-  - Reference Search: Identify dataset citations within publication references.
+-   Extract dataset mentions using various search strategies:
+    (1)   Full-Text (String) Search: Scan entire articles for relevant dataset names.
+    (2)   Reference Search: Identify dataset citations within publication references.
+    (3)   Machine Learning Models: Apply Kaggle competition models trained to detect dataset mentions.
+    
+**Result:** Different search routines yield different sets of publication results.
 
-**Result:** Different extraction methods yield different sets of publication results.
+**4. Disambiguate Publication Results** (@sec-disambiguation)
 
-**4. Disambiguation Process** (@sec-disambiguation)
-
-- Pre-process and clean publication metadata generated from each citation database.
-- Standardize journal, institution, and author names.
-- Deduplicate records.
+-   Pre-process and clean publication metadata generated from each citation database.
+-   Standardize journal, institution, and author names.
+-   Deduplicate records.
 
 **Result:** Cleaned publication metadata, removed of duplicates, inconsistencies, and missing information.
 
-**5. Comparison across Databases** (@sec-matching)
+**5. Compare across Citation Databases** (@sec-matching)
 
-- Compare dataset coverage across Scopus, OpenAlex, and Dimensions.
-- Apply fuzzy matching techniques to identify overlapping and unique dataset mentions.
-- Analyze differences in journal coverage, citation patterns, and author affiliations.
+-   Compare dataset coverage across Scopus, OpenAlex, and Dimensions.
+-   Apply fuzzy matching techniques to identify overlapping and unique dataset mentions.
+-   Analyze differences in journal coverage, citation patterns, and author affiliations.
 
-**Result:** In generating these statistics, we can evaluate the impact of switching databases on dataset tracking accuracy.
+**Result:** A set of statistics that can be used to evaluate dataset tracking accuracy.
 
 ## Step 1: Define Data Assets and Aliases {#sec-data}
 
@@ -155,17 +155,17 @@ In late July 2023, an initial set of 21 reports were received containing a repor
 
 To improve identification and searchability, the input was analyzed and transformed into a structured list that included:
 
-- International Standard Serial Numbers (ISSNs): Each of the 21 reports was assigned an ISSN, where available, to provide a standardized identifier.
-- Alias Creation: Generic report names were appended with the term report to better distinguish them from other similarly named publications in research literature.
-- Expanded Search Terms: Additional variations of dataset names were included to account for different citation styles and possible ways authors reference these reports.
+-   International Standard Serial Numbers (ISSNs): Each of the 21 reports was assigned an ISSN, where available, to provide a standardized identifier.
+-   Alias Creation: Generic report names were appended with the term report to better distinguish them from other similarly named publications in research literature.
+-   Expanded Search Terms: Additional variations of dataset names were included to account for different citation styles and possible ways authors reference these reports.
 
 The final dataset classification involved:
 
-- Main Data Asset (Parent Record): The original 21 reports, each representing a distinct dataset.
-- Aliases: ISSNs and URLs served as aliases to improve retrieval accuracy.
-- Search Term Expansion: Combining report names with different citation formats led to a total of 64 search terms (21 parent records + 43 aliases).
+-   Main Data Asset (Parent Record): The original 21 reports, each representing a distinct dataset.
+-   Aliases: ISSNs and URLs served as aliases to improve retrieval accuracy.
+-   Search Term Expansion: Combining report names with different citation formats led to a total of 64 search terms (21 parent records + 43 aliases).
 
-This standardization process improved the efficiency of identifying NASS datasets across publications indexed by citation databases such as Scopus, OpenAlex, and Dimensions. 
+This standardization process improved the efficiency of identifying NASS datasets across publications indexed by citation databases such as Scopus, OpenAlex, and Dimensions.
 
 ### Economic Research Service (ERS) Data Assets
 
@@ -175,10 +175,10 @@ The process of identifying ERS data assets occurred in two phases: (1) an initia
 
 In October 2023, an initial list of 2,103 ERS records was compiled. These records included dataset names and, in some cases, associated aliases. The list was then reviewed by Professor Julia Lane, who identified and removed 144 records that were not suitable for machine learning-based dataset tracking.
 
-**Reasons for Exclusion:**
+**Reasons for Exclusion**
 
-- Records were too generic – Terms such as "Milk, Cotton, and CSV Format of National Data" were too broad to be meaningfully identified in citation databases.
-- Records were too specific – Entries such as "Table 15—Agricultural Chemical Input" and "Southeast: 1982-91, 1992-97" were references within broader reports rather than standalone data assets.
+-   Records were too generic – Terms such as "Milk, Cotton, and CSV Format of National Data" were too broad to be meaningfully identified in citation databases.
+-   Records were too specific – Entries such as "Table 15—Agricultural Chemical Input" and "Southeast: 1982-91, 1992-97" were references within broader reports rather than standalone data assets.
 
 After these exclusions, the remaining 1,959 records represented the initial list of ERS data assets.
 
@@ -186,34 +186,33 @@ After these exclusions, the remaining 1,959 records represented the initial list
 
 A team of agricultural economists at CSU were consulted to refine the list so that it accurately captured key USDA datasets that may have been overlooked in the initial process. This involved:
 
-- Reviewing dataset usage in prior USDA research – Identifying which datasets were frequently cited.
-- Cross-checking with known data users – Ensuring that key datasets used by agricultural economists were included.
-- Expanding alias definitions – Recognizing dataset acronyms and alternative naming conventions.
+-   Reviewing dataset usage in prior USDA research – Identifying which datasets were frequently cited.
+-   Cross-checking with known data users – Ensuring that key datasets used by agricultural economists were included.
+-   Expanding alias definitions – Recognizing dataset acronyms and alternative naming conventions.
 
-As part of this process, an additional set of assets was incorporated, including datasets that had been previously identified in the Year 1 USDA project. Notably, datasets such as the Census of Agriculture and the Agricultural Resource Management Survey (ARMS) were added, along with key acronyms like FoodAPS. 
-This phase contributed:
+As part of this process, an additional set of assets was incorporated, including datasets that had been previously identified in the Year 1 USDA project. Notably, datasets such as the Census of Agriculture and the Agricultural Resource Management Survey (ARMS) were added, along with key acronyms like FoodAPS. This phase contributed:
 
-- 12 new parent records
-- 8 additional alias records
-- Total: 20 new search terms
+-   12 new parent records
+-   8 additional alias records
+-   Total: 20 new search terms
 
 **Final Data Asset Identification**
 
 Unlike NASS data assets, which had ISSNs and DOIs, ERS datasets were primarily linked through URLs. The final structured dataset included:
 
-- 1,959 parent records (main ERS datasets)
-- 1,959 alias records (URLs serving as dataset identifiers)
-- 20 additional records from the CSU consultation
-- Total: 3,918 search terms
+-   1,959 parent records (main ERS datasets)
+-   1,959 alias records (URLs serving as dataset identifiers)
+-   20 additional records from the CSU consultation
+-   Total: 3,918 search terms
 
-Through this two-phase process, the list of ERS data assets evolved from an initial broad set of records into a refined, structured collection of datasets that could be effectively tracked across citation databases. 
+Through this two-phase process, the list of ERS data assets evolved from an initial broad set of records into a refined, structured collection of datasets that could be effectively tracked across citation databases.
 
 ### Final List of USDA Data Assets
 
 The data assets represent those most frequently used in agricultural economics research, spanning topics from farm management to food security. The final set of data assets, their producing agencies, and descriptions are presented in @tbl-usda-datasets.
 
 | Dataset Name | Produced By | Description |
-|:---|:---|:---|
+|:-----------------------|:-----------------------|:-----------------------|
 | [Census of Agriculture](https://www.nass.usda.gov/AgCensus/) | NASS | Conducted every five years, it provides comprehensive data on U.S. farms, ranches, and producers. |
 | [Agricultural Resource Management Survey (ARMS)](https://www.ers.usda.gov/data-products/arms-farm-financial-and-crop-production-practices/) | ERS | A USDA survey on farm financials, production practices, and resource use. |
 | [Food Acquisition and Purchase Survey (FoodAPS)](https://www.ers.usda.gov/data-products/foodaps-national-household-food-acquisition-and-purchase-survey/) | ERS | A nationally representative survey tracking U.S. household food purchases and acquisitions. |
@@ -232,69 +231,56 @@ The data assets represent those most frequently used in agricultural economics r
 
 ## Step 2: Create a Seed Corpus {#sec-seed-corpus}
 
-After defining the data assets and aliases in Step 1 (@sec-data), the next step is to identify where these datasets are referenced in research publications. For **Scopus**, this involved creating a seed corpus to establish a targeted search space, balancing recall (capturing relevant mentions) and precision (minimizing false positives). This process included a restricted search strategy, using both reference lists and full-text searches, as well as machine learning-assisted review and manual refinements to resolve ambiguities, consolidate duplicate aliases, and incorporate missing terms. The refined seed corpus then informed the data extraction step. 
+After defining the data assets and aliases in Step 1 (@sec-data), the next step is to identify where these datasets are referenced in research publications. For **Scopus**, this involved creating a seed corpus to establish a targeted search space, balancing recall (capturing relevant mentions) and precision (minimizing false positives). This process included a restricted search strategy, using both reference lists and full-text searches, as well as machine learning-assisted review and manual refinements to resolve ambiguities, consolidate duplicate aliases, and incorporate missing terms. The refined seed corpus then informed the data identification step.
 
-This seed corpus approach was only applied to Scopus; for OpenAlex and Dimensions, this procedure was not conducted, and dataset extraction was instead performed through string searches across their entire publication records, described in @sec-data-extraction.
+This seed corpus approach was only applied to Scopus; for OpenAlex and Dimensions, this procedure was not conducted, and dataset identification was instead performed through string searches across their entire publication records, described in @sec-data-idn.
 
-::: {.panel-tabset}
-
+::: panel-tabset
 {{< include workflow/scopus01.qmd >}}
 
 {{< include workflow/openalex01.qmd >}}
 
 {{< include workflow/dimensions01.qmd >}}
-
 :::
 
-## Step 3: Dataset Extraction {#sec-data-extraction}
+## Step 3: Identify Datasets via Search Routines {#sec-data-idn}
 
-Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus[^1], OpenAlex, and Dimensions. We start at the journal level, identifying which journals publish research using USDA data to establish publication patterns across different research fields. We then examine individual publications within these journals, focusing on how researchers use and cite USDA datasets in their work. At a more granular level, we analyze the authors who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors). Finally, we examine the institutions themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.
-
-[^1]: The Scopus work was generated by a team provided under contract to USDA (NASS and ERS), which included NYU, Rafael Ladislau, and Elsevier.
-
-Before conducting this analysis, we perform a series of steps to prepare the data. This includes extracting dataset mentions from publication text, disambiguating author names to identify distinct individuals, standardizing institution names, and developing methods to match records across the two databases. The following sections detail these preparatory steps.
-
-::: {.panel-tabset}
-
+::: panel-tabset
 {{< include workflow/scopus02.qmd >}}
 
 {{< include workflow/openalex02.qmd >}}
 
 {{< include workflow/dimensions02.qmd >}}
-
 :::
 
+## Step 4: Disambiguate Publication Results {#sec-disambiguation}
 
-
-## Step 4: Disambiguation Process {#sec-disambiguation}
-
-::: {.panel-tabset}
-
+::: panel-tabset
 {{< include workflow/scopus03.qmd >}}
 
 {{< include workflow/openalex03.qmd >}}
 
 {{< include workflow/dimensions03.qmd >}}
-
 :::
 
 ### Results from Disambiguation
 
 *This section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset*
 
-::: {.panel-tabset}
-
+::: panel-tabset
 {{< include workflow/scopus03r.qmd >}}
 
 {{< include workflow/openalex03r.qmd >}}
 
 {{< include workflow/dimensions03r.qmd >}}
-
 :::
 
+## Step 5: Compare across Citation Databases {#sec-matching}
 
 
-## Step 5: Comparison across Datasets {#sec-matching}
+Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus[^1], OpenAlex, and Dimensions. We start at the journal level, identifying which journals publish research using USDA data to establish publication patterns across different research fields. We then examine individual publications within these journals, focusing on how researchers use and cite USDA datasets in their work. At a more granular level, we analyze the authors who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors). Finally, we examine the institutions themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.
+
+[^1]: The Scopus work was generated by a team provided under contract to USDA (NASS and ERS), which included NYU, Rafael Ladislau, and Elsevier.
 
 Matching methods:
 
@@ -303,7 +289,7 @@ Matching methods:
 3.  Machine learning methods for complex cases
 
 | Method | Considerations | Example | Pros | Cons |
-|:---|:---|:---|:---|:---|
+|:--------------|:--------------|:--------------|:--------------|:--------------|
 | Searching for dataset names within Scopus |  |  |  |  |
 | Searching for dataset names within OpenAlex | “Location” field set to “journal” |  |  |  |
 | Disambiguation of authors |  |  |  |  |
@@ -315,30 +301,25 @@ Matching methods:
 
 : Summary of Methods {#tbl-methods-summary}
 
-::: {.panel-tabset}
-
+::: panel-tabset
 {{< include workflow/scopus03.qmd >}}
 
 {{< include workflow/openalex03.qmd >}}
 
 {{< include workflow/dimensions03.qmd >}}
-
 :::
 
 ### Results from Database Comparison
 
 *This section presents results after matching (which type varies – deterministic vs fuzzy)*
 
-::: {.panel-tabset}
-
+::: panel-tabset
 {{< include workflow/scopus03r.qmd >}}
 
 {{< include workflow/openalex03r.qmd >}}
 
 {{< include workflow/dimensions03r.qmd >}}
-
 :::
-
 
 # Recommendations
 
