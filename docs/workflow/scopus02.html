@@ -119,10 +119,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#scopus" id="toc-scopus" class="nav-link active" data-scroll-target="#scopus"><span class="header-section-number">1</span> Scopus</a>
   <ul class="collapse">
-  <li><a href="#search-routines" id="toc-search-routines" class="nav-link" data-scroll-target="#search-routines"><span class="header-section-number">1.1</span> Search Routines</a></li>
-  <li><a href="#running-the-search-routines" id="toc-running-the-search-routines" class="nav-link" data-scroll-target="#running-the-search-routines"><span class="header-section-number">1.2</span> Running the Search Routines</a></li>
-  <li><a href="#scopus-references-search-routine" id="toc-scopus-references-search-routine" class="nav-link" data-scroll-target="#scopus-references-search-routine"><span class="header-section-number">1.3</span> Scopus References Search Routine</a></li>
-  <li><a href="#post-processing-adjustments-rucc-and-quickstat-increment" id="toc-post-processing-adjustments-rucc-and-quickstat-increment" class="nav-link" data-scroll-target="#post-processing-adjustments-rucc-and-quickstat-increment"><span class="header-section-number">1.4</span> Post Processing Adjustments – RUCC and QuickStat Increment</a></li>
+  <li><a href="#search-routines" id="toc-search-routines" class="nav-link" data-scroll-target="#search-routines">Search Routines</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -139,14 +136,35 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="scopus" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="scopus"><span class="header-section-number">1</span> Scopus</h2>
-<section id="search-routines" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="search-routines"><span class="header-section-number">1.1</span> Search Routines</h3>
-<section id="full-text-search-corpus" class="level4" data-number="1.1.1">
-<h4 data-number="1.1.1" class="anchored" data-anchor-id="full-text-search-corpus"><span class="header-section-number">1.1.1</span> 1. Full Text Search Corpus</h4>
-<p>The search of full text upon which we apply the Machine Learning algorithm relies on the availability of Scopus.</p>
+<section id="search-routines" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="search-routines">Search Routines</h3>
+<p>The search routines for Scopus were designed to systematically identify mentions of USDA data assets across a vast collection of academic publications. Multiple approaches were used to maximize dataset identification. These included (1) full-text searches, which leveraged Scopus’s licensed access to retrieve dataset mentions directly from publication text, (2) reference searches, which scanned citation lists for dataset appearances, and (3) machine learning models, which applied text-matching algorithms to improve accuracy.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Process of Running Search Routines">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Process of Running Search Routines
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The process of running the search routines is to identify a candidate match with the list of data assets. The candidate match is effectively the “publication ID – dataset ID” combination and is referred to as a <strong>dyad</strong>. For any given publication, there may be multiple dyads.</p>
+<p>Identifying references to datasets within scientific publications is inherently difficult for a number of reasons including:</p>
+<ol type="1">
+<li>No defined format for dataset references: Datasets are often not cited formally and rather are referred to using unpredictable textual context and formats.</li>
+<li>Name disambiguation: Datasets can be referred to by their full name, acronym, and many other valid ways. For instance, the dataset “Rural-Urban Continuum Codes” may also be referred to as “Rural Urban Continuum Codes” or “RUCC” or by using a URL reference,</li>
+<li>Conflicts with other terms and phrases: Contextual cues need to be used to ensure, for example, that a data asset such as “Feed Outlook” is indeed the relevant USDA reference.</li>
+<li>Simple spelling and other invalid references: Ideally, search algorithms need to allow for “fuzzy” matching to catch slightly misspelled or mis-named datasets.</li>
+</ol>
+<p>To address this challenge, the project employed the top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative.</p>
+</div>
+</div>
+<section id="full-text-search-corpus" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="full-text-search-corpus">1. Full Text Search Corpus</h4>
 <p>Scopus is a large, curated abstract and citation database of scientific literature including scientific journals, books, and conference proceedings. Around 11,000 new records are added each day from over 7,000 publishers worldwide. Elsevier is also licensed to access the full text of publications from many, although not all, of these publishers for internal analysis (the full text is not licensed for public use). Where the appropriate licenses do not exist, the records are excluded from the search. To provide some context in this respect, for calendar year 2022, Elsevier estimates that full text records exist for 91% of records published and captured in that year. With license restrictions also considered, the estimate is that it is possible to undertake full text searches on approximately 82% of the total records for that year.</p>
-<p>In summary, the USDA full text search corpus was created using Scopus, with a publication year range of 2017 to 2023 inclusive and using the Topics, Journals and Top Authors as defined in the Table above.</p>
-<p>The full text records associated with the USDA search corpus is shown below:</p>
+<p>The USDA full text search corpus was created using Scopus, with a publication year range of 2017 to 2023 inclusive and using the Topics, Journals and Top Authors.</p>
+<p>The full text records associated with the USDA search corpus is shown in <a href="#tbl-usda-full-text" class="quarto-xref">Table&nbsp;1</a>:</p>
 <div id="tbl-usda-full-text" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-usda-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -195,14 +213,51 @@ Table&nbsp;1: Full Text Records Associated with USDA Search Corpus
 </figure>
 </div>
 </section>
-<section id="references-search-corpus" class="level4" data-number="1.1.2">
-<h4 data-number="1.1.2" class="anchored" data-anchor-id="references-search-corpus"><span class="header-section-number">1.1.2</span> 2. References Search Corpus</h4>
+<section id="references-search-corpus" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="references-search-corpus">2. References Search Corpus</h4>
 <p>A search through the references list of Scopus records is also undertaken as a separate and distinct step from the full text search. The search corpus here is broader than for full text, as there are no license conditions restricting the search. In addition, because references contain highly structured data, it is feasible to search through all of Scopus, as the computational limitations of full-text search do not apply.</p>
 <p>Because of this, all Scopus records within the publication date range are searched. For the USDA search period of 2017 to 2023, this amounted to 25,110,182 records.</p>
+<p>The reference search employs an exact text string matching routine across the references of the identified Scopus records.</p>
+<p>Because of the issues associated with generic terms, the same flags as applied in the Machine Learning step were also applied here.</p>
+<div id="tbl-scopus-refs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-scopus-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Number of Records from Scopus References Search Routine
+</figcaption>
+<div aria-describedby="tbl-scopus-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Process Step Outputs</th>
+<th style="text-align: center;">Number of Records</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Number of unique Scopus publications identified in reference search</td>
+<td style="text-align: center;">25,588</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of those publications that were unique to the reference search (i.e.&nbsp;not found by Kaggle models).</td>
+<td style="text-align: center;">22,818</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of target data assets matched with the above publications</td>
+<td style="text-align: center;">34,526</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
-<section id="machine-learning-kaggle-routines-full-text-search" class="level4" data-number="1.1.3">
-<h4 data-number="1.1.3" class="anchored" data-anchor-id="machine-learning-kaggle-routines-full-text-search"><span class="header-section-number">1.1.3</span> 3. Machine Learning (Kaggle) Routines (Full Text Search)</h4>
-<p>The three models differ in their approaches, strengths, and weaknesses, and the strategy was to use all three to generate results, aggregating and filtering the results to achieve a synergy that would outperform any of the models individually. The same Kaggle models that were used in support of the Year 1 USDA project were employed on the data assets available to this project.</p>
+<section id="machine-learning-kaggle-routines-full-text-search" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="machine-learning-kaggle-routines-full-text-search">3. Machine Learning (Kaggle) Routines (Full Text Search)</h4>
+<p>The top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative differ in their approaches, strengths, and weaknesses, and the strategy was to use all three to generate results, aggregating and filtering the results to achieve a synergy that would outperform any of the models individually. The same Kaggle models that were used in support of the Year 1 USDA project were employed on the data assets available to this project.</p>
 <p>The models are applied to the full text search corpus and generate a series of outputs identifying potential dataset matches. For two of the Kaggle models, the focus is on identifying general data assets so many matches will be generated that are not relevant to USDA and its target data assets. Thus, a further fuzzy text matching routine is applied to the Kaggle output to produce a subset of candidate matches (dyads) that are linked to the target data assets.</p>
 <p>As well as producing metadata for the publications and associated dyads, the process records the Kaggle record that produced the dyad and the scores associated with the matching routines. In addition, for all returned records where publisher licensing allows, a snippet is produced. The snippet is a fragment of text that shows both the referenced dataset and the contextual text that surrounds it, to provide human validators sufficient context to enable them to determine the validity of that candidate reference. The machine learning phase of the project therefore aims to locate all mentions of the target data assets within the search corpus of full text publications and to provide the candidate matches along with their snippets of text to a database that can facilitate subsequent validation by subject matter experts.</p>
 <p>With a focus on data assets rather than datasets and with some of the name aliases comprising short acronyms and/or very generic terms, there is a risk that high levels of false positives would be generated. For example, one of the search terms was “Crop Progress Report”. There are likely to many other countries beyond the US that all issue reports on Crop Progress. Hence, as well as searching for the terms, a set of flags/filters were also included thus ensuring dyads could be identified which also had the flagged terms. Typically, the filters chosen were linked either to focusing on the agency or to focusing on the research produced in the US. Specifically, for the full text search in the USDA project, the following terms were employed as filters:</p>
@@ -211,11 +266,11 @@ Table&nbsp;1: Full Text Records Associated with USDA Search Corpus
 </blockquote>
 <p>In total, the use of flags was identified as being appropriate for 112 of the data assets.</p>
 <p>The Kaggle routines were run in early December 2023 with the process completing on 14 December.</p>
-<p>A summary of some of the key results from the Full Text search is provided in the Table below:</p>
+<p>A summary of some of the key results from the Full Text search is provided in <a href="#tbl-kaggle-full-text" class="quarto-xref">Table&nbsp;3</a>:</p>
 <div id="tbl-kaggle-full-text" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-kaggle-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Full Text Search Generated by Kaggle Routine
+Table&nbsp;3: Full Text Search Generated by Kaggle Routine
 </figcaption>
 <div aria-describedby="tbl-kaggle-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -251,69 +306,18 @@ Table&nbsp;2: Full Text Search Generated by Kaggle Routine
 </div>
 </figure>
 </div>
-</section>
-</section>
-<section id="running-the-search-routines" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="running-the-search-routines"><span class="header-section-number">1.2</span> Running the Search Routines</h3>
-<p>The process of running the search routines is to identify a candidate match with the list of data assets. The candidate match is effectively the “publication ID – dataset ID” combination and is referred to as a dyad. For any given publication, there may be multiple dyads.</p>
-<p>Identifying references to datasets within scientific publications is inherently difficult for a number of reasons including:</p>
-<ol type="1">
-<li>No defined format for dataset references: Datasets are often not cited formally and rather are referred to using unpredictable textual context and formats.</li>
-<li>Name disambiguation: Datasets can be referred to by their full name, acronym, and many other valid ways. For instance, the dataset “Rural-Urban Continuum Codes” may also be referred to as “Rural Urban Continuum Codes” or “RUCC” or by using a URL reference,</li>
-<li>Conflicts with other terms and phrases: Contextual cues need to be used to ensure, for example, that a data asset such as “Feed Outlook” is indeed the relevant USDA reference.</li>
-<li>Simple spelling and other invalid references: Ideally, search algorithms need to allow for “fuzzy” matching to catch slightly misspelled or mis-named datasets.</li>
-</ol>
-<p>To address this challenge, the project employed the top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative.</p>
-</section>
-<section id="scopus-references-search-routine" class="level3" data-number="1.3">
-<h3 data-number="1.3" class="anchored" data-anchor-id="scopus-references-search-routine"><span class="header-section-number">1.3</span> Scopus References Search Routine</h3>
-<p>The reference search employs an exact text string matching routine across the references of the identified Scopus records.</p>
-<p>Because of the issues associated with generic terms, the same flags as applied in the Machine Learning step were also applied here.</p>
-<div id="tbl-scopus-refs" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-scopus-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Number of Records from Scopus References Search Routine
-</figcaption>
-<div aria-describedby="tbl-scopus-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Process Step Outputs</th>
-<th style="text-align: center;">Number of Records</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Number of unique Scopus publications identified in reference search</td>
-<td style="text-align: center;">25,588</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Number of those publications that were unique to the reference search (i.e.&nbsp;not found by Kaggle models).</td>
-<td style="text-align: center;">22,818</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Number of target data assets matched with the above publications</td>
-<td style="text-align: center;">34,526</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="post-processing-adjustments-rucc-and-quickstat-increment" class="level3" data-number="1.4">
-<h3 data-number="1.4" class="anchored" data-anchor-id="post-processing-adjustments-rucc-and-quickstat-increment"><span class="header-section-number">1.4</span> Post Processing Adjustments – RUCC and QuickStat Increment</h3>
+<p><strong>Post Processing Adjustments – RUCC and QuickStat Increment</strong></p>
 <p>Note that the RUCC and Quickstat increment was applied after the Kaggle routines were initially run. The process for running that increment involved two steps:</p>
 <ul>
 <li>A new search of the Scopus reference search corpus using the RUCC and Quickstat aliases.</li>
 <li>A fuzzy text search of the Kaggle output that had been generated using the RUCC and Quickstat aliases.</li>
 </ul>
+<p style="text-align: center;">
+<a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
+</p>
 
 
+</section>
 </section>
 </section>
 

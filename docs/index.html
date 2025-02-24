@@ -147,9 +147,13 @@ div.csl-indent {
   <li><a href="#terminology" id="toc-terminology" class="nav-link" data-scroll-target="#terminology"><span class="header-section-number">2</span> Terminology</a></li>
   <li><a href="#project-background" id="toc-project-background" class="nav-link" data-scroll-target="#project-background"><span class="header-section-number">3</span> Project Background</a>
   <ul class="collapse">
-  <li><a href="#sec-scopus" id="toc-sec-scopus" class="nav-link" data-scroll-target="#sec-scopus"><span class="header-section-number">3.1</span> Scopus</a></li>
-  <li><a href="#sec-openalex" id="toc-sec-openalex" class="nav-link" data-scroll-target="#sec-openalex"><span class="header-section-number">3.2</span> OpenAlex</a></li>
-  <li><a href="#sec-dimensions" id="toc-sec-dimensions" class="nav-link" data-scroll-target="#sec-dimensions"><span class="header-section-number">3.3</span> Dimensions</a></li>
+  <li><a href="#project-objective" id="toc-project-objective" class="nav-link" data-scroll-target="#project-objective"><span class="header-section-number">3.1</span> Project Objective</a>
+  <ul class="collapse">
+  <li><a href="#sec-aims" id="toc-sec-aims" class="nav-link" data-scroll-target="#sec-aims"><span class="header-section-number">3.1.1</span> Specific Aims</a></li>
+  </ul></li>
+  <li><a href="#sec-scopus" id="toc-sec-scopus" class="nav-link" data-scroll-target="#sec-scopus"><span class="header-section-number">3.2</span> Scopus</a></li>
+  <li><a href="#sec-openalex" id="toc-sec-openalex" class="nav-link" data-scroll-target="#sec-openalex"><span class="header-section-number">3.3</span> OpenAlex</a></li>
+  <li><a href="#sec-dimensions" id="toc-sec-dimensions" class="nav-link" data-scroll-target="#sec-dimensions"><span class="header-section-number">3.4</span> Dimensions</a></li>
   </ul></li>
   <li><a href="#sec-workflow-overview" id="toc-sec-workflow-overview" class="nav-link" data-scroll-target="#sec-workflow-overview"><span class="header-section-number">4</span> Project Workflow</a>
   <ul class="collapse">
@@ -262,7 +266,7 @@ div.csl-indent {
 <h1 data-number="1"><span class="header-section-number">1</span> Executive Summary</h1>
 <p>Federal agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like <a href="https://democratizingdata.ai/tools/dashboards/">DemocratizingData.ai</a> and <a href="https://www.nass.usda.gov/Data_Visualization/5W/index.php">NASS’s 5’s Data Usage Dashboard</a>. This report presents a methodology for comparing citation databases as potential data sources for identifying dataset mentions within research papers, using Scopus, OpenAlex, and Dimensions as test cases. The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.</p>
 <p>Citation databases track academic research output. Different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports. Tracking dataset usage requires developing methods that scan publication text for dataset mentions. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. Not to mention, dataset tracking requires reliable citation data from citation databases.</p>
-<p>The <strong>three</strong> citation databases we are comparing are Elsevier’s Scopus, OurResearch’s OpenAlex, and Digital Science’s Dimensions.ai. <strong>Scopus</strong> (<a href="#sec-scopus" class="quarto-xref">Section&nbsp;3.1</a>) charges for access to its citation database. It focuses on peer-reviewed literature and provides metadata about authors, institutions, and citations for academic journals. <strong>OpenAlex</strong> (<a href="#sec-openalex" class="quarto-xref">Section&nbsp;3.2</a>), an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. <strong>Dimensions</strong> (<a href="#sec-dimensions" class="quarto-xref">Section&nbsp;3.3</a>), developed by Digital Science, offers a hybrid model that provides both free and subscription-based access to its citation database. Unlike Scopus, which primarily indexes peer-reviewed journal articles, and OpenAlex, which emphasizes open-access content, Dimensions aggregates a broad spectrum of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. It integrates citation data with funding information, making it a useful tool for assessing the impact of research beyond traditional academic publishing.</p>
+<p>The <strong>three</strong> citation databases we are comparing are Elsevier’s Scopus, OurResearch’s OpenAlex, and Digital Science’s Dimensions.ai. <strong>Scopus</strong> (<a href="#sec-scopus" class="quarto-xref">Section&nbsp;3.2</a>) charges for access to its citation database. It focuses on peer-reviewed literature and provides metadata about authors, institutions, and citations for academic journals. <strong>OpenAlex</strong> (<a href="#sec-openalex" class="quarto-xref">Section&nbsp;3.3</a>), an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. <strong>Dimensions</strong> (<a href="#sec-dimensions" class="quarto-xref">Section&nbsp;3.4</a>), developed by Digital Science, offers a hybrid model that provides both free and subscription-based access to its citation database. Unlike Scopus, which primarily indexes peer-reviewed journal articles, and OpenAlex, which emphasizes open-access content, Dimensions aggregates a broad spectrum of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. It integrates citation data with funding information, making it a useful tool for assessing the impact of research beyond traditional academic publishing.</p>
 <p>Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. We developed procedures for:</p>
 <ul>
 <li>Identifying publication coverage across citation databases</li>
@@ -299,7 +303,19 @@ div.csl-indent {
 <h1 data-number="3"><span class="header-section-number">3</span> Project Background</h1>
 <p>The DemocratizingData.ai platform currently uses Scopus, a fee-based service, to track USDA dataset usage. OpenAlex, an open-source alternative, offers potential cost savings and broader access. Moving to OpenAlex would reduce operational costs while maintaining public access to USDA’s dataset usage metrics. However, the decision to transition from Scopus to OpenAlex requires systematic evaluation of their coverage and data quality.</p>
 <p>Initial comparisons between Scopus and OpenAlex revealed unexpected patterns in coverage overlap. These findings suggested that simply replacing one database with another might affect the platform’s ability to track dataset usage accurately.</p>
-<p>This led to the development of a methodology for comparing citation databases, focusing on four areas:</p>
+<section id="project-objective" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="project-objective"><span class="header-section-number">3.1</span> Project Objective</h2>
+<p>The objective of this project is to determine the coverage of publications across citation databases. This information will be used to decide the viability of replacing Scopus with a less costly solution.</p>
+<section id="sec-aims" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="sec-aims"><span class="header-section-number">3.1.1</span> Specific Aims</h3>
+<ol type="1">
+<li>Evaluate differences in publication coverage across citation databases – Compare how well Scopus, OpenAlex, and Dimensions track dataset usage in research publications and assess variations in publication inclusion.</li>
+<li>Assess journal coverage – Determine which journals each platform indexes and analyze how these differences impact dataset visibility.</li>
+<li>Analyze publication-level discrepancies – Compare how each platform captures research publications within indexed journals and identify potential gaps in dataset tracking.</li>
+<li>Examine author and institutional representation – Investigate how each platform attributes authorship and institutional affiliations, with a focus on variations by research institution type (e.g., Minority-Serving Institutions).</li>
+<li>Develop a reproducible methodology for database comparison – Establish a systematic approach for evaluating other citation databases beyond Scopus, OpenAlex, and Dimensions.</li>
+</ol>
+<p>These aims guided the development of a methodology for comparing citation databases, focusing on four areas:</p>
 <ol type="1">
 <li>Journal coverage: Determining which journals each platform indexes</li>
 <li>Publication tracking: Comparing how each platform captures publications within indexed journals</li>
@@ -309,14 +325,16 @@ div.csl-indent {
 <p>Research partners at the University of Utah have access to Dimensions. The scope of work expanded to include Dimensions alongside Scopus and OpenAlex. This inclusion provides a more comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms.</p>
 <p>Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. Beyond platform comparison, this methodology examines differences in research coverage, particularly the presence of MSIs. This component helps identify variations in dataset coverage and usage across different types of research institutions.</p>
 <p>The methods described in this report can be applied to other citation databases as alternatives to current data sources.</p>
-<section id="sec-scopus" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="sec-scopus"><span class="header-section-number">3.1</span> Scopus</h2>
 </section>
-<section id="sec-openalex" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="sec-openalex"><span class="header-section-number">3.2</span> OpenAlex</h2>
 </section>
-<section id="sec-dimensions" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="sec-dimensions"><span class="header-section-number">3.3</span> Dimensions</h2>
+<section id="sec-scopus" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-scopus"><span class="header-section-number">3.2</span> Scopus</h2>
+</section>
+<section id="sec-openalex" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-openalex"><span class="header-section-number">3.3</span> OpenAlex</h2>
+</section>
+<section id="sec-dimensions" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-dimensions"><span class="header-section-number">3.4</span> Dimensions</h2>
 </section>
 </section>
 <section id="sec-workflow-overview" class="level1" data-number="4">
@@ -809,6 +827,9 @@ Table&nbsp;5: Full Text Search Generated by Kaggle Routine
 </section>
 <section id="sec-disambiguation" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="sec-disambiguation"><span class="header-section-number">4.4</span> Step 4: Disambiguate Publication Results</h2>
+<p>According to <a href="#sec-aims" class="quarto-xref">Section&nbsp;3.1.1</a>, one of the goals of this analysis is to evaluate the differences in publication coverage across citation databases.</p>
+<p>To compare publication coverage across citation databases, we must first identify all journals that contain publications using each dataset in Scopus, alone, and OpenAlex, alone. <a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a> displays a list of the datasets for which we evaluate coverage.</p>
+<p>In this section, we use the Census of Agriculture as a case study to systematically compare the coverage, overlap, and differences between the two citation databases. We focus on the Census of Agriculture (also referred to as “Ag Census”) in this example due to its frequent use in agriculture and economic research, providing an ideal setting to assess differences between Scopus and OpenAlex.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
@@ -973,8 +994,82 @@ Table&nbsp;5: Full Text Search Generated by Kaggle Routine
 </section>
 <section id="sec-matching" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="sec-matching"><span class="header-section-number">4.5</span> Step 5: Compare across Citation Databases</h2>
-<p>Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, OpenAlex, and Dimensions. We start at the journal level, identifying which journals publish research using USDA data to establish publication patterns across different research fields. We then examine individual publications within these journals, focusing on how researchers use and cite USDA datasets in their work. At a more granular level, we analyze the authors who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors). Finally, we examine the institutions themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.</p>
-<p>Matching methods:</p>
+<p>Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, OpenAlex, and Dimensions.</p>
+<ol type="1">
+<li>We start at the <strong>journal</strong> level, identifying which journals publish research using USDA data to establish publication patterns across different research fields.</li>
+<li>We then examine individual <strong>publications</strong> within these journals, focusing on how researchers use and cite USDA datasets in their work.</li>
+<li>At a more granular level, we analyze the <strong>authors</strong> who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors).</li>
+<li>Finally, we examine the <strong>institutions</strong> themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.</li>
+</ol>
+<p>Continuing with our case study, we now compare the two databases based on the journals that are unique to either Scopus or OpenAlex. Next, for journals that contain Ag Census data in both citation databases, we summarize the coverage of publications that appear in both Scopus and OpenAlex. Finally, we investigate discrepancies based on factors like missing identifiers, mismatched journal information (ISSNs), and additional publications accessed through OpenAlex’s API.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Dimensions</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<section id="journal-identification-3" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="journal-identification-3"><span class="header-section-number">4.5.1</span> Journal Identification</h3>
+</section>
+<section id="author-disambiguation-3" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="author-disambiguation-3"><span class="header-section-number">4.5.2</span> Author Disambiguation</h3>
+</section>
+<section id="institution-disambiguation-3" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="institution-disambiguation-3"><span class="header-section-number">4.5.3</span> Institution Disambiguation</h3>
+<section id="ipeds-ming-3" class="level4" data-number="4.5.3.1">
+<h4 data-number="4.5.3.1" class="anchored" data-anchor-id="ipeds-ming-3"><span class="header-section-number">4.5.3.1</span> IPEDS <em>Ming</em></h4>
+</section>
+<section id="msi-data-ming-3" class="level4" data-number="4.5.3.2">
+<h4 data-number="4.5.3.2" class="anchored" data-anchor-id="msi-data-ming-3"><span class="header-section-number">4.5.3.2</span> MSI Data <em>Ming</em></h4>
+</section>
+</section>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<section id="journal-identification-4" class="level3" data-number="4.5.4">
+<h3 data-number="4.5.4" class="anchored" data-anchor-id="journal-identification-4"><span class="header-section-number">4.5.4</span> Journal Identification</h3>
+</section>
+<section id="author-disambiguation-4" class="level3" data-number="4.5.5">
+<h3 data-number="4.5.5" class="anchored" data-anchor-id="author-disambiguation-4"><span class="header-section-number">4.5.5</span> Author Disambiguation</h3>
+</section>
+<section id="institution-disambiguation-4" class="level3" data-number="4.5.6">
+<h3 data-number="4.5.6" class="anchored" data-anchor-id="institution-disambiguation-4"><span class="header-section-number">4.5.6</span> Institution Disambiguation</h3>
+<section id="ipeds-ming-4" class="level4" data-number="4.5.6.1">
+<h4 data-number="4.5.6.1" class="anchored" data-anchor-id="ipeds-ming-4"><span class="header-section-number">4.5.6.1</span> IPEDS <em>Ming</em></h4>
+</section>
+<section id="msi-data-ming-4" class="level4" data-number="4.5.6.2">
+<h4 data-number="4.5.6.2" class="anchored" data-anchor-id="msi-data-ming-4"><span class="header-section-number">4.5.6.2</span> MSI Data *Ming**</h4>
+</section>
+</section>
+</div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<section id="journal-identification-5" class="level3" data-number="4.5.7">
+<h3 data-number="4.5.7" class="anchored" data-anchor-id="journal-identification-5"><span class="header-section-number">4.5.7</span> Journal Identification</h3>
+</section>
+<section id="author-disambiguation-5" class="level3" data-number="4.5.8">
+<h3 data-number="4.5.8" class="anchored" data-anchor-id="author-disambiguation-5"><span class="header-section-number">4.5.8</span> Author Disambiguation</h3>
+</section>
+<section id="institution-disambiguation-5" class="level3" data-number="4.5.9">
+<h3 data-number="4.5.9" class="anchored" data-anchor-id="institution-disambiguation-5"><span class="header-section-number">4.5.9</span> Institution Disambiguation</h3>
+<section id="ipeds-ming-5" class="level4" data-number="4.5.9.1">
+<h4 data-number="4.5.9.1" class="anchored" data-anchor-id="ipeds-ming-5"><span class="header-section-number">4.5.9.1</span> IPEDS <em>Ming</em></h4>
+</section>
+<section id="msi-data-ming-5" class="level4" data-number="4.5.9.2">
+<h4 data-number="4.5.9.2" class="anchored" data-anchor-id="msi-data-ming-5"><span class="header-section-number">4.5.9.2</span> MSI Data <em>Ming</em></h4>
+</section>
+</section>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Summary of Matching Methods">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Summary of Matching Methods
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <ol type="1">
 <li>Rule-based matching for exact matches</li>
 <li>Probabilistic matching for handling variations</li>
@@ -1065,59 +1160,6 @@ Table&nbsp;6: Summary of Methods
 </div>
 </figure>
 </div>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Dimensions</a></li></ul>
-<div class="tab-content">
-<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
-<section id="journal-identification-3" class="level3" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="journal-identification-3"><span class="header-section-number">4.5.1</span> Journal Identification</h3>
-</section>
-<section id="author-disambiguation-3" class="level3" data-number="4.5.2">
-<h3 data-number="4.5.2" class="anchored" data-anchor-id="author-disambiguation-3"><span class="header-section-number">4.5.2</span> Author Disambiguation</h3>
-</section>
-<section id="institution-disambiguation-3" class="level3" data-number="4.5.3">
-<h3 data-number="4.5.3" class="anchored" data-anchor-id="institution-disambiguation-3"><span class="header-section-number">4.5.3</span> Institution Disambiguation</h3>
-<section id="ipeds-ming-3" class="level4" data-number="4.5.3.1">
-<h4 data-number="4.5.3.1" class="anchored" data-anchor-id="ipeds-ming-3"><span class="header-section-number">4.5.3.1</span> IPEDS <em>Ming</em></h4>
-</section>
-<section id="msi-data-ming-3" class="level4" data-number="4.5.3.2">
-<h4 data-number="4.5.3.2" class="anchored" data-anchor-id="msi-data-ming-3"><span class="header-section-number">4.5.3.2</span> MSI Data <em>Ming</em></h4>
-</section>
-</section>
-</div>
-<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
-<section id="journal-identification-4" class="level3" data-number="4.5.4">
-<h3 data-number="4.5.4" class="anchored" data-anchor-id="journal-identification-4"><span class="header-section-number">4.5.4</span> Journal Identification</h3>
-</section>
-<section id="author-disambiguation-4" class="level3" data-number="4.5.5">
-<h3 data-number="4.5.5" class="anchored" data-anchor-id="author-disambiguation-4"><span class="header-section-number">4.5.5</span> Author Disambiguation</h3>
-</section>
-<section id="institution-disambiguation-4" class="level3" data-number="4.5.6">
-<h3 data-number="4.5.6" class="anchored" data-anchor-id="institution-disambiguation-4"><span class="header-section-number">4.5.6</span> Institution Disambiguation</h3>
-<section id="ipeds-ming-4" class="level4" data-number="4.5.6.1">
-<h4 data-number="4.5.6.1" class="anchored" data-anchor-id="ipeds-ming-4"><span class="header-section-number">4.5.6.1</span> IPEDS <em>Ming</em></h4>
-</section>
-<section id="msi-data-ming-4" class="level4" data-number="4.5.6.2">
-<h4 data-number="4.5.6.2" class="anchored" data-anchor-id="msi-data-ming-4"><span class="header-section-number">4.5.6.2</span> MSI Data *Ming**</h4>
-</section>
-</section>
-</div>
-<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
-<section id="journal-identification-5" class="level3" data-number="4.5.7">
-<h3 data-number="4.5.7" class="anchored" data-anchor-id="journal-identification-5"><span class="header-section-number">4.5.7</span> Journal Identification</h3>
-</section>
-<section id="author-disambiguation-5" class="level3" data-number="4.5.8">
-<h3 data-number="4.5.8" class="anchored" data-anchor-id="author-disambiguation-5"><span class="header-section-number">4.5.8</span> Author Disambiguation</h3>
-</section>
-<section id="institution-disambiguation-5" class="level3" data-number="4.5.9">
-<h3 data-number="4.5.9" class="anchored" data-anchor-id="institution-disambiguation-5"><span class="header-section-number">4.5.9</span> Institution Disambiguation</h3>
-<section id="ipeds-ming-5" class="level4" data-number="4.5.9.1">
-<h4 data-number="4.5.9.1" class="anchored" data-anchor-id="ipeds-ming-5"><span class="header-section-number">4.5.9.1</span> IPEDS <em>Ming</em></h4>
-</section>
-<section id="msi-data-ming-5" class="level4" data-number="4.5.9.2">
-<h4 data-number="4.5.9.2" class="anchored" data-anchor-id="msi-data-ming-5"><span class="header-section-number">4.5.9.2</span> MSI Data <em>Ming</em></h4>
-</section>
-</section>
 </div>
 </div>
 </div>

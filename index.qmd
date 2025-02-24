@@ -75,7 +75,19 @@ The DemocratizingData.ai platform currently uses Scopus, a fee-based service, to
 
 Initial comparisons between Scopus and OpenAlex revealed unexpected patterns in coverage overlap. These findings suggested that simply replacing one database with another might affect the platform’s ability to track dataset usage accurately.
 
-This led to the development of a methodology for comparing citation databases, focusing on four areas:
+## Project Objective
+
+The objective of this project is to determine the coverage of publications across citation databases. This information will be used to decide the viability of replacing Scopus with a less costly solution.
+
+### Specific Aims {#sec-aims}
+
+1. Evaluate differences in publication coverage across citation databases – Compare how well Scopus, OpenAlex, and Dimensions track dataset usage in research publications and assess variations in publication inclusion.
+2. Assess journal coverage – Determine which journals each platform indexes and analyze how these differences impact dataset visibility.
+3. Analyze publication-level discrepancies – Compare how each platform captures research publications within indexed journals and identify potential gaps in dataset tracking.
+4. Examine author and institutional representation – Investigate how each platform attributes authorship and institutional affiliations, with a focus on variations by research institution type (e.g., Minority-Serving Institutions).
+5. Develop a reproducible methodology for database comparison – Establish a systematic approach for evaluating other citation databases beyond Scopus, OpenAlex, and Dimensions.
+
+These aims guided the development of a methodology for comparing citation databases, focusing on four areas:
 
 1.  Journal coverage: Determining which journals each platform indexes
 2.  Publication tracking: Comparing how each platform captures publications within indexed journals
@@ -84,7 +96,7 @@ This led to the development of a methodology for comparing citation databases, f
 
 Research partners at the University of Utah have access to Dimensions. The scope of work expanded to include Dimensions alongside Scopus and OpenAlex. This inclusion provides a more comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms.
 
-Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. Beyond platform comparison, this methodology examines differences in research coverage, particularly the presence of MSIs. This component helps identify variations in dataset coverage and usage across different types of research institutions.
+Our methodology provides a systematic approach for assessing citation databases' strengths and limitations in tracking dataset usage across research papers. Beyond platform comparison, this methodology examines differences in research coverage, particularly the presence of MSIs. This component helps identify variations in dataset coverage and usage across different types of research institutions.
 
 The methods described in this report can be applied to other citation databases as alternatives to current data sources.
 
@@ -255,6 +267,13 @@ This seed corpus approach was only applied to Scopus; for OpenAlex and Dimension
 
 ## Step 4: Disambiguate Publication Results {#sec-disambiguation}
 
+According to @sec-aims, one of the goals of this analysis is to evaluate the differences in publication coverage across citation databases. 
+
+To compare publication coverage across citation databases, we must first identify all journals that contain publications using each dataset in Scopus, alone, and OpenAlex, alone. @tbl-usda-datasets displays a list of the datasets for which we evaluate coverage. 
+
+In this section, we use the Census of Agriculture as a case study to systematically compare the coverage, overlap, and differences between the two citation databases. We focus on the Census of Agriculture (also referred to as "Ag Census") in this example due to its frequent use in agriculture and economic research, providing an ideal setting to assess differences between Scopus and OpenAlex.
+
+
 ::: panel-tabset
 {{< include workflow/scopus03.qmd >}}
 
@@ -277,12 +296,27 @@ This seed corpus approach was only applied to Scopus; for OpenAlex and Dimension
 
 ## Step 5: Compare across Citation Databases {#sec-matching}
 
+Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus[^1], OpenAlex, and Dimensions. 
 
-Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus[^1], OpenAlex, and Dimensions. We start at the journal level, identifying which journals publish research using USDA data to establish publication patterns across different research fields. We then examine individual publications within these journals, focusing on how researchers use and cite USDA datasets in their work. At a more granular level, we analyze the authors who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors). Finally, we examine the institutions themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.
+1. We start at the **journal** level, identifying which journals publish research using USDA data to establish publication patterns across different research fields. 
+2. We then examine individual **publications** within these journals, focusing on how researchers use and cite USDA datasets in their work. 
+3. At a more granular level, we analyze the **authors** who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors). 
+4. Finally, we examine the **institutions** themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.
 
 [^1]: The Scopus work was generated by a team provided under contract to USDA (NASS and ERS), which included NYU, Rafael Ladislau, and Elsevier.
 
-Matching methods:
+Continuing with our case study, we now compare the two databases based on the journals that are unique to either Scopus or OpenAlex. Next, for journals that contain Ag Census data in both citation databases, we summarize the coverage of publications that appear in both Scopus and OpenAlex. Finally, we investigate discrepancies based on factors like missing identifiers, mismatched journal information (ISSNs), and additional publications accessed through OpenAlex’s API.
+
+::: panel-tabset
+{{< include workflow/scopus03.qmd >}}
+
+{{< include workflow/openalex03.qmd >}}
+
+{{< include workflow/dimensions03.qmd >}}
+:::
+
+
+::: {.callout-note title="Summary of Matching Methods" collapse=true}
 
 1.  Rule-based matching for exact matches
 2.  Probabilistic matching for handling variations
@@ -300,14 +334,8 @@ Matching methods:
 | Filtering on keywords to determine themes |  |  |  |  |
 
 : Summary of Methods {#tbl-methods-summary}
-
-::: panel-tabset
-{{< include workflow/scopus03.qmd >}}
-
-{{< include workflow/openalex03.qmd >}}
-
-{{< include workflow/dimensions03.qmd >}}
 :::
+
 
 ### Results from Database Comparison
 
