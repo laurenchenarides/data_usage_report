@@ -11,7 +11,7 @@
 <meta name="author" content="Rafael Ladislau">
 <meta name="author" content="Julia Lane, Ph.D.">
 <meta name="author" content="Ming Wang">
-<meta name="dcterms.date" content="2025-02-24">
+<meta name="dcterms.date" content="2025-02-25">
 
 <title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
@@ -94,6 +94,7 @@ div.csl-indent {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="floating nav-fixed">
@@ -164,14 +165,15 @@ div.csl-indent {
   <li><a href="#final-list-of-usda-data-assets" id="toc-final-list-of-usda-data-assets" class="nav-link" data-scroll-target="#final-list-of-usda-data-assets"><span class="header-section-number">4.1.3</span> Final List of USDA Data Assets</a></li>
   </ul></li>
   <li><a href="#sec-seed-corpus" id="toc-sec-seed-corpus" class="nav-link" data-scroll-target="#sec-seed-corpus"><span class="header-section-number">4.2</span> Step 2: Create a Seed Corpus</a></li>
-  <li><a href="#sec-data-idn" id="toc-sec-data-idn" class="nav-link" data-scroll-target="#sec-data-idn"><span class="header-section-number">4.3</span> Step 3: Identify Datasets via Search Routines</a></li>
+  <li><a href="#sec-data-idn" id="toc-sec-data-idn" class="nav-link" data-scroll-target="#sec-data-idn"><span class="header-section-number">4.3</span> Step 3: Create a Publication Dataset for Dataset Mentions</a></li>
   <li><a href="#sec-disambiguation" id="toc-sec-disambiguation" class="nav-link" data-scroll-target="#sec-disambiguation"><span class="header-section-number">4.4</span> Step 4: Disambiguate Publication Results</a>
   <ul class="collapse">
-  <li><a href="#results-from-disambiguation" id="toc-results-from-disambiguation" class="nav-link" data-scroll-target="#results-from-disambiguation"><span class="header-section-number">4.4.10</span> Results from Disambiguation</a></li>
+  <li><a href="#disambiguation-procedure" id="toc-disambiguation-procedure" class="nav-link" data-scroll-target="#disambiguation-procedure"><span class="header-section-number">4.4.1</span> Disambiguation Procedure</a></li>
+  <li><a href="#case-study-census-of-agriculture" id="toc-case-study-census-of-agriculture" class="nav-link" data-scroll-target="#case-study-census-of-agriculture"><span class="header-section-number">4.4.2</span> Case Study: Census of Agriculture</a></li>
   </ul></li>
   <li><a href="#sec-matching" id="toc-sec-matching" class="nav-link" data-scroll-target="#sec-matching"><span class="header-section-number">4.5</span> Step 5: Compare across Citation Databases</a>
   <ul class="collapse">
-  <li><a href="#results-from-database-comparison" id="toc-results-from-database-comparison" class="nav-link" data-scroll-target="#results-from-database-comparison"><span class="header-section-number">4.5.10</span> Results from Database Comparison</a></li>
+  <li><a href="#results-from-database-comparison" id="toc-results-from-database-comparison" class="nav-link" data-scroll-target="#results-from-database-comparison"><span class="header-section-number">4.5.1</span> Results from Database Comparison</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations"><span class="header-section-number">5</span> Recommendations</a>
@@ -250,7 +252,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 24, 2025</p>
+      <p class="date">February 25, 2025</p>
     </div>
   </div>
   
@@ -356,7 +358,7 @@ div.csl-indent {
 <li>Adjust searches to improve accuracy.</li>
 </ul>
 <p><strong>Result:</strong> A set of seed publications to inform dataset identification and search procedures.</p>
-<p><strong>3. Identify Datasets via Search Routines</strong> (<a href="#sec-data-idn" class="quarto-xref">Section&nbsp;4.3</a>)</p>
+<p><strong>3. Create a Publication Dataset for Dataset Mentions</strong> (<a href="#sec-data-idn" class="quarto-xref">Section&nbsp;4.3</a>)</p>
 <ul>
 <li>Extract dataset mentions using various search strategies:
 <ol type="1">
@@ -382,7 +384,7 @@ div.csl-indent {
 <p><strong>Result:</strong> A set of statistics that can be used to evaluate dataset tracking accuracy.</p>
 <section id="sec-data" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="sec-data"><span class="header-section-number">4.1</span> Step 1: Define Data Assets and Aliases</h2>
-<p>The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These data assets are widely used in agricultural economics and food systems research. The goal of this step is to compile a structured list of dataset names and their commonly used variations.</p>
+<p>The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These data assets are widely used in agricultural economics and food systems research. <strong>The goal of this step is to compile a structured list of dataset names and their commonly used variations.</strong></p>
 <section id="national-agricultural-statistics-service-nass-data-assets" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="national-agricultural-statistics-service-nass-data-assets"><span class="header-section-number">4.1.1</span> National Agricultural Statistics Service (NASS) Data Assets</h3>
 <p>In late July 2023, an initial set of 21 reports were received containing a report name and a URL link to database curated by Cornell University. These reports are part of the USDA’s efforts to track data usage across various research applications. However, the names of these reports were highly generic, making it difficult to precisely identify them in citation databases. Examples include reports titled “Agricultural Prices” and “Farm Labor,” which lack specificity when compared to more structured dataset identifiers.</p>
@@ -523,12 +525,17 @@ Table&nbsp;1: List of USDA Data Assets
 </div>
 </figure>
 </div>
+<section id="appendix-data-asset---alias-dyads" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="appendix-data-asset---alias-dyads">Appendix: Data Asset - Alias Dyads</h4>
+<p>To provide a comprehensive reference for dataset tracking, the following appendix includes a detailed list of data assets and their corresponding aliases, collectively referred to as dyads. Each dyad represents a dataset-name and alias pair used in citation database searches, allowing for more precise identification of dataset mentions in research publications. These aliases include acronyms, alternate spellings, dataset variations, and associated URLs, ensuring broad coverage across different citation practices. The dyad list serves as the foundation for dataset extraction and disambiguation across Scopus, OpenAlex, and Dimensions. A complete reference of these dataset aliases is included in <a href="./appendices/app_dyads.html">Appendix XX</a>.</p>
+</section>
 </section>
 </section>
 <section id="sec-seed-corpus" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="sec-seed-corpus"><span class="header-section-number">4.2</span> Step 2: Create a Seed Corpus</h2>
-<p>After defining the data assets and aliases in Step 1 (<a href="#sec-data" class="quarto-xref">Section&nbsp;4.1</a>), the next step is to identify where these datasets are referenced in research publications. For <strong>Scopus</strong>, this involved creating a seed corpus to establish a targeted search space, balancing recall (capturing relevant mentions) and precision (minimizing false positives). This process included a restricted search strategy, using both reference lists and full-text searches, as well as machine learning-assisted review and manual refinements to resolve ambiguities, consolidate duplicate aliases, and incorporate missing terms. The refined seed corpus then informed the data identification step.</p>
+<p>After defining the data assets and aliases in Step 1 (<a href="#sec-data" class="quarto-xref">Section&nbsp;4.1</a>), the next step is to identify where these datasets are referenced in research publications. <strong>The goal of this step is to establish a targeted search space by identifying publications most likely to reference the defined datasets.</strong></p>
 <p>This seed corpus approach was only applied to Scopus; for OpenAlex and Dimensions, this procedure was not conducted, and dataset identification was instead performed through string searches across their entire publication records, described in <a href="#sec-data-idn" class="quarto-xref">Section&nbsp;4.3</a>.</p>
+<p>For <strong>Scopus</strong>, a seed corpus was created to establish a targeted search space, balancing recall (capturing relevant mentions) and precision (minimizing false positives). This process included a restricted search strategy, using both reference lists and full-text searches, as well as machine learning-assisted review and manual refinements to resolve ambiguities, consolidate duplicate aliases, and incorporate missing terms. The refined seed corpus then informed the data identification step.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
@@ -626,7 +633,14 @@ Table&nbsp;2: Creating a Seed Corpus
 </div>
 </section>
 <section id="sec-data-idn" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="sec-data-idn"><span class="header-section-number">4.3</span> Step 3: Identify Datasets via Search Routines</h2>
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-data-idn"><span class="header-section-number">4.3</span> Step 3: Create a Publication Dataset for Dataset Mentions</h2>
+<p><strong>The goal of this step is to build a dataset of publications that reference the dataset name aliases for the USDA data assets (<a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a>) across Scopus, OpenAlex, and Dimensions.</strong> This dataset serves as the foundation for comparing publication coverage across citation databases.</p>
+<p>To generate this dataset, the process requires:</p>
+<ul>
+<li>Dataset name aliases (from Step 1)</li>
+<li>Search routines tailored to each citation database to extract relevant publications</li>
+</ul>
+<p>Search routines, described below, guide this step, as dataset mentions are often inconsistent across publications—appearing in titles, abstracts, full text, or reference lists. Scopus uses a structured seed corpus to refine searches, while OpenAlex and Dimensions rely on direct queries across their full publication records. The outputs of this step are three publication-level datasets, one for each citation database, which will be further analyzed in subsequent steps.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
@@ -828,238 +842,340 @@ Table&nbsp;5: Full Text Search Generated by Kaggle Routine
 <section id="sec-disambiguation" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="sec-disambiguation"><span class="header-section-number">4.4</span> Step 4: Disambiguate Publication Results</h2>
 <p>According to <a href="#sec-aims" class="quarto-xref">Section&nbsp;3.1.1</a>, one of the goals of this analysis is to evaluate the differences in publication coverage across citation databases.</p>
-<p>To compare publication coverage across citation databases, we must first identify all journals that contain publications using each dataset in Scopus, alone, and OpenAlex, alone. <a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a> displays a list of the datasets for which we evaluate coverage.</p>
-<p>In this section, we use the Census of Agriculture as a case study to systematically compare the coverage, overlap, and differences between the two citation databases. We focus on the Census of Agriculture (also referred to as “Ag Census”) in this example due to its frequent use in agriculture and economic research, providing an ideal setting to assess differences between Scopus and OpenAlex.</p>
+<p>To compare publication coverage across citation databases, we must first identify all journals that contain publications using each dataset in Scopus, OpenAlex, and Dimensions. <a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a> displays a list of the datasets for which we evaluate coverage.</p>
+<p><strong>The goal of this step is to standardize and resolve inconsistencies in publication records by disambiguating journal names, author affiliations, and institutions across the three databases.</strong></p>
+<section id="disambiguation-procedure" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="disambiguation-procedure"><span class="header-section-number">4.4.1</span> Disambiguation Procedure</h3>
+<p>We create subsets of the publication dataset generated in Step 3, filtering by dataset mention. For example, if a publication references Ag Census, it is included in the Ag Census sub-dataset; otherwise, it is excluded. This process allows us to analyze dataset-specific publication patterns across Scopus, OpenAlex, and Dimensions.</p>
+<p>Our analysis follows a hierarchical approach to understand how USDA data assets appear in these citation databases.</p>
+<ol type="1">
+<li><p><strong>Journal Level</strong> – We identify which journals publish research articles using USDA datasets to establish publication patterns. This step inherently involves looking within a journal’s publications to determine dataset mentions at the journal level—meaning that a journal is included if at least one of its publications references the dataset, but this does not indicate the overall prevalence of dataset usage within that journal.</p></li>
+<li><p><strong>Publication Level</strong> – We examine individual publications within these journals to understand the breadth of articles mentioning the dataset and how researchers use and cite USDA datasets in their work.</p></li>
+<li><p><strong>Author Level</strong> – We analyze the authors of these publications, tracking their institutional affiliations and research networks (e.g., coauthors). This provides another way to assess dataset reach, focusing on who is using the data rather than just where it appears.</p></li>
+<li><p><strong>Institution Level</strong> – We map dataset usage across institutions to understand where research using USDA data is concentrated geographically and across different types of research organizations. Like the author-level analysis, this offers an alternative lens on dataset dissemination.</p></li>
+</ol>
+<p>This structured approach ensures that dataset mentions are analyzed consistently across databases, allowing for meaningful comparisons of coverage and research impact.</p>
+</section>
+<section id="case-study-census-of-agriculture" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="case-study-census-of-agriculture"><span class="header-section-number">4.4.2</span> Case Study: Census of Agriculture</h3>
+<div class="custom-box">
+<p>To illustrate the disambiguation process, we use the Census of Agriculture as a case study to systematically compare coverage, overlap, and differences between the three citation databases. The Census of Agriculture (also referred to as “Ag Census”) is widely used in agricultural and economic research, making it an ideal dataset for assessing database differences.</p>
+<section id="disambiguation-by-citation-database" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="disambiguation-by-citation-database">Disambiguation by Citation Database</h3>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<section id="journal-identification" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="journal-identification"><span class="header-section-number">4.4.1</span> Journal Identification</h3>
+<section id="journal-coverage" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="journal-coverage">Journal Coverage</h3>
+<p>To analyze journal coverage in <strong>Scopus</strong>, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. This dataset is built from an initial publication-level dataset, which captures individual research articles mentioning Ag Census.</p>
+<p>We construct the publication-level dataset for only Ag Census mentions using the following metadata from the publication-level data:</p>
+<ul>
+<li>Publication identifier (DOI)</li>
+<li>Journal name</li>
+<li>Publisher</li>
+<li>ISSN (International Standard Serial Number, a unique journal identifier)</li>
+<li>Dataset alias (alternate names used to reference Ag Census)</li>
+<li>Dyad (dataset mention pair)</li>
+</ul>
+<p>This data structure follows the format outlined in the data schema (Figure XX).</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Crosswalk of Dataset Identifiers between Scopus and OpenAlex">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Crosswalk of Dataset Identifiers between Scopus and OpenAlex
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Scopus assigns multiple identifiers to the same dataset depending on how it is reported, rather than a single, standardized identifier. Therefore, the authors create a crosswalk between Scopus and OpenAlex so that each dataset can have one common identifier.</p>
+<p><a href="./appendices/app_crosswalk_data_id.html">Link to crosswalk file</a></p>
+</div>
+</div>
+</div>
+<p>After assembling the publication-level dataset, the final step in preparing the Scopus journal-level dataset is to aggregate publications at the journal level based on their ISSN.</p>
 </section>
-<section id="author-disambiguation" class="level3" data-number="4.4.2">
-<h3 data-number="4.4.2" class="anchored" data-anchor-id="author-disambiguation"><span class="header-section-number">4.4.2</span> Author Disambiguation</h3>
+<section id="author-disambiguation" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="author-disambiguation">Author Disambiguation</h3>
 </section>
-<section id="institution-disambiguation" class="level3" data-number="4.4.3">
-<h3 data-number="4.4.3" class="anchored" data-anchor-id="institution-disambiguation"><span class="header-section-number">4.4.3</span> Institution Disambiguation</h3>
-<section id="ipeds-ming" class="level4" data-number="4.4.3.1">
-<h4 data-number="4.4.3.1" class="anchored" data-anchor-id="ipeds-ming"><span class="header-section-number">4.4.3.1</span> IPEDS <em>Ming</em></h4>
+<section id="institution-disambiguation" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="institution-disambiguation">Institution Disambiguation</h3>
+<section id="ipeds-ming" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="ipeds-ming">IPEDS <em>Ming</em></h4>
 </section>
-<section id="msi-data-ming" class="level4" data-number="4.4.3.2">
-<h4 data-number="4.4.3.2" class="anchored" data-anchor-id="msi-data-ming"><span class="header-section-number">4.4.3.2</span> MSI Data <em>Ming</em></h4>
+<section id="msi-data-ming" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="msi-data-ming">MSI Data <em>Ming</em></h4>
+<p style="text-align: center;">
+<a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
+</p>
 </section>
 </section>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<section id="journal-identification-1" class="level3" data-number="4.4.4">
-<h3 data-number="4.4.4" class="anchored" data-anchor-id="journal-identification-1"><span class="header-section-number">4.4.4</span> Journal Identification</h3>
+<section id="journal-coverage-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="journal-coverage-1">Journal Coverage</h3>
+<p>To analyze journal coverage in <strong>OpenAlex</strong>, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. The OpenAlex journal-level dataset follows a similar approach to Scopus but differs in data availability and structure.</p>
+<p>OpenAlex links journals to their respective publications using linkage files, which connect publication records to dataset mentions. Unlike Scopus, OpenAlex assigns a single dataset identifier per dataset, while Scopus may have multiple identifiers for the same dataset depending on how it is referenced.</p>
+<p>Additionally, OpenAlex formats journal and publication identifiers differently:</p>
+<ul>
+<li>ISSNs appear without dashes</li>
+<li>DOIs exclude the URL portion, storing only the core identifier</li>
+</ul>
+<p>To ensure consistency with Scopus, we clean and standardize the publication-level dataset, aligning DOIs and ISSNs to a common format.</p>
+<p><strong>CAL TO DESCRIBE THIS PROCESS</strong></p>
 </section>
-<section id="author-disambiguation-1" class="level3" data-number="4.4.5">
-<h3 data-number="4.4.5" class="anchored" data-anchor-id="author-disambiguation-1"><span class="header-section-number">4.4.5</span> Author Disambiguation</h3>
+<section id="author-disambiguation-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="author-disambiguation-1">Author Disambiguation</h3>
 </section>
-<section id="institution-disambiguation-1" class="level3" data-number="4.4.6">
-<h3 data-number="4.4.6" class="anchored" data-anchor-id="institution-disambiguation-1"><span class="header-section-number">4.4.6</span> Institution Disambiguation</h3>
-<section id="ipeds-ming-1" class="level4" data-number="4.4.6.1">
-<h4 data-number="4.4.6.1" class="anchored" data-anchor-id="ipeds-ming-1"><span class="header-section-number">4.4.6.1</span> IPEDS <em>Ming</em></h4>
+<section id="institution-disambiguation-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="institution-disambiguation-1">Institution Disambiguation</h3>
+<section id="ipeds-ming-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="ipeds-ming-1">IPEDS <em>Ming</em></h4>
 </section>
-<section id="msi-data-ming-1" class="level4" data-number="4.4.6.2">
-<h4 data-number="4.4.6.2" class="anchored" data-anchor-id="msi-data-ming-1"><span class="header-section-number">4.4.6.2</span> MSI Data *Ming**</h4>
+<section id="msi-data-ming-.unnumbered" class="level4" data-number="4.4.2.1">
+<h4 data-number="4.4.2.1" class="anchored" data-anchor-id="msi-data-ming-.unnumbered"><span class="header-section-number">4.4.2.1</span> MSI Data *Ming** {.unnumbered}</h4>
+<p style="text-align: center;">
+<a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
+</p>
 </section>
 </section>
 </div>
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
-<section id="journal-identification-2" class="level3" data-number="4.4.7">
-<h3 data-number="4.4.7" class="anchored" data-anchor-id="journal-identification-2"><span class="header-section-number">4.4.7</span> Journal Identification</h3>
+<section id="journal-coverage-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="journal-coverage-2">Journal Coverage</h3>
 </section>
-<section id="author-disambiguation-2" class="level3" data-number="4.4.8">
-<h3 data-number="4.4.8" class="anchored" data-anchor-id="author-disambiguation-2"><span class="header-section-number">4.4.8</span> Author Disambiguation</h3>
+<section id="author-disambiguation-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="author-disambiguation-2">Author Disambiguation</h3>
 </section>
-<section id="institution-disambiguation-2" class="level3" data-number="4.4.9">
-<h3 data-number="4.4.9" class="anchored" data-anchor-id="institution-disambiguation-2"><span class="header-section-number">4.4.9</span> Institution Disambiguation</h3>
-<section id="ipeds-ming-2" class="level4" data-number="4.4.9.1">
-<h4 data-number="4.4.9.1" class="anchored" data-anchor-id="ipeds-ming-2"><span class="header-section-number">4.4.9.1</span> IPEDS <em>Ming</em></h4>
+<section id="institution-disambiguation-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="institution-disambiguation-2">Institution Disambiguation</h3>
+<section id="ipeds-ming-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="ipeds-ming-2">IPEDS <em>Ming</em></h4>
 </section>
-<section id="msi-data-ming-2" class="level4" data-number="4.4.9.2">
-<h4 data-number="4.4.9.2" class="anchored" data-anchor-id="msi-data-ming-2"><span class="header-section-number">4.4.9.2</span> MSI Data <em>Ming</em></h4>
+<section id="msi-data-ming-1" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="msi-data-ming-1">MSI Data <em>Ming</em></h4>
 </section>
 </section>
 </div>
 </div>
 </div>
-<section id="results-from-disambiguation" class="level3" data-number="4.4.10">
-<h3 data-number="4.4.10" class="anchored" data-anchor-id="results-from-disambiguation"><span class="header-section-number">4.4.10</span> Results from Disambiguation</h3>
+</section>
+<section id="results-from-disambiguation" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="results-from-disambiguation">Results from Disambiguation</h3>
 <p><em>This section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset</em></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
-<section id="journal-coverage-cal" class="level3" data-number="4.4.11">
-<h3 data-number="4.4.11" class="anchored" data-anchor-id="journal-coverage-cal"><span class="header-section-number">4.4.11</span> Journal Coverage <em>Cal</em></h3>
+<section id="journal-coverage-cal" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="journal-coverage-cal"><span class="header-section-number">4.4.3</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="publication-coverage-cal" class="level3" data-number="4.4.12">
-<h3 data-number="4.4.12" class="anchored" data-anchor-id="publication-coverage-cal"><span class="header-section-number">4.4.12</span> Publication Coverage <em>Cal</em></h3>
+<section id="publication-coverage-cal" class="level3" data-number="4.4.4">
+<h3 data-number="4.4.4" class="anchored" data-anchor-id="publication-coverage-cal"><span class="header-section-number">4.4.4</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="author-coverage-cal" class="level3" data-number="4.4.13">
-<h3 data-number="4.4.13" class="anchored" data-anchor-id="author-coverage-cal"><span class="header-section-number">4.4.13</span> Author Coverage <em>Cal</em></h3>
+<section id="author-coverage-cal" class="level3" data-number="4.4.5">
+<h3 data-number="4.4.5" class="anchored" data-anchor-id="author-coverage-cal"><span class="header-section-number">4.4.5</span> Author Coverage <em>Cal</em></h3>
 </section>
-<section id="institution-coverage-ming" class="level3" data-number="4.4.14">
-<h3 data-number="4.4.14" class="anchored" data-anchor-id="institution-coverage-ming"><span class="header-section-number">4.4.14</span> Institution Coverage <em>Ming</em></h3>
+<section id="institution-coverage-ming" class="level3" data-number="4.4.6">
+<h3 data-number="4.4.6" class="anchored" data-anchor-id="institution-coverage-ming"><span class="header-section-number">4.4.6</span> Institution Coverage <em>Ming</em></h3>
 </section>
-<section id="insitutional-representation-ming" class="level3" data-number="4.4.15">
-<h3 data-number="4.4.15" class="anchored" data-anchor-id="insitutional-representation-ming"><span class="header-section-number">4.4.15</span> Insitutional Representation <em>Ming</em></h3>
-<section id="geographic-coverage-ming" class="level4" data-number="4.4.15.1">
-<h4 data-number="4.4.15.1" class="anchored" data-anchor-id="geographic-coverage-ming"><span class="header-section-number">4.4.15.1</span> Geographic Coverage <em>Ming</em></h4>
+<section id="insitutional-representation-ming" class="level3" data-number="4.4.7">
+<h3 data-number="4.4.7" class="anchored" data-anchor-id="insitutional-representation-ming"><span class="header-section-number">4.4.7</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming" class="level4" data-number="4.4.7.1">
+<h4 data-number="4.4.7.1" class="anchored" data-anchor-id="geographic-coverage-ming"><span class="header-section-number">4.4.7.1</span> Geographic Coverage <em>Ming</em></h4>
 </section>
-<section id="sec-inst-rep" class="level4" data-number="4.4.15.2">
-<h4 data-number="4.4.15.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.4.15.2</span> Institution Types <em>Ming</em></h4>
+<section id="sec-inst-rep" class="level4" data-number="4.4.7.2">
+<h4 data-number="4.4.7.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.4.7.2</span> Institution Types <em>Ming</em></h4>
 </section>
 </section>
-<section id="thematic-analysis-callauren" class="level3" data-number="4.4.16">
-<h3 data-number="4.4.16" class="anchored" data-anchor-id="thematic-analysis-callauren"><span class="header-section-number">4.4.16</span> Thematic Analysis <em>Cal/Lauren</em></h3>
-<section id="publication-topics-callauren" class="level4" data-number="4.4.16.1">
-<h4 data-number="4.4.16.1" class="anchored" data-anchor-id="publication-topics-callauren"><span class="header-section-number">4.4.16.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+<section id="thematic-analysis-callauren" class="level3" data-number="4.4.8">
+<h3 data-number="4.4.8" class="anchored" data-anchor-id="thematic-analysis-callauren"><span class="header-section-number">4.4.8</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren" class="level4" data-number="4.4.8.1">
+<h4 data-number="4.4.8.1" class="anchored" data-anchor-id="publication-topics-callauren"><span class="header-section-number">4.4.8.1</span> Publication Topics <em>Cal/Lauren</em></h4>
 </section>
-<section id="patterns-over-time-callauren" class="level4" data-number="4.4.16.2">
-<h4 data-number="4.4.16.2" class="anchored" data-anchor-id="patterns-over-time-callauren"><span class="header-section-number">4.4.16.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+<section id="patterns-over-time-callauren" class="level4" data-number="4.4.8.2">
+<h4 data-number="4.4.8.2" class="anchored" data-anchor-id="patterns-over-time-callauren"><span class="header-section-number">4.4.8.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
 </section>
 </section>
 </div>
 <div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-<section id="journal-coverage-cal-1" class="level3" data-number="4.4.17">
-<h3 data-number="4.4.17" class="anchored" data-anchor-id="journal-coverage-cal-1"><span class="header-section-number">4.4.17</span> Journal Coverage <em>Cal</em></h3>
+<section id="journal-coverage-cal-1" class="level3" data-number="4.4.9">
+<h3 data-number="4.4.9" class="anchored" data-anchor-id="journal-coverage-cal-1"><span class="header-section-number">4.4.9</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="publication-coverage-cal-1" class="level3" data-number="4.4.18">
-<h3 data-number="4.4.18" class="anchored" data-anchor-id="publication-coverage-cal-1"><span class="header-section-number">4.4.18</span> Publication Coverage <em>Cal</em></h3>
+<section id="publication-coverage-cal-1" class="level3" data-number="4.4.10">
+<h3 data-number="4.4.10" class="anchored" data-anchor-id="publication-coverage-cal-1"><span class="header-section-number">4.4.10</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="author-coverage-cal-1" class="level3" data-number="4.4.19">
-<h3 data-number="4.4.19" class="anchored" data-anchor-id="author-coverage-cal-1"><span class="header-section-number">4.4.19</span> Author Coverage <em>Cal</em></h3>
+<section id="author-coverage-cal-1" class="level3" data-number="4.4.11">
+<h3 data-number="4.4.11" class="anchored" data-anchor-id="author-coverage-cal-1"><span class="header-section-number">4.4.11</span> Author Coverage <em>Cal</em></h3>
 </section>
-<section id="institution-coverage-ming-1" class="level3" data-number="4.4.20">
-<h3 data-number="4.4.20" class="anchored" data-anchor-id="institution-coverage-ming-1"><span class="header-section-number">4.4.20</span> Institution Coverage <em>Ming</em></h3>
+<section id="institution-coverage-ming-1" class="level3" data-number="4.4.12">
+<h3 data-number="4.4.12" class="anchored" data-anchor-id="institution-coverage-ming-1"><span class="header-section-number">4.4.12</span> Institution Coverage <em>Ming</em></h3>
 </section>
-<section id="insitutional-representation-ming-1" class="level3" data-number="4.4.21">
-<h3 data-number="4.4.21" class="anchored" data-anchor-id="insitutional-representation-ming-1"><span class="header-section-number">4.4.21</span> Insitutional Representation <em>Ming</em></h3>
-<section id="geographic-coverage-ming-1" class="level4" data-number="4.4.21.1">
-<h4 data-number="4.4.21.1" class="anchored" data-anchor-id="geographic-coverage-ming-1"><span class="header-section-number">4.4.21.1</span> Geographic Coverage <em>Ming</em></h4>
+<section id="insitutional-representation-ming-1" class="level3" data-number="4.4.13">
+<h3 data-number="4.4.13" class="anchored" data-anchor-id="insitutional-representation-ming-1"><span class="header-section-number">4.4.13</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming-1" class="level4" data-number="4.4.13.1">
+<h4 data-number="4.4.13.1" class="anchored" data-anchor-id="geographic-coverage-ming-1"><span class="header-section-number">4.4.13.1</span> Geographic Coverage <em>Ming</em></h4>
 </section>
-<section id="sec-inst-rep" class="level4" data-number="4.4.21.2">
-<h4 data-number="4.4.21.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.4.21.2</span> Institution Types <em>Ming</em></h4>
+<section id="sec-inst-rep" class="level4" data-number="4.4.13.2">
+<h4 data-number="4.4.13.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.4.13.2</span> Institution Types <em>Ming</em></h4>
 </section>
 </section>
-<section id="thematic-analysis-callauren-1" class="level3" data-number="4.4.22">
-<h3 data-number="4.4.22" class="anchored" data-anchor-id="thematic-analysis-callauren-1"><span class="header-section-number">4.4.22</span> Thematic Analysis <em>Cal/Lauren</em></h3>
-<section id="publication-topics-callauren-1" class="level4" data-number="4.4.22.1">
-<h4 data-number="4.4.22.1" class="anchored" data-anchor-id="publication-topics-callauren-1"><span class="header-section-number">4.4.22.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+<section id="thematic-analysis-callauren-1" class="level3" data-number="4.4.14">
+<h3 data-number="4.4.14" class="anchored" data-anchor-id="thematic-analysis-callauren-1"><span class="header-section-number">4.4.14</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren-1" class="level4" data-number="4.4.14.1">
+<h4 data-number="4.4.14.1" class="anchored" data-anchor-id="publication-topics-callauren-1"><span class="header-section-number">4.4.14.1</span> Publication Topics <em>Cal/Lauren</em></h4>
 </section>
-<section id="patterns-over-time-callauren-1" class="level4" data-number="4.4.22.2">
-<h4 data-number="4.4.22.2" class="anchored" data-anchor-id="patterns-over-time-callauren-1"><span class="header-section-number">4.4.22.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+<section id="patterns-over-time-callauren-1" class="level4" data-number="4.4.14.2">
+<h4 data-number="4.4.14.2" class="anchored" data-anchor-id="patterns-over-time-callauren-1"><span class="header-section-number">4.4.14.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
 </section>
 </section>
 </div>
 <div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
-<section id="journal-coverage-cal-2" class="level3" data-number="4.4.23">
-<h3 data-number="4.4.23" class="anchored" data-anchor-id="journal-coverage-cal-2"><span class="header-section-number">4.4.23</span> Journal Coverage <em>Cal</em></h3>
+<section id="journal-coverage-cal-2" class="level3" data-number="4.4.15">
+<h3 data-number="4.4.15" class="anchored" data-anchor-id="journal-coverage-cal-2"><span class="header-section-number">4.4.15</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="publication-coverage-cal-2" class="level3" data-number="4.4.24">
-<h3 data-number="4.4.24" class="anchored" data-anchor-id="publication-coverage-cal-2"><span class="header-section-number">4.4.24</span> Publication Coverage <em>Cal</em></h3>
+<section id="publication-coverage-cal-2" class="level3" data-number="4.4.16">
+<h3 data-number="4.4.16" class="anchored" data-anchor-id="publication-coverage-cal-2"><span class="header-section-number">4.4.16</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="author-coverage-cal-2" class="level3" data-number="4.4.25">
-<h3 data-number="4.4.25" class="anchored" data-anchor-id="author-coverage-cal-2"><span class="header-section-number">4.4.25</span> Author Coverage <em>Cal</em></h3>
+<section id="author-coverage-cal-2" class="level3" data-number="4.4.17">
+<h3 data-number="4.4.17" class="anchored" data-anchor-id="author-coverage-cal-2"><span class="header-section-number">4.4.17</span> Author Coverage <em>Cal</em></h3>
 </section>
-<section id="institution-coverage-ming-2" class="level3" data-number="4.4.26">
-<h3 data-number="4.4.26" class="anchored" data-anchor-id="institution-coverage-ming-2"><span class="header-section-number">4.4.26</span> Institution Coverage <em>Ming</em></h3>
+<section id="institution-coverage-ming-2" class="level3" data-number="4.4.18">
+<h3 data-number="4.4.18" class="anchored" data-anchor-id="institution-coverage-ming-2"><span class="header-section-number">4.4.18</span> Institution Coverage <em>Ming</em></h3>
 </section>
-<section id="insitutional-representation-ming-2" class="level3" data-number="4.4.27">
-<h3 data-number="4.4.27" class="anchored" data-anchor-id="insitutional-representation-ming-2"><span class="header-section-number">4.4.27</span> Insitutional Representation <em>Ming</em></h3>
-<section id="geographic-coverage-ming-2" class="level4" data-number="4.4.27.1">
-<h4 data-number="4.4.27.1" class="anchored" data-anchor-id="geographic-coverage-ming-2"><span class="header-section-number">4.4.27.1</span> Geographic Coverage <em>Ming</em></h4>
+<section id="insitutional-representation-ming-2" class="level3" data-number="4.4.19">
+<h3 data-number="4.4.19" class="anchored" data-anchor-id="insitutional-representation-ming-2"><span class="header-section-number">4.4.19</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming-2" class="level4" data-number="4.4.19.1">
+<h4 data-number="4.4.19.1" class="anchored" data-anchor-id="geographic-coverage-ming-2"><span class="header-section-number">4.4.19.1</span> Geographic Coverage <em>Ming</em></h4>
 </section>
-<section id="sec-inst-rep" class="level4" data-number="4.4.27.2">
-<h4 data-number="4.4.27.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.4.27.2</span> Institution Types <em>Ming</em></h4>
+<section id="sec-inst-rep" class="level4" data-number="4.4.19.2">
+<h4 data-number="4.4.19.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.4.19.2</span> Institution Types <em>Ming</em></h4>
 </section>
 </section>
-<section id="thematic-analysis-callauren-2" class="level3" data-number="4.4.28">
-<h3 data-number="4.4.28" class="anchored" data-anchor-id="thematic-analysis-callauren-2"><span class="header-section-number">4.4.28</span> Thematic Analysis <em>Cal/Lauren</em></h3>
-<section id="publication-topics-callauren-2" class="level4" data-number="4.4.28.1">
-<h4 data-number="4.4.28.1" class="anchored" data-anchor-id="publication-topics-callauren-2"><span class="header-section-number">4.4.28.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+<section id="thematic-analysis-callauren-2" class="level3" data-number="4.4.20">
+<h3 data-number="4.4.20" class="anchored" data-anchor-id="thematic-analysis-callauren-2"><span class="header-section-number">4.4.20</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren-2" class="level4" data-number="4.4.20.1">
+<h4 data-number="4.4.20.1" class="anchored" data-anchor-id="publication-topics-callauren-2"><span class="header-section-number">4.4.20.1</span> Publication Topics <em>Cal/Lauren</em></h4>
 </section>
-<section id="patterns-over-time-callauren-2" class="level4" data-number="4.4.28.2">
-<h4 data-number="4.4.28.2" class="anchored" data-anchor-id="patterns-over-time-callauren-2"><span class="header-section-number">4.4.28.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+<section id="patterns-over-time-callauren-2" class="level4" data-number="4.4.20.2">
+<h4 data-number="4.4.20.2" class="anchored" data-anchor-id="patterns-over-time-callauren-2"><span class="header-section-number">4.4.20.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
 </section>
 </section>
 </div>
 </div>
+</div>
+</section>
 </div>
 </section>
 </section>
 <section id="sec-matching" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="sec-matching"><span class="header-section-number">4.5</span> Step 5: Compare across Citation Databases</h2>
-<p>Our analysis builds a hierarchical understanding of how USDA datasets appear in Scopus<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, OpenAlex, and Dimensions.</p>
-<ol type="1">
-<li>We start at the <strong>journal</strong> level, identifying which journals publish research using USDA data to establish publication patterns across different research fields.</li>
-<li>We then examine individual <strong>publications</strong> within these journals, focusing on how researchers use and cite USDA datasets in their work.</li>
-<li>At a more granular level, we analyze the <strong>authors</strong> who work with these datasets, tracking their institutional affiliations and research networks (e.g., coauthors).</li>
-<li>Finally, we examine the <strong>institutions</strong> themselves, mapping where USDA data usage concentrates geographically and across different types of research organizations.</li>
-</ol>
 <p>Continuing with our case study, we now compare the two databases based on the journals that are unique to either Scopus or OpenAlex. Next, for journals that contain Ag Census data in both citation databases, we summarize the coverage of publications that appear in both Scopus and OpenAlex. Finally, we investigate discrepancies based on factors like missing identifiers, mismatched journal information (ISSNs), and additional publications accessed through OpenAlex’s API.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
 <div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
-<section id="journal-identification-3" class="level3" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="journal-identification-3"><span class="header-section-number">4.5.1</span> Journal Identification</h3>
+<section id="journal-coverage-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="journal-coverage-3">Journal Coverage</h3>
+<p>To analyze journal coverage in <strong>Scopus</strong>, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. This dataset is built from an initial publication-level dataset, which captures individual research articles mentioning Ag Census.</p>
+<p>We construct the publication-level dataset for only Ag Census mentions using the following metadata from the publication-level data:</p>
+<ul>
+<li>Publication identifier (DOI)</li>
+<li>Journal name</li>
+<li>Publisher</li>
+<li>ISSN (International Standard Serial Number, a unique journal identifier)</li>
+<li>Dataset alias (alternate names used to reference Ag Census)</li>
+<li>Dyad (dataset mention pair)</li>
+</ul>
+<p>This data structure follows the format outlined in the data schema (Figure XX).</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Crosswalk of Dataset Identifiers between Scopus and OpenAlex">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Crosswalk of Dataset Identifiers between Scopus and OpenAlex
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Scopus assigns multiple identifiers to the same dataset depending on how it is reported, rather than a single, standardized identifier. Therefore, the authors create a crosswalk between Scopus and OpenAlex so that each dataset can have one common identifier.</p>
+<p><a href="./appendices/app_crosswalk_data_id.html">Link to crosswalk file</a></p>
+</div>
+</div>
+</div>
+<p>After assembling the publication-level dataset, the final step in preparing the Scopus journal-level dataset is to aggregate publications at the journal level based on their ISSN.</p>
 </section>
-<section id="author-disambiguation-3" class="level3" data-number="4.5.2">
-<h3 data-number="4.5.2" class="anchored" data-anchor-id="author-disambiguation-3"><span class="header-section-number">4.5.2</span> Author Disambiguation</h3>
+<section id="author-disambiguation-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="author-disambiguation-3">Author Disambiguation</h3>
 </section>
-<section id="institution-disambiguation-3" class="level3" data-number="4.5.3">
-<h3 data-number="4.5.3" class="anchored" data-anchor-id="institution-disambiguation-3"><span class="header-section-number">4.5.3</span> Institution Disambiguation</h3>
-<section id="ipeds-ming-3" class="level4" data-number="4.5.3.1">
-<h4 data-number="4.5.3.1" class="anchored" data-anchor-id="ipeds-ming-3"><span class="header-section-number">4.5.3.1</span> IPEDS <em>Ming</em></h4>
+<section id="institution-disambiguation-3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="institution-disambiguation-3">Institution Disambiguation</h3>
+<section id="ipeds-ming-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="ipeds-ming-3">IPEDS <em>Ming</em></h4>
 </section>
-<section id="msi-data-ming-3" class="level4" data-number="4.5.3.2">
-<h4 data-number="4.5.3.2" class="anchored" data-anchor-id="msi-data-ming-3"><span class="header-section-number">4.5.3.2</span> MSI Data <em>Ming</em></h4>
+<section id="msi-data-ming-2" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="msi-data-ming-2">MSI Data <em>Ming</em></h4>
+<p style="text-align: center;">
+<a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
+</p>
 </section>
 </section>
 </div>
 <div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
-<section id="journal-identification-4" class="level3" data-number="4.5.4">
-<h3 data-number="4.5.4" class="anchored" data-anchor-id="journal-identification-4"><span class="header-section-number">4.5.4</span> Journal Identification</h3>
+<section id="journal-coverage-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="journal-coverage-4">Journal Coverage</h3>
+<p>To analyze journal coverage in <strong>OpenAlex</strong>, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. The OpenAlex journal-level dataset follows a similar approach to Scopus but differs in data availability and structure.</p>
+<p>OpenAlex links journals to their respective publications using linkage files, which connect publication records to dataset mentions. Unlike Scopus, OpenAlex assigns a single dataset identifier per dataset, while Scopus may have multiple identifiers for the same dataset depending on how it is referenced.</p>
+<p>Additionally, OpenAlex formats journal and publication identifiers differently:</p>
+<ul>
+<li>ISSNs appear without dashes</li>
+<li>DOIs exclude the URL portion, storing only the core identifier</li>
+</ul>
+<p>To ensure consistency with Scopus, we clean and standardize the publication-level dataset, aligning DOIs and ISSNs to a common format.</p>
+<p><strong>CAL TO DESCRIBE THIS PROCESS</strong></p>
 </section>
-<section id="author-disambiguation-4" class="level3" data-number="4.5.5">
-<h3 data-number="4.5.5" class="anchored" data-anchor-id="author-disambiguation-4"><span class="header-section-number">4.5.5</span> Author Disambiguation</h3>
+<section id="author-disambiguation-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="author-disambiguation-4">Author Disambiguation</h3>
 </section>
-<section id="institution-disambiguation-4" class="level3" data-number="4.5.6">
-<h3 data-number="4.5.6" class="anchored" data-anchor-id="institution-disambiguation-4"><span class="header-section-number">4.5.6</span> Institution Disambiguation</h3>
-<section id="ipeds-ming-4" class="level4" data-number="4.5.6.1">
-<h4 data-number="4.5.6.1" class="anchored" data-anchor-id="ipeds-ming-4"><span class="header-section-number">4.5.6.1</span> IPEDS <em>Ming</em></h4>
+<section id="institution-disambiguation-4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="institution-disambiguation-4">Institution Disambiguation</h3>
+<section id="ipeds-ming-4" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="ipeds-ming-4">IPEDS <em>Ming</em></h4>
 </section>
-<section id="msi-data-ming-4" class="level4" data-number="4.5.6.2">
-<h4 data-number="4.5.6.2" class="anchored" data-anchor-id="msi-data-ming-4"><span class="header-section-number">4.5.6.2</span> MSI Data *Ming**</h4>
+<section id="msi-data-ming-.unnumbered-1" class="level4" data-number="4.5.0.1">
+<h4 data-number="4.5.0.1" class="anchored" data-anchor-id="msi-data-ming-.unnumbered-1"><span class="header-section-number">4.5.0.1</span> MSI Data *Ming** {.unnumbered}</h4>
+<p style="text-align: center;">
+<a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
+</p>
 </section>
 </section>
 </div>
 <div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
-<section id="journal-identification-5" class="level3" data-number="4.5.7">
-<h3 data-number="4.5.7" class="anchored" data-anchor-id="journal-identification-5"><span class="header-section-number">4.5.7</span> Journal Identification</h3>
+<section id="journal-coverage-5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="journal-coverage-5">Journal Coverage</h3>
 </section>
-<section id="author-disambiguation-5" class="level3" data-number="4.5.8">
-<h3 data-number="4.5.8" class="anchored" data-anchor-id="author-disambiguation-5"><span class="header-section-number">4.5.8</span> Author Disambiguation</h3>
+<section id="author-disambiguation-5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="author-disambiguation-5">Author Disambiguation</h3>
 </section>
-<section id="institution-disambiguation-5" class="level3" data-number="4.5.9">
-<h3 data-number="4.5.9" class="anchored" data-anchor-id="institution-disambiguation-5"><span class="header-section-number">4.5.9</span> Institution Disambiguation</h3>
-<section id="ipeds-ming-5" class="level4" data-number="4.5.9.1">
-<h4 data-number="4.5.9.1" class="anchored" data-anchor-id="ipeds-ming-5"><span class="header-section-number">4.5.9.1</span> IPEDS <em>Ming</em></h4>
+<section id="institution-disambiguation-5" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="institution-disambiguation-5">Institution Disambiguation</h3>
+<section id="ipeds-ming-5" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="ipeds-ming-5">IPEDS <em>Ming</em></h4>
 </section>
-<section id="msi-data-ming-5" class="level4" data-number="4.5.9.2">
-<h4 data-number="4.5.9.2" class="anchored" data-anchor-id="msi-data-ming-5"><span class="header-section-number">4.5.9.2</span> MSI Data <em>Ming</em></h4>
+<section id="msi-data-ming-3" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="msi-data-ming-3">MSI Data <em>Ming</em></h4>
 </section>
 </section>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Summary of Matching Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1068,7 +1184,7 @@ Summary of Matching Methods
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>Rule-based matching for exact matches</li>
@@ -1163,105 +1279,105 @@ Table&nbsp;6: Summary of Methods
 </div>
 </div>
 </div>
-<section id="results-from-database-comparison" class="level3" data-number="4.5.10">
-<h3 data-number="4.5.10" class="anchored" data-anchor-id="results-from-database-comparison"><span class="header-section-number">4.5.10</span> Results from Database Comparison</h3>
+<section id="results-from-database-comparison" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="results-from-database-comparison"><span class="header-section-number">4.5.1</span> Results from Database Comparison</h3>
 <p><em>This section presents results after matching (which type varies – deterministic vs fuzzy)</em></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
 <div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
-<section id="journal-coverage-cal-3" class="level3" data-number="4.5.11">
-<h3 data-number="4.5.11" class="anchored" data-anchor-id="journal-coverage-cal-3"><span class="header-section-number">4.5.11</span> Journal Coverage <em>Cal</em></h3>
+<section id="journal-coverage-cal-3" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="journal-coverage-cal-3"><span class="header-section-number">4.5.2</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="publication-coverage-cal-3" class="level3" data-number="4.5.12">
-<h3 data-number="4.5.12" class="anchored" data-anchor-id="publication-coverage-cal-3"><span class="header-section-number">4.5.12</span> Publication Coverage <em>Cal</em></h3>
+<section id="publication-coverage-cal-3" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="publication-coverage-cal-3"><span class="header-section-number">4.5.3</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="author-coverage-cal-3" class="level3" data-number="4.5.13">
-<h3 data-number="4.5.13" class="anchored" data-anchor-id="author-coverage-cal-3"><span class="header-section-number">4.5.13</span> Author Coverage <em>Cal</em></h3>
+<section id="author-coverage-cal-3" class="level3" data-number="4.5.4">
+<h3 data-number="4.5.4" class="anchored" data-anchor-id="author-coverage-cal-3"><span class="header-section-number">4.5.4</span> Author Coverage <em>Cal</em></h3>
 </section>
-<section id="institution-coverage-ming-3" class="level3" data-number="4.5.14">
-<h3 data-number="4.5.14" class="anchored" data-anchor-id="institution-coverage-ming-3"><span class="header-section-number">4.5.14</span> Institution Coverage <em>Ming</em></h3>
+<section id="institution-coverage-ming-3" class="level3" data-number="4.5.5">
+<h3 data-number="4.5.5" class="anchored" data-anchor-id="institution-coverage-ming-3"><span class="header-section-number">4.5.5</span> Institution Coverage <em>Ming</em></h3>
 </section>
-<section id="insitutional-representation-ming-3" class="level3" data-number="4.5.15">
-<h3 data-number="4.5.15" class="anchored" data-anchor-id="insitutional-representation-ming-3"><span class="header-section-number">4.5.15</span> Insitutional Representation <em>Ming</em></h3>
-<section id="geographic-coverage-ming-3" class="level4" data-number="4.5.15.1">
-<h4 data-number="4.5.15.1" class="anchored" data-anchor-id="geographic-coverage-ming-3"><span class="header-section-number">4.5.15.1</span> Geographic Coverage <em>Ming</em></h4>
+<section id="insitutional-representation-ming-3" class="level3" data-number="4.5.6">
+<h3 data-number="4.5.6" class="anchored" data-anchor-id="insitutional-representation-ming-3"><span class="header-section-number">4.5.6</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming-3" class="level4" data-number="4.5.6.1">
+<h4 data-number="4.5.6.1" class="anchored" data-anchor-id="geographic-coverage-ming-3"><span class="header-section-number">4.5.6.1</span> Geographic Coverage <em>Ming</em></h4>
 </section>
-<section id="sec-inst-rep" class="level4" data-number="4.5.15.2">
-<h4 data-number="4.5.15.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.5.15.2</span> Institution Types <em>Ming</em></h4>
+<section id="sec-inst-rep" class="level4" data-number="4.5.6.2">
+<h4 data-number="4.5.6.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.5.6.2</span> Institution Types <em>Ming</em></h4>
 </section>
 </section>
-<section id="thematic-analysis-callauren-3" class="level3" data-number="4.5.16">
-<h3 data-number="4.5.16" class="anchored" data-anchor-id="thematic-analysis-callauren-3"><span class="header-section-number">4.5.16</span> Thematic Analysis <em>Cal/Lauren</em></h3>
-<section id="publication-topics-callauren-3" class="level4" data-number="4.5.16.1">
-<h4 data-number="4.5.16.1" class="anchored" data-anchor-id="publication-topics-callauren-3"><span class="header-section-number">4.5.16.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+<section id="thematic-analysis-callauren-3" class="level3" data-number="4.5.7">
+<h3 data-number="4.5.7" class="anchored" data-anchor-id="thematic-analysis-callauren-3"><span class="header-section-number">4.5.7</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren-3" class="level4" data-number="4.5.7.1">
+<h4 data-number="4.5.7.1" class="anchored" data-anchor-id="publication-topics-callauren-3"><span class="header-section-number">4.5.7.1</span> Publication Topics <em>Cal/Lauren</em></h4>
 </section>
-<section id="patterns-over-time-callauren-3" class="level4" data-number="4.5.16.2">
-<h4 data-number="4.5.16.2" class="anchored" data-anchor-id="patterns-over-time-callauren-3"><span class="header-section-number">4.5.16.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+<section id="patterns-over-time-callauren-3" class="level4" data-number="4.5.7.2">
+<h4 data-number="4.5.7.2" class="anchored" data-anchor-id="patterns-over-time-callauren-3"><span class="header-section-number">4.5.7.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
 </section>
 </section>
 </div>
 <div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
-<section id="journal-coverage-cal-4" class="level3" data-number="4.5.17">
-<h3 data-number="4.5.17" class="anchored" data-anchor-id="journal-coverage-cal-4"><span class="header-section-number">4.5.17</span> Journal Coverage <em>Cal</em></h3>
+<section id="journal-coverage-cal-4" class="level3" data-number="4.5.8">
+<h3 data-number="4.5.8" class="anchored" data-anchor-id="journal-coverage-cal-4"><span class="header-section-number">4.5.8</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="publication-coverage-cal-4" class="level3" data-number="4.5.18">
-<h3 data-number="4.5.18" class="anchored" data-anchor-id="publication-coverage-cal-4"><span class="header-section-number">4.5.18</span> Publication Coverage <em>Cal</em></h3>
+<section id="publication-coverage-cal-4" class="level3" data-number="4.5.9">
+<h3 data-number="4.5.9" class="anchored" data-anchor-id="publication-coverage-cal-4"><span class="header-section-number">4.5.9</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="author-coverage-cal-4" class="level3" data-number="4.5.19">
-<h3 data-number="4.5.19" class="anchored" data-anchor-id="author-coverage-cal-4"><span class="header-section-number">4.5.19</span> Author Coverage <em>Cal</em></h3>
+<section id="author-coverage-cal-4" class="level3" data-number="4.5.10">
+<h3 data-number="4.5.10" class="anchored" data-anchor-id="author-coverage-cal-4"><span class="header-section-number">4.5.10</span> Author Coverage <em>Cal</em></h3>
 </section>
-<section id="institution-coverage-ming-4" class="level3" data-number="4.5.20">
-<h3 data-number="4.5.20" class="anchored" data-anchor-id="institution-coverage-ming-4"><span class="header-section-number">4.5.20</span> Institution Coverage <em>Ming</em></h3>
+<section id="institution-coverage-ming-4" class="level3" data-number="4.5.11">
+<h3 data-number="4.5.11" class="anchored" data-anchor-id="institution-coverage-ming-4"><span class="header-section-number">4.5.11</span> Institution Coverage <em>Ming</em></h3>
 </section>
-<section id="insitutional-representation-ming-4" class="level3" data-number="4.5.21">
-<h3 data-number="4.5.21" class="anchored" data-anchor-id="insitutional-representation-ming-4"><span class="header-section-number">4.5.21</span> Insitutional Representation <em>Ming</em></h3>
-<section id="geographic-coverage-ming-4" class="level4" data-number="4.5.21.1">
-<h4 data-number="4.5.21.1" class="anchored" data-anchor-id="geographic-coverage-ming-4"><span class="header-section-number">4.5.21.1</span> Geographic Coverage <em>Ming</em></h4>
+<section id="insitutional-representation-ming-4" class="level3" data-number="4.5.12">
+<h3 data-number="4.5.12" class="anchored" data-anchor-id="insitutional-representation-ming-4"><span class="header-section-number">4.5.12</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming-4" class="level4" data-number="4.5.12.1">
+<h4 data-number="4.5.12.1" class="anchored" data-anchor-id="geographic-coverage-ming-4"><span class="header-section-number">4.5.12.1</span> Geographic Coverage <em>Ming</em></h4>
 </section>
-<section id="sec-inst-rep" class="level4" data-number="4.5.21.2">
-<h4 data-number="4.5.21.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.5.21.2</span> Institution Types <em>Ming</em></h4>
+<section id="sec-inst-rep" class="level4" data-number="4.5.12.2">
+<h4 data-number="4.5.12.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.5.12.2</span> Institution Types <em>Ming</em></h4>
 </section>
 </section>
-<section id="thematic-analysis-callauren-4" class="level3" data-number="4.5.22">
-<h3 data-number="4.5.22" class="anchored" data-anchor-id="thematic-analysis-callauren-4"><span class="header-section-number">4.5.22</span> Thematic Analysis <em>Cal/Lauren</em></h3>
-<section id="publication-topics-callauren-4" class="level4" data-number="4.5.22.1">
-<h4 data-number="4.5.22.1" class="anchored" data-anchor-id="publication-topics-callauren-4"><span class="header-section-number">4.5.22.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+<section id="thematic-analysis-callauren-4" class="level3" data-number="4.5.13">
+<h3 data-number="4.5.13" class="anchored" data-anchor-id="thematic-analysis-callauren-4"><span class="header-section-number">4.5.13</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren-4" class="level4" data-number="4.5.13.1">
+<h4 data-number="4.5.13.1" class="anchored" data-anchor-id="publication-topics-callauren-4"><span class="header-section-number">4.5.13.1</span> Publication Topics <em>Cal/Lauren</em></h4>
 </section>
-<section id="patterns-over-time-callauren-4" class="level4" data-number="4.5.22.2">
-<h4 data-number="4.5.22.2" class="anchored" data-anchor-id="patterns-over-time-callauren-4"><span class="header-section-number">4.5.22.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+<section id="patterns-over-time-callauren-4" class="level4" data-number="4.5.13.2">
+<h4 data-number="4.5.13.2" class="anchored" data-anchor-id="patterns-over-time-callauren-4"><span class="header-section-number">4.5.13.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
 </section>
 </section>
 </div>
 <div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
-<section id="journal-coverage-cal-5" class="level3" data-number="4.5.23">
-<h3 data-number="4.5.23" class="anchored" data-anchor-id="journal-coverage-cal-5"><span class="header-section-number">4.5.23</span> Journal Coverage <em>Cal</em></h3>
+<section id="journal-coverage-cal-5" class="level3" data-number="4.5.14">
+<h3 data-number="4.5.14" class="anchored" data-anchor-id="journal-coverage-cal-5"><span class="header-section-number">4.5.14</span> Journal Coverage <em>Cal</em></h3>
 </section>
-<section id="publication-coverage-cal-5" class="level3" data-number="4.5.24">
-<h3 data-number="4.5.24" class="anchored" data-anchor-id="publication-coverage-cal-5"><span class="header-section-number">4.5.24</span> Publication Coverage <em>Cal</em></h3>
+<section id="publication-coverage-cal-5" class="level3" data-number="4.5.15">
+<h3 data-number="4.5.15" class="anchored" data-anchor-id="publication-coverage-cal-5"><span class="header-section-number">4.5.15</span> Publication Coverage <em>Cal</em></h3>
 </section>
-<section id="author-coverage-cal-5" class="level3" data-number="4.5.25">
-<h3 data-number="4.5.25" class="anchored" data-anchor-id="author-coverage-cal-5"><span class="header-section-number">4.5.25</span> Author Coverage <em>Cal</em></h3>
+<section id="author-coverage-cal-5" class="level3" data-number="4.5.16">
+<h3 data-number="4.5.16" class="anchored" data-anchor-id="author-coverage-cal-5"><span class="header-section-number">4.5.16</span> Author Coverage <em>Cal</em></h3>
 </section>
-<section id="institution-coverage-ming-5" class="level3" data-number="4.5.26">
-<h3 data-number="4.5.26" class="anchored" data-anchor-id="institution-coverage-ming-5"><span class="header-section-number">4.5.26</span> Institution Coverage <em>Ming</em></h3>
+<section id="institution-coverage-ming-5" class="level3" data-number="4.5.17">
+<h3 data-number="4.5.17" class="anchored" data-anchor-id="institution-coverage-ming-5"><span class="header-section-number">4.5.17</span> Institution Coverage <em>Ming</em></h3>
 </section>
-<section id="insitutional-representation-ming-5" class="level3" data-number="4.5.27">
-<h3 data-number="4.5.27" class="anchored" data-anchor-id="insitutional-representation-ming-5"><span class="header-section-number">4.5.27</span> Insitutional Representation <em>Ming</em></h3>
-<section id="geographic-coverage-ming-5" class="level4" data-number="4.5.27.1">
-<h4 data-number="4.5.27.1" class="anchored" data-anchor-id="geographic-coverage-ming-5"><span class="header-section-number">4.5.27.1</span> Geographic Coverage <em>Ming</em></h4>
+<section id="insitutional-representation-ming-5" class="level3" data-number="4.5.18">
+<h3 data-number="4.5.18" class="anchored" data-anchor-id="insitutional-representation-ming-5"><span class="header-section-number">4.5.18</span> Insitutional Representation <em>Ming</em></h3>
+<section id="geographic-coverage-ming-5" class="level4" data-number="4.5.18.1">
+<h4 data-number="4.5.18.1" class="anchored" data-anchor-id="geographic-coverage-ming-5"><span class="header-section-number">4.5.18.1</span> Geographic Coverage <em>Ming</em></h4>
 </section>
-<section id="sec-inst-rep" class="level4" data-number="4.5.27.2">
-<h4 data-number="4.5.27.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.5.27.2</span> Institution Types <em>Ming</em></h4>
+<section id="sec-inst-rep" class="level4" data-number="4.5.18.2">
+<h4 data-number="4.5.18.2" class="anchored" data-anchor-id="sec-inst-rep"><span class="header-section-number">4.5.18.2</span> Institution Types <em>Ming</em></h4>
 </section>
 </section>
-<section id="thematic-analysis-callauren-5" class="level3" data-number="4.5.28">
-<h3 data-number="4.5.28" class="anchored" data-anchor-id="thematic-analysis-callauren-5"><span class="header-section-number">4.5.28</span> Thematic Analysis <em>Cal/Lauren</em></h3>
-<section id="publication-topics-callauren-5" class="level4" data-number="4.5.28.1">
-<h4 data-number="4.5.28.1" class="anchored" data-anchor-id="publication-topics-callauren-5"><span class="header-section-number">4.5.28.1</span> Publication Topics <em>Cal/Lauren</em></h4>
+<section id="thematic-analysis-callauren-5" class="level3" data-number="4.5.19">
+<h3 data-number="4.5.19" class="anchored" data-anchor-id="thematic-analysis-callauren-5"><span class="header-section-number">4.5.19</span> Thematic Analysis <em>Cal/Lauren</em></h3>
+<section id="publication-topics-callauren-5" class="level4" data-number="4.5.19.1">
+<h4 data-number="4.5.19.1" class="anchored" data-anchor-id="publication-topics-callauren-5"><span class="header-section-number">4.5.19.1</span> Publication Topics <em>Cal/Lauren</em></h4>
 </section>
-<section id="patterns-over-time-callauren-5" class="level4" data-number="4.5.28.2">
-<h4 data-number="4.5.28.2" class="anchored" data-anchor-id="patterns-over-time-callauren-5"><span class="header-section-number">4.5.28.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
+<section id="patterns-over-time-callauren-5" class="level4" data-number="4.5.19.2">
+<h4 data-number="4.5.19.2" class="anchored" data-anchor-id="patterns-over-time-callauren-5"><span class="header-section-number">4.5.19.2</span> Patterns over Time <em>Cal/Lauren</em></h4>
 </section>
 </section>
 </div>
@@ -1322,7 +1438,6 @@ Visser, M., Van Eck, N. J., &amp; Waltman, L. (2021). Large-scale comparison of 
 <ol>
 <li id="fn1"><p>Explanatory Note 1: A publication may contain references to more than one target data assets. It may also contain multiple references to the same target data asset. As an example, a publication may contain the following references to target assets (Data Asset A = 3 references, Data Asset B = 2 references, Data asset C = 4 reference then in this field three target data assets, the value included would be “3”.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Explanatory Note 2: For the same publication as in Explanatory Note 1, the value here would be 9 provided the license for the publication allowed for snippet generation.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>The Scopus work was generated by a team provided under contract to USDA (NASS and ERS), which included NYU, Rafael Ladislau, and Elsevier.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

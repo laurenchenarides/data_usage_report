@@ -1,12 +1,12 @@
 ## Dimensions
 
-### Journal Identification 
+### Journal Coverage {.unnumbered}
 
-### Author Disambiguation 
+### Author Disambiguation {.unnumbered}
 
-### Institution Disambiguation 
+### Institution Disambiguation {.unnumbered}
 
-#### IPEDS *Ming*
+#### IPEDS *Ming* {.unnumbered}
 
-#### MSI Data *Ming*
+#### MSI Data *Ming* {.unnumbered}
 

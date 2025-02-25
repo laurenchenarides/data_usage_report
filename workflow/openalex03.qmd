@@ -1,12 +1,30 @@
 ## OpenAlex
 
-### Journal Identification 
+### Journal Coverage {.unnumbered}
 
-### Author Disambiguation 
+To analyze journal coverage in **OpenAlex**, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. The OpenAlex journal-level dataset follows a similar approach to Scopus but differs in data availability and structure.
 
-### Institution Disambiguation 
+OpenAlex links journals to their respective publications using linkage files, which connect publication records to dataset mentions. Unlike Scopus, OpenAlex assigns a single dataset identifier per dataset, while Scopus may have multiple identifiers for the same dataset depending on how it is referenced.
 
-#### IPEDS *Ming*
+Additionally, OpenAlex formats journal and publication identifiers differently:
 
-#### MSI Data *Ming**
+- ISSNs appear without dashes
+- DOIs exclude the URL portion, storing only the core identifier
+
+To ensure consistency with Scopus, we clean and standardize the publication-level dataset, aligning DOIs and ISSNs to a common format.
+
+**CAL TO DESCRIBE THIS PROCESS**
+
+### Author Disambiguation {.unnumbered}
+
+### Institution Disambiguation{.unnumbered}
+
+#### IPEDS *Ming* {.unnumbered}
+
+#### MSI Data *Ming** {.unnumbered}
+
+<p style="text-align: center;">
+  <a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
+</p>
+
 
