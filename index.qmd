@@ -326,6 +326,11 @@ To illustrate the disambiguation process, we use the Census of Agriculture as a 
 
 *This section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset*
 
+Step 4 produces two publication-level datasets: one of all academic papers released through Scopus that use Ag Census data and a similar one for OpenAlex. 
+
+There are 4712 unique publications reported in Scopus and 1266 in OpenAlex. These data are collapsed into a journal-level dataset based on the International Standard Serial Number (ISSN) that is unique to each academic journal. 
+
+
 ::: panel-tabset
 {{< include workflow/scopus03r.qmd >}}
 
@@ -337,16 +342,43 @@ To illustrate the disambiguation process, we use the Census of Agriculture as a 
 
 ## Step 5: Compare across Citation Databases {#sec-matching}
 
-Continuing with our case study, we now compare the two databases based on the journals that are unique to either Scopus or OpenAlex. Next, for journals that contain Ag Census data in both citation databases, we summarize the coverage of publications that appear in both Scopus and OpenAlex. Finally, we investigate discrepancies based on factors like missing identifiers, mismatched journal information (ISSNs), and additional publications accessed through OpenAlex’s API.
+### Case Study: Census of Agriculture
+
+::: {.custom-box}
+Continuing with our case study, we use the datasets produced in Step 4 to produce counts of the number of journals with Ag Census publications that:
+
+(i) only appear in Scopus, 
+(ii) only appear in OpenAlex, or 
+(iii) appear in both.
+
+For journals that contain Ag Census data in both citation databases, we summarize the coverage of publications that appear in both Scopus and OpenAlex. 
+
+Then, we investigate discrepancies based on factors like missing identifiers, mismatched journal information (ISSNs), and additional publications accessed through OpenAlex’s API.
+
+**Add here: What are the steps in producing Table AA**
+
 
 ::: panel-tabset
-{{< include workflow/scopus03.qmd >}}
+{{< include workflow/scopus04.qmd >}}
 
-{{< include workflow/openalex03.qmd >}}
+{{< include workflow/openalex04.qmd >}}
 
-{{< include workflow/dimensions03.qmd >}}
+{{< include workflow/dimensions04.qmd >}}
 :::
 
+### Results from Database Comparison
+
+*This section presents results after matching (which type varies – deterministic vs fuzzy)*
+
+::: panel-tabset
+{{< include workflow/scopus04r.qmd >}}
+
+{{< include workflow/openalex04r.qmd >}}
+
+{{< include workflow/dimensions04r.qmd >}}
+:::
+
+:::
 
 ::: {.callout-note title="Summary of Matching Methods" collapse=true}
 
@@ -366,19 +398,6 @@ Continuing with our case study, we now compare the two databases based on the jo
 | Filtering on keywords to determine themes |  |  |  |  |
 
 : Summary of Methods {#tbl-methods-summary}
-:::
-
-
-### Results from Database Comparison
-
-*This section presents results after matching (which type varies – deterministic vs fuzzy)*
-
-::: panel-tabset
-{{< include workflow/scopus03r.qmd >}}
-
-{{< include workflow/openalex03r.qmd >}}
-
-{{< include workflow/dimensions03r.qmd >}}
 :::
 
 # Recommendations
