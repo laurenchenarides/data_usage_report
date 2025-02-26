@@ -1342,5 +1342,33 @@
     "title": "Citation Database Assessment",
     "section": "",
     "text": "To analyze journal coverage in OpenAlex, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. The OpenAlex journal-level dataset follows a similar approach to Scopus but differs in data availability and structure.\nOpenAlex links journals to their respective publications using linkage files, which connect publication records to dataset mentions. Unlike Scopus, OpenAlex assigns a single dataset identifier per dataset, while Scopus may have multiple identifiers for the same dataset depending on how it is referenced.\nAdditionally, OpenAlex formats journal and publication identifiers differently:\n\nISSNs appear without dashes\nDOIs exclude the URL portion, storing only the core identifier\n\nTo ensure consistency with Scopus, we clean and standardize the publication-level dataset, aligning DOIs and ISSNs to a common format.\nCAL TO DESCRIBE THIS PROCESS\n\n\n\n\n\n\n\n\n\n\n\n\nReturn to Project Workflow"
+  },
+  {
+    "objectID": "workflow/openalex04.html",
+    "href": "workflow/openalex04.html",
+    "title": "Citation Database Assessment",
+    "section": "",
+    "text": "To analyze journal coverage in OpenAlex, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. The OpenAlex journal-level dataset follows a similar approach to Scopus but differs in data availability and structure.\nOpenAlex links journals to their respective publications using linkage files, which connect publication records to dataset mentions. Unlike Scopus, OpenAlex assigns a single dataset identifier per dataset, while Scopus may have multiple identifiers for the same dataset depending on how it is referenced.\nAdditionally, OpenAlex formats journal and publication identifiers differently:\n\nISSNs appear without dashes\nDOIs exclude the URL portion, storing only the core identifier\n\nTo ensure consistency with Scopus, we clean and standardize the publication-level dataset, aligning DOIs and ISSNs to a common format.\nCAL TO DESCRIBE THIS PROCESS\n\n\n\n\n\n\n\n\n\n\n\n\nReturn to Project Workflow"
+  },
+  {
+    "objectID": "workflow/openalex04.html#openalex",
+    "href": "workflow/openalex04.html#openalex",
+    "title": "Citation Database Assessment",
+    "section": "",
+    "text": "To analyze journal coverage in OpenAlex, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. The OpenAlex journal-level dataset follows a similar approach to Scopus but differs in data availability and structure.\nOpenAlex links journals to their respective publications using linkage files, which connect publication records to dataset mentions. Unlike Scopus, OpenAlex assigns a single dataset identifier per dataset, while Scopus may have multiple identifiers for the same dataset depending on how it is referenced.\nAdditionally, OpenAlex formats journal and publication identifiers differently:\n\nISSNs appear without dashes\nDOIs exclude the URL portion, storing only the core identifier\n\nTo ensure consistency with Scopus, we clean and standardize the publication-level dataset, aligning DOIs and ISSNs to a common format.\nCAL TO DESCRIBE THIS PROCESS\n\n\n\n\n\n\n\n\n\n\n\n\nReturn to Project Workflow"
+  },
+  {
+    "objectID": "workflow/scopus04.html",
+    "href": "workflow/scopus04.html",
+    "title": "Citation Database Assessment",
+    "section": "",
+    "text": "To analyze journal coverage in Scopus, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. This dataset is built from an initial publication-level dataset, which captures individual research articles mentioning Ag Census.\nWe construct the publication-level dataset for only Ag Census mentions using the following metadata from the publication-level data:\n\nPublication identifier (DOI)\nJournal name\nPublisher\nISSN (International Standard Serial Number, a unique journal identifier)\nDataset alias (alternate names used to reference Ag Census)\nDyad (dataset mention pair)\n\nThis data structure follows the format outlined in the data schema (Figure XX).\n\n\n\n\n\n\nCrosswalk of Dataset Identifiers between Scopus and OpenAlex\n\n\n\n\n\nScopus assigns multiple identifiers to the same dataset depending on how it is reported, rather than a single, standardized identifier. Therefore, the authors create a crosswalk between Scopus and OpenAlex so that each dataset can have one common identifier.\nLink to crosswalk file\n\n\n\nAfter assembling the publication-level dataset, the final step in preparing the Scopus journal-level dataset is to aggregate publications at the journal level based on their ISSN.\n\n\n\n\n\n\n\n\n\n\n\n\nReturn to Project Workflow"
+  },
+  {
+    "objectID": "workflow/scopus04.html#scopus",
+    "href": "workflow/scopus04.html#scopus",
+    "title": "Citation Database Assessment",
+    "section": "",
+    "text": "To analyze journal coverage in Scopus, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. This dataset is built from an initial publication-level dataset, which captures individual research articles mentioning Ag Census.\nWe construct the publication-level dataset for only Ag Census mentions using the following metadata from the publication-level data:\n\nPublication identifier (DOI)\nJournal name\nPublisher\nISSN (International Standard Serial Number, a unique journal identifier)\nDataset alias (alternate names used to reference Ag Census)\nDyad (dataset mention pair)\n\nThis data structure follows the format outlined in the data schema (Figure XX).\n\n\n\n\n\n\nCrosswalk of Dataset Identifiers between Scopus and OpenAlex\n\n\n\n\n\nScopus assigns multiple identifiers to the same dataset depending on how it is reported, rather than a single, standardized identifier. Therefore, the authors create a crosswalk between Scopus and OpenAlex so that each dataset can have one common identifier.\nLink to crosswalk file\n\n\n\nAfter assembling the publication-level dataset, the final step in preparing the Scopus journal-level dataset is to aggregate publications at the journal level based on their ISSN.\n\n\n\n\n\n\n\n\n\n\n\n\nReturn to Project Workflow"
   }
 ]
