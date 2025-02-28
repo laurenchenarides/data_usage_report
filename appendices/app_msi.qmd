@@ -74,7 +74,7 @@ The MSI dataset combines data from multiple sources:
 
 ### How to Merge with IPEDS Data {.unnumbered}
 
-The MSI dataset is integrated with IPEDS data using the `UNITID` and `year` variables. This allows for:
+The MSI dataset can be linked with IPEDS data using the `UNITID` and `year` variables. This allows for:
 
 - Tracking institutional MSI status over time.
 - Comparing MSI and non-MSI institutions within Scopus, OpenAlex, and Dimensions.

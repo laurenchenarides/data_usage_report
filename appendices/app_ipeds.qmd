@@ -95,7 +95,7 @@ The IPEDS dataset integrates multiple tables across different survey years (2017
 
 ### How to Merge with MSI Data {.unnumbered}
 
-The IPEDS dataset is integrated with the MSI dataset using the `UNITID` and `year` variables. This allows for:
+The IPEDS dataset can be linked with the MSI dataset using the `UNITID` and `year` variables. This allows for:
 
 - Identifying MSI institutions within IPEDS to analyze institutional characteristics.
 - Comparing institutional characteristics of MSI and non-MSI institutions, such as enrollment size, Carnegie classification, and financial indicators.
