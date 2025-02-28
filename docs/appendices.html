@@ -117,7 +117,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#metadata-file-description" id="toc-metadata-file-description" class="nav-link active" data-scroll-target="#metadata-file-description"><span class="header-section-number">1</span> Metadata File Description</a></li>
+  <li><a href="#citation-database-metadata-files" id="toc-citation-database-metadata-files" class="nav-link active" data-scroll-target="#citation-database-metadata-files"><span class="header-section-number">1</span> Citation Database Metadata Files</a></li>
+  <li><a href="#institutional-metadata-files" id="toc-institutional-metadata-files" class="nav-link" data-scroll-target="#institutional-metadata-files"><span class="header-section-number">2</span> Institutional Metadata Files</a></li>
   </ul>
 </nav>
 </nav>
@@ -147,8 +148,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="metadata-file-description" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Metadata File Description</h1>
+<section id="citation-database-metadata-files" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Citation Database Metadata Files</h1>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
@@ -924,13 +925,348 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>By following the steps outlined above, you can effectively navigate the dataset to extract publications related to specific datasets and identified by particular models. This structured approach allows for targeted analysis and comparison with data from sources like OpenAlex.</p>
-<p>Keep in mind that the OpenAlex data now may associate a single publication with multiple datasets, and due to the direct application of aliases and flag terms (with no optimizations), certain datasets like the NASS Census of Agriculture might show fewer publications than before.</p>
+</section>
+<section id="institutional-metadata-files" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Institutional Metadata Files</h1>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">IPEDS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">MSI</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<section id="overview" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="overview">Overview</h3>
+<p>The <strong>Integrated Postsecondary Education Data System (IPEDS)</strong> is a national dataset maintained by the National Center for Education Statistics (NCES). It collects data from all U.S. institutions participating in federal financial aid programs. In this project, IPEDS data is used to analyze institutional characteristics (e.g., size, classification, location, and financial indicators) in relation to research publications identified in Scopus, OpenAlex, and Dimensions.</p>
+<p>The raw IPEDS data was obtained from the IPEDS website: <a href="https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx?year=2023&amp;surveyNumber=-1&amp;sid=f98b3f39-0633-4dd3-bbc6-ec4e29b9098b&amp;rtid=7">IPEDS Data Center</a>.</p>
+</section>
+<section id="how-these-files-fit-into-the-project-workflow" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="how-these-files-fit-into-the-project-workflow">How These Files Fit into the Project Workflow</h3>
+<p>The IPEDS dataset provides institutional characteristics that are used in:</p>
+<ol type="1">
+<li>Disambiguating institution names in citation databases (Scopus, OpenAlex, Dimensions)</li>
+<li>Comparing research output across different types of institutions</li>
+<li>Assessing dataset usage by institution type (e.g., HBCUs, land-grant universities, private vs.&nbsp;public institutions)</li>
+</ol>
+<p>By integrating IPEDS institutional data with the publication datasets generated from each citation database, we can evaluate how research output varies across institution types and funding levels.</p>
+</section>
+<section id="file-organization-in-github-repository" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="file-organization-in-github-repository">File Organization in GitHub Repository</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Category</strong></th>
+<th><strong>File Path &amp; Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Processed IPEDS Dataset</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS"><code>compare_scopus_openalex/resources/IPEDS/IPEDS.csv</code></a></td>
+</tr>
+<tr class="even">
+<td><strong>Raw IPEDS Data</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS/raw_data_IPEDS"><code>compare_scopus_openalex/resources/raw_data_IPEDS/</code></a></td>
+</tr>
+<tr class="odd">
+<td><strong>Data Processing Code</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/IPEDSdata.rmd</code></a></td>
+</tr>
+<tr class="even">
+<td><strong>Data Documentation</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/IPEDS_Data.md</code></a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-sources-and-variables" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="data-sources-and-variables">Data Sources and Variables</h3>
+<p>The IPEDS dataset integrates multiple tables across different survey years (2017-2023) to capture important institutional characteristics.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 42%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Variable</strong></th>
+<th><strong>IPEDS Table (Years)</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Institution Size</strong></td>
+<td><code>EFFY2017 - EFFY2023</code></td>
+<td>Total student enrollment by level (undergrad/graduate)</td>
+</tr>
+<tr class="even">
+<td><strong>Institution Location</strong></td>
+<td><code>HD2017 - HD2023</code></td>
+<td>Institution name, address, city, state, ZIP</td>
+</tr>
+<tr class="odd">
+<td><strong>HBCU Status</strong></td>
+<td><code>HD2017 - HD2023</code></td>
+<td>Indicator if institution is a Historically Black College or University (HBCU)</td>
+</tr>
+<tr class="even">
+<td><strong>Carnegie Classification</strong></td>
+<td><code>HD2017 - HD2023</code></td>
+<td>Institution type (e.g., public/private, 2-year/4-year)</td>
+</tr>
+<tr class="odd">
+<td><strong>Endowment Size</strong></td>
+<td><code>F1A2017 - F1A2023</code></td>
+<td>Value of endowment assets at the start and end of the fiscal year</td>
+</tr>
+<tr class="even">
+<td><strong>Library Budget</strong></td>
+<td><code>AL2017 - AL2023</code></td>
+<td>Total library expenditures (salaries, materials, operations)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="file-descriptions" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="file-descriptions">File Descriptions</h3>
+<section id="institution-size-effy-files" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="institution-size-effy-files">Institution Size (<code>EFFY files</code>)</h4>
+<ul>
+<li><strong>Description</strong>: Contains 12-month unduplicated headcount enrollment by race/ethnicicy, gender, and student level.</li>
+<li><strong>Contents</strong>:
+<ul>
+<li><code>UNITID</code>: Unique institution identifier</li>
+<li><code>EFFYLEV</code>: Level of study (1 = All students, 2 = Undergrad, 4 = Graduate)</li>
+<li><code>EFYTOTLT</code>: Total students enrolled during the 12-month period</li>
+<li><code>year</code>: Manually added variable to track enrollment over time</li>
+</ul></li>
+<li><strong>Processing Notes</strong>:
+<ul>
+<li>Only includes <strong>EFFYLEV = 1</strong> (All students level).</li>
+<li>Year variable was manually added since it was not originally present.</li>
+</ul></li>
+</ul>
+</section>
+<section id="institution-characteristics-hd-files" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="institution-characteristics-hd-files">Institution Characteristics (<code>HD files</code>)</h4>
+<ul>
+<li><strong>Description</strong>: Provides details on institution location, classification, and designation (e.g., HBCU, land-grant).</li>
+<li><strong>Contents</strong>:
+<ul>
+<li><code>UNITID</code>: Unique institution identifier</li>
+<li><code>INSTNM</code>: Institution name</li>
+<li><code>ADDR, CITY, STABBR, ZIP</code>: Location information</li>
+<li><code>HBCU</code>: 1 = HBCU, 0 = Non-HBCU</li>
+<li><code>CONTROL</code>: 1 = Public, 2 = Private Nonprofit, 3 = Private For-Profit</li>
+<li><code>ICLEVEL</code>: 1 = 4-year, 2 = 2-year, 3 = Less than 2-year</li>
+<li><code>LANDGRNT</code>: 1 = Land Grant, 2 = Not Land Grant</li>
+<li><code>year</code>: Added variable for time tracking</li>
+</ul></li>
+</ul>
+</section>
+<section id="endowment-data-f1a-files" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="endowment-data-f1a-files">Endowment Data (<code>F1A files</code>)</h4>
+<ul>
+<li><strong>Description</strong>: Reports institutional endowment assets of public universities at the beginning and end of the fiscal year.</li>
+<li><strong>Contents</strong>:
+<ul>
+<li><code>UNITID</code>: Unique institution identifier</li>
+<li><code>F1H01</code>: Endowment assets at start of fiscal year</li>
+<li><code>F1H02</code>: Endowment assets at end of fiscal year</li>
+<li><code>year</code>: Fiscal year</li>
+</ul></li>
+</ul>
+</section>
+<section id="library-expenditures-al-files" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="library-expenditures-al-files">Library Expenditures (<code>AL files</code>)</h4>
+<ul>
+<li><strong>Description</strong>: Tracks total library budgets, including salaries, benefits, and operations.</li>
+<li><strong>Contents</strong>:
+<ul>
+<li><code>UNITID</code>: Unique institution identifier</li>
+<li><code>LEXPTOT</code>: Total library expenditures</li>
+<li><code>year</code>: Reporting year</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="data-processing-and-standardization" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="data-processing-and-standardization">Data Processing and Standardization</h3>
+<ul>
+<li><strong>Variable Name Changes and Formatting:</strong>
+<ul>
+<li><code>UNITID</code> and <code>year</code> serve as the primary keys to merge datasets for analysis.</li>
+<li><code>year</code> was added to datasets that lacked it.</li>
+</ul></li>
+<li><strong>Handling Missing Data and Filters:</strong>
+<ul>
+<li>Non-relevant columns were removed.</li>
+<li>Datasets were filtered to retain only institutions with complete enrollment and classification data.</li>
+</ul></li>
+<li><strong>Merging Strategy:</strong>
+<ul>
+<li>Datasets can be joined using <code>UNITID</code> and <code>year</code> as unique identifiers.</li>
+<li>Institutions missing <code>UNITID</code> were excluded.</li>
+</ul></li>
+</ul>
+</section>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<section id="overview-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="overview-1">Overview</h3>
+<p>The <strong>Minority-Serving Institutions (MSI) Data</strong> captures institutions eligible for federal MSI programs, as determined by the U.S. Department of Education and other sources. In this project, MSI data is used to analyze institutional characteristics in relation to research publications identified in Scopus, OpenAlex, and Dimensions.</p>
+<p>This dataset provides information on institutions <em>eligible or potentially eligible</em> for at least one MSI designation and includes data from 2017 to 2023. The MSI dataset integrates information from multiple sources and is merged with IPEDS data to track research output across different institution types.</p>
+</section>
+<section id="how-these-files-fit-into-the-project-workflow-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="how-these-files-fit-into-the-project-workflow-1">How These Files Fit into the Project Workflow</h3>
+<p>The MSI dataset are used to:</p>
+<ol type="1">
+<li>Identify MSI-designated institutions within Scopus, OpenAlex, and Dimensions.</li>
+<li>Compare research output across MSI and non-MSI institutions.</li>
+<li>Analyze dataset usage at institutions serving underrepresented student populations.</li>
+</ol>
+<p>By integrating MSI eligibility data with publication datasets, we can assess whether MSI institutions are underrepresented in academic research databases.</p>
+</section>
+<section id="data-sources" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="data-sources">Data Sources</h3>
+<p>The MSI dataset combines data from multiple sources:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Years</strong></th>
+<th><strong>Source</strong></th>
+<th><strong>Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>2017-2021</strong></td>
+<td>MSI Data Project (Nguyen et al., 2023)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+<td><a href="https://nyu.app.box.com/s/kf6ihe5wcm8gc4pkgcbvv5dfzjy2w6rm">Link</a></td>
+</tr>
+<tr class="even">
+<td><strong>2022</strong></td>
+<td>Rutgers CMSI<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
+<td><a href="https://cmsi.gse.rutgers.edu/sites/default/files/2022%20MSI%20List.pdf">PDF</a></td>
+</tr>
+<tr class="odd">
+<td><strong>2023</strong></td>
+<td>Rutgers CMSI<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></td>
+<td><a href="https://cmsi.gse.rutgers.edu/sites/default/files/2023%20CMSI%20MSI%20List.pdf">PDF</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="file-organization-in-github-repository-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="file-organization-in-github-repository-1">File Organization in GitHub Repository</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Category</strong></th>
+<th><strong>File Path &amp; Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Processed MSI Dataset</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/MSI"><code>compare_scopus_openalex/resources/MSI/MSI.csv</code></a></td>
+</tr>
+<tr class="even">
+<td><strong>Raw MSI Data</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/MSI/raw_data_MSI"><code>compare_scopus_openalex/resources/raw_data_MSI/</code></a></td>
+</tr>
+<tr class="odd">
+<td><strong>Data Processing Code</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/MSIdata.rmd</code></a></td>
+</tr>
+<tr class="even">
+<td><strong>Data Documentation</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/MSI_Data.md</code></a></td>
+</tr>
+<tr class="odd">
+<td><strong>Python Script for PDF Processing</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation/MSI_after2020.py"><code>compare_scopus_openalex/resources/documentation/MSI_after2020.py</code></a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="file-descriptions-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="file-descriptions-1">File Descriptions</h3>
+<section id="msi-data-msi_2017-2021.csv" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="msi-data-msi_2017-2021.csv">2017-2021 MSI Data (<code>MSI_2017-2021.csv</code>)</h4>
+<ul>
+<li><strong>Description</strong>: Contains MSI eligibility and designation data for institutions from 2017 to 2021.</li>
+<li><strong>Contents</strong>:
+<ul>
+<li><code>UNITID</code>: Unique institution identifier</li>
+<li><code>elig_atleastone</code>: Institution is eligible or potentially eligible for at least one MSI program</li>
+<li><code>year</code>: Year of MSI designation</li>
+</ul></li>
+</ul>
+</section>
+<section id="msi-data-msi_2022-2023.csv" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="msi-data-msi_2022-2023.csv">2022-2023 MSI Data (<code>MSI_2022-2023.csv</code>)</h4>
+<ul>
+<li><strong>Description</strong>: MSI eligibility data for 2022 and 2023, extracted from Rutgers CMSI PDFs.</li>
+<li><strong>Contents</strong>:
+<ul>
+<li><code>UNITID</code>: Unique institution identifier</li>
+<li><code>elig_atleastone_after21</code>: Institution eligible in the respective year.</li>
+<li><code>year</code>: Year of MSI designation</li>
+</ul></li>
+<li><strong>Processing Notes</strong>:
+<ul>
+<li>Python was used to convert PDFs to Excel (<code>MSI_after2020.py</code>).</li>
+<li>Data was cleaned and standardized to match the 2017-2021 format.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="data-processing-and-standardization-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="data-processing-and-standardization-1">Data Processing and Standardization</h3>
+<ul>
+<li><strong>Variable Name Changes and Formatting:</strong>
+<ul>
+<li><code>year</code> was added to track MSI status over time.</li>
+<li><code>UNITID</code> is the primary key to merge MSI and IPEDS datasets.</li>
+</ul></li>
+<li><strong>Handling Missing Data and Filters:</strong>
+<ul>
+<li>Institutions without <code>UNITID</code> were excluded.</li>
+<li>Non-relevant columns were removed.</li>
+</ul></li>
+<li><strong>Merging Strategy:</strong>
+<ul>
+<li>The 2017-2021 MSI data was directly compatible with IPEDS.</li>
+<li>The 2022-2023 MSI data required additional formatting before merging.</li>
+<li>The final MSI dataset is merged with IPEDS using <code>UNITID</code> and <code>year</code>.</li>
+</ul></li>
+</ul>
+</section>
+<section id="how-the-files-are-related-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="how-the-files-are-related-1">How the Files are Related</h3>
+<p>The MSI dataset is integrated with IPEDS data using the <code>UNITID</code> and <code>year</code> variables. This allows for:</p>
+<ul>
+<li>Tracking institutional MSI status over time.</li>
+<li>Comparing MSI and non-MSI institutions within Scopus, OpenAlex, and Dimensions.</li>
+<li>Assessing dataset usage patterns across different institution types.</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The 2017-2021 MSI data was sourced from the Minority Serving Institutions (MSI) Data Project by Nguyen et al.&nbsp;(2023), which merges the U.S. Department of Education’s MSI eligibility metrics (2017-2021) with IPEDS data.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>The 2022-2023 MSI data was obtained from the Rutgers Graduate School of Education, which maintains annual MSI eligibility lists.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The 2022-2023 MSI data was obtained from the Rutgers Graduate School of Education, which maintains annual MSI eligibility lists.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

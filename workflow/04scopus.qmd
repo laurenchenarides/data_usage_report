@@ -25,11 +25,11 @@ After assembling the publication-level dataset, the final step in preparing the 
 
 ### Author Disambiguation {.unnumbered}
 
-### Institution Disambiguation {.unnumbered}
+**COMING SOON**
 
-#### IPEDS *Ming* {.unnumbered}
+### Institution Disambiguation{.unnumbered}
 
-#### MSI Data *Ming* {.unnumbered}
+**COMING SOON**
 
 <p style="text-align: center;">
   <a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>

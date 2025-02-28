@@ -1,7 +1,8 @@
 ---
 title: "Appendices"
 ---
-# Metadata File Description
+
+# Citation Database Metadata Files 
 
 ::: {.panel-tabset}
 
@@ -13,7 +14,12 @@ title: "Appendices"
 
 :::
 
+# Institutional Metadata Files 
 
-By following the steps outlined above, you can effectively navigate the dataset to extract publications related to specific datasets and identified by particular models. This structured approach allows for targeted analysis and comparison with data from sources like OpenAlex.
+::: {.panel-tabset}
 
-Keep in mind that the OpenAlex data now may associate a single publication with multiple datasets, and due to the direct application of aliases and flag terms (with no optimizations), certain datasets like the NASS Census of Agriculture might show fewer publications than before.
+{{< include appendices/app_ipeds.qmd >}}
+
+{{< include appendices/app_msi.qmd >}}
+
+:::

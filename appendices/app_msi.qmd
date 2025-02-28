@@ -1,0 +1,83 @@
+## MSI
+
+### Overview {.unnumbered}
+
+The **Minority-Serving Institutions (MSI) Data** captures institutions eligible for federal MSI programs, as determined by the U.S. Department of Education and other sources. In this project, MSI data is used to analyze institutional characteristics in relation to research publications identified in Scopus, OpenAlex, and Dimensions.
+
+This dataset provides information on institutions *eligible or potentially eligible* for at least one MSI designation and includes data from 2017 to 2023. The MSI dataset integrates information from multiple sources and is merged with IPEDS data to track research output across different institution types.
+
+### How These Files Fit into the Project Workflow {.unnumbered}
+
+The MSI dataset are used to:
+
+1. Identify MSI-designated institutions within Scopus, OpenAlex, and Dimensions.
+2. Compare research output across MSI and non-MSI institutions.
+3. Analyze dataset usage at institutions serving underrepresented student populations.
+
+By integrating MSI eligibility data with publication datasets, we can assess whether MSI institutions are underrepresented in academic research databases.
+
+### File Organization in GitHub Repository {.unnumbered}
+
+| **Category**                | **File Path & Link** |
+|-----------------------------|----------------------|
+| **Processed MSI Dataset**   | [`compare_scopus_openalex/resources/MSI/MSI.csv`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/MSI) |
+| **Raw MSI Data**            | [`compare_scopus_openalex/resources/raw_data_MSI/`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/MSI/raw_data_MSI) |
+| **Data Processing Code**    | [`compare_scopus_openalex/resources/documentation/MSIdata.rmd`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation) |
+| **Data Documentation**      | [`compare_scopus_openalex/resources/documentation/MSI_Data.md`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation) |
+| **Python Script for PDF Processing** | [`compare_scopus_openalex/resources/documentation/MSI_after2020.py`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation/MSI_after2020.py) |
+
+### Data Sources {.unnumbered}
+
+The MSI dataset combines data from multiple sources:
+
+| **Years**       | **Source** | **Link** |
+|----------------|-----------|----------|
+| **2017-2021**  | MSI Data Project (Nguyen et al., 2023)^[The 2017-2021 MSI data was sourced from the Minority Serving Institutions (MSI) Data Project by Nguyen et al. (2023), which merges the U.S. Department of Education's MSI eligibility metrics (2017-2021) with IPEDS data.] | [Link](https://nyu.app.box.com/s/kf6ihe5wcm8gc4pkgcbvv5dfzjy2w6rm) |
+| **2022**       | Rutgers CMSI^[The 2022-2023 MSI data was obtained from the Rutgers Graduate School of Education, which maintains annual MSI eligibility lists.] | [PDF](https://cmsi.gse.rutgers.edu/sites/default/files/2022%20MSI%20List.pdf) |
+| **2023**       | Rutgers CMSI^[The 2022-2023 MSI data was obtained from the Rutgers Graduate School of Education, which maintains annual MSI eligibility lists.] | [PDF](https://cmsi.gse.rutgers.edu/sites/default/files/2023%20CMSI%20MSI%20List.pdf) |
+
+
+### File Descriptions {.unnumbered}
+
+#### 2017-2021 MSI Data (`MSI_2017-2021.csv`) {.unnumbered}
+- **Description**: Contains MSI eligibility and designation data for institutions from 2017 to 2021.
+- **Contents**:
+  - `UNITID`: Unique institution identifier
+  - `elig_atleastone`: Institution is eligible or potentially eligible for at least one MSI program
+  - `year`: Year of MSI designation
+
+#### 2022-2023 MSI Data (`MSI_2022-2023.csv`) {.unnumbered}
+- **Description**: MSI eligibility data for 2022 and 2023, extracted from Rutgers CMSI PDFs.
+- **Contents**:
+  - `UNITID`: Unique institution identifier
+  - `elig_atleastone_after21`: Institution eligible in the respective year.
+  - `year`: Year of MSI designation
+
+- **Processing Notes**:
+  - Python was used to convert PDFs to Excel (`MSI_after2020.py`).
+  - Data was cleaned and standardized to match the 2017-2021 format.
+
+### Data Processing and Standardization {.unnumbered}
+
+- **Variable Name Changes and Formatting:**
+  - `year` was added to track MSI status over time.
+  - `UNITID` is the primary key to merge MSI and IPEDS datasets.
+
+- **Handling Missing Data and Filters:**
+  - Institutions without `UNITID` were excluded.
+  - Non-relevant columns were removed.
+
+- **Merging Strategy:**
+  - The 2017-2021 MSI data was directly compatible with IPEDS.
+  - The 2022-2023 MSI data required additional formatting before merging.
+  - The final MSI dataset is merged with IPEDS using `UNITID` and `year`.
+
+### How to Merge with IPEDS Data {.unnumbered}
+
+The MSI dataset is integrated with IPEDS data using the `UNITID` and `year` variables. This allows for:
+
+- Tracking institutional MSI status over time.
+- Comparing MSI and non-MSI institutions within Scopus, OpenAlex, and Dimensions.
+- Assessing dataset usage patterns across different institution types.
+
+

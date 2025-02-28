@@ -1,0 +1,106 @@
+## IPEDS
+
+### Overview {.unnumbered}
+
+The **Integrated Postsecondary Education Data System (IPEDS)** is a national dataset maintained by the National Center for Education Statistics (NCES). It collects data from all U.S. institutions participating in federal financial aid programs. In this project, IPEDS data is used to analyze institutional characteristics (e.g., size, classification, location, and financial indicators) in relation to research publications identified in Scopus, OpenAlex, and Dimensions.
+
+The raw IPEDS data was obtained from the IPEDS website: [IPEDS Data Center](https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx?year=2023&surveyNumber=-1&sid=f98b3f39-0633-4dd3-bbc6-ec4e29b9098b&rtid=7).
+
+### How These Files Fit into the Project Workflow {.unnumbered}
+
+The IPEDS dataset provides institutional characteristics that are used in:
+
+1. Disambiguating institution names in citation databases (Scopus, OpenAlex, Dimensions)
+2. Comparing research output across different types of institutions
+3. Assessing dataset usage by institution type (e.g., HBCUs, land-grant universities, private vs. public institutions)
+
+By integrating IPEDS institutional data with the publication datasets generated from each citation database, we can evaluate how research output varies across institution types and funding levels.
+
+### File Organization in GitHub Repository {.unnumbered}
+
+| **Category**                | **File Path & Link** |
+|-----------------------------|----------------------|
+| **Processed IPEDS Dataset** | [`compare_scopus_openalex/resources/IPEDS/IPEDS.csv`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS) |
+| **Raw IPEDS Data**          | [`compare_scopus_openalex/resources/raw_data_IPEDS/`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS/raw_data_IPEDS) |
+| **Data Processing Code**    | [`compare_scopus_openalex/resources/documentation/IPEDSdata.rmd`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation) |
+| **Data Documentation**      | [`compare_scopus_openalex/resources/documentation/IPEDS_Data.md`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation) |
+
+### Data Sources and Variables {.unnumbered}
+
+The IPEDS dataset integrates multiple tables across different survey years (2017-2023) to capture important institutional characteristics.
+
+| **Variable**               | **IPEDS Table (Years)**        | **Description** |
+|----------------------------|--------------------------------|----------------|
+| **Institution Size**       | `EFFY2017 - EFFY2023`         | Total student enrollment by level (undergrad/graduate) |
+| **Institution Location**   | `HD2017 - HD2023`             | Institution name, address, city, state, ZIP |
+| **HBCU Status**           | `HD2017 - HD2023`             | Indicator if institution is a Historically Black College or University (HBCU) |
+| **Carnegie Classification** | `HD2017 - HD2023`             | Institution type (e.g., public/private, 2-year/4-year) |
+| **Endowment Size**         | `F1A2017 - F1A2023`           | Value of endowment assets at the start and end of the fiscal year |
+| **Library Budget**         | `AL2017 - AL2023`             | Total library expenditures (salaries, materials, operations) |
+
+
+### File Descriptions {.unnumbered}
+
+#### Institution Size (`EFFY files`) {.unnumbered} 
+- **Description**: Contains 12-month unduplicated headcount enrollment by race/ethnicicy, gender, and student level.
+- **Contents**:
+  - `UNITID`: Unique institution identifier
+  - `EFFYLEV`: Level of study (1 = All students, 2 = Undergrad, 4 = Graduate)
+  - `EFYTOTLT`: Total students enrolled during the 12-month period
+  - `year`: Manually added variable to track enrollment over time
+- **Processing Notes**:
+  - Only includes **EFFYLEV = 1** (All students level).
+  - Year variable was manually added since it was not originally present.
+
+#### Institution Characteristics (`HD files`) {.unnumbered}
+- **Description**: Provides details on institution location, classification, and designation (e.g., HBCU, land-grant).
+- **Contents**:
+  - `UNITID`: Unique institution identifier
+  - `INSTNM`: Institution name
+  - `ADDR, CITY, STABBR, ZIP`: Location information
+  - `HBCU`: 1 = HBCU, 0 = Non-HBCU
+  - `CONTROL`: 1 = Public, 2 = Private Nonprofit, 3 = Private For-Profit
+  - `ICLEVEL`: 1 = 4-year, 2 = 2-year, 3 = Less than 2-year
+  - `LANDGRNT`: 1 = Land Grant, 2 = Not Land Grant
+  - `year`: Added variable for time tracking
+
+#### Endowment Data (`F1A files`) {.unnumbered}
+- **Description**: Reports institutional endowment assets of public universities at the beginning and end of the fiscal year.
+- **Contents**:
+  - `UNITID`: Unique institution identifier
+  - `F1H01`: Endowment assets at start of fiscal year
+  - `F1H02`: Endowment assets at end of fiscal year
+  - `year`: Fiscal year
+
+#### Library Expenditures (`AL files`) {.unnumbered}
+- **Description**: Tracks total library budgets, including salaries, benefits, and operations.
+- **Contents**:
+  - `UNITID`: Unique institution identifier
+  - `LEXPTOT`: Total library expenditures
+  - `year`: Reporting year
+
+### Data Processing and Standardization {.unnumbered}
+
+- **Variable Name Changes and Formatting:**
+  - `UNITID` and `year` serve as the primary keys to merge datasets for analysis.
+  - `year` was added to datasets that lacked it.
+
+- **Handling Missing Data and Filters:**
+  - Non-relevant columns were removed.
+  - Datasets were filtered to retain only institutions with complete enrollment and classification data.
+
+- **Merging Strategy:**
+  - Datasets can be joined using `UNITID` and `year` as unique identifiers.
+  - Institutions missing `UNITID` were excluded.
+
+### How to Merge with MSI Data {.unnumbered}
+
+The IPEDS dataset is integrated with the MSI dataset using the `UNITID` and `year` variables. This allows for:
+
+- Identifying MSI institutions within IPEDS to analyze institutional characteristics.
+- Comparing institutional characteristics of MSI and non-MSI institutions, such as enrollment size, Carnegie classification, and financial indicators.
+- Assessing research output and dataset usage by institution type across Scopus, OpenAlex, and Dimensions.
+- Examining trends over time in MSI status and institutional characteristics.
+
+
+

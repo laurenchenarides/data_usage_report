@@ -255,11 +255,11 @@ This seed corpus approach was only applied to Scopus; for OpenAlex and Dimension
 For **Scopus**, a seed corpus was created to establish a targeted search space, balancing recall (capturing relevant mentions) and precision (minimizing false positives). This process included a restricted search strategy, using both reference lists and full-text searches, as well as machine learning-assisted review and manual refinements to resolve ambiguities, consolidate duplicate aliases, and incorporate missing terms. The refined seed corpus then informed the data identification step.
 
 ::: panel-tabset
-{{< include workflow/scopus01.qmd >}}
+{{< include workflow/02scopus.qmd >}}
 
-{{< include workflow/openalex01.qmd >}}
+{{< include workflow/02openalex.qmd >}}
 
-{{< include workflow/dimensions01.qmd >}}
+{{< include workflow/02dimensions.qmd >}}
 :::
 
 ## Step 3: Create a Publication Dataset for Dataset Mentions {#sec-data-idn}
@@ -274,36 +274,34 @@ To generate this dataset, the process requires:
 Search routines, described below, guide this step, as dataset mentions are often inconsistent across publications—appearing in titles, abstracts, full text, or reference lists. Scopus uses a structured seed corpus to refine searches, while OpenAlex and Dimensions rely on direct queries across their full publication records. The outputs of this step are three publication-level datasets, one for each citation database, which will be further analyzed in subsequent steps.
 
 ::: panel-tabset
-{{< include workflow/scopus02.qmd >}}
+{{< include workflow/03scopus.qmd >}}
 
-{{< include workflow/openalex02.qmd >}}
+{{< include workflow/03openalex.qmd >}}
 
-{{< include workflow/dimensions02.qmd >}}
+{{< include workflow/03dimensions.qmd >}}
 :::
 
 ## Step 4: Disambiguate Publication Results {#sec-disambiguation}
-
-According to @sec-aims, one of the goals of this analysis is to evaluate the differences in publication coverage across citation databases. 
 
 To compare publication coverage across citation databases, we must first identify all journals that contain publications using each dataset in Scopus, OpenAlex, and Dimensions. @tbl-usda-datasets displays a list of the datasets for which we evaluate coverage. 
 
 **The goal of this step is to standardize and resolve inconsistencies in publication records by disambiguating journal names, author affiliations, and institutions across the three databases.**
 
-### Disambiguation Procedure
+### Disambiguation Procedure  
 
-We create subsets of the publication dataset generated in Step 3, filtering by dataset mention. For example, if a publication references Ag Census, it is included in the Ag Census sub-dataset; otherwise, it is excluded. This process allows us to analyze dataset-specific publication patterns across Scopus, OpenAlex, and Dimensions.
+We subset the publication dataset from Step 3 by filtering for dataset mentions. For example, if a publication references Ag Census, it is included in the Ag Census sub-dataset; otherwise, it is excluded. This process identifies dataset-specific publication patterns in Scopus, OpenAlex, and Dimensions.
 
-Our analysis follows a hierarchical approach to understand how USDA data assets appear in these citation databases. 
+Our approach follows a hierarchical approach to understand how USDA data assets appear in these citation databases.  
 
-1. **Journal Level** – We identify which journals publish research articles using USDA datasets to establish publication patterns. This step inherently involves looking within a journal’s publications to determine dataset mentions at the journal level—meaning that a journal is included if at least one of its publications references the dataset, but this does not indicate the overall prevalence of dataset usage within that journal.
+1. **Journal Level** – Identifies journals publishing research using USDA datasets. A journal is included if at least one of its publications references the dataset, but this does not indicate overall dataset prevalence within that journal.
 
-2. **Publication Level** – We examine individual publications within these journals to understand the breadth of articles mentioning the dataset and how researchers use and cite USDA datasets in their work.
+2. **Publication Level** – Examines individual publications within these journals to assess how often and in what context USDA datasets appear.
 
-3. **Author Level** – We analyze the authors of these publications, tracking their institutional affiliations and research networks (e.g., coauthors). This provides another way to assess dataset reach, focusing on who is using the data rather than just where it appears.
+3. **Author Level** – Tracks authors of these publications, analyzing institutional affiliations and research networks to understand dataset reach.
 
-4. **Institution Level** – We map dataset usage across institutions to understand where research using USDA data is concentrated geographically and across different types of research organizations. Like the author-level analysis, this offers an alternative lens on dataset dissemination.
+4. **Institution Level** – Maps dataset usage across institutions to identify geographic and organizational research patterns.
 
-This structured approach ensures that dataset mentions are analyzed consistently across databases, allowing for meaningful comparisons of coverage and research impact.
+This structured approach standardizes dataset mention analysis across databases, allowing for direct comparisons of coverage and research impact.
 
 ### Case Study: Census of Agriculture
 
@@ -315,11 +313,11 @@ To illustrate the disambiguation process, we use the Census of Agriculture as a 
 ### Disambiguation by Citation Database {.unnumbered}
 
 ::: panel-tabset
-{{< include workflow/scopus03.qmd >}}
+{{< include workflow/04scopus.qmd >}}
 
-{{< include workflow/openalex03.qmd >}}
+{{< include workflow/04openalex.qmd >}}
 
-{{< include workflow/dimensions03.qmd >}}
+{{< include workflow/04dimensions.qmd >}}
 :::
 
 ### Results from Disambiguation {.unnumbered}
@@ -332,11 +330,11 @@ There are 4712 unique publications reported in Scopus and 1266 in OpenAlex. Thes
 
 
 ::: panel-tabset
-{{< include workflow/scopus03r.qmd >}}
+{{< include workflow/04scopus_r.qmd >}}
 
-{{< include workflow/openalex03r.qmd >}}
+{{< include workflow/04openalex_r.qmd >}}
 
-{{< include workflow/dimensions03r.qmd >}}
+{{< include workflow/04dimensions_r.qmd >}}
 :::
 :::
 
@@ -359,11 +357,11 @@ Then, we investigate discrepancies based on factors like missing identifiers, mi
 
 
 ::: panel-tabset
-{{< include workflow/scopus04.qmd >}}
+{{< include workflow/05scopus.qmd >}}
 
-{{< include workflow/openalex04.qmd >}}
+{{< include workflow/05openalex.qmd >}}
 
-{{< include workflow/dimensions04.qmd >}}
+{{< include workflow/05dimensions.qmd >}}
 :::
 
 ### Results from Database Comparison
@@ -371,11 +369,11 @@ Then, we investigate discrepancies based on factors like missing identifiers, mi
 *This section presents results after matching (which type varies – deterministic vs fuzzy)*
 
 ::: panel-tabset
-{{< include workflow/scopus04r.qmd >}}
+{{< include workflow/05scopus_r.qmd >}}
 
-{{< include workflow/openalex04r.qmd >}}
+{{< include workflow/05openalex_r.qmd >}}
 
-{{< include workflow/dimensions04r.qmd >}}
+{{< include workflow/05dimensions_r.qmd >}}
 :::
 
 :::
@@ -411,5 +409,9 @@ This report analyzes USDA dataset usage patterns across both platforms and recom
 Given the small percentage of MSI’s represented in our institutional analysis, it is evident that user engagement is central to increasing usage rates of the datasets, regardless of citation database.
 
 # Conclusion and Next Steps
+
+# Appendices
+
+All appendices referenced throughout the report are located on [this page](appendices.qmd).
 
 # References

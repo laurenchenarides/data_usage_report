@@ -17,11 +17,11 @@ To ensure consistency with Scopus, we clean and standardize the publication-leve
 
 ### Author Disambiguation {.unnumbered}
 
+**COMING SOON**
+
 ### Institution Disambiguation{.unnumbered}
 
-#### IPEDS *Ming* {.unnumbered}
-
-#### MSI Data *Ming** {.unnumbered}
+**COMING SOON**
 
 <p style="text-align: center;">
   <a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
