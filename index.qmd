@@ -107,40 +107,35 @@ The methods described in this report can be applied to other citation databases 
 
 ## Dimensions {#sec-dimensions}
 
+---
+
 # Project Workflow {#sec-workflow-overview}
 
 The project workflow outlines the steps involved to evaluate how different citation databases track USDA dataset mentions in research papers. In searching for dataset mentions, the goal is to identify a set of publications that can be compared across the citation database test cases.
 
-![](workflow/workflow.jpg)
+![](workflow/workflowv2.jpg)
 
-The process of deriving the list of publications from a citation database consists of five steps:
+The process of deriving the list of publications from a citation database consists of four steps. Each step produces an *output* which is used as the *input* for the following step:
 
-**1. Define Data Assets and Aliases** (@sec-data)
+**1. Define Scope of Data Assets to Be Searched** (@sec-data)
 
 -   Identify USDA datasets that will be searched for and tracked.
 -   Collect official dataset names along with common abbreviations, acronyms, and alternative references used.
 
-**Result:** A structured list of dataset names and aliases to be used for search strategies.
+**Result:** A structured list of dataset names and aliases.
 
-**2. Create a Seed Corpus** (@sec-seed-corpus)
+**2. Extract Dataset Mentions from Publications** (@sec-data-idn)
 
--   Collect an initial set of publications.
--   Analyze how datasets are referenced.
--   Determine how well the dataset name variations (from Step 1) are retreived from the publications.
--   Adjust searches to improve accuracy.
-
-**Result:** A set of seed publications to inform dataset identification and search procedures.
-
-**3. Create a Publication Dataset for Dataset Mentions** (@sec-data-idn)
-
--   Extract dataset mentions using various search strategies:
+-   Conduct searches across citation databases using multiple methods:
     (1)   Full-Text (String) Search: Scan entire articles for relevant dataset names.
     (2)   Reference Search: Identify dataset citations within publication references.
     (3)   Machine Learning Models: Apply Kaggle competition models trained to detect dataset mentions.
     
-**Result:** Different search routines yield different sets of publication results.
+**Note:** In cases where full-text search is not supported by the citation database API (e.g., Scopus), an initial seed corpus of publications was collected separately to train machine learning models. Refer to @sec-seed-corpus for more details.
 
-**4. Disambiguate Publication Results** (@sec-disambiguation)
+**Result:** Publication dataset for each data asset across each citation database.
+
+**3. Pre-Process and Clean Publication Datasets** (@sec-disambiguation)
 
 -   Pre-process and clean publication metadata generated from each citation database.
 -   Standardize journal, institution, and author names.
@@ -148,19 +143,26 @@ The process of deriving the list of publications from a citation database consis
 
 **Result:** Cleaned publication metadata, removed of duplicates, inconsistencies, and missing information.
 
-**5. Compare across Citation Databases** (@sec-matching)
+**4. Compare across Citation Databases** (@sec-matching)
 
 -   Compare dataset coverage across Scopus, OpenAlex, and Dimensions.
 -   Apply fuzzy matching techniques to identify overlapping and unique dataset mentions.
 -   Analyze differences in journal coverage, citation patterns, and author affiliations.
 
-**Result:** A set of statistics that can be used to evaluate dataset tracking accuracy.
+**Result:** A set of statistics used to evaluate dataset tracking accuracy.
 
-## Step 1: Define Data Assets and Aliases {#sec-data}
+---
 
-The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These data assets are widely used in agricultural economics and food systems research. **The goal of this step is to compile a structured list of dataset names and their commonly used variations.**
+## Define Scope of Data Assets to Be Searched {#sec-data}
 
-### National Agricultural Statistics Service (NASS) Data Assets
+<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
+<strong>The goal of this step is to compile a structured list of dataset names and their commonly used variations.</strong> </div> 
+
+::: {.callout-note}
+The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These data assets are widely used in agricultural economics and food systems research. 
+:::
+
+### National Agricultural Statistics Service (NASS) Data Assets {.unnumbered}
 
 In late July 2023, an initial set of 21 reports were received containing a report name and a URL link to database curated by Cornell University. These reports are part of the USDA's efforts to track data usage across various research applications. However, the names of these reports were highly generic, making it difficult to precisely identify them in citation databases. Examples include reports titled "Agricultural Prices" and "Farm Labor," which lack specificity when compared to more structured dataset identifiers.
 
@@ -180,7 +182,7 @@ The final dataset classification involved:
 
 This standardization process improved the efficiency of identifying NASS datasets across publications indexed by citation databases such as Scopus, OpenAlex, and Dimensions.
 
-### Economic Research Service (ERS) Data Assets
+### Economic Research Service (ERS) Data Assets {.unnumbered}
 
 The process of identifying ERS data assets occurred in two phases: (1) an initial dataset compilation, and (2) a refinement process incorporating feedback from a team of agricultural economists at Colorado State University (CSU). This process was meant to yield a list of data assets was both comprehensive and relevant to the research community tracking USDA dataset usage.
 
@@ -220,7 +222,7 @@ Unlike NASS data assets, which had ISSNs and DOIs, ERS datasets were primarily l
 
 Through this two-phase process, the list of ERS data assets evolved from an initial broad set of records into a refined, structured collection of datasets that could be effectively tracked across citation databases.
 
-### Final List of USDA Data Assets
+### Final List of USDA Data Assets {.unnumbered}
 
 The data assets represent those most frequently used in agricultural economics research, spanning topics from farm management to food security. The final set of data assets, their producing agencies, and descriptions are presented in @tbl-usda-datasets.
 
@@ -246,25 +248,10 @@ The data assets represent those most frequently used in agricultural economics r
 
 To provide a comprehensive reference for dataset tracking, the following appendix includes a detailed list of data assets and their corresponding aliases, collectively referred to as dyads. Each dyad represents a dataset-name and alias pair used in citation database searches, allowing for more precise identification of dataset mentions in research publications. These aliases include acronyms, alternate spellings, dataset variations, and associated URLs, ensuring broad coverage across different citation practices. The dyad list serves as the foundation for dataset extraction and disambiguation across Scopus, OpenAlex, and Dimensions. A complete reference of these dataset aliases is included in [Appendix XX](appendices/app_dyads.qmd).
 
-## Step 2: Create a Seed Corpus {#sec-seed-corpus}
+## Extract Dataset Mentions to Build a Publication Dataset {#sec-data-idn}
 
-After defining the data assets and aliases in Step 1 (@sec-data), the next step is to identify where these datasets are referenced in research publications. **The goal of this step is to establish a targeted search space by identifying publications most likely to reference the defined datasets.**
-
-This seed corpus approach was only applied to Scopus; for OpenAlex and Dimensions, this procedure was not conducted, and dataset identification was instead performed through string searches across their entire publication records, described in @sec-data-idn.
-
-For **Scopus**, a seed corpus was created to establish a targeted search space, balancing recall (capturing relevant mentions) and precision (minimizing false positives). This process included a restricted search strategy, using both reference lists and full-text searches, as well as machine learning-assisted review and manual refinements to resolve ambiguities, consolidate duplicate aliases, and incorporate missing terms. The refined seed corpus then informed the data identification step.
-
-::: panel-tabset
-{{< include workflow/02scopus.qmd >}}
-
-{{< include workflow/02openalex.qmd >}}
-
-{{< include workflow/02dimensions.qmd >}}
-:::
-
-## Step 3: Create a Publication Dataset for Dataset Mentions {#sec-data-idn}
-
-**The goal of this step is to build a dataset of publications that reference the dataset name aliases for the USDA data assets (@tbl-usda-datasets) across Scopus, OpenAlex, and Dimensions.** This dataset serves as the foundation for comparing publication coverage across citation databases.
+<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
+<strong>The goal of this step is to build a dataset of publications that reference the dataset name aliases for the USDA data assets (@tbl-usda-datasets) across Scopus, OpenAlex, and Dimensions.</strong> </div> 
 
 To generate this dataset, the process requires:
 
@@ -281,15 +268,44 @@ Search routines, described below, guide this step, as dataset mentions are often
 {{< include workflow/03dimensions.qmd >}}
 :::
 
-## Step 4: Disambiguate Publication Results {#sec-disambiguation}
+## Scopus-Specific: Create a Seed Corpus {#sec-seed-corpus .unnumbered}
 
-To compare publication coverage across citation databases, we must first identify all journals that contain publications using each dataset in Scopus, OpenAlex, and Dimensions. @tbl-usda-datasets displays a list of the datasets for which we evaluate coverage. 
+After defining the data assets and aliases in Step 1 (@sec-data), the next step is to identify where these datasets are referenced in research publications. **Unlike OpenAlex and Dimensions, which allow for direct full-text searches, Scopus requires a structured seed corpus to establish a more targeted search space.**
 
-**The goal of this step is to standardize and resolve inconsistencies in publication records by disambiguating journal names, author affiliations, and institutions across the three databases.**
+For **Scopus**, this seed corpus approach was necessary to balance recall (capturing relevant mentions) and precision (minimizing false positives). The process involved:
 
-### Disambiguation Procedure  
+- Restricted search strategies using reference lists and available full-text searches
+- Machine learning-assisted review to refine dataset mentions
+- Manual refinements to resolve ambiguities, consolidate duplicate aliases, and incorporate missing terms.
 
-We subset the publication dataset from Step 3 by filtering for dataset mentions. For example, if a publication references Ag Census, it is included in the Ag Census sub-dataset; otherwise, it is excluded. This process identifies dataset-specific publication patterns in Scopus, OpenAlex, and Dimensions.
+This structured search space helped mitigate the constraints of Scopus's API and ensured that dataset mentions were captured as comprehensively as possible before proceeding to the data identification step (@sec-data-idn).
+
+::: panel-tabset
+{{< include workflow/02scopus.qmd >}}
+
+{{< include workflow/02openalex.qmd >}}
+
+{{< include workflow/02dimensions.qmd >}}
+:::
+
+
+<!-- -   Collect an initial set of publications. -->
+<!-- -   Analyze how datasets are referenced. -->
+<!-- -   Determine how well the dataset name variations (from Step 1) are retrieved from the publications. -->
+<!-- -   Adjust searches to improve accuracy. -->
+
+<!-- **Result:** A set of seed publications to inform dataset identification and search procedures. -->
+
+
+
+## Pre-Process and Clean Publication Datasets {#sec-disambiguation}
+
+<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
+<strong>The goal of this step is to standardize and resolve inconsistencies in publication records by disambiguating journal names, author affiliations, and institutions across the three databases.</strong> </div> 
+
+To compare publication coverage across citation databases, we first identify all journals that contain publications using each dataset in Scopus, OpenAlex, and Dimensions. @tbl-usda-datasets displays a list of the datasets for which we evaluate coverage. 
+
+We subset the publication dataset from Step 2 by filtering for dataset mentions. For example, if a publication references Ag Census, it is included in the Ag Census sub-dataset; otherwise, it is excluded. This process identifies dataset-specific publication patterns in Scopus, OpenAlex, and Dimensions.
 
 Our approach follows a hierarchical approach to understand how USDA data assets appear in these citation databases.  
 
@@ -307,10 +323,10 @@ This structured approach standardizes dataset mention analysis across databases,
 
 ::: {.custom-box}
 
-To illustrate the disambiguation process, we use the Census of Agriculture as a case study to systematically compare coverage, overlap, and differences between the three citation databases. The Census of Agriculture (also referred to as "Ag Census") is widely used in agricultural and economic research, making it an ideal dataset for assessing database differences.
+To illustrate the data cleaning and disambiguation process, we use the Census of Agriculture as a case study to systematically compare coverage, overlap, and differences between the three citation databases. The Census of Agriculture (also referred to as "Ag Census") is widely used in agricultural and economic research, making it an ideal dataset for assessing database differences.
 
 
-### Disambiguation by Citation Database {.unnumbered}
+### Pre-Processing Steps by Citation Database {.unnumbered}
 
 ::: panel-tabset
 {{< include workflow/04scopus.qmd >}}
@@ -320,7 +336,7 @@ To illustrate the disambiguation process, we use the Census of Agriculture as a 
 {{< include workflow/04dimensions.qmd >}}
 :::
 
-### Results from Disambiguation {.unnumbered}
+### Results from Data Cleaning {.unnumbered}
 
 *This section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset*
 
@@ -338,7 +354,10 @@ There are 4712 unique publications reported in Scopus and 1266 in OpenAlex. Thes
 :::
 :::
 
-## Step 5: Compare across Citation Databases {#sec-matching}
+## Compare Results across Citation Databases {#sec-matching}
+
+<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
+<strong>The goal of this step is to develop statistics that measure dataset tracking accuracy.</strong> </div> 
 
 ### Case Study: Census of Agriculture
 
