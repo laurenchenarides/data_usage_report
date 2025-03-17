@@ -1,5 +1,5 @@
 ---
-title: "Scopus"
+title: "Scopus Data Dictionary"
 date: last-modified  # Auto-updates based on Git commits
 format:
   html:
@@ -9,98 +9,95 @@ format:
     css: styles.css
 ---
 
-## Overview of Scopus Reference Files {#sec-app-scopus}
+## Overview of Scopus Reference Files {#sec-app-scopus .unnumbered}
 
 This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.
 
-Below is a detailed explanation of each CSV file and how they relate to one another:
+Below is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the [data schema.](app_crosswalk.qmd)
 
-### **publication.csv**
+## Data Dictionary {.unnumbered}
 
-- **Description**: This file contains information about publications, which are the central entities in this dataset.
-- **Key Columns**:
-  - `id`: Unique identifier for each publication.
-  - `title`: Title of the publication.
-  - `doi`: Digital Object Identifier of the publication.
-  - `year` and `month`: Publication date.
-  - Other metadata such as `citation_count`, `pub_type`, etc.
+::: {.callout-note title="Download Scopus Source Files"}
+You can download the source files from [this link](https://github.com/laurenchenarides/compare_scopus_openalex_report/tree/main/appendices/scopus_files){target="_blank"}.
+:::
 
-**Sample Data**:
+### `publication.csv` (Primary table) {.unnumbered}
+- **Description**: Central table with metadata about publications.
+- **Columns**:
+  - `id`: Unique publication identifier
+  - `title`: Publication title
+  - `doi`: Digital Object Identifier
+  - `year`, `month`: Date of publication
+  - `citation_count`, `pub_type`: Additional metadata
+
+### `dataset_alias.csv` {.unnumbered}
+- **Description**: Lists dataset aliases (alternate names).
+- **Columns**:
+  - `alias_id`: Unique alias identifier
+  - `parent_alias_id`: Primary alias identifier (if `alias_id = parent_alias_id`, it's primary)
+  - `alias`: Name of the alias
+
+- **How to use**:
+  - Identify primary aliases where `alias_id = parent_alias_id`
+  - Find all aliases by filtering on `parent_alias_id`
+
+### `dyad.csv` {.unnumbered}
+- **Description**: Links publications (`publication.csv`) and dataset aliases (`dataset_alias.csv`).
+- **Columns**:
+  - `id`: Unique identifier for each mention (dyad)
+  - `publication_id`: Foreign key to `publication.csv`
+  - `alias_id`: Foreign key to `dataset_alias.csv`
+  - `mention_candidate`: Mention text from publication
+
+### `model.csv` {.unnumbered}
+- **Description**: Lists methods/models for identifying dataset mentions.
+- **Columns**:
+  - `id`: Unique model identifier
+  - `name`: Name of the identification model
+
+### `dyad_model.csv` {.unnumbered}
+- **Description**: Connects dyads and models used to identify them.
+- **Columns**:
+  - `dyad_id`: Foreign key to `dyad.csv`
+  - `model_id`: Foreign key to `model.csv`
+  - `score`: Confidence or relevance score
+
+- **How to use**:
+  - Filter mentions by joining with `dyad.csv` on `dyad_id` and filtering by `model_id`
+
+## Sample Data {.unnumbered}
+
+::: {.panel-tabset}
+
+### `publication.csv`
 
 | id     | title                                                                | doi                      | year | month |
 |--------|----------------------------------------------------------------------|--------------------------|------|-------|
 | 321613 | New estimates for CRNA vacancies                                     |                          | 2009 | 4     |
 | 321614 | Crossing county lines: The impact of crash location and driver's...  | 10.1016/j.aap.2006...    | 2006 | 7     |
 
-### **dataset_alias.csv**
-
-- **Description**: Contains all the aliases (alternative names) of datasets. This helps in identifying datasets that might be referred to by different names in publications.
-- **Key Columns**:
-  - `alias_id`: Unique identifier for each alias.
-  - `parent_alias_id`: Identifies the main alias for a dataset. If `parent_alias_id` equals `alias_id`, it is the primary alias.
-  - `alias`: The alias name of the dataset.
-
-**How to Use**:
-
-- To find the main alias of a dataset, look for rows where `alias_id` equals `parent_alias_id`.
-- To find all aliases of a dataset, filter by `parent_alias_id` corresponding to the main alias.
-
-**Sample Data**:
+### `dataset_alias.csv`
 
 | id   | alias_id | parent_alias_id | alias                                              |
 |------|----------|-----------------|----------------------------------------------------|
 | 1676 | 87       | 89              | Census of Agriculture                              |
 | 1673 | 12       | 282             | ARMS Farm Financial and Crop Production Practices  |
 
-### **dyad.csv**
-
-- **Description**: Represents the mentions of dataset aliases found within publications. Acts as a linking table between `publication.csv` and `dataset_alias.csv`.
-- **Key Columns**:
-  - `id`: Unique identifier for each dyad (mention).
-  - `publication_id`: References the `id` in `publication.csv`.
-  - `alias_id`: References the `alias_id` in `dataset_alias.csv`.
-  - `mention_candidate`: The actual text mentioning the dataset in the publication.
-
-**Sample Data**:
+### `dyad.csv`
 
 | id   | publication_id | alias_id | mention_candidate          |
 |------|----------------|----------|----------------------------|
 | 2569 | 1211491        | 87       | census of agriculture      |
 | 2573 | 1199598        | 88       | usda census of agriculture |
 
-### **model.csv**
-
-- **Description**: Lists the different models or methods used to identify dataset mentions within publications.
-- **Key Columns**:
-  - `id`: Unique identifier for each model.
-  - `name`: Name of the model (e.g., `string_matching`, `refmatch`).
-
-**Relevant Models**:
-
-- **Model ID 1**: `string_matching`
-- **Model ID 5**: `refmatch`
-
-These are the models we are focusing on to compare with data extracted from OpenAlex, as no Kaggle model has been applied there.
-
-**Sample Data**:
+### `model.csv`
 
 | id | name            |
 |----|-----------------|
 | 1  | string_matching |
 | 5  | refmatch        |
 
-### **dyad_model.csv**
-
-- **Description**: Connects dyads with the models that identified them. Allows filtering dyads based on the models used.
-- **Key Columns**:
-  - `dyad_id`: References the `id` in `dyad.csv`.
-  - `model_id`: References the `id` in `model.csv`.
-
-**How to Use**:
-
-- To filter dyads (and thus publications) identified by specific models, perform an inner join with `dyad.csv` on `dyad_id` and filter by `model_id`.
-
-**Sample Data**:
+### `dyad_model.csv`
 
 | id   | dyad_id | model_id | score |
 |------|---------|----------|-------|
@@ -108,7 +105,9 @@ These are the models we are focusing on to compare with data extracted from Open
 | 4929 | 2569    | 4        | 1.0   |
 | 4930 | 2569    | 2        | 1.0   |
 
-### How to Extract Publications for a Specific Dataset
+:::
+
+## How to Extract Publications for a Specific Dataset {.unnumbered}
 
 To find all publications associated with a particular dataset, such as the **NASS Census of Agriculture**, follow these steps:
 
@@ -131,7 +130,7 @@ To find all publications associated with a particular dataset, such as the **NAS
 
    - Using the `publication_id`s from step 3, retrieve the corresponding records from `publication.csv`.
 
-### Filtering Publications by Specific Models
+## Filtering Publications by Specific Models {.unnumbered}
 
 Since we're interested in mentions identified by the **`string_matching`** and **`refmatch`** models (models with `id` 1 and 5), follow these steps:
 
@@ -149,62 +148,154 @@ Since we're interested in mentions identified by the **`string_matching`** and *
 
    - Continue with the steps in the previous section, but using the filtered dyads from step 2.
 
-### Practical Example
 
-**Objective**: Find all publications mentioning the **NASS Census of Agriculture** dataset using the `string_matching` and `refmatch` models.
+<!-- ### publication.csv -->
 
-**Steps**:
+<!-- - **Description**: This file contains information about publications, which are the central entities in this dataset. -->
+<!-- - **Key Columns**: -->
+<!--   - `id`: Unique identifier for each publication. -->
+<!--   - `title`: Title of the publication. -->
+<!--   - `doi`: Digital Object Identifier of the publication. -->
+<!--   - `year` and `month`: Publication date. -->
+<!--   - Other metadata such as `citation_count`, `pub_type`, etc. -->
 
-1. **Find Main Alias ID**:
+<!-- **Sample Data**: -->
 
-   - Main alias `alias_id` = **89**.
+<!-- | id     | title                                                                | doi                      | year | month | -->
+<!-- |--------|----------------------------------------------------------------------|--------------------------|------|-------| -->
+<!-- | 321613 | New estimates for CRNA vacancies                                     |                          | 2009 | 4     | -->
+<!-- | 321614 | Crossing county lines: The impact of crash location and driver's...  | 10.1016/j.aap.2006...    | 2006 | 7     | -->
 
-2. **Get All Aliases**:
+<!-- ### **dataset_alias.csv** -->
 
-   - From `dataset_alias.csv`, extract all `alias_id`s where `parent_alias_id` = **89**.
+<!-- - **Description**: Contains all the aliases (alternative names) of datasets. This helps in identifying datasets that might be referred to by different names in publications. -->
+<!-- - **Key Columns**: -->
+<!--   - `alias_id`: Unique identifier for each alias. -->
+<!--   - `parent_alias_id`: Identifies the main alias for a dataset. If `parent_alias_id` equals `alias_id`, it is the primary alias. -->
+<!--   - `alias`: The alias name of the dataset. -->
 
-3. **Filter Dyads by Models**:
+<!-- **How to Use**: -->
 
-   - From `dyad_model.csv`, get `dyad_id`s where `model_id` is **1** or **5**.
+<!-- - To find the main alias of a dataset, look for rows where `alias_id` equals `parent_alias_id`. -->
+<!-- - To find all aliases of a dataset, filter by `parent_alias_id` corresponding to the main alias. -->
 
-4. **Get Dyads for Dataset**:
+<!-- **Sample Data**: -->
 
-   - From `dyad.csv`, select rows where:
-     - `alias_id` is in the list from step 2, and
-     - `id` (dyad_id) is in the list from step 3.
+<!-- | id   | alias_id | parent_alias_id | alias                                              | -->
+<!-- |------|----------|-----------------|----------------------------------------------------| -->
+<!-- | 1676 | 87       | 89              | Census of Agriculture                              | -->
+<!-- | 1673 | 12       | 282             | ARMS Farm Financial and Crop Production Practices  | -->
 
-5. **Retrieve Publications**:
+<!-- ### **dyad.csv** -->
 
-   - Use `publication_id`s from the filtered dyads to get detailed information from `publication.csv`.
+<!-- - **Description**: Represents the mentions of dataset aliases found within publications. Acts as a linking table between `publication.csv` and `dataset_alias.csv`. -->
+<!-- - **Key Columns**: -->
+<!--   - `id`: Unique identifier for each dyad (mention). -->
+<!--   - `publication_id`: References the `id` in `publication.csv`. -->
+<!--   - `alias_id`: References the `alias_id` in `dataset_alias.csv`. -->
+<!--   - `mention_candidate`: The actual text mentioning the dataset in the publication. -->
 
-### Sample Data Illustration
+<!-- **Sample Data**: -->
 
-**From `dataset_alias.csv`**:
+<!-- | id   | publication_id | alias_id | mention_candidate          | -->
+<!-- |------|----------------|----------|----------------------------| -->
+<!-- | 2569 | 1211491        | 87       | census of agriculture      | -->
+<!-- | 2573 | 1199598        | 88       | usda census of agriculture | -->
 
-| alias_id | parent_alias_id | alias                     |
-|----------|-----------------|---------------------------|
-| 87       | 89              | Census of Agriculture     |
-| 88       | 89              | USDA Census of Agriculture |
+<!-- ### **model.csv** -->
 
-**From `dyad.csv`**:
+<!-- - **Description**: Lists the different models or methods used to identify dataset mentions within publications. -->
+<!-- - **Key Columns**: -->
+<!--   - `id`: Unique identifier for each model. -->
+<!--   - `name`: Name of the model (e.g., `string_matching`, `refmatch`). -->
 
-| id   | publication_id | alias_id | mention_candidate          |
-|------|----------------|----------|----------------------------|
-| 2569 | 1211491        | 87       | census of agriculture      |
-| 2573 | 1199598        | 88       | usda census of agriculture |
+<!-- **Relevant Models**: -->
 
-**From `dyad_model.csv`** (filtered for `model_id` 1 or 5):
+<!-- - **Model ID 1**: `string_matching` -->
+<!-- - **Model ID 5**: `refmatch` -->
 
-| dyad_id | model_id |
-|---------|----------|
-| 2569    | 1        |
-| 2573    | 5        |
+<!-- These are the models we are focusing on to compare with data extracted from OpenAlex, as no Kaggle model has been applied there. -->
 
-**Resulting Publications**:
+<!-- **Sample Data**: -->
 
-- Publications with `id` **1211491** and **1199598** from `publication.csv`.
+<!-- | id | name            | -->
+<!-- |----|-----------------| -->
+<!-- | 1  | string_matching | -->
+<!-- | 5  | refmatch        | -->
 
-### Conclusion
+<!-- ### **dyad_model.csv** -->
 
-By following the steps outlined above, you can effectively navigate the dataset to extract publications related to specific datasets and identified by particular models. This structured approach allows for targeted analysis and comparison with data from sources like OpenAlex.
+<!-- - **Description**: Connects dyads with the models that identified them. Allows filtering dyads based on the models used. -->
+<!-- - **Key Columns**: -->
+<!--   - `dyad_id`: References the `id` in `dyad.csv`. -->
+<!--   - `model_id`: References the `id` in `model.csv`. -->
+
+<!-- **How to Use**: -->
+
+<!-- - To filter dyads (and thus publications) identified by specific models, perform an inner join with `dyad.csv` on `dyad_id` and filter by `model_id`. -->
+
+<!-- **Sample Data**: -->
+
+<!-- | id   | dyad_id | model_id | score | -->
+<!-- |------|---------|----------|-------| -->
+<!-- | 4928 | 2569    | 1        | 2.0   | -->
+<!-- | 4929 | 2569    | 4        | 1.0   | -->
+<!-- | 4930 | 2569    | 2        | 1.0   | -->
+
+
+
+<!-- ### Practical Example -->
+
+<!-- **Objective**: Find all publications mentioning the **NASS Census of Agriculture** dataset using the `string_matching` and `refmatch` models. -->
+
+<!-- **Steps**: -->
+
+<!-- 1. **Find Main Alias ID**: -->
+
+<!--    - Main alias `alias_id` = **89**. -->
+
+<!-- 2. **Get All Aliases**: -->
+
+<!--    - From `dataset_alias.csv`, extract all `alias_id`s where `parent_alias_id` = **89**. -->
+
+<!-- 3. **Filter Dyads by Models**: -->
+
+<!--    - From `dyad_model.csv`, get `dyad_id`s where `model_id` is **1** or **5**. -->
+
+<!-- 4. **Get Dyads for Dataset**: -->
+
+<!--    - From `dyad.csv`, select rows where: -->
+<!--      - `alias_id` is in the list from step 2, and -->
+<!--      - `id` (dyad_id) is in the list from step 3. -->
+
+<!-- 5. **Retrieve Publications**: -->
+
+<!--    - Use `publication_id`s from the filtered dyads to get detailed information from `publication.csv`. -->
+
+<!-- ### Sample Data Illustration -->
+
+<!-- **From `dataset_alias.csv`**: -->
+
+<!-- | alias_id | parent_alias_id | alias                     | -->
+<!-- |----------|-----------------|---------------------------| -->
+<!-- | 87       | 89              | Census of Agriculture     | -->
+<!-- | 88       | 89              | USDA Census of Agriculture | -->
+
+<!-- **From `dyad.csv`**: -->
+
+<!-- | id   | publication_id | alias_id | mention_candidate          | -->
+<!-- |------|----------------|----------|----------------------------| -->
+<!-- | 2569 | 1211491        | 87       | census of agriculture      | -->
+<!-- | 2573 | 1199598        | 88       | usda census of agriculture | -->
+
+<!-- **From `dyad_model.csv`** (filtered for `model_id` 1 or 5): -->
+
+<!-- | dyad_id | model_id | -->
+<!-- |---------|----------| -->
+<!-- | 2569    | 1        | -->
+<!-- | 2573    | 5        | -->
+
+<!-- **Resulting Publications**: -->
+
+<!-- - Publications with `id` **1211491** and **1199598** from `publication.csv`. -->
 

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-16">
+<meta name="dcterms.date" content="2025-03-17">
 
-<title>Scopus – Citation Database Assessment</title>
+<title>Scopus Data Dictionary – Citation Database Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices.html">Classifying Institutions with the IPEDS Database</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_scopus.html">Scopus</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schemas and File Inventory</a></li><li class="breadcrumb-item"><a href="../appendices/app_scopus.html">Scopus Data Dictionary</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -139,8 +139,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workflow/02scopus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Scopus</span></a>
+  <a href="../workflow/step01/define_data_assets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 01: Define Data Assets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../workflow/step02_01/extract_dataset_mentions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 02: Extract Dataset Mentions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../workflow/step02_02/create_seed_corpus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating a Seed Corpus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../workflow/step03/clean_pub_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 03: Clean Publication Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../workflow/results/compare_pub_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 04: Compare Results</span></a>
   </div>
 </li>
       </ul>
@@ -159,8 +183,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../appendices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Classifying Institutions with the IPEDS Database</span></a>
+            <a href="../appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendices</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -169,13 +193,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/app_databases.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Citation Databases</span></a>
+ <span class="menu-text">Citation Database Summary</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Schema</span></a>
+ <span class="menu-text">Data Schemas and File Inventory</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -184,19 +208,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/app_scopus.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Scopus</span></a>
+ <span class="menu-text">Scopus Data Dictionary</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/app_openalex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">OpenAlex</span></a>
+ <span class="menu-text">OpenAlex Data Dictionary</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/app_dimensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dimensions</span></a>
+ <span class="menu-text">Dimensions Data Dictionary</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -225,28 +249,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-app-scopus" id="toc-sec-app-scopus" class="nav-link active" data-scroll-target="#sec-app-scopus"><span class="header-section-number">1</span> Overview of Scopus Reference Files</a>
+  <li><a href="#sec-app-scopus" id="toc-sec-app-scopus" class="nav-link active" data-scroll-target="#sec-app-scopus">Overview of Scopus Reference Files</a></li>
+  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data Dictionary</a>
   <ul class="collapse">
-  <li><a href="#publication.csv" id="toc-publication.csv" class="nav-link" data-scroll-target="#publication.csv"><span class="header-section-number">1.1</span> <strong>publication.csv</strong></a></li>
-  <li><a href="#dataset_alias.csv" id="toc-dataset_alias.csv" class="nav-link" data-scroll-target="#dataset_alias.csv"><span class="header-section-number">1.2</span> <strong>dataset_alias.csv</strong></a></li>
-  <li><a href="#dyad.csv" id="toc-dyad.csv" class="nav-link" data-scroll-target="#dyad.csv"><span class="header-section-number">1.3</span> <strong>dyad.csv</strong></a></li>
-  <li><a href="#model.csv" id="toc-model.csv" class="nav-link" data-scroll-target="#model.csv"><span class="header-section-number">1.4</span> <strong>model.csv</strong></a></li>
-  <li><a href="#dyad_model.csv" id="toc-dyad_model.csv" class="nav-link" data-scroll-target="#dyad_model.csv"><span class="header-section-number">1.5</span> <strong>dyad_model.csv</strong></a></li>
-  <li><a href="#how-to-extract-publications-for-a-specific-dataset" id="toc-how-to-extract-publications-for-a-specific-dataset" class="nav-link" data-scroll-target="#how-to-extract-publications-for-a-specific-dataset"><span class="header-section-number">1.6</span> How to Extract Publications for a Specific Dataset</a></li>
-  <li><a href="#filtering-publications-by-specific-models" id="toc-filtering-publications-by-specific-models" class="nav-link" data-scroll-target="#filtering-publications-by-specific-models"><span class="header-section-number">1.7</span> Filtering Publications by Specific Models</a></li>
-  <li><a href="#practical-example" id="toc-practical-example" class="nav-link" data-scroll-target="#practical-example"><span class="header-section-number">1.8</span> Practical Example</a></li>
-  <li><a href="#sample-data-illustration" id="toc-sample-data-illustration" class="nav-link" data-scroll-target="#sample-data-illustration"><span class="header-section-number">1.9</span> Sample Data Illustration</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">1.10</span> Conclusion</a></li>
+  <li><a href="#publication.csv-primary-table" id="toc-publication.csv-primary-table" class="nav-link" data-scroll-target="#publication.csv-primary-table"><code>publication.csv</code> (Primary table)</a></li>
+  <li><a href="#dataset_alias.csv" id="toc-dataset_alias.csv" class="nav-link" data-scroll-target="#dataset_alias.csv"><code>dataset_alias.csv</code></a></li>
+  <li><a href="#dyad.csv" id="toc-dyad.csv" class="nav-link" data-scroll-target="#dyad.csv"><code>dyad.csv</code></a></li>
+  <li><a href="#model.csv" id="toc-model.csv" class="nav-link" data-scroll-target="#model.csv"><code>model.csv</code></a></li>
+  <li><a href="#dyad_model.csv" id="toc-dyad_model.csv" class="nav-link" data-scroll-target="#dyad_model.csv"><code>dyad_model.csv</code></a></li>
   </ul></li>
+  <li><a href="#sample-data" id="toc-sample-data" class="nav-link" data-scroll-target="#sample-data">Sample Data</a></li>
+  <li><a href="#how-to-extract-publications-for-a-specific-dataset" id="toc-how-to-extract-publications-for-a-specific-dataset" class="nav-link" data-scroll-target="#how-to-extract-publications-for-a-specific-dataset">How to Extract Publications for a Specific Dataset</a></li>
+  <li><a href="#filtering-publications-by-specific-models" id="toc-filtering-publications-by-specific-models" class="nav-link" data-scroll-target="#filtering-publications-by-specific-models">Filtering Publications by Specific Models</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_scopus.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendices.html">Classifying Institutions with the IPEDS Database</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_scopus.html">Scopus</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schemas and File Inventory</a></li><li class="breadcrumb-item"><a href="../appendices/app_scopus.html">Scopus Data Dictionary</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Scopus</h1>
+<h1 class="title">Scopus Data Dictionary</h1>
 </div>
 
 
@@ -257,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 16, 2025</p>
+      <p class="date">March 17, 2025</p>
     </div>
   </div>
   
@@ -269,24 +292,104 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="sec-app-scopus" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="sec-app-scopus"><span class="header-section-number">1</span> Overview of Scopus Reference Files</h2>
+<section id="sec-app-scopus" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-app-scopus">Overview of Scopus Reference Files</h2>
 <p>This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.</p>
-<p>Below is a detailed explanation of each CSV file and how they relate to one another:</p>
-<section id="publication.csv" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="publication.csv"><span class="header-section-number">1.1</span> <strong>publication.csv</strong></h3>
+<p>Below is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the <a href="../appendices/app_crosswalk.html">data schema.</a></p>
+</section>
+<section id="data-dictionary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="data-dictionary">Data Dictionary</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Download Scopus Source Files">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Download Scopus Source Files
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can download the source files from <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/tree/main/appendices/scopus_files" target="_blank">this link</a>.</p>
+</div>
+</div>
+<section id="publication.csv-primary-table" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="publication.csv-primary-table"><code>publication.csv</code> (Primary table)</h3>
 <ul>
-<li><strong>Description</strong>: This file contains information about publications, which are the central entities in this dataset.</li>
-<li><strong>Key Columns</strong>:
+<li><strong>Description</strong>: Central table with metadata about publications.</li>
+<li><strong>Columns</strong>:
 <ul>
-<li><code>id</code>: Unique identifier for each publication.</li>
-<li><code>title</code>: Title of the publication.</li>
-<li><code>doi</code>: Digital Object Identifier of the publication.</li>
-<li><code>year</code> and <code>month</code>: Publication date.</li>
-<li>Other metadata such as <code>citation_count</code>, <code>pub_type</code>, etc.</li>
+<li><code>id</code>: Unique publication identifier</li>
+<li><code>title</code>: Publication title</li>
+<li><code>doi</code>: Digital Object Identifier</li>
+<li><code>year</code>, <code>month</code>: Date of publication</li>
+<li><code>citation_count</code>, <code>pub_type</code>: Additional metadata</li>
 </ul></li>
 </ul>
-<p><strong>Sample Data</strong>:</p>
+</section>
+<section id="dataset_alias.csv" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="dataset_alias.csv"><code>dataset_alias.csv</code></h3>
+<ul>
+<li><strong>Description</strong>: Lists dataset aliases (alternate names).</li>
+<li><strong>Columns</strong>:
+<ul>
+<li><code>alias_id</code>: Unique alias identifier</li>
+<li><code>parent_alias_id</code>: Primary alias identifier (if <code>alias_id = parent_alias_id</code>, it’s primary)</li>
+<li><code>alias</code>: Name of the alias</li>
+</ul></li>
+<li><strong>How to use</strong>:
+<ul>
+<li>Identify primary aliases where <code>alias_id = parent_alias_id</code></li>
+<li>Find all aliases by filtering on <code>parent_alias_id</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="dyad.csv" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="dyad.csv"><code>dyad.csv</code></h3>
+<ul>
+<li><strong>Description</strong>: Links publications (<code>publication.csv</code>) and dataset aliases (<code>dataset_alias.csv</code>).</li>
+<li><strong>Columns</strong>:
+<ul>
+<li><code>id</code>: Unique identifier for each mention (dyad)</li>
+<li><code>publication_id</code>: Foreign key to <code>publication.csv</code></li>
+<li><code>alias_id</code>: Foreign key to <code>dataset_alias.csv</code></li>
+<li><code>mention_candidate</code>: Mention text from publication</li>
+</ul></li>
+</ul>
+</section>
+<section id="model.csv" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="model.csv"><code>model.csv</code></h3>
+<ul>
+<li><strong>Description</strong>: Lists methods/models for identifying dataset mentions.</li>
+<li><strong>Columns</strong>:
+<ul>
+<li><code>id</code>: Unique model identifier</li>
+<li><code>name</code>: Name of the identification model</li>
+</ul></li>
+</ul>
+</section>
+<section id="dyad_model.csv" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="dyad_model.csv"><code>dyad_model.csv</code></h3>
+<ul>
+<li><strong>Description</strong>: Connects dyads and models used to identify them.</li>
+<li><strong>Columns</strong>:
+<ul>
+<li><code>dyad_id</code>: Foreign key to <code>dyad.csv</code></li>
+<li><code>model_id</code>: Foreign key to <code>model.csv</code></li>
+<li><code>score</code>: Confidence or relevance score</li>
+</ul></li>
+<li><strong>How to use</strong>:
+<ul>
+<li>Filter mentions by joining with <code>dyad.csv</code> on <code>dyad_id</code> and filtering by <code>model_id</code></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="sample-data" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sample-data">Sample Data</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page"><code>publication.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><code>dataset_alias.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><code>dyad.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false"><code>model.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false"><code>dyad_model.csv</code></a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 6%">
@@ -321,24 +424,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="dataset_alias.csv" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="dataset_alias.csv"><span class="header-section-number">1.2</span> <strong>dataset_alias.csv</strong></h3>
-<ul>
-<li><strong>Description</strong>: Contains all the aliases (alternative names) of datasets. This helps in identifying datasets that might be referred to by different names in publications.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>alias_id</code>: Unique identifier for each alias.</li>
-<li><code>parent_alias_id</code>: Identifies the main alias for a dataset. If <code>parent_alias_id</code> equals <code>alias_id</code>, it is the primary alias.</li>
-<li><code>alias</code>: The alias name of the dataset.</li>
-</ul></li>
-</ul>
-<p><strong>How to Use</strong>:</p>
-<ul>
-<li>To find the main alias of a dataset, look for rows where <code>alias_id</code> equals <code>parent_alias_id</code>.</li>
-<li>To find all aliases of a dataset, filter by <code>parent_alias_id</code> corresponding to the main alias.</li>
-</ul>
-<p><strong>Sample Data</strong>:</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 7%">
@@ -369,20 +456,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="dyad.csv" class="level3" data-number="1.3">
-<h3 data-number="1.3" class="anchored" data-anchor-id="dyad.csv"><span class="header-section-number">1.3</span> <strong>dyad.csv</strong></h3>
-<ul>
-<li><strong>Description</strong>: Represents the mentions of dataset aliases found within publications. Acts as a linking table between <code>publication.csv</code> and <code>dataset_alias.csv</code>.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>id</code>: Unique identifier for each dyad (mention).</li>
-<li><code>publication_id</code>: References the <code>id</code> in <code>publication.csv</code>.</li>
-<li><code>alias_id</code>: References the <code>alias_id</code> in <code>dataset_alias.csv</code>.</li>
-<li><code>mention_candidate</code>: The actual text mentioning the dataset in the publication.</li>
-</ul></li>
-</ul>
-<p><strong>Sample Data</strong>:</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -407,24 +482,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="model.csv" class="level3" data-number="1.4">
-<h3 data-number="1.4" class="anchored" data-anchor-id="model.csv"><span class="header-section-number">1.4</span> <strong>model.csv</strong></h3>
-<ul>
-<li><strong>Description</strong>: Lists the different models or methods used to identify dataset mentions within publications.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>id</code>: Unique identifier for each model.</li>
-<li><code>name</code>: Name of the model (e.g., <code>string_matching</code>, <code>refmatch</code>).</li>
-</ul></li>
-</ul>
-<p><strong>Relevant Models</strong>:</p>
-<ul>
-<li><strong>Model ID 1</strong>: <code>string_matching</code></li>
-<li><strong>Model ID 5</strong>: <code>refmatch</code></li>
-</ul>
-<p>These are the models we are focusing on to compare with data extracted from OpenAlex, as no Kaggle model has been applied there.</p>
-<p><strong>Sample Data</strong>:</p>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -443,22 +502,8 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-</section>
-<section id="dyad_model.csv" class="level3" data-number="1.5">
-<h3 data-number="1.5" class="anchored" data-anchor-id="dyad_model.csv"><span class="header-section-number">1.5</span> <strong>dyad_model.csv</strong></h3>
-<ul>
-<li><strong>Description</strong>: Connects dyads with the models that identified them. Allows filtering dyads based on the models used.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>dyad_id</code>: References the <code>id</code> in <code>dyad.csv</code>.</li>
-<li><code>model_id</code>: References the <code>id</code> in <code>model.csv</code>.</li>
-</ul></li>
-</ul>
-<p><strong>How to Use</strong>:</p>
-<ul>
-<li>To filter dyads (and thus publications) identified by specific models, perform an inner join with <code>dyad.csv</code> on <code>dyad_id</code> and filter by <code>model_id</code>.</li>
-</ul>
-<p><strong>Sample Data</strong>:</p>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -489,9 +534,12 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
 </section>
-<section id="how-to-extract-publications-for-a-specific-dataset" class="level3" data-number="1.6">
-<h3 data-number="1.6" class="anchored" data-anchor-id="how-to-extract-publications-for-a-specific-dataset"><span class="header-section-number">1.6</span> How to Extract Publications for a Specific Dataset</h3>
+<section id="how-to-extract-publications-for-a-specific-dataset" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="how-to-extract-publications-for-a-specific-dataset">How to Extract Publications for a Specific Dataset</h2>
 <p>To find all publications associated with a particular dataset, such as the <strong>NASS Census of Agriculture</strong>, follow these steps:</p>
 <ol type="1">
 <li><p><strong>Identify the Main Alias</strong>:</p>
@@ -515,8 +563,8 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ol>
 </section>
-<section id="filtering-publications-by-specific-models" class="level3" data-number="1.7">
-<h3 data-number="1.7" class="anchored" data-anchor-id="filtering-publications-by-specific-models"><span class="header-section-number">1.7</span> Filtering Publications by Specific Models</h3>
+<section id="filtering-publications-by-specific-models" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="filtering-publications-by-specific-models">Filtering Publications by Specific Models</h2>
 <p>Since we’re interested in mentions identified by the <strong><code>string_matching</code></strong> and <strong><code>refmatch</code></strong> models (models with <code>id</code> 1 and 5), follow these steps:</p>
 <ol type="1">
 <li><p><strong>Filter Dyads by Model</strong>:</p>
@@ -534,117 +582,107 @@ ul.task-list li input[type="checkbox"] {
 <li>Continue with the steps in the previous section, but using the filtered dyads from step 2.</li>
 </ul></li>
 </ol>
-</section>
-<section id="practical-example" class="level3" data-number="1.8">
-<h3 data-number="1.8" class="anchored" data-anchor-id="practical-example"><span class="header-section-number">1.8</span> Practical Example</h3>
-<p><strong>Objective</strong>: Find all publications mentioning the <strong>NASS Census of Agriculture</strong> dataset using the <code>string_matching</code> and <code>refmatch</code> models.</p>
-<p><strong>Steps</strong>:</p>
-<ol type="1">
-<li><p><strong>Find Main Alias ID</strong>:</p>
-<ul>
-<li>Main alias <code>alias_id</code> = <strong>89</strong>.</li>
-</ul></li>
-<li><p><strong>Get All Aliases</strong>:</p>
-<ul>
-<li>From <code>dataset_alias.csv</code>, extract all <code>alias_id</code>s where <code>parent_alias_id</code> = <strong>89</strong>.</li>
-</ul></li>
-<li><p><strong>Filter Dyads by Models</strong>:</p>
-<ul>
-<li>From <code>dyad_model.csv</code>, get <code>dyad_id</code>s where <code>model_id</code> is <strong>1</strong> or <strong>5</strong>.</li>
-</ul></li>
-<li><p><strong>Get Dyads for Dataset</strong>:</p>
-<ul>
-<li>From <code>dyad.csv</code>, select rows where:
-<ul>
-<li><code>alias_id</code> is in the list from step 2, and</li>
-<li><code>id</code> (dyad_id) is in the list from step 3.</li>
-</ul></li>
-</ul></li>
-<li><p><strong>Retrieve Publications</strong>:</p>
-<ul>
-<li>Use <code>publication_id</code>s from the filtered dyads to get detailed information from <code>publication.csv</code>.</li>
-</ul></li>
-</ol>
-</section>
-<section id="sample-data-illustration" class="level3" data-number="1.9">
-<h3 data-number="1.9" class="anchored" data-anchor-id="sample-data-illustration"><span class="header-section-number">1.9</span> Sample Data Illustration</h3>
-<p><strong>From <code>dataset_alias.csv</code></strong>:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>alias_id</th>
-<th>parent_alias_id</th>
-<th>alias</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>87</td>
-<td>89</td>
-<td>Census of Agriculture</td>
-</tr>
-<tr class="even">
-<td>88</td>
-<td>89</td>
-<td>USDA Census of Agriculture</td>
-</tr>
-</tbody>
-</table>
-<p><strong>From <code>dyad.csv</code></strong>:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>id</th>
-<th>publication_id</th>
-<th>alias_id</th>
-<th>mention_candidate</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2569</td>
-<td>1211491</td>
-<td>87</td>
-<td>census of agriculture</td>
-</tr>
-<tr class="even">
-<td>2573</td>
-<td>1199598</td>
-<td>88</td>
-<td>usda census of agriculture</td>
-</tr>
-</tbody>
-</table>
-<p><strong>From <code>dyad_model.csv</code></strong> (filtered for <code>model_id</code> 1 or 5):</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>dyad_id</th>
-<th>model_id</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2569</td>
-<td>1</td>
-</tr>
-<tr class="even">
-<td>2573</td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Resulting Publications</strong>:</p>
-<ul>
-<li>Publications with <code>id</code> <strong>1211491</strong> and <strong>1199598</strong> from <code>publication.csv</code>.</li>
-</ul>
-</section>
-<section id="conclusion" class="level3" data-number="1.10">
-<h3 data-number="1.10" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">1.10</span> Conclusion</h3>
-<p>By following the steps outlined above, you can effectively navigate the dataset to extract publications related to specific datasets and identified by particular models. This structured approach allows for targeted analysis and comparison with data from sources like OpenAlex.</p>
+<!-- ### publication.csv -->
+<!-- - **Description**: This file contains information about publications, which are the central entities in this dataset. -->
+<!-- - **Key Columns**: -->
+<!--   - `id`: Unique identifier for each publication. -->
+<!--   - `title`: Title of the publication. -->
+<!--   - `doi`: Digital Object Identifier of the publication. -->
+<!--   - `year` and `month`: Publication date. -->
+<!--   - Other metadata such as `citation_count`, `pub_type`, etc. -->
+<!-- **Sample Data**: -->
+<!-- | id     | title                                                                | doi                      | year | month | -->
+<!-- |--------|----------------------------------------------------------------------|--------------------------|------|-------| -->
+<!-- | 321613 | New estimates for CRNA vacancies                                     |                          | 2009 | 4     | -->
+<!-- | 321614 | Crossing county lines: The impact of crash location and driver's...  | 10.1016/j.aap.2006...    | 2006 | 7     | -->
+<!-- ### **dataset_alias.csv** -->
+<!-- - **Description**: Contains all the aliases (alternative names) of datasets. This helps in identifying datasets that might be referred to by different names in publications. -->
+<!-- - **Key Columns**: -->
+<!--   - `alias_id`: Unique identifier for each alias. -->
+<!--   - `parent_alias_id`: Identifies the main alias for a dataset. If `parent_alias_id` equals `alias_id`, it is the primary alias. -->
+<!--   - `alias`: The alias name of the dataset. -->
+<!-- **How to Use**: -->
+<!-- - To find the main alias of a dataset, look for rows where `alias_id` equals `parent_alias_id`. -->
+<!-- - To find all aliases of a dataset, filter by `parent_alias_id` corresponding to the main alias. -->
+<!-- **Sample Data**: -->
+<!-- | id   | alias_id | parent_alias_id | alias                                              | -->
+<!-- |------|----------|-----------------|----------------------------------------------------| -->
+<!-- | 1676 | 87       | 89              | Census of Agriculture                              | -->
+<!-- | 1673 | 12       | 282             | ARMS Farm Financial and Crop Production Practices  | -->
+<!-- ### **dyad.csv** -->
+<!-- - **Description**: Represents the mentions of dataset aliases found within publications. Acts as a linking table between `publication.csv` and `dataset_alias.csv`. -->
+<!-- - **Key Columns**: -->
+<!--   - `id`: Unique identifier for each dyad (mention). -->
+<!--   - `publication_id`: References the `id` in `publication.csv`. -->
+<!--   - `alias_id`: References the `alias_id` in `dataset_alias.csv`. -->
+<!--   - `mention_candidate`: The actual text mentioning the dataset in the publication. -->
+<!-- **Sample Data**: -->
+<!-- | id   | publication_id | alias_id | mention_candidate          | -->
+<!-- |------|----------------|----------|----------------------------| -->
+<!-- | 2569 | 1211491        | 87       | census of agriculture      | -->
+<!-- | 2573 | 1199598        | 88       | usda census of agriculture | -->
+<!-- ### **model.csv** -->
+<!-- - **Description**: Lists the different models or methods used to identify dataset mentions within publications. -->
+<!-- - **Key Columns**: -->
+<!--   - `id`: Unique identifier for each model. -->
+<!--   - `name`: Name of the model (e.g., `string_matching`, `refmatch`). -->
+<!-- **Relevant Models**: -->
+<!-- - **Model ID 1**: `string_matching` -->
+<!-- - **Model ID 5**: `refmatch` -->
+<!-- These are the models we are focusing on to compare with data extracted from OpenAlex, as no Kaggle model has been applied there. -->
+<!-- **Sample Data**: -->
+<!-- | id | name            | -->
+<!-- |----|-----------------| -->
+<!-- | 1  | string_matching | -->
+<!-- | 5  | refmatch        | -->
+<!-- ### **dyad_model.csv** -->
+<!-- - **Description**: Connects dyads with the models that identified them. Allows filtering dyads based on the models used. -->
+<!-- - **Key Columns**: -->
+<!--   - `dyad_id`: References the `id` in `dyad.csv`. -->
+<!--   - `model_id`: References the `id` in `model.csv`. -->
+<!-- **How to Use**: -->
+<!-- - To filter dyads (and thus publications) identified by specific models, perform an inner join with `dyad.csv` on `dyad_id` and filter by `model_id`. -->
+<!-- **Sample Data**: -->
+<!-- | id   | dyad_id | model_id | score | -->
+<!-- |------|---------|----------|-------| -->
+<!-- | 4928 | 2569    | 1        | 2.0   | -->
+<!-- | 4929 | 2569    | 4        | 1.0   | -->
+<!-- | 4930 | 2569    | 2        | 1.0   | -->
+<!-- ### Practical Example -->
+<!-- **Objective**: Find all publications mentioning the **NASS Census of Agriculture** dataset using the `string_matching` and `refmatch` models. -->
+<!-- **Steps**: -->
+<!-- 1. **Find Main Alias ID**: -->
+<!--    - Main alias `alias_id` = **89**. -->
+<!-- 2. **Get All Aliases**: -->
+<!--    - From `dataset_alias.csv`, extract all `alias_id`s where `parent_alias_id` = **89**. -->
+<!-- 3. **Filter Dyads by Models**: -->
+<!--    - From `dyad_model.csv`, get `dyad_id`s where `model_id` is **1** or **5**. -->
+<!-- 4. **Get Dyads for Dataset**: -->
+<!--    - From `dyad.csv`, select rows where: -->
+<!--      - `alias_id` is in the list from step 2, and -->
+<!--      - `id` (dyad_id) is in the list from step 3. -->
+<!-- 5. **Retrieve Publications**: -->
+<!--    - Use `publication_id`s from the filtered dyads to get detailed information from `publication.csv`. -->
+<!-- ### Sample Data Illustration -->
+<!-- **From `dataset_alias.csv`**: -->
+<!-- | alias_id | parent_alias_id | alias                     | -->
+<!-- |----------|-----------------|---------------------------| -->
+<!-- | 87       | 89              | Census of Agriculture     | -->
+<!-- | 88       | 89              | USDA Census of Agriculture | -->
+<!-- **From `dyad.csv`**: -->
+<!-- | id   | publication_id | alias_id | mention_candidate          | -->
+<!-- |------|----------------|----------|----------------------------| -->
+<!-- | 2569 | 1211491        | 87       | census of agriculture      | -->
+<!-- | 2573 | 1199598        | 88       | usda census of agriculture | -->
+<!-- **From `dyad_model.csv`** (filtered for `model_id` 1 or 5): -->
+<!-- | dyad_id | model_id | -->
+<!-- |---------|----------| -->
+<!-- | 2569    | 1        | -->
+<!-- | 2573    | 5        | -->
+<!-- **Resulting Publications**: -->
+<!-- - Publications with `id` **1211491** and **1199598** from `publication.csv`. -->
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1070,13 +1108,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../appendices/app_crosswalk.html" class="pagination-link" aria-label="Data Schema">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data Schema</span>
+      <a href="../appendices/app_crosswalk.html" class="pagination-link" aria-label="Data Schemas and File Inventory">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Data Schemas and File Inventory</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../appendices/app_openalex.html" class="pagination-link" aria-label="OpenAlex">
-        <span class="nav-page-text">OpenAlex</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../appendices/app_openalex.html" class="pagination-link" aria-label="OpenAlex Data Dictionary">
+        <span class="nav-page-text">OpenAlex Data Dictionary</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

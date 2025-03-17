@@ -1,5 +1,5 @@
 ---
-title: "OpenAlex"
+title: "OpenAlex Data Dictionary"
 date: last-modified  # Auto-updates based on Git commits
 format:
   html:
@@ -9,21 +9,25 @@ format:
     css: styles.css
 ---
 
-## Overview of OpenAlex Reference Files {#sec-app-openalex}
+## Overview of OpenAlex Reference Files {#sec-app-openalex .unnumbered}
 
 This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.
 
-Unlike the initial dataset from Scopus, the OpenAlex publications can be associated with multiple datasets. Two new files are introduced:
+Below is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the [data schema.](app_crosswalk.qmd)
 
-- **dataset.csv**: Lists all datasets identified in OpenAlex. This contains details of all USDA datasets.
-- **publication_dataset_links.csv**: Connects publications with one or more datasets in the OpenAlex data. Indicates which publications are associated with which datasets.
+## Data Dictionary {.unnumbered}
 
-The search in OpenAlex was performed using the same aliases and flag terms applied in the Scopus data, without any optimization. As a consequence, the "NASS Census of Agriculture" dataset currently shows fewer publications than in the previous sample due to this direct, unoptimized search approach.
+::: {.callout-note title="Download OpenAlex Source Files"}
+You can download the source files from [this link](https://github.com/laurenchenarides/compare_scopus_openalex_report/tree/main/appendices/scopus_files){target="_blank"}.
+:::
 
-Below is a detailed explanation of the SQL Server-related CSV files and how they relate to one another:
+### `dataset.csv` {.unnumbered}
+- **Description**: Lists all datasets identified in OpenAlex. This contains details of all USDA datasets.
 
-### **publication.csv**
+### `publication_dataset_links.csv`  {.unnumbered}
+- **Description**: Connects publications with one or more datasets in the OpenAlex data. Indicates which publications are associated with which datasets.
 
+### `publication.csv` {.unnumbered}
 - **Description**: This file contains information about publications, which are the central entities in this dataset.
 - **Key Columns**:
   - `id`: Unique identifier for each publication.
@@ -32,39 +36,21 @@ Below is a detailed explanation of the SQL Server-related CSV files and how they
   - `year` and `month`: Publication date.
   - Other metadata such as `citation_count`, `pub_type`, etc.
 
-**Sample Data**:
-
-<!--\~~~markdown-->
-| id     | title                                                                | doi                      | year | month |
-|--------|----------------------------------------------------------------------|--------------------------|------|-------|
-| 321613 | New estimates for CRNA vacancies                                     |                          | 2009 | 4     |
-| 321614 | Crossing county lines: The impact of crash location and driver's...  | 10.1016/j.aap.2006...    | 2006 | 7     |
-
-
-### **dataset_alias.csv**
-
+### `dataset_alias.csv` {.unnumbered}
 - **Description**: Contains all the aliases (alternative names) of datasets. This helps in identifying datasets that might be referred to by different names in publications.
 - **Key Columns**:
   - `alias_id`: Unique identifier for each alias.
   - `parent_alias_id`: Identifies the main alias for a dataset. If `parent_alias_id` equals `alias_id`, it is the primary alias.
   - `alias`: The alias name of the dataset.
 
+**Note**: The search in OpenAlex was performed using the same aliases and flag terms applied in the Scopus data, without any optimization.
+
 **How to Use**:
 
 - To find the main alias of a dataset, look for rows where `alias_id` equals `parent_alias_id`.
 - To find all aliases of a dataset, filter by `parent_alias_id` corresponding to the main alias.
 
-**Sample Data**:
-
-<!--\~~~markdown-->
-| id   | alias_id | parent_alias_id | alias                                              |
-|------|----------|-----------------|----------------------------------------------------|
-| 1676 | 87       | 89              | Census of Agriculture                              |
-| 1673 | 12       | 282             | ARMS Farm Financial and Crop Production Practices  |
-
-
-### **dyad.csv**
-
+### `dyad.csv` {.unnumbered}
 - **Description**: Represents the mentions of dataset aliases found within publications. Acts as a linking table between `publication.csv` and `dataset_alias.csv`.
 - **Key Columns**:
   - `id`: Unique identifier for each dyad (mention).
@@ -72,17 +58,7 @@ Below is a detailed explanation of the SQL Server-related CSV files and how they
   - `alias_id`: References the `alias_id` in `dataset_alias.csv`.
   - `mention_candidate`: The actual text mentioning the dataset in the publication.
 
-**Sample Data**:
-
-<!--\~~~markdown-->
-| id   | publication_id | alias_id | mention_candidate          |
-|------|----------------|----------|----------------------------|
-| 2569 | 1211491        | 87       | census of agriculture      |
-| 2573 | 1199598        | 88       | usda census of agriculture |
-
-
-### **model.csv**
-
+### `model.csv` {.unnumbered}
 - **Description**: Lists the different models or methods used to identify dataset mentions within publications.
 - **Key Columns**:
   - `id`: Unique identifier for each model.
@@ -95,17 +71,8 @@ Below is a detailed explanation of the SQL Server-related CSV files and how they
 
 These are the models we are focusing on to compare with data extracted from OpenAlex, as no Kaggle model has been applied there.
 
-**Sample Data**:
 
-<!--\~~~markdown-->
-| id | name            |
-|----|-----------------|
-| 1  | string_matching |
-| 5  | refmatch        |
-
-
-### **dyad_model.csv**
-
+### `dyad_model.csv` {.unnumbered}
 - **Description**: Connects dyads with the models that identified them. Allows filtering dyads based on the models used.
 - **Key Columns**:
   - `dyad_id`: References the `id` in `dyad.csv`.
@@ -115,26 +82,65 @@ These are the models we are focusing on to compare with data extracted from Open
 
 - To filter dyads (and thus publications) identified by specific models, perform an inner join with `dyad.csv` on `dyad_id` and filter by `model_id`.
 
-**Sample Data**:
+::: {.callout-note title="How the Files are Related"}
 
-<!--\~~~markdown-->
+The files are structured to represent entities (publications, journals, institutions, authors) and their relationships. The main publication data is in `publications_main.csv`, and the details about journals, institutions, and authors are in their respective files. 
+
+The link files (`publication_journal_links.csv`, `publication_institution_links.csv`, `publication_author_links.csv`) represent the many-to-many relationships between publications and these entities.
+
+To find all publications by a specific author, you can use `authors.csv` to find the author's `author_openalex_id` and then use `publication_author_links.csv` to find the associated publications.
+
+To analyze the distribution of publications across journals, you can join `publications_main.csv`, `publication_journal_links.csv`, and `journals.csv` on `publication_openalex_id` and `journal_openalex_id`.
+:::
+
+## Sample Data {.unnumbered}
+
+::: {.panel-tabset}
+
+### `publication.csv` {.unnumbered}
+
+| id     | title                                                                | doi                      | year | month |
+|--------|----------------------------------------------------------------------|--------------------------|------|-------|
+| 321613 | New estimates for CRNA vacancies                                     |                          | 2009 | 4     |
+| 321614 | Crossing county lines: The impact of crash location and driver's...  | 10.1016/j.aap.2006...    | 2006 | 7     |
+
+
+### `dataset_alias.csv` {.unnumbered}
+
+| id   | alias_id | parent_alias_id | alias                                              |
+|------|----------|-----------------|----------------------------------------------------|
+| 1676 | 87       | 89              | Census of Agriculture                              |
+| 1673 | 12       | 282             | ARMS Farm Financial and Crop Production Practices  |
+| 1671 | 88       | 89              | USDA Census of Agriculture                         |
+
+
+### `dyad.csv` {.unnumbered}
+
+| id   | publication_id | alias_id | mention_candidate          |
+|------|----------------|----------|----------------------------|
+| 2569 | 1211491        | 87       | census of agriculture      |
+| 2573 | 1199598        | 88       | usda census of agriculture |
+
+
+### `model.csv` {.unnumbered}
+
+| id | name            |
+|----|-----------------|
+| 1  | string_matching |
+| 5  | refmatch        |
+
+### `dyad_model.csv` {.unnumbered}
+
 | id   | dyad_id | model_id | score |
 |------|---------|----------|-------|
 | 4928 | 2569    | 1        | 2.0   |
 | 4929 | 2569    | 4        | 1.0   |
 | 4930 | 2569    | 2        | 1.0   |
 
+:::
 
-### How the Files are Related
 
-The files are structured to represent entities (publications, journals, institutions, authors) and their relationships. The main publication data is in `publications_main.csv`, and the details about journals, institutions, and authors are in their respective files. The link files (`publication_journal_links.csv`, `publication_institution_links.csv`, `publication_author_links.csv`) represent the many-to-many relationships between publications and these entities.
-
-By using the OpenAlex identifiers, you can join these files to perform comprehensive analyses. For example:
-
-- To find all publications by a specific author, you can use `authors.csv` to find the author's `author_openalex_id` and then use `publication_author_links.csv` to find the associated publications.
-- To analyze the distribution of publications across journals, you can join `publications_main.csv`, `publication_journal_links.csv`, and `journals.csv` on `publication_openalex_id` and `journal_openalex_id`.
-
-### How to Extract Publications for a Specific Dataset
+## How to Extract Publications for a Specific Dataset {.unnumbered}
 
 To find all publications associated with a particular dataset, such as the **NASS Census of Agriculture**, follow these steps:
 
@@ -157,7 +163,7 @@ To find all publications associated with a particular dataset, such as the **NAS
 
    - Using the `publication_id`s from step 3, retrieve the corresponding records from `publication.csv`.
 
-### Filtering Publications by Specific Models
+## Filtering Publications by Specific Models {.unnumbered}
 
 Since we're interested in mentions identified by the **`string_matching`** and **`refmatch`** models (models with `id` 1 and 5), follow these steps:
 
@@ -175,63 +181,32 @@ Since we're interested in mentions identified by the **`string_matching`** and *
 
    - Continue with the steps in the previous section, but using the filtered dyads from step 2.
 
-### Practical Example
+<!-- ### Practical Example -->
 
-**Objective**: Find all publications mentioning the **NASS Census of Agriculture** dataset using the `string_matching` and `refmatch` models.
+<!-- **Objective**: Find all publications mentioning the **NASS Census of Agriculture** dataset using the `string_matching` and `refmatch` models. -->
 
-**Steps**:
+<!-- **Steps**: -->
 
-1. **Find Main Alias ID**:
+<!-- 1. **Find Main Alias ID**: -->
 
-   - Main alias `alias_id` = **89**.
+<!--    - Main alias `alias_id` = **89**. -->
 
-2. **Get All Aliases**:
+<!-- 2. **Get All Aliases**: -->
 
-   - From `dataset_alias.csv`, extract all `alias_id`s where `parent_alias_id` = **89**.
+<!--    - From `dataset_alias.csv`, extract all `alias_id`s where `parent_alias_id` = **89**. -->
 
-3. **Filter Dyads by Models**:
+<!-- 3. **Filter Dyads by Models**: -->
 
-   - From `dyad_model.csv`, get `dyad_id`s where `model_id` is **1** or **5**.
+<!--    - From `dyad_model.csv`, get `dyad_id`s where `model_id` is **1** or **5**. -->
 
-4. **Get Dyads for Dataset**:
+<!-- 4. **Get Dyads for Dataset**: -->
 
-   - From `dyad.csv`, select rows where:
-     - `alias_id` is in the list from step 2, and
-     - `id` (dyad_id) is in the list from step 3.
+<!--    - From `dyad.csv`, select rows where: -->
+<!--      - `alias_id` is in the list from step 2, and -->
+<!--      - `id` (dyad_id) is in the list from step 3. -->
 
-5. **Retrieve Publications**:
+<!-- 5. **Retrieve Publications**: -->
 
-   - Use `publication_id`s from the filtered dyads to get detailed information from `publication.csv`.
-
-### Sample Data Illustration
-
-**From `dataset_alias.csv`**:
-
-<!--\~~~markdown-->
-| alias_id | parent_alias_id | alias                     |
-|----------|-----------------|---------------------------|
-| 87       | 89              | Census of Agriculture     |
-| 88       | 89              | USDA Census of Agriculture |
+<!--    - Use `publication_id`s from the filtered dyads to get detailed information from `publication.csv`. -->
 
 
-**From `dyad.csv`**:
-
-<!--\~~~markdown-->
-| id   | publication_id | alias_id | mention_candidate          |
-|------|----------------|----------|----------------------------|
-| 2569 | 1211491        | 87       | census of agriculture      |
-| 2573 | 1199598        | 88       | usda census of agriculture |
-
-
-**From `dyad_model.csv`** (filtered for `model_id` 1 or 5):
-
-<!--\~~~markdown-->
-| dyad_id | model_id |
-|---------|----------|
-| 2569    | 1        |
-| 2573    | 5        |
-
-
-**Resulting Publications**:
-
-- Publications with `id` **1211491** and **1199598** from `publication.csv`.

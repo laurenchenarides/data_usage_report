@@ -1,0 +1,323 @@
+id,run_id,code,label,last_updated_date
+335,41,1000,Multidisciplinary,1/24/2024 5:40:50 PM
+336,41,1100,General Agricultural and Biological Sciences,1/24/2024 5:40:50 PM
+337,41,1101,Agricultural and Biological Sciences (miscellaneous),1/24/2024 5:40:50 PM
+338,41,1102,Agronomy and Crop Science,1/24/2024 5:40:50 PM
+339,41,1103,Animal Science and Zoology,1/24/2024 5:40:50 PM
+340,41,1104,Aquatic Science,1/24/2024 5:40:50 PM
+341,41,1105,"Ecology, Evolution, Behavior and Systematics",1/24/2024 5:40:50 PM
+342,41,1106,Food Science,1/24/2024 5:40:50 PM
+343,41,1107,Forestry,1/24/2024 5:40:50 PM
+344,41,1108,Horticulture,1/24/2024 5:40:50 PM
+345,41,1109,Insect Science,1/24/2024 5:40:50 PM
+346,41,1110,Plant Science,1/24/2024 5:40:50 PM
+347,41,1111,Soil Science,1/24/2024 5:40:50 PM
+348,41,1200,General Arts and Humanities,1/24/2024 5:40:50 PM
+349,41,1201,Arts and Humanities (miscellaneous),1/24/2024 5:40:50 PM
+350,41,1202,History,1/24/2024 5:40:50 PM
+351,41,1203,Language and Linguistics,1/24/2024 5:40:50 PM
+352,41,1204,Archeology (arts and humanities),1/24/2024 5:40:50 PM
+354,41,1206,Conservation,1/24/2024 5:40:50 PM
+355,41,1207,History and Philosophy of Science,1/24/2024 5:40:50 PM
+356,41,1208,Literature and Literary Theory,1/24/2024 5:40:50 PM
+358,41,1210,Music,1/24/2024 5:40:50 PM
+359,41,1211,Philosophy,1/24/2024 5:40:50 PM
+360,41,1212,Religious Studies,1/24/2024 5:40:50 PM
+361,41,1213,Visual Arts and Performing Arts,1/24/2024 5:40:50 PM
+362,41,1300,"General Biochemistry,Genetics and Molecular Biology",1/24/2024 5:40:50 PM
+363,41,1301,"Biochemistry, Genetics and Molecular Biology (miscellaneous)",1/24/2024 5:40:50 PM
+364,41,1302,Aging,1/24/2024 5:40:50 PM
+365,41,1303,Biochemistry,1/24/2024 5:40:50 PM
+366,41,1304,Biophysics,1/24/2024 5:40:50 PM
+367,41,1305,Biotechnology,1/24/2024 5:40:50 PM
+368,41,1306,Cancer Research,1/24/2024 5:40:50 PM
+369,41,1307,Cell Biology,1/24/2024 5:40:50 PM
+370,41,1308,Clinical Biochemistry,1/24/2024 5:40:50 PM
+371,41,1309,Developmental Biology,1/24/2024 5:40:50 PM
+372,41,1310,Endocrinology,1/24/2024 5:40:50 PM
+373,41,1311,Genetics,1/24/2024 5:40:50 PM
+374,41,1312,Molecular Biology,1/24/2024 5:40:50 PM
+375,41,1313,Molecular Medicine,1/24/2024 5:40:50 PM
+376,41,1314,Physiology,1/24/2024 5:40:50 PM
+377,41,1315,Structural Biology,1/24/2024 5:40:50 PM
+378,41,1400,"General Business,Management and Accounting",1/24/2024 5:40:50 PM
+379,41,1401,"Business, Management and Accounting (miscellaneous)",1/24/2024 5:40:50 PM
+380,41,1402,Accounting,1/24/2024 5:40:50 PM
+381,41,1403,Business and International Management,1/24/2024 5:40:50 PM
+382,41,1404,Management Information Systems,1/24/2024 5:40:50 PM
+383,41,1405,Management of Technology and Innovation,1/24/2024 5:40:50 PM
+384,41,1406,Marketing,1/24/2024 5:40:50 PM
+385,41,1407,Organizational Behavior and Human Resource Management,1/24/2024 5:40:50 PM
+386,41,1408,Strategy and Management,1/24/2024 5:40:50 PM
+387,41,1409,"Tourism, Leisure and Hospitality Management",1/24/2024 5:40:50 PM
+388,41,1410,Industrial Relations,1/24/2024 5:40:50 PM
+389,41,1500,General Chemical Engineering,1/24/2024 5:40:50 PM
+390,41,1501,Chemical Engineering (miscellaneous),1/24/2024 5:40:50 PM
+391,41,1502,Bioengineering,1/24/2024 5:40:50 PM
+392,41,1503,Catalysis,1/24/2024 5:40:50 PM
+393,41,1504,Chemical Health and Safety,1/24/2024 5:40:50 PM
+394,41,1505,Colloid and Surface Chemistry,1/24/2024 5:40:50 PM
+395,41,1506,Filtration and Separation,1/24/2024 5:40:50 PM
+396,41,1507,Fluid Flow and Transfer Processes,1/24/2024 5:40:50 PM
+397,41,1508,Process Chemistry and Technology,1/24/2024 5:40:50 PM
+398,41,1600,General Chemistry,1/24/2024 5:40:50 PM
+399,41,1601,Chemistry (miscellaneous),1/24/2024 5:40:50 PM
+400,41,1602,Analytical Chemistry,1/24/2024 5:40:50 PM
+401,41,1603,Electrochemistry,1/24/2024 5:40:50 PM
+402,41,1604,Inorganic Chemistry,1/24/2024 5:40:50 PM
+403,41,1605,Organic Chemistry,1/24/2024 5:40:50 PM
+404,41,1606,Physical and Theoretical Chemistry,1/24/2024 5:40:50 PM
+405,41,1607,Spectroscopy,1/24/2024 5:40:50 PM
+406,41,1700,General Computer Science,1/24/2024 5:40:50 PM
+407,41,1701,Computer Science (miscellaneous),1/24/2024 5:40:50 PM
+408,41,1702,Artificial Intelligence,1/24/2024 5:40:50 PM
+409,41,1703,Computational Theory and Mathematics,1/24/2024 5:40:50 PM
+410,41,1704,Computer Graphics and Computer-Aided Design,1/24/2024 5:40:50 PM
+411,41,1705,Computer Networks and Communications,1/24/2024 5:40:50 PM
+412,41,1706,Computer Science Applications,1/24/2024 5:40:50 PM
+413,41,1707,Computer Vision and Pattern Recognition,1/24/2024 5:40:50 PM
+414,41,1708,Hardware and Architecture,1/24/2024 5:40:50 PM
+415,41,1709,Human-Computer Interaction,1/24/2024 5:40:50 PM
+416,41,1710,Information Systems,1/24/2024 5:40:50 PM
+417,41,1711,Signal Processing,1/24/2024 5:40:50 PM
+418,41,1712,Software,1/24/2024 5:40:50 PM
+419,41,1800,General Decision Sciences,1/24/2024 5:40:50 PM
+420,41,1801,Decision Sciences (miscellaneous),1/24/2024 5:40:50 PM
+421,41,1802,Information Systems and Management,1/24/2024 5:40:50 PM
+422,41,1803,Management Science and Operations Research,1/24/2024 5:40:50 PM
+423,41,1804,"Statistics, Probability and Uncertainty",1/24/2024 5:40:50 PM
+424,41,1900,General Earth and Planetary Sciences,1/24/2024 5:40:50 PM
+425,41,1901,Earth and Planetary Sciences (miscellaneous),1/24/2024 5:40:50 PM
+426,41,1902,Atmospheric Science,1/24/2024 5:40:50 PM
+427,41,1903,Computers in Earth Sciences,1/24/2024 5:40:50 PM
+428,41,1904,Earth-Surface Processes,1/24/2024 5:40:50 PM
+429,41,1905,Economic Geology,1/24/2024 5:40:50 PM
+430,41,1906,Geochemistry and Petrology,1/24/2024 5:40:50 PM
+431,41,1907,Geology,1/24/2024 5:40:50 PM
+432,41,1908,Geophysics,1/24/2024 5:40:50 PM
+433,41,1909,Geotechnical Engineering and Engineering Geology,1/24/2024 5:40:50 PM
+434,41,1910,Oceanography,1/24/2024 5:40:50 PM
+435,41,1911,Paleontology,1/24/2024 5:40:50 PM
+436,41,1912,Space and Planetary Science,1/24/2024 5:40:50 PM
+437,41,1913,Stratigraphy,1/24/2024 5:40:50 PM
+438,41,2000,"General Economics,Econometrics and Finance",1/24/2024 5:40:50 PM
+439,41,2001,"Economics, Econometrics and Finance (miscellaneous)",1/24/2024 5:40:50 PM
+440,41,2002,Economics and Econometrics,1/24/2024 5:40:50 PM
+441,41,2003,Finance,1/24/2024 5:40:50 PM
+442,41,2100,General Energy,1/24/2024 5:40:50 PM
+443,41,2101,Energy (miscellaneous),1/24/2024 5:40:50 PM
+444,41,2102,Energy Engineering and Power Technology,1/24/2024 5:40:50 PM
+445,41,2103,Fuel Technology,1/24/2024 5:40:50 PM
+446,41,2104,Nuclear Energy and Engineering,1/24/2024 5:40:50 PM
+447,41,2105,"Renewable Energy, Sustainability and the Environment",1/24/2024 5:40:50 PM
+448,41,2200,General Engineering,1/24/2024 5:40:50 PM
+449,41,2201,Engineering (miscellaneous),1/24/2024 5:40:50 PM
+450,41,2202,Aerospace Engineering,1/24/2024 5:40:50 PM
+451,41,2203,Automotive Engineering,1/24/2024 5:40:50 PM
+452,41,2204,Biomedical Engineering,1/24/2024 5:40:50 PM
+453,41,2205,Civil and Structural Engineering,1/24/2024 5:40:50 PM
+454,41,2206,Computational Mechanics,1/24/2024 5:40:50 PM
+455,41,2207,Control and Systems Engineering,1/24/2024 5:40:50 PM
+456,41,2208,Electrical and Electronic Engineering,1/24/2024 5:40:50 PM
+457,41,2209,Industrial and Manufacturing Engineering,1/24/2024 5:40:50 PM
+458,41,2210,Mechanical Engineering,1/24/2024 5:40:50 PM
+459,41,2211,Mechanics of Materials,1/24/2024 5:40:50 PM
+460,41,2212,Ocean Engineering,1/24/2024 5:40:50 PM
+461,41,2213,"Safety, Risk, Reliability and Quality",1/24/2024 5:40:50 PM
+462,41,2214,Media Technology,1/24/2024 5:40:50 PM
+463,41,2215,Building and Construction,1/24/2024 5:40:50 PM
+464,41,2216,Architecture,1/24/2024 5:40:50 PM
+465,41,2300,General Environmental Science,1/24/2024 5:40:50 PM
+466,41,2301,Environmental Science (miscellaneous),1/24/2024 5:40:50 PM
+467,41,2302,Ecological Modeling,1/24/2024 5:40:50 PM
+468,41,2303,Ecology,1/24/2024 5:40:50 PM
+469,41,2304,Environmental Chemistry,1/24/2024 5:40:50 PM
+470,41,2305,Environmental Engineering,1/24/2024 5:40:50 PM
+471,41,2306,Global and Planetary Change,1/24/2024 5:40:50 PM
+472,41,2307,"Health, Toxicology and Mutagenesis",1/24/2024 5:40:50 PM
+473,41,2308,"Management, Monitoring, Policy and Law",1/24/2024 5:40:50 PM
+474,41,2309,Nature and Landscape Conservation,1/24/2024 5:40:50 PM
+475,41,2310,Pollution,1/24/2024 5:40:50 PM
+476,41,2311,Waste Management and Disposal,1/24/2024 5:40:50 PM
+477,41,2312,Water Science and Technology,1/24/2024 5:40:50 PM
+478,41,2400,General Immunology and Microbiology,1/24/2024 5:40:50 PM
+479,41,2401,Immunology and Microbiology (miscellaneous),1/24/2024 5:40:50 PM
+480,41,2402,Applied Microbiology and Biotechnology,1/24/2024 5:40:50 PM
+481,41,2403,Immunology,1/24/2024 5:40:50 PM
+482,41,2404,Microbiology,1/24/2024 5:40:50 PM
+483,41,2405,Parasitology,1/24/2024 5:40:50 PM
+484,41,2406,Virology,1/24/2024 5:40:50 PM
+485,41,2500,General Materials Science,1/24/2024 5:40:50 PM
+486,41,2501,Materials Science (miscellaneous),1/24/2024 5:40:50 PM
+487,41,2502,Biomaterials,1/24/2024 5:40:50 PM
+488,41,2503,Ceramics and Composites,1/24/2024 5:40:50 PM
+489,41,2504,"Electronic, Optical and Magnetic Materials",1/24/2024 5:40:50 PM
+490,41,2505,Materials Chemistry,1/24/2024 5:40:50 PM
+491,41,2506,Metals and Alloys,1/24/2024 5:40:50 PM
+492,41,2507,Polymers and Plastics,1/24/2024 5:40:50 PM
+493,41,2508,"Surfaces, Coatings and Films",1/24/2024 5:40:50 PM
+494,41,2600,General Mathematics,1/24/2024 5:40:50 PM
+495,41,2601,Mathematics (miscellaneous),1/24/2024 5:40:50 PM
+497,41,2603,Analysis,1/24/2024 5:40:50 PM
+498,41,2604,Applied Mathematics,1/24/2024 5:40:50 PM
+499,41,2605,Computational Mathematics,1/24/2024 5:40:50 PM
+500,41,2606,Control and Optimization,1/24/2024 5:40:50 PM
+501,41,2607,Discrete Mathematics and Combinatorics,1/24/2024 5:40:50 PM
+502,41,2608,Geometry and Topology,1/24/2024 5:40:50 PM
+504,41,2610,Mathematical Physics,1/24/2024 5:40:50 PM
+505,41,2611,Modeling and Simulation,1/24/2024 5:40:50 PM
+506,41,2612,Numerical Analysis,1/24/2024 5:40:50 PM
+507,41,2613,Statistics and Probability,1/24/2024 5:40:50 PM
+508,41,2614,Theoretical Computer Science,1/24/2024 5:40:50 PM
+509,41,2700,General Medicine,1/24/2024 5:40:50 PM
+510,41,2701,Medicine (miscellaneous),1/24/2024 5:40:50 PM
+511,41,2702,Anatomy,1/24/2024 5:40:50 PM
+512,41,2703,Anesthesiology and Pain Medicine,1/24/2024 5:40:50 PM
+513,41,2704,Biochemistry (medical),1/24/2024 5:40:50 PM
+514,41,2705,Cardiology and Cardiovascular Medicine,1/24/2024 5:40:50 PM
+515,41,2706,Critical Care and Intensive Care Medicine,1/24/2024 5:40:50 PM
+516,41,2707,Complementary and Alternative Medicine,1/24/2024 5:40:50 PM
+517,41,2708,Dermatology,1/24/2024 5:40:50 PM
+518,41,2709,Drug Guides,1/24/2024 5:40:50 PM
+519,41,2710,Embryology,1/24/2024 5:40:50 PM
+520,41,2711,Emergency Medicine,1/24/2024 5:40:50 PM
+521,41,2712,"Endocrinology, Diabetes and Metabolism",1/24/2024 5:40:50 PM
+522,41,2713,Epidemiology,1/24/2024 5:40:50 PM
+523,41,2714,Family Practice,1/24/2024 5:40:50 PM
+524,41,2715,Gastroenterology,1/24/2024 5:40:50 PM
+525,41,2716,Genetics (clinical),1/24/2024 5:40:50 PM
+526,41,2717,Geriatrics and Gerontology,1/24/2024 5:40:50 PM
+527,41,2718,Health Informatics,1/24/2024 5:40:50 PM
+528,41,2719,Health Policy,1/24/2024 5:40:50 PM
+529,41,2720,Hematology,1/24/2024 5:40:50 PM
+530,41,2721,Hepatology,1/24/2024 5:40:50 PM
+531,41,2722,Histology,1/24/2024 5:40:50 PM
+532,41,2723,Immunology and Allergy,1/24/2024 5:40:50 PM
+533,41,2724,Internal Medicine,1/24/2024 5:40:50 PM
+534,41,2725,Infectious Diseases,1/24/2024 5:40:50 PM
+535,41,2726,Microbiology (medical),1/24/2024 5:40:50 PM
+536,41,2727,Nephrology,1/24/2024 5:40:50 PM
+537,41,2728,Neurology (clinical),1/24/2024 5:40:50 PM
+538,41,2729,Obstetrics and Gynecology,1/24/2024 5:40:50 PM
+539,41,2730,Oncology,1/24/2024 5:40:50 PM
+540,41,2731,Ophthalmology,1/24/2024 5:40:50 PM
+541,41,2732,Orthopedics and Sports Medicine,1/24/2024 5:40:50 PM
+542,41,2733,Otorhinolaryngology,1/24/2024 5:40:50 PM
+543,41,2734,Pathology and Forensic Medicine,1/24/2024 5:40:50 PM
+544,41,2735,"Pediatrics, Perinatology and Child Health",1/24/2024 5:40:50 PM
+545,41,2736,Pharmacology (medical),1/24/2024 5:40:50 PM
+546,41,2737,Physiology (medical),1/24/2024 5:40:50 PM
+547,41,2738,Psychiatry and Mental Health,1/24/2024 5:40:50 PM
+548,41,2739,"Public Health, Environmental and Occupational Health",1/24/2024 5:40:50 PM
+549,41,2740,Pulmonary and Respiratory Medicine,1/24/2024 5:40:50 PM
+550,41,2741,"Radiology, Nuclear Medicine and Imaging",1/24/2024 5:40:50 PM
+551,41,2742,Rehabilitation,1/24/2024 5:40:50 PM
+552,41,2743,Reproductive Medicine,1/24/2024 5:40:50 PM
+553,41,2744,Reviews and References (medical),1/24/2024 5:40:50 PM
+554,41,2745,Rheumatology,1/24/2024 5:40:50 PM
+555,41,2746,Surgery,1/24/2024 5:40:50 PM
+556,41,2747,Transplantation,1/24/2024 5:40:50 PM
+557,41,2748,Urology,1/24/2024 5:40:50 PM
+558,41,2800,General Neuroscience,1/24/2024 5:40:50 PM
+559,41,2801,Neuroscience (miscellaneous),1/24/2024 5:40:50 PM
+560,41,2802,Behavioral Neuroscience,1/24/2024 5:40:50 PM
+561,41,2803,Biological Psychiatry,1/24/2024 5:40:50 PM
+562,41,2804,Cellular and Molecular Neuroscience,1/24/2024 5:40:50 PM
+563,41,2805,Cognitive Neuroscience,1/24/2024 5:40:50 PM
+564,41,2806,Developmental Neuroscience,1/24/2024 5:40:50 PM
+565,41,2807,Endocrine and Autonomic Systems,1/24/2024 5:40:50 PM
+566,41,2808,Neurology,1/24/2024 5:40:50 PM
+567,41,2809,Sensory Systems,1/24/2024 5:40:50 PM
+568,41,2900,General Nursing,1/24/2024 5:40:50 PM
+569,41,2901,Nursing (miscellaneous),1/24/2024 5:40:50 PM
+570,41,2902,Advanced and Specialized Nursing,1/24/2024 5:40:50 PM
+571,41,2903,Assessment and Diagnosis,1/24/2024 5:40:50 PM
+572,41,2904,Care Planning,1/24/2024 5:40:50 PM
+573,41,2905,Community and Home Care,1/24/2024 5:40:50 PM
+574,41,2906,Critical Care Nursing,1/24/2024 5:40:50 PM
+575,41,2907,Emergency Nursing,1/24/2024 5:40:50 PM
+576,41,2908,Fundamentals and Skills,1/24/2024 5:40:50 PM
+577,41,2909,Gerontology,1/24/2024 5:40:50 PM
+578,41,2910,"Issues, Ethics and Legal Aspects",1/24/2024 5:40:50 PM
+579,41,2911,Leadership and Management,1/24/2024 5:40:50 PM
+580,41,2912,LPN and LVN,1/24/2024 5:40:50 PM
+581,41,2913,Maternity and Midwifery,1/24/2024 5:40:50 PM
+582,41,2914,Medical and Surgical Nursing,1/24/2024 5:40:50 PM
+583,41,2915,Nurse Assisting,1/24/2024 5:40:50 PM
+584,41,2916,Nutrition and Dietetics,1/24/2024 5:40:50 PM
+585,41,2917,Oncology (nursing),1/24/2024 5:40:50 PM
+587,41,2919,Pediatrics,1/24/2024 5:40:50 PM
+588,41,2920,Pharmacology (nursing),1/24/2024 5:40:50 PM
+589,41,2921,Psychiatric Mental Health,1/24/2024 5:40:50 PM
+590,41,2922,Research and Theory,1/24/2024 5:40:50 PM
+591,41,2923,Review and Exam Preparation,1/24/2024 5:40:50 PM
+592,41,3000,"General Pharmacology, Toxicology and Pharmaceutics",1/24/2024 5:40:50 PM
+593,41,3001,"Pharmacology, Toxicology and Pharmaceutics (miscellaneous)",1/24/2024 5:40:50 PM
+594,41,3002,Drug Discovery,1/24/2024 5:40:50 PM
+595,41,3003,Pharmaceutical Science,1/24/2024 5:40:50 PM
+596,41,3004,Pharmacology,1/24/2024 5:40:50 PM
+597,41,3005,Toxicology,1/24/2024 5:40:50 PM
+598,41,3100,General Physics and Astronomy,1/24/2024 5:40:50 PM
+599,41,3101,Physics and Astronomy (miscellaneous),1/24/2024 5:40:50 PM
+600,41,3102,Acoustics and Ultrasonics,1/24/2024 5:40:50 PM
+601,41,3103,Astronomy and Astrophysics,1/24/2024 5:40:50 PM
+602,41,3104,Condensed Matter Physics,1/24/2024 5:40:50 PM
+603,41,3105,Instrumentation,1/24/2024 5:40:50 PM
+604,41,3106,Nuclear and High Energy Physics,1/24/2024 5:40:50 PM
+605,41,3107,"Atomic and Molecular Physics, and Optics",1/24/2024 5:40:50 PM
+606,41,3108,Radiation,1/24/2024 5:40:50 PM
+607,41,3109,Statistical and Nonlinear Physics,1/24/2024 5:40:50 PM
+608,41,3110,Surfaces and Interfaces,1/24/2024 5:40:50 PM
+609,41,3200,General Psychology,1/24/2024 5:40:50 PM
+610,41,3201,Psychology (miscellaneous),1/24/2024 5:40:50 PM
+611,41,3202,Applied Psychology,1/24/2024 5:40:50 PM
+612,41,3203,Clinical Psychology,1/24/2024 5:40:50 PM
+613,41,3204,Developmental and Educational Psychology,1/24/2024 5:40:50 PM
+614,41,3205,Experimental and Cognitive Psychology,1/24/2024 5:40:50 PM
+615,41,3206,Neuropsychology and Physiological Psychology,1/24/2024 5:40:50 PM
+616,41,3207,Social Psychology,1/24/2024 5:40:50 PM
+617,41,3300,General Social Sciences,1/24/2024 5:40:50 PM
+618,41,3301,Social Sciences (miscellaneous),1/24/2024 5:40:50 PM
+619,41,3302,Archeology,1/24/2024 5:40:50 PM
+620,41,3303,Development,1/24/2024 5:40:50 PM
+621,41,3304,Education,1/24/2024 5:40:50 PM
+622,41,3305,"Geography, Planning and Development",1/24/2024 5:40:50 PM
+623,41,3306,Health (social science),1/24/2024 5:40:50 PM
+624,41,3307,Human Factors and Ergonomics,1/24/2024 5:40:50 PM
+625,41,3308,Law,1/24/2024 5:40:50 PM
+626,41,3309,Library and Information Sciences,1/24/2024 5:40:50 PM
+627,41,3310,Linguistics and Language,1/24/2024 5:40:50 PM
+628,41,3311,Safety Research,1/24/2024 5:40:50 PM
+629,41,3312,Sociology and Political Science,1/24/2024 5:40:50 PM
+630,41,3313,Transportation,1/24/2024 5:40:50 PM
+631,41,3314,Anthropology,1/24/2024 5:40:50 PM
+632,41,3315,Communication,1/24/2024 5:40:50 PM
+633,41,3316,Cultural Studies,1/24/2024 5:40:50 PM
+634,41,3317,Demography,1/24/2024 5:40:50 PM
+635,41,3318,Gender Studies,1/24/2024 5:40:50 PM
+636,41,3319,Life-span and Life-course Studies,1/24/2024 5:40:50 PM
+637,41,3320,Political Science and International Relations,1/24/2024 5:40:50 PM
+638,41,3321,Public Administration,1/24/2024 5:40:50 PM
+639,41,3322,Urban Studies,1/24/2024 5:40:50 PM
+640,41,3400,General Veterinary,1/24/2024 5:40:50 PM
+641,41,3401,Veterinary (miscellaneous),1/24/2024 5:40:50 PM
+642,41,3402,Equine,1/24/2024 5:40:50 PM
+643,41,3403,Food Animals,1/24/2024 5:40:50 PM
+644,41,3404,Small Animals,1/24/2024 5:40:50 PM
+645,41,3500,General Dentistry,1/24/2024 5:40:50 PM
+646,41,3501,Dentistry (miscellaneous),1/24/2024 5:40:50 PM
+649,41,3504,Oral Surgery,1/24/2024 5:40:50 PM
+650,41,3505,Orthodontics,1/24/2024 5:40:50 PM
+652,41,3600,General Health Professions,1/24/2024 5:40:50 PM
+653,41,3601,Health Professions (miscellaneous),1/24/2024 5:40:50 PM
+654,41,3602,Chiropractics,1/24/2024 5:40:50 PM
+655,41,3603,Complementary and Manual Therapy,1/24/2024 5:40:50 PM
+656,41,3604,Emergency Medical Services,1/24/2024 5:40:50 PM
+657,41,3605,Health Information Management,1/24/2024 5:40:50 PM
+659,41,3607,Medical Laboratory Technology,1/24/2024 5:40:50 PM
+661,41,3609,Occupational Therapy,1/24/2024 5:40:50 PM
+662,41,3610,Optometry,1/24/2024 5:40:50 PM
+663,41,3611,Pharmacy,1/24/2024 5:40:50 PM
+664,41,3612,"Physical Therapy, Sports Therapy and Rehabilitation",1/24/2024 5:40:50 PM
+666,41,3614,Radiological and Ultrasound Technology,1/24/2024 5:40:50 PM
+668,41,3616,Speech and Hearing,1/24/2024 5:40:50 PM

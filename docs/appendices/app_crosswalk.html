@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-16">
+<meta name="dcterms.date" content="2025-03-17">
 
-<title>Data Schema – Citation Database Assessment</title>
+<title>Data Schemas and File Inventory – Citation Database Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schemas and File Inventory</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -199,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Data Schema</span></a>
+ <span class="menu-text">Data Schemas and File Inventory</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -208,19 +208,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/app_scopus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Scopus</span></a>
+ <span class="menu-text">Scopus Data Dictionary</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/app_openalex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">OpenAlex</span></a>
+ <span class="menu-text">OpenAlex Data Dictionary</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/app_dimensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dimensions</span></a>
+ <span class="menu-text">Dimensions Data Dictionary</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -249,17 +249,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-schema" id="toc-data-schema" class="nav-link active" data-scroll-target="#data-schema"><span class="header-section-number">1</span> Data Schema</a></li>
-  <li><a href="#crosswalk-files" id="toc-crosswalk-files" class="nav-link" data-scroll-target="#crosswalk-files"><span class="header-section-number">2</span> Crosswalk Files</a></li>
+  <li><a href="#file-inventory" id="toc-file-inventory" class="nav-link active" data-scroll-target="#file-inventory">File Inventory</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_crosswalk.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schemas and File Inventory</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Data Schema</h1>
+<h1 class="title">Data Schemas and File Inventory</h1>
 </div>
 
 
@@ -270,7 +269,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 16, 2025</p>
+      <p class="date">March 17, 2025</p>
     </div>
   </div>
   
@@ -282,11 +281,68 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="data-schema" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Data Schema</h1>
-</section>
-<section id="crosswalk-files" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Crosswalk Files</h1>
+<!-- # Data Schema {.unnumbered} -->
+<table>
+<thead>
+<tr>
+<th style="border-bottom: 2px solid #ccc; text-align: center;">
+Scopus Schema
+</th>
+<th style="border-bottom: 2px solid #ccc; text-align: center;">
+OpenAlex Schema
+</th>
+<th style="border-bottom: 2px solid #ccc; text-align: center;">
+Dimensions Schema
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
+<a href="scopus_schema.png" target="_blank"> <img src="scopus_thumbnail.png" alt="Scopus Schema" width="250"> </a>
+</td>
+<td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
+<a href="scopus_schema.png" target="_blank"> <img src="openalex_thumbnail.png" alt="OpenAlex Schema" width="250"> </a>
+</td>
+<td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
+<a href="scopus_schema.png" target="_blank"> <img src="dimensions_thumbnail.png" alt="Dimensions Schema" width="250"> </a>
+</td>
+</tr>
+</tbody>
+</table>
+<section id="file-inventory" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="file-inventory">File Inventory</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Scopus Files</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<ul>
+<li><strong>Primary Table:</strong> <code>publication</code></li>
+<li><strong>Supporting Tables:</strong>
+<ul>
+<li><code>agency_run</code></li>
+<li><code>asjc</code></li>
+<li><code>author</code></li>
+<li><code>author_affiliation</code></li>
+<li><code>dataset_alias</code></li>
+<li><code>dyad</code></li>
+<li><code>dyad_model</code></li>
+<li><code>issn</code></li>
+<li><code>journal</code></li>
+<li><code>model</code></li>
+<li><code>publication_affiliation</code></li>
+<li><code>publication_asjc</code></li>
+<li><code>publication_author</code></li>
+<li><code>publication_topic</code></li>
+<li><code>publication_ufc</code></li>
+<li><code>publisher</code></li>
+<li><code>topic</code></li>
+</ul></li>
+</ul>
+<p><em>Refer to the schema for additional column-level details.</em></p>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -719,8 +775,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../appendices/app_scopus.html" class="pagination-link" aria-label="Scopus">
-        <span class="nav-page-text">Scopus</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../appendices/app_scopus.html" class="pagination-link" aria-label="Scopus Data Dictionary">
+        <span class="nav-page-text">Scopus Data Dictionary</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

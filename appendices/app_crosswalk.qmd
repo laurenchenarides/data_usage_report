@@ -1,5 +1,5 @@
 ---
-title: "Data Schema"
+title: "Data Schemas and File Inventory"
 date: last-modified  # Auto-updates based on Git commits
 format:
   html:
@@ -9,7 +9,64 @@ format:
     css: styles.css
 ---
 
-# Data Schema
+<!-- # Data Schema {.unnumbered} -->
 
-# Crosswalk Files
+<table>
+  <thead>
+    <tr>
+      <th style="border-bottom: 2px solid #ccc; text-align: center;">Scopus Schema</th>
+      <th style="border-bottom: 2px solid #ccc; text-align: center;">OpenAlex Schema</th>
+      <th style="border-bottom: 2px solid #ccc; text-align: center;">Dimensions Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
+        <a href="scopus_schema.png" target="_blank">
+          <img src="scopus_thumbnail.png" alt="Scopus Schema" width="250">
+        </a>
+      </td>
+      <td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
+        <a href="scopus_schema.png" target="_blank">
+          <img src="openalex_thumbnail.png" alt="OpenAlex Schema" width="250">
+        </a>
+      </td>
+      <td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
+        <a href="scopus_schema.png" target="_blank">
+          <img src="dimensions_thumbnail.png" alt="Dimensions Schema" width="250">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
+
+## File Inventory {.unnumbered}
+
+::: {.panel-tabset}
+
+### Scopus Files
+
+- **Primary Table:** `publication`
+- **Supporting Tables:**
+  - `agency_run`
+  - `asjc`
+  - `author`
+  - `author_affiliation`
+  - `dataset_alias`
+  - `dyad`
+  - `dyad_model`
+  - `issn`
+  - `journal`
+  - `model`
+  - `publication_affiliation`
+  - `publication_asjc`
+  - `publication_author`
+  - `publication_topic`
+  - `publication_ufc`
+  - `publisher`
+  - `topic`
+
+*Refer to the schema for additional column-level details.*
+
+:::
