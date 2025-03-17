@@ -12,16 +12,13 @@ bibliography: references.bib  # Link to your BibTeX file
 csl: apa.csl  # Optional: Use a specific citation style (e.g., APA)
 ---
 
-# Conclusions
+## Technical Recommendations {.unnumbered}
 
-## Technical Recommendations
-
-## Expanding Dataset Usage
+## Expanding Dataset Usage {.unnumbered}
 
 This report analyzes USDA dataset usage patterns across both platforms and recommends specific strategies for expanding dataset use in underrepresented research communities.
 
 Given the small percentage of MSI’s represented in our institutional analysis, it is evident that user engagement is central to increasing usage rates of the datasets, regardless of citation database.
 
-# Next Steps
+## Next Steps {.unnumbered}
 
-# References

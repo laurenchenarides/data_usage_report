@@ -63,7 +63,7 @@ The methodology produced these reusable components:
 -   Cleaned author tables with disambiguated names and institutional affiliations
 -   Standardized institution tables using IPEDS identifiers
 -   Crosswalk table structure linking Scopus and OpenAlex publication records, authors, and institutions
--   [Data schema visualization](https://dbdiagram.io/d/scopus_schema-67d71fa375d75cc84445d40b) \[Last updated: **in progress**\]
+-   <a href="https://dbdiagram.io/d/scopus_schema-67d71fa375d75cc84445d40b" target="_blank" rel="noopener">Data schema visualization</a> \[Last updated: **in progress**\]
 
 The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.
 

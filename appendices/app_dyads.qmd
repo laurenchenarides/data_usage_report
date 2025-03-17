@@ -1,2 +1,13 @@
-## Dimensions {#sec-app-dimensions}
+---
+title: "Data Dyads: Assets and Aliases"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+---
+
+**Add file here**
 

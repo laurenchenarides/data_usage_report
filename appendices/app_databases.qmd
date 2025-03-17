@@ -9,7 +9,7 @@ format:
     css: styles.css
 ---
 
-# Overview of Citation Databases
+# Overview of Citation Databases {.unnumbered}
 
 ## Scopus {#sec-scopus}
 
