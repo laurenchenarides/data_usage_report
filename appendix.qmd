@@ -1,0 +1,26 @@
+---
+title: "Methodology for Comparing Citation Database Coverage of Dataset Usage"
+subtitle: "Report Appendices"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+bibliography: references.bib  # Link to your BibTeX file
+csl: apa.csl  # Optional: Use a specific citation style (e.g., APA)
+---
+
+
+| **Appendix**                | **File Path & Link** |
+|-----------------------------|----------------------|
+| **Citation Database Summary** |  |
+| **Data Schema**         |  |
+| **Scopus File Inventory**    |  |
+| **OpenAlex File Inventory**      | |
+| **Dimensions File Inventory**      | |
+| **IPEDS File Inventory**      | |
+| **MSI File Inventory**      | |
+
+

@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-03-16">
 
-<title>Identifying Minority Serving Institutions (MSIs) – Citation Database Assessment</title>
+<title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../appendices/app_ipeds.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../workflow/step02_02/create_seed_corpus.html" rel="next">
+<link href="../../workflow/step01/define_data_assets.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_msi.html">Identifying Minority Serving Institutions (MSIs)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../workflow.html">Project Workflow</a></li><li class="breadcrumb-item"><a href="../../workflow/step02_01/extract_dataset_mentions.html">Step 02: Extract Dataset Mentions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -96,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Citation Database Assessment</a> 
+      <a href="../../">Citation Database Assessment</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report" title="" class="quarto-navigation-tool px-1" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
 </div>
@@ -111,58 +112,58 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../home.html" class="sidebar-item-text sidebar-link">
+  <a href="../../home.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Report Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../terminology.html" class="sidebar-item-text sidebar-link">
+  <a href="../../terminology.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Terminology</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Background</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../workflow.html" class="sidebar-item-text sidebar-link">
+            <a href="../../workflow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Workflow</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workflow/step01/define_data_assets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../workflow/step01/define_data_assets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Step 01: Define Data Assets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workflow/step02_01/extract_dataset_mentions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../workflow/step02_01/extract_dataset_mentions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Step 02: Extract Dataset Mentions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workflow/step02_02/create_seed_corpus.html" class="sidebar-item-text sidebar-link">
+  <a href="../../workflow/step02_02/create_seed_corpus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Creating a Seed Corpus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workflow/step03/clean_pub_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../workflow/step03/clean_pub_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Step 03: Clean Publication Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workflow/results/compare_pub_data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../workflow/results/compare_pub_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Step 04: Compare Results</span></a>
   </div>
 </li>
@@ -170,67 +171,67 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../report.html" class="sidebar-item-text sidebar-link">
+  <a href="../../report.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Findings</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../conclusions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../conclusions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conclusions</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../appendix.html" class="sidebar-item-text sidebar-link">
+            <a href="../../appendix.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_databases.html" class="sidebar-item-text sidebar-link">
+  <a href="../../appendices/app_databases.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Citation Database Summary</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link">
+            <a href="../../appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Schema</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_scopus.html" class="sidebar-item-text sidebar-link">
+  <a href="../../appendices/app_scopus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scopus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_openalex.html" class="sidebar-item-text sidebar-link">
+  <a href="../../appendices/app_openalex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">OpenAlex</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_dimensions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../appendices/app_dimensions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dimensions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_ipeds.html" class="sidebar-item-text sidebar-link">
+  <a href="../../appendices/app_ipeds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Classifying Institutions with the IPEDS Database</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_msi.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../appendices/app_msi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Identifying Minority Serving Institutions (MSIs)</span></a>
   </div>
 </li>
@@ -248,23 +249,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#how-these-files-fit-into-the-project-workflow" id="toc-how-these-files-fit-into-the-project-workflow" class="nav-link" data-scroll-target="#how-these-files-fit-into-the-project-workflow">How These Files Fit into the Project Workflow</a></li>
-  <li><a href="#file-organization-in-github-repository" id="toc-file-organization-in-github-repository" class="nav-link" data-scroll-target="#file-organization-in-github-repository">File Organization in GitHub Repository</a></li>
-  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a></li>
-  <li><a href="#file-descriptions" id="toc-file-descriptions" class="nav-link" data-scroll-target="#file-descriptions">File Descriptions</a></li>
-  <li><a href="#summary-of-the-msi-data" id="toc-summary-of-the-msi-data" class="nav-link" data-scroll-target="#summary-of-the-msi-data">Summary of the MSI data</a></li>
-  <li><a href="#data-processing-and-standardization" id="toc-data-processing-and-standardization" class="nav-link" data-scroll-target="#data-processing-and-standardization">Data Processing and Standardization</a></li>
-  <li><a href="#how-to-merge-with-ipeds-data" id="toc-how-to-merge-with-ipeds-data" class="nav-link" data-scroll-target="#how-to-merge-with-ipeds-data">How to Merge with IPEDS Data</a></li>
+  <li><a href="#sec-data-idn" id="toc-sec-data-idn" class="nav-link active" data-scroll-target="#sec-data-idn">Extract Dataset Mentions to Build a Publication Dataset</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_msi.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/workflow/step02_01/extract_dataset_mentions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_msi.html">Identifying Minority Serving Institutions (MSIs)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../workflow.html">Project Workflow</a></li><li class="breadcrumb-item"><a href="../../workflow/step02_01/extract_dataset_mentions.html">Step 02: Extract Dataset Mentions</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Identifying Minority Serving Institutions (MSIs)</h1>
+<h1 class="title">Methodology for Comparing Citation Database Coverage of Dataset Usage</h1>
+<p class="subtitle lead">Step 02: Extract Dataset Mentions</p>
 </div>
 
 
@@ -287,555 +282,211 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="overview">Overview</h3>
-<p>The <strong>Minority-Serving Institutions (MSI) Data</strong> captures institutions eligible for federal MSI programs, as determined by the U.S. Department of Education and other sources. In this project, MSI data is used to analyze institutional characteristics in relation to research publications identified in Scopus, OpenAlex, and Dimensions.</p>
-<p>This dataset provides information on institutions <em>eligible or potentially eligible</em> for at least one MSI designation and includes data from 2017 to 2023. The MSI dataset integrates information from multiple sources and is merged with IPEDS data to track research output across different institution types.</p>
-</section>
-<section id="how-these-files-fit-into-the-project-workflow" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="how-these-files-fit-into-the-project-workflow">How These Files Fit into the Project Workflow</h3>
-<p>The MSI dataset are used to:</p>
-<ol type="1">
-<li>Identify MSI-designated institutions within Scopus, OpenAlex, and Dimensions.</li>
-<li>Compare research output across MSI and non-MSI institutions.</li>
-<li>Analyze dataset usage at institutions serving underrepresented student populations.</li>
-</ol>
-<p>By integrating MSI eligibility data with publication datasets, we can assess whether MSI institutions are underrepresented in academic research databases.</p>
-</section>
-<section id="file-organization-in-github-repository" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="file-organization-in-github-repository">File Organization in GitHub Repository</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th><strong>Category</strong></th>
-<th><strong>File Path &amp; Link</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Processed MSI Dataset</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/ipeds"><code>compare_scopus_openalex/resources/ipeds/msi.csv</code></a></td>
-</tr>
-<tr class="even">
-<td><strong>Raw MSI Data</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/ipeds"><code>compare_scopus_openalex/resources/ipeds</code></a></td>
-</tr>
-<tr class="odd">
-<td><strong>Data Processing Code</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/IPEDSdata.rmd</code></a></td>
-</tr>
-<tr class="even">
-<td><strong>Data Documentation</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/IPEDS_Data.md</code></a></td>
-</tr>
-<tr class="odd">
-<td><strong>Python Script for PDF Processing</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation/MSI_after2020.py"><code>compare_scopus_openalex/resources/documentation/MSI_after2020.py</code></a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="data-sources" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="data-sources">Data Sources</h3>
-<p>The MSI dataset combines data from multiple sources:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th><strong>Years</strong></th>
-<th><strong>Source</strong></th>
-<th><strong>Link</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>2017-2021</strong></td>
-<td>MSI Data Project (Nguyen et al., 2023)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
-<td><a href="https://nyu.app.box.com/s/kf6ihe5wcm8gc4pkgcbvv5dfzjy2w6rm">Link</a></td>
-</tr>
-<tr class="even">
-<td><strong>2022</strong></td>
-<td>Rutgers CMSI<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
-<td><a href="https://cmsi.gse.rutgers.edu/sites/default/files/2022%20MSI%20List.pdf">PDF</a></td>
-</tr>
-<tr class="odd">
-<td><strong>2023</strong></td>
-<td>Rutgers CMSI<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></td>
-<td><a href="https://cmsi.gse.rutgers.edu/sites/default/files/2023%20CMSI%20MSI%20List.pdf">PDF</a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="file-descriptions" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="file-descriptions">File Descriptions</h3>
-<section id="msi-data-msi.csv" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="msi-data-msi.csv">2017-2021 MSI Data (<code>msi.csv</code>)</h4>
+<section id="sec-data-idn" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-data-idn">Extract Dataset Mentions to Build a Publication Dataset</h2>
+<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
+<strong>The goal of this step is to build a dataset of publications that reference the dataset name aliases for the USDA data assets across Scopus, OpenAlex, and Dimensions.</strong>
+</div>
+<p>To generate this dataset, the process requires:</p>
 <ul>
-<li><strong>Description</strong>: Contains MSI eligibility and designation data for institutions from 2017 to 2021.</li>
-<li><strong>Contents</strong>:
-<ul>
-<li><code>UNITID</code>: Unique identification number of the institution</li>
-<li><code>opeid</code>: Office of Postsecondary Education (OPE) ID Number</li>
-<li><code>instname</code>: Name of the institution</li>
-<li><code>year</code>: The year in which the endowment size was recorded</li>
-<li><code>level</code>: 2-year/4-year</li>
-<li><code>control</code>: public, private for profit, private not for profit</li>
-<li><code>msi_type_hbcu</code>: 1=yes, 0=no</li>
-<li><code>msi_type_aanapisi</code>: 1=yes, 0=no</li>
-<li><code>msi_type_annhsi</code>: 1=yes, 0=no</li>
-<li><code>msi_type_hsi</code>: 1=yes, 0=no</li>
-<li><code>msi_type_nasnti</code>: 1=yes, 0=no</li>
-<li><code>msi_type_tccu</code>: 1=yes, 0=no</li>
-<li><code>msi_type_pbi</code>: 1=yes, 0=no</li>
-<li><code>sum</code>: sum of previous msi type columns</li>
-<li><code>fund_atleastone</code>: funded under at least one program (0 or 1)</li>
-</ul></li>
+<li>Dataset name aliases (from Step 1)</li>
+<li>Search routines tailored to each citation database to extract relevant publications</li>
 </ul>
-</section>
-<section id="msi-data-msi_2022-2023.csv" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="msi-data-msi_2022-2023.csv">2022-2023 MSI Data (<code>MSI_2022-2023.csv</code>)</h4>
-<ul>
-<li><strong>Description</strong>: MSI eligibility data for 2022 and 2023, extracted from Rutgers CMSI PDFs.</li>
-<li><strong>Contents</strong>:
-<ul>
-<li><code>UNITID</code>: Unique identification number of the institution</li>
-<li><code>opeid</code>: Office of Postsecondary Education (OPE) ID Number</li>
-<li><code>year</code>: The year in which the endowment size was recorded <!-- - `fund_atleastone`: Eligible or potentially eligible for at least one program --></li>
-<li><code>institution_name</code>: Name of the institution</li>
-<li><code>state</code>: State</li>
-<li><code>level</code>: 2-year/4-year</li>
-<li><code>control</code>: public, private for profit, private not for profit</li>
-<li><code>msi_type_hbcu</code>: 1=yes, 0=no</li>
-<li><code>msi_type_aanapisi</code>: 1=yes, 0=no</li>
-<li><code>msi_type_annhsi</code>: 1=yes, 0=no</li>
-<li><code>msi_type_hsi</code>: 1=yes, 0=no</li>
-<li><code>msi_type_nasnti</code>: 1=yes, 0=no</li>
-<li><code>msi_type_tccu</code>: 1=yes, 0=no</li>
-<li><code>msi_type_pbi</code>: 1=yes, 0=no</li>
-<li><code>sum</code>: sum of previous msi type column</li>
-<li><code>fund_atleastone</code>: funded under at least one program (0 or 1)</li>
-</ul></li>
-<li><strong>Processing Notes</strong>:
-<ul>
-<li>Python was used to convert PDFs to Excel (<code>MSI_after2020.py</code>).</li>
-<li>Data was cleaned and standardized to match the 2017-2021 format.</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="summary-of-the-msi-data" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="summary-of-the-msi-data">Summary of the MSI data</h2>
+<p>Search routines, described below, guide this step, as dataset mentions are often inconsistent across publications—appearing in titles, abstracts, full text, or reference lists. Scopus uses a structured seed corpus to refine searches, while OpenAlex and Dimensions rely on direct queries across their full publication records. The outputs of this step are three publication-level datasets, one for each citation database, which will be further analyzed in subsequent steps.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Percent of MSI Institutions by year</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Distinct institutions by year and control</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Distinct institutions by year and level: Public universities</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Distinct institutions by year and level: Private universities</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<section id="search-routines" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="search-routines">Search Routines</h3>
+<p>The search routines for Scopus were designed to systematically identify mentions of USDA data assets across a vast collection of academic publications. Multiple approaches were used to maximize dataset identification. These included (1) full-text searches, which leveraged Scopus’s licensed access to retrieve dataset mentions directly from publication text, (2) reference searches, which scanned citation lists for dataset appearances, and (3) machine learning models, which applied text-matching algorithms to improve accuracy.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Process of Running Search Routines">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Process of Running Search Routines
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The process of running the search routines is to identify a candidate match with the list of data assets. The candidate match is effectively the “publication ID – dataset ID” combination and is referred to as a <strong>dyad</strong>. For any given publication, there may be multiple dyads.</p>
+<p>Identifying references to datasets within scientific publications is inherently difficult for a number of reasons including:</p>
+<ol type="1">
+<li>No defined format for dataset references: Datasets are often not cited formally and rather are referred to using unpredictable textual context and formats.</li>
+<li>Name disambiguation: Datasets can be referred to by their full name, acronym, and many other valid ways. For instance, the dataset “Rural-Urban Continuum Codes” may also be referred to as “Rural Urban Continuum Codes” or “RUCC” or by using a URL reference,</li>
+<li>Conflicts with other terms and phrases: Contextual cues need to be used to ensure, for example, that a data asset such as “Feed Outlook” is indeed the relevant USDA reference.</li>
+<li>Simple spelling and other invalid references: Ideally, search algorithms need to allow for “fuzzy” matching to catch slightly misspelled or mis-named datasets.</li>
+</ol>
+<p>To address this challenge, the project employed the top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative.</p>
+</div>
+</div>
+<section id="full-text-search-corpus" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="full-text-search-corpus">1. Full Text Search Corpus</h4>
+<p>Scopus is a large, curated abstract and citation database of scientific literature including scientific journals, books, and conference proceedings. Around 11,000 new records are added each day from over 7,000 publishers worldwide. Elsevier is also licensed to access the full text of publications from many, although not all, of these publishers for internal analysis (the full text is not licensed for public use). Where the appropriate licenses do not exist, the records are excluded from the search. To provide some context in this respect, for calendar year 2022, Elsevier estimates that full text records exist for 91% of records published and captured in that year. With license restrictions also considered, the estimate is that it is possible to undertake full text searches on approximately 82% of the total records for that year.</p>
+<p>The USDA full text search corpus was created using Scopus, with a publication year range of 2017 to 2023 inclusive and using the Topics, Journals and Top Authors.</p>
+<p>The full text records associated with the USDA search corpus is shown in <a href="#tbl-usda-full-text" class="quarto-xref">Table&nbsp;1</a>:</p>
+<div id="tbl-usda-full-text" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-usda-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Full Text Records Associated with USDA Search Corpus
+</figcaption>
+<div aria-describedby="tbl-usda-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Year</th>
-<th>Total</th>
-<th>MSI %</th>
-<th>Not_MSI %</th>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Number of Records</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>2017</td>
-<td>5242</td>
-<td>8.13</td>
-<td>91.87</td>
+<td style="text-align: left;">2017-2023 Articles from Topics</td>
+<td style="text-align: center;">726,423</td>
 </tr>
 <tr class="even">
-<td>2018</td>
-<td>5242</td>
-<td>7.69</td>
-<td>92.31</td>
+<td style="text-align: left;">2017-2023 Articles from Journals</td>
+<td style="text-align: center;">1,537,851</td>
 </tr>
 <tr class="odd">
-<td>2019</td>
-<td>5242</td>
-<td>7.84</td>
-<td>92.16</td>
+<td style="text-align: left;">2017-2023 Articles from Top Authors</td>
+<td style="text-align: center;">21,938</td>
 </tr>
 <tr class="even">
-<td>2020</td>
-<td>5242</td>
-<td>7.80</td>
-<td>92.20</td>
+<td style="text-align: left;">De-duplicated Articles from Above</td>
+<td style="text-align: center;">2,089,728</td>
 </tr>
 <tr class="odd">
-<td>2021</td>
-<td>5242</td>
-<td>8.81</td>
-<td>91.19</td>
+<td style="text-align: left;">Deduplicated articles where we have full text</td>
+<td style="text-align: center;">1,630,958</td>
 </tr>
 <tr class="even">
-<td>2022</td>
-<td>5242</td>
-<td>16.73</td>
-<td>83.27</td>
-</tr>
-<tr class="odd">
-<td>2023</td>
-<td>5242</td>
-<td>16.58</td>
-<td>83.42</td>
+<td style="text-align: left;">Deduplicated articles where we have full text and are licensed to search</td>
+<td style="text-align: center;">1,450,086</td>
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
+</section>
+<section id="references-search-corpus" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="references-search-corpus">2. References Search Corpus</h4>
+<p>A search through the references list of Scopus records is also undertaken as a separate and distinct step from the full text search. The search corpus here is broader than for full text, as there are no license conditions restricting the search. In addition, because references contain highly structured data, it is feasible to search through all of Scopus, as the computational limitations of full-text search do not apply.</p>
+<p>Because of this, all Scopus records within the publication date range are searched. For the USDA search period of 2017 to 2023, this amounted to 25,110,182 records.</p>
+<p>The reference search employs an exact text string matching routine across the references of the identified Scopus records.</p>
+<p>Because of the issues associated with generic terms, the same flags as applied in the Machine Learning step were also applied here.</p>
+<div id="tbl-scopus-refs" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-scopus-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Number of Records from Scopus References Search Routine
+</figcaption>
+<div aria-describedby="tbl-scopus-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Process Step Outputs</th>
+<th style="text-align: center;">Number of Records</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Number of unique Scopus publications identified in reference search</td>
+<td style="text-align: center;">25,588</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of those publications that were unique to the reference search (i.e.&nbsp;not found by Kaggle models).</td>
+<td style="text-align: center;">22,818</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of target data assets matched with the above publications</td>
+<td style="text-align: center;">34,526</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="machine-learning-kaggle-routines-full-text-search" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="machine-learning-kaggle-routines-full-text-search">3. Machine Learning (Kaggle) Routines (Full Text Search)</h4>
+<p>The top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative differ in their approaches, strengths, and weaknesses, and the strategy was to use all three to generate results, aggregating and filtering the results to achieve a synergy that would outperform any of the models individually. The same Kaggle models that were used in support of the Year 1 USDA project were employed on the data assets available to this project.</p>
+<p>The models are applied to the full text search corpus and generate a series of outputs identifying potential dataset matches. For two of the Kaggle models, the focus is on identifying general data assets so many matches will be generated that are not relevant to USDA and its target data assets. Thus, a further fuzzy text matching routine is applied to the Kaggle output to produce a subset of candidate matches (dyads) that are linked to the target data assets.</p>
+<p>As well as producing metadata for the publications and associated dyads, the process records the Kaggle record that produced the dyad and the scores associated with the matching routines. In addition, for all returned records where publisher licensing allows, a snippet is produced. The snippet is a fragment of text that shows both the referenced dataset and the contextual text that surrounds it, to provide human validators sufficient context to enable them to determine the validity of that candidate reference. The machine learning phase of the project therefore aims to locate all mentions of the target data assets within the search corpus of full text publications and to provide the candidate matches along with their snippets of text to a database that can facilitate subsequent validation by subject matter experts.</p>
+<p>With a focus on data assets rather than datasets and with some of the name aliases comprising short acronyms and/or very generic terms, there is a risk that high levels of false positives would be generated. For example, one of the search terms was “Crop Progress Report”. There are likely to many other countries beyond the US that all issue reports on Crop Progress. Hence, as well as searching for the terms, a set of flags/filters were also included thus ensuring dyads could be identified which also had the flagged terms. Typically, the filters chosen were linked either to focusing on the agency or to focusing on the research produced in the US. Specifically, for the full text search in the USDA project, the following terms were employed as filters:</p>
+<blockquote class="blockquote">
+<p>NASS, USDA, US Department of Agriculture, United States Department of Agriculture, National Agricultural Statistics Service, Economic Research Service</p>
+</blockquote>
+<p>In total, the use of flags was identified as being appropriate for 112 of the data assets.</p>
+<p>The Kaggle routines were run in early December 2023 with the process completing on 14 December.</p>
+<p>A summary of some of the key results from the Full Text search is provided in <a href="#tbl-kaggle-full-text" class="quarto-xref">Table&nbsp;3</a>:</p>
+<div id="tbl-kaggle-full-text" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-kaggle-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Full Text Search Generated by Kaggle Routine
+</figcaption>
+<div aria-describedby="tbl-kaggle-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Process Step Outputs</th>
+<th style="text-align: center;">Number of Records</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Number of unique Scopus publications identified by the three Kaggle algorithms</td>
+<td style="text-align: center;">635,831</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of unique publications identified after Fuzzy text matching to target data assets</td>
+<td style="text-align: center;">4,104</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of target data assets matched in the above publications</td>
+<td style="text-align: center;">4,392<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of snippets generated</td>
+<td style="text-align: center;">14,377<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Post Processing Adjustments – RUCC and QuickStat Increment</strong></p>
+<p>Note that the RUCC and Quickstat increment was applied after the Kaggle routines were initially run. The process for running that increment involved two steps:</p>
+<ul>
+<li>A new search of the Scopus reference search corpus using the RUCC and Quickstat aliases.</li>
+<li>A fuzzy text search of the Kaggle output that had been generated using the RUCC and Quickstat aliases.</li>
+</ul>
+</section>
+</section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 2%">
-<col style="width: 5%">
-<col style="width: 5%">
-<col style="width: 7%">
-<col style="width: 9%">
-<col style="width: 9%">
-<col style="width: 10%">
-<col style="width: 11%">
-<col style="width: 10%">
-<col style="width: 11%">
-<col style="width: 5%">
-<col style="width: 4%">
-<col style="width: 6%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Year</th>
-<th>Private (total)</th>
-<th>Private (MSI)</th>
-<th>Private (Not_MSI)</th>
-<th>Private for-profit (total)</th>
-<th>Private for-profit (MSI)</th>
-<th>Private for-profit (Not_MSI)</th>
-<th>Private not-for-profit (total)</th>
-<th>Private not-for-profit (MSI)</th>
-<th>Private not-for-profit (Not_MSI)</th>
-<th>Public (total)</th>
-<th>Public (MSI)</th>
-<th>Public (Not_MSI)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2017</td>
-<td>1837</td>
-<td>5.66</td>
-<td>94.34</td>
-<td>1409</td>
-<td>0.00</td>
-<td>100.00</td>
-<td>26</td>
-<td>0.00</td>
-<td>100.00</td>
-<td>1678</td>
-<td>19.18</td>
-<td>80.81</td>
-</tr>
-<tr class="even">
-<td>2018</td>
-<td>1837</td>
-<td>5.72</td>
-<td>94.28</td>
-<td>1409</td>
-<td>0.00</td>
-<td>100.00</td>
-<td>26</td>
-<td>0.00</td>
-<td>100.00</td>
-<td>1678</td>
-<td>17.76</td>
-<td>82.24</td>
-</tr>
-<tr class="odd">
-<td>2019</td>
-<td>1837</td>
-<td>5.72</td>
-<td>94.28</td>
-<td>1409</td>
-<td>0.00</td>
-<td>100.00</td>
-<td>26</td>
-<td>0.00</td>
-<td>100.00</td>
-<td>1678</td>
-<td>18.24</td>
-<td>81.76</td>
-</tr>
-<tr class="even">
-<td>2020</td>
-<td>1837</td>
-<td>5.77</td>
-<td>94.23</td>
-<td>1409</td>
-<td>0.00</td>
-<td>100.00</td>
-<td>26</td>
-<td>0.00</td>
-<td>100.00</td>
-<td>1678</td>
-<td>18.06</td>
-<td>81.94</td>
-</tr>
-<tr class="odd">
-<td>2021</td>
-<td>1837</td>
-<td>5.88</td>
-<td>94.12</td>
-<td>1409</td>
-<td>0.00</td>
-<td>100.00</td>
-<td>26</td>
-<td>0.00</td>
-<td>100.00</td>
-<td>1678</td>
-<td>21.10</td>
-<td>78.90</td>
-</tr>
-<tr class="even">
-<td>2022</td>
-<td>1837</td>
-<td>14.81</td>
-<td>85.19</td>
-<td>1409</td>
-<td>0.14</td>
-<td>99.86</td>
-<td>26</td>
-<td>3.85</td>
-<td>96.15</td>
-<td>1678</td>
-<td>33.86</td>
-<td>66.15</td>
-</tr>
-<tr class="odd">
-<td>2023</td>
-<td>1837</td>
-<td>14.81</td>
-<td>85.19</td>
-<td>1409</td>
-<td>0.21</td>
-<td>99.79</td>
-<td>26</td>
-<td>3.85</td>
-<td>96.15</td>
-<td>1678</td>
-<td>35.34</td>
-<td>64.66</td>
-</tr>
-</tbody>
-</table>
+<p><em>Describe Rafael’s methodology for searching for dataset names in OpenAlex articles and additional steps Cal did to pull data from the OpenAlex API</em></p>
+<p>To collect publications mentioning the NASS Census of Agriculture from the OpenAlex Catalog, I conducted a string search using a predefined set of dataset aliases: “Census of Agriculture,” “USDA Census,” “NASS Census,” “Agricultural Census,” and “AG Census.” To minimize false positives, I applied several filters: the publications had to be in English, published between 2017 and 2024, and include at least one author affiliated with an American institution. Additionally, to ensure that the publications were indeed referring to the correct dataset, I required that they also contain specific flag terms within the full text body, such as “USDA,” “US Department of Agriculture,” “United States Department of Agriculture,” “NASS,” or “National Agricultural Statistics Service.”</p>
+<p>This method closely mirrors the approach used in the USDA Briefing Book sent by Julia (Appendix 1: Data Search), where a similar string search was applied to the Scopus catalog. In the Scopus analysis, the string search was performed primarily on the references text body rather than the full text and was executed only within a seed corpus. In contrast, our search in OpenAlex was conducted across the entire OpenAlex database. Notably, the references string search in Scopus identified over 80% of the findings, as documented in the briefing book, highlighting the effectiveness of this approach.</p>
+<p>Refer to <a href="../../appendices/app_openalex.html">this Appendix</a> for additional details on file construction.</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 8%">
-<col style="width: 14%">
-<col style="width: 13%">
-<col style="width: 18%">
-<col style="width: 14%">
-<col style="width: 13%">
-<col style="width: 18%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>year</th>
-<th>total (2yr)</th>
-<th>MSI (2yr)</th>
-<th>Not_MSI (2yr)</th>
-<th>total (4yr)</th>
-<th>MSI (4yr)</th>
-<th>Not_MSI (4yr)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2017</td>
-<td>933</td>
-<td>19.72</td>
-<td>80.28</td>
-<td>807</td>
-<td>17.10</td>
-<td>82.90</td>
-</tr>
-<tr class="even">
-<td>2018</td>
-<td>933</td>
-<td>16.93</td>
-<td>83.07</td>
-<td>807</td>
-<td>17.35</td>
-<td>82.65</td>
-</tr>
-<tr class="odd">
-<td>2019</td>
-<td>933</td>
-<td>17.04</td>
-<td>82.96</td>
-<td>807</td>
-<td>18.22</td>
-<td>81.78</td>
-</tr>
-<tr class="even">
-<td>2020</td>
-<td>933</td>
-<td>17.15</td>
-<td>82.85</td>
-<td>807</td>
-<td>17.82</td>
-<td>82.18</td>
-</tr>
-<tr class="odd">
-<td>2021</td>
-<td>933</td>
-<td>20.15</td>
-<td>79.85</td>
-<td>807</td>
-<td>20.57</td>
-<td>79.43</td>
-</tr>
-<tr class="even">
-<td>2022</td>
-<td>933</td>
-<td>36.66</td>
-<td>63.34</td>
-<td>807</td>
-<td>32.09</td>
-<td>67.91</td>
-</tr>
-<tr class="odd">
-<td>2023</td>
-<td>933</td>
-<td>35.05</td>
-<td>64.95</td>
-<td>807</td>
-<td>32.96</td>
-<td>67.04</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 8%">
-<col style="width: 14%">
-<col style="width: 13%">
-<col style="width: 18%">
-<col style="width: 14%">
-<col style="width: 13%">
-<col style="width: 18%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>year</th>
-<th>2yr (total)</th>
-<th>2yr (MSI)</th>
-<th>2yr (Not_MSI)</th>
-<th>4yr (total)</th>
-<th>4yr (MSI)</th>
-<th>4yr (Not_MSI)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2017</td>
-<td>139</td>
-<td>2.88</td>
-<td>97.12</td>
-<td>1714</td>
-<td>5.83</td>
-<td>94.17</td>
-</tr>
-<tr class="even">
-<td>2018</td>
-<td>139</td>
-<td>2.88</td>
-<td>97.12</td>
-<td>1714</td>
-<td>5.84</td>
-<td>94.16</td>
-</tr>
-<tr class="odd">
-<td>2019</td>
-<td>139</td>
-<td>2.16</td>
-<td>97.84</td>
-<td>1714</td>
-<td>5.95</td>
-<td>94.05</td>
-</tr>
-<tr class="even">
-<td>2020</td>
-<td>139</td>
-<td>2.16</td>
-<td>97.84</td>
-<td>1714</td>
-<td>6.01</td>
-<td>93.99</td>
-</tr>
-<tr class="odd">
-<td>2021</td>
-<td>139</td>
-<td>2.88</td>
-<td>97.12</td>
-<td>1714</td>
-<td>6.07</td>
-<td>93.93</td>
-</tr>
-<tr class="even">
-<td>2022</td>
-<td>139</td>
-<td>12.23</td>
-<td>87.77</td>
-<td>1714</td>
-<td>14.88</td>
-<td>85.12</td>
-</tr>
-<tr class="odd">
-<td>2023</td>
-<td>139</td>
-<td>12.23</td>
-<td>87.77</td>
-<td>1714</td>
-<td>14.88</td>
-<td>85.12</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Coming Soon</strong></p>
 </div>
 </div>
 </div>
-</section>
-<section id="data-processing-and-standardization" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="data-processing-and-standardization">Data Processing and Standardization</h2>
-<ul>
-<li><strong>Variable Name Changes and Formatting:</strong>
-<ul>
-<li><code>year</code> was added to track MSI status over time.</li>
-<li><code>UNITID</code> is the primary key to merge MSI and IPEDS datasets.</li>
-</ul></li>
-<li><strong>Handling Missing Data and Filters:</strong>
-<ul>
-<li>Institutions without <code>UNITID</code> were excluded.</li>
-<li>Non-relevant columns were removed.</li>
-</ul></li>
-<li><strong>Merging Strategy:</strong>
-<ul>
-<li>The 2017-2021 MSI data was directly compatible with IPEDS.</li>
-<li>The 2022-2023 MSI data required additional formatting before merging.</li>
-<li>The final MSI dataset is merged with IPEDS using <code>UNITID</code> and <code>year</code>.</li>
-</ul></li>
-</ul>
-</section>
-<section id="how-to-merge-with-ipeds-data" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-to-merge-with-ipeds-data">How to Merge with IPEDS Data</h2>
-<p>The MSI dataset can be linked with IPEDS data using the <code>UNITID</code> and <code>year</code> variables. This allows for:</p>
-<ul>
-<li>Tracking institutional MSI status over time.</li>
-<li>Comparing MSI and non-MSI institutions within Scopus, OpenAlex, and Dimensions.</li>
-<li>Assessing dataset usage patterns across different institution types.</li>
-</ul>
 
 
 </section>
@@ -844,9 +495,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>The 2017-2021 MSI data was sourced from the Minority Serving Institutions (MSI) Data Project by Nguyen et al.&nbsp;(2023), which merges the U.S. Department of Education’s MSI eligibility metrics (2017-2021) with IPEDS data.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>The 2022-2023 MSI data was obtained from the Rutgers Graduate School of Education, which maintains annual MSI eligibility lists.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>The 2022-2023 MSI data was obtained from the Rutgers Graduate School of Education, which maintains annual MSI eligibility lists.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Explanatory Note 1: A publication may contain references to more than one target data assets. It may also contain multiple references to the same target data asset. As an example, a publication may contain the following references to target assets (Data Asset A = 3 references, Data Asset B = 2 references, Data asset C = 4 reference then in this field three target data assets, the value included would be “3”.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Explanatory Note 2: For the same publication as in Explanatory Note 1, the value here would be 9 provided the license for the publication allowed for snippet generation.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1271,11 +921,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../appendices/app_ipeds.html" class="pagination-link" aria-label="Classifying Institutions with the IPEDS Database">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Classifying Institutions with the IPEDS Database</span>
+      <a href="../../workflow/step01/define_data_assets.html" class="pagination-link" aria-label="Step 01: Define Data Assets">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Step 01: Define Data Assets</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../workflow/step02_02/create_seed_corpus.html" class="pagination-link" aria-label="Creating a Seed Corpus">
+        <span class="nav-page-text">Creating a Seed Corpus</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -1286,7 +939,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_msi.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/workflow/step02_01/extract_dataset_mentions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

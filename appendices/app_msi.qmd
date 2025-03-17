@@ -1,4 +1,13 @@
-## MSI
+---
+title: "Identifying Minority Serving Institutions (MSIs)"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+---
 
 ### Overview {.unnumbered}
 
@@ -20,10 +29,10 @@ By integrating MSI eligibility data with publication datasets, we can assess whe
 
 | **Category**                | **File Path & Link** |
 |-----------------------------|----------------------|
-| **Processed MSI Dataset**   | [`compare_scopus_openalex/resources/MSI/MSI.csv`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/MSI) |
-| **Raw MSI Data**            | [`compare_scopus_openalex/resources/raw_data_MSI/`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/MSI/raw_data_MSI) |
-| **Data Processing Code**    | [`compare_scopus_openalex/resources/documentation/MSIdata.rmd`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation) |
-| **Data Documentation**      | [`compare_scopus_openalex/resources/documentation/MSI_Data.md`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation) |
+| **Processed MSI Dataset**   | [`compare_scopus_openalex/resources/ipeds/msi.csv`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/ipeds) |
+| **Raw MSI Data**            | [`compare_scopus_openalex/resources/ipeds`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/ipeds) |
+| **Data Processing Code**    | [`compare_scopus_openalex/resources/documentation/IPEDSdata.rmd`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation) |
+| **Data Documentation**      | [`compare_scopus_openalex/resources/documentation/IPEDS_Data.md`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation) |
 | **Python Script for PDF Processing** | [`compare_scopus_openalex/resources/documentation/MSI_after2020.py`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation/MSI_after2020.py) |
 
 ### Data Sources {.unnumbered}
@@ -39,25 +48,108 @@ The MSI dataset combines data from multiple sources:
 
 ### File Descriptions {.unnumbered}
 
-#### 2017-2021 MSI Data (`MSI_2017-2021.csv`) {.unnumbered}
+#### 2017-2021 MSI Data (`msi.csv`) {.unnumbered}
 - **Description**: Contains MSI eligibility and designation data for institutions from 2017 to 2021.
 - **Contents**:
-  - `UNITID`: Unique institution identifier
-  - `elig_atleastone`: Institution is eligible or potentially eligible for at least one MSI program
-  - `year`: Year of MSI designation
+  - `UNITID`: Unique identification number of the institution
+  - `opeid`: Office of Postsecondary Education (OPE) ID Number
+  - `instname`: Name of the institution
+  - `year`: The year in which the endowment size was recorded
+  - `level`: 2-year/4-year
+  - `control`: public, private for profit, private not for profit
+  - `msi_type_hbcu`: 1=yes, 0=no
+  - `msi_type_aanapisi`: 1=yes, 0=no
+  - `msi_type_annhsi `: 1=yes, 0=no
+  - `msi_type_hsi`: 1=yes, 0=no
+  - `msi_type_nasnti`: 1=yes, 0=no
+  - `msi_type_tccu`: 1=yes, 0=no
+  - `msi_type_pbi`: 1=yes, 0=no
+  - `sum`: sum of previous msi type columns
+  - `fund_atleastone`: funded under at least one program (0 or 1)
 
 #### 2022-2023 MSI Data (`MSI_2022-2023.csv`) {.unnumbered}
 - **Description**: MSI eligibility data for 2022 and 2023, extracted from Rutgers CMSI PDFs.
 - **Contents**:
-  - `UNITID`: Unique institution identifier
-  - `elig_atleastone_after21`: Institution eligible in the respective year.
-  - `year`: Year of MSI designation
+  - `UNITID`: Unique identification number of the institution
+  - `opeid`: Office of Postsecondary Education (OPE) ID Number 
+  - `year`: The year in which the endowment size was recorded
+  <!-- - `fund_atleastone`: Eligible or potentially eligible for at least one program -->
+  - `institution_name`: Name of the institution
+  - `state`: State
+  - `level`: 2-year/4-year
+  - `control`: public, private for profit, private not for profit
+  - `msi_type_hbcu`: 1=yes, 0=no
+  - `msi_type_aanapisi`: 1=yes, 0=no
+  - `msi_type_annhsi `: 1=yes, 0=no
+  - `msi_type_hsi`: 1=yes, 0=no
+  - `msi_type_nasnti`: 1=yes, 0=no
+  - `msi_type_tccu`: 1=yes, 0=no
+  - `msi_type_pbi`: 1=yes, 0=no
+  - `sum`: sum of previous msi type column
+  - `fund_atleastone`: funded under at least one program (0 or 1)
 
 - **Processing Notes**:
   - Python was used to convert PDFs to Excel (`MSI_after2020.py`).
   - Data was cleaned and standardized to match the 2017-2021 format.
 
-### Data Processing and Standardization {.unnumbered}
+
+## Summary of the MSI data {.unnumbered}
+
+::: {.panel-tabset}
+
+### Percent of MSI Institutions by year {#tbl-msi-1}
+
+| Year  | Total | MSI % | Not_MSI % |
+|-------|-------|-------|-----------|
+| 2017  | 5242  | 8.13  | 91.87     |
+| 2018  | 5242  | 7.69  | 92.31     |
+| 2019  | 5242  | 7.84  | 92.16     |
+| 2020  | 5242  | 7.80  | 92.20     |
+| 2021  | 5242  | 8.81  | 91.19     |
+| 2022  | 5242  | 16.73 | 83.27     |
+| 2023  | 5242  | 16.58 | 83.42     |
+
+### Distinct institutions by year and control {#tbl-msi-2}
+
+| Year  | Private (total) | Private (MSI) | Private (Not_MSI) | Private for-profit (total) | Private for-profit (MSI) | Private for-profit (Not_MSI) | Private not-for-profit (total) | Private not-for-profit (MSI) | Private not-for-profit (Not_MSI) | Public (total) | Public (MSI) | Public (Not_MSI) |
+|-------|----------------|---------------|--------------------|----------------------------|--------------------------|-----------------------------|--------------------------------|------------------------------|---------------------------------|----------------|--------------|-----------------|
+| 2017  | 1837           | 5.66          | 94.34              | 1409                       | 0.00                     | 100.00                      | 26                             | 0.00                         | 100.00                          | 1678           | 19.18        | 80.81           |
+| 2018  | 1837           | 5.72          | 94.28              | 1409                       | 0.00                     | 100.00                      | 26                             | 0.00                         | 100.00                          | 1678           | 17.76        | 82.24           |
+| 2019  | 1837           | 5.72          | 94.28              | 1409                       | 0.00                     | 100.00                      | 26                             | 0.00                         | 100.00                          | 1678           | 18.24        | 81.76           |
+| 2020  | 1837           | 5.77          | 94.23              | 1409                       | 0.00                     | 100.00                      | 26                             | 0.00                         | 100.00                          | 1678           | 18.06        | 81.94           |
+| 2021  | 1837           | 5.88          | 94.12              | 1409                       | 0.00                     | 100.00                      | 26                             | 0.00                         | 100.00                          | 1678           | 21.10        | 78.90           |
+| 2022  | 1837           | 14.81         | 85.19              | 1409                       | 0.14                     | 99.86                       | 26                             | 3.85                          | 96.15                           | 1678           | 33.86        | 66.15           |
+| 2023  | 1837           | 14.81         | 85.19              | 1409                       | 0.21                     | 99.79                       | 26                             | 3.85                          | 96.15                           | 1678           | 35.34        | 64.66           |
+
+
+### Distinct institutions by year and level: Public universities
+
+| year  | total (2yr) | MSI (2yr) | Not_MSI (2yr) | total (4yr) | MSI (4yr) | Not_MSI (4yr) |
+|-------|------------|-----------|---------------|------------|-----------|---------------|
+| 2017  | 933        | 19.72     | 80.28         | 807        | 17.10     | 82.90         |
+| 2018  | 933        | 16.93     | 83.07         | 807        | 17.35     | 82.65         |
+| 2019  | 933        | 17.04     | 82.96         | 807        | 18.22     | 81.78         |
+| 2020  | 933        | 17.15     | 82.85         | 807        | 17.82     | 82.18         |
+| 2021  | 933        | 20.15     | 79.85         | 807        | 20.57     | 79.43         |
+| 2022  | 933        | 36.66     | 63.34         | 807        | 32.09     | 67.91         |
+| 2023  | 933        | 35.05     | 64.95         | 807        | 32.96     | 67.04         |
+
+
+### Distinct institutions by year and level: Private universities
+
+| year  | 2yr (total) | 2yr (MSI) | 2yr (Not_MSI) | 4yr (total) | 4yr (MSI) | 4yr (Not_MSI) |
+|-------|------------|-----------|---------------|------------|-----------|---------------|
+| 2017  | 139        | 2.88      | 97.12         | 1714       | 5.83      | 94.17         |
+| 2018  | 139        | 2.88      | 97.12         | 1714       | 5.84      | 94.16         |
+| 2019  | 139        | 2.16      | 97.84         | 1714       | 5.95      | 94.05         |
+| 2020  | 139        | 2.16      | 97.84         | 1714       | 6.01      | 93.99         |
+| 2021  | 139        | 2.88      | 97.12         | 1714       | 6.07      | 93.93         |
+| 2022  | 139        | 12.23     | 87.77         | 1714       | 14.88     | 85.12         |
+| 2023  | 139        | 12.23     | 87.77         | 1714       | 14.88     | 85.12         |
+
+:::
+
+## Data Processing and Standardization {.unnumbered}
 
 - **Variable Name Changes and Formatting:**
   - `year` was added to track MSI status over time.
@@ -72,7 +164,7 @@ The MSI dataset combines data from multiple sources:
   - The 2022-2023 MSI data required additional formatting before merging.
   - The final MSI dataset is merged with IPEDS using `UNITID` and `year`.
 
-### How to Merge with IPEDS Data {.unnumbered}
+## How to Merge with IPEDS Data {.unnumbered}
 
 The MSI dataset can be linked with IPEDS data using the `UNITID` and `year` variables. This allows for:
 

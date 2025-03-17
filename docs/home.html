@@ -6,9 +6,14 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lauren Chenarides, Ph.D.">
+<meta name="author" content="Calvin Bryan, Ph.D.">
+<meta name="author" content="Rafael Ladislau">
+<meta name="author" content="Julia Lane, Ph.D.">
+<meta name="author" content="Ming Wang">
 <meta name="dcterms.date" content="2025-03-16">
 
-<title>Dimensions – Citation Database Assessment</title>
+<title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,23 +29,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../appendices/app_ipeds.html" rel="next">
-<link href="../appendices/app_openalex.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./terminology.html" rel="next">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_dimensions.html">Dimensions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./home.html">Report Summary</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -97,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Citation Database Assessment</a> 
+      <a href="./">Citation Database Assessment</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report" title="" class="quarto-navigation-tool px-1" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
 </div>
@@ -112,25 +116,25 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../home.html" class="sidebar-item-text sidebar-link">
+  <a href="./home.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Report Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../terminology.html" class="sidebar-item-text sidebar-link">
+  <a href="./terminology.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Terminology</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Background</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../workflow.html" class="sidebar-item-text sidebar-link">
+            <a href="./workflow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Workflow</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -139,31 +143,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workflow/step01/define_data_assets.html" class="sidebar-item-text sidebar-link">
+  <a href="./workflow/step01/define_data_assets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Step 01: Define Data Assets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workflow/step02_01/extract_dataset_mentions.html" class="sidebar-item-text sidebar-link">
+  <a href="./workflow/step02_01/extract_dataset_mentions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Step 02: Extract Dataset Mentions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workflow/step02_02/create_seed_corpus.html" class="sidebar-item-text sidebar-link">
+  <a href="./workflow/step02_02/create_seed_corpus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Creating a Seed Corpus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workflow/step03/clean_pub_data.html" class="sidebar-item-text sidebar-link">
+  <a href="./workflow/step03/clean_pub_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Step 03: Clean Publication Data</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../workflow/results/compare_pub_data.html" class="sidebar-item-text sidebar-link">
+  <a href="./workflow/results/compare_pub_data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Step 04: Compare Results</span></a>
   </div>
 </li>
@@ -171,67 +175,67 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../report.html" class="sidebar-item-text sidebar-link">
+  <a href="./report.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Findings</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../conclusions.html" class="sidebar-item-text sidebar-link">
+  <a href="./conclusions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conclusions</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../appendix.html" class="sidebar-item-text sidebar-link">
+            <a href="./appendix.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_databases.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendices/app_databases.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Citation Database Summary</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link">
+            <a href="./appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Schema</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_scopus.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendices/app_scopus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Scopus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_openalex.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendices/app_openalex.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">OpenAlex</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_dimensions.html" class="sidebar-item-text sidebar-link active">
+  <a href="./appendices/app_dimensions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dimensions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_ipeds.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendices/app_ipeds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Classifying Institutions with the IPEDS Database</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_msi.html" class="sidebar-item-text sidebar-link">
+  <a href="./appendices/app_msi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Identifying Minority Serving Institutions (MSIs)</span></a>
   </div>
 </li>
@@ -249,23 +253,71 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-app-dimensions" id="toc-sec-app-dimensions" class="nav-link active" data-scroll-target="#sec-app-dimensions"><span class="header-section-number">1</span> Overview of Dimensions Reference Files</a></li>
+  <li><a href="#what-is-the-issue" id="toc-what-is-the-issue" class="nav-link active" data-scroll-target="#what-is-the-issue">What Is the Issue?</a></li>
+  <li><a href="#what-did-the-study-find" id="toc-what-did-the-study-find" class="nav-link" data-scroll-target="#what-did-the-study-find">What Did the Study Find?</a></li>
+  <li><a href="#how-was-the-study-conducted" id="toc-how-was-the-study-conducted" class="nav-link" data-scroll-target="#how-was-the-study-conducted">How Was the Study Conducted?</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_dimensions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/home.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_dimensions.html">Dimensions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Dimensions</h1>
+<h1 class="title">Methodology for Comparing Citation Database Coverage of Dataset Usage</h1>
+<p class="subtitle lead">Report Summary</p>
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Lauren Chenarides, Ph.D. <a href="mailto:Lauren.Chenarides@colostate.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Colorado State University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Calvin Bryan, Ph.D. <a href="mailto:calvinrbryan@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Colorado State University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Rafael Ladislau <a href="mailto:rafa.ladis@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            RL Desenvolvimento de Sistemas LTDA
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Julia Lane, Ph.D. <a href="mailto:julia.lane@nyu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            New York University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Ming Wang <a href="mailto:Ming.Wang@colostate.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Colorado State University
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
@@ -281,9 +333,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="sec-app-dimensions" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="sec-app-dimensions"><span class="header-section-number">1</span> Overview of Dimensions Reference Files</h2>
-<p>Research partners at the University of Utah have access to Dimensions.</p>
+<section id="what-is-the-issue" class="level1 unnumbered">
+<h1 class="unnumbered">What Is the Issue?</h1>
+<p>Federal agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like <a href="https://democratizingdata.ai/tools/dashboards/">DemocratizingData.ai</a> and <a href="https://www.nass.usda.gov/Data_Visualization/5W/index.php">NASS’s 5’s Data Usage Dashboard</a>. The process of identifying dataset mentions in academic research output requires the use of citation databases. However, different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports. Tracking dataset usage requires developing methods that scan publication text for dataset mentions. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. Not to mention, dataset tracking requires reliable citation data from citation databases.</p>
+<p>This report presents a methodology for identifying dataset mentions in research publications across various citation databases. In doing so, we compare publication coverage, as well as authorship and institutional representation, across Scopus, OpenAlex, and Dimensions as primary sources.</p>
+<p>The purpose here is to establish a consistent set of statistics for effectively comparing results and evaluating differences in dataset tracking across citation databases. This allows for clearer insights into how publication scope and indexing strategies influence dataset usage statistics.</p>
+</section>
+<section id="what-did-the-study-find" class="level1 unnumbered">
+<h1 class="unnumbered">What Did the Study Find?</h1>
+<p><strong>Main Finding:</strong> Accurate dataset tracking relies heavily on how publications are indexed across citation databases. For two citation databases – Scopus and OpenAlex – carefully constructed seed corpora were needed to track dataset mentions.</p>
+<p><strong>Specific Results from Database Comparison:</strong></p>
+<ul>
+<li>After deduplication, the number of distinct authors decreased by XX% in Scopus and XX% in OpenAlex, indicating significant duplicate entries in the raw data</li>
+<li>Institutional coverage was broader in XX, with XX% more institutions represented compared to XX</li>
+<li>Analysis revealed XX major themes in USDA dataset usage, with ?? and ?? being the most prominent</li>
+<li>Minority-Serving Institutions (MSIs) represented only XX% of institutional users, highlighting opportunities for broader engagement</li>
+</ul>
+</section>
+<section id="how-was-the-study-conducted" class="level1 unnumbered">
+<h1 class="unnumbered">How Was the Study Conducted?</h1>
+<p>The <strong>three</strong> citation databases we are comparing are Elsevier’s Scopus, OurResearch’s OpenAlex, and Digital Science’s Dimensions.ai. <a href="./appendices/app_databases.html#sec-scopus"><strong>Scopus</strong></a> charges for access to its citation database. It focuses on peer-reviewed literature and provides metadata about authors, institutions, and citations for academic journals. <a href="./appendices/app_databases.html#sec-openalex"><strong>OpenAlex</strong></a>, an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. <a href="./appendices/app_databases.html#sec-dimensions"><strong>Dimensions</strong></a>, developed by Digital Science, offers a hybrid model that provides both free and subscription-based access to its citation database. Unlike Scopus, which primarily indexes peer-reviewed journal articles, and OpenAlex, which emphasizes open-access content, Dimensions aggregates a broad spectrum of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. It integrates citation data with funding information, making it a useful tool for assessing the impact of research beyond traditional academic publishing.</p>
+<p>Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. We developed procedures for:</p>
+<ul>
+<li>Identifying publication coverage across citation databases</li>
+<li>Cross-referencing publications between datasets</li>
+<li>Deduplicating publication records</li>
+<li>Standardizing author and institution names</li>
+<li>Analyzing research themes and institutional representation</li>
+</ul>
+<p>The methodology produced these reusable components:</p>
+<ul>
+<li>Code repository for data cleaning and standardization</li>
+<li>Cleaned author tables with disambiguated names and institutional affiliations</li>
+<li>Standardized institution tables using IPEDS identifiers</li>
+<li>Crosswalk table structure linking Scopus and OpenAlex publication records, authors, and institutions</li>
+<li><a href="https://dbdiagram.io/d/scopus_schema-67d71fa375d75cc84445d40b">Data schema visualization</a> [Last updated: <strong>in progress</strong>]</li>
+</ul>
+<p>The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.</p>
+<!---Beyond platform comparison, this methodology examines inclusivity in research coverage, particularly representation of MSIs. This component helps identify potential gaps in dataset accessibility and adoption across different types of research institutions.--->
 
 
 </section>
@@ -711,13 +798,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../appendices/app_openalex.html" class="pagination-link" aria-label="OpenAlex">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">OpenAlex</span>
-      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../appendices/app_ipeds.html" class="pagination-link" aria-label="Classifying Institutions with the IPEDS Database">
-        <span class="nav-page-text">Classifying Institutions with the IPEDS Database</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./terminology.html" class="pagination-link" aria-label="Terminology">
+        <span class="nav-page-text">Terminology</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -729,7 +813,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_dimensions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/home.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

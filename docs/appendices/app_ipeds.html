@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-03-16">
 
-<title>app_ipeds – Citation Database Assessment</title>
+<title>Classifying Institutions with the IPEDS Database – Citation Database Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,12 +25,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../appendices/app_msi.html" rel="next">
+<link href="../appendices/app_dimensions.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -40,11 +42,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -68,80 +70,224 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Citation Database Assessment</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
-<span class="menu-text">Technical Report</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../appendices.html"> 
-<span class="menu-text">Appendices</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/laurenchenarides/compare_scopus_openalex_report"> <i class="bi bi-github" role="img" aria-label="GitHub Repository">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_ipeds.html">Classifying Institutions with the IPEDS Database</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Citation Database Assessment</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report" title="" class="quarto-navigation-tool px-1" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../home.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Report Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../terminology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Background</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Workflow</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../workflow/step01/define_data_assets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 01: Define Data Assets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../workflow/step02_01/extract_dataset_mentions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 02: Extract Dataset Mentions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../workflow/step02_02/create_seed_corpus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating a Seed Corpus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../workflow/step03/clean_pub_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 03: Clean Publication Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../workflow/results/compare_pub_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 04: Compare Results</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Findings</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../conclusions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conclusions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/app_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Citation Database Summary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Schema</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/app_scopus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scopus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/app_openalex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OpenAlex</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/app_dimensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dimensions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/app_ipeds.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Classifying Institutions with the IPEDS Database</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../appendices/app_msi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Identifying Minority Serving Institutions (MSIs)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#ipeds" id="toc-ipeds" class="nav-link active" data-scroll-target="#ipeds"><span class="header-section-number">1</span> IPEDS</a>
-  <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#how-these-files-fit-into-the-project-workflow" id="toc-how-these-files-fit-into-the-project-workflow" class="nav-link" data-scroll-target="#how-these-files-fit-into-the-project-workflow">How These Files Fit into the Project Workflow</a></li>
   <li><a href="#file-organization-in-github-repository" id="toc-file-organization-in-github-repository" class="nav-link" data-scroll-target="#file-organization-in-github-repository">File Organization in GitHub Repository</a></li>
   <li><a href="#data-sources-and-variables" id="toc-data-sources-and-variables" class="nav-link" data-scroll-target="#data-sources-and-variables">Data Sources and Variables</a></li>
   <li><a href="#file-descriptions" id="toc-file-descriptions" class="nav-link" data-scroll-target="#file-descriptions">File Descriptions</a></li>
+  <li><a href="#summary-of-the-ipeds-data" id="toc-summary-of-the-ipeds-data" class="nav-link" data-scroll-target="#summary-of-the-ipeds-data">Summary of the IPEDS Data</a></li>
   <li><a href="#data-processing-and-standardization" id="toc-data-processing-and-standardization" class="nav-link" data-scroll-target="#data-processing-and-standardization">Data Processing and Standardization</a></li>
   <li><a href="#how-to-merge-with-msi-data" id="toc-how-to-merge-with-msi-data" class="nav-link" data-scroll-target="#how-to-merge-with-msi-data">How to Merge with MSI Data</a></li>
-  </ul></li>
   </ul>
-</nav>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_ipeds.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_ipeds.html">Classifying Institutions with the IPEDS Database</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Classifying Institutions with the IPEDS Database</h1>
+</div>
 
 
 
-<section id="ipeds" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="ipeds"><span class="header-section-number">1</span> IPEDS</h2>
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 16, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
 <section id="overview" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="overview">Overview</h3>
 <p>The <strong>Integrated Postsecondary Education Data System (IPEDS)</strong> is a national dataset maintained by the National Center for Education Statistics (NCES). It collects data from all U.S. institutions participating in federal financial aid programs. In this project, IPEDS data is used to analyze institutional characteristics (e.g., size, classification, location, and financial indicators) in relation to research publications identified in Scopus, OpenAlex, and Dimensions.</p>
@@ -299,8 +445,209 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="data-processing-and-standardization" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="data-processing-and-standardization">Data Processing and Standardization</h3>
+<section id="summary-of-the-ipeds-data" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary-of-the-ipeds-data">Summary of the IPEDS Data</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Distinct institutions by year</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Distinct institutions by year and control</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Distinct institutions by year and level: Public Universities</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Distinct institutions by year and level: Private Universities</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>No.&nbsp;Institutions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2017</td>
+<td>7153</td>
+</tr>
+<tr class="even">
+<td>2018</td>
+<td>6857</td>
+</tr>
+<tr class="odd">
+<td>2019</td>
+<td>6559</td>
+</tr>
+<tr class="even">
+<td>2020</td>
+<td>6440</td>
+</tr>
+<tr class="odd">
+<td>2021</td>
+<td>6289</td>
+</tr>
+<tr class="even">
+<td>2022</td>
+<td>6256</td>
+</tr>
+<tr class="odd">
+<td>2023</td>
+<td>6163</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Private for-profit</th>
+<th>Private not-for-profit</th>
+<th>Public</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2017</td>
+<td>3093</td>
+<td>1959</td>
+<td>2069</td>
+</tr>
+<tr class="even">
+<td>2018</td>
+<td>2793</td>
+<td>1930</td>
+<td>2077</td>
+</tr>
+<tr class="odd">
+<td>2019</td>
+<td>2566</td>
+<td>1905</td>
+<td>2056</td>
+</tr>
+<tr class="even">
+<td>2020</td>
+<td>2463</td>
+<td>1889</td>
+<td>2036</td>
+</tr>
+<tr class="odd">
+<td>2021</td>
+<td>2411</td>
+<td>1868</td>
+<td>1994</td>
+</tr>
+<tr class="even">
+<td>2022</td>
+<td>2352</td>
+<td>1855</td>
+<td>2019</td>
+</tr>
+<tr class="odd">
+<td>2023</td>
+<td>2299</td>
+<td>1836</td>
+<td>1999</td>
+</tr>
+</tbody>
+</table>
+<p>“Control” is defined as Public, Private Nonprofit, and Private For-Profit.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>2-year</th>
+<th>4-year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2017</td>
+<td>1003</td>
+<td>817</td>
+</tr>
+<tr class="even">
+<td>2018</td>
+<td>989</td>
+<td>840</td>
+</tr>
+<tr class="odd">
+<td>2019</td>
+<td>968</td>
+<td>852</td>
+</tr>
+<tr class="even">
+<td>2020</td>
+<td>949</td>
+<td>852</td>
+</tr>
+<tr class="odd">
+<td>2021</td>
+<td>930</td>
+<td>829</td>
+</tr>
+<tr class="even">
+<td>2022</td>
+<td>924</td>
+<td>859</td>
+</tr>
+<tr class="odd">
+<td>2023</td>
+<td>899</td>
+<td>868</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>2-year</th>
+<th>4-year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2017</td>
+<td>1034</td>
+<td>2371</td>
+</tr>
+<tr class="even">
+<td>2018</td>
+<td>917</td>
+<td>2167</td>
+</tr>
+<tr class="odd">
+<td>2019</td>
+<td>774</td>
+<td>2081</td>
+</tr>
+<tr class="even">
+<td>2020</td>
+<td>736</td>
+<td>2046</td>
+</tr>
+<tr class="odd">
+<td>2021</td>
+<td>709</td>
+<td>2016</td>
+</tr>
+<tr class="even">
+<td>2022</td>
+<td>681</td>
+<td>2009</td>
+</tr>
+<tr class="odd">
+<td>2023</td>
+<td>664</td>
+<td>1996</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="data-processing-and-standardization" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="data-processing-and-standardization">Data Processing and Standardization</h2>
 <ul>
 <li><strong>Variable Name Changes and Formatting:</strong>
 <ul>
@@ -319,18 +666,28 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 </section>
-<section id="how-to-merge-with-msi-data" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="how-to-merge-with-msi-data">How to Merge with MSI Data</h3>
+<section id="how-to-merge-with-msi-data" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="how-to-merge-with-msi-data">How to Merge with MSI Data</h2>
 <p>The IPEDS dataset can be linked with the MSI dataset using the <code>UNITID</code> and <code>year</code> variables. This allows for:</p>
 <ul>
 <li>Identifying MSI institutions within IPEDS to analyze institutional characteristics.</li>
 <li>Comparing institutional characteristics of MSI and non-MSI institutions, such as enrollment size, Carnegie classification, and financial indicators.</li>
-<li>Assessing research output and dataset usage by institution type across Scopus, OpenAlex, and Dimensions.</li>
-<li>Examining trends over time in MSI status and institutional characteristics.</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After merging the IPEDS-MSI data with the cleaned institutional data from the citation databases, this dataset also allows for assessing research output and dataset usage by institution type, and examining trends over time in MSI status and institutional characteristics.</p>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -426,7 +783,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/laurenchenarides\.github\.io\/compare_scopus_openalex_report\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -754,7 +1111,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../appendices/app_dimensions.html" class="pagination-link" aria-label="Dimensions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Dimensions</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/app_msi.html" class="pagination-link" aria-label="Identifying Minority Serving Institutions (MSIs)">
+        <span class="nav-page-text">Identifying Minority Serving Institutions (MSIs)</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_ipeds.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
 
 
 

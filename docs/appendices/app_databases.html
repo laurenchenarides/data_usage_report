@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2025-03-16">
 
-<title>Dimensions – Citation Database Assessment</title>
+<title>Citation Databases – Citation Database Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../appendices/app_ipeds.html" rel="next">
-<link href="../appendices/app_openalex.html" rel="prev">
+<link href="../appendices/app_crosswalk.html" rel="next">
+<link href="../appendix.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_dimensions.html">Dimensions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_databases.html">Citation Database Summary</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_databases.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/app_databases.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Citation Database Summary</span></a>
   </div>
 </li>
@@ -200,11 +200,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Schema</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/app_scopus.html" class="sidebar-item-text sidebar-link">
@@ -219,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_dimensions.html" class="sidebar-item-text sidebar-link active">
+  <a href="../appendices/app_dimensions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dimensions</span></a>
   </div>
 </li>
@@ -249,16 +249,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-app-dimensions" id="toc-sec-app-dimensions" class="nav-link active" data-scroll-target="#sec-app-dimensions"><span class="header-section-number">1</span> Overview of Dimensions Reference Files</a></li>
+  <li><a href="#overview-of-citation-databases" id="toc-overview-of-citation-databases" class="nav-link active" data-scroll-target="#overview-of-citation-databases"><span class="header-section-number">1</span> Overview of Citation Databases</a>
+  <ul class="collapse">
+  <li><a href="#sec-scopus" id="toc-sec-scopus" class="nav-link" data-scroll-target="#sec-scopus"><span class="header-section-number">1.1</span> Scopus</a></li>
+  <li><a href="#sec-openalex" id="toc-sec-openalex" class="nav-link" data-scroll-target="#sec-openalex"><span class="header-section-number">1.2</span> OpenAlex</a></li>
+  <li><a href="#sec-dimensions" id="toc-sec-dimensions" class="nav-link" data-scroll-target="#sec-dimensions"><span class="header-section-number">1.3</span> Dimensions</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_dimensions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_databases.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_dimensions.html">Dimensions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_databases.html">Citation Database Summary</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Dimensions</h1>
+<h1 class="title">Citation Databases</h1>
 </div>
 
 
@@ -281,11 +286,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="sec-app-dimensions" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="sec-app-dimensions"><span class="header-section-number">1</span> Overview of Dimensions Reference Files</h2>
-<p>Research partners at the University of Utah have access to Dimensions.</p>
+<section id="overview-of-citation-databases" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Overview of Citation Databases</h1>
+<section id="sec-scopus" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="sec-scopus"><span class="header-section-number">1.1</span> Scopus</h2>
+</section>
+<section id="sec-openalex" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-openalex"><span class="header-section-number">1.2</span> OpenAlex</h2>
+</section>
+<section id="sec-dimensions" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="sec-dimensions"><span class="header-section-number">1.3</span> Dimensions</h2>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -711,13 +724,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../appendices/app_openalex.html" class="pagination-link" aria-label="OpenAlex">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">OpenAlex</span>
+      <a href="../appendix.html" class="pagination-link" aria-label="Appendices">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Appendices</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../appendices/app_ipeds.html" class="pagination-link" aria-label="Classifying Institutions with the IPEDS Database">
-        <span class="nav-page-text">Classifying Institutions with the IPEDS Database</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../appendices/app_crosswalk.html" class="pagination-link" aria-label="Data Schema">
+        <span class="nav-page-text">Data Schema</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -729,7 +742,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_dimensions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_databases.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

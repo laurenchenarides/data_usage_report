@@ -6,12 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Lauren Chenarides, Ph.D.">
-<meta name="author" content="Calvin Bryan, Ph.D.">
-<meta name="author" content="Rafael Ladislau">
-<meta name="author" content="Julia Lane, Ph.D.">
-<meta name="author" content="Ming Wang">
-<meta name="dcterms.date" content="2025-03-13">
+<meta name="dcterms.date" content="2025-03-16">
 
 <title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
@@ -26,36 +21,17 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./workflow.html" rel="next">
+<link href="./terminology.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -66,11 +42,11 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -97,98 +73,189 @@ div.csl-indent {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Citation Database Assessment</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Technical Report</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./appendices.html"> 
-<span class="menu-text">Appendices</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/laurenchenarides/compare_scopus_openalex_report"> <i class="bi bi-github" role="img" aria-label="GitHub Repository">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Project Background</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="header-section-number">1</span> Executive Summary</a></li>
-  <li><a href="#terminology" id="toc-terminology" class="nav-link" data-scroll-target="#terminology"><span class="header-section-number">2</span> Terminology</a></li>
-  <li><a href="#project-background" id="toc-project-background" class="nav-link" data-scroll-target="#project-background"><span class="header-section-number">3</span> Project Background</a>
-  <ul class="collapse">
-  <li><a href="#project-objective" id="toc-project-objective" class="nav-link" data-scroll-target="#project-objective"><span class="header-section-number">3.1</span> Project Objective</a>
-  <ul class="collapse">
-  <li><a href="#sec-aims" id="toc-sec-aims" class="nav-link" data-scroll-target="#sec-aims"><span class="header-section-number">3.1.1</span> Specific Aims</a></li>
-  </ul></li>
-  <li><a href="#sec-scopus" id="toc-sec-scopus" class="nav-link" data-scroll-target="#sec-scopus"><span class="header-section-number">3.2</span> Scopus</a></li>
-  <li><a href="#sec-openalex" id="toc-sec-openalex" class="nav-link" data-scroll-target="#sec-openalex"><span class="header-section-number">3.3</span> OpenAlex</a></li>
-  <li><a href="#sec-dimensions" id="toc-sec-dimensions" class="nav-link" data-scroll-target="#sec-dimensions"><span class="header-section-number">3.4</span> Dimensions</a></li>
-  </ul></li>
-  <li><a href="#sec-workflow-overview" id="toc-sec-workflow-overview" class="nav-link" data-scroll-target="#sec-workflow-overview"><span class="header-section-number">4</span> Project Workflow</a>
-  <ul class="collapse">
-  <li><a href="#sec-data" id="toc-sec-data" class="nav-link" data-scroll-target="#sec-data"><span class="header-section-number">4.1</span> Define Scope of Data Assets to Be Searched</a>
-  <ul class="collapse">
-  <li><a href="#national-agricultural-statistics-service-nass-data-assets" id="toc-national-agricultural-statistics-service-nass-data-assets" class="nav-link" data-scroll-target="#national-agricultural-statistics-service-nass-data-assets">National Agricultural Statistics Service (NASS) Data Assets</a></li>
-  <li><a href="#economic-research-service-ers-data-assets" id="toc-economic-research-service-ers-data-assets" class="nav-link" data-scroll-target="#economic-research-service-ers-data-assets">Economic Research Service (ERS) Data Assets</a></li>
-  <li><a href="#final-list-of-usda-data-assets" id="toc-final-list-of-usda-data-assets" class="nav-link" data-scroll-target="#final-list-of-usda-data-assets">Final List of USDA Data Assets</a></li>
-  </ul></li>
-  <li><a href="#sec-data-idn" id="toc-sec-data-idn" class="nav-link" data-scroll-target="#sec-data-idn"><span class="header-section-number">4.2</span> Extract Dataset Mentions to Build a Publication Dataset</a></li>
-  <li><a href="#sec-seed-corpus" id="toc-sec-seed-corpus" class="nav-link" data-scroll-target="#sec-seed-corpus">Scopus-Specific: Create a Seed Corpus</a></li>
-  <li><a href="#sec-disambiguation" id="toc-sec-disambiguation" class="nav-link" data-scroll-target="#sec-disambiguation"><span class="header-section-number">4.3</span> Pre-Process and Clean Publication Datasets</a>
-  <ul class="collapse">
-  <li><a href="#case-study-census-of-agriculture" id="toc-case-study-census-of-agriculture" class="nav-link" data-scroll-target="#case-study-census-of-agriculture"><span class="header-section-number">4.3.1</span> Case Study: Census of Agriculture</a></li>
-  </ul></li>
-  <li><a href="#sec-matching" id="toc-sec-matching" class="nav-link" data-scroll-target="#sec-matching"><span class="header-section-number">4.4</span> Compare Results across Citation Databases</a>
-  <ul class="collapse">
-  <li><a href="#case-study-census-of-agriculture-1" id="toc-case-study-census-of-agriculture-1" class="nav-link" data-scroll-target="#case-study-census-of-agriculture-1"><span class="header-section-number">4.4.1</span> Case Study: Census of Agriculture</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations"><span class="header-section-number">5</span> Recommendations</a>
-  <ul class="collapse">
-  <li><a href="#technical-recommendations" id="toc-technical-recommendations" class="nav-link" data-scroll-target="#technical-recommendations"><span class="header-section-number">5.1</span> Technical Recommendations</a></li>
-  <li><a href="#expanding-dataset-usage" id="toc-expanding-dataset-usage" class="nav-link" data-scroll-target="#expanding-dataset-usage"><span class="header-section-number">5.2</span> Expanding Dataset Usage</a></li>
-  </ul></li>
-  <li><a href="#conclusion-and-next-steps" id="toc-conclusion-and-next-steps" class="nav-link" data-scroll-target="#conclusion-and-next-steps"><span class="header-section-number">6</span> Conclusion and Next Steps</a></li>
-  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="header-section-number">7</span> Appendices</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">8</span> References</a></li>
-  </ul>
-</nav>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Citation Database Assessment</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report" title="" class="quarto-navigation-tool px-1" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./home.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Report Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./terminology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Terminology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Project Background</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Workflow</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workflow/step01/define_data_assets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 01: Define Data Assets</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workflow/step02_01/extract_dataset_mentions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 02: Extract Dataset Mentions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workflow/step02_02/create_seed_corpus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Creating a Seed Corpus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workflow/step03/clean_pub_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 03: Clean Publication Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./workflow/results/compare_pub_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Step 04: Compare Results</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Findings</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conclusions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/app_databases.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Citation Database Summary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data Schema</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/app_scopus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Scopus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/app_openalex.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OpenAlex</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/app_dimensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dimensions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/app_ipeds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Classifying Institutions with the IPEDS Database</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices/app_msi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Identifying Minority Serving Institutions (MSIs)</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#project-background" id="toc-project-background" class="nav-link active" data-scroll-target="#project-background">Project Background</a>
+  <ul class="collapse">
+  <li><a href="#project-objective" id="toc-project-objective" class="nav-link" data-scroll-target="#project-objective">Project Objective</a></li>
+  <li><a href="#sec-aims" id="toc-sec-aims" class="nav-link" data-scroll-target="#sec-aims">Specific Aims</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -196,63 +263,18 @@ div.csl-indent {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Methodology for Comparing Citation Database Coverage of Dataset Usage</h1>
-<p class="subtitle lead">Technical Report</p>
+<p class="subtitle lead">Project Background</p>
 </div>
 
 
-<div class="quarto-title-meta-author">
-  <div class="quarto-title-meta-heading">Authors</div>
-  <div class="quarto-title-meta-heading">Affiliations</div>
-  
-    <div class="quarto-title-meta-contents">
-    <p class="author">Lauren Chenarides, Ph.D. <a href="mailto:Lauren.Chenarides@colostate.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Colorado State University
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Calvin Bryan, Ph.D. <a href="mailto:calvinrbryan@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Colorado State University
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Rafael Ladislau <a href="mailto:rafa.ladis@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            RL Desenvolvimento de Sistemas LTDA
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Julia Lane, Ph.D. <a href="mailto:julia.lane@nyu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            New York University
-          </p>
-      </div>
-    <div class="quarto-title-meta-contents">
-    <p class="author">Ming Wang <a href="mailto:Ming.Wang@colostate.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-  </div>
-  <div class="quarto-title-meta-contents">
-        <p class="affiliation">
-            Colorado State University
-          </p>
-      </div>
-  </div>
 
 <div class="quarto-title-meta">
 
-      
+    
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 13, 2025</p>
+      <p class="date">March 16, 2025</p>
     </div>
   </div>
   
@@ -264,964 +286,39 @@ div.csl-indent {
 </header>
 
 
-<section id="executive-summary" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Executive Summary</h1>
-<p>Federal agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like <a href="https://democratizingdata.ai/tools/dashboards/">DemocratizingData.ai</a> and <a href="https://www.nass.usda.gov/Data_Visualization/5W/index.php">NASS’s 5’s Data Usage Dashboard</a>. This report presents a methodology for comparing citation databases as potential data sources for identifying dataset mentions within research papers, using Scopus, OpenAlex, and Dimensions as test cases. The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.</p>
-<p>Citation databases track academic research output. Different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports. Tracking dataset usage requires developing methods that scan publication text for dataset mentions. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. Not to mention, dataset tracking requires reliable citation data from citation databases.</p>
-<p>The <strong>three</strong> citation databases we are comparing are Elsevier’s Scopus, OurResearch’s OpenAlex, and Digital Science’s Dimensions.ai. <strong>Scopus</strong> (<a href="#sec-scopus" class="quarto-xref">Section&nbsp;3.2</a>) charges for access to its citation database. It focuses on peer-reviewed literature and provides metadata about authors, institutions, and citations for academic journals. <strong>OpenAlex</strong> (<a href="#sec-openalex" class="quarto-xref">Section&nbsp;3.3</a>), an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. <strong>Dimensions</strong> (<a href="#sec-dimensions" class="quarto-xref">Section&nbsp;3.4</a>), developed by Digital Science, offers a hybrid model that provides both free and subscription-based access to its citation database. Unlike Scopus, which primarily indexes peer-reviewed journal articles, and OpenAlex, which emphasizes open-access content, Dimensions aggregates a broad spectrum of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. It integrates citation data with funding information, making it a useful tool for assessing the impact of research beyond traditional academic publishing.</p>
-<p>Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. We developed procedures for:</p>
-<ul>
-<li>Identifying publication coverage across citation databases</li>
-<li>Deduplicating author records</li>
-<li>Standardizing institution names</li>
-<li>Cross-referencing publications between datasets</li>
-<li>Analyzing research themes and institutional representation</li>
-</ul>
-<!---Beyond platform comparison, this methodology examines inclusivity in research coverage, particularly representation of MSIs. This component helps identify potential gaps in dataset accessibility and adoption across different types of research institutions.--->
-<p>Our comparison of citation databases found:</p>
-<ul>
-<li>After deduplication, the number of distinct authors decreased by XX% in Scopus and XX% in OpenAlex, indicating significant duplicate entries in the raw data</li>
-<li>Institutional coverage was broader in XX, with XX% more institutions represented compared to XX</li>
-<li>Analysis revealed XX major themes in USDA dataset usage, with ?? and ?? being the most prominent</li>
-<li>Minority-Serving Institutions (MSIs) represented only XX% of institutional users, highlighting opportunities for broader engagement</li>
-</ul>
-<p>The methodology produced these reusable components:</p>
-<ul>
-<li>Code repository for data cleaning and standardization</li>
-<li>Cleaned author tables with disambiguated names and institutional affiliations</li>
-<li>Standardized institution tables using IPEDS identifiers</li>
-<li>Crosswalk table structure linking Scopus and OpenAlex publication records, authors, and institutions</li>
-<li>Data schema documentation [Last updated: January 3, 2025]</li>
-</ul>
-</section>
-<section id="terminology" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Terminology</h1>
-<p>Citation databases form the foundation of modern research tracking and analysis. Digital repositories, like the test cases featured in this report, systematically catalog scholarly publications and their references to each other <span class="citation" data-cites="debellis2009bibliometrics">(<a href="#ref-debellis2009bibliometrics" role="doc-biblioref">De Bellis, 2009</a>)</span>. Citation databases differ in their approaches to curating and maintaining this information. Some focus exclusively on peer-reviewed journal articles with strict inclusion criteria, while others index a broader range of research outputs including preprints, technical reports, and conference proceedings <span class="citation" data-cites="martin2021google mongeon2016journal">(<a href="#ref-martin2021google" role="doc-biblioref">Martín-Martín et al., 2021</a>; <a href="#ref-mongeon2016journal" role="doc-biblioref">Mongeon &amp; Paul-Hus, 2016</a>)</span>. These curation approaches affect how comprehensively each database captures research impact <span class="citation" data-cites="visser2021large">(<a href="#ref-visser2021large" role="doc-biblioref">Visser et al., 2021</a>)</span>.</p>
-<p>Understanding how these databases work requires familiarity with bibliometrics - the statistical analysis of published works and their impact <span class="citation" data-cites="broadus1987toward">(<a href="#ref-broadus1987toward" role="doc-biblioref">Broadus, 1987</a>)</span>. Bibliometric analysis examines patterns in publication, citation networks, and research influence <span class="citation" data-cites="hood2001literature">(<a href="#ref-hood2001literature" role="doc-biblioref">Hood &amp; Wilson, 2001</a>)</span>. The field emerged from early citation indices, which mapped relationships between papers through their references <span class="citation" data-cites="garfield1955citation">(<a href="#ref-garfield1955citation" role="doc-biblioref">Garfield, 1955</a>)</span>.</p>
-<p>For tracking USDA dataset usage, these concepts directly apply. Accurate tracking of dataset usage in scientific literature serves multiple purposes. For federal agencies like the USDA, it helps monitor the return on public data investments, find gaps in dataset use, plan future data collection, and support evidence-based policy decisions. This tracking requires reliable citation data from citation databases. Unlike standard citations, researchers often reference datasets within the text of their publications rather than citing them formally. This makes tracking dataset usage more complex.</p>
-<p>To solve this tracking challenge, methods have been developed that scan publication text for dataset mentions <span class="citation" data-cites="lane2022data">(<a href="#ref-lane2022data" role="doc-biblioref">Lane et al., 2022</a>)</span>. The scope and accuracy of our dataset tracking depends on what publications we can access and analyze. Because different databases curate content in different ways, it creates variation in what dataset mentions they capture and their frequency. Variations in content across sources affect our ability to accurately track dataset impact and adoption. The DemocratizingData.ai platform, for example, uses bibliometric data to monitor these dataset usage patterns, helping USDA understand how its data supports research. By comparing how different citation databases track this information, we can better understand their strengths and limitations for monitoring research impact.</p>
-</section>
-<section id="project-background" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Project Background</h1>
+<section id="project-background" class="level1 unnumbered">
+<h1 class="unnumbered">Project Background</h1>
 <p>The DemocratizingData.ai platform currently uses Scopus, a fee-based service, to track USDA dataset usage. OpenAlex, an open-source alternative, offers potential cost savings and broader access. Moving to OpenAlex would reduce operational costs while maintaining public access to USDA’s dataset usage metrics. However, the decision to transition from Scopus to OpenAlex requires systematic evaluation of their coverage and data quality.</p>
 <p>Initial comparisons between Scopus and OpenAlex revealed unexpected patterns in coverage overlap. These findings suggested that simply replacing one database with another might affect the platform’s ability to track dataset usage accurately.</p>
-<section id="project-objective" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="project-objective"><span class="header-section-number">3.1</span> Project Objective</h2>
+<section id="project-objective" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="project-objective">Project Objective</h2>
 <p>The objective of this project is to determine the coverage of publications across citation databases. This information will be used to decide the viability of replacing Scopus with a less costly solution.</p>
-<section id="sec-aims" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="sec-aims"><span class="header-section-number">3.1.1</span> Specific Aims</h3>
+</section>
+<section id="sec-aims" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-aims">Specific Aims</h2>
 <ol type="1">
-<li>Evaluate differences in publication coverage across citation databases – Compare how well Scopus, OpenAlex, and Dimensions track dataset usage in research publications and assess variations in publication inclusion.</li>
-<li>Assess journal coverage – Determine which journals each platform indexes and analyze how these differences impact dataset visibility.</li>
-<li>Analyze publication-level discrepancies – Compare how each platform captures research publications within indexed journals and identify potential gaps in dataset tracking.</li>
-<li>Examine author and institutional representation – Investigate how each platform attributes authorship and institutional affiliations, with a focus on variations by research institution type (e.g., Minority-Serving Institutions).</li>
-<li>Develop a reproducible methodology for database comparison – Establish a systematic approach for evaluating other citation databases beyond Scopus, OpenAlex, and Dimensions.</li>
+<li><strong>Evaluate differences in publication coverage across citation databases.</strong> Compare how well Scopus, OpenAlex, and Dimensions track dataset usage in research publications and assess variations in publication inclusion.</li>
+<li><strong>Assess journal coverage.</strong> Determine which journals each platform indexes and analyze how these differences impact dataset visibility.</li>
+<li><strong>Analyze publication-level discrepancies.</strong> Compare how each platform captures research publications within indexed journals and identify potential gaps in dataset tracking.</li>
+<li><strong>Examine author and institutional representation.</strong> Investigate how each platform attributes authorship and institutional affiliations, with a focus on variations by research institution type (e.g., Minority-Serving Institutions).</li>
+<li><strong>Develop a reproducible methodology for database comparison.</strong> Establish a systematic approach for evaluating other citation databases beyond Scopus, OpenAlex, and Dimensions.</li>
 </ol>
-<p>These aims guided the development of a methodology for comparing citation databases, focusing on four areas:</p>
+<p>These aims guide the development of a methodology for comparing citation databases, focusing on four areas:</p>
 <ol type="1">
 <li>Journal coverage: Determining which journals each platform indexes</li>
 <li>Publication tracking: Comparing how each platform captures publications within indexed journals</li>
 <li>Author identification: Evaluating how each platform handles author names and affiliations</li>
 <li>Institution recognition: Determining how each platform records and standardizes institutional information</li>
 </ol>
-<p>Research partners at the University of Utah have access to Dimensions. The scope of work expanded to include Dimensions alongside Scopus and OpenAlex. This inclusion provides a more comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms.</p>
-<p>Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. Beyond platform comparison, this methodology examines differences in research coverage, particularly the presence of MSIs. This component helps identify variations in dataset coverage and usage across different types of research institutions.</p>
+<p>The scope of work includes comparing publication coverage across Scopus, OpenAlex, and Dimensions. This inclusion provides a comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms. For more information on each citation database, refer to <a href="./appendices/app_databases.html">this Appendix.</a></p>
+<p>Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. Beyond platform comparison, this methodology examines variations in dataset usage across different types of research institutions.</p>
 <p>The methods described in this report can be applied to other citation databases as alternatives to current data sources.</p>
-</section>
-</section>
-<section id="sec-scopus" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="sec-scopus"><span class="header-section-number">3.2</span> Scopus</h2>
-</section>
-<section id="sec-openalex" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="sec-openalex"><span class="header-section-number">3.3</span> OpenAlex</h2>
-</section>
-<section id="sec-dimensions" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="sec-dimensions"><span class="header-section-number">3.4</span> Dimensions</h2>
-<hr>
-</section>
-</section>
-<section id="sec-workflow-overview" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Project Workflow</h1>
-<p>The project workflow outlines the steps involved to evaluate how different citation databases track USDA dataset mentions in research papers. In searching for dataset mentions, the goal is to identify a set of publications that can be compared across the citation database test cases.</p>
-<p><img src="workflow/workflowv2.jpg" class="img-fluid"></p>
-<p>The process of deriving the list of publications from a citation database consists of four steps. Each step produces an <em>output</em> which is used as the <em>input</em> for the following step:</p>
-<p><strong>1. Define Scope of Data Assets to Be Searched</strong> (<a href="#sec-data" class="quarto-xref">Section&nbsp;4.1</a>)</p>
-<ul>
-<li>Identify USDA datasets that will be searched for and tracked.</li>
-<li>Collect official dataset names along with common abbreviations, acronyms, and alternative references used.</li>
-</ul>
-<p><strong>Result:</strong> A structured list of dataset names and aliases.</p>
-<p><strong>2. Extract Dataset Mentions from Publications</strong> (<a href="#sec-data-idn" class="quarto-xref">Section&nbsp;4.2</a>)</p>
-<ul>
-<li>Conduct searches across citation databases using multiple methods:
-<ol type="1">
-<li>Full-Text (String) Search: Scan entire articles for relevant dataset names.</li>
-<li>Reference Search: Identify dataset citations within publication references.</li>
-<li>Machine Learning Models: Apply Kaggle competition models trained to detect dataset mentions.</li>
-</ol></li>
-</ul>
-<p><strong>Note:</strong> In cases where full-text search is not supported by the citation database API (e.g., Scopus), an initial seed corpus of publications was collected separately to train machine learning models. Refer to <strong>?@sec-seed-corpus</strong> for more details.</p>
-<p><strong>Result:</strong> Publication dataset for each data asset across each citation database.</p>
-<p><strong>3. Pre-Process and Clean Publication Datasets</strong> (<a href="#sec-disambiguation" class="quarto-xref">Section&nbsp;4.3</a>)</p>
-<ul>
-<li>Pre-process and clean publication metadata generated from each citation database.</li>
-<li>Standardize journal, institution, and author names.</li>
-<li>Deduplicate records.</li>
-</ul>
-<p><strong>Result:</strong> Cleaned publication metadata, removed of duplicates, inconsistencies, and missing information.</p>
-<p><strong>4. Compare across Citation Databases</strong> (<a href="#sec-matching" class="quarto-xref">Section&nbsp;4.4</a>)</p>
-<ul>
-<li>Compare dataset coverage across Scopus, OpenAlex, and Dimensions.</li>
-<li>Apply fuzzy matching techniques to identify overlapping and unique dataset mentions.</li>
-<li>Analyze differences in journal coverage, citation patterns, and author affiliations.</li>
-</ul>
-<p><strong>Result:</strong> A set of statistics used to evaluate dataset tracking accuracy.</p>
-<hr>
-<section id="sec-data" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="sec-data"><span class="header-section-number">4.1</span> Define Scope of Data Assets to Be Searched</h2>
-<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
-<strong>The goal of this step is to compile a structured list of dataset names and their commonly used variations.</strong>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These data assets are widely used in agricultural economics and food systems research.</p>
-</div>
-</div>
-<section id="national-agricultural-statistics-service-nass-data-assets" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="national-agricultural-statistics-service-nass-data-assets">National Agricultural Statistics Service (NASS) Data Assets</h3>
-<p>In late July 2023, an initial set of 21 reports were received containing a report name and a URL link to database curated by Cornell University. These reports are part of the USDA’s efforts to track data usage across various research applications. However, the names of these reports were highly generic, making it difficult to precisely identify them in citation databases. Examples include reports titled “Agricultural Prices” and “Farm Labor,” which lack specificity when compared to more structured dataset identifiers.</p>
-<p><strong>Data Processing and Standardization</strong></p>
-<p>To improve identification and searchability, the input was analyzed and transformed into a structured list that included:</p>
-<ul>
-<li>International Standard Serial Numbers (ISSNs): Each of the 21 reports was assigned an ISSN, where available, to provide a standardized identifier.</li>
-<li>Alias Creation: Generic report names were appended with the term report to better distinguish them from other similarly named publications in research literature.</li>
-<li>Expanded Search Terms: Additional variations of dataset names were included to account for different citation styles and possible ways authors reference these reports.</li>
-</ul>
-<p>The final dataset classification involved:</p>
-<ul>
-<li>Main Data Asset (Parent Record): The original 21 reports, each representing a distinct dataset.</li>
-<li>Aliases: ISSNs and URLs served as aliases to improve retrieval accuracy.</li>
-<li>Search Term Expansion: Combining report names with different citation formats led to a total of 64 search terms (21 parent records + 43 aliases).</li>
-</ul>
-<p>This standardization process improved the efficiency of identifying NASS datasets across publications indexed by citation databases such as Scopus, OpenAlex, and Dimensions.</p>
-</section>
-<section id="economic-research-service-ers-data-assets" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="economic-research-service-ers-data-assets">Economic Research Service (ERS) Data Assets</h3>
-<p>The process of identifying ERS data assets occurred in two phases: (1) an initial dataset compilation, and (2) a refinement process incorporating feedback from a team of agricultural economists at Colorado State University (CSU). This process was meant to yield a list of data assets was both comprehensive and relevant to the research community tracking USDA dataset usage.</p>
-<p><strong>Phase 1: Initial Compilation of ERS Data Assets</strong></p>
-<p>In October 2023, an initial list of 2,103 ERS records was compiled. These records included dataset names and, in some cases, associated aliases. The list was then reviewed by Professor Julia Lane, who identified and removed 144 records that were not suitable for machine learning-based dataset tracking.</p>
-<p><strong>Reasons for Exclusion</strong></p>
-<ul>
-<li>Records were too generic – Terms such as “Milk, Cotton, and CSV Format of National Data” were too broad to be meaningfully identified in citation databases.</li>
-<li>Records were too specific – Entries such as “Table 15—Agricultural Chemical Input” and “Southeast: 1982-91, 1992-97” were references within broader reports rather than standalone data assets.</li>
-</ul>
-<p>After these exclusions, the remaining 1,959 records represented the initial list of ERS data assets.</p>
-<p><strong>Phase 2: Refinement with CSU Team</strong></p>
-<p>A team of agricultural economists at CSU were consulted to refine the list so that it accurately captured key USDA datasets that may have been overlooked in the initial process. This involved:</p>
-<ul>
-<li>Reviewing dataset usage in prior USDA research – Identifying which datasets were frequently cited.</li>
-<li>Cross-checking with known data users – Ensuring that key datasets used by agricultural economists were included.</li>
-<li>Expanding alias definitions – Recognizing dataset acronyms and alternative naming conventions.</li>
-</ul>
-<p>As part of this process, an additional set of assets was incorporated, including datasets that had been previously identified in the Year 1 USDA project. Notably, datasets such as the Census of Agriculture and the Agricultural Resource Management Survey (ARMS) were added, along with key acronyms like FoodAPS. This phase contributed:</p>
-<ul>
-<li>12 new parent records</li>
-<li>8 additional alias records</li>
-<li>Total: 20 new search terms</li>
-</ul>
-<p><strong>Final Data Asset Identification</strong></p>
-<p>Unlike NASS data assets, which had ISSNs and DOIs, ERS datasets were primarily linked through URLs. The final structured dataset included:</p>
-<ul>
-<li>1,959 parent records (main ERS datasets)</li>
-<li>1,959 alias records (URLs serving as dataset identifiers)</li>
-<li>20 additional records from the CSU consultation</li>
-<li>Total: 3,918 search terms</li>
-</ul>
-<p>Through this two-phase process, the list of ERS data assets evolved from an initial broad set of records into a refined, structured collection of datasets that could be effectively tracked across citation databases.</p>
-</section>
-<section id="final-list-of-usda-data-assets" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="final-list-of-usda-data-assets">Final List of USDA Data Assets</h3>
-<p>The data assets represent those most frequently used in agricultural economics research, spanning topics from farm management to food security. The final set of data assets, their producing agencies, and descriptions are presented in <a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a>.</p>
-<div id="tbl-usda-datasets" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-usda-datasets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: List of USDA Data Assets
-</figcaption>
-<div aria-describedby="tbl-usda-datasets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Dataset Name</th>
-<th style="text-align: left;">Produced By</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://www.nass.usda.gov/AgCensus/">Census of Agriculture</a></td>
-<td style="text-align: left;">NASS</td>
-<td style="text-align: left;">Conducted every five years, it provides comprehensive data on U.S. farms, ranches, and producers.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/arms-farm-financial-and-crop-production-practices/">Agricultural Resource Management Survey (ARMS)</a></td>
-<td style="text-align: left;">ERS</td>
-<td style="text-align: left;">A USDA survey on farm financials, production practices, and resource use.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/foodaps-national-household-food-acquisition-and-purchase-survey/">Food Acquisition and Purchase Survey (FoodAPS)</a></td>
-<td style="text-align: left;">ERS</td>
-<td style="text-align: left;">A nationally representative survey tracking U.S. household food purchases and acquisitions.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/food-security-in-the-united-states">Current Population Survey Food Security Supplement (CPS-FSS)</a></td>
-<td style="text-align: left;">ERS</td>
-<td style="text-align: left;">An annual supplement to the Current Population Survey (CPS) measuring U.S. household food security.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/">Food Access Research Atlas (FARA)</a></td>
-<td style="text-align: left;">ERS</td>
-<td style="text-align: left;">A USDA tool mapping food access based on store locations and socioeconomic data.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/rural-urban-continuum-codes/">Rural-Urban Continuum Code (RUCC)</a></td>
-<td style="text-align: left;">ERS</td>
-<td style="text-align: left;">A classification system distinguishing U.S. counties by rural and urban characteristics.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/survey-tools/">Household Food Security Survey Module</a></td>
-<td style="text-align: left;">ERS</td>
-<td style="text-align: left;">A USDA survey module used to assess food insecurity levels in households.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Local_Food/">Local Food Marketing Practices Survey</a></td>
-<td style="text-align: left;">NASS</td>
-<td style="text-align: left;">A USDA survey on U.S. farms’ local food sales, direct-to-consumer marketing, and supply chains.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://farmtoschoolcensus.fns.usda.gov/">Farm to School Census</a></td>
-<td style="text-align: left;">FNS</td>
-<td style="text-align: left;">A USDA survey tracking school food procurement and local farm partnerships.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/quarterly-food-at-home-price-database/">Quarterly Food at Home Price Database (QFAHPD)</a></td>
-<td style="text-align: left;">ERS</td>
-<td style="text-align: left;">A database of U.S. retail food prices by product, region, and time.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/TOTAL/">Tenure Ownership and Transition of Agricultural Land (TOTAL)</a></td>
-<td style="text-align: left;">NASS</td>
-<td style="text-align: left;">A survey collecting data on farmland ownership, leasing, and transfer.</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/TOTAL/">Transition of Agricultural Land Survey</a></td>
-<td style="text-align: left;">NASS</td>
-<td style="text-align: left;">A component of TOTAL that examines farmland ownership changes and succession plans.</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="https://www.iriworldwide.com/en-us/solutions/consumer-panel/infoscan">Information Resources, Inc.&nbsp;(IRI) InfoScan</a></td>
-<td style="text-align: left;">Circana (formerly IRI)</td>
-<td style="text-align: left;">A commercial scanner dataset tracking retail food and consumer goods purchases.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<section id="appendix-data-asset---alias-dyads" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="appendix-data-asset---alias-dyads">Appendix: Data Asset - Alias Dyads</h4>
-<p>To provide a comprehensive reference for dataset tracking, the following appendix includes a detailed list of data assets and their corresponding aliases, collectively referred to as dyads. Each dyad represents a dataset-name and alias pair used in citation database searches, allowing for more precise identification of dataset mentions in research publications. These aliases include acronyms, alternate spellings, dataset variations, and associated URLs, ensuring broad coverage across different citation practices. The dyad list serves as the foundation for dataset extraction and disambiguation across Scopus, OpenAlex, and Dimensions. A complete reference of these dataset aliases is included in <a href="./appendices/app_dyads.html">Appendix XX</a>.</p>
-</section>
-</section>
-</section>
-<section id="sec-data-idn" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="sec-data-idn"><span class="header-section-number">4.2</span> Extract Dataset Mentions to Build a Publication Dataset</h2>
-<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
-<strong>The goal of this step is to build a dataset of publications that reference the dataset name aliases for the USDA data assets (<a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a>) across Scopus, OpenAlex, and Dimensions.</strong>
-</div>
-<p>To generate this dataset, the process requires:</p>
-<ul>
-<li>Dataset name aliases (from Step 1)</li>
-<li>Search routines tailored to each citation database to extract relevant publications</li>
-</ul>
-<p>Search routines, described below, guide this step, as dataset mentions are often inconsistent across publications—appearing in titles, abstracts, full text, or reference lists. Scopus uses a structured seed corpus to refine searches, while OpenAlex and Dimensions rely on direct queries across their full publication records. The outputs of this step are three publication-level datasets, one for each citation database, which will be further analyzed in subsequent steps.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Dimensions</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<section id="search-routines" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="search-routines">Search Routines</h3>
-<p>The search routines for Scopus were designed to systematically identify mentions of USDA data assets across a vast collection of academic publications. Multiple approaches were used to maximize dataset identification. These included (1) full-text searches, which leveraged Scopus’s licensed access to retrieve dataset mentions directly from publication text, (2) reference searches, which scanned citation lists for dataset appearances, and (3) machine learning models, which applied text-matching algorithms to improve accuracy.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Process of Running Search Routines">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Process of Running Search Routines
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The process of running the search routines is to identify a candidate match with the list of data assets. The candidate match is effectively the “publication ID – dataset ID” combination and is referred to as a <strong>dyad</strong>. For any given publication, there may be multiple dyads.</p>
-<p>Identifying references to datasets within scientific publications is inherently difficult for a number of reasons including:</p>
-<ol type="1">
-<li>No defined format for dataset references: Datasets are often not cited formally and rather are referred to using unpredictable textual context and formats.</li>
-<li>Name disambiguation: Datasets can be referred to by their full name, acronym, and many other valid ways. For instance, the dataset “Rural-Urban Continuum Codes” may also be referred to as “Rural Urban Continuum Codes” or “RUCC” or by using a URL reference,</li>
-<li>Conflicts with other terms and phrases: Contextual cues need to be used to ensure, for example, that a data asset such as “Feed Outlook” is indeed the relevant USDA reference.</li>
-<li>Simple spelling and other invalid references: Ideally, search algorithms need to allow for “fuzzy” matching to catch slightly misspelled or mis-named datasets.</li>
-</ol>
-<p>To address this challenge, the project employed the top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative.</p>
-</div>
-</div>
-<section id="full-text-search-corpus" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="full-text-search-corpus">1. Full Text Search Corpus</h4>
-<p>Scopus is a large, curated abstract and citation database of scientific literature including scientific journals, books, and conference proceedings. Around 11,000 new records are added each day from over 7,000 publishers worldwide. Elsevier is also licensed to access the full text of publications from many, although not all, of these publishers for internal analysis (the full text is not licensed for public use). Where the appropriate licenses do not exist, the records are excluded from the search. To provide some context in this respect, for calendar year 2022, Elsevier estimates that full text records exist for 91% of records published and captured in that year. With license restrictions also considered, the estimate is that it is possible to undertake full text searches on approximately 82% of the total records for that year.</p>
-<p>The USDA full text search corpus was created using Scopus, with a publication year range of 2017 to 2023 inclusive and using the Topics, Journals and Top Authors.</p>
-<p>The full text records associated with the USDA search corpus is shown in <a href="#tbl-usda-full-text" class="quarto-xref">Table&nbsp;2</a>:</p>
-<div id="tbl-usda-full-text" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-usda-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Full Text Records Associated with USDA Search Corpus
-</figcaption>
-<div aria-describedby="tbl-usda-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: center;">Number of Records</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">2017-2023 Articles from Topics</td>
-<td style="text-align: center;">726,423</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">2017-2023 Articles from Journals</td>
-<td style="text-align: center;">1,537,851</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">2017-2023 Articles from Top Authors</td>
-<td style="text-align: center;">21,938</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">De-duplicated Articles from Above</td>
-<td style="text-align: center;">2,089,728</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Deduplicated articles where we have full text</td>
-<td style="text-align: center;">1,630,958</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Deduplicated articles where we have full text and are licensed to search</td>
-<td style="text-align: center;">1,450,086</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="references-search-corpus" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="references-search-corpus">2. References Search Corpus</h4>
-<p>A search through the references list of Scopus records is also undertaken as a separate and distinct step from the full text search. The search corpus here is broader than for full text, as there are no license conditions restricting the search. In addition, because references contain highly structured data, it is feasible to search through all of Scopus, as the computational limitations of full-text search do not apply.</p>
-<p>Because of this, all Scopus records within the publication date range are searched. For the USDA search period of 2017 to 2023, this amounted to 25,110,182 records.</p>
-<p>The reference search employs an exact text string matching routine across the references of the identified Scopus records.</p>
-<p>Because of the issues associated with generic terms, the same flags as applied in the Machine Learning step were also applied here.</p>
-<div id="tbl-scopus-refs" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-scopus-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Number of Records from Scopus References Search Routine
-</figcaption>
-<div aria-describedby="tbl-scopus-refs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Process Step Outputs</th>
-<th style="text-align: center;">Number of Records</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Number of unique Scopus publications identified in reference search</td>
-<td style="text-align: center;">25,588</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Number of those publications that were unique to the reference search (i.e.&nbsp;not found by Kaggle models).</td>
-<td style="text-align: center;">22,818</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Number of target data assets matched with the above publications</td>
-<td style="text-align: center;">34,526</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="machine-learning-kaggle-routines-full-text-search" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="machine-learning-kaggle-routines-full-text-search">3. Machine Learning (Kaggle) Routines (Full Text Search)</h4>
-<p>The top three models from the 2021 Kaggle competition sponsored by the Coleridge Initiative differ in their approaches, strengths, and weaknesses, and the strategy was to use all three to generate results, aggregating and filtering the results to achieve a synergy that would outperform any of the models individually. The same Kaggle models that were used in support of the Year 1 USDA project were employed on the data assets available to this project.</p>
-<p>The models are applied to the full text search corpus and generate a series of outputs identifying potential dataset matches. For two of the Kaggle models, the focus is on identifying general data assets so many matches will be generated that are not relevant to USDA and its target data assets. Thus, a further fuzzy text matching routine is applied to the Kaggle output to produce a subset of candidate matches (dyads) that are linked to the target data assets.</p>
-<p>As well as producing metadata for the publications and associated dyads, the process records the Kaggle record that produced the dyad and the scores associated with the matching routines. In addition, for all returned records where publisher licensing allows, a snippet is produced. The snippet is a fragment of text that shows both the referenced dataset and the contextual text that surrounds it, to provide human validators sufficient context to enable them to determine the validity of that candidate reference. The machine learning phase of the project therefore aims to locate all mentions of the target data assets within the search corpus of full text publications and to provide the candidate matches along with their snippets of text to a database that can facilitate subsequent validation by subject matter experts.</p>
-<p>With a focus on data assets rather than datasets and with some of the name aliases comprising short acronyms and/or very generic terms, there is a risk that high levels of false positives would be generated. For example, one of the search terms was “Crop Progress Report”. There are likely to many other countries beyond the US that all issue reports on Crop Progress. Hence, as well as searching for the terms, a set of flags/filters were also included thus ensuring dyads could be identified which also had the flagged terms. Typically, the filters chosen were linked either to focusing on the agency or to focusing on the research produced in the US. Specifically, for the full text search in the USDA project, the following terms were employed as filters:</p>
-<blockquote class="blockquote">
-<p>NASS, USDA, US Department of Agriculture, United States Department of Agriculture, National Agricultural Statistics Service, Economic Research Service</p>
-</blockquote>
-<p>In total, the use of flags was identified as being appropriate for 112 of the data assets.</p>
-<p>The Kaggle routines were run in early December 2023 with the process completing on 14 December.</p>
-<p>A summary of some of the key results from the Full Text search is provided in <a href="#tbl-kaggle-full-text" class="quarto-xref">Table&nbsp;4</a>:</p>
-<div id="tbl-kaggle-full-text" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-kaggle-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4: Full Text Search Generated by Kaggle Routine
-</figcaption>
-<div aria-describedby="tbl-kaggle-full-text-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Process Step Outputs</th>
-<th style="text-align: center;">Number of Records</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Number of unique Scopus publications identified by the three Kaggle algorithms</td>
-<td style="text-align: center;">635,831</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Number of unique publications identified after Fuzzy text matching to target data assets</td>
-<td style="text-align: center;">4,104</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Number of target data assets matched in the above publications</td>
-<td style="text-align: center;">4,392<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Number of snippets generated</td>
-<td style="text-align: center;">14,377<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p><strong>Post Processing Adjustments – RUCC and QuickStat Increment</strong></p>
-<p>Note that the RUCC and Quickstat increment was applied after the Kaggle routines were initially run. The process for running that increment involved two steps:</p>
-<ul>
-<li>A new search of the Scopus reference search corpus using the RUCC and Quickstat aliases.</li>
-<li>A fuzzy text search of the Kaggle output that had been generated using the RUCC and Quickstat aliases.</li>
-</ul>
-<p style="text-align: center;">
-<a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
-</p>
-</section>
-</section>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p><em>Describe Rafael’s methodology for searching for dataset names in OpenAlex articles and additional steps Cal did to pull data from the OpenAlex API</em></p>
-<p>To collect publications mentioning the NASS Census of Agriculture from the OpenAlex Catalog, I conducted a string search using a predefined set of dataset aliases: “Census of Agriculture,” “USDA Census,” “NASS Census,” “Agricultural Census,” and “AG Census.” To minimize false positives, I applied several filters: the publications had to be in English, published between 2017 and 2024, and include at least one author affiliated with an American institution. Additionally, to ensure that the publications were indeed referring to the correct dataset, I required that they also contain specific flag terms within the full text body, such as “USDA,” “US Department of Agriculture,” “United States Department of Agriculture,” “NASS,” or “National Agricultural Statistics Service.”</p>
-<p>This method closely mirrors the approach used in the USDA Briefing Book sent by Julia (Appendix 1: Data Search), where a similar string search was applied to the Scopus catalog. In the Scopus analysis, the string search was performed primarily on the references text body rather than the full text and was executed only within a seed corpus. In contrast, our search in OpenAlex was conducted across the entire OpenAlex database. Notably, the references string search in Scopus identified over 80% of the findings, as documented in the briefing book, highlighting the effectiveness of this approach.</p>
-<p>Refer to the <a href="appendices.html#sec-app-openalex">Appendix</a> for additional details on file construction.</p>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-
-</div>
-</div>
-</div>
-</section>
-<section id="sec-seed-corpus" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-seed-corpus">Scopus-Specific: Create a Seed Corpus</h2>
-<p>After defining the data assets and aliases in Step 1 (<a href="#sec-data" class="quarto-xref">Section&nbsp;4.1</a>), the next step is to identify where these datasets are referenced in research publications. <strong>Unlike OpenAlex and Dimensions, which allow for direct full-text searches, Scopus requires a structured seed corpus to establish a more targeted search space.</strong></p>
-<p>For <strong>Scopus</strong>, this seed corpus approach was necessary to balance recall (capturing relevant mentions) and precision (minimizing false positives). The process involved:</p>
-<ul>
-<li>Restricted search strategies using reference lists and available full-text searches</li>
-<li>Machine learning-assisted review to refine dataset mentions</li>
-<li>Manual refinements to resolve ambiguities, consolidate duplicate aliases, and incorporate missing terms.</li>
-</ul>
-<p>This structured search space helped mitigate the constraints of Scopus’s API and ensured that dataset mentions were captured as comprehensively as possible before proceeding to the data identification step (<a href="#sec-data-idn" class="quarto-xref">Section&nbsp;4.2</a>).</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Dimensions</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<section id="rationale" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="rationale">Rationale</h3>
-<p>There are several factors that motivate the use of a restricted search space. Although an increasing number of research publications cite datasets in a standard way, data citation has not been adopted as a uniform practice in the research community. Consequently, searches of publication metadata (e.g., the publication reference list) alone is not sufficient. A full text search is required to find all citations of the relevant data assets. However, full text searching is much more intensive in terms of computation, and more expensive in terms of the validation process. As a consequence, the search space is restricted to balance recall and precision.</p>
-<p>Increasing recall means more of the data assets will be found and hence will provide a broader picture of the data asset’s impact. However, increasing recall comes at the expense of precision, i.e., it will result in more false positives. No matter how attractive achieving high levels of recall may be, that objective rapidly becomes prohibitive in terms of both cost (subject matter expert effort) and time.</p>
-<p>These three inputs were then combined to provide one list of data assets that could be used in the subsequent process steps. The combined list comprised 2,006 parent records and a further 1,996 aliases (some of which were acronyms). There was therefore a total of 4,002 search terms.</p>
-</section>
-<section id="creating-a-seed-corpus" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="creating-a-seed-corpus">Creating a Seed Corpus</h3>
-<p>The process of creating the search corpus, that is, the body of texts that will be searched, begins with the creation of a seed corpus. The purpose of the seed corpus is to define the parameters that can be used for creating the final search corpus. The seed corpus is, to a first approximation, created by text matching the name for each parent data asset and its aliases with:</p>
-<ol type="i">
-<li>full-text records in ScienceDirect which are within a specified range of publication years, and</li>
-<li>the reference section for Scopus records that are within the specified range of publication years. For the USDA Year 2 project, the date range period was publications produced between 2017 and 2023 (inclusive).</li>
-</ol>
-<p>Because some of the alias terms are very generic and/or otherwise could result in false positives, they are either excluded from the seed corpus process or only included where they are associated with a flag. In this respect,</p>
-<ul>
-<li>12 aliases from the total of 4,002 were excluded completely from both the seed corpus creation reference search and the ScienceDirect search.</li>
-<li>71 aliases were included in the search with a flag term i.e.&nbsp;they returned results only when associated with one or more flag terms. The flag terms were: NASS, USDA, US Department of Agriculture, United States Department of Agriculture, National Agricultural Statistics Service</li>
-</ul>
-<p>The search through ScienceDirect and Scopus references resulted in a set of research publication records matched to the data asset names and aliases. Of the 3,990 (4,002 – 12) aliases included in the search, 328 were found in the references and 163 in ScienceDirect. Of course, there are overlaps between these two datasets and the number of unique data assets found within the seed corpus was 334.</p>
-<p>The metadata associated with these publications provides insight into what types of research are leveraging these data assets. The “entities” used for this purpose were as follows:</p>
-<ul>
-<li>SciVal Topic – 2,699 unique topics in the seed corpus</li>
-<li>Journal – 2,650 unique journals in the seed corpus</li>
-<li>Top Authors – Authors are grouped by numbers of output in seed corpus and the top 1,000 are selected. In our sample 769 relevant authors were from USA.</li>
-</ul>
-<p>It should be noted that Scopus Topics are intended to identify the subject area most likely to use these data assets. These topics are intended to uncover clusters of researchers likely to use similar resources, such as datasets, based on the citation links between their work. It should also be noted that in the Year 1 USDA project, the seed corpus was created just be reviewing list of target journals.</p>
-<p>As well as recording the entities, the number of records associated with them that was found in the seed corpus is also collected. This provides the basis by which a filtering can be undertaken to focus down on those entities that should be used in search corpus creation.</p>
-<p>The results of the seed corpus generation (i.e.&nbsp;the entities and record counts) were provided for review to Professor Julia Lane on 15 November 2023. Based on that review, the following table provides a summary of</p>
-<ol type="i">
-<li>decisions were taken with regards to the parameters to be used for creation of the search corpus, and</li>
-<li>the implications of that decision on search corpus</li>
-</ol>
-<div id="tbl-seed-corpus" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-seed-corpus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;5: Creating a Seed Corpus
-</figcaption>
-<div aria-describedby="tbl-seed-corpus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: left;">Seed Corpus Detection</th>
-<th style="text-align: left;">Consequence / Implication for Seed Corpus</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">SciVal Topics</td>
-<td style="text-align: left;">Include those SciVal Topics where the article count in the Seed Corpus</td>
-<td style="text-align: left;">All articles associated with 262 SciVal Topics</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Journals</td>
-<td style="text-align: left;">Include those Journals where the article count in the Seed Corpus was 7 or more</td>
-<td style="text-align: left;">All articles associated with 280 journals</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Top Authors</td>
-<td style="text-align: left;">Include those with US affiliation</td>
-<td style="text-align: left;">All articles associated with the US-affiliated 769 Top Authors</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="refinement-of-seed-corpus" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="refinement-of-seed-corpus">Refinement of Seed Corpus</h3>
-<p>Following the Machine Learning routines and during the review of the results, some ambiguities were found in the Data Asset list leading to a set of post-search refinements. In a search list of the scale being dealt with (over 4,000) records, finding these ambiguities was not unexpected.</p>
-<p>Specifically, in the original list a small number of duplicate alias terms were noted and these were consolidated. A specific example was multiple entries for the data asset “Measuring Access to Food in Tanzania: A Food Basket Approach” and its aliases. Furthermore, it was noted a small number of aliases were attributed to the wrong parent. These were corrected. These changes resulted in a data asset, as at 22 December 2023, that had 3,991 parent and alias records.</p>
-<p>Finally, and again only following the original Kaggle search, it was noted that terms relating to Rural Urban Continuum Codes and Quick Stats had not featured in the original list. An additional eight terms were therefore added as an incremental addition to the list on 29 December 2023. These eight terms comprised two parent records with a further six associated aliases. A specific additional search was conducted for these eight records as explained later.</p>
-<p style="text-align: center;">
-<a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
-</p>
-</section>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<p><em>The seed corpus approach was only applied to Scopus.</em></p>
-</div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-<p><em>The seed corpus approach was only applied to Scopus.</em></p>
-</div>
-</div>
-</div>
-<!-- -   Collect an initial set of publications. -->
-<!-- -   Analyze how datasets are referenced. -->
-<!-- -   Determine how well the dataset name variations (from Step 1) are retrieved from the publications. -->
-<!-- -   Adjust searches to improve accuracy. -->
-<!-- **Result:** A set of seed publications to inform dataset identification and search procedures. -->
-</section>
-<section id="sec-disambiguation" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="sec-disambiguation"><span class="header-section-number">4.3</span> Pre-Process and Clean Publication Datasets</h2>
-<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
-<strong>The goal of this step is to standardize and resolve inconsistencies in publication records by disambiguating journal names, author affiliations, and institutions across the three databases.</strong>
-</div>
-<p>To compare publication coverage across citation databases, we first identify all journals that contain publications using each dataset in Scopus, OpenAlex, and Dimensions. <a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a> displays a list of the datasets for which we evaluate coverage.</p>
-<p>We subset the publication dataset from Step 2 by filtering for dataset mentions. For example, if a publication references Ag Census, it is included in the Ag Census sub-dataset; otherwise, it is excluded. This process identifies dataset-specific publication patterns in Scopus, OpenAlex, and Dimensions.</p>
-<p>Our approach follows a hierarchical approach to understand how USDA data assets appear in these citation databases.</p>
-<ol type="1">
-<li><p><strong>Journal Level</strong> – Identifies journals publishing research using USDA datasets. A journal is included if at least one of its publications references the dataset, but this does not indicate overall dataset prevalence within that journal.</p></li>
-<li><p><strong>Publication Level</strong> – Examines individual publications within these journals to assess how often and in what context USDA datasets appear.</p></li>
-<li><p><strong>Author Level</strong> – Tracks authors of these publications, analyzing institutional affiliations and research networks to understand dataset reach.</p></li>
-<li><p><strong>Institution Level</strong> – Maps dataset usage across institutions to identify geographic and organizational research patterns.</p></li>
-</ol>
-<p>This structured approach standardizes dataset mention analysis across databases, allowing for direct comparisons of coverage and research impact.</p>
-<section id="case-study-census-of-agriculture" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="case-study-census-of-agriculture"><span class="header-section-number">4.3.1</span> Case Study: Census of Agriculture</h3>
-<div class="custom-box">
-<p>To illustrate the data cleaning and disambiguation process, we use the Census of Agriculture as a case study to systematically compare coverage, overlap, and differences between the three citation databases. The Census of Agriculture (also referred to as “Ag Census”) is widely used in agricultural and economic research, making it an ideal dataset for assessing database differences.</p>
-<section id="pre-processing-steps-by-citation-database" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="pre-processing-steps-by-citation-database">Pre-Processing Steps by Citation Database</h3>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Dimensions</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<section id="journal-coverage" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="journal-coverage">Journal Coverage</h3>
-<p>To analyze journal coverage in <strong>Scopus</strong>, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. This dataset is built from an initial publication-level dataset, which captures individual research articles mentioning Ag Census.</p>
-<p>We construct the publication-level dataset for only Ag Census mentions using the following metadata from the publication-level data:</p>
-<ul>
-<li>Publication identifier (DOI)</li>
-<li>Journal name</li>
-<li>Publisher</li>
-<li>ISSN (International Standard Serial Number, a unique journal identifier)</li>
-<li>Dataset alias (alternate names used to reference Ag Census)</li>
-<li>Dyad (dataset mention pair)</li>
-</ul>
-<p>This data structure follows the format outlined in the data schema (Figure XX).</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Crosswalk of Dataset Identifiers between Scopus and OpenAlex">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Crosswalk of Dataset Identifiers between Scopus and OpenAlex
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Scopus assigns multiple identifiers to the same dataset depending on how it is reported, rather than a single, standardized identifier. Therefore, the authors create a crosswalk between Scopus and OpenAlex so that each dataset can have one common identifier.</p>
-<p><a href="../appendices/app_crosswalk_data_id.qmd">Link to crosswalk file</a></p>
-</div>
-</div>
-</div>
-<p>After assembling the publication-level dataset, the final step in preparing the Scopus journal-level dataset is to aggregate publications at the journal level based on their ISSN.</p>
-</section>
-<section id="author-disambiguation" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="author-disambiguation">Author Disambiguation</h3>
-<p><strong>COMING SOON</strong></p>
-</section>
-<section id="institution-disambiguation" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="institution-disambiguation">Institution Disambiguation</h3>
-<p><strong>COMING SOON</strong></p>
-<p style="text-align: center;">
-<a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
-</p>
-</section>
-</div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<section id="journal-coverage-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="journal-coverage-1">Journal Coverage</h3>
-<p>To analyze journal coverage in <strong>OpenAlex</strong>, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. The OpenAlex journal-level dataset follows a similar approach to Scopus but differs in data availability and structure.</p>
-<p>OpenAlex links journals to their respective publications using linkage files, which connect publication records to dataset mentions. Unlike Scopus, OpenAlex assigns a single dataset identifier per dataset, while Scopus may have multiple identifiers for the same dataset depending on how it is referenced.</p>
-<p>Additionally, OpenAlex formats journal and publication identifiers differently:</p>
-<ul>
-<li>ISSNs appear without dashes</li>
-<li>DOIs exclude the URL portion, storing only the core identifier</li>
-</ul>
-<p>To ensure consistency with Scopus, we clean and standardize the publication-level dataset, aligning DOIs and ISSNs to a common format.</p>
-<p><strong>CAL TO DESCRIBE THIS PROCESS</strong></p>
-</section>
-<section id="author-disambiguation-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="author-disambiguation-1">Author Disambiguation</h3>
-<p><strong>COMING SOON</strong></p>
-</section>
-<section id="institution-disambiguation-1" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="institution-disambiguation-1">Institution Disambiguation</h3>
-<p><strong>COMING SOON</strong></p>
-<p style="text-align: center;">
-<a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
-</p>
-</section>
-</div>
-<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
-
-</div>
-</div>
-</div>
-</section>
-<section id="results-from-data-cleaning" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="results-from-data-cleaning">Results from Data Cleaning</h3>
-<p><em>This section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset</em></p>
-<p>Step 4 produces two publication-level datasets: one of all academic papers released through Scopus that use Ag Census data and a similar one for OpenAlex.</p>
-<p>There are 4712 unique publications reported in Scopus and 1266 in OpenAlex. These data are collapsed into a journal-level dataset based on the International Standard Serial Number (ISSN) that is unique to each academic journal.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Dimensions</a></li></ul>
-<div class="tab-content">
-<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
-
-</div>
-<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
-
-</div>
-<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
-
-</div>
-</div>
-</div>
-</section>
-</div>
-</section>
-</section>
-<section id="sec-matching" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="sec-matching"><span class="header-section-number">4.4</span> Compare Results across Citation Databases</h2>
-<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
-<strong>The goal of this step is to develop statistics that measure dataset tracking accuracy.</strong>
-</div>
-<section id="case-study-census-of-agriculture-1" class="level3" data-number="4.4.1">
-<h3 data-number="4.4.1" class="anchored" data-anchor-id="case-study-census-of-agriculture-1"><span class="header-section-number">4.4.1</span> Case Study: Census of Agriculture</h3>
-<div class="custom-box">
-<p>Continuing with our case study, we use the datasets produced in Step 4 to produce counts of the number of journals with Ag Census publications that:</p>
-<ol type="i">
-<li>only appear in Scopus,</li>
-<li>only appear in OpenAlex, or</li>
-<li>appear in both.</li>
-</ol>
-<p>For journals that contain Ag Census data in both citation databases, we summarize the coverage of publications that appear in both Scopus and OpenAlex.</p>
-<p>Then, we investigate discrepancies based on factors like missing identifiers, mismatched journal information (ISSNs), and additional publications accessed through OpenAlex’s API.</p>
-<p><strong>Add here: What are the steps in producing Table AA</strong></p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Dimensions</a></li></ul>
-<div class="tab-content">
-<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
-<section id="journal-coverage-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="journal-coverage-2">Journal Coverage</h3>
-</section>
-<section id="author-disambiguation-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="author-disambiguation-2">Author Disambiguation</h3>
-</section>
-<section id="institution-disambiguation-2" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="institution-disambiguation-2">Institution Disambiguation</h3>
-<p style="text-align: center;">
-<a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
-</p>
-</section>
-</div>
-<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
-<section id="journal-coverage-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="journal-coverage-3">Journal Coverage</h3>
-</section>
-<section id="author-disambiguation-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="author-disambiguation-3">Author Disambiguation</h3>
-</section>
-<section id="institution-disambiguation-3" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="institution-disambiguation-3">Institution Disambiguation</h3>
-<p style="text-align: center;">
-<a href="#sec-workflow-overview" class="btn btn-primary">Return to Project Workflow</a>
-</p>
-</section>
-</div>
-<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
-
-</div>
-</div>
-</div>
-<section id="results-from-database-comparison" class="level3" data-number="4.4.2">
-<h3 data-number="4.4.2" class="anchored" data-anchor-id="results-from-database-comparison"><span class="header-section-number">4.4.2</span> Results from Database Comparison</h3>
-<p><em>This section presents results after matching (which type varies – deterministic vs fuzzy)</em></p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">Dimensions</a></li></ul>
-<div class="tab-content">
-<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
-
-</div>
-<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
-
-</div>
-<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
-
-</div>
-</div>
-</div>
-</section>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="Summary of Matching Methods">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Summary of Matching Methods
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li>Rule-based matching for exact matches</li>
-<li>Probabilistic matching for handling variations</li>
-<li>Machine learning methods for complex cases</li>
-</ol>
-<div id="tbl-methods-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-methods-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;6: Summary of Methods
-</figcaption>
-<div aria-describedby="tbl-methods-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Method</th>
-<th style="text-align: left;">Considerations</th>
-<th style="text-align: left;">Example</th>
-<th style="text-align: left;">Pros</th>
-<th style="text-align: left;">Cons</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Searching for dataset names within Scopus</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Searching for dataset names within OpenAlex</td>
-<td style="text-align: left;">“Location” field set to “journal”</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Disambiguation of authors</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Disambiguation of institutions</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Standardization of institutions</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Searching based on the frequency of dataset appearance in journals</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">MORE . . .</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Filtering on keywords to determine themes</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-</section>
-<section id="recommendations" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Recommendations</h1>
-<section id="technical-recommendations" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="technical-recommendations"><span class="header-section-number">5.1</span> Technical Recommendations</h2>
-</section>
-<section id="expanding-dataset-usage" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="expanding-dataset-usage"><span class="header-section-number">5.2</span> Expanding Dataset Usage</h2>
-<p>This report analyzes USDA dataset usage patterns across both platforms and recommends specific strategies for expanding dataset use in underrepresented research communities.</p>
-<p>Given the small percentage of MSI’s represented in our institutional analysis, it is evident that user engagement is central to increasing usage rates of the datasets, regardless of citation database.</p>
-</section>
-</section>
-<section id="conclusion-and-next-steps" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Conclusion and Next Steps</h1>
-</section>
-<section id="appendices" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Appendices</h1>
-<p>All appendices referenced throughout the report are located on <a href="./appendices.html">this page</a>.</p>
-</section>
-<section id="references" class="level1" data-number="8">
-
-
 
 
 </section>
+</section>
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">8 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-broadus1987toward" class="csl-entry" role="listitem">
-Broadus, R. N. (1987). Toward a definition of <span>“bibliometrics.”</span> <em>Scientometrics</em>, <em>12</em>, 373–379. <a href="https://doi.org/10.1007/bf02016680">https://doi.org/10.1007/bf02016680</a>
-</div>
-<div id="ref-debellis2009bibliometrics" class="csl-entry" role="listitem">
-De Bellis, N. (2009). <em>Bibliometrics and citation analysis: From the science citation index to cybermetrics</em>. Scarecrow Press. <a href="https://doi.org/10.1002/asi.21181">https://doi.org/10.1002/asi.21181</a>
-</div>
-<div id="ref-garfield1955citation" class="csl-entry" role="listitem">
-Garfield, E. (1955). Citation indexes for science: A new dimension in documentation through association of ideas. <em>Science</em>, <em>122</em>(3159), 108–111. <a href="https://doi.org/10.1126/science.122.3159.108">https://doi.org/10.1126/science.122.3159.108</a>
-</div>
-<div id="ref-hood2001literature" class="csl-entry" role="listitem">
-Hood, W. W., &amp; Wilson, C. S. (2001). The literature of bibliometrics, scientometrics, and informetrics. <em>Scientometrics</em>, <em>52</em>, 291–314. <a href="https://doi.org/10.1023/A:1017919924342">https://doi.org/10.1023/A:1017919924342</a>
-</div>
-<div id="ref-lane2022data" class="csl-entry" role="listitem">
-Lane, J., Gimeno, E., Levitskaya, E., Zhang, Z., &amp; Zigoni, A. (2022). Data inventories for the modern age? Using data science to open government data. <em>Harvard Data Science Review</em>, <em>4</em>(2). <a href="https://doi.org/10.1162/99608f92.8a3f2336">https://doi.org/10.1162/99608f92.8a3f2336</a>
-</div>
-<div id="ref-martin2021google" class="csl-entry" role="listitem">
-Martín-Martín, A., Thelwall, M., Orduna-Malea, E., &amp; Delgado López-Cózar, E. (2021). Google scholar, microsoft academic, scopus, dimensions, web of science, and OpenCitations’ COCI: A multidisciplinary comparison of coverage via citations. <em>Scientometrics</em>, <em>126</em>(1), 871–906. <a href="https://doi.org/10.1007/s11192-020-03690-4">https://doi.org/10.1007/s11192-020-03690-4</a>
-</div>
-<div id="ref-mongeon2016journal" class="csl-entry" role="listitem">
-Mongeon, P., &amp; Paul-Hus, A. (2016). The journal coverage of web of science and scopus: A comparative analysis. <em>Scientometrics</em>, <em>106</em>, 213–228. <a href="https://doi.org/10.1007/s11192-015-1765-5">https://doi.org/10.1007/s11192-015-1765-5</a>
-</div>
-<div id="ref-visser2021large" class="csl-entry" role="listitem">
-Visser, M., Van Eck, N. J., &amp; Waltman, L. (2021). Large-scale comparison of bibliographic data sources: Scopus, web of science, dimensions, crossref, and microsoft academic. <em>Quantitative Science Studies</em>, <em>2</em>(1), 20–41. <a href="https://doi.org/10.1162/qss_a_00112">https://doi.org/10.1162/qss_a_00112</a>
-</div>
-</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Explanatory Note 1: A publication may contain references to more than one target data assets. It may also contain multiple references to the same target data asset. As an example, a publication may contain the following references to target assets (Data Asset A = 3 references, Data Asset B = 2 references, Data asset C = 4 reference then in this field three target data assets, the value included would be “3”.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Explanatory Note 2: For the same publication as in Explanatory Note 1, the value here would be 9 provided the license for the publication allowed for snippet generation.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1314,7 +411,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/laurenchenarides\.github\.io\/compare_scopus_openalex_report\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -1642,7 +739,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./terminology.html" class="pagination-link" aria-label="Terminology">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Terminology</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./workflow.html" class="pagination-link" aria-label="Project Workflow">
+        <span class="nav-page-text">Project Workflow</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
+</div>
+  </div>
+</footer>
 
 
 

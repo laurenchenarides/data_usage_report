@@ -1,0 +1,25 @@
+---
+title: "Methodology for Comparing Citation Database Coverage of Dataset Usage"
+subtitle: "Terminology"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+bibliography: references.bib  # Link to your BibTeX file
+csl: apa.csl  # Optional: Use a specific citation style (e.g., APA)
+---
+
+# Terminology {.unnumbered}
+
+Citation databases form the foundation of modern research tracking and analysis. Digital repositories, like the test cases featured in this report, systematically catalog scholarly publications and their references to each other [@debellis2009bibliometrics]. Citation databases differ in their approaches to curating and maintaining this information. Some focus exclusively on peer-reviewed journal articles with strict inclusion criteria, while others index a broader range of research outputs including preprints, technical reports, and conference proceedings [@martin2021google; @mongeon2016journal]. These curation approaches affect how comprehensively each database captures research impact [@visser2021large].
+
+Understanding how these databases work requires familiarity with bibliometrics - the statistical analysis of published works and their impact [@broadus1987toward]. Bibliometric analysis examines patterns in publication, citation networks, and research influence [@hood2001literature]. The field emerged from early citation indices, which mapped relationships between papers through their references [@garfield1955citation].
+
+For tracking USDA dataset usage, these concepts directly apply. Accurate tracking of dataset usage in scientific literature serves multiple purposes. For federal agencies like the USDA, it helps monitor the return on public data investments, find gaps in dataset use, plan future data collection, and support evidence-based policy decisions. This tracking requires reliable citation data from citation databases. Unlike standard citations, researchers often reference datasets within the text of their publications rather than citing them formally. This makes tracking dataset usage more complex.
+
+To solve this tracking challenge, methods have been developed that scan publication text for dataset mentions [@lane2022data]. The scope and accuracy of our dataset tracking depends on what publications we can access and analyze. Because different databases curate content in different ways, it creates variation in what dataset mentions they capture and their frequency. Variations in content across sources affect our ability to accurately track dataset impact and adoption. The DemocratizingData.ai platform, for example, uses bibliometric data to monitor these dataset usage patterns, helping USDA understand how its data supports research. By comparing how different citation databases track this information, we can better understand their strengths and limitations for monitoring research impact.
+
+# References

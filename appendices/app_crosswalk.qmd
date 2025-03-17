@@ -1,5 +1,5 @@
 ---
-title: "Dimensions"
+title: "Data Schema"
 date: last-modified  # Auto-updates based on Git commits
 format:
   html:
@@ -9,6 +9,7 @@ format:
     css: styles.css
 ---
 
-## Overview of Dimensions Reference Files {#sec-app-dimensions}
+# Data Schema
 
-Research partners at the University of Utah have access to Dimensions.
+# Crosswalk Files
+

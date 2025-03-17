@@ -1,0 +1,70 @@
+---
+title: "Methodology for Comparing Citation Database Coverage of Dataset Usage"
+subtitle: "Report Summary"
+author: 
+  - name: "Lauren Chenarides, Ph.D."
+    email: "Lauren.Chenarides@colostate.edu"
+    affiliation: "Colorado State University"
+  - name: "Calvin Bryan, Ph.D."
+    email: "calvinrbryan@gmail.com"
+    affiliation: "Colorado State University"    
+  - name: "Rafael Ladislau"
+    email: "rafa.ladis@gmail.com"
+    affiliation: "RL Desenvolvimento de Sistemas LTDA"
+  - name: "Julia Lane, Ph.D."
+    email: "julia.lane@nyu.edu"
+    affiliation: "New York University"
+  - name: "Ming Wang"
+    email: "Ming.Wang@colostate.edu"
+    affiliation: "Colorado State University"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+---
+
+# What Is the Issue? {.unnumbered}
+
+Federal agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like [DemocratizingData.ai](https://democratizingdata.ai/tools/dashboards/) and [NASS’s 5’s Data Usage Dashboard](https://www.nass.usda.gov/Data_Visualization/5W/index.php). The process of identifying dataset mentions in academic research output requires the use of citation databases. However, different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports. Tracking dataset usage requires developing methods that scan publication text for dataset mentions. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. Not to mention, dataset tracking requires reliable citation data from citation databases.
+
+This report presents a methodology for identifying dataset mentions in research publications across various citation databases. In doing so, we compare publication coverage, as well as authorship and institutional representation, across Scopus, OpenAlex, and Dimensions as primary sources.
+
+The purpose here is to establish a consistent set of statistics for effectively comparing results and evaluating differences in dataset tracking across citation databases. This allows for clearer insights into how publication scope and indexing strategies influence dataset usage statistics.
+
+# What Did the Study Find? {.unnumbered}
+
+**Main Finding:** Accurate dataset tracking relies heavily on how publications are indexed across citation databases. For two citation databases -- Scopus and OpenAlex -- carefully constructed seed corpora were needed to track dataset mentions. 
+
+**Specific Results from Database Comparison:**
+
+-   After deduplication, the number of distinct authors decreased by XX% in Scopus and XX% in OpenAlex, indicating significant duplicate entries in the raw data
+-   Institutional coverage was broader in XX, with XX% more institutions represented compared to XX
+-   Analysis revealed XX major themes in USDA dataset usage, with ?? and ?? being the most prominent
+-   Minority-Serving Institutions (MSIs) represented only XX% of institutional users, highlighting opportunities for broader engagement
+
+# How Was the Study Conducted? {.unnumbered}
+
+The **three** citation databases we are comparing are Elsevier’s Scopus, OurResearch's OpenAlex, and Digital Science's Dimensions.ai. [**Scopus**](appendices/app_databases.qmd#sec-scopus) charges for access to its citation database. It focuses on peer-reviewed literature and provides metadata about authors, institutions, and citations for academic journals. [**OpenAlex**](appendices/app_databases.qmd#sec-openalex), an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. [**Dimensions**](appendices/app_databases.qmd#sec-dimensions), developed by Digital Science, offers a hybrid model that provides both free and subscription-based access to its citation database. Unlike Scopus, which primarily indexes peer-reviewed journal articles, and OpenAlex, which emphasizes open-access content, Dimensions aggregates a broad spectrum of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. It integrates citation data with funding information, making it a useful tool for assessing the impact of research beyond traditional academic publishing.
+
+Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. We developed procedures for:
+
+-   Identifying publication coverage across citation databases
+-   Cross-referencing publications between datasets
+-   Deduplicating publication records
+-   Standardizing author and institution names
+-   Analyzing research themes and institutional representation
+
+The methodology produced these reusable components:
+
+-   Code repository for data cleaning and standardization
+-   Cleaned author tables with disambiguated names and institutional affiliations
+-   Standardized institution tables using IPEDS identifiers
+-   Crosswalk table structure linking Scopus and OpenAlex publication records, authors, and institutions
+-   [Data schema visualization](https://dbdiagram.io/d/scopus_schema-67d71fa375d75cc84445d40b) \[Last updated: **in progress**\]
+
+The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.
+
+<!---Beyond platform comparison, this methodology examines inclusivity in research coverage, particularly representation of MSIs. This component helps identify potential gaps in dataset accessibility and adoption across different types of research institutions.--->

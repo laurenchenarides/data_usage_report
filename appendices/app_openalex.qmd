@@ -1,4 +1,15 @@
-## OpenAlex {#sec-app-openalex}
+---
+title: "OpenAlex"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+---
+
+## Overview of OpenAlex Reference Files {#sec-app-openalex}
 
 This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.
 

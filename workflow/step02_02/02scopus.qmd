@@ -1,0 +1,55 @@
+## Scopus
+
+### Rationale {.unnumbered}
+
+There are several factors that motivate the use of a restricted search space. Although an increasing number of research publications cite datasets in a standard way, data citation has not been adopted as a uniform practice in the research community. Consequently, searches of publication metadata (e.g., the publication reference list) alone is not sufficient. A full text search is required to find all citations of the relevant data assets. However, full text searching is much more intensive in terms of computation, and more expensive in terms of the validation process. As a consequence, the search space is restricted to balance recall and precision. 
+
+Increasing recall means more of the data assets will be found and hence will provide a broader picture of the data asset’s impact. However, increasing recall comes at the expense of precision, i.e., it will result in more false positives. No matter how attractive achieving high levels of recall may be, that objective rapidly becomes prohibitive in terms of both cost (subject matter expert effort) and time. 
+
+These three inputs were then combined to provide one list of data assets that could be used in the subsequent process steps. The combined list comprised 2,006 parent records and a further 1,996 aliases (some of which were acronyms). There was therefore a total of 4,002 search terms.
+
+### Creating a Seed Corpus {.unnumbered}
+
+The process of creating the search corpus, that is, the body of texts that will be searched, begins with the creation of a seed corpus. The purpose of the seed corpus is to define the parameters that can be used for creating the final search corpus. The seed corpus is, to a first approximation, created by text matching the name for each parent data asset and its aliases with: 
+
+i) full-text records in ScienceDirect which are within a specified range of publication years, and 
+ii) the reference section for Scopus records that are within the specified range of publication years. For the USDA Year 2 project, the date range period was publications produced between 2017 and 2023 (inclusive).
+
+Because some of the alias terms are very generic and/or otherwise could result in false positives, they are either excluded from the seed corpus process or only included where they are associated with a flag. In this respect,
+
+-   12 aliases from the total of 4,002 were excluded completely from both the seed corpus creation reference search and the ScienceDirect search.
+-   71 aliases were included in the search with a flag term i.e. they returned results only when associated with one or more flag terms. The flag terms were: NASS, USDA, US Department of Agriculture, United States Department of Agriculture, National Agricultural Statistics Service
+
+The search through ScienceDirect and Scopus references resulted in a set of research publication records matched to the data asset names and aliases. Of the 3,990 (4,002 – 12) aliases included in the search, 328 were found in the references and 163 in ScienceDirect. Of course, there are overlaps between these two datasets and the number of unique data assets found within the seed corpus was 334.
+
+The metadata associated with these publications provides insight into what types of research are leveraging these data assets. The “entities” used for this purpose were as follows:
+
+-   SciVal Topic – 2,699 unique topics in the seed corpus
+-   Journal – 2,650 unique journals in the seed corpus
+-   Top Authors – Authors are grouped by numbers of output in seed corpus and the top 1,000 are selected. In our sample 769 relevant authors were from USA.
+
+It should be noted that Scopus Topics are intended to identify the subject area most likely to use these data assets. These topics are intended to uncover clusters of researchers likely to use similar resources, such as datasets, based on the citation links between their work. It should also be noted that in the Year 1 USDA project, the seed corpus was created just be reviewing list of target journals.
+
+As well as recording the entities, the number of records associated with them that was found in the seed corpus is also collected. This provides the basis by which a filtering can be undertaken to focus down on those entities that should be used in search corpus creation.
+
+The results of the seed corpus generation (i.e. the entities and record counts) were provided for review to Professor Julia Lane on 15 November 2023. Based on that review, the following table provides a summary of 
+
+i) decisions were taken with regards to the parameters to be used for creation of the search corpus, and 
+ii) the implications of that decision on search corpus
+
+| Parameter | Seed Corpus Detection | Consequence / Implication for Seed Corpus |
+|:---|:---|:---|
+| SciVal Topics | Include those SciVal Topics where the article count in the Seed Corpus | All articles associated with 262 SciVal Topics |
+| Journals | Include those Journals where the article count in the Seed Corpus was 7 or more | All articles associated with 280 journals |
+| Top Authors | Include those with US affiliation | All articles associated with the US-affiliated 769 Top Authors |
+
+: Creating a Seed Corpus {#tbl-seed-corpus}
+
+### Refinement of Seed Corpus {.unnumbered}
+ 
+Following the Machine Learning routines and during the review of the results, some ambiguities were found in the Data Asset list leading to a set of post-search refinements. In a search list of the scale being dealt with (over 4,000) records, finding these ambiguities was not unexpected.
+
+Specifically, in the original list a small number of duplicate alias terms were noted and these were consolidated. A specific example was multiple entries for the data asset "Measuring Access to Food in Tanzania: A Food Basket Approach" and its aliases. Furthermore, it was noted a small number of aliases were attributed to the wrong parent. These were corrected. These changes resulted in a data asset, as at 22 December 2023, that had 3,991 parent and alias records.
+
+Finally, and again only following the original Kaggle search, it was noted that terms relating to Rural Urban Continuum Codes and Quick Stats had not featured in the original list. An additional eight terms were therefore added as an incremental addition to the list on 29 December 2023. These eight terms comprised two parent records with a further six associated aliases. A specific additional search was conducted for these eight records as explained later.
+

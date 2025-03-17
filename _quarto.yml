@@ -3,18 +3,64 @@ project:
   output-dir: docs  # Ensure Quarto builds into /docs for GitHub Pages
 
 website:
+  page-navigation: true
   title: "Citation Database Assessment"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Technical Report
-      - href: appendices.qmd
-        text: Appendices
-    right:
+  site-url: "https://laurenchenarides.github.io/compare_scopus_openalex_report/"
+  repo-url: https://github.com/laurenchenarides/compare_scopus_openalex_report
+  repo-actions: [edit, issue]
+  
+  page-footer: 
+    right: "This page is built with [Quarto](https://quarto.org/)."
+
+  sidebar:
+    pinned: true
+    align: center
+    tools:
       - icon: github
         href: "https://github.com/laurenchenarides/compare_scopus_openalex_report"
         aria-label: "GitHub Repository"
+    
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - href: home.qmd
+        text: Report Summary
+      - href: terminology.qmd
+        text: Terminology
+      - href: index.qmd
+        text: Project Background
+      - section: workflow.qmd
+        text: Project Workflow
+        contents: 
+          - href: workflow/step01/define_data_assets.qmd
+            text: "Step 01: Define Data Assets"
+          - href: workflow/step02_01/extract_dataset_mentions.qmd
+            text: "Step 02: Extract Dataset Mentions"
+          - href: workflow/step02_02/create_seed_corpus.qmd
+            text: "Creating a Seed Corpus"
+          - href: workflow/step03/clean_pub_data.qmd
+            text: "Step 03: Clean Publication Data"
+          - href: workflow/results/compare_pub_data.qmd
+            text: "Step 04: Compare Results"
+      - href: report.qmd
+        text: Findings
+      - href: conclusions.qmd
+        text: Conclusions
+      - section: appendix.qmd
+        text: "Appendices"
+        contents:
+          - href: appendices/app_databases.qmd # Summary of Scopus, OpenAlex, and Dimensions
+            text: "Citation Database Summary"
+          - section: appendices/app_crosswalk.qmd # Data schema
+            contents:
+              - appendices/app_scopus.qmd # Scopus reference files
+              - appendices/app_openalex.qmd # OpenAlex reference files
+              - appendices/app_dimensions.qmd # Dimensions reference files
+              - appendices/app_ipeds.qmd # Ming's work on IPEDS
+              - appendices/app_msi.qmd # Ming's work on MSIs
 
+      
 format:
   html:
     toc: true  # Enables table of contents

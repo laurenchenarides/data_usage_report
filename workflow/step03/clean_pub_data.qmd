@@ -1,0 +1,68 @@
+---
+title: "Methodology for Comparing Citation Database Coverage of Dataset Usage"
+subtitle: "Step 03: Clean Publication Data"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+---
+
+## Pre-Process and Clean Publication Datasets {#sec-disambiguation .unnumbered}
+
+<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
+<strong>The goal of this step is to standardize and resolve inconsistencies in publication records by disambiguating journal names, author affiliations, and institutions across the three databases.</strong> </div> 
+
+To compare publication coverage across citation databases, we first identify all journals that contain publications using each dataset in Scopus, OpenAlex, and Dimensions. Refer to ["Define Data Assets"](../step01/define_data_assets.qmd) for the list of the datasets for which we evaluate coverage. 
+
+We subset the publication dataset from Step 2 by filtering for dataset mentions. For example, if a publication references Ag Census, it is included in the Ag Census sub-dataset; otherwise, it is excluded. This process identifies dataset-specific publication patterns in Scopus, OpenAlex, and Dimensions.
+
+Our approach follows a hierarchical approach to understand how USDA data assets appear in these citation databases.  
+
+1. **Journal Level** – Identifies journals publishing research using USDA datasets. A journal is included if at least one of its publications references the dataset, but this does not indicate overall dataset prevalence within that journal.
+
+2. **Publication Level** – Examines individual publications within these journals to assess how often and in what context USDA datasets appear.
+
+3. **Author Level** – Tracks authors of these publications, analyzing institutional affiliations and research networks to understand dataset reach.
+
+4. **Institution Level** – Maps dataset usage across institutions to identify geographic and organizational research patterns.
+
+This structured approach standardizes dataset mention analysis across databases, allowing for direct comparisons of coverage and research impact.
+
+### Case Study: Census of Agriculture {.unnumbered}
+
+::: {.custom-box}
+
+To illustrate the data cleaning and disambiguation process, we use the Census of Agriculture as a case study to systematically compare coverage, overlap, and differences between the three citation databases. The Census of Agriculture (also referred to as "Ag Census") is widely used in agricultural and economic research, making it an ideal dataset for assessing database differences.
+
+
+### Pre-Processing Steps by Citation Database {.unnumbered}
+
+::: panel-tabset
+{{< include 04scopus.qmd >}}
+
+<!-- {{< include workflow/step03/04openalex.qmd >}} -->
+
+<!-- {{< include workflow/step03/04dimensions.qmd >}} -->
+:::
+
+### Results from Data Cleaning {.unnumbered}
+
+*This section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset*
+
+Step 4 produces two publication-level datasets: one of all academic papers released through Scopus that use Ag Census data and a similar one for OpenAlex. 
+
+There are 4712 unique publications reported in Scopus and 1266 in OpenAlex. These data are collapsed into a journal-level dataset based on the International Standard Serial Number (ISSN) that is unique to each academic journal. 
+
+
+<!-- ::: panel-tabset -->
+<!-- {{< include workflow/step03/04scopus_r.qmd >}} -->
+
+<!-- {{< include workflow/step03/04openalex_r.qmd >}} -->
+
+<!-- {{< include workflow/step03/04dimensions_r.qmd >}} -->
+<!-- ::: -->
+:::
+

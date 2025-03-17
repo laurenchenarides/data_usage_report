@@ -1,0 +1,27 @@
+---
+title: "Methodology for Comparing Citation Database Coverage of Dataset Usage"
+subtitle: "Conclusions"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+bibliography: references.bib  # Link to your BibTeX file
+csl: apa.csl  # Optional: Use a specific citation style (e.g., APA)
+---
+
+# Conclusions
+
+## Technical Recommendations
+
+## Expanding Dataset Usage
+
+This report analyzes USDA dataset usage patterns across both platforms and recommends specific strategies for expanding dataset use in underrepresented research communities.
+
+Given the small percentage of MSI’s represented in our institutional analysis, it is evident that user engagement is central to increasing usage rates of the datasets, regardless of citation database.
+
+# Next Steps
+
+# References

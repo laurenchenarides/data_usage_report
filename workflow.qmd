@@ -1,0 +1,56 @@
+---
+title: "Methodology for Comparing Citation Database Coverage of Dataset Usage"
+subtitle: "Project Workflow"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+bibliography: references.bib  # Link to your BibTeX file
+csl: apa.csl  # Optional: Use a specific citation style (e.g., APA)
+---
+
+# Project Workflow {#sec-workflow-overview .unnumbered}
+
+The project workflow outlines the steps involved to evaluate how different citation databases track USDA dataset mentions in research papers. In searching for dataset mentions, the goal is to identify a set of publications that can be compared across the citation database test cases.
+
+![](workflow/workflowv2.jpg)
+
+The process of deriving the list of publications from a citation database consists of four steps. Each step produces an *output* which is used as the *input* for the following step:
+
+## 1. Define Scope of Data Assets to Be Searched {.unnumbered}
+
+-   Identify USDA datasets that will be searched for and tracked.
+-   Collect official dataset names along with common abbreviations, acronyms, and alternative references used.
+
+**Result:** A structured list of dataset names and aliases.
+
+## 2. Extract Dataset Mentions from Publications {.unnumbered}
+
+-   Conduct searches across citation databases using multiple methods:
+    (1)   Full-Text (String) Search: Scan entire articles for relevant dataset names.
+    (2)   Reference Search: Identify dataset citations within publication references.
+    (3)   Machine Learning Models: Apply Kaggle competition models trained to detect dataset mentions.
+    
+**Note:** In cases where full-text search is not supported by the citation database API (e.g., Scopus), an initial seed corpus of publications was collected separately to train machine learning models. Refer to ["Creating a Seed Corpus"](workflow/step02_02/create_seed_corpus.qmd) for more details.
+
+**Result:** Publication dataset for each data asset across each citation database.
+
+## 3. Pre-Process and Clean Publication Datasets {.unnumbered}
+
+-   Pre-process and clean publication metadata generated from each citation database.
+-   Standardize journal, institution, and author names.
+-   Deduplicate records.
+
+**Result:** Cleaned publication metadata, removed of duplicates, inconsistencies, and missing information.
+
+## 4. Compare across Citation Databases {.unnumbered}
+
+-   Compare dataset coverage across Scopus, OpenAlex, and Dimensions.
+-   Apply fuzzy matching techniques to identify overlapping and unique dataset mentions.
+-   Analyze differences in journal coverage, citation patterns, and author affiliations.
+
+**Result:** A set of statistics used to evaluate dataset tracking accuracy.
+

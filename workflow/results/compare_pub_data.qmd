@@ -1,0 +1,77 @@
+---
+title: "Methodology for Comparing Citation Database Coverage of Dataset Usage"
+subtitle: "Step 04: Compare Results Across Citation Databases"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+---
+
+## Compare Results across Citation Databases {#sec-matching .unnumbered}
+
+<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
+<strong>The goal of this step is to develop statistics that measure dataset tracking accuracy.</strong> </div> 
+
+### Case Study: Census of Agriculture {.unnumbered}
+
+::: {.custom-box}
+Continuing with our case study, we use the datasets produced in Step 4 to produce counts of the number of journals with Ag Census publications that:
+
+(i) only appear in Scopus, 
+(ii) only appear in OpenAlex, or 
+(iii) appear in both.
+
+For journals that contain Ag Census data in both citation databases, we summarize the coverage of publications that appear in both Scopus and OpenAlex. 
+
+Then, we investigate discrepancies based on factors like missing identifiers, mismatched journal information (ISSNs), and additional publications accessed through OpenAlex’s API.
+
+**Add here: What are the steps in producing Table AA**
+
+
+::: panel-tabset
+{{< include 05scopus.qmd >}}
+
+{{< include 05openalex.qmd >}}
+
+<!-- {{< include workflow/results/05dimensions.qmd >}} -->
+:::
+
+### Results from Database Comparison {.unnumbered}
+
+*This section presents results after matching (which type varies – deterministic vs fuzzy)*
+
+<!-- ::: panel-tabset -->
+<!-- {{< include workflow/results/05scopus_r.qmd >}} -->
+
+<!-- {{< include workflow/results/05openalex_r.qmd >}} -->
+
+<!-- {{< include workflow/results/05dimensions_r.qmd >}} -->
+<!-- ::: -->
+
+:::
+
+::: {.callout-note title="Summary of Matching Methods" collapse=true}
+
+1.  Rule-based matching for exact matches
+2.  Probabilistic matching for handling variations
+3.  Machine learning methods for complex cases
+
+| Method | Considerations | Example | Pros | Cons |
+|:--------------|:--------------|:--------------|:--------------|:--------------|
+| Searching for dataset names within Scopus |  |  |  |  |
+| Searching for dataset names within OpenAlex | “Location” field set to “journal” |  |  |  |
+| Disambiguation of authors |  |  |  |  |
+| Disambiguation of institutions |  |  |  |  |
+| Standardization of institutions |  |  |  |  |
+| Searching based on the frequency of dataset appearance in journals |  |  |  |  |
+| MORE . . . |  |  |  |  |
+| Filtering on keywords to determine themes |  |  |  |  |
+
+: Summary of Methods {#tbl-methods-summary}
+:::
+
+
+All appendices referenced throughout the report are located on [this page](../../appendix.qmd).

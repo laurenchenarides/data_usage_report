@@ -1,5 +1,6 @@
 ---
-title: "Dimensions"
+title: "Methodology for Comparing Citation Database Coverage of Dataset Usage"
+subtitle: "Findings"
 date: last-modified  # Auto-updates based on Git commits
 format:
   html:
@@ -9,6 +10,5 @@ format:
     css: styles.css
 ---
 
-## Overview of Dimensions Reference Files {#sec-app-dimensions}
+**Coming Soon**
 
-Research partners at the University of Utah have access to Dimensions.

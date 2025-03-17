@@ -1,0 +1,33 @@
+---
+title: "Methodology for Comparing Citation Database Coverage of Dataset Usage"
+subtitle: "Step 02: Extract Dataset Mentions"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+---
+
+## Extract Dataset Mentions to Build a Publication Dataset {#sec-data-idn .unnumbered}
+
+<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
+<strong>The goal of this step is to build a dataset of publications that reference the dataset name aliases for the USDA data assets  across Scopus, OpenAlex, and Dimensions.</strong> </div> 
+
+To generate this dataset, the process requires:
+
+- Dataset name aliases (from Step 1)
+- Search routines tailored to each citation database to extract relevant publications
+
+Search routines, described below, guide this step, as dataset mentions are often inconsistent across publications—appearing in titles, abstracts, full text, or reference lists. Scopus uses a structured seed corpus to refine searches, while OpenAlex and Dimensions rely on direct queries across their full publication records. The outputs of this step are three publication-level datasets, one for each citation database, which will be further analyzed in subsequent steps.
+
+::: panel-tabset
+{{< include 03scopus.qmd >}}
+
+{{< include 03openalex.qmd >}}
+
+{{< include 03dimensions.qmd >}}
+:::
+
+
