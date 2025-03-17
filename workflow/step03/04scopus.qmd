@@ -18,7 +18,7 @@ This data structure follows the format outlined in the data schema (Figure XX).
 :::{.callout-note title="Crosswalk of Dataset Identifiers between Scopus and OpenAlex" collapse=true}
 Scopus assigns multiple identifiers to the same dataset depending on how it is reported, rather than a single, standardized identifier. Therefore, the authors create a crosswalk between Scopus and OpenAlex so that each dataset can have one common identifier.
 
-[Link to crosswalk file](../appendices/app_crosswalk_data_id.qmd) 
+[Link to crosswalk file](../../appendices/app_crosswalk.qmd) 
 :::
 
 After assembling the publication-level dataset, the final step in preparing the Scopus journal-level dataset is to aggregate publications at the journal level based on their ISSN.
