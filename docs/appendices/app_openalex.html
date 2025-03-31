@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-17">
+<meta name="dcterms.date" content="2025-03-30">
 
 <title>OpenAlex Data Dictionary – Citation Database Assessment</title>
 <style>
@@ -249,7 +249,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-app-openalex" id="toc-sec-app-openalex" class="nav-link active" data-scroll-target="#sec-app-openalex">Overview of OpenAlex Reference Files</a></li>
+  <li><a href="#sec-app-openalex" id="toc-sec-app-openalex" class="nav-link active" data-scroll-target="#sec-app-openalex">Overview of OpenAlex Reference Files</a>
+  <ul class="collapse">
+  <li><a href="#file-organization-in-github-repository" id="toc-file-organization-in-github-repository" class="nav-link" data-scroll-target="#file-organization-in-github-repository">File Organization in GitHub Repository</a></li>
+  </ul></li>
   <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data Dictionary</a>
   <ul class="collapse">
   <li><a href="#dataset.csv" id="toc-dataset.csv" class="nav-link" data-scroll-target="#dataset.csv"><code>dataset.csv</code></a></li>
@@ -282,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 17, 2025</p>
+      <p class="date">March 30, 2025</p>
     </div>
   </div>
   
@@ -298,6 +301,35 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="unnumbered anchored" data-anchor-id="sec-app-openalex">Overview of OpenAlex Reference Files</h2>
 <p>This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.</p>
 <p>Below is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the <a href="../appendices/app_crosswalk.html">data schema.</a></p>
+<section id="file-organization-in-github-repository" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="file-organization-in-github-repository">File Organization in GitHub Repository</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Category</strong></th>
+<th><strong>File Path &amp; Link</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Processed IPEDS Dataset</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS"><code>compare_scopus_openalex/resources/IPEDS/IPEDS.csv</code></a></td>
+</tr>
+<tr class="even">
+<td><strong>Raw IPEDS Data</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS/raw_data_IPEDS"><code>compare_scopus_openalex/resources/raw_data_IPEDS/</code></a></td>
+</tr>
+<tr class="odd">
+<td><strong>Data Processing Code</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/IPEDSdata.rmd</code></a></td>
+</tr>
+<tr class="even">
+<td><strong>Data Documentation</strong></td>
+<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/IPEDS_Data.md</code></a></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="data-dictionary" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="data-dictionary">Data Dictionary</h2>

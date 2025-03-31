@@ -13,7 +13,7 @@ format:
 
 The **Integrated Postsecondary Education Data System (IPEDS)** is a national dataset maintained by the National Center for Education Statistics (NCES). It collects data from all U.S. institutions participating in federal financial aid programs. In this project, IPEDS data is used to analyze institutional characteristics (e.g., size, classification, location, and financial indicators) in relation to research publications identified in Scopus, OpenAlex, and Dimensions.
 
-The raw IPEDS data was obtained from the IPEDS website: [IPEDS Data Center](https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx?year=2023&surveyNumber=-1&sid=f98b3f39-0633-4dd3-bbc6-ec4e29b9098b&rtid=7).
+The raw IPEDS data was obtained from the IPEDS website: <a href="https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx?year=2023&surveyNumber=-1&sid=f98b3f39-0633-4dd3-bbc6-ec4e29b9098b&rtid=7" target="_blank">IPEDS Data Center</a>.
 
 ### How These Files Fit into the Project Workflow {.unnumbered}
 
@@ -48,7 +48,44 @@ The IPEDS dataset integrates multiple tables across different survey years (2017
 | **Library Budget**         | `AL2017 - AL2023`             | Total library expenditures (salaries, materials, operations) |
 
 
-### File Descriptions {.unnumbered}
+### Table Descriptions {.unnumbered}
+
+#### Institution Characteristics (`HD files`) {.unnumbered}
+- **Description**: Provides details on institution location, classification, and designation (e.g., HBCU, land-grant).
+- **Contents**:
+  - `UNITID`: Unique institution identifier
+  - `INSTNM`: Institution name
+  - `ADDR, CITY, STABBR, ZIP`: Location information. Note: We restrict our sample to only colleges and unversities in the 50 US states.
+  - `HBCU`: 1 = HBCU, 0 = Non-HBCU
+  - `CONTROL`: 1 = Public, 2 = Private Nonprofit, 3 = Private For-Profit
+  - `ICLEVEL`: 1 = 4-year, 2 = 2-year, 3 = Less than 2-year. Note: We restrict our sample to only include ICLEVEL 1 and 2 for 4-year and 2-year colleges and universities.
+  - `CARNEGIE`: See table below.
+  - `LANDGRNT`: 1 = Land Grant, 2 = Not Land Grant
+  - `year`: Added variable for time tracking
+
+
+| Carnegie Code | Description                |
+|------|--------------------------------------------------------------|
+| -3   | Not available                                                |
+| -2   | Not applicable                                               |
+| 15   | Associate’s Colleges: Mixed Transfer/Career & High Traditional |
+| 16   | Associate’s Colleges: High Transfer-High Traditional         |
+| 21   | Doctoral Universities: Very High Research Activity (R1)     |
+| 22   | Doctoral Universities: High Research Activity (R2)          |
+| 31   | Master’s Colleges & Universities: Larger programs           |
+| 32   | Master’s Colleges & Universities: Medium programs           |
+| 33   | Master’s Colleges & Universities: Smaller programs          |
+| 40   | Baccalaureate Colleges: Arts & Sciences Focus               |
+| 51   | Special Focus Institutions: Health Professions              |
+| 52   | Special Focus Institutions: Engineering                     |
+| 53   | Special Focus Institutions: Other Technology-Related        |
+| 54   | Special Focus Institutions: Business & Management           |
+| 55   | Special Focus Institutions: Arts, Music & Design            |
+| 56   | Special Focus Institutions: Law Schools                     |
+| 57   | Special Focus Institutions: Other Fields                    |
+| 58   | Tribal Colleges                                             |
+| 59   | Not classified                                              |
+| 60   | Baccalaureate/Associate’s Colleges                          |
 
 #### Institution Size (`EFFY files`) {.unnumbered} 
 - **Description**: Contains 12-month unduplicated headcount enrollment by race/ethnicicy, gender, and student level.
@@ -61,17 +98,6 @@ The IPEDS dataset integrates multiple tables across different survey years (2017
   - Only includes **EFFYLEV = 1** (All students level).
   - Year variable was manually added since it was not originally present.
 
-#### Institution Characteristics (`HD files`) {.unnumbered}
-- **Description**: Provides details on institution location, classification, and designation (e.g., HBCU, land-grant).
-- **Contents**:
-  - `UNITID`: Unique institution identifier
-  - `INSTNM`: Institution name
-  - `ADDR, CITY, STABBR, ZIP`: Location information
-  - `HBCU`: 1 = HBCU, 0 = Non-HBCU
-  - `CONTROL`: 1 = Public, 2 = Private Nonprofit, 3 = Private For-Profit
-  - `ICLEVEL`: 1 = 4-year, 2 = 2-year, 3 = Less than 2-year
-  - `LANDGRNT`: 1 = Land Grant, 2 = Not Land Grant
-  - `year`: Added variable for time tracking
 
 #### Endowment Data (`F1A files`) {.unnumbered}
 - **Description**: Reports institutional endowment assets of public universities at the beginning and end of the fiscal year.

@@ -52,11 +52,13 @@ The MSI dataset combines data from multiple sources:
 - **Description**: Contains MSI eligibility and designation data for institutions from 2017 to 2021.
 - **Contents**:
   - `UNITID`: Unique identification number of the institution
-  - `opeid`: Office of Postsecondary Education (OPE) ID Number
+  - `opeid`: Office of Postsecondary Education (OPE) ID Number. Only available for 2017-2021 in the MSI data.
   - `instname`: Name of the institution
   - `year`: The year in which the endowment size was recorded
   - `level`: 2-year/4-year
-  - `control`: public, private for profit, private not for profit
+  - `control`: public, private 
+  - `nonprofit`: 1 = private not-for-profit, 0 otherwise 
+  - `forprofit`: 1 = private for-profit, 0 otherwise
   - `msi_type_hbcu`: 1=yes, 0=no
   - `msi_type_aanapisi`: 1=yes, 0=no
   - `msi_type_annhsi `: 1=yes, 0=no
@@ -65,7 +67,7 @@ The MSI dataset combines data from multiple sources:
   - `msi_type_tccu`: 1=yes, 0=no
   - `msi_type_pbi`: 1=yes, 0=no
   - `sum`: sum of previous msi type columns
-  - `fund_atleastone`: funded under at least one program (0 or 1)
+  - `fund`: funded under at least one program (0 or 1)
 
 <!-- #### 2022-2023 MSI Data (`MSI_2022-2023.csv`) {.unnumbered} -->
 <!-- - **Description**: MSI eligibility data for 2022 and 2023, extracted from Rutgers CMSI PDFs. -->
@@ -91,7 +93,18 @@ The MSI dataset combines data from multiple sources:
 - **Processing Notes**:
   - Python was used to convert PDFs to Excel (`MSI_after2020.py`).
   - Data was cleaned and standardized to match the 2017-2021 format.
-
+  - The data from 2017-2021 identifies 11 distinct MSI designations:
+    - Alaska Native and Native Hawaiian-Serving Institutions (ANNHSI)
+    - Asian American and Native American Pacific Islander-Serving Institutions (AANAPISI)
+    - Hispanic-Serving Institutions (HSI)
+    - Hispanic-Serving Institutions STEM (HSI-STEM)
+    - Hispanic-Serving Institutions Promoting Postbaccalaureate Opportunities for Hispanic Americans (HSI-PPOHA)
+    - Historically Black Colleges and Universities (HBCU)
+    - Historically Black Colleges and Universities Graduate Institutions (HBGI)
+    - Historically Black Colleges and Universities Masters Institutions (HBCU-Masters)
+    - Native American-Serving Nontribal Institutions (NASNTI)
+    - Predominantly Black Institutions (PBI)
+    - Tribally Controlled Colleges and Universities (TCCU)
 
 ## Summary of the MSI data {.unnumbered}
 

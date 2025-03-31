@@ -15,6 +15,15 @@ This section describes the process of construction CSV files extracted from a SQ
 
 Below is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the [data schema.](app_crosswalk.qmd)
 
+### File Organization in GitHub Repository {.unnumbered}
+
+| **Category**                | **File Path & Link** |
+|-----------------------------|----------------------|
+| **Processed IPEDS Dataset** | [`compare_scopus_openalex/resources/IPEDS/IPEDS.csv`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS) |
+| **Raw IPEDS Data**          | [`compare_scopus_openalex/resources/raw_data_IPEDS/`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS/raw_data_IPEDS) |
+| **Data Processing Code**    | [`compare_scopus_openalex/resources/documentation/IPEDSdata.rmd`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation) |
+| **Data Documentation**      | [`compare_scopus_openalex/resources/documentation/IPEDS_Data.md`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation) |
+
 ## Data Dictionary {.unnumbered}
 
 ::: {.callout-note title="Download OpenAlex Source Files"}

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-17">
+<meta name="dcterms.date" content="2025-03-30">
 
 <title>Identifying Minority Serving Institutions (MSIs) – Citation Database Assessment</title>
 <style>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_msi.html">Identifying Minority Serving Institutions (MSIs)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schemas and File Inventory</a></li><li class="breadcrumb-item"><a href="../appendices/app_msi.html">Identifying Minority Serving Institutions (MSIs)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -198,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Schema</span></a>
+ <span class="menu-text">Data Schemas and File Inventory</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -207,19 +207,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/app_scopus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Scopus</span></a>
+ <span class="menu-text">Scopus Data Dictionary</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/app_openalex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">OpenAlex</span></a>
+ <span class="menu-text">OpenAlex Data Dictionary</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendices/app_dimensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dimensions</span></a>
+ <span class="menu-text">Dimensions Data Dictionary</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -262,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schema</a></li><li class="breadcrumb-item"><a href="../appendices/app_msi.html">Identifying Minority Serving Institutions (MSIs)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/app_crosswalk.html">Data Schemas and File Inventory</a></li><li class="breadcrumb-item"><a href="../appendices/app_msi.html">Identifying Minority Serving Institutions (MSIs)</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Identifying Minority Serving Institutions (MSIs)</h1>
 </div>
@@ -275,7 +275,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 17, 2025</p>
+      <p class="date">March 30, 2025</p>
     </div>
   </div>
   
@@ -374,11 +374,13 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Contents</strong>:
 <ul>
 <li><code>UNITID</code>: Unique identification number of the institution</li>
-<li><code>opeid</code>: Office of Postsecondary Education (OPE) ID Number</li>
+<li><code>opeid</code>: Office of Postsecondary Education (OPE) ID Number. Only available for 2017-2021 in the MSI data.</li>
 <li><code>instname</code>: Name of the institution</li>
 <li><code>year</code>: The year in which the endowment size was recorded</li>
 <li><code>level</code>: 2-year/4-year</li>
-<li><code>control</code>: public, private for profit, private not for profit</li>
+<li><code>control</code>: public, private</li>
+<li><code>nonprofit</code>: 1 = private not-for-profit, 0 otherwise</li>
+<li><code>forprofit</code>: 1 = private for-profit, 0 otherwise</li>
 <li><code>msi_type_hbcu</code>: 1=yes, 0=no</li>
 <li><code>msi_type_aanapisi</code>: 1=yes, 0=no</li>
 <li><code>msi_type_annhsi</code>: 1=yes, 0=no</li>
@@ -387,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
 <li><code>msi_type_tccu</code>: 1=yes, 0=no</li>
 <li><code>msi_type_pbi</code>: 1=yes, 0=no</li>
 <li><code>sum</code>: sum of previous msi type columns</li>
-<li><code>fund_atleastone</code>: funded under at least one program (0 or 1)</li>
+<li><code>fund</code>: funded under at least one program (0 or 1)</li>
 </ul></li>
 </ul>
 <!-- #### 2022-2023 MSI Data (`MSI_2022-2023.csv`) {.unnumbered} -->
