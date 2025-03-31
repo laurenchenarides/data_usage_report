@@ -40,6 +40,9 @@ format:
   </tbody>
 </table>
 
+<p style="font-size: 0.9em; text-align: left; margin-top: 0.5em;">
+  <em>Note:</em> All schemas were built using <a href="https://dbdiagram.io/d/scopus_schema-67d71fa375d75cc84445d40b" target="_blank">DBDiagram.io</a>.
+</p>
 
 ## File Inventory {.unnumbered}
 

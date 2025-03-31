@@ -17,6 +17,8 @@ Below is a detailed explanation of primary tables and how they relate to one ano
 
 ### File Organization in GitHub Repository {.unnumbered}
 
+**PLACEHOLDER**
+
 | **Category**                | **File Path & Link** |
 |-----------------------------|----------------------|
 | **Processed IPEDS Dataset** | [`compare_scopus_openalex/resources/IPEDS/IPEDS.csv`](https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS) |

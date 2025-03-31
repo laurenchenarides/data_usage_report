@@ -391,20 +391,24 @@ ul.task-list li input[type="checkbox"] {
 <li><code>sum</code>: sum of previous msi type columns</li>
 <li><code>fund</code>: funded under at least one program (0 or 1)</li>
 </ul></li>
-</ul>
-<!-- #### 2022-2023 MSI Data (`MSI_2022-2023.csv`) {.unnumbered} -->
-<!-- - **Description**: MSI eligibility data for 2022 and 2023, extracted from Rutgers CMSI PDFs. -->
-<!-- - **Contents**: -->
-<!--   - `UNITID`: Unique identification number of the institution -->
-<!--   - `opeid`: Office of Postsecondary Education (OPE) ID Number  -->
-<!--   - `year`: The year in which the endowment size was recorded -->
-<!--   <!-- - `fund_atleastone`: Eligible or potentially eligible for at least one program -->
-<p>–&gt; <!--   - `institution_name`: Name of the institution --> <!--   - `state`: State --> <!--   - `level`: 2-year/4-year --> <!--   - `control`: public, private for profit, private not for profit --> <!--   - `msi_type_hbcu`: 1=yes, 0=no --> <!--   - `msi_type_aanapisi`: 1=yes, 0=no --> <!--   - `msi_type_annhsi `: 1=yes, 0=no --> <!--   - `msi_type_hsi`: 1=yes, 0=no --> <!--   - `msi_type_nasnti`: 1=yes, 0=no --> <!--   - `msi_type_tccu`: 1=yes, 0=no --> <!--   - `msi_type_pbi`: 1=yes, 0=no --> <!--   - `sum`: sum of previous msi type column --> <!--   - `fund_atleastone`: funded under at least one program (0 or 1) --></p>
-<ul>
 <li><strong>Processing Notes</strong>:
 <ul>
 <li>Python was used to convert PDFs to Excel (<code>MSI_after2020.py</code>).</li>
 <li>Data was cleaned and standardized to match the 2017-2021 format.</li>
+<li>The data from 2017-2021 identifies 11 distinct MSI designations:
+<ul>
+<li>Alaska Native and Native Hawaiian-Serving Institutions (ANNHSI)</li>
+<li>Asian American and Native American Pacific Islander-Serving Institutions (AANAPISI)</li>
+<li>Hispanic-Serving Institutions (HSI)</li>
+<li>Hispanic-Serving Institutions STEM (HSI-STEM)</li>
+<li>Hispanic-Serving Institutions Promoting Postbaccalaureate Opportunities for Hispanic Americans (HSI-PPOHA)</li>
+<li>Historically Black Colleges and Universities (HBCU)</li>
+<li>Historically Black Colleges and Universities Graduate Institutions (HBGI)</li>
+<li>Historically Black Colleges and Universities Masters Institutions (HBCU-Masters)</li>
+<li>Native American-Serving Nontribal Institutions (NASNTI)</li>
+<li>Predominantly Black Institutions (PBI)</li>
+<li>Tribally Controlled Colleges and Universities (TCCU)</li>
+</ul></li>
 </ul></li>
 </ul>
 </section>

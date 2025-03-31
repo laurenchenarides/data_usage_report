@@ -999,7 +999,7 @@
     "href": "appendices/app_scopus.html",
     "title": "Scopus Data Dictionary",
     "section": "",
-    "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
+    "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\nPLACEHOLDER\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
     "crumbs": [
       "Appendices",
       "Data Schemas and File Inventory",
@@ -1201,7 +1201,7 @@
     "href": "appendices/app_openalex.html",
     "title": "OpenAlex Data Dictionary",
     "section": "",
-    "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
+    "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\nPLACEHOLDER\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
     "crumbs": [
       "Appendices",
       "Data Schemas and File Inventory",
@@ -1307,7 +1307,7 @@
     "href": "appendices/app_openalex.html#sec-app-openalex",
     "title": "OpenAlex Data Dictionary",
     "section": "",
-    "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
+    "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\nPLACEHOLDER\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
     "crumbs": [
       "Appendices",
       "Data Schemas and File Inventory",
@@ -1364,7 +1364,7 @@
     "href": "appendices/app_scopus.html#sec-app-scopus",
     "title": "Scopus Data Dictionary",
     "section": "",
-    "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
+    "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\nPLACEHOLDER\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
     "crumbs": [
       "Appendices",
       "Data Schemas and File Inventory",
@@ -1886,7 +1886,7 @@
     "href": "appendices/app_crosswalk.html",
     "title": "Data Schemas and File Inventory",
     "section": "",
-    "text": "Scopus Schema\n\n\nOpenAlex Schema\n\n\nDimensions Schema",
+    "text": "Scopus Schema\n\n\nOpenAlex Schema\n\n\nDimensions Schema\nNote: All schemas were built using DBDiagram.io.",
     "crumbs": [
       "Appendices",
       "Data Schemas and File Inventory"
@@ -2159,7 +2159,7 @@
     "href": "appendix.html",
     "title": "Methodology for Comparing Citation Database Coverage of Dataset Usage",
     "section": "",
-    "text": "Appendix\nFile Path & Link\n\n\n\n\nCitation Database Summary\n\n\n\nData Schema\n\n\n\nScopus File Inventory\n\n\n\nOpenAlex File Inventory\n\n\n\nDimensions File Inventory\n\n\n\nIPEDS File Inventory\n\n\n\nMSI File Inventory",
+    "text": "Appendix\nFile Path & Link\n\n\n\n\nCitation Database Summary\n\n\n\nData Schema\nAll data schema can be accessed through here.\n\n\nScopus File Inventory\n\n\n\nOpenAlex File Inventory\n\n\n\nDimensions File Inventory\n\n\n\nIPEDS File Inventory\n\n\n\nMSI File Inventory",
     "crumbs": [
       "Appendices"
     ]

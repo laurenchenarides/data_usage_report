@@ -16,7 +16,7 @@ csl: apa.csl  # Optional: Use a specific citation style (e.g., APA)
 | **Appendix**                | **File Path & Link** |
 |-----------------------------|----------------------|
 | **Citation Database Summary** |  |
-| **Data Schema**         |  |
+| **Data Schema**         | [All data schema can be accessed through here.](appendices/app_crosswalk.qmd) |
 | **Scopus File Inventory**    |  |
 | **OpenAlex File Inventory**      | |
 | **Dimensions File Inventory**      | |
