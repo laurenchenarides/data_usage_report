@@ -15,6 +15,15 @@ format:
 
 ## Institutional Comparison {.unnumbered}
 
+<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
+<strong> The results in this section compare institutional coverage across three major bibliographic databases: Scopus, OpenAlex, and Dimensions. </strong> </div> 
+
+Each of the featured citation databases represent some portion of the global research landscape, yet their inclusion criteria and institutional coverage vary in ways that may inform disparities. Our goal is to assess which institutions are represented in each source, with particular attention to coverage of underrepresented and Minority-Serving Institutions (MSIs). By building a harmonized dataset that links IPEDS identifiers to institutional records across Scopus, OpenAlex, and Dimensions, we aim to evaluate how these citation databases include or exclude institutions across institutional characteristics such as control, level, MSI status, and geography. This analysis informs a broader conversation about equity, transparency, and accountability in research data systems.
+
+### Step 1: Clean IPEDS and MSI data {.unnumbered}
+
+In this section, I document the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023, as part of the broader effort to compare institutional coverage across Scopus, OpenAlex, and Dimensions. To support that analysis, we needed a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time. I compiled and cleaned data from multiple sources—the MSI Data Project (Nguyen et al., 2023) for 2017–2021 and Rutgers CMSI lists for 2022–2023—and merged these with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. I addressed inconsistencies in eligibility labels, resolved duplicates, and created summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are included for transparency. All additional details are available in the IPEDS^[[IPEDS appendix available here](appendices/app_ipeds.qmd)] and MSI^[[MSI appendix available here](appendices/app_msi.qmd)] Appendices.
+
 <figure style="text-align: center;">
   <a href="data/ipeds_msi/msi_eligibility_plot.png" target="_blank">
     <img src="data/ipeds_msi/msi_eligibility_plot.png" style="width:80%; height:auto;" alt="MSI Eligibility Plot">
