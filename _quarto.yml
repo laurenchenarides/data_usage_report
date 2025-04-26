@@ -50,9 +50,9 @@ website:
       - section: appendix.qmd
         text: "Appendices"
         contents:
-          - href: appendices/app_databases.qmd # Summary of Scopus, OpenAlex, and Dimensions
-            text: "Citation Database Summary"
           - section: appendices/app_crosswalk.qmd # Data schema
+          - href: appendices/app_databases.qmd # Summary of Scopus, OpenAlex, and Dimensions
+            text: "Reference Files"
             contents:
               - appendices/app_scopus.qmd # Scopus reference files
               - appendices/app_openalex.qmd # OpenAlex reference files

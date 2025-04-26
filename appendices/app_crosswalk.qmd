@@ -1,11 +1,9 @@
 ---
-title: "Data Schemas and File Inventory"
+title: "Data Schemas"
 date: last-modified  # Auto-updates based on Git commits
 format:
   html:
-    toc: true  # Enables TOC on this page
-    toc-location: right
-    toc-depth: 3
+    toc: false  # Enables TOC on this page
     css: styles.css
 ---
 
@@ -22,12 +20,12 @@ format:
   <tbody>
     <tr>
       <td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
-        <a href="scopus_schema.png" target="_blank">
+        <a href="https://dbdocs.io/lauren.chenarides/scopus_schema?view=relationships" target="_blank">
           <img src="scopus_thumbnail.png" alt="Scopus Schema" width="250">
         </a>
       </td>
       <td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
-        <a href="scopus_schema.png" target="_blank">
+        <a href="https://dbdocs.io/lauren.chenarides/openalex_schema?view=relationships" target="_blank">
           <img src="openalex_thumbnail.png" alt="OpenAlex Schema" width="250">
         </a>
       </td>
@@ -71,5 +69,32 @@ format:
   - `topic`
 
 *Refer to the schema for additional column-level details.*
+
+### OpenAlex Files
+
+- **Primary Table:** `main`
+- **Supporting Tables:**
+  - `_id`
+  - `apc_list`
+  - `apc_paid`
+  - `authorships`
+  - `best_oa_location`
+  - `biblio`
+  - `citation_normalized_percentile`
+  - `cited_by_percentile_year`
+  - `corresponding_author_ids`
+  - `corresponding_institution_ids`
+  - `counts_by_year`
+  - `dataset`
+  - `datasets`
+  - `grants`
+  - `ids`
+  - `indexed_in`
+  - `open_access`
+  - `primary_location`
+  - `primary_topic`
+  - `topics`
+  
+*The accompanying schema focuses on the primary linking fields between tables. Due to the large number of columns within each table, only key identifiers are included.*
 
 :::

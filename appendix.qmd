@@ -13,14 +13,13 @@ csl: apa.csl  # Optional: Use a specific citation style (e.g., APA)
 ---
 
 
-| **Appendix**                | **File Path & Link** |
+| **Appendix**                | **Links to Sources** |
 |-----------------------------|----------------------|
-| **Citation Database Summary** |  |
-| **Data Schema**         | [All data schema can be accessed through here.](appendices/app_crosswalk.qmd) |
-| **Scopus File Inventory**    |  |
-| **OpenAlex File Inventory**      | |
-| **Dimensions File Inventory**      | |
-| **IPEDS File Inventory**      | |
-| **MSI File Inventory**      | |
+| **Data Schema**         | [View the primary fields and table structure.](appendices/app_crosswalk.qmd) |
+| **Scopus Reference Files**    | [View the Scopus source files.](appendices/app_scopus.qmd) |
+| **OpenAlex Reference Files**      | [View the OpenAlex source files.](appendices/app_openalex.qmd) |
+| **Dimensions Reference Files**      | [View the Dimensions source files.](appendices/app_dimensions.qmd) |
+| **IPEDS Reference Files**      | [View the IPEDS source files and methodology.](appendices/app_ipeds.qmd) |
+| **MSI Reference Files**      | [View the MSI source files and methodology.](appendices/app_msi.qmd) |
 
 
