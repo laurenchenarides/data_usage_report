@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html</loc>
-    <lastmod>2025-04-27T14:01:57.790Z</lastmod>
-  </url>
-  <url>
     <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/workflow.html</loc>
     <lastmod>2025-03-16T23:22:10.000Z</lastmod>
   </url>
@@ -35,6 +31,62 @@
   <url>
     <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/workflow/results/05openalex.html</loc>
     <lastmod>2025-03-17T00:49:08.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html</loc>
+    <lastmod>2025-04-27T14:01:57.790Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/home.html</loc>
+    <lastmod>2025-03-17T00:55:03.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/appendix.html</loc>
+    <lastmod>2025-04-26T18:47:16.973Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_openalex.html</loc>
+    <lastmod>2025-03-31T01:35:02.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_ipeds.html</loc>
+    <lastmod>2025-03-30T21:42:40.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_dimensions.html</loc>
+    <lastmod>2025-03-17T20:49:19.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_crosswalk.html</loc>
+    <lastmod>2025-04-27T14:24:01.953Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/about.html</loc>
+    <lastmod>2025-02-01T23:25:14.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_databases.html</loc>
+    <lastmod>2025-04-26T18:33:29.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_dyads.html</loc>
+    <lastmod>2025-03-17T00:59:06.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_msi.html</loc>
+    <lastmod>2025-03-31T01:41:46.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_scopus.html</loc>
+    <lastmod>2025-03-31T01:35:08.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/conclusions.html</loc>
+    <lastmod>2025-03-17T01:02:37.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/index.html</loc>
+    <lastmod>2025-03-16T23:20:11.000Z</lastmod>
   </url>
   <url>
     <loc>https://laurenchenarides.github.io/compare_scopus_openalex_report/terminology.html</loc>

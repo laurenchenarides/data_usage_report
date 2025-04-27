@@ -26,7 +26,7 @@ format:
       </td>
       <td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
         <a href="https://dbdocs.io/lauren.chenarides/openalex_schema?view=relationships" target="_blank">
-          <img src="openalex_thumbnail.png" alt="OpenAlex Schema" width="250">
+          <img src="oa_thumbnail.png" alt="OpenAlex Schema" width="250">
         </a>
       </td>
       <td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
