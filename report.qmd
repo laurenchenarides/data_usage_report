@@ -36,7 +36,7 @@ Several methods were used to identify mentions of USDA datasets in Scopus public
 
 Because direct access to full publication text was not available, Elsevier shared only the extracted snippets and limited metadata. Manual validation, aided by the use of keyword flags (e.g., "USDA," "NASS"), confirmed whether identified mentions accurately referred to the Census of Agriculture. To manage validation costs, only publications with at least one U.S.-based author were reviewed.
 
-Full documentation of the Scopus search routine, including query construction and extraction procedures, is available at the project’s [report website](https://laurenchenarides.github.io/compare_scopus_openalex_report/workflow/step02_01/extract_dataset_mentions.html).
+Full documentation of the Scopus search routine, including query construction and extraction procedures, is available at the project's [report website](https://laurenchenarides.github.io/compare_scopus_openalex_report/workflow/step02_01/extract_dataset_mentions.html).
 
 ## OpenAlex Approach
 
@@ -46,9 +46,9 @@ For OpenAlex, two approaches were used to identify publications referencing the 
 
 ### Full-Text Search Approach
 
-The methodology for collecting mentions of USDA datasets in OpenAlex relied on constructing search queries that combined dataset "aliases" and associated "flag terms" within the text of scholarly works. Dataset aliases represented alternative ways researchers refer to a dataset, such as variations on the Census of Agriculture's official name. Flag terms represented the institutions or agencies responsible for maintaining the dataset. The combination of dataset alias and flag terms ensured that retrieved publications made an explicit connection to the correct data source. A mention was recorded only if at least one alias and one flag term appeared in the same publication, thereby increasing the likelihood of capturing genuine dataset references rather than incidental matches to individual words.\footnote{Initial drafts of the query incorrectly included terms like "NASS" and "USDA" in the alias list. This was corrected to ensure that aliases strictly referred to dataset names, and flag terms referred to organizations.}
+The methodology for collecting mentions of USDA datasets in OpenAlex relied on constructing search queries that combined dataset "aliases" and associated "flag terms" within the text of scholarly works. Dataset aliases represented alternative ways researchers refer to a dataset, such as variations on the Census of Agriculture's official name. Flag terms represented the institutions or agencies responsible for maintaining the dataset. The combination of dataset alias and flag terms ensured that retrieved publications made an explicit connection to the correct data source. A mention was recorded only if at least one alias and one flag term appeared in the same publication, thereby increasing the likelihood of capturing genuine dataset references rather than incidental matches to individual words.^[Initial drafts of the query incorrectly included terms like "NASS" and "USDA" in the alias list. This was corrected to ensure that aliases strictly referred to dataset names, and flag terms referred to organizations.]
 
-To implement these searches efficiently, the OpenAlex API was accessed using the `pyalex` Python package.\footnote{`Pyalex` is an open-source library designed to facilitate interaction with the OpenAlex API; see [https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex](https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex) for more information. The package manages request formatting and automates compliance with OpenAlex's "polite pool" rate limits, which restrict the number of requests per minute and impose backoff delays. Pyalex introduced automatic pauses between requests, with a default `retry_backoff_factor` of 100 milliseconds, to ensure stable and continuous retrieval. This setup enabled systematic querying while adhering to OpenAlex's usage policies.}
+To implement these searches efficiently, the OpenAlex API was accessed using the `pyalex` Python package.^[`Pyalex` is an open-source library designed to facilitate interaction with the OpenAlex API; see [https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex](https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex) for more information. The package manages request formatting and automates compliance with OpenAlex's "polite pool" rate limits, which restrict the number of requests per minute and impose backoff delays. Pyalex introduced automatic pauses between requests, with a default `retry_backoff_factor` of 100 milliseconds, to ensure stable and continuous retrieval. This setup enabled systematic querying while adhering to OpenAlex's usage policies.] 
 
 Search queries were constructed based on OpenAlex's public API documentation, using both the ["Filter Works"](https://docs.openalex.org/api-entities/works/filter-works) and ["Search Works"](https://docs.openalex.org/api-entities/works/search-works) endpoints. Filtering parameters were applied to restrict results to English-language publications, published after 2017, classified as articles or reviews, and available through open-access sources.
 
@@ -59,18 +59,16 @@ Boolean logic was used to define the text search structure. For the Census of Ag
 This structure required that each publication mention both a recognized variant of the Census of Agriculture name and a reference to the institution responsible for producing it. 
 
 Publications matching the query were returned in JSON format, based on the OpenAlex ["Work object"](https://docs.openalex.org/api-entities/works/work-object) schema. Each record included metadata fields such as:
-\begin{itemize}
-  \item `display_name` (publication title)
-  \item `authorships` (authors and affiliations)
-  \item `host_venue.display_name` (journal)
-  \item `doi` (digital object identifier)
-  \item `concepts` (topics)
-  \item `cited_by_count` (citation counts)
-  \item `type` (publication type, e.g., "article", "book-chapter")
-  \item `publication_year` (year article was publish)
-  \item `language` (language, English only)
-  \item `is_oa` (open access)
-\end{itemize}
+  - `display_name` (publication title)
+  - `authorships` (authors and affiliations)
+  - `host_venue.display_name` (journal)
+  - `doi` (digital object identifier)
+  - `concepts` (topics)
+  - `cited_by_count` (citation counts)
+  - `type` (publication type, e.g., "article", "book-chapter")
+  - `publication_year` (year article was publish)
+  - `language` (language, English only)
+  - `is_oa` (open access)
 
 Although a range of publication types were retrieved—including articles, book chapters, dissertations, preprints, and reviews—approximately 80–85 percent were classified as articles. To standardize the dataset for downstream analysis, results were filtered during the search process to retain only records identified as `type = article`. This step removed preprints and non-final versions of works, supporting a more standardized analysis of dataset mentions in peer-reviewed literature.
 
@@ -91,14 +89,13 @@ These ingestion and indexing limitations affect the completeness of results when
 To address limitations in OpenAlex's full-text indexing methods, a seed corpus approach was applied. The objective was to create a filtered set of publications for local text search to better capture mentions of the Census of Agriculture and related USDA datasets.
 
 To construct the seed corpus, publications were filtered based on several criteria:
-\begin{itemize}
-\item Language: English
-\item Publication Year: Post-2017
-\item Publication Type: Articles and reviews
-\item Open Access Status: Open-access publications only
-\end{itemize}
 
-Filtering was further refined by selecting publications associated with high-relevance topics (Table \@ref(tab:top25topics) lists the top 25 topics), top publishing journals (Table \@ref(tab:top25journals) lists the top 25 journals), and U.S.-affiliated authors (Table \@ref(tab:top25authors) lists the top 25 authors). 
+- Language: English
+- Publication Year: Post-2017
+- Publication Type: Articles and reviews
+- Open Access Status: Open-access publications only
+
+Filtering was further refined by selecting publications associated with high-relevance topics (@tbl-top25topics) lists the top 25 topics), top publishing journals (@tbl-top25journals) lists the top 25 journals), and U.S.-affiliated authors (@tbl-top25authors) lists the top 25 authors). 
 
 Each table presents two key columns to help interpret the selection process. The First Run Count refers to the number of publications linked to each entity (whether a topic, journal, or author) based on metadata from OpenAlex’s full-text search feature. This count reflects how often USDA datasets were mentioned within the full text of publications associated with a particular entity. The OpenAlex Total Count represents the total number of publications linked to that entity in the broader OpenAlex database, without applying any filters related to dataset mentions.
 
@@ -106,7 +103,6 @@ To create a more focused and manageable search corpus, we selected the top 25 en
 
 Choosing this approach has a few important implications. First, it likely increases the relevance of the resulting corpus by concentrating on publications where USDA data are actively cited or discussed, rather than simply associated with a broader research area. Second, it helps avoid the need to download and process an unmanageable number of PDFs—estimated at around 1.7 million if all identified entities were included. However, this method may introduce some selection bias by favoring entities with higher immediate visibility in the first search pass. Some relevant but less frequently mentioned entities might be excluded, meaning that while efficiency improves, full comprehensiveness is slightly sacrificed. Overall, this tradeoff supports a practical balance between depth and feasibility in building the final dataset.
 
-Table: (\#tab:top25topics) Top 25 Topics by First Run Count
 
 | Topic ID | Topic Name                                                      | First Run Count | OpenAlex Total Count |
 |----------|-----------------------------------------------------------------|-----------------|----------------------|
@@ -136,8 +132,9 @@ Table: (\#tab:top25topics) Top 25 Topics by First Run Count
 | T11711   | Impacts of COVID-19 on Global Economy and Markets               | 49              | 69059                |
 | T12724   | Integrated Management of Water, Energy, and Food Resources      | 47              | 40148                |
 
+: Top 25 Topics by First Run Count {#tbl-top25topics}
 
-Table: (\#tab:top25journals) Top 25 Journals by First Run Count
+
 
 | Journal ID    | Journal Name                                                               | First Run Count | OpenAlex Total Count |
 |---------------|----------------------------------------------------------------------------|-----------------|----------------------|
@@ -167,8 +164,8 @@ Table: (\#tab:top25journals) Top 25 Journals by First Run Count
 | S2738397068   | Land                                                                       | 14              | 9774                 |
 | S80485027     | Land Use Policy                                                            | 14              | 4559                 |
 
+: Top 25 Journals by First Run Count {#tbl-top25journals}
 
-Table: (\#tab:top25authors) Top 25 Authors by First Run Count
 
 | Author ID    | Author Name            | First Run Count | OpenAlex Total Count |
 |--------------|------------------------|-----------------|----------------------|
@@ -198,8 +195,9 @@ Table: (\#tab:top25authors) Top 25 Authors by First Run Count
 | A5032940306  | Lisa Harnack           | 7               | 89                   |
 | A5024127854  | Eduardo Villamor       | 7               | 84                   |
 
+: Top 25 Authors by First Run Count Table {#tbl-top25authors}
 
-The resulting seed corpus contained approximately 1,774,245 (<<CHECK WITH RAFAEL>>) unique publications. An initial download of full-texts achieved a success rate of approximately 35%, corresponding to an estimated 625,000 accessible full texts. Local full-text searches were planned using this subset to improve detection of dataset mentions beyond what was possible through OpenAlex’s built-in search functions.
+The resulting seed corpus contained approximately 1,774,245 (**CHECK WITH RAFAEL**) unique publications. An initial download of full-texts achieved a success rate of approximately 35%, corresponding to an estimated 625,000 accessible full texts. Local full-text searches were planned using this subset to improve detection of dataset mentions beyond what was possible through OpenAlex’s built-in search functions.
 
 While the seed corpus approach allowed more targeted retrieval, limitations remain. Full-text download success was constrained by incomplete or inaccessible open-access links, and processing the entire corpus was computationally intensive. Future efforts may require distributed processing or refined selection criteria to further improve efficiency.
 
@@ -215,8 +213,6 @@ This section presents two sets of results. In both cases, a seed-corpus approach
 
 The first comparison looks at publication and journal coverage between the Scopus (using the seed-corpus method) and OpenAlex (using the full-text search). The results describe how many publications mention the Ag Census in each database and evaluates the degree of overlap between them.
 
-\pagebreak
-
 Table 1 displays the coverage of publications that referenced the Ag Census data. The table distinguishes between results that appear in both databases (column 1), only in OpenAlex (column 2), and only in Scopus (column 3). Column 4 is a total of all distinct publications or journals across both databases. The first row reports the number of individual publications found in each category. The unit of analysis is at the publication level. The second row reports the number of journals that include the Ag Census publications, again broken out by their appearance in one or both datasets. The unit of analysis is at the journal level. 
 
 **ADD TABLE 1 HERE**
@@ -230,8 +226,6 @@ These results show that the coverage of publications mentioning the Ag Census an
 ## \Large Method 2 (Seed Corpus Approach)
 
 Based on the pattern observed from the full-text search in OpenAlex, the differences likely arise, at least in part, from limitations in how OpenAlex processes and indexes text. Specifically, we found that OpenAlex’s full-text search does not index references as searchable text—they are stored as pointers, not included in the searchable body of the publication. In addition, n-gram-level metadata that might capture mentions of the Ag Census outside the main text was not accessible for the full set of publications. To address these limitations and create a more consistent comparison with Scopus, we applied a seed-corpus approach to OpenAlex, targeting a curated set of authors, journals, and topics associated with Ag Census use.
-
-\pagebreak
 
 While this method can overcome the limitations of the OpenAlex full-text search, it is computationally more intensive. To limit the cost of the search corpus method, a list of the top authors, topics, and journals is provided, as described above. This list serves as a set of filters through which the search corpus is applied. Mentions of the Ag Census are then searched for within publications meeting these criteria.
 
@@ -299,14 +293,14 @@ Publication-level comparisons disaggregated by journal showed that, under the fu
 It is important to note that the full-text search and seed corpus approaches represent two distinct sampling methods within OpenAlex. The full-text search attempts to identify dataset mentions directly from the body of text available for a subset of publications, while the seed corpus approach relies on pre-selected journals, topics, and authors more likely to reference the Census of Agriculture. As a result, the pools of publications identified by each method are not strictly comparable: they are drawn from different underlying subsets of OpenAlex's catalog. This context is important for interpreting differences in coverage and citation intensity across the two approaches.
 
 
-## Institutional Comparison {.unnumbered}
+# Institutional Comparison
 
-<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
-<strong> The results in this section compare institutional coverage across three major bibliographic databases: Scopus, OpenAlex, and Dimensions. </strong> </div> 
+<!-- <div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;"> -->
+<!-- <strong> The results in this section compare institutional coverage across three major bibliographic databases: Scopus, OpenAlex, and Dimensions. </strong> </div>  -->
 
 Each of the featured citation databases represent some portion of the global research landscape, yet their inclusion criteria and institutional coverage vary in ways that may inform disparities. Our goal is to assess which institutions are represented in each source, with particular attention to coverage of underrepresented and Minority-Serving Institutions (MSIs). By building a harmonized dataset that links IPEDS identifiers to institutional records across Scopus, OpenAlex, and Dimensions, we aim to evaluate how these citation databases include or exclude institutions across institutional characteristics such as control, level, MSI status, and geography. This analysis informs a broader conversation about equity, transparency, and accountability in research data systems.
 
-### Step 1: Clean IPEDS and MSI data {.unnumbered}
+## Step 1: Clean IPEDS and MSI data {.unnumbered}
 
 In this section, I document the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023, as part of the broader effort to compare institutional coverage across Scopus, OpenAlex, and Dimensions. To support that analysis, we needed a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time. I compiled and cleaned data from multiple sources—the MSI Data Project (Nguyen et al., 2023) for 2017–2021 and Rutgers CMSI lists for 2022–2023—and merged these with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. I addressed inconsistencies in eligibility labels, resolved duplicates, and created summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are included for transparency. All additional details are available in the IPEDS^[[IPEDS appendix available here](appendices/app_ipeds.qmd)] and MSI^[[MSI appendix available here](appendices/app_msi.qmd)] Appendices.
 
@@ -318,4 +312,5 @@ In this section, I document the construction and visualization of MSI (Minority-
     <em>Source code used to generate graphic:</em> <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/blob/main/data/ipeds_msi/build_ipeds_msi.R" target="_blank">Available here</a>.
   </figcaption>
 </figure>
+
 
