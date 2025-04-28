@@ -951,12 +951,12 @@ Table&nbsp;3: Top 25 Authors by First Run Count Table
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  output<span class="sc">$</span>venn_plot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    fit <span class="ot">&lt;-</span> <span class="fu">euler</span>(<span class="fu">c</span>(</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Scopus"</span> <span class="ot">=</span> <span class="dv">4207</span> <span class="sc">+</span> <span class="dv">405</span> <span class="sc">+</span> <span class="dv">263</span> <span class="sc">+</span> <span class="dv">100</span>,       <span class="co"># Only Scopus + estimated triple overlap</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FullText"</span> <span class="ot">=</span> <span class="dv">761</span> <span class="sc">+</span> <span class="dv">405</span> <span class="sc">+</span> <span class="dv">5</span> <span class="sc">+</span> <span class="dv">100</span>,        <span class="co"># OpenAlex Full Text + estimated triple overlap</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SeedCorpus"</span> <span class="ot">=</span> <span class="dv">940</span> <span class="sc">+</span> <span class="dv">263</span> <span class="sc">+</span> <span class="dv">5</span> <span class="sc">+</span> <span class="dv">100</span>,      <span class="co"># OpenAlex Seed Corpus + estimated triple overlap</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Scopus&amp;FullText"</span> <span class="ot">=</span> <span class="dv">405</span> <span class="sc">+</span> <span class="dv">100</span>,            <span class="co"># Scopus &amp; FullText total</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Scopus&amp;SeedCorpus"</span> <span class="ot">=</span> <span class="dv">263</span> <span class="sc">+</span> <span class="dv">100</span>,           <span class="co"># Scopus &amp; SeedCorpus total</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FullText&amp;SeedCorpus"</span> <span class="ot">=</span> <span class="dv">5</span> <span class="sc">+</span> <span class="dv">100</span>,           <span class="co"># FullText &amp; SeedCorpus total</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Scopus"</span> <span class="ot">=</span> <span class="dv">4207</span>,       <span class="co"># Only Scopus + estimated triple overlap</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FullText"</span> <span class="ot">=</span> <span class="dv">761</span>,        <span class="co"># OpenAlex Full Text + estimated triple overlap</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SeedCorpus"</span> <span class="ot">=</span> <span class="dv">940</span>,      <span class="co"># OpenAlex Seed Corpus + estimated triple overlap</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Scopus&amp;FullText"</span> <span class="ot">=</span> <span class="dv">405</span>,            <span class="co"># Scopus &amp; FullText total</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Scopus&amp;SeedCorpus"</span> <span class="ot">=</span> <span class="dv">263</span>,           <span class="co"># Scopus &amp; SeedCorpus total</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FullText&amp;SeedCorpus"</span> <span class="ot">=</span> <span class="dv">5</span>,           <span class="co"># FullText &amp; SeedCorpus total</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Scopus&amp;FullText&amp;SeedCorpus"</span> <span class="ot">=</span> <span class="dv">100</span>         <span class="co"># assumed triple overlap</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    ))</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    </span>
@@ -975,7 +975,7 @@ Table&nbsp;3: Top 25 Authors by First Run Count Table
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>
-Listening on http://127.0.0.1:3067</code></pre>
+Listening on http://127.0.0.1:4609</code></pre>
 </div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1014,18 +1014,18 @@ How to Read Venn Diagram (click to expand)
 <tbody>
 <tr class="odd">
 <td>Scopus</td>
-<td>Only Scopus + overlaps</td>
-<td>4975</td>
+<td>Only Scopus</td>
+<td>4207</td>
 </tr>
 <tr class="even">
 <td>Full Text</td>
-<td>Only OpenAlex Full Text + overlaps</td>
-<td>1271</td>
+<td>Only OpenAlex Full Text</td>
+<td>761</td>
 </tr>
 <tr class="odd">
 <td>Seed Corpus</td>
-<td>Only OpenAlex Seed Corpus + overlaps</td>
-<td>1308</td>
+<td>Only OpenAlex Seed Corpus</td>
+<td>940</td>
 </tr>
 <tr class="even">
 <td>Scopus ∩ Full Text</td>
