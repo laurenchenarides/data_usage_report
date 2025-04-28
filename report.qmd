@@ -214,6 +214,50 @@ An objective of this report is to understand differences in publication coverage
 
 This section presents two sets of results. In both cases, a seed-corpus approach is used to identify Ag Census publications in Scopus. We then compare these results to (i) publications identified through a full-text search in OpenAlex and (ii) publications identified using a seed-corpus approach in OpenAlex.
 
+```{r}
+#| echo: false
+#| include: false
+
+library(shiny)
+library(eulerr)
+```
+
+```{r, fig.cap="Overlap of Scopus (paywall) and OpenAlex Full Text and Seed Corpus (open access) publications."}
+#| code-fold: true
+#| code-summary: "Show R code used to generate the Venn Diagram"
+
+ui <- fluidPage(
+  plotOutput("venn_plot")
+)
+
+server <- function(input, output, session) {
+  
+  output$venn_plot <- renderPlot({
+    
+    fit <- euler(c(
+      "Scopus" = 4207 + 405 + 263 + 100,       # Only Scopus + estimated triple overlap
+      "FullText" = 761 + 405 + 5 + 100,        # OpenAlex Full Text + estimated triple overlap
+      "SeedCorpus" = 940 + 263 + 5 + 100,      # OpenAlex Seed Corpus + estimated triple overlap
+      "Scopus&FullText" = 405 + 100,            # Scopus & FullText total
+      "Scopus&SeedCorpus" = 263 + 100,           # Scopus & SeedCorpus total
+      "FullText&SeedCorpus" = 5 + 100,           # FullText & SeedCorpus total
+      "Scopus&FullText&SeedCorpus" = 100         # assumed triple overlap
+    ))
+    
+    plot(fit,
+         fills = list(fill = c("orange", "lightblue", "lightblue"), alpha = 0.6),
+         edges = TRUE,
+         labels = list(font = 4),
+         quantities = TRUE,
+         lty = c("solid", "dashed", "dashed"),   # Line type: Scopus solid, OpenAlex dotted
+         col = c("black", "black", "black")       # Border color: all black
+    )
+  })
+}
+
+shinyApp(ui, server)
+```
+
 ## Method 1 (Full Text Search)
 
 The first comparison looks at publication and journal coverage between the Scopus (using the seed-corpus method) and OpenAlex (using the full-text search). The results describe how many publications mention the Ag Census in each database and evaluates the degree of overlap between them.
