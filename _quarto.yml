@@ -26,8 +26,8 @@ website:
     contents:
       - href: home.qmd
         text: Report Summary
-      - href: terminology.qmd
-        text: Terminology
+      - href: report.qmd
+        text: Full Report
       - href: index.qmd
         text: Project Background
       - section: workflow.qmd
@@ -43,13 +43,13 @@ website:
             text: "Step 03: Clean Publication Data"
           - href: workflow/results/compare_pub_data.qmd
             text: "Step 04: Compare Results"
-      - href: report.qmd
-        text: Findings
       - href: conclusions.qmd
-        text: Conclusions
+        text: Study Limitations
       - section: appendix.qmd
         text: "Appendices"
         contents:
+          - href: terminology.qmd
+            text: Terminology
           - href: appendices/app_crosswalk.qmd # Data schema
           - href: appendices/app_databases.qmd # Summary of Scopus, OpenAlex, and Dimensions
             text: "Reference Files"

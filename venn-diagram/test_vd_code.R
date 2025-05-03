@@ -113,3 +113,64 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
+
+
+## Venn Diagram Markdown Content
+
+
+# ```{r}
+# #| echo: false
+# #| include: false
+# 
+# library(shiny)
+# library(eulerr)
+# ```
+# 
+# ```{r, fig.cap="Overlap of Scopus (paywall) and OpenAlex Full Text and Seed Corpus (open access) publications."}
+# #| code-fold: true
+# #| code-summary: "Show R code used to generate the Venn Diagram"
+# 
+# ui <- fluidPage(
+#   plotOutput("venn_plot")
+# )
+# 
+# server <- function(input, output, session) {
+#   
+#   output$venn_plot <- renderPlot({
+#     
+#     fit <- euler(c(
+#       "Scopus" = 4207,       # Only Scopus + estimated triple overlap
+#       "FullText" = 761,        # OpenAlex Full Text + estimated triple overlap
+#       "SeedCorpus" = 940,      # OpenAlex Seed Corpus + estimated triple overlap
+#       "Scopus&FullText" = 405,            # Scopus & FullText total
+#       "Scopus&SeedCorpus" = 263,           # Scopus & SeedCorpus total
+#       "FullText&SeedCorpus" = 5,           # FullText & SeedCorpus total
+#       "Scopus&FullText&SeedCorpus" = 100         # assumed triple overlap
+#     ))
+#     
+#     plot(fit,
+#          fills = list(fill = c("orange", "lightblue", "lightblue"), alpha = 0.6),
+#          edges = TRUE,
+#          labels = list(font = 4),
+#          quantities = TRUE,
+#          lty = c("solid", "dashed", "dashed"),   # Line type: Scopus solid, OpenAlex dotted
+#          col = c("black", "black", "black")       # Border color: all black
+#     )
+#   })
+# }
+# 
+# shinyApp(ui, server)
+# ```
+# 
+# ::: {.callout-note icon=false collapse=true title="How to Read Venn Diagram (click to expand)"}
+# | Set Combination                     | Meaning                                              | Count |
+#   |--------------------------------------|------------------------------------------------------|-------|
+#   | Scopus                               | Only Scopus                               | 4207  |
+#   | Full Text                            | Only OpenAlex Full Text                   | 761  |
+#   | Seed Corpus                          | Only OpenAlex Seed Corpus                  | 940  |
+#   | Scopus ∩ Full Text                   | Publications in Scopus and Full Text (including triple overlap) | 505   |
+#   | Scopus ∩ Seed Corpus                 | Publications in Scopus and Seed Corpus (including triple overlap) | 363   |
+#   | Full Text ∩ Seed Corpus              | Publications in Full Text and Seed Corpus (including triple overlap) | 105   |
+#   | Scopus ∩ Full Text ∩ Seed Corpus     | Publications in all three sources                    | 100   |
+#   
+# :::
