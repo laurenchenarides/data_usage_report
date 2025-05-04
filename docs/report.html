@@ -97,7 +97,9 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Citation Database Assessment</a> 
+      <a href="./">
+      Citation Database Assessment
+      </a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report" title="" class="quarto-navigation-tool px-1" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
 </div>
@@ -280,16 +282,14 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#journal-coverage" id="toc-journal-coverage" class="nav-link" data-scroll-target="#journal-coverage"><span class="header-section-number">3.2</span> Journal Coverage</a>
   <ul class="collapse">
+  <li><a href="#arms-financial-and-crop-production-practices-1" id="toc-arms-financial-and-crop-production-practices-1" class="nav-link" data-scroll-target="#arms-financial-and-crop-production-practices-1">ARMS Financial and Crop Production Practices</a></li>
   <li><a href="#the-census-of-agriculture-1" id="toc-the-census-of-agriculture-1" class="nav-link" data-scroll-target="#the-census-of-agriculture-1">The Census of Agriculture</a></li>
   </ul></li>
-  <li><a href="#publication-topics" id="toc-publication-topics" class="nav-link" data-scroll-target="#publication-topics"><span class="header-section-number">3.3</span> Publication Topics</a></li>
-  <li><a href="#institutional-comparison" id="toc-institutional-comparison" class="nav-link" data-scroll-target="#institutional-comparison"><span class="header-section-number">3.4</span> Institutional Comparison</a>
+  <li><a href="#publication-topics" id="toc-publication-topics" class="nav-link" data-scroll-target="#publication-topics"><span class="header-section-number">3.3</span> Publication Topics</a>
   <ul class="collapse">
-  <li><a href="#standarizing-ipeds-and-msi-data" id="toc-standarizing-ipeds-and-msi-data" class="nav-link" data-scroll-target="#standarizing-ipeds-and-msi-data">Standarizing IPEDS and MSI data</a></li>
+  <li><a href="#arms-financial-and-crop-production-practices-2" id="toc-arms-financial-and-crop-production-practices-2" class="nav-link" data-scroll-target="#arms-financial-and-crop-production-practices-2">ARMS Financial and Crop Production Practices</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4</span> Conclusion</a></li>
-  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/report.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="report.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -557,7 +557,7 @@ Table&nbsp;1: List of USDA Data Assets
 <li>Publication Type: Articles and reviews</li>
 <li>Open Access Status: Open-access publications only</li>
 </ul>
-<p>Filtering was further refined by selecting publications associated with high-relevance topics, journals, and authors. As an example, the tables shown for the Census of Agriculture dataset—<a href="#tbl-top25topics" class="quarto-xref">Table&nbsp;3</a> (top 25 topics), <a href="#tbl-top25journals" class="quarto-xref">Table&nbsp;4</a> (top 25 journals), and <a href="#tbl-top25authors" class="quarto-xref">Table&nbsp;5</a> (top 25 U.S.-affiliated authors)—illustrate how this filtering process was applied. Each table presents two key columns to support interpretation. The <em>First Run Count</em> refers to the number of publications linked to each entity (whether a topic, journal, or author) based on metadata from OpenAlex’s full-text search feature. This count reflects how often USDA datasets were mentioned within the full text of publications associated with a particular entity. The <em>OpenAlex Total Count</em> represents the total number of publications linked to that entity in the broader OpenAlex database, without applying any filters related to dataset mentions.</p>
+<p>Filtering was further refined by selecting publications associated with high-relevance topics, journals, and authors. As an example, the tables shown for the Census of Agriculture dataset—<strong>?@tbl-top25topics</strong> (top 25 topics), <strong>?@tbl-top25journals</strong> (top 25 journals), and <strong>?@tbl-top25authors</strong> (top 25 U.S.-affiliated authors)—illustrate how this filtering process was applied. Each table presents two key columns to support interpretation. The <em>First Run Count</em> refers to the number of publications linked to each entity (whether a topic, journal, or author) based on metadata from OpenAlex’s full-text search feature. This count reflects how often USDA datasets were mentioned within the full text of publications associated with a particular entity. The <em>OpenAlex Total Count</em> represents the total number of publications linked to that entity in the broader OpenAlex database, without applying any filters related to dataset mentions.</p>
 <p>To create a more focused and manageable search corpus, we selected the top 25 entities in each category based on their First Run Count. This approach prioritizes journals, topics, and authors where USDA datasets are most frequently mentioned in the full text, which we interpret as being more representative of actual research activity involving these datasets. It also substantially reduces the workload by limiting the number of publications that need to be retrieved and processed.</p>
 <p>Choosing this approach has a few important implications. First, it likely increases the relevance of the resulting corpus by concentrating on publications where USDA data are actively cited or discussed, rather than simply associated with a broader research area. Second, it helps avoid the need to download and process an unmanageable number of PDFs—estimated at around 1.7 million if all identified entities were included. However, this method may introduce some selection bias by favoring entities with higher immediate visibility in the first search pass. Some relevant but less frequently mentioned entities might be excluded, meaning that while efficiency improves, full comprehensiveness is slightly sacrificed. Overall, this trade-off supports a practical balance between depth and feasibility in building the final dataset of publication metadata.</p>
 <p>For the Census of Agriculture, the resulting seed corpus included approximately 1,774,245 unique publications. An initial download of full texts achieved a success rate of roughly 35%, corresponding to an estimated 625,000 accessible full-text documents. Local full-text searches were conducted on this subset to improve detection of dataset mentions beyond what was possible through OpenAlex’s built-in search capabilities.</p>
@@ -624,13 +624,13 @@ Table&nbsp;2: Unique Publications with Metadata across Sources
 <section id="arms-financial-and-crop-production-practices" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="arms-financial-and-crop-production-practices">ARMS Financial and Crop Production Practices</h3>
 <figure style="text-align: center;" class="figure">
-<a href="graphics/ARMS_treemap.png" target="_blank"> <img src="graphics/ARMS_treemap.png" style="width:80%; height:auto;" alt="ARMS Treemap" class="figure-img"> </a>
+<a href="graphics/treemaps/ARMS_treemap.png" target="_blank"> <img src="graphics/treemaps/ARMS_treemap.png" style="width:80%; height:auto;" alt="ARMS Treemap" class="figure-img"> </a>
 </figure>
 </section>
 <section id="the-census-of-agriculture" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="the-census-of-agriculture">The Census of Agriculture</h3>
 <figure style="text-align: center;" class="figure">
-<a href="graphics/Census_of_Agriculture_treemap.png" target="_blank"> <img src="graphics/Census_of_Agriculture_treemap.png" style="width:80%; height:auto;" alt="Ag Census Treemap" class="figure-img"> </a>
+<a href="graphics/treemaps/Census_of_Agriculture_treemap.png" target="_blank"> <img src="graphics/treemaps/Census_of_Agriculture_treemap.png" style="width:80%; height:auto;" alt="Ag Census Treemap" class="figure-img"> </a>
 </figure>
 <p>The first comparison looks at publication and journal coverage between the Scopus (using the seed-corpus method) and OpenAlex (using the full-text search). The results describe how many publications mention the Ag Census in each database and evaluates the degree of overlap between them.</p>
 <p>Table 1 displays the coverage of publications that referenced the Ag Census data. The table distinguishes between results that appear in both databases (column 1), only in OpenAlex (column 2), and only in Scopus (column 3). Column 4 is a total of all distinct publications or journals across both databases. The first row reports the number of individual publications found in each category. The unit of analysis is at the publication level. The second row reports the number of journals that include the Ag Census publications, again broken out by their appearance in one or both datasets. The unit of analysis is at the journal level.</p>
@@ -650,13 +650,16 @@ Table&nbsp;2: Unique Publications with Metadata across Sources
 <section id="food-access-research-atlas" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="food-access-research-atlas">Food Access Research Atlas</h3>
 <figure style="text-align: center;" class="figure">
-<a href="graphics/Food_Access_Research_Atlas_treemap.png" target="_blank"> <img src="graphics/Food_Access_Research_Atlas_treemap.png" style="width:80%; height:auto;" alt="ARMS Treemap" class="figure-img"> </a>
+<a href="graphics/treemaps/Food_Access_Research_Atlas_treemap.png" target="_blank"> <img src="graphics/treemaps/Food_Access_Research_Atlas_treemap.png" style="width:80%; height:auto;" alt="ARMS Treemap" class="figure-img"> </a>
 </figure>
 </section>
 </section>
 <section id="journal-coverage" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="journal-coverage"><span class="header-section-number">3.2</span> Journal Coverage</h2>
 <p>Now that we have compared journal coverage across the two citation databases, we next examine the publications within journals that are indexed in both Scopus and OpenAlex. We report these results for the full-text search approach and the seed-corpus approach in OpenAlex.</p>
+<section id="arms-financial-and-crop-production-practices-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="arms-financial-and-crop-production-practices-1">ARMS Financial and Crop Production Practices</h3>
+</section>
 <section id="the-census-of-agriculture-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="the-census-of-agriculture-1">The Census of Agriculture</h3>
 <p>Table 5 provides journal-level detail on the overlap between publications indexed in Scopus and OpenAlex, based on the full-text search results in OpenAlex. Each row corresponds to a journal included in the analysis. The set of journals included here matches the group of overlapping journals reported in Table 1—that is, journals where publications were found in both Scopus and OpenAlex.</p>
@@ -673,569 +676,13 @@ Table&nbsp;2: Unique Publications with Metadata across Sources
 </section>
 <section id="publication-topics" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="publication-topics"><span class="header-section-number">3.3</span> Publication Topics</h2>
-</section>
-<section id="institutional-comparison" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="institutional-comparison"><span class="header-section-number">3.4</span> Institutional Comparison</h2>
-<!-- <div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;"> -->
-<!-- <strong> The results in this section compare institutional coverage across three major bibliographic databases: Scopus, OpenAlex, and Dimensions. </strong> </div>  -->
-<p>In addition to examining dataset mention coverage, the report also evaluates differences in institutional representation across Scopus and OpenAlex. Publication affiliation data are linked to institutional records using IPEDS identifiers to create a harmonized dataset across sources. This allows for assessment of how each citation database represents institutions based on characteristics such as control (public or private), degree level, MSI designation, and geographic location. Special attention is given to coverage of underrepresented institutions and Minority-Serving Institutions (MSIs). This analysis informs broader conversations about equity, transparency, and accountability in research data infrastructure.</p>
-<p>Each of the featured citation databases represent some portion of the global research landscape, yet their inclusion criteria and institutional coverage vary in ways that may inform disparities. Our goal is to assess which institutions are represented in each source, with particular attention to coverage of underrepresented and Minority-Serving Institutions (MSIs). By building a harmonized dataset that links IPEDS identifiers to institutional records across Scopus, OpenAlex, and Dimensions, we aim to evaluate how these citation databases include or exclude institutions across institutional characteristics such as control, level, MSI status, and geography. This analysis informs a broader conversation about equity, transparency, and accountability in research data systems.</p>
-<section id="standarizing-ipeds-and-msi-data" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="standarizing-ipeds-and-msi-data">Standarizing IPEDS and MSI data</h3>
-<p>In this section, I document the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023, as part of the broader effort to compare institutional coverage across Scopus, OpenAlex, and Dimensions. To support that analysis, we needed a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time. I compiled and cleaned data from multiple sources—the MSI Data Project (Nguyen et al., 2023) for 2017–2021 and Rutgers CMSI lists for 2022–2023—and merged these with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. I addressed inconsistencies in eligibility labels, resolved duplicates, and created summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are included for transparency. All additional details are available in the IPEDS<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> and MSI<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> Appendices.</p>
+<section id="arms-financial-and-crop-production-practices-2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="arms-financial-and-crop-production-practices-2">ARMS Financial and Crop Production Practices</h3>
 <figure style="text-align: center;" class="figure">
-<a href="data/ipeds_msi/msi_eligibility_plot.png" target="_blank"> <img src="data/ipeds_msi/msi_eligibility_plot.png" style="width:80%; height:auto;" alt="MSI Eligibility Plot" class="figure-img"> </a>
-<figcaption style="font-size: 0.9em; margin-top: 0.5em;">
-<em>Source code used to generate graphic:</em> <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/blob/main/data/ipeds_msi/build_ipeds_msi.R" target="_blank">Available here</a>.
-</figcaption>
+<a href="graphics/bubble_charts/dataset01_topics_scopus_exclusive.png" target="_blank"> <img src="graphics/bubble_charts/dataset01_topics_scopus_exclusive.png" style="width:80%; height:auto;" alt="ARMS Treemap" class="figure-img"> </a>
 </figure>
 </section>
 </section>
-</section>
-<section id="conclusion" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Conclusion</h1>
-<p>This report compares the coverage of publications and journals referencing the Census of Agriculture across Scopus and OpenAlex, using two approaches for identifying relevant OpenAlex publications: a full-text search and a seed corpus approach.</p>
-<p>Using the full-text search in OpenAlex, we found relatively limited overlap with Scopus. Only 9.2% of publications and 9.2% of journals referencing the Census of Agriculture appeared in both databases, with Scopus identifying a substantially larger share of relevant works. These results suggest that relying solely on OpenAlex’s full-text search may miss a significant number of dataset mentions.</p>
-<p>Applying the seed corpus approach to OpenAlex improved overlap with Scopus and provided a more structured way to capture publications associated with known journals, authors, and topics. However, the percentage of overlapping publications referencing the Census of Agriculture is lower at 6.42% even though there is a slightly higher percentage of shared journals at 10.73%.</p>
-<p>Comparing the overlap between the two OpenAlex methods reveals differences in underlying samples. Only 20.8% of full-text search publications were also found in the seed corpus set, and 28.9% of seed corpus publications matched those found in the full-text search. Journal-level overlap was somewhat higher, with 137 journals shared between the two methods (representing approximately 50–55% overlap across the two pools).</p>
-<p>It is important to note that the full-text search and seed corpus approaches represent two distinct sampling methods within OpenAlex. The full-text search attempts to identify dataset mentions directly from the body of text available for a subset of publications, while the seed corpus approach relies on pre-selected journals, topics, and authors more likely to reference the Census of Agriculture. As a result, the pools of publications identified by each method are not strictly comparable: they are drawn from different underlying subsets of OpenAlex’s catalog. This context is important for interpreting differences in coverage and citation intensity across the two approaches.</p>
-</section>
-<section id="tables" class="level1 unnumbered">
-<h1 class="unnumbered">Tables</h1>
-<!-- ::: {.callout-note icon=false collapse=true title="OpenAlex Seed Search Criteria (click to expand)"} ::: -->
-<div id="tbl-top25topics" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-top25topics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Top 25 Topics by First Run Count
-</figcaption>
-<div aria-describedby="tbl-top25topics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 8%">
-<col style="width: 57%">
-<col style="width: 14%">
-<col style="width: 19%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Topic ID</th>
-<th>Topic Name</th>
-<th>First Run Count</th>
-<th>OpenAlex Total Count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>T11610</td>
-<td>Impact of Food Insecurity on Health Outcomes</td>
-<td>549</td>
-<td>78661</td>
-</tr>
-<tr class="even">
-<td>T10010</td>
-<td>Global Trends in Obesity and Overweight Research</td>
-<td>272</td>
-<td>111686</td>
-</tr>
-<tr class="odd">
-<td>T11066</td>
-<td>Comparative Analysis of Organic Agricultural Practices</td>
-<td>247</td>
-<td>41275</td>
-</tr>
-<tr class="even">
-<td>T12253</td>
-<td>Urban Agriculture and Community Development</td>
-<td>222</td>
-<td>27383</td>
-</tr>
-<tr class="odd">
-<td>T10367</td>
-<td>Agricultural Innovation and Livelihood Diversification</td>
-<td>186</td>
-<td>49818</td>
-</tr>
-<tr class="even">
-<td>T11464</td>
-<td>Impact of Homelessness on Health and Well-being</td>
-<td>175</td>
-<td>101019</td>
-</tr>
-<tr class="odd">
-<td>T12033</td>
-<td>European Agricultural Policy and Reform</td>
-<td>137</td>
-<td>88980</td>
-</tr>
-<tr class="even">
-<td>T10841</td>
-<td>Discrete Choice Models in Economics and Health Care</td>
-<td>126</td>
-<td>66757</td>
-</tr>
-<tr class="odd">
-<td>T10596</td>
-<td>Maternal and Child Nutrition in Developing Countries</td>
-<td>116</td>
-<td>118727</td>
-</tr>
-<tr class="even">
-<td>T11898</td>
-<td>Impacts of Food Prices on Consumption and Poverty</td>
-<td>113</td>
-<td>29110</td>
-</tr>
-<tr class="odd">
-<td>T11259</td>
-<td>Sustainable Diets and Environmental Impact</td>
-<td>109</td>
-<td>45082</td>
-</tr>
-<tr class="even">
-<td>T11311</td>
-<td>Soil and Water Nutrient Dynamics</td>
-<td>84</td>
-<td>52847</td>
-</tr>
-<tr class="odd">
-<td>T10235</td>
-<td>Impact of Social Factors on Health Outcomes</td>
-<td>81</td>
-<td>86076</td>
-</tr>
-<tr class="even">
-<td>T10439</td>
-<td>Adaptation to Climate Change in Agriculture</td>
-<td>77</td>
-<td>27311</td>
-</tr>
-<tr class="odd">
-<td>T11886</td>
-<td>Risk Management and Vulnerability in Agriculture</td>
-<td>73</td>
-<td>44755</td>
-</tr>
-<tr class="even">
-<td>T10226</td>
-<td>Global Analysis of Ecosystem Services and Land Use</td>
-<td>71</td>
-<td>84104</td>
-</tr>
-<tr class="odd">
-<td>T10866</td>
-<td>Role of Mediterranean Diet in Health Outcomes</td>
-<td>70</td>
-<td>76894</td>
-</tr>
-<tr class="even">
-<td>T10969</td>
-<td>Optimal Operation of Water Resources Systems</td>
-<td>70</td>
-<td>97570</td>
-</tr>
-<tr class="odd">
-<td>T10330</td>
-<td>Hydrological Modeling and Water Resource Management</td>
-<td>69</td>
-<td>132216</td>
-</tr>
-<tr class="even">
-<td>T11753</td>
-<td>Forest Management and Policy</td>
-<td>60</td>
-<td>75196</td>
-</tr>
-<tr class="odd">
-<td>T12098</td>
-<td>Rural development and sustainability</td>
-<td>54</td>
-<td>62114</td>
-</tr>
-<tr class="even">
-<td>T10111</td>
-<td>Remote Sensing in Vegetation Monitoring and Phenology</td>
-<td>52</td>
-<td>56452</td>
-</tr>
-<tr class="odd">
-<td>T10556</td>
-<td>Global Cancer Incidence and Mortality Patterns</td>
-<td>49</td>
-<td>64063</td>
-</tr>
-<tr class="even">
-<td>T11711</td>
-<td>Impacts of COVID-19 on Global Economy and Markets</td>
-<td>49</td>
-<td>69059</td>
-</tr>
-<tr class="odd">
-<td>T12724</td>
-<td>Integrated Management of Water, Energy, and Food Resources</td>
-<td>47</td>
-<td>40148</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<div id="tbl-top25journals" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-top25journals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4: Top 25 Journals by First Run Count
-</figcaption>
-<div aria-describedby="tbl-top25journals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 58%">
-<col style="width: 13%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Journal ID</th>
-<th>Journal Name</th>
-<th>First Run Count</th>
-<th>OpenAlex Total Count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>S2764628096</td>
-<td>Journal of Agriculture Food Systems and Community Development</td>
-<td>57</td>
-<td>825</td>
-</tr>
-<tr class="even">
-<td>S115427279</td>
-<td>Public Health Nutrition</td>
-<td>51</td>
-<td>3282</td>
-</tr>
-<tr class="odd">
-<td>S206696595</td>
-<td>Journal of Nutrition Education and Behavior</td>
-<td>41</td>
-<td>3509</td>
-</tr>
-<tr class="even">
-<td>S15239247</td>
-<td>International Journal of Environmental Research and Public Health</td>
-<td>39</td>
-<td>59130</td>
-</tr>
-<tr class="odd">
-<td>S4210201861</td>
-<td>Applied Economic Perspectives and Policy</td>
-<td>39</td>
-<td>647</td>
-</tr>
-<tr class="even">
-<td>S10134376</td>
-<td>Sustainability</td>
-<td>35</td>
-<td>87533</td>
-</tr>
-<tr class="odd">
-<td>S5832799</td>
-<td>Journal of Soil and Water Conservation</td>
-<td>34</td>
-<td>556</td>
-</tr>
-<tr class="even">
-<td>S2739393555</td>
-<td>Journal of Agricultural and Applied Economics</td>
-<td>34</td>
-<td>329</td>
-</tr>
-<tr class="odd">
-<td>S202381698</td>
-<td>PLoS ONE</td>
-<td>30</td>
-<td>143568</td>
-</tr>
-<tr class="even">
-<td>S124372222</td>
-<td>Renewable Agriculture and Food Systems</td>
-<td>30</td>
-<td>426</td>
-</tr>
-<tr class="odd">
-<td>S200437886</td>
-<td>BMC Public Health</td>
-<td>28</td>
-<td>18120</td>
-</tr>
-<tr class="even">
-<td>S91754907</td>
-<td>American Journal of Agricultural Economics</td>
-<td>28</td>
-<td>876</td>
-</tr>
-<tr class="odd">
-<td>S18733340</td>
-<td>Journal of the Academy of Nutrition and Dietetics</td>
-<td>27</td>
-<td>5301</td>
-</tr>
-<tr class="even">
-<td>S78512408</td>
-<td>Agriculture and Human Values</td>
-<td>27</td>
-<td>938</td>
-</tr>
-<tr class="odd">
-<td>S110785341</td>
-<td>Nutrients</td>
-<td>25</td>
-<td>30911</td>
-</tr>
-<tr class="even">
-<td>S2764593300</td>
-<td>Agricultural and Resource Economics Review</td>
-<td>25</td>
-<td>247</td>
-</tr>
-<tr class="odd">
-<td>S4210212157</td>
-<td>Frontiers in Sustainable Food Systems</td>
-<td>23</td>
-<td>3776</td>
-</tr>
-<tr class="even">
-<td>S63571384</td>
-<td>Food Policy</td>
-<td>20</td>
-<td>1069</td>
-</tr>
-<tr class="odd">
-<td>S69340840</td>
-<td>The Journal of Rural Health</td>
-<td>20</td>
-<td>749</td>
-</tr>
-<tr class="even">
-<td>S4210234824</td>
-<td>EDIS</td>
-<td>18</td>
-<td>3714</td>
-</tr>
-<tr class="odd">
-<td>S19383905</td>
-<td>Agricultural Finance Review</td>
-<td>18</td>
-<td>327</td>
-</tr>
-<tr class="even">
-<td>S119228529</td>
-<td>Journal of Hunger &amp; Environmental Nutrition</td>
-<td>17</td>
-<td>467</td>
-</tr>
-<tr class="odd">
-<td>S43295729</td>
-<td>Remote Sensing</td>
-<td>14</td>
-<td>33899</td>
-</tr>
-<tr class="even">
-<td>S2738397068</td>
-<td>Land</td>
-<td>14</td>
-<td>9774</td>
-</tr>
-<tr class="odd">
-<td>S80485027</td>
-<td>Land Use Policy</td>
-<td>14</td>
-<td>4559</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<div id="tbl-top25authors" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-top25authors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;5: Top 25 Authors by First Run Count Table
-</figcaption>
-<div aria-describedby="tbl-top25authors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 31%">
-<col style="width: 22%">
-<col style="width: 28%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Author ID</th>
-<th>Author Name</th>
-<th>First Run Count</th>
-<th>OpenAlex Total Count</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>A5016803484</td>
-<td>Heather A. Eicher‐Miller</td>
-<td>15</td>
-<td>140</td>
-</tr>
-<tr class="even">
-<td>A5024975191</td>
-<td>Edward A. Frongillo</td>
-<td>13</td>
-<td>351</td>
-</tr>
-<tr class="odd">
-<td>A5055158106</td>
-<td>Becca B.R. Jablonski</td>
-<td>12</td>
-<td>60</td>
-</tr>
-<tr class="even">
-<td>A5047780964</td>
-<td>Meredith T. Niles</td>
-<td>11</td>
-<td>200</td>
-</tr>
-<tr class="odd">
-<td>A5076121862</td>
-<td>Sheri D. Weiser</td>
-<td>10</td>
-<td>241</td>
-</tr>
-<tr class="even">
-<td>A5068812455</td>
-<td>Cindy W. Leung</td>
-<td>10</td>
-<td>170</td>
-</tr>
-<tr class="odd">
-<td>A5062679478</td>
-<td>J. Gordon Arbuckle</td>
-<td>10</td>
-<td>68</td>
-</tr>
-<tr class="even">
-<td>A5015017711</td>
-<td>Jeffrey K. O’Hara</td>
-<td>10</td>
-<td>27</td>
-</tr>
-<tr class="odd">
-<td>A5081656928</td>
-<td>Whitney E. Zahnd</td>
-<td>9</td>
-<td>147</td>
-</tr>
-<tr class="even">
-<td>A5002438645</td>
-<td>Phyllis C. Tien</td>
-<td>8</td>
-<td>244</td>
-</tr>
-<tr class="odd">
-<td>A5035584432</td>
-<td>Angela D. Liese</td>
-<td>8</td>
-<td>172</td>
-</tr>
-<tr class="even">
-<td>A5027684365</td>
-<td>Dayton M. Lambert</td>
-<td>8</td>
-<td>110</td>
-</tr>
-<tr class="odd">
-<td>A5081012770</td>
-<td>Linda J. Young</td>
-<td>8</td>
-<td>51</td>
-</tr>
-<tr class="even">
-<td>A5008463933</td>
-<td>Catherine Brinkley</td>
-<td>8</td>
-<td>34</td>
-</tr>
-<tr class="odd">
-<td>A5030548116</td>
-<td>Michele Ver Ploeg</td>
-<td>8</td>
-<td>33</td>
-</tr>
-<tr class="even">
-<td>A5056021318</td>
-<td>Nathan Hendricks</td>
-<td>7</td>
-<td>320</td>
-</tr>
-<tr class="odd">
-<td>A5024248662</td>
-<td>Adebola Adedimeji</td>
-<td>7</td>
-<td>137</td>
-</tr>
-<tr class="even">
-<td>A5002732604</td>
-<td>Julia A. Wolfson</td>
-<td>7</td>
-<td>137</td>
-</tr>
-<tr class="odd">
-<td>A5038610136</td>
-<td>Christopher N. Boyer</td>
-<td>7</td>
-<td>115</td>
-</tr>
-<tr class="even">
-<td>A5044317355</td>
-<td>Daniel Merenstein</td>
-<td>7</td>
-<td>113</td>
-</tr>
-<tr class="odd">
-<td>A5006129622</td>
-<td>Carmen Byker Shanks</td>
-<td>7</td>
-<td>103</td>
-</tr>
-<tr class="even">
-<td>A5060802257</td>
-<td>Tracey E. Wilson</td>
-<td>7</td>
-<td>102</td>
-</tr>
-<tr class="odd">
-<td>A5050792105</td>
-<td>Jennifer L. Moss</td>
-<td>7</td>
-<td>90</td>
-</tr>
-<tr class="even">
-<td>A5032940306</td>
-<td>Lisa Harnack</td>
-<td>7</td>
-<td>89</td>
-</tr>
-<tr class="odd">
-<td>A5024127854</td>
-<td>Eduardo Villamor</td>
-<td>7</td>
-<td>84</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-
-
 </section>
 
 
@@ -1248,8 +695,6 @@ Table&nbsp;5: Top 25 Authors by First Run Count Table
 <li id="fn4"><p>Initial drafts of the query incorrectly included terms like “NASS” and “USDA” in the alias list. This was corrected to ensure that aliases strictly referred to dataset names, and flag terms referred to organizations.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p><code>Pyalex</code> is an open-source library designed to facilitate interaction with the OpenAlex API; see <a href="https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex">https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex</a> for more information. The package manages request formatting and automates compliance with OpenAlex’s “polite pool” rate limits, which restrict the number of requests per minute and impose backoff delays. Pyalex introduced automatic pauses between requests, with a default <code>retry_backoff_factor</code> of 100 milliseconds, to ensure stable and continuous retrieval. This setup enabled systematic querying while adhering to OpenAlex’s usage policies.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>In cases where a publication appeared in more than one source, manual and programmatic checks confirmed that metadata values, such as journal titles and publication years, were consistent across sources. No conflicting values were detected.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p><a href="./appendices/app_ipeds.html">IPEDS appendix available here</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p><a href="./appendices/app_msi.html">MSI appendix available here</a><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1694,8 +1139,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/report.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
-</div>
+      <div class="footer-contents">This page is built with [Quarto](https://quarto.org/).</div>  
+    </div>
   </div>
 </footer>
 

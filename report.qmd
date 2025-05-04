@@ -293,14 +293,14 @@ This section presents two sets of results per dataset: (1) publications identifi
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
-  <a href="graphics/ARMS_treemap.png" target="_blank">
-    <img src="graphics/ARMS_treemap.png" style="width:80%; height:auto;" alt="ARMS Treemap">
+  <a href="graphics/treemaps/ARMS_treemap.png" target="_blank">
+    <img src="graphics/treemaps/ARMS_treemap.png" style="width:80%; height:auto;" alt="ARMS Treemap">
   </a>
 </figure>
 :::
 
 ::: {.content-visible when-format="pdf"}
-![](graphics/ARMS_treemap.png)
+![](graphics/treemaps/ARMS_treemap.png)
 :::
 
 
@@ -309,14 +309,14 @@ This section presents two sets of results per dataset: (1) publications identifi
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
-  <a href="graphics/Census_of_Agriculture_treemap.png" target="_blank">
-    <img src="graphics/Census_of_Agriculture_treemap.png" style="width:80%; height:auto;" alt="Ag Census Treemap">
+  <a href="graphics/treemaps/Census_of_Agriculture_treemap.png" target="_blank">
+    <img src="graphics/treemaps/Census_of_Agriculture_treemap.png" style="width:80%; height:auto;" alt="Ag Census Treemap">
   </a>
 </figure>
 :::
 
 ::: {.content-visible when-format="pdf"}
-![](graphics/Census_of_Agriculture_treemap.png)
+![](graphics/treemaps/Census_of_Agriculture_treemap.png)
 :::
 
 The first comparison looks at publication and journal coverage between the Scopus (using the seed-corpus method) and OpenAlex (using the full-text search). The results describe how many publications mention the Ag Census in each database and evaluates the degree of overlap between them.
@@ -353,14 +353,14 @@ Table 4 summarizes the overlap between journals identified through the two OpenA
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
-  <a href="graphics/Food_Access_Research_Atlas_treemap.png" target="_blank">
-    <img src="graphics/Food_Access_Research_Atlas_treemap.png" style="width:80%; height:auto;" alt="ARMS Treemap">
+  <a href="graphics/treemaps/Food_Access_Research_Atlas_treemap.png" target="_blank">
+    <img src="graphics/treemaps/Food_Access_Research_Atlas_treemap.png" style="width:80%; height:auto;" alt="ARMS Treemap">
   </a>
 </figure>
 :::
 
 ::: {.content-visible when-format="pdf"}
-![](graphics/Food_Access_Research_Atlas_treemap.png)
+![](graphics/treemaps/Food_Access_Research_Atlas_treemap.png)
 :::
 
 
@@ -368,6 +368,9 @@ Table 4 summarizes the overlap between journals identified through the two OpenA
 ## Journal Coverage
 
 Now that we have compared journal coverage across the two citation databases, we next examine the publications within journals that are indexed in both Scopus and OpenAlex. We report these results for the full-text search approach and the seed-corpus approach in OpenAlex.
+
+### ARMS Financial and Crop Production Practices {.unnumbered}
+
 
 ### The Census of Agriculture {.unnumbered}
 
@@ -396,7 +399,19 @@ Table 6 summarizes publication-level overlap statistics for journals identified 
 
 ## Publication Topics
 
+### ARMS Financial and Crop Production Practices {.unnumbered}
 
+
+::: {.content-visible when-format="html"}
+<figure style="text-align: center;">
+  <a href="graphics/bubble_charts/dataset01_topics_scopus_exclusive.png" target="_blank">
+    <img src="graphics/bubble_charts/dataset01_topics_scopus_exclusive.png" style="width:80%; height:auto;" alt="ARMS Treemap">
+  </a>
+</figure>
+:::
+
+::: {.content-visible when-format="pdf"}
+![](graphics/bubble_charts/dataset01_topics_scopus_exclusive.png)
 
 
 ## Institutional Comparison
