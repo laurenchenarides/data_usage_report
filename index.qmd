@@ -14,32 +14,49 @@ csl: apa.csl  # Optional: Use a specific citation style (e.g., APA)
 
 # Project Background {.unnumbered}
 
-The DemocratizingData.ai platform currently uses Scopus, a fee-based service, to track USDA dataset usage. OpenAlex, an open-source alternative, offers potential cost savings and broader access. Moving to OpenAlex would reduce operational costs while maintaining public access to USDA’s dataset usage metrics. However, the decision to transition from Scopus to OpenAlex requires systematic evaluation of their coverage and data quality.
+Tracking how federal datasets are used in academic research has been a priority for agencies such as the U.S. Department of Agriculture (USDA). The DemocratizingData.ai platform was created to support this effort by reporting on dataset usage through citation analysis. The platform was developed to ingest publication metadata from Scopus, a proprietary citation database, to identify and count publications that reference USDA datasets. Scopus offers reliable metadata and a structured indexing system, bu it is costly to access and does not fully align with goals around open science and public transparency.
 
-Initial comparisons between Scopus and OpenAlex revealed unexpected patterns in coverage overlap. These findings suggested that simply replacing one database with another might affect the platform’s ability to track dataset usage accurately.
+As interest in open-access infrastructure has grown, OpenAlex, a free and open-source citation database developed by OurResearch, has emerged as a potential alternative. OpenAlex claims broad coverage of research outputs, including journal articles, preprints, conference proceedings, and reports. Replacing Scopus with OpenAlex could lower operational costs for federal agencies and align with broader efforts to promote open data ecosystems. However, transitioning platforms raises important questions about data reliability, coverage completeness, and potential trade-offs in representation.
+
+To support an informed decision about this transition, a systematic comparison was conducted across three citation databases—Scopus, OpenAlex, and Dimensions—to assess their relative strengths and weaknesses for tracking dataset mentions in agricultural and food systems research. Dimensions, a third database developed by Digital Science, offers a hybrid model combining free and subscription-based access and was included to provide a broader benchmark across commercial and open platforms.
+
+Initial comparisons between Scopus and OpenAlex revealed unexpected differences in coverage, with notable gaps in publication indexing and metadata quality. These patterns suggest that simply substituting one citation source for another could lead to incomplete or biased tracking of dataset usage, potentially affecting public reporting and research visibility. This project responds to those concerns by developing a structured, reproducible methodology for evaluating database coverage across multiple dimensions: publication metadata, journal inclusion, dataset topic area, institutional affiliation, and authorship.
 
 ## Project Objective {.unnumbered}
 
-The objective of this project is to determine the coverage of publications across citation databases. This information will be used to decide the viability of replacing Scopus with a less costly solution.
+The objective of this project is to assess whether open-access citation databases, such as OpenAlex, can serve as viable alternatives to proprietary platforms like Scopus for tracking the use of USDA datasets in academic research. To inform this decision, we compare the coverage, structure, and metadata quality of three citation databases—Scopus, OpenAlex, and Dimensions—focusing on their ability to support consistent and transparent dataset usage metrics across the research landscape.
 
-## Specific Aims {#sec-aims .unnumbered}
+## Specific Aims {.unnumbered}
 
-1. **Evaluate differences in publication coverage across citation databases.** Compare how well Scopus, OpenAlex, and Dimensions track dataset usage in research publications and assess variations in publication inclusion.
-2. **Assess journal coverage.** Determine which journals each platform indexes and analyze how these differences impact dataset visibility.
-3. **Analyze publication-level discrepancies.** Compare how each platform captures research publications within indexed journals and identify potential gaps in dataset tracking.
-4. **Examine author and institutional representation.** Investigate how each platform attributes authorship and institutional affiliations, with a focus on variations by research institution type (e.g., Minority-Serving Institutions).
-5. **Develop a reproducible methodology for database comparison.** Establish a systematic approach for evaluating other citation databases beyond Scopus, OpenAlex, and Dimensions.
+1. **Evaluate differences in publication coverage across citation databases.** Measure the extent to which Scopus, OpenAlex, and Dimensions capture research publications that reference USDA datasets. Identify how publication inclusion varies across platforms.
+
+2. **Compare journal indexing and scope.** Compare the journals indexed by each database and examine how differences in journal coverage influence visibility of dataset-linked research.
+
+3. **Analyze topic coverage.** Examine the research areas where USDA datasets are mentioned. Identify patterns in topic classification and assess how different citation databases support subject-level tracking of dataset usage.
+
+4. **Examine institutional representation.** Evaluate how each platform captures and standardizes institutional affiliations. Pay particular attention to differences in coverage for Minority-Serving Institutions (MSIs), land-grant universities, and other public or underrepresented institutions.
+
+5. **Evaluate author representation.** Compare how author names are recorded across platforms, including the completeness of author metadata and potential implications for attribution and visibility.
+
+6. **Develop a reproducible methodology for cross-platform comparison.** Create a generalizable workflow for comparing citation databases, including steps for record linkage, deduplication, author and institution standardization, and identification of dataset mentions.
 
 These aims guide the development of a methodology for comparing citation databases, focusing on four areas:
 
-1.  Journal coverage: Determining which journals each platform indexes
-2.  Publication tracking: Comparing how each platform captures publications within indexed journals
-3.  Author identification: Evaluating how each platform handles author names and affiliations
-4.  Institution recognition: Determining how each platform records and standardizes institutional information
+1.  **Publication tracking:** 
 
-The scope of work includes comparing publication coverage across Scopus, OpenAlex, and Dimensions. This inclusion provides a comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms. For more information on each citation database, refer to [this Appendix.](appendices/app_databases.qmd) 
+- Comparing how each platform captures publications within indexed journals
 
-Our methodology provides a systematic approach for assessing citation databases' strengths and limitations in tracking dataset usage across research papers. Beyond platform comparison, this methodology examines variations in dataset usage across different types of research institutions.
+2.  **Journal coverage:** 
 
-The methods described in this report can be applied to other citation databases as alternatives to current data sources.
+- Determining which journals each platform indexes
 
+3.  **Institution recognition:** 
+
+- Determining how each platform records and standardizes institutional information
+
+4.  **Author identification:** 
+
+- Evaluating how each platform handles author names and affiliations
+
+The scope of work includes comparing publication coverage across Scopus, OpenAlex, and Dimensions that mention select USDA datasets. This inclusion provides a comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms. For more information on each citation database, refer to [this Appendix.](https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_crosswalk.html) 
+The methodology described in this report provides a systematic approach for assessing citation databases' strengths and limitations in tracking dataset usage across research papers. It also examines variations in dataset usage across different types of research institutions. These methods can be applied to other citation databases as alternatives to current data sources.

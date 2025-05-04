@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-05-03">
+<meta name="dcterms.date" content="2025-05-04">
 
 <title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./index.html" rel="next">
-<link href="./home.html" rel="prev">
+<link href="./workflow.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -118,14 +118,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./report.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Full Report</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Background</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project Background</span></a>
+  <a href="./report.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Full Report</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -249,41 +249,47 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">1</span> Overview</a>
+  <li><a href="#report-summary" id="toc-report-summary" class="nav-link active" data-scroll-target="#report-summary">Report Summary</a>
   <ul class="collapse">
   <li><a href="#what-is-the-issue" id="toc-what-is-the-issue" class="nav-link" data-scroll-target="#what-is-the-issue">What Is the Issue?</a></li>
-  <li><a href="#what-did-the-study-find" id="toc-what-did-the-study-find" class="nav-link" data-scroll-target="#what-did-the-study-find">What Did the Study Find?</a></li>
   <li><a href="#how-was-the-study-conducted" id="toc-how-was-the-study-conducted" class="nav-link" data-scroll-target="#how-was-the-study-conducted">How Was the Study Conducted?</a></li>
-  <li><a href="#how-can-these-materials-be-used" id="toc-how-can-these-materials-be-used" class="nav-link" data-scroll-target="#how-can-these-materials-be-used">How Can These Materials Be Used?</a></li>
+  <li><a href="#what-did-the-study-find" id="toc-what-did-the-study-find" class="nav-link" data-scroll-target="#what-did-the-study-find">What Did the Study Find?</a></li>
+  <li><a href="#what-are-the-contributions-of-this-study" id="toc-what-are-the-contributions-of-this-study" class="nav-link" data-scroll-target="#what-are-the-contributions-of-this-study">What are the Contributions of this Study?</a></li>
+  </ul></li>
+  <li><a href="#project-background" id="toc-project-background" class="nav-link" data-scroll-target="#project-background"><span class="header-section-number">1</span> Project Background</a>
+  <ul class="collapse">
+  <li><a href="#project-objective" id="toc-project-objective" class="nav-link" data-scroll-target="#project-objective"><span class="header-section-number">1.1</span> Project Objective</a></li>
+  <li><a href="#sec-aims" id="toc-sec-aims" class="nav-link" data-scroll-target="#sec-aims"><span class="header-section-number">1.2</span> Specific Aims</a></li>
   </ul></li>
   <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection"><span class="header-section-number">2</span> Data Collection</a>
   <ul class="collapse">
   <li><a href="#scopus-approach" id="toc-scopus-approach" class="nav-link" data-scroll-target="#scopus-approach"><span class="header-section-number">2.1</span> Scopus Approach</a></li>
   <li><a href="#openalex-approach" id="toc-openalex-approach" class="nav-link" data-scroll-target="#openalex-approach"><span class="header-section-number">2.2</span> OpenAlex Approach</a>
   <ul class="collapse">
-  <li><a href="#full-text-search-approach" id="toc-full-text-search-approach" class="nav-link" data-scroll-target="#full-text-search-approach"><span class="header-section-number">2.2.1</span> Full-Text Search Approach</a></li>
-  <li><a href="#seed-corpus-approach" id="toc-seed-corpus-approach" class="nav-link" data-scroll-target="#seed-corpus-approach"><span class="header-section-number">2.2.2</span> Seed Corpus Approach</a></li>
+  <li><a href="#openalex-full-text-search-approach" id="toc-openalex-full-text-search-approach" class="nav-link" data-scroll-target="#openalex-full-text-search-approach"><span class="header-section-number">2.2.1</span> OpenAlex Full-Text Search Approach</a></li>
+  <li><a href="#openalex-seed-corpus-approach" id="toc-openalex-seed-corpus-approach" class="nav-link" data-scroll-target="#openalex-seed-corpus-approach"><span class="header-section-number">2.2.2</span> OpenAlex Seed Corpus Approach</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3</span> Results</a>
   <ul class="collapse">
   <li><a href="#publication-coverage" id="toc-publication-coverage" class="nav-link" data-scroll-target="#publication-coverage"><span class="header-section-number">3.1</span> Publication Coverage</a>
   <ul class="collapse">
-  <li><a href="#method-1-full-text-search" id="toc-method-1-full-text-search" class="nav-link" data-scroll-target="#method-1-full-text-search"><span class="header-section-number">3.1.1</span> Method 1 (Full Text Search)</a></li>
-  <li><a href="#method-2-seed-corpus-approach" id="toc-method-2-seed-corpus-approach" class="nav-link" data-scroll-target="#method-2-seed-corpus-approach"><span class="header-section-number">3.1.2</span> Method 2 (Seed Corpus Approach)</a></li>
+  <li><a href="#arms-financial-and-crop-production-practices" id="toc-arms-financial-and-crop-production-practices" class="nav-link" data-scroll-target="#arms-financial-and-crop-production-practices">ARMS Financial and Crop Production Practices</a></li>
+  <li><a href="#the-census-of-agriculture" id="toc-the-census-of-agriculture" class="nav-link" data-scroll-target="#the-census-of-agriculture">The Census of Agriculture</a></li>
+  <li><a href="#food-access-research-atlas" id="toc-food-access-research-atlas" class="nav-link" data-scroll-target="#food-access-research-atlas">Food Access Research Atlas</a></li>
   </ul></li>
   <li><a href="#journal-coverage" id="toc-journal-coverage" class="nav-link" data-scroll-target="#journal-coverage"><span class="header-section-number">3.2</span> Journal Coverage</a>
   <ul class="collapse">
-  <li><a href="#method-1-full-text-search-1" id="toc-method-1-full-text-search-1" class="nav-link" data-scroll-target="#method-1-full-text-search-1"><span class="header-section-number">3.2.1</span> Method 1 (Full-Text Search)</a></li>
-  <li><a href="#method-2-seed-corpus-approach-1" id="toc-method-2-seed-corpus-approach-1" class="nav-link" data-scroll-target="#method-2-seed-corpus-approach-1"><span class="header-section-number">3.2.2</span> Method 2 (Seed Corpus Approach)</a></li>
+  <li><a href="#the-census-of-agriculture-1" id="toc-the-census-of-agriculture-1" class="nav-link" data-scroll-target="#the-census-of-agriculture-1">The Census of Agriculture</a></li>
   </ul></li>
   <li><a href="#publication-topics" id="toc-publication-topics" class="nav-link" data-scroll-target="#publication-topics"><span class="header-section-number">3.3</span> Publication Topics</a></li>
-  </ul></li>
-  <li><a href="#summary-of-findings" id="toc-summary-of-findings" class="nav-link" data-scroll-target="#summary-of-findings"><span class="header-section-number">4</span> Summary of Findings</a></li>
-  <li><a href="#institutional-comparison" id="toc-institutional-comparison" class="nav-link" data-scroll-target="#institutional-comparison"><span class="header-section-number">5</span> Institutional Comparison</a>
+  <li><a href="#institutional-comparison" id="toc-institutional-comparison" class="nav-link" data-scroll-target="#institutional-comparison"><span class="header-section-number">3.4</span> Institutional Comparison</a>
   <ul class="collapse">
-  <li><a href="#step-1-clean-ipeds-and-msi-data" id="toc-step-1-clean-ipeds-and-msi-data" class="nav-link" data-scroll-target="#step-1-clean-ipeds-and-msi-data">Step 1: Clean IPEDS and MSI data</a></li>
+  <li><a href="#standarizing-ipeds-and-msi-data" id="toc-standarizing-ipeds-and-msi-data" class="nav-link" data-scroll-target="#standarizing-ipeds-and-msi-data">Standarizing IPEDS and MSI data</a></li>
   </ul></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4</span> Conclusion</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">Tables</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/report.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="report.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -304,7 +310,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 3, 2025</p>
+      <p class="date">May 4, 2025</p>
     </div>
   </div>
   
@@ -316,37 +322,69 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Overview</h1>
 <p><a href="report.pdf" class="btn btn-success">Download PDF Version</a></p>
+<section id="report-summary" class="level1 unnumbered">
+<h1 class="unnumbered">Report Summary</h1>
 <section id="what-is-the-issue" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="what-is-the-issue">What Is the Issue?</h2>
-<p>Federal datasets play an important role in supporting research across a range of disciplines. Measuring how these datasets are used can help evaluate their impact and inform future data investments. Agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like <a href="https://democratizingdata.ai/tools/dashboards/">DemocratizingData.ai</a> and <a href="https://www.nass.usda.gov/Data_Visualization/5W/index.php">NASS’s 5’s Data Usage Dashboard</a>. These tools rely on identifying dataset mentions in published research. Beyond reporting usage volume, this type of analysis can also provide information about the research topics where federal datasets are applied. This helps characterize their disciplinary reach, including use in areas such as food security, nutrition, and climate, which are inherently multidisciplinary. It may also help identify alternative datasets and methods that researchers use to study similar questions across fields.</p>
-<p>The process of identifying dataset mentions in academic research output requires the use of <strong>citation databases</strong>. However, different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports. Tracking dataset usage requires developing methods that scan publication text for dataset mentions. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. Not to mention, dataset tracking requires reliable citation data from citation databases.</p>
+<p>Federal datasets play an important role in supporting research across a range of disciplines. Measuring how these datasets are used can help evaluate their impact and inform future data investments. Agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like <a href="https://democratizingdata.ai/tools/dashboards/">DemocratizingData.ai</a> and <a href="https://www.nass.usda.gov/Data_Visualization/5W/index.php">NASS’s 5’s Data Usage Dashboard</a>. These tools rely on identifying <em>dataset mentions</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in published research to develop usage statistics. Beyond reporting usage statistics, this type of analysis can also provide information about the research topics where federal datasets are applied. This helps characterize their disciplinary reach, including use in areas such as food security, nutrition, and climate, which are inherently multidisciplinary. It may also help identify alternative datasets and methods that researchers use to study similar questions across fields.</p>
+<p>The process of identifying dataset mentions in academic research output requires the use of <strong>citation databases</strong> because these databases provide structured access to large volumes of publication metadata, including titles, abstracts, authors, affiliations, and sometimes full-text content. They allow for scalable search and retrieval of relevant publications, making it feasible to systematically identify where specific datasets are referenced across a broad set of research outputs. However, different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports. Tracking dataset usage requires developing methods that scan publication text for dataset mentions. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. Not to mention, dataset tracking requires reliable citation data from citation databases.</p>
 <p>This report presents a methodology for identifying dataset mentions in research publications across various citation databases. In doing so, we compare publication, journal, and topic coverage across Scopus, OpenAlex, and Dimensions [forthcoming] as primary sources. The purpose is to establish a consistent set of statistics for comparing results and evaluating differences in dataset tracking across citation databases. This allows for insights into how publication scope and indexing strategies influence dataset usage statistics.</p>
-</section>
-<section id="what-did-the-study-find" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="what-did-the-study-find">What Did the Study Find?</h2>
-<p><strong>Main Finding:</strong> Accurate dataset tracking relies heavily on how publications are indexed across citation databases. For two citation databases – Scopus and OpenAlex – carefully constructed seed corpora were needed to track dataset mentions.</p>
-<p><strong>Specific Results from Database Comparison:</strong></p>
-<ul>
-<li>After deduplication, the number of distinct authors decreased by XX% in Scopus and XX% in OpenAlex, indicating significant duplicate entries in the raw data</li>
-<li>Institutional coverage was broader in XX, with XX% more institutions represented compared to XX</li>
-<li>Analysis revealed XX major themes in USDA dataset usage, with ?? and ?? being the most prominent</li>
-<li>Minority-Serving Institutions (MSIs) represented only XX% of institutional users, highlighting opportunities for broader engagement</li>
-</ul>
 </section>
 <section id="how-was-the-study-conducted" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="how-was-the-study-conducted">How Was the Study Conducted?</h2>
-<p>The <strong>three</strong> citation databases we are comparing are Elsevier’s Scopus, OurResearch’s OpenAlex, and Digital Science’s Dimensions.ai. <a href="./appendices/app_databases.html#sec-scopus"><strong>Scopus</strong></a> charges for access to its citation database. It focuses on peer-reviewed literature and provides metadata about authors, institutions, and citations for academic journals. <a href="./appendices/app_databases.html#sec-openalex"><strong>OpenAlex</strong></a>, an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. <a href="./appendices/app_databases.html#sec-dimensions"><strong>Dimensions</strong></a>, developed by Digital Science, offers a hybrid model that provides both free and subscription-based access to its citation database. Unlike Scopus, which primarily indexes peer-reviewed journal articles, and OpenAlex, which emphasizes open-access content, Dimensions aggregates a broad spectrum of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. It integrates citation data with funding information, making it a useful tool for assessing the impact of research beyond traditional academic publishing.</p>
+<p>The three citation databases we are comparing are Elsevier’s Scopus, OurResearch’s OpenAlex, and Digital Science’s Dimensions.ai. <a href="./appendices/app_databases.html#sec-scopus"><strong>Scopus</strong></a> charges for access to its citation database. It focuses on peer-reviewed literature and provides metadata about authors, institutions, and citations for academic journals. <a href="./appendices/app_databases.html#sec-openalex"><strong>OpenAlex</strong></a>, an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. In this study, we used two approaches to identify dataset mentions in OpenAlex: a full-text search, which scans publication metadata fields such as titles and abstracts for references to USDA datasets,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and a seed corpus search, which starts with a targeted set of publications based on journal, author, and topic criteria, then downloads the full text of each paper to identify mentions of USDA datasets.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> <a href="./appendices/app_databases.html#sec-dimensions"><strong>Dimensions</strong></a>, developed by Digital Science, offers a hybrid model that provides both free and subscription-based access to its citation database. Unlike Scopus, which primarily indexes peer-reviewed journal articles, and OpenAlex, which emphasizes open-access content, Dimensions aggregates a broad spectrum of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. It integrates citation data with funding information, making it a useful tool for assessing the impact of research beyond traditional academic publishing.</p>
+<p>To compare how these databases track dataset usage, we focus on six USDA datasets commonly used in agricultural, economic, and food policy research:</p>
+<ol type="1">
+<li>Agricultural Resource Management Survey (ARMS)</li>
+<li>Census of Agriculture (Ag Census)</li>
+<li>Rural-Urban Continuum Code (RUCC)</li>
+<li>Food Access Research Atlas (FARA)</li>
+<li>Food Acquisition and Purchase Survey (FoodAPS)</li>
+<li>Household Food Security Survey Module (HHFSS)</li>
+</ol>
+<p>These datasets were selected for their policy relevance, known usage frequency, and disciplinary breadth. We developed seed corpora for each dataset to identify relevant publications, then used those corpora to evaluate database coverage, topical scope, and metadata consistency.</p>
 </section>
-<section id="how-can-these-materials-be-used" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-can-these-materials-be-used">How Can These Materials Be Used?</h2>
+<section id="what-did-the-study-find" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="what-did-the-study-find">What Did the Study Find?</h2>
+<p>Accurate tracking of dataset mentions relies heavily on how publications are indexed across citation databases. For two citation databases – Scopus and OpenAlex – carefully constructed seed corpora were needed to track dataset mentions.</p>
+<p><strong>Preview of Results from Database Comparison:</strong></p>
+<ol type="1">
+<li>Across datasets, there is limited overlap between citation databases. For example:</li>
+</ol>
+<ul>
+<li><p>Less than 10% of DOIs typically appear in both Scopus and OpenAlex in any combination.</p></li>
+<li><p>51.8% of Food Access Research Atlas DOIs appear only in Scopus.</p></li>
+<li><p>78.5% of ARMS DOIs appear only in OpenAlex Full Text.</p></li>
+<li><p>60.9% of Household Food Security Survey Module DOIs appear only in Scopus.</p></li>
+</ul>
+<ol start="2" type="1">
+<li>Coverage by source (Scopus or OpenAlex) varies significantly by dataset:</li>
+</ol>
+<ul>
+<li><p>Scopus recovers the most publications that mention the Rural-Urban Continuum Code and FoodAPS.</p></li>
+<li><p>OpenAlex “Full Text” recovers the most publications that mention ARMS and CPS-FSS.</p></li>
+<li><p>OpenAlex “Seed Search” identifies the most publications that mention CPS-FSS and HHFSS.</p></li>
+</ul>
+<ol start="3" type="1">
+<li>Topical coverage reflects the varied policy and disciplinary relevance of each dataset:</li>
+</ol>
+<ul>
+<li><p>ARMS: Research citing this dataset emphasizes agricultural management, accounting, and environmental topics.</p></li>
+<li><p>The Census of Agriculture: Research mentioning this dataset has a wide breadth, spanning accounting and environmental applications.</p></li>
+<li><p>Food Access Research Atlas: Publications focus on food security, public health, and urban planning.</p></li>
+<li><p>The Food Acquisition and Purchase Survey: This dataset is mentioned in studies of consumer behavior, nutrition economics, and household spending.</p></li>
+<li><p>The Household Food Security Survey Module: Research mentioning this dataset frequently cites topics such as food insecurity, poverty, and social policy evaluation.</p></li>
+<li><p>The Rural-Urban Continuum Code: Research citing this dataset includes rural classification, regional planning, and spatial analysis.</p></li>
+</ul>
+<p><strong>Key Takeaway:</strong> These patterns suggest that relying on a single citation database may undercount dataset usage, and may also obscure variation in the types of research being conducted with each dataset.</p>
+</section>
+<section id="what-are-the-contributions-of-this-study" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="what-are-the-contributions-of-this-study">What are the Contributions of this Study?</h2>
 <p>Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. We developed procedures for:</p>
 <ul>
 <li>Identifying publication coverage across citation databases</li>
 <li>Cross-referencing publications between datasets</li>
-<li>Deduplicating publication records</li>
 <li>Analyzing research themes and institutional representation</li>
 </ul>
 <p>The methodology produced these reusable components:</p>
@@ -359,10 +397,111 @@ ul.task-list li input[type="checkbox"] {
 <p>The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.</p>
 </section>
 </section>
+<section id="project-background" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Project Background</h1>
+<p>Tracking how federal datasets are used in academic research has been a priority for agencies such as the U.S. Department of Agriculture (USDA). The DemocratizingData.ai platform was created to support this effort by reporting on dataset usage through citation analysis. The platform was developed to ingest publication metadata from Scopus, a proprietary citation database, to identify and count publications that reference USDA datasets. Scopus offers reliable metadata and a structured indexing system, bu it is costly to access and does not fully align with goals around open science and public transparency.</p>
+<p>As interest in open-access infrastructure has grown, OpenAlex, a free and open-source citation database developed by OurResearch, has emerged as a potential alternative. OpenAlex claims broad coverage of research outputs, including journal articles, preprints, conference proceedings, and reports. Replacing Scopus with OpenAlex could lower operational costs for federal agencies and align with broader efforts to promote open data ecosystems. However, transitioning platforms raises important questions about data reliability, coverage completeness, and potential trade-offs in representation.</p>
+<p>To support an informed decision about this transition, a systematic comparison was conducted across three citation databases—Scopus, OpenAlex, and Dimensions—to assess their relative strengths and weaknesses for tracking dataset mentions in agricultural and food systems research. Dimensions, a third database developed by Digital Science, offers a hybrid model combining free and subscription-based access and was included to provide a broader benchmark across commercial and open platforms.</p>
+<p>Initial comparisons between Scopus and OpenAlex revealed unexpected differences in coverage, with notable gaps in publication indexing and metadata quality. These patterns suggest that simply substituting one citation source for another could lead to incomplete or biased tracking of dataset usage, potentially affecting public reporting and research visibility. This project responds to those concerns by developing a structured, reproducible methodology for evaluating database coverage across multiple dimensions: publication metadata, journal inclusion, dataset topic area, institutional affiliation, and authorship.</p>
+<section id="project-objective" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="project-objective"><span class="header-section-number">1.1</span> Project Objective</h2>
+<p>The objective of this project is to assess whether open-access citation databases, such as OpenAlex, can serve as viable alternatives to proprietary platforms like Scopus for tracking the use of USDA datasets in academic research. To inform this decision, we compare the coverage, structure, and metadata quality of three citation databases—Scopus, OpenAlex, and Dimensions—focusing on their ability to support consistent and transparent dataset usage metrics across the research landscape.</p>
+</section>
+<section id="sec-aims" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-aims"><span class="header-section-number">1.2</span> Specific Aims</h2>
+<ol type="1">
+<li><p><strong>Evaluate differences in publication coverage across citation databases.</strong> Measure the extent to which Scopus, OpenAlex, and Dimensions capture research publications that reference USDA datasets. Identify how publication inclusion varies across platforms.</p></li>
+<li><p><strong>Compare journal indexing and scope.</strong> Compare the journals indexed by each database and examine how differences in journal coverage influence visibility of dataset-linked research.</p></li>
+<li><p><strong>Analyze topic coverage.</strong> Examine the research areas where USDA datasets are mentioned. Identify patterns in topic classification and assess how different citation databases support subject-level tracking of dataset usage.</p></li>
+<li><p><strong>Examine institutional representation.</strong> Evaluate how each platform captures and standardizes institutional affiliations. Pay particular attention to differences in coverage for Minority-Serving Institutions (MSIs), land-grant universities, and other public or underrepresented institutions.</p></li>
+<li><p><strong>Evaluate author representation.</strong> Compare how author names are recorded across platforms, including the completeness of author metadata and potential implications for attribution and visibility.</p></li>
+<li><p><strong>Develop a reproducible methodology for cross-platform comparison.</strong> Create a generalizable workflow for comparing citation databases, including steps for record linkage, deduplication, author and institution standardization, and identification of dataset mentions.</p></li>
+</ol>
+<p>These aims guide the development of a methodology for comparing citation databases, focusing on four areas:</p>
+<ol type="1">
+<li><strong>Publication tracking:</strong></li>
+</ol>
+<ul>
+<li>Comparing how each platform captures publications within indexed journals</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Journal coverage:</strong></li>
+</ol>
+<ul>
+<li>Determining which journals each platform indexes</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Institution recognition:</strong></li>
+</ol>
+<ul>
+<li>Determining how each platform records and standardizes institutional information</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Author identification:</strong></li>
+</ol>
+<ul>
+<li>Evaluating how each platform handles author names and affiliations</li>
+</ul>
+<p>The scope of work includes comparing publication coverage across Scopus, OpenAlex, and Dimensions that mention select USDA datasets. This inclusion provides a comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms. For more information on each citation database, refer to <a href="https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_crosswalk.html">this Appendix.</a> The methodology described in this report provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. It also examines variations in dataset usage across different types of research institutions. These methods can be applied to other citation databases as alternatives to current data sources.</p>
+</section>
+</section>
 <section id="data-collection" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Data Collection</h1>
-<p>The Census of Agriculture, produced by the USDA National Agricultural Statistical Services (NASS), provides information on U.S. farming operations, including production practices and land use. This dataset is used as a case study in this report to systematically compare the coverage, overlap, and differences in publications indexed by the two citation databases. The Census of Agriculture (also referred to as the “Ag Census”) is selected for its frequent use in agricultural and economic research, making it an ideal dataset for assessing differences in publication coverage between Scopus and OpenAlex.</p>
-<p>To compare coverage across the two citation databases, publications that mention the Ag Census must first be identified. The methods used to identify dataset mentions in Scopus and OpenAlex are described below.</p>
+<!-- The Census of Agriculture, produced by the USDA National Agricultural Statistical Services (NASS), provides information on U.S. farming operations, including production practices and land use. This dataset is used as a case study in this report to systematically compare the coverage, overlap, and differences in publications indexed by the two citation databases. The Census of Agriculture (also referred to as the "Ag Census") is selected for its frequent use in agricultural and economic research, making it an ideal dataset for assessing differences in publication coverage between Scopus and OpenAlex. -->
+<!-- To compare coverage across the two citation databases, publications that mention the Ag Census must first be identified. The methods used to identify dataset mentions in Scopus and OpenAlex are described below.  -->
+<p>The core objective of this study is to evaluate publication coverage across citation databases, focusing on how well Scopus, OpenAlex, and Dimensions index research relevant to agricultural and food systems. A targeted strategy was used to identify publications referencing USDA datasets, aligning with federal agency efforts to monitor and report on dataset usage. This approach enables a consistent entry point for comparison across platforms while also providing insight into the topics where federal datasets are applied and the use of complementary or alternative data sources. To support this analysis, a structured inventory of USDA data assets was developed, drawing from records produced by the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). From this broader inventory, six datasets were selected for detailed comparison based on known usage, policy relevance, and disciplinary breadth: the Census of Agriculture, Agricultural Resource Management Survey (ARMS), Food Acquisition and Purchase Survey (FoodAPS), Food Access Research Atlas (FARA), Rural-Urban Continuum Code (RUCC), and the Household Food Security Survey Module (HFSSM). The set of data assets, their producing agencies, and descriptions are presented in <a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a>.</p>
+<div id="tbl-usda-datasets" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-usda-datasets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: List of USDA Data Assets
+</figcaption>
+<div aria-describedby="tbl-usda-datasets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Dataset Name</th>
+<th style="text-align: left;">Produced By</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.nass.usda.gov/AgCensus/">Census of Agriculture</a></td>
+<td style="text-align: left;">NASS</td>
+<td style="text-align: left;">Conducted every five years, it provides comprehensive data on U.S. farms, ranches, and producers.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/arms-farm-financial-and-crop-production-practices/">Agricultural Resource Management Survey (ARMS)</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">A USDA survey on farm financials, production practices, and resource use.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/foodaps-national-household-food-acquisition-and-purchase-survey/">Food Acquisition and Purchase Survey (FoodAPS)</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">A nationally representative survey tracking U.S. household food purchases and acquisitions.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/">Food Access Research Atlas (FARA)</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">A USDA tool mapping food access based on store locations and socioeconomic data.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/rural-urban-continuum-codes/">Rural-Urban Continuum Code (RUCC)</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">A classification system distinguishing U.S. counties by rural and urban characteristics.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/survey-tools/">Household Food Security Survey Module</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">A USDA survey module used to assess food insecurity levels in households.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>To provide a comprehensive reference for dataset tracking, <a href="../../appendices/app_dyads.qmd">this Appendix</a> includes a detailed list of data assets and their corresponding aliases, collectively referred to as <em>dyads</em>. Each dyad represents a dataset-name and alias pair used in citation database searches, allowing for more precise identification of dataset mentions in research publications. These aliases include acronyms, alternate spellings, dataset variations, and associated URLs, ensuring broad coverage across different citation practices. The dyad list serves as the foundation for dataset extraction and disambiguation across Scopus, OpenAlex, and Dimensions.</p>
+<p>To identify relevant publications for each of the six datasets, three search strategies were used across the citation databases: a seed search in Scopus, a full-text metadata search in OpenAlex, and a seed corpus approach in OpenAlex based on targeted filtering of journals, authors, and topics followed by full-text analysis.</p>
 <section id="scopus-approach" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="scopus-approach"><span class="header-section-number">2.1</span> Scopus Approach</h2>
 <p>The first citation database used is Scopus, a publication catalog managed by Elsevier. Ideally, direct Scopus API access would have been used to query full publication text for mentions of the Census of Agriculture. However, the project did not have access to the Scopus API. Only Elsevier, serving as a project partner, was able to execute queries within the Scopus environment. Consequently, the dataset mention search relied on outputs provided by Elsevier rather than independent querying.</p>
@@ -375,30 +514,42 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="2.2" class="anchored" data-anchor-id="openalex-approach"><span class="header-section-number">2.2</span> OpenAlex Approach</h2>
 <p>The second citation database used is OpenAlex, an open catalog of scholarly publications. OpenAlex offers public access to metadata and, when available, full-text content for open-access publications through its <a href="https://docs.openalex.org/how-to-use-the-api/api-overview">API</a>. Unlike Scopus, which provides controlled access to licensed content, OpenAlex indexes only publications that are openly available or for which open metadata has been provided by publishers.</p>
 <p>For OpenAlex, two approaches were used to identify publications referencing the Census of Agriculture. The first approach relied on a full-text search across OpenAlex publication records. The second approach applied a seed corpus methodology, similar to the strategy used for Scopus, to address limitations observed in the initial full-text search.</p>
-<section id="full-text-search-approach" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="full-text-search-approach"><span class="header-section-number">2.2.1</span> Full-Text Search Approach</h3>
-<p>The methodology for collecting mentions of USDA datasets in OpenAlex relied on constructing search queries that combined dataset “aliases” and associated “flag terms” within the text of scholarly works. Dataset aliases represented alternative ways researchers refer to a dataset, such as variations on the Census of Agriculture’s official name. Flag terms represented the institutions or agencies responsible for maintaining the dataset. The combination of dataset alias and flag terms ensured that retrieved publications made an explicit connection to the correct data source. A mention was recorded only if at least one alias and one flag term appeared in the same publication, thereby increasing the likelihood of capturing genuine dataset references rather than incidental matches to individual words.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>To implement these searches efficiently, the OpenAlex API was accessed using the <code>pyalex</code> Python package.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<section id="openalex-full-text-search-approach" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="openalex-full-text-search-approach"><span class="header-section-number">2.2.1</span> OpenAlex Full-Text Search Approach</h3>
+<p>The methodology for collecting mentions of USDA datasets in OpenAlex relied on constructing search queries that combined dataset “aliases” and associated “flag terms” within the text of scholarly works. Dataset aliases represented alternative ways researchers refer to a dataset, such as variations on the Census of Agriculture’s official name. Flag terms represented the institutions or agencies responsible for maintaining the dataset. The combination of dataset alias and flag terms ensured that retrieved publications made an explicit connection to the correct data source. A mention was recorded only if at least one alias and one flag term appeared in the same publication, thereby increasing the likelihood of capturing genuine dataset references rather than incidental matches to individual words.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>To implement these searches efficiently, the OpenAlex API was accessed using the <code>pyalex</code> Python package.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
 <p>Search queries were constructed based on OpenAlex’s public API documentation, using both the <a href="https://docs.openalex.org/api-entities/works/filter-works">“Filter Works”</a> and <a href="https://docs.openalex.org/api-entities/works/search-works">“Search Works”</a> endpoints. Filtering parameters were applied to restrict results to English-language publications, published after 2017, classified as articles or reviews, and available through open-access sources.</p>
-<p>Boolean logic was used to define the text search structure. For the Census of Agriculture, the query grouped several dataset aliases, including “Census of Agriculture,” “USDA Census of Agriculture,” “Agricultural Census,” and “USDA Census.” These aliases were combined using an <code>OR</code> operator. Separately, flag terms including “USDA,” “U.S. Department of Agriculture,” “United States Department of Agriculture,” “NASS,” and “National Agricultural Statistics Service” were also grouped using an <code>OR</code> operator. The final query ensured that both an alias and a flag term appeared by connecting the two groups with an <code>AND</code> operator:</p>
+<p>Boolean logic was used to define the text search structure. For example, the query for the Census of Agriculture grouped several dataset aliases, including “Census of Agriculture,” “USDA Census of Agriculture,” “Agricultural Census,” and “USDA Census.” These aliases were combined using an <code>OR</code> operator. Separately, flag terms including “USDA,” “U.S. Department of Agriculture,” “United States Department of Agriculture,” “NASS,” and “National Agricultural Statistics Service” were also grouped using an <code>OR</code> operator. The final query ensured that both an alias and a flag term appeared by connecting the two groups with an <code>AND</code> operator:</p>
 <blockquote class="blockquote">
 <p>(“NASS Census of Agriculture” OR “Census of Agriculture” OR “USDA Census of Agriculture” OR “Agricultural Census” OR “USDA Census” OR “AG Census”) AND (USDA OR “US Department of Agriculture” OR “United States Department of Agriculture” OR NASS OR “National Agricultural Statistics Service”)</p>
 </blockquote>
 <p>This structure required that each publication mention both a recognized variant of the Census of Agriculture name and a reference to the institution responsible for producing it.</p>
-<p>Publications matching the query were returned in JSON format, based on the OpenAlex <a href="https://docs.openalex.org/api-entities/works/work-object">“Work object”</a> schema. Each record included metadata fields such as: - <code>display_name</code> (publication title) - <code>authorships</code> (authors and affiliations) - <code>host_venue.display_name</code> (journal) - <code>doi</code> (digital object identifier) - <code>concepts</code> (topics) - <code>cited_by_count</code> (citation counts) - <code>type</code> (publication type, e.g., “article”, “book-chapter”) - <code>publication_year</code> (year article was publish) - <code>language</code> (language, English only) - <code>is_oa</code> (open access)</p>
+<p>Publications matching the query were returned in JSON format, based on the OpenAlex <a href="https://docs.openalex.org/api-entities/works/work-object">“Work object”</a> schema. Each record included metadata fields such as:</p>
+<ul>
+<li><code>display_name</code> (publication title)</li>
+<li><code>authorships</code> (authors and affiliations)</li>
+<li><code>host_venue.display_name</code> (journal)</li>
+<li><code>doi</code> (digital object identifier)</li>
+<li><code>concepts</code> (topics)</li>
+<li><code>cited_by_count</code> (citation counts)</li>
+<li><code>type</code> (publication type, e.g., “article”, “book-chapter”)</li>
+<li><code>publication_year</code> (year article was publish)</li>
+<li><code>language</code> (language, English only)</li>
+<li><code>is_oa</code> (open access)</li>
+</ul>
 <p>Although a range of publication types were retrieved—including articles, book chapters, dissertations, preprints, and reviews—approximately 80–85 percent were classified as articles. To standardize the dataset for downstream analysis, results were filtered during the search process to retain only records identified as <code>type = article</code>. This step removed preprints and non-final versions of works, supporting a more standardized analysis of dataset mentions in peer-reviewed literature.</p>
 <p>The code used to implement this querying and filtering process is publicly available <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report">here</a>.</p>
-<section id="limitations-of-full-text-approach" class="level4" data-number="2.2.1.1">
-<h4 data-number="2.2.1.1" class="anchored" data-anchor-id="limitations-of-full-text-approach"><span class="header-section-number">2.2.1.1</span> Limitations of Full-Text Approach</h4>
+<section id="limitations-of-openalex-full-text-approach" class="level4" data-number="2.2.1.1">
+<h4 data-number="2.2.1.1" class="anchored" data-anchor-id="limitations-of-openalex-full-text-approach"><span class="header-section-number">2.2.1.1</span> Limitations of OpenAlex Full-Text Approach</h4>
 <p>Although the OpenAlex API provides full-text search capabilities, limitations in how publication content is ingested and indexed introduce challenges for identifying dataset mentions accurately.</p>
 <p>OpenAlex receives publication text through two primary ingestion methods: PDF extraction and <a href="https://docs.openalex.org/api-entities/works/get-n-grams">n-grams delivery</a>. In the PDF ingestion method, OpenAlex extracts text directly from the article PDF. However, the references section is not included in the searchable text. References are processed separately to create citation pointers between scholarly works, meaning that mentions of datasets appearing only in bibliographies are not discoverable through full-text search.</p>
 <p>In the n-grams ingestion method, OpenAlex does not receive the full article text. Instead, it receives a set of extracted word sequences (n-grams) from the publisher or author. These n-grams represent fragments of text—typically short sequences of one, two, or three words—which are not guaranteed to preserve full continuous phrases. As a result, complete dataset names may be broken apart or omitted, reducing the likelihood that search queries match the intended aliases.</p>
 <p>These ingestion and indexing limitations affect the completeness of results when relying solely on OpenAlex full-text search. Mentions of the Census of Agriculture and other USDA datasets that appear either exclusively in references or are fragmented within n-grams may be missed. To address these limitations, an alternative search strategy was developed based on constructing a filtered seed corpus of publications for local full-text analysis.</p>
 </section>
 </section>
-<section id="seed-corpus-approach" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="seed-corpus-approach"><span class="header-section-number">2.2.2</span> Seed Corpus Approach</h3>
-<p>To address limitations in OpenAlex’s full-text indexing methods, a seed corpus approach was applied. The objective was to create a filtered set of publications for local text search to better capture mentions of the Census of Agriculture and related USDA datasets.</p>
+<section id="openalex-seed-corpus-approach" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="openalex-seed-corpus-approach"><span class="header-section-number">2.2.2</span> OpenAlex Seed Corpus Approach</h3>
+<p>To address limitations in OpenAlex’s full-text indexing methods, a seed corpus approach was applied. The objective was to create a filtered set of publications for local text search to better capture dataset mentions.</p>
 <p>To construct the seed corpus, publications were filtered based on several criteria:</p>
 <ul>
 <li>Language: English</li>
@@ -406,26 +557,156 @@ ul.task-list li input[type="checkbox"] {
 <li>Publication Type: Articles and reviews</li>
 <li>Open Access Status: Open-access publications only</li>
 </ul>
-<p>Filtering was further refined by selecting publications associated with high-relevance topics (<a href="#tbl-top25topics" class="quarto-xref">Table&nbsp;1</a>) lists the top 25 topics), top publishing journals (<a href="#tbl-top25journals" class="quarto-xref">Table&nbsp;2</a>) lists the top 25 journals), and U.S.-affiliated authors (<a href="#tbl-top25authors" class="quarto-xref">Table&nbsp;3</a>) lists the top 25 authors).</p>
-<p>Each table presents two key columns to help interpret the selection process. The First Run Count refers to the number of publications linked to each entity (whether a topic, journal, or author) based on metadata from OpenAlex’s full-text search feature. This count reflects how often USDA datasets were mentioned within the full text of publications associated with a particular entity. The OpenAlex Total Count represents the total number of publications linked to that entity in the broader OpenAlex database, without applying any filters related to dataset mentions.</p>
+<p>Filtering was further refined by selecting publications associated with high-relevance topics, journals, and authors. As an example, the tables shown for the Census of Agriculture dataset—<a href="#tbl-top25topics" class="quarto-xref">Table&nbsp;3</a> (top 25 topics), <a href="#tbl-top25journals" class="quarto-xref">Table&nbsp;4</a> (top 25 journals), and <a href="#tbl-top25authors" class="quarto-xref">Table&nbsp;5</a> (top 25 U.S.-affiliated authors)—illustrate how this filtering process was applied. Each table presents two key columns to support interpretation. The <em>First Run Count</em> refers to the number of publications linked to each entity (whether a topic, journal, or author) based on metadata from OpenAlex’s full-text search feature. This count reflects how often USDA datasets were mentioned within the full text of publications associated with a particular entity. The <em>OpenAlex Total Count</em> represents the total number of publications linked to that entity in the broader OpenAlex database, without applying any filters related to dataset mentions.</p>
 <p>To create a more focused and manageable search corpus, we selected the top 25 entities in each category based on their First Run Count. This approach prioritizes journals, topics, and authors where USDA datasets are most frequently mentioned in the full text, which we interpret as being more representative of actual research activity involving these datasets. It also substantially reduces the workload by limiting the number of publications that need to be retrieved and processed.</p>
-<p>Choosing this approach has a few important implications. First, it likely increases the relevance of the resulting corpus by concentrating on publications where USDA data are actively cited or discussed, rather than simply associated with a broader research area. Second, it helps avoid the need to download and process an unmanageable number of PDFs—estimated at around 1.7 million if all identified entities were included. However, this method may introduce some selection bias by favoring entities with higher immediate visibility in the first search pass. Some relevant but less frequently mentioned entities might be excluded, meaning that while efficiency improves, full comprehensiveness is slightly sacrificed. Overall, this tradeoff supports a practical balance between depth and feasibility in building the final dataset.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="OpenAlex Seed Search Criteria (click to expand)">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<p>Choosing this approach has a few important implications. First, it likely increases the relevance of the resulting corpus by concentrating on publications where USDA data are actively cited or discussed, rather than simply associated with a broader research area. Second, it helps avoid the need to download and process an unmanageable number of PDFs—estimated at around 1.7 million if all identified entities were included. However, this method may introduce some selection bias by favoring entities with higher immediate visibility in the first search pass. Some relevant but less frequently mentioned entities might be excluded, meaning that while efficiency improves, full comprehensiveness is slightly sacrificed. Overall, this trade-off supports a practical balance between depth and feasibility in building the final dataset of publication metadata.</p>
+<p>For the Census of Agriculture, the resulting seed corpus included approximately 1,774,245 unique publications. An initial download of full texts achieved a success rate of roughly 35%, corresponding to an estimated 625,000 accessible full-text documents. Local full-text searches were conducted on this subset to improve detection of dataset mentions beyond what was possible through OpenAlex’s built-in search capabilities.</p>
+<p>Although the seed corpus approach allows for a more targeted retrieval, limitations remain. Full-text download success was constrained by incomplete or inaccessible open-access links, and processing the entire corpus was computationally intensive. Future efforts may require distributed processing or refined selection criteria to further improve efficiency.</p>
+<p>Results from both methods are compared to assess differences in dataset mention detection across approaches.</p>
+</section>
+</section>
+</section>
+<section id="results" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Results</h1>
+<p>To produce a consistent count of unique publications referencing each USDA dataset, we consolidated records from three sources-Scopus, OpenAlex Full Text, and OpenAlex Seed Corpus-each of which identified publications through a different mechanism, described above.</p>
+<p>For each source, publication-level metadata, including DOIs, journal titles, ISSNs (when available), and source-specific topic classifications was extracted. DOIs were standardized (e.g., removing URL prefixes, <code>https://doi.org/</code>) for consistent matching across sources. Duplicate DOIs within each source were removed.</p>
+<p>Processed publication metadata was then merged across sources using the cleaned DOI-ISSN pairs as the common identifier. Each publication was tagged with binary indicators showing whether it appeared in Scopus, OpenAlex Full Text, OpenAlex Seed, or some combination thereof. When metadata overlapped (such as journal titles or publication years), Scopus information was prioritized, when available, given its relatively higher metadata quality, followed by OpenAlex Full Text and then OpenAlex Seed.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>This process ensured that each publication was counted once, even if it appeared in multiple sources. The final dataset includes a deduplicated set of DOIs, along with harmonized metadata and source indicators. The number of unique publications referencing each dataset is shown in <a href="#tbl-pub-counts" class="quarto-xref">Table&nbsp;2</a>.</p>
+<div id="tbl-pub-counts" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pub-counts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Unique Publications with Metadata across Sources
+</figcaption>
+<div aria-describedby="tbl-pub-counts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Dataset Name</th>
+<th style="text-align: left;">Number of Unique Publications</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ARMS</td>
+<td style="text-align: left;">1,555</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Census of Agriculture</td>
+<td style="text-align: left;">5,047</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Food Access Research Atlas</td>
+<td style="text-align: left;">560</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Food Acquisition and Purchase Survey</td>
+<td style="text-align: left;">798</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Household Food Security Survey Module</td>
+<td style="text-align: left;">1,313</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rural-Urban Continuum Code</td>
+<td style="text-align: left;">2,541</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="callout-title-container flex-fill">
-OpenAlex Seed Search Criteria (click to expand)
+</figure>
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<p>All code used to clean, deduplicate, and merge records, including the Python scripts used to flatten OpenAlex Seed Corpus JSON files and the R scripts for data harmonization, is provided in <a href="https://laurenchenarides.github.io/compare_scopus_openalex_report/appendix.html">this Appendix. <strong>UPDATE LINK</strong></a></p>
+<section id="publication-coverage" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="publication-coverage"><span class="header-section-number">3.1</span> Publication Coverage</h2>
+<p>An objective of this report is to understand differences in publication coverage across Scopus and OpenAlex. Specifically, this section asks: (1) how many and which publications referencing USDA datasets appear in each citation database, and (2) how many and which journals publishing these articles overlap between the two sources. In addition, the analysis evaluates whether the different search strategies used in OpenAlex—the full-text metadata search versus the seed-corpus approach—yield substantially different sets of results.</p>
+<p>For each of the six USDA datasets featured in this study, a treemap visualization is presented to summarize publication coverage across Scopus and OpenAlex. Each treemap groups publications into mutually exclusive categories based on their presence in one or more of the data sources: Scopus, OpenAlex Full Text, and OpenAlex Seed Corpus. The size of each box is proportional to the number of distinct DOIs in that group, providing a visual summary of the relative coverage across sources. For example, a large “Scopus only” segment indicates a high number of publications indexed exclusively in Scopus, while overlapping segments (e.g., “Scopus ∩ OA Seed”) reflect shared coverage between platforms.</p>
+<p>This section presents two sets of results per dataset: (1) publications identified using a seed-corpus search in Scopus, and (2) publications identified using both full-text and seed-corpus searches in OpenAlex. These comparisons help quantify differences in database coverage and identify patterns of inclusion and exclusion across citation sources.</p>
+<section id="arms-financial-and-crop-production-practices" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="arms-financial-and-crop-production-practices">ARMS Financial and Crop Production Practices</h3>
+<figure style="text-align: center;" class="figure">
+<a href="graphics/ARMS_treemap.png" target="_blank"> <img src="graphics/ARMS_treemap.png" style="width:80%; height:auto;" alt="ARMS Treemap" class="figure-img"> </a>
+</figure>
+</section>
+<section id="the-census-of-agriculture" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="the-census-of-agriculture">The Census of Agriculture</h3>
+<figure style="text-align: center;" class="figure">
+<a href="graphics/Census_of_Agriculture_treemap.png" target="_blank"> <img src="graphics/Census_of_Agriculture_treemap.png" style="width:80%; height:auto;" alt="Ag Census Treemap" class="figure-img"> </a>
+</figure>
+<p>The first comparison looks at publication and journal coverage between the Scopus (using the seed-corpus method) and OpenAlex (using the full-text search). The results describe how many publications mention the Ag Census in each database and evaluates the degree of overlap between them.</p>
+<p>Table 1 displays the coverage of publications that referenced the Ag Census data. The table distinguishes between results that appear in both databases (column 1), only in OpenAlex (column 2), and only in Scopus (column 3). Column 4 is a total of all distinct publications or journals across both databases. The first row reports the number of individual publications found in each category. The unit of analysis is at the publication level. The second row reports the number of journals that include the Ag Census publications, again broken out by their appearance in one or both datasets. The unit of analysis is at the journal level.</p>
+<p><strong>ADD TABLE 1 HERE</strong></p>
+<p>The main takeaway from Table 1 is that there is little overlap in publications and journals between the two databases when using OpenAlex’s full-text search. According to this table, there are 5,473 unique publications referencing the Ag Census across both citation databases, appearing in 2,686 unique journals, identified by their ISSNs. The number of overlapping publications is 505 (9.23%), with the majority of publications referencing Ag Census are picked up only by Scopus (4,207 or 76.87%), and a smaller share is identified only in OpenAlex (761 or 13.9%).</p>
+<p>Journal coverage shows a similar pattern. Of the journals that include at least one Ag Census publication, 247 (9.2%) are shared between the two databases, 2,362 (87.9%) are found only in Scopus, 77 (2.9%) only in OpenAlex.</p>
+<p>These results show that the coverage of publications mentioning the Ag Census and the journals in which they are found is much more extensive in Scopus, and suggest that OpenAlex’s full-text search along may miss many dataset mentions.</p>
+<p>Based on the pattern observed from the full-text search in OpenAlex, the differences likely arise, at least in part, from limitations in how OpenAlex processes and indexes text. Specifically, we found that OpenAlex’s full-text search does not index references as searchable text—they are stored as pointers, not included in the searchable body of the publication. In addition, n-gram-level metadata that might capture mentions of the Ag Census outside the main text was not accessible for the full set of publications. To address these limitations and create a more consistent comparison with Scopus, we applied a seed-corpus approach to OpenAlex, targeting a curated set of authors, journals, and topics associated with Ag Census use.</p>
+<p>While this method can overcome the limitations of the OpenAlex full-text search, it is computationally more intensive. To limit the cost of the search corpus method, a list of the top authors, topics, and journals is provided, as described above. This list serves as a set of filters through which the search corpus is applied. Mentions of the Ag Census are then searched for within publications meeting these criteria.</p>
+<p><strong>ADD TABLE 2 HERE</strong></p>
+<p>Next, we compare the degree of overlap across the different search methods, focusing on OpenAlex publications that also overlap with Scopus records. Specifically, we examine whether the OpenAlex full-text search and the OpenAlex seed-corpus approach identified the same publications and journals referencing the Census of Agriculture, or whether each method uncovered distinct sets of works.</p>
+<p>Table 3 summarizes the overlap between publications identified through the two OpenAlex search methods, restricted to publications that also appear in Scopus. As reported earlier, 505 publications were identified in both Scopus and OpenAlex using the OpenAlex full-text search (Table 1), while 363 publications were identified using the OpenAlex seed-corpus approach (Table 2). Table 3 specifically shows how many of the 505 full-text search publications were also found in the seed-corpus set. The comparison reveals that 105 publications are shared between the two methods, representing 20.8% of the full-text set and 28.9% of the seed-corpus set. These results suggest that the choice of search strategy meaningfully influences which Scopus-linked publications are recovered in OpenAlex.</p>
+<p><strong>ADD TABLE 3 HERE</strong></p>
+<p>Table 4 summarizes the overlap between journals identified through the two OpenAlex search methods, restricted to journals linked to publications that also appear in Scopus. As noted previously, the OpenAlex full-text search and seed-corpus approach each identified a set of journals containing publications referencing the Census of Agriculture. Table 4 specifically shows how many journals were common to both sets. A total of 137 journals were shared between the two methods, representing 55.5% of the full-text set and 49.6% of the seed-corpus set. Among these shared journals, 19 were part of the original list of top journals used to construct the seed corpus.</p>
+<p><strong>ADD TABLE 4 HERE</strong></p>
+</section>
+<section id="food-access-research-atlas" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="food-access-research-atlas">Food Access Research Atlas</h3>
+<figure style="text-align: center;" class="figure">
+<a href="graphics/Food_Access_Research_Atlas_treemap.png" target="_blank"> <img src="graphics/Food_Access_Research_Atlas_treemap.png" style="width:80%; height:auto;" alt="ARMS Treemap" class="figure-img"> </a>
+</figure>
+</section>
+</section>
+<section id="journal-coverage" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="journal-coverage"><span class="header-section-number">3.2</span> Journal Coverage</h2>
+<p>Now that we have compared journal coverage across the two citation databases, we next examine the publications within journals that are indexed in both Scopus and OpenAlex. We report these results for the full-text search approach and the seed-corpus approach in OpenAlex.</p>
+<section id="the-census-of-agriculture-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="the-census-of-agriculture-1">The Census of Agriculture</h3>
+<p>Table 5 provides journal-level detail on the overlap between publications indexed in Scopus and OpenAlex, based on the full-text search results in OpenAlex. Each row corresponds to a journal included in the analysis. The set of journals included here matches the group of overlapping journals reported in Table 1—that is, journals where publications were found in both Scopus and OpenAlex.</p>
+<p>The table is divided into two sections: overlap statistics and publication counts. The overlap statistics report three measures. The percentage labeled “% Both” indicates the share of a journal’s publications that were found in both Scopus and OpenAlex. “% Scopus” shows the share of publications that appeared only in Scopus, while “% OpenAlex” shows the share of publications that appeared only in OpenAlex. Together, these columns summarize how consistently each journal’s publications are represented across the two databases.</p>
+<p>The publication counts section reports the number of overlapping and non-overlapping publications for each journal. “Pubs Both” shows the number of publications found in both Scopus and OpenAlex, while “Pubs Scopus” and “Pubs OpenAlex” show the number of publications found exclusively in one database. The final column, “Total Pubs,” provides the total number of distinct publications associated with each journal across both databases.</p>
+<p>Finally, the table also includes each journal’s 2022 Scopus CiteScore to provide additional context on journal prominence.</p>
+<p>Reading across a row, the table allows for direct comparison of database coverage at the journal level, highlighting journals where coverage between Scopus and OpenAlex aligns closely and those where substantial gaps exist.</p>
+<p><strong>ADD TABLE 5 HERE</strong></p>
+<p>We next examine the results obtained using the OpenAlex seed corpus approach.</p>
+<p>Table 6 summarizes publication-level overlap statistics for journals identified using the seed corpus approach. As with Table 5, the table is restricted to journals associated with publications that overlap between Scopus and OpenAlex. The overlap statistics show the percentage of each journal’s publications found in both databases (% Both), found only in Scopus (% Scopus), or found only in OpenAlex (% OpenAlex). Publication counts are also reported separately for shared and database-specific publications, along with the total number of publications associated with each journal. Each journal’s 2022 Scopus CiteScore is included to provide additional context on journal prominence.</p>
+<p><strong>ADD TABLE 6 HERE</strong></p>
+<!-- Journal matches are obtained for this table using the "ISSN_L" value in the OpenAlex search corpus. Next, we turn to evaluating the overlap based on either of the ISSN values made available from the search corpus. -->
+</section>
+</section>
+<section id="publication-topics" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="publication-topics"><span class="header-section-number">3.3</span> Publication Topics</h2>
+</section>
+<section id="institutional-comparison" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="institutional-comparison"><span class="header-section-number">3.4</span> Institutional Comparison</h2>
+<!-- <div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;"> -->
+<!-- <strong> The results in this section compare institutional coverage across three major bibliographic databases: Scopus, OpenAlex, and Dimensions. </strong> </div>  -->
+<p>In addition to examining dataset mention coverage, the report also evaluates differences in institutional representation across Scopus and OpenAlex. Publication affiliation data are linked to institutional records using IPEDS identifiers to create a harmonized dataset across sources. This allows for assessment of how each citation database represents institutions based on characteristics such as control (public or private), degree level, MSI designation, and geographic location. Special attention is given to coverage of underrepresented institutions and Minority-Serving Institutions (MSIs). This analysis informs broader conversations about equity, transparency, and accountability in research data infrastructure.</p>
+<p>Each of the featured citation databases represent some portion of the global research landscape, yet their inclusion criteria and institutional coverage vary in ways that may inform disparities. Our goal is to assess which institutions are represented in each source, with particular attention to coverage of underrepresented and Minority-Serving Institutions (MSIs). By building a harmonized dataset that links IPEDS identifiers to institutional records across Scopus, OpenAlex, and Dimensions, we aim to evaluate how these citation databases include or exclude institutions across institutional characteristics such as control, level, MSI status, and geography. This analysis informs a broader conversation about equity, transparency, and accountability in research data systems.</p>
+<section id="standarizing-ipeds-and-msi-data" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="standarizing-ipeds-and-msi-data">Standarizing IPEDS and MSI data</h3>
+<p>In this section, I document the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023, as part of the broader effort to compare institutional coverage across Scopus, OpenAlex, and Dimensions. To support that analysis, we needed a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time. I compiled and cleaned data from multiple sources—the MSI Data Project (Nguyen et al., 2023) for 2017–2021 and Rutgers CMSI lists for 2022–2023—and merged these with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. I addressed inconsistencies in eligibility labels, resolved duplicates, and created summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are included for transparency. All additional details are available in the IPEDS<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> and MSI<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> Appendices.</p>
+<figure style="text-align: center;" class="figure">
+<a href="data/ipeds_msi/msi_eligibility_plot.png" target="_blank"> <img src="data/ipeds_msi/msi_eligibility_plot.png" style="width:80%; height:auto;" alt="MSI Eligibility Plot" class="figure-img"> </a>
+<figcaption style="font-size: 0.9em; margin-top: 0.5em;">
+<em>Source code used to generate graphic:</em> <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/blob/main/data/ipeds_msi/build_ipeds_msi.R" target="_blank">Available here</a>.
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<section id="conclusion" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Conclusion</h1>
+<p>This report compares the coverage of publications and journals referencing the Census of Agriculture across Scopus and OpenAlex, using two approaches for identifying relevant OpenAlex publications: a full-text search and a seed corpus approach.</p>
+<p>Using the full-text search in OpenAlex, we found relatively limited overlap with Scopus. Only 9.2% of publications and 9.2% of journals referencing the Census of Agriculture appeared in both databases, with Scopus identifying a substantially larger share of relevant works. These results suggest that relying solely on OpenAlex’s full-text search may miss a significant number of dataset mentions.</p>
+<p>Applying the seed corpus approach to OpenAlex improved overlap with Scopus and provided a more structured way to capture publications associated with known journals, authors, and topics. However, the percentage of overlapping publications referencing the Census of Agriculture is lower at 6.42% even though there is a slightly higher percentage of shared journals at 10.73%.</p>
+<p>Comparing the overlap between the two OpenAlex methods reveals differences in underlying samples. Only 20.8% of full-text search publications were also found in the seed corpus set, and 28.9% of seed corpus publications matched those found in the full-text search. Journal-level overlap was somewhat higher, with 137 journals shared between the two methods (representing approximately 50–55% overlap across the two pools).</p>
+<p>It is important to note that the full-text search and seed corpus approaches represent two distinct sampling methods within OpenAlex. The full-text search attempts to identify dataset mentions directly from the body of text available for a subset of publications, while the seed corpus approach relies on pre-selected journals, topics, and authors more likely to reference the Census of Agriculture. As a result, the pools of publications identified by each method are not strictly comparable: they are drawn from different underlying subsets of OpenAlex’s catalog. This context is important for interpreting differences in coverage and citation intensity across the two approaches.</p>
+</section>
+<section id="tables" class="level1 unnumbered">
+<h1 class="unnumbered">Tables</h1>
+<!-- ::: {.callout-note icon=false collapse=true title="OpenAlex Seed Search Criteria (click to expand)"} ::: -->
 <div id="tbl-top25topics" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-top25topics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Top 25 Topics by First Run Count
+Table&nbsp;3: Top 25 Topics by First Run Count
 </figcaption>
 <div aria-describedby="tbl-top25topics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -602,7 +883,7 @@ Table&nbsp;1: Top 25 Topics by First Run Count
 <div id="tbl-top25journals" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-top25journals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Top 25 Journals by First Run Count
+Table&nbsp;4: Top 25 Journals by First Run Count
 </figcaption>
 <div aria-describedby="tbl-top25journals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -779,7 +1060,7 @@ Table&nbsp;2: Top 25 Journals by First Run Count
 <div id="tbl-top25authors" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-top25authors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3: Top 25 Authors by First Run Count Table
+Table&nbsp;5: Top 25 Authors by First Run Count Table
 </figcaption>
 <div aria-describedby="tbl-top25authors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -953,107 +1234,22 @@ Table&nbsp;3: Top 25 Authors by First Run Count Table
 </div>
 </figure>
 </div>
-</div>
-</div>
-</div>
-<p>The resulting seed corpus contained approximately 1,774,245 (<strong>CHECK WITH RAFAEL</strong>) unique publications. An initial download of full-texts achieved a success rate of approximately 35%, corresponding to an estimated 625,000 accessible full texts. Local full-text searches were planned using this subset to improve detection of dataset mentions beyond what was possible through OpenAlex’s built-in search functions.</p>
-<p>While the seed corpus approach allowed more targeted retrieval, limitations remain. Full-text download success was constrained by incomplete or inaccessible open-access links, and processing the entire corpus was computationally intensive. Future efforts may require distributed processing or refined selection criteria to further improve efficiency.</p>
-<p>Results from both methods are compared to assess differences in dataset mention detection across approaches.</p>
-</section>
-</section>
-</section>
-<section id="results" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Results</h1>
-<section id="publication-coverage" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="publication-coverage"><span class="header-section-number">3.1</span> Publication Coverage</h2>
-<p>An objective of this report is to understand differences in publication coverage across Scopus and OpenAlex. Specifically, we ask: (1) how many and which publications referencing the Ag Census appear in each citation database, and (2) how many and which journals publishing these articles overlap between the two sources. In addition, this analysis aims to determine whether the different search approaches used to find dataset mentions in OpenAlex publications—the full-text search versus a seed-corpus approach—produce substantially different coverage.</p>
-<p>This section presents two sets of results. In both cases, a seed-corpus approach is used to identify Ag Census publications in Scopus. We then compare these results to (i) publications identified through a full-text search in OpenAlex and (ii) publications identified using a seed-corpus approach in OpenAlex.</p>
-<section id="method-1-full-text-search" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="method-1-full-text-search"><span class="header-section-number">3.1.1</span> Method 1 (Full Text Search)</h3>
-<p>The first comparison looks at publication and journal coverage between the Scopus (using the seed-corpus method) and OpenAlex (using the full-text search). The results describe how many publications mention the Ag Census in each database and evaluates the degree of overlap between them.</p>
-<p>Table 1 displays the coverage of publications that referenced the Ag Census data. The table distinguishes between results that appear in both databases (column 1), only in OpenAlex (column 2), and only in Scopus (column 3). Column 4 is a total of all distinct publications or journals across both databases. The first row reports the number of individual publications found in each category. The unit of analysis is at the publication level. The second row reports the number of journals that include the Ag Census publications, again broken out by their appearance in one or both datasets. The unit of analysis is at the journal level.</p>
-<p><strong>ADD TABLE 1 HERE</strong></p>
-<p>The main takeaway from Table 1 is that there is little overlap in publications and journals between the two databases when using OpenAlex’s full-text search. According to this table, there are 5,473 unique publications referencing the Ag Census across both citation databases, appearing in 2,686 unique journals, identified by their ISSNs. The number of overlapping publications is 505 (9.23%), with the majority of publications referencing Ag Census are picked up only by Scopus (4,207 or 76.87%), and a smaller share is identified only in OpenAlex (761 or 13.9%).</p>
-<p>Journal coverage shows a similar pattern. Of the journals that include at least one Ag Census publication, 247 (9.2%) are shared between the two databases, 2,362 (87.9%) are found only in Scopus, 77 (2.9%) only in OpenAlex.</p>
-<p>These results show that the coverage of publications mentioning the Ag Census and the journals in which they are found is much more extensive in Scopus, and suggest that OpenAlex’s full-text search along may miss many dataset mentions.</p>
-</section>
-<section id="method-2-seed-corpus-approach" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="method-2-seed-corpus-approach"><span class="header-section-number">3.1.2</span> Method 2 (Seed Corpus Approach)</h3>
-<p>Based on the pattern observed from the full-text search in OpenAlex, the differences likely arise, at least in part, from limitations in how OpenAlex processes and indexes text. Specifically, we found that OpenAlex’s full-text search does not index references as searchable text—they are stored as pointers, not included in the searchable body of the publication. In addition, n-gram-level metadata that might capture mentions of the Ag Census outside the main text was not accessible for the full set of publications. To address these limitations and create a more consistent comparison with Scopus, we applied a seed-corpus approach to OpenAlex, targeting a curated set of authors, journals, and topics associated with Ag Census use.</p>
-<p>While this method can overcome the limitations of the OpenAlex full-text search, it is computationally more intensive. To limit the cost of the search corpus method, a list of the top authors, topics, and journals is provided, as described above. This list serves as a set of filters through which the search corpus is applied. Mentions of the Ag Census are then searched for within publications meeting these criteria.</p>
-<p><strong>ADD TABLE 2 HERE</strong></p>
-<p>Next, we compare the degree of overlap across the different search methods, focusing on OpenAlex publications that also overlap with Scopus records. Specifically, we examine whether the OpenAlex full-text search and the OpenAlex seed-corpus approach identified the same publications and journals referencing the Census of Agriculture, or whether each method uncovered distinct sets of works.</p>
-<p>Table 3 summarizes the overlap between publications identified through the two OpenAlex search methods, restricted to publications that also appear in Scopus. As reported earlier, 505 publications were identified in both Scopus and OpenAlex using the OpenAlex full-text search (Table 1), while 363 publications were identified using the OpenAlex seed-corpus approach (Table 2). Table 3 specifically shows how many of the 505 full-text search publications were also found in the seed-corpus set. The comparison reveals that 105 publications are shared between the two methods, representing 20.8% of the full-text set and 28.9% of the seed-corpus set. These results suggest that the choice of search strategy meaningfully influences which Scopus-linked publications are recovered in OpenAlex.</p>
-<p><strong>ADD TABLE 3 HERE</strong></p>
-<p>Table 4 summarizes the overlap between journals identified through the two OpenAlex search methods, restricted to journals linked to publications that also appear in Scopus. As noted previously, the OpenAlex full-text search and seed-corpus approach each identified a set of journals containing publications referencing the Census of Agriculture. Table 4 specifically shows how many journals were common to both sets. A total of 137 journals were shared between the two methods, representing 55.5% of the full-text set and 49.6% of the seed-corpus set. Among these shared journals, 19 were part of the original list of top journals used to construct the seed corpus.</p>
-<p><strong>ADD TABLE 4 HERE</strong></p>
-</section>
-</section>
-<section id="journal-coverage" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="journal-coverage"><span class="header-section-number">3.2</span> Journal Coverage</h2>
-<p>Now that we have compared journal coverage across the two citation databases, we next examine the publications within journals that are indexed in both Scopus and OpenAlex. We report these results for the full-text search approach and the seed-corpus approach in OpenAlex.</p>
-<section id="method-1-full-text-search-1" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="method-1-full-text-search-1"><span class="header-section-number">3.2.1</span> Method 1 (Full-Text Search)</h3>
-<p>Table 5 provides journal-level detail on the overlap between publications indexed in Scopus and OpenAlex, based on the full-text search results in OpenAlex. Each row corresponds to a journal included in the analysis. The set of journals included here matches the group of overlapping journals reported in Table 1—that is, journals where publications were found in both Scopus and OpenAlex.</p>
-<p>The table is divided into two sections: overlap statistics and publication counts. The overlap statistics report three measures. The percentage labeled “% Both” indicates the share of a journal’s publications that were found in both Scopus and OpenAlex. “% Scopus” shows the share of publications that appeared only in Scopus, while “% OpenAlex” shows the share of publications that appeared only in OpenAlex. Together, these columns summarize how consistently each journal’s publications are represented across the two databases.</p>
-<p>The publication counts section reports the number of overlapping and non-overlapping publications for each journal. “Pubs Both” shows the number of publications found in both Scopus and OpenAlex, while “Pubs Scopus” and “Pubs OpenAlex” show the number of publications found exclusively in one database. The final column, “Total Pubs,” provides the total number of distinct publications associated with each journal across both databases.</p>
-<p>Finally, the table also includes each journal’s 2022 Scopus CiteScore to provide additional context on journal prominence.</p>
-<p>Reading across a row, the table allows for direct comparison of database coverage at the journal level, highlighting journals where coverage between Scopus and OpenAlex aligns closely and those where substantial gaps exist.</p>
-<p><strong>ADD TABLE 5 HERE</strong></p>
-<p>To further characterize database coverage, we calculated weighted average CiteScores for the journals analyzed in Table 5. The weighted averages account for both the number of publications associated with each journal and the journal’s 2022 Scopus CiteScore. For Scopus, the weighted average CiteScore, calculated by weighting each journal’s CiteScore by its number of publications found in Scopus (including shared publications), is approximately 12.99. For OpenAlex, the weighted average CiteScore, using the number of publications found in OpenAlex (including shared publications), is slightly higher at 13.23.</p>
-<p>These results suggest that, among the overlapping journals, OpenAlex tends to recover a slightly more citation-intensive set of publications compared to Scopus. However, the difference in weighted averages is modest, indicating broadly similar coverage of higher-impact journals across the two databases. To formally test the difference in weighted average CiteScores between Scopus and OpenAlex, we calculated a t-statistic for the difference in means. The resulting t-statistic is approximately -0.15, indicating that the difference between the two weighted averages is not statistically significant. This suggests that, within the set of overlapping journals analyzed, Scopus and OpenAlex recover a similarly citation-intensive set of publications.</p>
-</section>
-<section id="method-2-seed-corpus-approach-1" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="method-2-seed-corpus-approach-1"><span class="header-section-number">3.2.2</span> Method 2 (Seed Corpus Approach)</h3>
-<p>We next examine the results obtained using the OpenAlex seed corpus approach.</p>
-<p>Table 6 summarizes publication-level overlap statistics for journals identified using the seed corpus approach. As with Table 5, the table is restricted to journals associated with publications that overlap between Scopus and OpenAlex. The overlap statistics show the percentage of each journal’s publications found in both databases (% Both), found only in Scopus (% Scopus), or found only in OpenAlex (% OpenAlex). Publication counts are also reported separately for shared and database-specific publications, along with the total number of publications associated with each journal. Each journal’s 2022 Scopus CiteScore is included to provide additional context on journal prominence.</p>
-<p><strong>ADD TABLE 6 HERE</strong></p>
-<p>To further compare database coverage under the seed corpus approach, we calculated weighted average CiteScores for Scopus and OpenAlex. The weighted averages account for both the number of publications associated with each journal and the journal’s 2022 Scopus CiteScore. For Scopus, the weighted average CiteScore is approximately 11.90, while for OpenAlex it is higher at approximately 14.10.</p>
-<p>A t-statistic for the difference in means was also calculated to assess whether the difference is statistically meaningful. The resulting t-statistic is approximately -2.18, indicating that the difference is statistically significant. These results suggest that, when using the seed corpus approach, OpenAlex recovers a more citation-intensive set of publications compared to Scopus.</p>
-<!-- Journal matches are obtained for this table using the "ISSN_L" value in the OpenAlex search corpus. Next, we turn to evaluating the overlap based on either of the ISSN values made available from the search corpus. -->
-</section>
-</section>
-<section id="publication-topics" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="publication-topics"><span class="header-section-number">3.3</span> Publication Topics</h2>
-</section>
-</section>
-<section id="summary-of-findings" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Summary of Findings</h1>
-<p>This report compares the coverage of publications and journals referencing the Census of Agriculture across Scopus and OpenAlex, using two approaches for identifying relevant OpenAlex publications: a full-text search and a seed corpus approach.</p>
-<p>Using the full-text search in OpenAlex, we found relatively limited overlap with Scopus. Only 9.2% of publications and 9.2% of journals referencing the Census of Agriculture appeared in both databases, with Scopus identifying a substantially larger share of relevant works. These results suggest that relying solely on OpenAlex’s full-text search may miss a significant number of dataset mentions.</p>
-<p>Applying the seed corpus approach to OpenAlex improved overlap with Scopus and provided a more structured way to capture publications associated with known journals, authors, and topics. However, the percentage of overlapping publications referencing the Census of Agriculture is lower at 6.42% even though there is a slightly higher percentage of shared journals at 10.73%.</p>
-<p>Comparing the overlap between the two OpenAlex methods reveals differences in underlying samples. Only 20.8% of full-text search publications were also found in the seed corpus set, and 28.9% of seed corpus publications matched those found in the full-text search. Journal-level overlap was somewhat higher, with 137 journals shared between the two methods (representing approximately 50–55% overlap across the two pools).</p>
-<p>Publication-level comparisons disaggregated by journal showed that, under the full-text search approach, OpenAlex and Scopus recovered broadly similar sets of citation-intensive publications. The weighted average CiteScores were 13.23 for OpenAlex and 12.99 for Scopus, with a t-statistic of -0.15, indicating no statistically significant difference. In contrast, under the seed corpus approach, OpenAlex recovered a more citation-intensive set of publications, with a weighted average CiteScore of 14.10 compared to 11.90 for Scopus. The t-statistic of -2.18 indicates that this difference is statistically significant.</p>
-<p>It is important to note that the full-text search and seed corpus approaches represent two distinct sampling methods within OpenAlex. The full-text search attempts to identify dataset mentions directly from the body of text available for a subset of publications, while the seed corpus approach relies on pre-selected journals, topics, and authors more likely to reference the Census of Agriculture. As a result, the pools of publications identified by each method are not strictly comparable: they are drawn from different underlying subsets of OpenAlex’s catalog. This context is important for interpreting differences in coverage and citation intensity across the two approaches.</p>
-</section>
-<section id="institutional-comparison" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Institutional Comparison</h1>
-<!-- <div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;"> -->
-<!-- <strong> The results in this section compare institutional coverage across three major bibliographic databases: Scopus, OpenAlex, and Dimensions. </strong> </div>  -->
-<p>In addition to examining dataset mention coverage, the report also evaluates differences in institutional representation across Scopus and OpenAlex. Publication affiliation data are linked to institutional records using IPEDS identifiers to create a harmonized dataset across sources. This allows for assessment of how each citation database represents institutions based on characteristics such as control (public or private), degree level, MSI designation, and geographic location. Special attention is given to coverage of underrepresented institutions and Minority-Serving Institutions (MSIs). This analysis informs broader conversations about equity, transparency, and accountability in research data infrastructure.</p>
-<p>Each of the featured citation databases represent some portion of the global research landscape, yet their inclusion criteria and institutional coverage vary in ways that may inform disparities. Our goal is to assess which institutions are represented in each source, with particular attention to coverage of underrepresented and Minority-Serving Institutions (MSIs). By building a harmonized dataset that links IPEDS identifiers to institutional records across Scopus, OpenAlex, and Dimensions, we aim to evaluate how these citation databases include or exclude institutions across institutional characteristics such as control, level, MSI status, and geography. This analysis informs a broader conversation about equity, transparency, and accountability in research data systems.</p>
-<section id="step-1-clean-ipeds-and-msi-data" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="step-1-clean-ipeds-and-msi-data">Step 1: Clean IPEDS and MSI data</h2>
-<p>In this section, I document the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023, as part of the broader effort to compare institutional coverage across Scopus, OpenAlex, and Dimensions. To support that analysis, we needed a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time. I compiled and cleaned data from multiple sources—the MSI Data Project (Nguyen et al., 2023) for 2017–2021 and Rutgers CMSI lists for 2022–2023—and merged these with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. I addressed inconsistencies in eligibility labels, resolved duplicates, and created summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are included for transparency. All additional details are available in the IPEDS<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> and MSI<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Appendices.</p>
-<figure style="text-align: center;" class="figure">
-<a href="data/ipeds_msi/msi_eligibility_plot.png" target="_blank"> <img src="data/ipeds_msi/msi_eligibility_plot.png" style="width:80%; height:auto;" alt="MSI Eligibility Plot" class="figure-img"> </a>
-<figcaption style="font-size: 0.9em; margin-top: 0.5em;">
-<em>Source code used to generate graphic:</em> <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/blob/main/data/ipeds_msi/build_ipeds_msi.R" target="_blank">Available here</a>.
-</figcaption>
-</figure>
 
 
-</section>
 </section>
 
 
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Initial drafts of the query incorrectly included terms like “NASS” and “USDA” in the alias list. This was corrected to ensure that aliases strictly referred to dataset names, and flag terms referred to organizations.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><code>Pyalex</code> is an open-source library designed to facilitate interaction with the OpenAlex API; see <a href="https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex">https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex</a> for more information. The package manages request formatting and automates compliance with OpenAlex’s “polite pool” rate limits, which restrict the number of requests per minute and impose backoff delays. Pyalex introduced automatic pauses between requests, with a default <code>retry_backoff_factor</code> of 100 milliseconds, to ensure stable and continuous retrieval. This setup enabled systematic querying while adhering to OpenAlex’s usage policies.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p><a href="./appendices/app_ipeds.html">IPEDS appendix available here</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p><a href="./appendices/app_msi.html">MSI appendix available here</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>A dataset mention refers to an instance in which a specific dataset is referenced, cited, or named within a research publication. This can occur in various parts of the text, such as the abstract, methods, data section, footnotes, or references, and typically indicates that the dataset was used, analyzed, or discussed in the study.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Full-text search in OpenAlex refers to querying the entire database for textual mentions of dataset names within titles, abstracts, and other fields.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The seed corpus search involves selecting a targeted set of publications based on journal, author, and topic filters. Full-text PDFs are downloaded and analyzed to identify mentions of USDA datasets not captured through metadata alone.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Initial drafts of the query incorrectly included terms like “NASS” and “USDA” in the alias list. This was corrected to ensure that aliases strictly referred to dataset names, and flag terms referred to organizations.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p><code>Pyalex</code> is an open-source library designed to facilitate interaction with the OpenAlex API; see <a href="https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex">https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex</a> for more information. The package manages request formatting and automates compliance with OpenAlex’s “polite pool” rate limits, which restrict the number of requests per minute and impose backoff delays. Pyalex introduced automatic pauses between requests, with a default <code>retry_backoff_factor</code> of 100 milliseconds, to ensure stable and continuous retrieval. This setup enabled systematic querying while adhering to OpenAlex’s usage policies.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>In cases where a publication appeared in more than one source, manual and programmatic checks confirmed that metadata values, such as journal titles and publication years, were consistent across sources. No conflicting values were detected.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p><a href="./appendices/app_ipeds.html">IPEDS appendix available here</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p><a href="./appendices/app_msi.html">MSI appendix available here</a><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1478,13 +1674,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./home.html" class="pagination-link" aria-label="Report Summary">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Report Summary</span>
+      <a href="./index.html" class="pagination-link" aria-label="Project Background">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Project Background</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./index.html" class="pagination-link" aria-label="Project Background">
-        <span class="nav-page-text">Project Background</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./workflow.html" class="pagination-link" aria-label="Project Workflow">
+        <span class="nav-page-text">Project Workflow</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

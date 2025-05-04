@@ -26,10 +26,10 @@ website:
     contents:
       - href: home.qmd
         text: Report Summary
-      - href: report.qmd
-        text: Full Report
       - href: index.qmd
         text: Project Background
+      - href: report.qmd
+        text: Full Report
       - section: workflow.qmd
         text: Project Workflow
         contents: 
