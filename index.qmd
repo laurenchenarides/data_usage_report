@@ -50,13 +50,13 @@ These aims guide the development of a methodology for comparing citation databas
 
 - Determining which journals each platform indexes
 
-3.  **Institution recognition:** 
+3.  **Topic scope:** 
 
-- Determining how each platform records and standardizes institutional information
+- Evaluating the research areas of publications that cite USDA datasets 
 
-4.  **Author identification:** 
+4.  **Institution recognition:** 
 
-- Evaluating how each platform handles author names and affiliations
+- Determining how each platform records institutional information
 
 The scope of work includes comparing publication coverage across Scopus, OpenAlex, and Dimensions that mention select USDA datasets. This inclusion provides a comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms. For more information on each citation database, refer to [this Appendix.](https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_crosswalk.html) 
 The methodology described in this report provides a systematic approach for assessing citation databases' strengths and limitations in tracking dataset usage across research papers. It also examines variations in dataset usage across different types of research institutions. These methods can be applied to other citation databases as alternatives to current data sources.

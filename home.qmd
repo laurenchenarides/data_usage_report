@@ -55,23 +55,23 @@ Accurate tracking of dataset mentions relies heavily on how publications are ind
 
 **Preview of Results from Database Comparison:**
 
-1. Across datasets, there is limited overlap between citation databases. For example:
+1. Across databases, there is limited publication overlap between citation databases. For example:
 
 - Less than 10% of DOIs typically appear in both Scopus and OpenAlex in any combination.
 
 - 51.8% of Food Access Research Atlas DOIs appear only in Scopus.
 
-- 78.5% of ARMS DOIs appear only in OpenAlex Full Text.
-
 - 60.9% of Household Food Security Survey Module DOIs appear only in Scopus.
 
-2. Coverage by source (Scopus or OpenAlex) varies significantly by dataset:
+- 78.5% of ARMS DOIs appear only in OpenAlex Full Text.
 
-- Scopus recovers the most publications that mention the Rural-Urban Continuum Code and FoodAPS.
+2. Journal coverage by source (Scopus or OpenAlex) varies significantly by dataset:
 
-- OpenAlex "Full Text" recovers the most publications that mention ARMS and CPS-FSS.
+- Scopus recovers the most publications MORE HERE.
 
-- OpenAlex "Seed Search" identifies the most publications that mention CPS-FSS and HHFSS.
+- OpenAlex "Full Text" recovers the most publications MORE HERE.
+
+- OpenAlex "Seed Search" identifies the most publications MORE HERE.
 
 3. Topical coverage reflects the varied policy and disciplinary relevance of each dataset:
 

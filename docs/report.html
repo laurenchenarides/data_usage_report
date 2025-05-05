@@ -354,21 +354,21 @@ ul.task-list li input[type="checkbox"] {
 <p>Accurate tracking of dataset mentions relies heavily on how publications are indexed across citation databases. For two citation databases – Scopus and OpenAlex – carefully constructed seed corpora were needed to track dataset mentions.</p>
 <p><strong>Preview of Results from Database Comparison:</strong></p>
 <ol type="1">
-<li>Across datasets, there is limited overlap between citation databases. For example:</li>
+<li>Across databases, there is limited publication overlap between citation databases. For example:</li>
 </ol>
 <ul>
 <li><p>Less than 10% of DOIs typically appear in both Scopus and OpenAlex in any combination.</p></li>
 <li><p>51.8% of Food Access Research Atlas DOIs appear only in Scopus.</p></li>
-<li><p>78.5% of ARMS DOIs appear only in OpenAlex Full Text.</p></li>
 <li><p>60.9% of Household Food Security Survey Module DOIs appear only in Scopus.</p></li>
+<li><p>78.5% of ARMS DOIs appear only in OpenAlex Full Text.</p></li>
 </ul>
 <ol start="2" type="1">
-<li>Coverage by source (Scopus or OpenAlex) varies significantly by dataset:</li>
+<li>Journal coverage by source (Scopus or OpenAlex) varies significantly by dataset:</li>
 </ol>
 <ul>
-<li><p>Scopus recovers the most publications that mention the Rural-Urban Continuum Code and FoodAPS.</p></li>
-<li><p>OpenAlex “Full Text” recovers the most publications that mention ARMS and CPS-FSS.</p></li>
-<li><p>OpenAlex “Seed Search” identifies the most publications that mention CPS-FSS and HHFSS.</p></li>
+<li><p>Scopus recovers the most publications MORE HERE.</p></li>
+<li><p>OpenAlex “Full Text” recovers the most publications MORE HERE.</p></li>
+<li><p>OpenAlex “Seed Search” identifies the most publications MORE HERE.</p></li>
 </ul>
 <ol start="3" type="1">
 <li>Topical coverage reflects the varied policy and disciplinary relevance of each dataset:</li>
@@ -638,18 +638,14 @@ Table&nbsp;2: Unique Publications with Metadata across Sources
 </figure>
 <p>The first comparison looks at publication and journal coverage between the Scopus (using the seed-corpus method) and OpenAlex (using the full-text search). The results describe how many publications mention the Ag Census in each database and evaluates the degree of overlap between them.</p>
 <p>Table 1 displays the coverage of publications that referenced the Ag Census data. The table distinguishes between results that appear in both databases (column 1), only in OpenAlex (column 2), and only in Scopus (column 3). Column 4 is a total of all distinct publications or journals across both databases. The first row reports the number of individual publications found in each category. The unit of analysis is at the publication level. The second row reports the number of journals that include the Ag Census publications, again broken out by their appearance in one or both datasets. The unit of analysis is at the journal level.</p>
-<p><strong>ADD TABLE 1 HERE</strong></p>
 <p>The main takeaway from Table 1 is that there is little overlap in publications and journals between the two databases when using OpenAlex’s full-text search. According to this table, there are 5,473 unique publications referencing the Ag Census across both citation databases, appearing in 2,686 unique journals, identified by their ISSNs. The number of overlapping publications is 505 (9.23%), with the majority of publications referencing Ag Census are picked up only by Scopus (4,207 or 76.87%), and a smaller share is identified only in OpenAlex (761 or 13.9%).</p>
 <p>Journal coverage shows a similar pattern. Of the journals that include at least one Ag Census publication, 247 (9.2%) are shared between the two databases, 2,362 (87.9%) are found only in Scopus, 77 (2.9%) only in OpenAlex.</p>
 <p>These results show that the coverage of publications mentioning the Ag Census and the journals in which they are found is much more extensive in Scopus, and suggest that OpenAlex’s full-text search along may miss many dataset mentions.</p>
 <p>Based on the pattern observed from the full-text search in OpenAlex, the differences likely arise, at least in part, from limitations in how OpenAlex processes and indexes text. Specifically, we found that OpenAlex’s full-text search does not index references as searchable text—they are stored as pointers, not included in the searchable body of the publication. In addition, n-gram-level metadata that might capture mentions of the Ag Census outside the main text was not accessible for the full set of publications. To address these limitations and create a more consistent comparison with Scopus, we applied a seed-corpus approach to OpenAlex, targeting a curated set of authors, journals, and topics associated with Ag Census use.</p>
 <p>While this method can overcome the limitations of the OpenAlex full-text search, it is computationally more intensive. To limit the cost of the search corpus method, a list of the top authors, topics, and journals is provided, as described above. This list serves as a set of filters through which the search corpus is applied. Mentions of the Ag Census are then searched for within publications meeting these criteria.</p>
-<p><strong>ADD TABLE 2 HERE</strong></p>
 <p>Next, we compare the degree of overlap across the different search methods, focusing on OpenAlex publications that also overlap with Scopus records. Specifically, we examine whether the OpenAlex full-text search and the OpenAlex seed-corpus approach identified the same publications and journals referencing the Census of Agriculture, or whether each method uncovered distinct sets of works.</p>
 <p>Table 3 summarizes the overlap between publications identified through the two OpenAlex search methods, restricted to publications that also appear in Scopus. As reported earlier, 505 publications were identified in both Scopus and OpenAlex using the OpenAlex full-text search (Table 1), while 363 publications were identified using the OpenAlex seed-corpus approach (Table 2). Table 3 specifically shows how many of the 505 full-text search publications were also found in the seed-corpus set. The comparison reveals that 105 publications are shared between the two methods, representing 20.8% of the full-text set and 28.9% of the seed-corpus set. These results suggest that the choice of search strategy meaningfully influences which Scopus-linked publications are recovered in OpenAlex.</p>
-<p><strong>ADD TABLE 3 HERE</strong></p>
 <p>Table 4 summarizes the overlap between journals identified through the two OpenAlex search methods, restricted to journals linked to publications that also appear in Scopus. As noted previously, the OpenAlex full-text search and seed-corpus approach each identified a set of journals containing publications referencing the Census of Agriculture. Table 4 specifically shows how many journals were common to both sets. A total of 137 journals were shared between the two methods, representing 55.5% of the full-text set and 49.6% of the seed-corpus set. Among these shared journals, 19 were part of the original list of top journals used to construct the seed corpus.</p>
-<p><strong>ADD TABLE 4 HERE</strong></p>
 </section>
 <section id="food-access-research-atlas" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="food-access-research-atlas">Food Access Research Atlas</h3>
@@ -661,6 +657,7 @@ Table&nbsp;2: Unique Publications with Metadata across Sources
 <section id="journal-coverage" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="journal-coverage"><span class="header-section-number">3.2</span> Journal Coverage</h2>
 <p>Now that we have compared journal coverage across the two citation databases, we next examine the publications within journals that are indexed in both Scopus and OpenAlex. We report these results for the full-text search approach and the seed-corpus approach in OpenAlex.</p>
+<!-- Journal matches are obtained for this table using the "ISSN_L" value in the OpenAlex search corpus. Next, we turn to evaluating the overlap based on either of the ISSN values made available from the search corpus. -->
 <section id="arms-financial-and-crop-production-practices-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="arms-financial-and-crop-production-practices-1">ARMS Financial and Crop Production Practices</h3>
 </section>
@@ -669,13 +666,9 @@ Table&nbsp;2: Unique Publications with Metadata across Sources
 <p>Table 5 provides journal-level detail on the overlap between publications indexed in Scopus and OpenAlex, based on the full-text search results in OpenAlex. Each row corresponds to a journal included in the analysis. The set of journals included here matches the group of overlapping journals reported in Table 1—that is, journals where publications were found in both Scopus and OpenAlex.</p>
 <p>The table is divided into two sections: overlap statistics and publication counts. The overlap statistics report three measures. The percentage labeled “% Both” indicates the share of a journal’s publications that were found in both Scopus and OpenAlex. “% Scopus” shows the share of publications that appeared only in Scopus, while “% OpenAlex” shows the share of publications that appeared only in OpenAlex. Together, these columns summarize how consistently each journal’s publications are represented across the two databases.</p>
 <p>The publication counts section reports the number of overlapping and non-overlapping publications for each journal. “Pubs Both” shows the number of publications found in both Scopus and OpenAlex, while “Pubs Scopus” and “Pubs OpenAlex” show the number of publications found exclusively in one database. The final column, “Total Pubs,” provides the total number of distinct publications associated with each journal across both databases.</p>
-<p>Finally, the table also includes each journal’s 2022 Scopus CiteScore to provide additional context on journal prominence.</p>
 <p>Reading across a row, the table allows for direct comparison of database coverage at the journal level, highlighting journals where coverage between Scopus and OpenAlex aligns closely and those where substantial gaps exist.</p>
-<p><strong>ADD TABLE 5 HERE</strong></p>
 <p>We next examine the results obtained using the OpenAlex seed corpus approach.</p>
 <p>Table 6 summarizes publication-level overlap statistics for journals identified using the seed corpus approach. As with Table 5, the table is restricted to journals associated with publications that overlap between Scopus and OpenAlex. The overlap statistics show the percentage of each journal’s publications found in both databases (% Both), found only in Scopus (% Scopus), or found only in OpenAlex (% OpenAlex). Publication counts are also reported separately for shared and database-specific publications, along with the total number of publications associated with each journal. Each journal’s 2022 Scopus CiteScore is included to provide additional context on journal prominence.</p>
-<p><strong>ADD TABLE 6 HERE</strong></p>
-<!-- Journal matches are obtained for this table using the "ISSN_L" value in the OpenAlex search corpus. Next, we turn to evaluating the overlap based on either of the ISSN values made available from the search corpus. -->
 </section>
 </section>
 <section id="publication-topics" class="level2" data-number="3.3">
