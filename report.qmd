@@ -397,11 +397,11 @@ Now that we have compared journal coverage across the two citation databases, we
 ![](graphics/dot_plots/dataset01_journals_overlap_dot.png)
 \newpage 
 
-![](graphics/dot_plots/dataset01_journals_overlap_dot.png)
+![](graphics/dot_plots/dataset01_journals_scopusonly_dot.png)
 
 \newpage
 
-![](graphics/dot_plots/dataset01_journals_overlap_dot.png)
+![](graphics/dot_plots/dataset01_journals_openalexonly_dot.png)
 :::
 
 ### The Census of Agriculture {.unnumbered}
