@@ -368,6 +368,42 @@ Now that we have compared journal coverage across the two citation databases, we
 ### ARMS Financial and Crop Production Practices {.unnumbered}
 
 
+::: {.content-visible when-format="html"}
+
+<figure style="text-align: center;">
+  <a href="graphics/dot_plots/dataset01_journals_overlap_dot.png" target="_blank">
+    <img src="graphics/dot_plots/dataset01_journals_overlap_dot.png" style="width:80%; height:auto;" alt="ARMS Treemap">
+  </a>
+</figure>
+
+<figure style="text-align: center;">
+  <a href="graphics/dot_plots/dataset01_journals_scopusonly_dot.png" target="_blank">
+    <img src="graphics/dot_plots/dataset01_journals_scopusonly_dot.png" style="width:80%; height:auto;" alt="ARMS Treemap">
+  </a>
+</figure>
+
+<figure style="text-align: center;">
+  <a href="graphics/dot_plots/dataset01_journals_openalexonly_dot.png" target="_blank">
+    <img src="graphics/dot_plots/dataset01_journals_openalexonly_dot.png" style="width:80%; height:auto;" alt="ARMS Treemap">
+  </a>
+</figure>
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+\newpage
+
+![](graphics/dot_plots/dataset01_journals_overlap_dot.png)
+\newpage 
+
+![](graphics/dot_plots/dataset01_journals_overlap_dot.png)
+
+\newpage
+
+![](graphics/dot_plots/dataset01_journals_overlap_dot.png)
+:::
+
 ### The Census of Agriculture {.unnumbered}
 
 Table 5 provides journal-level detail on the overlap between publications indexed in Scopus and OpenAlex, based on the full-text search results in OpenAlex. Each row corresponds to a journal included in the analysis. The set of journals included here matches the group of overlapping journals reported in Table 1—that is, journals where publications were found in both Scopus and OpenAlex. 
