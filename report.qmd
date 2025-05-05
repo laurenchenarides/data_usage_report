@@ -17,13 +17,15 @@ default-output-format: [html, pdf]
 
 [Download PDF Version](report.pdf){.btn .btn-success}
 
+\newpage
+
 # Report Summary {.unnumbered}
 
 ## What Is the Issue? {.unnumbered}
 
 Federal datasets play an important role in supporting research across a range of disciplines. Measuring how these datasets are used can help evaluate their impact and inform future data investments. Agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like [DemocratizingData.ai](https://democratizingdata.ai/tools/dashboards/) and [NASS’s 5’s Data Usage Dashboard](https://www.nass.usda.gov/Data_Visualization/5W/index.php). These tools rely on identifying *dataset mentions*^[A dataset mention refers to an instance in which a specific dataset is referenced, cited, or named within a research publication. This can occur in various parts of the text, such as the abstract, methods, data section, footnotes, or references, and typically indicates that the dataset was used, analyzed, or discussed in the study.] in published research to develop usage statistics. Beyond reporting usage statistics, this type of analysis can also provide information about the research topics where federal datasets are applied. This helps characterize their disciplinary reach, including use in areas such as food security, nutrition, and climate, which are inherently multidisciplinary. It may also help identify alternative datasets and methods that researchers use to study similar questions across fields.
 
-The process of identifying dataset mentions in academic research output requires the use of **citation databases** because these databases provide structured access to large volumes of publication metadata, including titles, abstracts, authors, affiliations, and sometimes full-text content. They allow for scalable search and retrieval of relevant publications, making it feasible to systematically identify where specific datasets are referenced across a broad set of research outputs. However, different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports. Tracking dataset usage requires developing methods that scan publication text for dataset mentions. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. Not to mention, dataset tracking requires reliable citation data from citation databases.
+The process of identifying dataset mentions in academic research output requires the use of citation databases because these databases provide structured access to large volumes of publication metadata, including titles, abstracts, authors, affiliations, and sometimes full-text content. They allow for scalable search and retrieval of relevant publications, making it feasible to systematically identify where specific datasets are referenced across a broad set of research outputs. However, different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports. Tracking dataset usage requires developing methods that scan publication text for dataset mentions. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. Not to mention, dataset tracking requires reliable citation data from citation databases.
 
 This report presents a methodology for identifying dataset mentions in research publications across various citation databases. In doing so, we compare publication, journal, and topic coverage across Scopus, OpenAlex, and Dimensions [forthcoming] as primary sources. The purpose is to establish a consistent set of statistics for comparing results and evaluating differences in dataset tracking across citation databases. This allows for insights into how publication scope and indexing strategies influence dataset usage statistics.
 
@@ -141,13 +143,13 @@ These aims guide the development of a methodology for comparing citation databas
 
 - Determining which journals each platform indexes
 
-3.  **Institution recognition:** 
+3.  **Topic scope:** 
 
-- Determining how each platform records and standardizes institutional information
+- Evaluating the research areas of publications that cite USDA datasets 
 
-4.  **Author identification:** 
+4.  **Institution recognition:** 
 
-- Evaluating how each platform handles author names and affiliations
+- Determining how each platform records institutional information
 
 The scope of work includes comparing publication coverage across Scopus, OpenAlex, and Dimensions that mention select USDA datasets. This inclusion provides a comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms. For more information on each citation database, refer to [this Appendix.](https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_crosswalk.html) 
 The methodology described in this report provides a systematic approach for assessing citation databases' strengths and limitations in tracking dataset usage across research papers. It also examines variations in dataset usage across different types of research institutions. These methods can be applied to other citation databases as alternatives to current data sources.
@@ -171,7 +173,7 @@ The core objective of this study is to evaluate publication coverage across cita
 
 : List of USDA Data Assets {#tbl-usda-datasets}
 
-To provide a comprehensive reference for dataset tracking, [this Appendix](../../appendices/app_dyads.qmd) includes a detailed list of data assets and their corresponding aliases, collectively referred to as *dyads*. Each dyad represents a dataset-name and alias pair used in citation database searches, allowing for more precise identification of dataset mentions in research publications. These aliases include acronyms, alternate spellings, dataset variations, and associated URLs, ensuring broad coverage across different citation practices. The dyad list serves as the foundation for dataset extraction and disambiguation across Scopus, OpenAlex, and Dimensions.
+To provide a comprehensive reference for dataset tracking, [this Appendix](/appendices/app_dyads.qmd) includes a detailed list of data assets and their corresponding aliases, collectively referred to as *dyads*. Each dyad represents a dataset-name and alias pair used in citation database searches, allowing for more precise identification of dataset mentions in research publications. These aliases include acronyms, alternate spellings, dataset variations, and associated URLs, ensuring broad coverage across different citation practices. The dyad list serves as the foundation for dataset extraction and disambiguation across Scopus, OpenAlex, and Dimensions.
 
 To identify relevant publications for each of the six datasets, three search strategies were used across the citation databases: a seed search in Scopus, a full-text metadata search in OpenAlex, and a seed corpus approach in OpenAlex based on targeted filtering of journals, authors, and topics followed by full-text analysis.
 
@@ -401,18 +403,34 @@ Table 6 summarizes publication-level overlap statistics for journals identified 
 
 ### ARMS Financial and Crop Production Practices {.unnumbered}
 
-
 ::: {.content-visible when-format="html"}
+
 <figure style="text-align: center;">
   <a href="graphics/bubble_charts/dataset01_topics_scopus_exclusive.png" target="_blank">
     <img src="graphics/bubble_charts/dataset01_topics_scopus_exclusive.png" style="width:80%; height:auto;" alt="ARMS Treemap">
   </a>
 </figure>
+
+<figure style="text-align: center;">
+  <a href="graphics/bubble_charts/dataset01_topics_oaft_exclusive.png" target="_blank">
+    <img src="graphics/bubble_charts/dataset01_topics_oaft_exclusive.png" style="width:80%; height:auto;" alt="ARMS Treemap">
+  </a>
+</figure>
+
+<figure style="text-align: center;">
+  <a href="graphics/bubble_charts/dataset01_topics_oaseed_exclusive.png" target="_blank">
+    <img src="graphics/bubble_charts/dataset01_topics_oaseed_exclusive.png" style="width:80%; height:auto;" alt="ARMS Treemap">
+  </a>
+</figure>
+
 :::
 
 ::: {.content-visible when-format="pdf"}
 ![](graphics/bubble_charts/dataset01_topics_scopus_exclusive.png)
+![](graphics/bubble_charts/dataset01_topics_oaft_exclusive.png)
 
+![](graphics/bubble_charts/dataset01_topics_oaseed_exclusive.png)
+:::
 
 ## Institutional Comparison
 
@@ -456,7 +474,7 @@ It is important to note that the full-text search and seed corpus approaches rep
 
 \newpage
 
-# Tables {.unnumbered}
+#  {.unnumbered}
 
 <!-- ::: {.callout-note icon=false collapse=true title="OpenAlex Seed Search Criteria (click to expand)"} ::: -->
 
@@ -490,6 +508,7 @@ It is important to note that the full-text search and seed corpus approaches rep
 
 : Top 25 Topics by First Run Count {#tbl-top25topics}
 
+\newpage
 
 | Journal ID    | Journal Name                                                               | First Run Count | OpenAlex Total Count |
 |---------------|----------------------------------------------------------------------------|-----------------|----------------------|
@@ -521,6 +540,7 @@ It is important to note that the full-text search and seed corpus approaches rep
 
 : Top 25 Journals by First Run Count {#tbl-top25journals}
 
+\newpage
 
 | Author ID    | Author Name            | First Run Count | OpenAlex Total Count |
 |--------------|------------------------|-----------------|----------------------|
