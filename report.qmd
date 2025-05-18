@@ -231,7 +231,7 @@ To address limitations in OpenAlex's full-text indexing methods, a seed corpus a
 To construct the seed corpus, publications were filtered based on several criteria:
 
 - Language: English
-- Publication Year: Post-2017
+- Publication Year: 2017-2023
 - Publication Type: Articles only
 - Open Access Status: Open-access publications only
 
