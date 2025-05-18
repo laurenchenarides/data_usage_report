@@ -18,7 +18,14 @@ toc: false
 
 ---
 
-<iframe src="https://forms.gle/pdogioD6D9h1DtTG9" width="100%" height="1200" frameborder="0">Loading…</iframe>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdKJ_rNlmOtO_BctfyZgdXDSfDrN5uaEQkmc7dTkK9MA1uaGg/viewform?usp=header" target="_blank">
+  <strong>Complete Questionnaire</strong>
+</a>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKJ_rNlmOtO_BctfyZgdXDSfDrN5uaEQkmc7dTkK9MA1uaGg/viewform?usp=header"
+        width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">
+  Loading…
+</iframe>
 
 ---
 
@@ -28,7 +35,14 @@ toc: false
 
 ---
 
-<iframe src="https://forms.gle/3kmVojPBE4Y37Dk17" width="100%" height="1200" frameborder="0">Loading…</iframe>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSe2d4ks8ROrdKWK6QbtQ_gWorljLH65MYXUvWTKmh4xVrEXsA/viewform?usp=header" target="_blank">
+  <strong>Sign Up Here</strong>
+</a>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe2d4ks8ROrdKWK6QbtQ_gWorljLH65MYXUvWTKmh4xVrEXsA/viewform?usp=header"
+        width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0">
+  Loading…
+</iframe>
 
 ---
 
