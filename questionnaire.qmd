@@ -1,0 +1,145 @@
+---
+title: "Building Trust in Data: The Future for Food and Agricultural Research and Policy"
+subtitle: "Questionnaire"
+format: html
+editor: visual
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: false
+runtime: shiny
+---
+
+
+```{r}
+#| include: false
+
+# Load packages
+library(shiny)
+library(googlesheets4)
+library(dplyr)
+
+# Google Sheet setup: REPLACE with your actual Sheet ID
+sheet_id <- "13uuWI0kgLBZVxm8FvGDuiYXrw8gmJ-Wbnd7GgM0zlow"
+
+# If you are using this locally: uncomment this
+# gs4_auth()  # This will open a browser for Google sign-in
+
+# If you are deploying to shinyapps.io: use service account authentication like this:
+# gs4_auth(path = "gdrive-service-account.json")
+
+# Define question function
+question <- function(
+  name,
+  type,
+  required = FALSE,
+  label    = "label",
+  option   = NULL,
+  dependence = NULL,
+  dependence_value = NULL
+) {
+  
+  input <- NULL
+
+  if (type == "select") {
+    input <- selectizeInput(
+      inputId = name,
+      label = label,
+      choices = option,
+      options = list(
+        placeholder = '',
+        onInitialize = I('function() { this.setValue(""); }')
+      )
+    )
+  } else if (type == "mc") {
+    input <- radioButtons(
+      inputId = name,
+      label = label,
+      selected = character(0),
+      choices = option
+    )
+  } else if (type == "checkbox") {
+    input <- checkboxGroupInput(
+      inputId = name,
+      label = label,
+      choices = option
+    )
+  } else if (type == "text") {
+    input <- textInput(
+      inputId = name,
+      label = label,
+      placeholder = option
+    )
+  }
+
+  # Conditional display
+  if (!is.null(dependence)) {
+    cond <- sprintf("input['%s'] == '%s'", dependence, dependence_value)
+    return(conditionalPanel(condition = cond, input))
+  } else {
+    return(input)
+  }
+}
+```
+
+# {.unnumbered}
+
+Trusted data on food and agriculture are essential for high quality research and decision-making. Our current ecosystem has been shaken by the removal of important, trusted, public datasets and web-based tools used by decision makers. This fragility has introduced uncertainty for the food and agricultural research community whose work is foundational to expanding economic opportunities, ensuring agricultural sustainability, and protecting natural resources. New approaches must be developed.
+
+We want your voice to be heard. Please take a few minutes to complete a short, anonymous, four-question questionnaire^[This questionnaire is for internal informational purposes only. Data collected will not be used for generalizable research, publication, or public dissemination. As such, it does not constitute human subjects research requiring IRB approval.] by **June 16, 2025**. Your input will inform the webinar discussion.
+
+```{r}
+#| echo: false
+
+# Q1
+question("area", "text", label = "1. What is your major area of research?")
+
+# Q2
+question("disrupt", "mc", label = "2. Have you encountered disruptions in access to data you rely on?",
+         option = c("Yes", "No", "Unsure"))
+
+# Q3 (conditional)
+question("affected_data", "text", label = "[If yes] Which dataset(s) were affected?",
+         dependence = "disrupt", dependence_value = "Yes")
+
+# Q4
+question("new_data", "text", label = "3. Please list any datasets that you currently do not use but would like to access.")
+
+# Q5a
+question("trusted_features", "checkbox", label = "4. What do you think are the key data features necessary to build trust in data?",
+         option = c("Timely", "Accessible", "Documented", "Used by other experts", "Relevant to your research context", "Other"))
+
+# Q5b (conditional text field for "Other")
+question("other_trusted_feature", "text", label = "Please specify the other feature(s):",
+         dependence = "trusted_features", dependence_value = "Other")
+
+# Submit button and confirmation
+actionButton("submit", "Submit")
+textOutput("confirm")
+```
+
+```{r}
+#| echo: false
+
+server <- function(input, output, session) {
+  observeEvent(input$submit, {
+    response <- tibble(
+      timestamp = Sys.time(),
+      area = input$area,
+      disrupt = input$disrupt,
+      affected_data = input$affected_data,
+      new_data = input$new_data,
+      trusted_features = paste(input$trusted_features, collapse = ";"),
+      other_trusted_feature = input$other_trusted_feature
+    )
+    
+    tryCatch({
+      sheet_append(ss = sheet_id, data = response)
+      output$confirm <- renderText("Thank you! Your response has been recorded.")
+    }, error = function(e) {
+      output$confirm <- renderText(paste("Error saving response:", e$message))
+    })
+  })
+}
+```

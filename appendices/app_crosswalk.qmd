@@ -13,30 +13,38 @@ format:
   <thead>
     <tr>
       <th style="border-bottom: 2px solid #ccc; text-align: center;">Scopus Schema</th>
-      <th style="border-bottom: 2px solid #ccc; text-align: center;">OpenAlex Schema</th>
       <th style="border-bottom: 2px solid #ccc; text-align: center;">Dimensions Schema</th>
+      <th style="border-bottom: 2px solid #ccc; text-align: center;" colspan="2">OpenAlex Schemas</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
+      <td style="text-align: center; vertical-align: middle; border-bottom: 2px solid #ccc;">
         <a href="https://dbdocs.io/lauren.chenarides/scopus_schema?view=relationships" target="_blank">
           <img src="scopus_thumbnail.png" alt="Scopus Schema" width="250">
         </a>
       </td>
-      <td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
-        <a href="https://dbdocs.io/lauren.chenarides/openalex_schema?view=relationships" target="_blank">
-          <img src="oa_thumbnail.png" alt="OpenAlex Schema" width="250">
-        </a>
-      </td>
-      <td style="vertical-align: middle; border-bottom: 2px solid #ccc;">
-        <a href="scopus_schema.png" target="_blank">
+      <td style="text-align: center; vertical-align: middle; border-bottom: 2px solid #ccc;">
+        <a href="https://dbdocs.io/lauren.chenarides/dimensions?view=relationships" target="_blank">
           <img src="dimensions_thumbnail.png" alt="Dimensions Schema" width="250">
         </a>
+      </td>
+      <td style="text-align: center; vertical-align: middle; border-bottom: 2px solid #ccc;">
+        <a href="https://dbdocs.io/lauren.chenarides/openalex_fulltext?view=relationships" target="_blank">
+          <img src="oa_thumbnail.png" alt="OpenAlex Full Text Search" width="250">
+        </a>
+        <div style="margin-top: 5px; font-size: 0.85em;">Full Text Search</div>
+      </td>
+      <td style="text-align: center; vertical-align: middle; border-bottom: 2px solid #ccc;">
+        <a href="https://dbdocs.io/lauren.chenarides/openalex_schema?view=relationships" target="_blank">
+          <img src="oa_thumbnail.png" alt="OpenAlex Seed Corpus" width="250">
+        </a>
+        <div style="margin-top: 5px; font-size: 0.85em;">Seed Corpus</div>
       </td>
     </tr>
   </tbody>
 </table>
+
 
 <p style="font-size: 0.9em; text-align: left; margin-top: 0.5em;">
   <em>Note:</em> All schemas were built using <a href="https://dbdiagram.io/d/scopus_schema-67d71fa375d75cc84445d40b" target="_blank">DBDiagram.io</a>.
@@ -72,6 +80,8 @@ format:
 
 ### OpenAlex Files
 
+#### Full Text {.unnumbered}
+
 - **Primary Table:** `main`
 - **Supporting Tables:**
   - `_id`
@@ -94,7 +104,20 @@ format:
   - `primary_location`
   - `primary_topic`
   - `topics`
-  
+
+
+#### Seed Corpus {.unnumbered}
+ 
+- **Primary Table:** `main`
+- **Supporting Tables:**
+
+
+### Dimensions Files
+
+- **Primary Table:** `main`
+- **Supporting Tables:**
+
+
 *The accompanying schema focuses on the primary linking fields between tables. Due to the large number of columns within each table, only key identifiers are included.*
 
 :::

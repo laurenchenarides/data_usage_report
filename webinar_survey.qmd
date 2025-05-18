@@ -1,0 +1,162 @@
+---
+name: "surveydown"
+title: "Building Trust in Data: The Future for Food and Agricultural Research and Policy"
+author: "Lauren Chenarides"
+date: last-modified  # Auto-updates based on Git commits
+format: html
+self-contained: true
+execute: 
+  echo: false
+toc: false
+---
+`
+```{r}
+#| include: false
+
+library(shiny)
+
+# Define question function
+
+question <- function(
+  name,
+  type,
+  required = FALSE,
+  label    = "label",
+  option   = NULL,
+  dependence = NULL,
+  dependence_value = NULL
+) {
+  
+  output <- NULL
+
+  if (type ==  "select") {
+
+    input <- selectizeInput(
+      inputId = name,
+      label = label,
+      choices = option,
+      options = list(
+        placeholder = '',
+        onInitialize = I('function() { this.setValue(""); }')
+      )
+    )
+
+  } else if (type == "mc") {
+
+    input <- radioButtons(
+      inputId = name,
+      label = label,
+      selected = character(0),
+      choices = option
+    )
+
+  } else if (type == "checkbox") {
+
+    input <- checkboxGroupInput(
+      inputId = name,
+      label = label,
+      choices = option
+    )
+
+  } else if (type == "text") {
+
+    input <- textInput(
+      inputId = name,
+      label = label,
+      placeholder = option
+    )
+
+  }
+
+  # Wrap in conditional panel if needed
+  if (!is.null(dependence)) {
+    cond <- sprintf("input['%s'] == '%s'", dependence, dependence_value)
+    output <- conditionalPanel(condition = cond, input)
+  } else {
+    output <- input
+  }
+
+  return(output)
+}
+```
+
+# {.unnumbered}
+
+Trusted data on food and agriculture are essential for high quality research and decision-making. Our current ecosystem has been shaken by the removal of important, trusted, public datasets and web-based tools used by decision makers. This fragility has introduced uncertainty for the food and agricultural research community whose work is foundational to expanding economic opportunities, ensuring agricultural sustainability, and protecting natural resources. New approaches must be developed.
+
+We want your voice to be heard. Please take a few minutes to complete a short, anonymous, five-question questionnaire^[This questionnaire is for internal informational purposes only. Data collected will not be used for generalizable research, publication, or public dissemination. As such, it does not constitute human subjects research requiring IRB approval.] by **June 16, 2025**. Your input will inform the webinar discussion.
+
+---
+
+```{r}
+
+question(
+  name     = 'area',
+  type     = 'text',
+  required = TRUE,
+  label    = "1. What is your major area of research?"
+)
+
+question(
+  name     = 'disrupt',
+  type     = 'mc',
+  required = FALSE,
+  label    = "2. Have you encountered disruptions in access to data you rely on for your research?",
+  option   = c("Yes" = "Yes", "No" = "No", "Unsure" = "Unsure")
+)
+
+question(
+  name     = 'affected_data',
+  type     = 'text',
+  required = TRUE,
+  label    = "3. If yes, which dataset(s) were affected?",
+  dependence = "disrupt",
+  dependence_value = "Yes"
+)
+
+question(
+  name     = 'new_data',
+  type     = 'text',
+  required = TRUE,
+  label    = "4. Which new datasets would you like to access?"
+)
+
+question(
+  name     = 'trusted_features',
+  type     = 'checkbox',
+  required = TRUE,
+  label    = "5. What do you think are the key data features necessary to build trust in new data?",
+  option   = c(
+    "Timely"  = "time",
+    "Accessible"  = "access",
+    "Documented"  = "docs",
+    "Used by other experts"  = "expert_use",
+    "Relevant to your research context"  = "relevance",
+    "Other (please specify below)" = "other"
+  )
+)
+
+question(
+  name     = 'other_trusted_feature',
+  type     = 'text',
+  label    = "Please specify the other feature(s):",
+  dependence = "trusted_features",
+  dependence_value = "other"
+)
+
+```
+
+---
+
+# {.unnumbered}
+
+**Interested in staying involved?** If you'd like to join a working group to continue the conversation and help shape next steps, please provide your contact information. Participation is completely optional.
+
+```{r}
+question(
+  name     = 'area',
+  type     = 'text',
+  required = FALSE,
+  label    = "Please provide your contact information including name and email."
+)
+```

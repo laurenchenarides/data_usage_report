@@ -30,19 +30,8 @@ website:
         text: Project Background
       - href: report.qmd
         text: Full Report
-      - section: workflow.qmd
-        text: Project Workflow
-        contents: 
-          - href: workflow/step01/define_data_assets.qmd
-            text: "Step 01: Define Data Assets"
-          - href: workflow/step02_01/extract_dataset_mentions.qmd
-            text: "Step 02: Extract Dataset Mentions"
-          - href: workflow/step02_02/create_seed_corpus.qmd
-            text: "Creating a Seed Corpus"
-          - href: workflow/step03/clean_pub_data.qmd
-            text: "Step 03: Clean Publication Data"
-          - href: workflow/results/compare_pub_data.qmd
-            text: "Step 04: Compare Results"
+      - href: questionnarie.qmd
+        text: Trusted Data Questionnaire
       - href: conclusions.qmd
         text: Study Limitations
       - section: appendix.qmd
@@ -50,6 +39,19 @@ website:
         contents:
           - href: terminology.qmd
             text: Terminology
+          - href: workflow.qmd
+            text: Project Workflow
+            contents: 
+            - href: workflow/step01/define_data_assets.qmd
+              text: "Step 01: Define Data Assets"
+            - href: workflow/step02_01/extract_dataset_mentions.qmd
+              text: "Step 02: Extract Dataset Mentions"
+            - href: workflow/step02_02/create_seed_corpus.qmd
+              text: "Creating a Seed Corpus"
+            - href: workflow/step03/clean_pub_data.qmd
+              text: "Step 03: Clean Publication Data"
+            - href: workflow/results/compare_pub_data.qmd
+              text: "Step 04: Compare Results"
           - href: appendices/app_crosswalk.qmd # Data schema
           - href: appendices/app_databases.qmd # Summary of Scopus, OpenAlex, and Dimensions
             text: "Reference Files"
