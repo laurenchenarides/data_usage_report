@@ -30,8 +30,6 @@ website:
         text: Project Background
       - href: report.qmd
         text: Full Report
-      - href: questionnarie.qmd
-        text: Trusted Data Questionnaire
       - href: conclusions.qmd
         text: Study Limitations
       - section: appendix.qmd
@@ -61,6 +59,8 @@ website:
               - appendices/app_dimensions.qmd # Dimensions reference files
               - appendices/app_ipeds.qmd # Ming's work on IPEDS
               - appendices/app_msi.qmd # Ming's work on MSIs
+      - href: webinar_questionnaire.qmd
+        text: Questionnaire
 
       
 format:

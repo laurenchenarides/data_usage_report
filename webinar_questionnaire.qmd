@@ -1,0 +1,34 @@
+---
+name: "surveydown"
+title: "Questionnaire"
+subtitle: "Building Trust in Data: The Future for Food and Agricultural Research and Policy"
+date: last-modified  # Auto-updates based on Git commits
+format: html
+self-contained: true
+execute: 
+  echo: false
+toc: false
+---
+
+# {.unnumbered}
+
+<!-- Trusted data on food and agriculture are essential for high quality research and decision-making. Our current ecosystem has been shaken by the removal of important, trusted, public datasets and web-based tools used by decision makers. This fragility has introduced uncertainty for the food and agricultural research community whose work is foundational to expanding economic opportunities, ensuring agricultural sustainability, and protecting natural resources. New approaches must be developed. -->
+
+<!-- We want your voice to be heard. Please take a few minutes to complete a short, anonymous, five-question questionnaire^[This questionnaire is for internal informational purposes only. Data collected will not be used for generalizable research, publication, or public dissemination. As such, it does not constitute human subjects research requiring IRB approval.] by **June 16, 2025**. Your input will inform the webinar discussion. -->
+
+---
+
+<iframe src="https://forms.gle/pdogioD6D9h1DtTG9" width="100%" height="1200" frameborder="0">Loading…</iframe>
+
+---
+
+# {.unnumbered}
+
+**Interested in staying involved?** If you'd like to join a working group to continue the conversation and help shape next steps, please provide your contact information. Participation is completely optional.
+
+---
+
+<iframe src="https://forms.gle/3kmVojPBE4Y37Dk17" width="100%" height="1200" frameborder="0">Loading…</iframe>
+
+---
+
