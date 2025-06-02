@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs  # Ensure Quarto builds into /docs for GitHub Pages
+  resources:
+    - graphics/sankey_plots2/lib/**
 
 website:
   page-navigation: true
@@ -11,6 +13,7 @@ website:
   
   page-footer: 
     right: "This page is built with [Quarto](https://quarto.org/)."
+    left: "**AI Assistance Disclosure:** This website was developed with the assistance of artificial intelligence tools to enhance content creation, design, and user experience. All content has been reviewed and approved by our team to ensure accuracy and quality."
 
   sidebar:
     pinned: true

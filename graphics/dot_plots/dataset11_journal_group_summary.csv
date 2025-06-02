@@ -1,0 +1,63 @@
+journal_title,Scopus only,OpenAlex Seed only,OpenAlex FT only,Dimensions only,Scopus ∩ OA Seed,Scopus ∩ OA FT,Scopus ∩ Dimensions,OA Seed ∩ OA FT,OA Seed ∩ Dimensions,OA FT ∩ Dimensions,Scopus ∩ OA Seed ∩ OA FT,Scopus ∩ OA Seed ∩ Dimensions,Scopus ∩ OA FT ∩ Dimensions,OA Seed ∩ OA FT ∩ Dimensions,Scopus ∩ OA Seed ∩ OA FT ∩ Dimensions
+Journal of Agriculture Food Systems and Community Develop...,0,0,0,0,0,0,47,0,0,0,0,0,0,0,0
+Renewable Agriculture and Food Systems,0,0,0,0,0,0,0,0,0,0,0,38,0,0,0
+Agriculture and Human Values,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0
+Journal of Agricultural and Applied Economics,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0
+Agricultural Finance Review,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0
+Sustainability (Switzerland),0,0,0,0,0,0,0,0,0,0,0,12,0,0,0
+Community Development,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Agribusiness,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Journal of Rural Studies,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Public Health Nutrition,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Rural Sociology,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Agricultural Systems,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0
+Aquaculture,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0
+Agricultural Economics (United Kingdom),0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Agroecology and Sustainable Food Systems,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+American Behavioral Scientist,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Applied Economic Perspectives and Policy,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+British Food Journal,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Environmental Science and Technology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+HortTechnology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Applied Communications,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Food Protection,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Food Safety,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Survey Statistics and Methodology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Local Environment,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Marine Resource Economics,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Agriculture and Food Security,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Ecological Economics,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+Food Policy,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+Land Use Policy,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+New England Journal of Entrepreneurship,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+Agriculture (Switzerland),2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Australian Journal of Agricultural and Resource Economics,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Culture Agriculture Food and Environment,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+EDIS,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0
+Food Studies,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Frontiers in Big Data,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Frontiers in Sustainable Food Systems,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0
+International Journal of Value Chain Management,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Agricultural & Food Information,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Agricultural Biological and Environmental Stat...,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Economic Issues,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Financial Services Marketing,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Proceedings of the ACM on Human-Computer Interaction,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Statistical Journal of the IAOS,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Sustainability,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Trends in Food Science & Technology,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ager,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+European Review of Agricultural Economics,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Food Quality and Preference,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Frontiers in Plant Science,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Journal of Advanced Research in Dynamical and Control Sys...,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Agriculture and Food Research,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Ocean and Coastal Economics,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Political Ecology,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Soil and Water Conservation,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of the Agricultural and Applied Economics Associa...,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Nutrients,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Revista de Gestao Social e Ambiental,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Student Anthropologist,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+The AMA Journal of Ethic,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Translational Animal Science,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0

@@ -9,5 +9,46 @@ format:
     css: styles.css
 ---
 
-**Add file here**
+| alias_id | parent_alias_id | alias                                                                 | alias_type | usda_dataset                                   |
+|----------|------------------|-----------------------------------------------------------------------|------------|------------------------------------------------|
+| 12       | 282              | ARMS Farm Financial and Crop Production Practices                    | alias      | agricultural resource management survey        |
+| 21       | 282              | Agricultural Resource Management Survey                              | alias      | agricultural resource management survey        |
+| 46       | 282              | Agricultural Resources Management Survey                             | alias      | agricultural resource management survey        |
+| 282      | 282              | Agricultural Resource Management Survey (ARMS)                       | main       | agricultural resource management survey        |
+| 283      | 282              | Farm Financial and Crop Production Practices (ERS)                   | alias      | agricultural resource management survey        |
+| 284      | 282              | Farm Income and Financial Forecast (ERS)                             | alias      | agricultural resource management survey        |
+| 285      | 282              | Farm Household Income and Characteristics (ERS)                      | alias      | agricultural resource management survey        |
+| 286      | 282              | Farm Income and Wealth Statistics (ERS)                              | alias      | agricultural resource management survey        |
+| 287      | 282              | Farm Production Expenditures (NASS)                                  | alias      | agricultural resource management survey        |
+| 288      | 282              | Agricultural Resource Management Study                               | alias      | agricultural resource management survey        |
+| 289      | 282              | Agricultural Resources Management Study                              | alias      | agricultural resource management survey        |
+| 87       | 89               | Census of Agriculture                                                | alias      | census of agriculture                          |
+| 88       | 89               | USDA Census of Agriculture                                           | alias      | census of agriculture                          |
+| 89       | 89               | NASS Census of Agriculture                                           | main       | census of agriculture                          |
+| 279      | 89               | Agricultural Census                                                  | alias      | census of agriculture                          |
+| 280      | 89               | USDA Census                                                          | alias      | census of agriculture                          |
+| 281      | 89               | AG Census                                                            | alias      | census of agriculture                          |
+| 1006002  | 1006002          | Current Population Survey Food Security Supplement,                  | Main       | current population survey food security supplement |
+| 1006016  | 1006002          | CPS-FSS                                                              | Acronym    | current population survey food security supplement |
+| 1006017  | 1006002          | Current Population Survey Food Security Supplement                   | Alias      | current population survey food security supplement |
+| 1006003  | 1006003          | Farm to School Census,                                               | Main       | farm-to-school                                 |
+| 1006007  | 1006007          | food access research atlas                                           | Main       | food access research atlas                     |
+| 1006009  | 1006009          | household food security survey module                                | Main       | household food security survey module          |
+| 1006000  | 1006000          | Information Resources, Inc. (IRI) InfoScan                           | Main       | information resources, inc.                    |
+| 1006001  | 1006001          | Information Resources, Inc. (IRI) Consumer Network Panel             | Main       | information resources, inc.                    |
+| 1006012  | 1006000          | IRI Infoscan                                                         | Alias      | information resources, inc.                    |
+| 1006013  | 1006001          | IRI Consumer Network Panel                                           | Alias      | information resources, inc.                    |
+| 1006010  | 1006010          | local food marketing practices survey                                | Main       | local food marketing practices survey          |
+| 1006018  | 1006010          | LFMPS                                                                | Acronym    | local food marketing practices survey          |
+| 1006005  | 1006005          | food acquisition and purchase survey                                 | Main       | national household food acquisition            |
+| 1006014  | 1006005          | FoodAPS                                                              | Acronym    | national household food acquisition            |
+| 1006006  | 1006006          | quarterly food at home price database                                | Main       | quarterly food at home price database          |
+| 1006015  | 1006006          | QFAHPD                                                               | Acronym    | quarterly food at home price database          |
+| 1007000  | 1007000          | RUCC                                                                 | main       | rural-urban continuum codes                    |
+| 1007001  | 1007000          | Rural-Urban Continuum Codes                                          | alias      | rural-urban continuum codes                    |
+| 1007002  | 1007000          | Rural Urban Continuum Codes                                          | alias      | rural-urban continuum codes                    |
+| 1007003  | 1007000          | https://www.ers.usda.gov/data-products/rural-urban-continuum-codes.aspx | alias  | rural-urban continuum codes                    |
+| 1006019  | 1006019          | Tenure, ownership, and transition of agricultural land               | Alias      | tenure, ownership, and transition of agricultural land |
+| 1006011  | 1006011          | transition of agricultural land survey                               | Main       | transition of agricultural land survey         |
+
 

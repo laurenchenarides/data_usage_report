@@ -1,0 +1,460 @@
+journal_title,Scopus only,OpenAlex Seed only,OpenAlex FT only,Dimensions only,Scopus ∩ OA Seed,Scopus ∩ OA FT,Scopus ∩ Dimensions,OA Seed ∩ OA FT,OA Seed ∩ Dimensions,OA FT ∩ Dimensions,Scopus ∩ OA Seed ∩ OA FT,Scopus ∩ OA Seed ∩ Dimensions,Scopus ∩ OA FT ∩ Dimensions,OA Seed ∩ OA FT ∩ Dimensions,Scopus ∩ OA Seed ∩ OA FT ∩ Dimensions
+Public Health Nutrition,0,0,0,0,0,0,0,0,0,0,0,242,0,0,0
+Journal of Hunger and Environmental Nutrition,0,0,0,0,0,0,0,0,0,0,0,192,0,0,0
+Journal of Nutrition Education and Behavior,0,0,0,0,0,0,0,0,0,0,0,167,0,0,0
+Journal of the Academy of Nutrition and Dietetics,0,0,0,0,0,0,0,0,0,0,0,155,0,0,0
+International Journal of Environmental Research and Publi...,0,0,0,0,0,0,0,0,0,0,0,128,0,0,0
+Nutrients,0,0,0,0,0,0,0,0,0,0,0,127,0,0,0
+Journal of Nutrition,0,0,0,0,0,0,0,0,0,0,0,100,0,0,0
+Appetite,0,0,0,0,0,0,0,0,0,0,0,98,0,0,0
+BMC Public Health,0,0,0,0,0,0,0,0,0,0,0,75,0,0,0
+Journal of American College Health,0,0,0,0,0,0,64,0,0,0,0,0,0,0,0
+Academic Pediatrics,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0
+Contemporary Clinical Trials,0,0,0,0,0,0,0,0,0,0,0,42,0,0,0
+Annals of Epidemiology,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0
+Preventive Medicine,0,0,0,0,0,0,0,0,0,0,0,40,0,0,0
+American Journal of Preventive Medicine,0,0,0,0,0,0,36,0,0,0,0,0,0,0,0
+Food Security,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0
+Social Science and Medicine,0,0,0,0,0,0,0,0,0,0,0,34,0,0,0
+PLoS ONE,0,0,0,0,0,0,0,0,0,0,0,33,0,0,0
+Pediatrics,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0
+International Journal of Eating Disorders,0,0,0,0,0,0,0,0,0,0,0,28,0,0,0
+American Journal of Health Promotion,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0
+Frontiers in Public Health,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0
+Journal of Adolescent Health,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0
+Journal of Immigrant and Minority Health,0,0,0,0,0,0,0,0,0,0,0,26,0,0,0
+Current Developments in Nutrition,0,0,0,0,0,0,0,0,0,0,0,25,0,0,0
+Eating Behaviors,0,0,0,0,0,0,24,0,0,0,0,0,0,0,0
+Journal of Agriculture Food Systems and Community Develop...,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0
+Ecology of Food and Nutrition,0,0,0,0,0,0,22,0,0,0,0,0,0,0,0
+Pediatric Obesity,0,0,0,0,0,0,0,0,0,0,0,22,0,0,0
+Translational Behavioral Medicine,0,0,0,0,0,0,22,0,0,0,0,0,0,0,0
+Journal of Nutrition in Gerontology and Geriatrics,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0
+Health Affairs,0,0,0,0,0,0,0,0,0,0,0,19,0,0,0
+Preventive Medicine Reports,0,0,0,0,0,0,19,0,0,0,0,0,0,0,0
+Advances in Nutrition,0,0,0,0,0,0,18,0,0,0,0,0,0,0,0
+American Journal of Public Health,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0
+Applied Economic Perspectives and Policy,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0
+Journal of Community Health,0,0,0,0,0,0,18,0,0,0,0,0,0,0,0
+Journal of Student Affairs Research and Practice,0,0,0,0,0,0,18,0,0,0,0,0,0,0,0
+Public Health Reports,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0
+Surgery for Obesity and Related Diseases,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0
+American Journal of Clinical Nutrition,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0
+BMJ Open,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0
+Journal of Hunger & Environmental Nutrition,0,0,0,0,0,0,0,0,16,0,0,0,0,0,0
+Journal of Poverty,0,0,0,0,0,0,16,0,0,0,0,0,0,0,0
+Supportive Care in Cancer,0,0,0,0,0,0,0,0,0,0,0,16,0,0,0
+AIDS and Behavior,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0
+Family & Community Health,0,0,0,0,0,0,0,0,14,0,0,0,0,0,0
+Frontiers in Nutrition,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0
+International Journal of Behavioral Nutrition and Physica...,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0
+Journal of Health Care for the Poor and Underserved,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0
+Journal of Racial and Ethnic Health Disparities,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0
+Maternal and Child Health Journal,0,0,0,0,0,0,0,0,0,0,0,14,0,0,0
+Agriculture and Human Values,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13
+American Journal of Obstetrics and Gynecology,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0
+Development and Psychopathology,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0
+Disability and Health Journal,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0
+Food and Nutrition Bulletin,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0
+Journal of Affective Disorders,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0
+Maternal and Child Nutrition,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0
+Obesity,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0
+Social Work in Public Health,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0
+Health Equity,0,0,0,0,0,0,11,0,0,0,0,0,0,0,0
+Preventing Chronic Disease,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0
+SSM - Population Health,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0
+American Journal of Human Biology,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0
+Canadian Journal of Public Health,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0
+Clinical Pediatrics,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0
+European Journal of Nutrition,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0
+Health Promotion Practice,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0
+Journal of Child and Family Studies,0,0,0,0,0,0,0,0,10,0,0,0,0,0,0
+Journal of Developmental and Behavioral Pediatrics,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0
+Journal of Economic and Social Measurement,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0
+Journal of Family and Economic Issues,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0
+Public Health,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0
+Public Health Nursing,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0
+JAMA Network Open,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0
+AIDS Care - Psychological and Socio-Medical Aspects of AI...,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+American Surgeon,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+BMC Nutrition,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0
+British Journal Of Nutrition,0,0,0,0,0,0,0,0,8,0,0,0,0,0,0
+Childhood Obesity,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0
+Clinical Obesity,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Diabetes,0,0,0,8,0,0,0,0,0,0,0,0,0,0,0
+Environmental Health Perspectives,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Ethnicity and Health,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0
+Food Policy,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Frontiers in Sustainable Food Systems,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0
+JAMA Pediatrics,0,0,0,8,0,0,0,0,0,0,0,0,0,0,0
+JMIR Research Protocols,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0
+Journal of Family Issues,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0
+Journal of General Internal Medicine,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0
+Journal of Nutritional Science,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0
+Journal of Public Health (United Kingdom),0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Journal of Renal Nutrition,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Journal of the American Academy of Child & Adolescent Psy...,0,0,0,8,0,0,0,0,0,0,0,0,0,0,0
+Nutrition Reviews,0,0,0,8,0,0,0,0,0,0,0,0,0,0,0
+Pediatric Diabetes,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Children,0,0,0,0,0,0,7,0,0,0,0,0,0,0,0
+Nutrition Journal,0,0,0,0,0,0,0,0,0,0,0,7,0,0,0
+AIDS Patient Care and STDs,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+AIDS Research and Human Retroviruses,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+African Journal of Food Agriculture Nutrition and Develop...,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0
+American Journal of Epidemiology,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0
+American Journal of Health Behavior,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+British Journal of Nutrition,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cancer Causes and Control,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Cancer Epidemiology Biomarkers and Prevention,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Child and Adolescent Social Work Journal,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Diabetes Research and Clinical Practice,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Diabetes Spectrum,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Disaster Medicine and Public Health Preparedness,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0
+Drug and Alcohol Dependence,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Eating and Weight Disorders,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Environmental Research,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Epidemiology and Infection,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Epidemiology and Psychiatric Sciences,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+European Journal of Clinical Nutrition,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Global Food Security,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Health and Social Care in the Community,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+International Journal for Equity in Health,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+JAMA,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0
+Journal of Clinical Oncology,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Journal of Community Psychology,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Journal of Consumer Affairs,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Journal of Consumer Policy,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Journal of Marriage and Family,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Journal of Medical Systems,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Journal of Public Affairs,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Journal of School Health,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Journal of the American Geriatrics Society,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Journal of the Association of Nurses in AIDS Care,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0
+Nutrire,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Nutrition and Cancer,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Nutrition and Health,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Physiology and Behavior,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Population Health Management,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Social Indicators Research,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Social Psychiatry and Psychiatric Epidemiology,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Social Science & Medicine,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0
+The Journal of the American Board of Family Medicine,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0
+Western Journal of Emergency Medicine,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+World Development,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+BMC Endocrine Disorders,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0
+Journal of Public Health (Germany),0,0,0,0,0,0,0,0,0,0,0,5,0,0,0
+Journal of Urology,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0
+Journal of the National Medical Association,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0
+PLOS Global Public Health,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0
+Renewable Agriculture and Food Systems,0,0,5,0,0,0,0,0,0,0,0,0,0,0,0
+Scientific Reports,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0
+Trials,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0
+Work,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0
+Addiction,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Advances in Social Work,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+American Journal of Agricultural Economics,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+American Journal of Gastroenterology,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+American Journal of Geriatric Psychiatry,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+American Journal of Ophthalmology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+American Journal of Perinatology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Annals of Family Medicine,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Applied Psychology: Health and Well-Being,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Archives of Gerontology and Geriatrics,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Biomedica,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Biometrics,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+British Journal of Health Psychology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Can J Public Health,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0
+Canadian Journal of Agricultural Economics,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Canadian Medical Association Journal,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0
+Chemosphere,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Children and Youth Services Review,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Children's Health Care,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Chronobiology International,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Ciencia e Saude Coletiva,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0
+Clinical Infectious Diseases,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+Clinical Nutrition,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Developmental Psychobiology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Diabetes Educator,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Educational and Psychological Measurement,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Families in Society,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Family and Community Health,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gender Issues,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Gerodontology,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+HIV Medicine,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Health & Social Care in the Community,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0
+Health Care For Women International,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+Health Education Journal,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Health Promotion Journal of Australia,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Health Psychology,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+Health Services Research,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Health and Social Work,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Infant Behavior and Development,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Infant and Child Development,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+International Journal of Pediatrics,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+International Journal of Public Health,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0
+Journal of Agromedicine,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Applied Gerontology,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of College Student Development,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Development Studies,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Epidemiology and Global Health,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Exposure Science and Environmental Epidemiology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Health Psychology,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+Journal of Human Nutrition and Dietetics,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Latinos and Education,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+Journal of Nursing Scholarship,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Obesity,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Perinatology,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+Journal of Psychosomatic Research,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Public Health Dentistry,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of School Violence,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Traumatic Stress,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Urban Affairs,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Measurement,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Mindfulness,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Nursing Forum,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Nutrition,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Obesity Surgery,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Obstetrics and Gynecology,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+Postgraduate Medicine,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Primary Care Diabetes,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Resources Conservation and Recycling,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+Sleep Health,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Southern Medical Journal,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Sport Sciences for Health,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Sustainability,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0
+The FASEB Journal,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+The Journal of Pediatrics,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+The Journals of Gerontology Series B,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+The journal of nutrition health & aging,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+Trauma Violence & Abuse,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+Women's Health Issues,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+BMC Infectious Diseases,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+BMC Obesity,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+BMC Rheumatology,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+BMJ Nutrition Prevention and Health,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Canadian Public Policy,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+Family Medicine,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0
+Frontiers in Pediatrics,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Heliyon,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+International Food and Agribusiness Management Review,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+JAMA Health Forum,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+JIMD Reports,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+Journal of Professional Nursing,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+Journal of Public Health,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
+Psychology of Sport and Exercise,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+Schizophrenia Bulletin,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0
+ACM Transactions on Computing for Healthcare,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+AIDS Care,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+AJPM Focus,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Academic Emergency Medicine,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Activities Adaptation and Aging,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ageing International,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ageing and Society,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Aging & Mental Health,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Aging and Mental Health,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Agribusiness,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Agriculture and Food Security,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Alcohol,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+AlterNative An International Journal of Indigenous Peoples,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+American Journal of Health Education,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+American Journal of Nursing,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+American Journal of Obstetrics & Gynecology MFM,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+American Journal of Perinatology Reports,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+American Journal of Tropical Medicine and Hygiene,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+American Journal of Undergraduate Research,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Annual Review of Nutrition,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Anthropology and Aging,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Anthropology of Work Review,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+BMC Pediatrics,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0
+Behavioral Sleep Medicine,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Behavioural Processes,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+British Food Journal,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bulletin of Geography Socio-economic series,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Canadian Journal of Diabetes,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Canadian Journal of Dietetic Practice and Research,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Canadian Journal of Economics/Revue canadienne d conomique,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Canadian Journal of Psychiatry,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cancer,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Circulation Research,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Clinical Psychological Science,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Community College Journal of Research and Practice,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Community Dentistry and Oral Epidemiology,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Community Development,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+Community Mental Health Journal,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Criminal Justice and Behavior,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Cultural Diversity and Ethnic Minority Psychology,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Culture Agriculture Food and Environment,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Current Atherosclerosis Reports,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Current Cardiovascular Risk Reports,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Current Nutrition Reports,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Current Opinion in Pediatrics,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Depression and Anxiety,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Eating and Weight Disorders - Studies on Anorexia Bulimia...,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Educational Researcher,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Energy Research and Social Science,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Environmental Pollution,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+European Journal of Oncology Nursing,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+European Review of Agricultural Economics,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Families Systems & Health,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Family Medicine and Community Health,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Food and Foodways,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Food and Nutrition Research,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Gastroenterology,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Geriatrics and Gerontology International,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gerontologist,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Global Journal of Health Science,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Health Behavior and Policy Review,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Health Education & Behavior,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Health affairs (Project Hope),0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Health and Quality of Life Outcomes,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0
+Housing and Society,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Human Organization,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Indian Journal of Public Health Research and Development,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+International Journal of Dental Hygiene,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+International Journal of Epidemiology,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+International Journal of Gastronomy and Food Science,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+International Journal of Qualitative Methods,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+International Journal of STD & AIDS,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+International Journal of the Commons,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+International Social Science Journal,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+JAIDS Journal of Acquired Immune Deficiency Syndromes,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+JAMA Internal Medicine,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal for Healthcare Quality,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal for Specialists in Pediatric Nursing,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Acquired Immune Deficiency Syndromes,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Aging and Health,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Agribusiness and Rural Development,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Agricultural and Applied Economics,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Applied Research in Intellectual Disabilities,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Cancer Survivorship,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of College Student Retention Research Theory & Pr...,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of College and Character,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Diabetes,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Diabetes and its Complications,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Economic Issues,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Epidemiology and Community Health,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Family Psychology,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Gerontological Social Work,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Human Sciences and Extension,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Librarianship and Information Science,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Medical Internet Research,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Nutrition & Food Sciences,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Pediatric and Adolescent Gynecology,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Pediatrics,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Physical Activity and Health,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Psychoactive Drugs,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Psychosomatic Obstetrics and Gynecology,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Public Health Management and Practice,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Public Health Policy,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Urban Health,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Women s Health,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of the American Board of Family Medicine,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of the American College of Nutrition,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of the American Heart Association,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Journal of the National Cancer Institute,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Jurnal Gizi dan Pangan,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Kidney Medicine,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Landscape and Urban Planning,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Malaysian Journal of Medicine and Health Sciences,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Malaysian Journal of Public Health Medicine,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mediterranean Journal of Nutrition and Metabolism,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Minerva Pediatrica,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+New Directions for Child and Adolescent Development,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+New Solutions,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+North Carolina Medical Journal,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nursing Outlook,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nutrition & Dietetics,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nutrition Research Reviews,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Nutrition and Food Science,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nutrition and Food Sciences Research,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Obesity Science and Practice,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Online Journal of Rural Nursing and Health Care,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+PEDIATRICS,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+PLOS ONE,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Patient Education and Counseling,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pediatric Allergy and Immunology,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pediatric Clinics of North America,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Pediatric Pulmonology,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Permanente Journal,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Perspectives in Public Health,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Physiology & Behavior,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Preventive Nutrition and Food Science,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Progress in Cardiovascular Diseases,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Progress in Community Health Partnerships: Research Educa...,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Psychology in the Schools,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Revista Facultad Nacional de Salud Publica,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Salud Publica de Mexico,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Currents,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Social Problems,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Social Work and Social Sciences Review,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sociological Inquiry,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Sociology Compass,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Sociology of Health and Illness,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Stroke,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Sustainability (Switzerland),0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+The Gerontologist,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+The Journal of Cardiovascular Nursing,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+The Journal of Infectious Diseases,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+The Permanente Journal,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+The Science of The Total Environment,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Topics in Clinical Nutrition,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+VOLUNTAS International Journal of Voluntary and Nonprofit...,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Wellbeing Space and Society,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+West Indian Medical Journal,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Western Journal of Nursing Research,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+World Journal of Urology,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+World Nutrition,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Advances in Family Practice Nursing,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Adyaman niversitesi Salk Bilimleri Dergisi,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Annual Review of Anthropology,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Asia Pacific Journal of Social Work and Development,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Atlanta Studies,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+BMC Geriatrics,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+BMC Primary Care,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+BMJ Open Diabetes Research and Care,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Biomdica,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+California Agriculture,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Challenges,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Ecology and Society,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Economic Anthropology,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Electronic Green Journal,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Energy Research & Social Science,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Evolution Medicine and Public Health,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Food & Nutrition Research,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Foods,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Frontiers in Medicine,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+GeoScape,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Geriatrics,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Gerontology and Geriatric Medicine,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Health Promotion and Chronic Disease Prevention in Canada,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Healthcare (Switzerland),1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Interdisciplinary Journal of Rural and Community Studies,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+International Journal of Migration Health and Social Care,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+International Journal of Translational Medicine,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+JMIR mhealth and uhealth,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Affective Disorders Reports,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Allergy and Clinical Immunology: In Practice,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Applied Communications,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Clinical Child and Adolescent Psychology,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Pediatric Health Care,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Pediatric Nursing,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of the Agricultural and Applied Economics Associa...,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of the American Dental Association,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of the International AIDS Society,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Malaysian Journal of Nutrition,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Measurement: Journal of the International Measurement Con...,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mehmet Akif Ersoy niversitesi Uygulamal Bilimler Dergisi,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Metabolites,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Methods and Protocols,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nutrition and Diabetes,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Population Medicine,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Portuguese Journal of Public Health,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Progress in Nutrition,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rural Sociology,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Salk Bilimleri Dergisi,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Service Review,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Work and Social Welfare,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sustainable Production and Consumption,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The JBI Database of Systematic Reviews and Implementation...,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+The Journal of the Association of Nurses in AIDS Care : J...,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mHealth,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0

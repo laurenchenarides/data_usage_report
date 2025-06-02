@@ -1,0 +1,329 @@
+journal_title,Scopus only,OpenAlex Seed only,OpenAlex FT only,Dimensions only,Scopus ∩ OA Seed,Scopus ∩ OA FT,Scopus ∩ Dimensions,OA Seed ∩ OA FT,OA Seed ∩ Dimensions,OA FT ∩ Dimensions,Scopus ∩ OA Seed ∩ OA FT,Scopus ∩ OA Seed ∩ Dimensions,Scopus ∩ OA FT ∩ Dimensions,OA Seed ∩ OA FT ∩ Dimensions,Scopus ∩ OA Seed ∩ OA FT ∩ Dimensions
+Public Health Nutrition,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100
+International Journal of Environmental Research and Publi...,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90
+Journal of Hunger and Environmental Nutrition,0,0,0,0,0,0,48,0,0,0,0,0,0,0,0
+Preventing Chronic Disease,0,0,0,0,0,0,0,0,0,0,0,0,0,0,38
+Agriculture and Human Values,0,0,0,0,0,0,0,0,0,0,0,0,0,0,35
+American Journal of Obstetrics and Gynecology,0,0,0,0,0,0,0,0,0,0,0,0,31,0,0
+Journal of Agriculture Food Systems and Community Develop...,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0
+Applied Geography,0,0,0,0,0,0,0,0,0,0,0,0,28,0,0
+Journal of Nutrition Education and Behavior,0,0,0,0,0,0,0,0,0,0,0,0,0,0,25
+Health Promotion Practice,0,0,0,0,0,0,24,0,0,0,0,0,0,0,0
+BMC Public Health,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23
+Health and Place,0,0,0,0,0,0,0,0,0,0,0,0,0,0,23
+American Journal of Preventive Medicine,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0
+Obstetrics and Gynecology,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0
+Applied Economic Perspectives and Policy,0,0,0,0,0,0,18,0,0,0,0,0,0,0,0
+Nutrients,0,0,0,0,0,0,17,0,0,0,0,0,0,0,0
+Ethnicity and Health,0,0,0,0,0,0,0,0,0,0,0,0,0,0,16
+Translational Behavioral Medicine,0,0,0,0,0,0,16,0,0,0,0,0,0,0,0
+Professional Geographer,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0
+Journal of the Academy of Nutrition and Dietetics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,14
+Current Developments in Nutrition,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13
+Frontiers in Public Health,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13
+Journal of Public Affairs,0,0,0,0,0,0,0,0,0,0,0,0,13,0,0
+American Journal of Health Promotion,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0
+Food Policy,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12
+Journal of General Internal Medicine,0,0,0,0,0,0,0,0,0,0,0,12,0,0,0
+Journal of School Health,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0
+Local Environment,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0
+Journal of Transport and Health,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11
+Preventive Medicine Reports,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0
+Scientific Reports,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11
+American Journal of Public Health,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0
+Appetite,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0
+Journal of Community Health,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0
+Journal of Urban Health,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0
+PLoS ONE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10
+American Journal of Agricultural Economics,0,0,0,0,0,0,0,0,0,0,0,0,9,0,0
+Annals of Surgical Oncology,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9
+Gynecologic Oncology,0,0,0,0,0,0,0,0,0,9,0,0,0,0,0
+International Journal of Health Geographics,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9
+Journal of Racial and Ethnic Health Disparities,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9
+ACM Transactions on Computer-Human Interaction,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+American Journal of Health Behavior,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+American Journal of Perinatology,0,0,0,0,0,0,0,0,0,0,0,0,8,0,0
+American Surgeon,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Annals of Epidemiology,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Antipode,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Childhood Obesity,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0
+Food Security,0,0,0,0,0,0,0,0,0,0,0,8,0,0,0
+International Journal of Community Well-Being,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+International Journal of Geographical Information Science,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Journal of Nutrition,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Journal of Nutrition in Gerontology and Geriatrics,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Journal of Primary Care and Community Health,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Journal of Vascular Surgery,0,0,0,8,0,0,0,0,0,0,0,0,0,0,0
+Population Health Management,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+Surgery for Obesity and Related Diseases,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0
+American Journal of Cardiology,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7
+Community Development,0,0,0,0,0,0,0,0,0,0,0,0,7,0,0
+Journal of Nutrition Health and Aging,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7
+Journal of Transport & Health,0,0,0,0,0,0,0,0,7,0,0,0,0,0,0
+Academic Pediatrics,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Agricultural Economics (United Kingdom),0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+American Journal of Clinical Nutrition,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Annals of the American Association of Geographers,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Applied Spatial Analysis and Policy,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Cancer Epidemiology Biomarkers & Prevention,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0
+Contemporary Clinical Trials,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Diabetes,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0
+EDIS,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0
+GeoJournal,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Health Affairs,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Health Education Research,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Innovation in Aging,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0
+International Journal of Behavioral Nutrition and Physica...,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+International Journal of Cancer,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+JAMA Network Open,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Journal of Cardiac Failure,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0
+Journal of Hunger & Environmental Nutrition,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0
+Journal of Planning Education and Research,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
+Journal of the American Medical Informatics Association,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Journal of the American Pharmacists Association,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nature Communications,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6
+Naval Research Logistics,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0
+Social Science and Medicine,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Southeastern Geographer,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+Sustainability,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0
+Sustainable Cities and Society,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0
+BMJ Open,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5
+Circulation,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0
+Culture Agriculture Food and Environment,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0
+Data in Brief,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0
+Delaware Journal of Public Health,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0
+Environment and Planning A Economy and Space,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0
+Food and Foodways,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0
+Health Services Research,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0
+Journal of Public Health (Germany),0,0,0,0,0,0,0,0,0,0,0,5,0,0,0
+Journal of the American Heart Association,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5
+SSM - Population Health,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5
+Social Sciences,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0
+Sociology of Race and Ethnicity,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0
+Sustainability (Switzerland),0,0,0,0,0,0,0,0,0,0,0,0,5,0,0
+Urban Studies,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0
+Urology,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0
+Advances in Nutrition,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+American Behavioral Scientist,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Annals of Vascular Surgery,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+CA Cancer Journal for Clinicians,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Canadian Journal of Public Health,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0
+Child Abuse and Neglect,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Clinical Obesity,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+Clinical Pediatrics,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Computer Methods and Programs in Biomedicine,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Critical Reviews in Environmental Science and Technology,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+Eating Behaviors,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Ecology of Food and Nutrition,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Environment and Planning A,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Environmental Geochemistry and Health,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Environmental Justice,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+Environmental Science and Policy,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Evaluation Review,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Family & Community Health,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+Food Culture and Society,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Frontiers in Neuroscience,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+Gerontologist,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Health Education and Behavior,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Human Geography(United Kingdom),0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Informatics for Health and Social Care,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+International Journal of Applied Geospatial Research,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+International Journal of Community and Social Development,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+JMIR Public Health and Surveillance,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4
+Journal of Adolescent Health,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Allergy and Clinical Immunology: In Practice,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Arthroplasty,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Burn Care & Research,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+Journal of Community Psychology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Environmental Studies and Sciences,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Food Protection,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Geovisualization and Spatial Analysis,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Health Care for the Poor and Underserved,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Health Population and Nutrition,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+Journal of Medical Systems,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Pediatric Surgery,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Pediatrics,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Planning Literature,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Poverty,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of Urban Planning and Development,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Journal of the American College of Radiology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Managerial and Decision Economics,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Maternal and Child Health Journal,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Mindfulness,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Obesity,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Obesity Surgery,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Papers in Applied Geography,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Pedagogy in Health Promotion,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Pediatric Blood and Cancer,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Philosophy and Technology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Preventive Medicine,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Primary Care Diabetes,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Public Health Reports,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Qualitative Sociology,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Science of the Total Environment,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Sleep,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Southern Economic Journal,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+The Annals of Thoracic Surgery,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+The international archives of the photogrammetry remote s...,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+The journal of nutrition health & aging,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0
+Urban Affairs Review,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Urban Forestry and Urban Greening,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+Urban Science,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0
+Western Journal of Nursing Research,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0
+American Journal of Community Psychology,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+Annual Review of Resource Economics,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+BioMedical Engineering Online,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Collaborations A Journal of Community-Based Research and ...,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0
+Current Research in Food Science,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Diabetes Care,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+Discover Food,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Environmental Sociology,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+Evaluation and Program Planning,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+Food Research International,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+Journal of Clinical and Translational Science,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Journal of Econometrics,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+Journal of Oral and Maxillofacial Surgery,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0
+Journal of Thoracic Disease,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+Land,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0
+Physiology and Behavior,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0
+Pilot and Feasibility Studies,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+Renewable Agriculture and Food Systems,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0
+Socio-Economic Planning Sciences,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0
+Stroke,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+The Radical Teacher,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0
+mSystems,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0
+AIDS Care - Psychological and Socio-Medical Aspects of AI...,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Advances in Hospitality and Tourism Research,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0
+American Heart Journal Plus: Cardiology Research and Prac...,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+American Journal of Medical Quality,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Archives of Dermatological Research,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+B.E. Journal of Economic Analysis and Policy,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+BMC Geriatrics,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+BMC Pregnancy and Childbirth,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0
+BMC Pulmonary Medicine,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0
+Birth Defects Research,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Blood,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Bone and Joint Journal,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Canadian Geographer,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cancer,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Cancer Research,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Child and Youth Care Forum,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Circulation Cardiovascular Quality and Outcomes,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Circulation: Cardiovascular Quality and Outcomes,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cities,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Clinical Psychological Science,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Communication Monographs,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Communication Teacher,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Community Mental Health Journal,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Current Atherosclerosis Reports,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Current Diabetes Reports,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Environment International,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Environment and Planning B: Urban Analytics and City Science,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Environmental Research,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Environmental Toxicology and Pharmacology,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Ethnic and Racial Studies,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Family and Community Health,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Frontiers in Clinical Diabetes and Healthcare,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0
+Frontiers in Digital Health,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Frontiers in Nutrition,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0
+Geographical Analysis,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Geographical Review,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Harvard Educational Review,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Health Equity,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Healthcare (Switzerland),0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+HortTechnology,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Humanity & Society,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+INQUIRY The Journal of Health Care Organization Provision...,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Indiana Law Review,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+International Journal of Social Welfare,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+JOGNN - Journal of Obstetric Gynecologic and Neonatal Nur...,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Aging Research and Lifestyle,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Agricultural & Food Industrial Organization,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Allergy and Clinical Immunology,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Asthma,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Biomedical Informatics,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Community Practice,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Economic Behavior and Organization,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Journal of Economics Race and Policy,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Evaluation in Clinical Practice,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Gerontological Social Work,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Hospital Medicine,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Humanitarian Logistics and Supply Chain Manage...,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Investigative Dermatology,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Mathematical Behavior,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Journal of Pediatric Orthopaedics,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of Social Distress and the Homeless,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Technology in Human Services,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Trauma and Acute Care Surgery,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of Urbanism,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of the American Board of Family Medicine,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of the American College of Cardiology,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of the American College of Surgeons,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Journal of the American Geriatrics Society,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Liver Transplantation,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+MCN The American Journal of Maternal/Child Nursing,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Medical Care,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Metropolitan Universities,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Milbank Quarterly,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nutrition and Health,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Palgrave Communications,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
+Pathogens,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Policy Design and Practice,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Policy Politics and Nursing Practice,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Proceedings of the ACM on Human-Computer Interaction,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Progress in Community Health Partnerships: Research Educa...,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Purdue Journal of Service-Learning and International Enga...,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Resources Conservation and Recycling,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Social Work in Health Care,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Surgery,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Sustainability and climate change,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The British Journal of Social Work,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+The Journal of Allergy and Clinical Immunology In Practice,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+The Journal of the American Board of Family Medicine,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+The Science of The Total Environment,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Transportation Research Part A: Policy and Practice,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Transportation Research Record Journal of the Transportat...,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Urban Agriculture and Regional Food Systems,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Urban Social Work,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Urban Water Journal,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0
+Water (Switzerland),0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Water Resources and Economics,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Women's Health Reports,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Advances in Hospitality and Tourism Research (AHTR),0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+American Journal of Epidemiology,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+American Journal of Managed Care,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+American Journal of Obstetrics & Gynecology MFM,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Animals,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Architecture_MPS,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+ArtGRID - Journal of Architecture Engineering and Fine Arts,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Binghamton University Undergraduate Journal,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Built Environment,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Children and Youth Services Review,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Chronic Obstructive Pulmonary Diseases Journal of the COP...,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Communications Medicine,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Cureus,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Current Obstetrics and Gynecology Reports,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Environmental Advances,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Exposome,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Frontiers in Pharmacology,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Frontiers in Psychiatry,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Habitat International,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Health Behavior and Policy Review,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Humanities and Social Sciences Communications,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+JMIR Medical Informatics,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Journal of Economic Behavior & Organization,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Journal of Public Health,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Journal of public health,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Journal of the American Planning Association,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MedEdPORTAL,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Policy Futures in Education,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Revista de Nutricao,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SSRN Electronic Journal,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+The B E Journal of Economic Analysis & Policy,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+The International Archives of the Photogrammetry Remote S...,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+The Journal of Mathematical Behavior,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+The Journal of Urology,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Transportation Research Part A Policy and Practice,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Urban Informatics,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Vaccine: X,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Hawaii Journal of Medicine & Public Health,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
