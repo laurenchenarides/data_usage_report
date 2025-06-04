@@ -518,11 +518,29 @@ Now that we have compared journal coverage across the two citation databases, we
 ::: {.content-visible when-format="html"}
 
 <figure style="text-align: center;">
-  <a href="graphics/bubble_charts/dataset01_topics_scopus.png" target="_blank">
-    <img src="graphics/bubble_charts/dataset01_topics_scopus.png" style="width:80%; height:auto;" alt="ARMS Treemap">
+  <a href="graphics/word_clouds/dataset01_wordcloud.png" target="_blank">
+    <img src="graphics/word_clouds/dataset01_wordcloud.png" style="width:80%; height:auto;" alt="ARMS Wordcloud">
   </a>
 </figure>
 
+
+#### Topics by Source {.unnumbered}
+
+<div style="display: flex; gap: 1rem; justify-content: center; padding-top: 0.5rem;">
+
+  <a href="graphics/word_clouds/dataset01_scopus_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Scopus</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset01_openalex_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 OpenAlex</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset01_dimensions_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Dimensions</button>
+  </a>
+
+</div>
 :::
 
 ::: {.content-visible when-format="pdf"}
@@ -533,6 +551,30 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ::: {.content-visible when-format="html"}
 
+<figure style="text-align: center;">
+  <a href="graphics/word_clouds/dataset05_wordcloud.png" target="_blank">
+    <img src="graphics/word_clouds/dataset05_wordcloud.png" style="width:80%; height:auto;" alt="Census of Ag Wordcloud">
+  </a>
+</figure>
+
+
+#### Topics by Source {.unnumbered}
+
+<div style="display: flex; gap: 1rem; justify-content: center; padding-top: 0.5rem;">
+
+  <a href="graphics/word_clouds/dataset05_scopus_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Scopus</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset05_openalex_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 OpenAlex</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset05_dimensions_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Dimensions</button>
+  </a>
+
+</div>
 :::
 
 ::: {.content-visible when-format="pdf"}
@@ -543,6 +585,30 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ::: {.content-visible when-format="html"}
 
+<figure style="text-align: center;">
+  <a href="graphics/word_clouds/dataset08_wordcloud.png" target="_blank">
+    <img src="graphics/word_clouds/dataset08_wordcloud.png" style="width:80%; height:auto;" alt="FARA Wordcloud">
+  </a>
+</figure>
+
+
+#### Topics by Source {.unnumbered}
+
+<div style="display: flex; gap: 1rem; justify-content: center; padding-top: 0.5rem;">
+
+  <a href="graphics/word_clouds/dataset08_scopus_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Scopus</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset08_openalex_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 OpenAlex</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset08_dimensions_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Dimensions</button>
+  </a>
+
+</div>
 :::
 
 ::: {.content-visible when-format="pdf"}
@@ -554,6 +620,30 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ::: {.content-visible when-format="html"}
 
+<figure style="text-align: center;">
+  <a href="graphics/word_clouds/dataset09_wordcloud.png" target="_blank">
+    <img src="graphics/word_clouds/dataset09_wordcloud.png" style="width:80%; height:auto;" alt="FoodAPS Wordcloud">
+  </a>
+</figure>
+
+
+#### Topics by Source {.unnumbered}
+
+<div style="display: flex; gap: 1rem; justify-content: center; padding-top: 0.5rem;">
+
+  <a href="graphics/word_clouds/dataset09_scopus_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Scopus</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset09_openalex_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 OpenAlex</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset09_dimensions_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Dimensions</button>
+  </a>
+
+</div>
 :::
 
 ::: {.content-visible when-format="pdf"}
@@ -564,6 +654,30 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ::: {.content-visible when-format="html"}
 
+<figure style="text-align: center;">
+  <a href="graphics/word_clouds/dataset10_wordcloud.png" target="_blank">
+    <img src="graphics/word_clouds/dataset10_wordcloud.png" style="width:80%; height:auto;" alt="ARMS Wordcloud">
+  </a>
+</figure>
+
+
+#### Topics by Source {.unnumbered}
+
+<div style="display: flex; gap: 1rem; justify-content: center; padding-top: 0.5rem;">
+
+  <a href="graphics/word_clouds/dataset10_scopus_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Scopus</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset10_openalex_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 OpenAlex</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset10_dimensions_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Dimensions</button>
+  </a>
+
+</div>
 :::
 
 ::: {.content-visible when-format="pdf"}
@@ -575,6 +689,30 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ::: {.content-visible when-format="html"}
 
+<figure style="text-align: center;">
+  <a href="graphics/word_clouds/dataset06_wordcloud.png" target="_blank">
+    <img src="graphics/word_clouds/dataset06_wordcloud.png" style="width:80%; height:auto;" alt="ARMS Wordcloud">
+  </a>
+</figure>
+
+
+#### Topics by Source {.unnumbered}
+
+<div style="display: flex; gap: 1rem; justify-content: center; padding-top: 0.5rem;">
+
+  <a href="graphics/word_clouds/dataset06_scopus_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Scopus</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset06_openalex_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 OpenAlex</button>
+  </a>
+
+  <a href="graphics/word_clouds/dataset06_dimensions_wordcloud.png" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 20px; font-size: 1rem; cursor: pointer;">🔍 Dimensions</button>
+  </a>
+
+</div>
 :::
 
 ::: {.content-visible when-format="pdf"}
