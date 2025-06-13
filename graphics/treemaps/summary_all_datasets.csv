@@ -1,13 +1,13 @@
-dataset,Scopus only,OpenAlex Seed only,OpenAlex FT only,Dimensions only,Scopus ∩ OA Seed,Scopus ∩ OA FT,Scopus ∩ Dimensions,OA Seed ∩ OA FT,OA Seed ∩ Dimensions,OA FT ∩ Dimensions,Scopus ∩ OA Seed ∩ OA FT,Scopus ∩ OA Seed ∩ Dimensions,Scopus ∩ OA FT ∩ Dimensions,OA Seed ∩ OA FT ∩ Dimensions,Scopus ∩ OA Seed ∩ OA FT ∩ Dimensions,N
-ARMS,118,26,1162,119,0,5,94,3,20,19,1,10,18,9,7,1611
-Current Population Survey (CPS) Food Security Supplement (FSS),28,48,149,122,3,0,31,0,20,0,0,7,0,0,0,408
-Farm to School Census,20,6,8,29,0,0,29,0,2,0,0,1,0,0,0,95
-IRI InfoScan,2,1,46,16,0,0,6,0,3,0,0,4,0,0,0,78
-Census of Agriculture,2030,447,18,1469,55,0,1707,0,226,6,0,244,3,1,0,6206
-Rural-Urban Continuum Code,520,72,92,770,16,0,699,1,97,0,0,164,0,0,0,2431
-"The Tenure, Ownership, and Transition of Agricultural Land (TOTAL) Survey",7,4,399,10,0,0,14,0,1,0,0,0,0,0,0,435
-Food Access Research Atlas,93,24,15,119,4,6,197,3,24,56,1,33,32,13,19,639
-Food Acquisition and Purchase Survey (FoodAPS),102,17,354,93,5,2,186,0,31,2,0,42,3,2,0,839
-Household Food Security Survey Module,414,133,25,376,15,0,389,0,87,0,0,98,0,0,0,1537
-Local Food Marketing Practices Survey,33,6,2,36,0,0,34,0,7,0,0,7,0,0,0,125
-Quarterly Food at Home Price Database,6,8,3,6,0,0,16,0,3,0,0,3,0,0,0,45
+dataset,Scopus only,OpenAlex only,Dimensions only,Scopus ∩ OpenAlex,Scopus ∩ Dimensions,OpenAlex ∩ Dimensions,Scopus ∩ OpenAlex ∩ Dimensions,N
+ARMS,118,1191,119,6,94,48,35,1611
+Current Population Survey Food Security Supplement,28,197,122,3,31,20,7,408
+Farm to School Census,20,14,29,0,29,2,1,95
+IRI InfoScan,2,47,16,0,6,3,4,78
+Census of Agriculture,2030,465,1469,55,1707,233,247,6206
+Rural-Urban Continuum Code,520,165,770,16,699,97,164,2431
+"The Tenure, Ownership, and Transition of Agricultural Land Survey",7,403,10,0,14,1,0,435
+Food Access Research Atlas,93,42,119,11,197,93,84,639
+Food Acquisition and Purchase Survey,102,371,93,7,186,35,45,839
+Household Food Security Survey Module,414,158,376,15,389,87,98,1537
+Local Food Marketing Practices Survey,33,8,36,0,34,7,7,125
+Quarterly Food at Home Price Database,6,11,6,0,16,3,3,45
