@@ -759,7 +759,7 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ## Author Comparison
 
-### The Census of Agriculture {.unnumbered}
+### ARMS Financial and Crop Production Practices {.unnumbered}
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
