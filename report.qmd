@@ -780,7 +780,7 @@ Now that we have compared journal coverage across the two citation databases, we
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
   <a href="graphics/tilemaps/census_of_agriculture_top_20_author_overlap.png" target="_blank">
-    <img src="graphics/treemaps/census_of_agriculture_top_20_author_overlap.png" style="width:80%; height:auto;" alt="Ag Census Tilemap">
+    <img src="graphics/tilemaps/census_of_agriculture_top_20_author_overlap.png" style="width:80%; height:auto;" alt="Ag Census Tilemap">
   </a>
 </figure>
 :::
@@ -855,31 +855,51 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ## Institutional Comparison
 
-In addition to examining dataset mention coverage, the report also evaluates differences in institutional representation across Scopus, OpenAlex, and Dimensions. Each of the featured citation databases represent some portion of the global research landscape, yet their inclusion criteria and institutional coverage may vary. The purpose of this analysis is to assess which institutions are represented in each source, with particular attention to coverage of underrepresented and Minority-Serving Institutions (MSIs). 
+In addition to examining dataset mention coverage, the report also evaluates differences in institutional representation across Scopus, OpenAlex, and Dimensions. Each of the featured citation databases represent some portion of the global research landscape, yet their inclusion criteria and institutional coverage may vary. The purpose of this analysis is to assess which institutions are represented in each source. 
 
-To create a harmonsized dataset of institutional coverage across datasets, institutional affiliation data associated with each publication's athor(s) are linked to institutional records using IPEDS identifiers. Linking the publication metadata with IPEDS institutional data adds information not available in the publication affiliation data alone. This additional information includes public or private institution (control), degree level, MSI designation, and geographic location. Special attention is given to coverage of underrepresented institutions and Minority-Serving Institutions (MSIs). 
-
-### IPEDS and MSI Classifications
-<!-- In this section, I document the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023.  -->
-
-First, a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time is created. Two sources were used: (1) the MSI Data Project (Nguyen et al., 2023) identifies MSI institutions from 2017–2021 and (2) Rutgers CMSI identifies MSI institutions for 2022–2023. These datasets were cleaned and merged with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. Data cleaning steps included: addressing inconsistencies in eligibility labels, removing duplicates, and creating summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are available in the report appendices^[[IPEDS appendix available here](appendices/app_ipeds.qmd)] and MSI^[[MSI appendix available here](appendices/app_msi.qmd)].
+### Scopus
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
-  <a href="data/ipeds_msi/msi_eligibility_plot.png" target="_blank">
-    <img src="data/ipeds_msi/msi_eligibility_plot.png" style="width:80%; height:auto;" alt="MSI Eligibility Plot">
+  <a href="graphics/maps/scopus_normalized_dois_per_institution.png" target="_blank">
+    <img src="graphics/maps/scopus_normalized_dois_per_institution.png" style="width:80%; height:auto;" alt="Scopus Map">
   </a>
-  <figcaption style="font-size: 0.9em; margin-top: 0.5em;">
-    <em>Source code used to generate graphic:</em> <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/blob/main/data/ipeds_msi/build_ipeds_msi.R" target="_blank">Available here</a>.
-  </figcaption>
 </figure>
 :::
 
 ::: {.content-visible when-format="pdf"}
-![](data/ipeds_msi/msi_eligibility_plot.png){fig-cap="MSI Eligibility Trends 2017-2023"}
+![](graphics/maps/scopus_normalized_dois_per_institution.png)
 :::
 
-### Results of Institutional Comparision
+### Dimensions
+
+::: {.content-visible when-format="html"}
+<figure style="text-align: center;">
+  <a href="graphics/maps/dimensions_normalized_dois_per_institution.png" target="_blank">
+    <img src="graphics/maps/dimensions_normalized_dois_per_institution.png" style="width:80%; height:auto;" alt="Scopus Map">
+  </a>
+</figure>
+:::
+
+::: {.content-visible when-format="pdf"}
+![](graphics/maps/dimensions_normalized_dois_per_institution.png)
+:::
+
+### OpenAlex
+
+::: {.content-visible when-format="html"}
+<figure style="text-align: center;">
+  <a href="graphics/maps/openalex_normalized_dois_per_institution.png" target="_blank">
+    <img src="graphics/maps/openalex_normalized_dois_per_institution.png" style="width:80%; height:auto;" alt="Scopus Map">
+  </a>
+</figure>
+:::
+
+::: {.content-visible when-format="pdf"}
+![](graphics/maps/openalex_normalized_dois_per_institution.png)
+
+:::
+
 
 # Conclusion
 

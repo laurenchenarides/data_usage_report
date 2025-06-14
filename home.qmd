@@ -28,15 +28,21 @@ format:
 
 # What Is the Issue? {.unnumbered}
 
-Federal datasets play an important role in supporting research across a range of disciplines. Measuring how these datasets are used can help evaluate their impact and inform future data investments. Agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like [DemocratizingData.ai](https://democratizingdata.ai/tools/dashboards/) and [NASS’s 5’s Data Usage Dashboard](https://www.nass.usda.gov/Data_Visualization/5W/index.php). These tools rely on identifying dataset mentions in published research. Beyond reporting usage volume, this type of analysis can also provide information about the research topics where federal datasets are applied. This helps characterize their disciplinary reach, including use in areas such as food security, nutrition, and climate, which are inherently multidisciplinary. It may also help identify alternative datasets and methods that researchers use to study similar questions across fields.
+Federal datasets play an important role in supporting research across a range of disciplines. Measuring how these datasets are used can help evaluate their impact and inform future data investments. Agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like *Democratizing Data's* [Food and Agricultural Research Data Usage Dashboard](https://democratizingdata.ai/tools/dashboard/food-agricultural-research/) and [NASS’s 5 W's Data Usage Dashboard](https://www.nass.usda.gov/Data_Visualization/5W/index.php). These tools rely on identifying *dataset mentions*^[A dataset mention refers to an instance in which a specific dataset is referenced, cited, or named within a research publication. This can occur in various parts of the text, such as the abstract, methods, data section, footnotes, or references, and typically indicates that the dataset was used, analyzed, or discussed in the study.] in published research to develop usage statistics. Beyond reporting usage statistics, this type of analysis can also provide information about the research topics where federal datasets are applied. Understanding where federal datasets are applied helps characterize their disciplinary reach, including use in areas such as food security, nutrition, and climate, which are inherently multidisciplinary. This informs future work on identifying alternative datasets that researchers use to study similar questions across fields.
 
-The process of identifying dataset mentions in academic research output requires the use of **citation databases**. However, different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports. Tracking dataset usage requires developing methods that scan publication text for dataset mentions. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. Not to mention, dataset tracking requires reliable citation data from citation databases.
+The process of identifying dataset mentions in academic research output has two requirements. First, citation databases provide structured access to large volumes of publication metadata, including titles, abstracts, authors, affiliations, and sometimes full-text content. Second, tracking dataset usage requires developing methods that scan publication text for dataset mentions. It is feasible to systematically identify where specific datasets are referenced across a broad set of research outputs by applying [machine-learning algorithms](https://github.com/democratizingdata/democratizingdata-ml-algorithms/tree/main) to publication corpora collected from citation databases, allowing for scalable search and retrieval of relevant publications where datasets are mentioned. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. However, different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports - and dataset tracking requires reliable citation data from citation databases.
 
 This report presents a methodology for identifying dataset mentions in research publications across various citation databases. In doing so, we compare publication, journal, and topic coverage across Scopus, OpenAlex, and Dimensions [forthcoming] as primary sources. The purpose is to establish a consistent set of statistics for comparing results and evaluating differences in dataset tracking across citation databases. This allows for insights into how publication scope and indexing strategies influence dataset usage statistics.
 
 # How Was the Study Conducted? {.unnumbered}
 
-The **three** citation databases we are comparing are Elsevier’s Scopus, OurResearch's OpenAlex, and Digital Science's Dimensions.ai. [**Scopus**](appendices/app_databases.qmd#sec-scopus) charges for access to its citation database. It focuses on peer-reviewed literature and provides metadata about authors, institutions, and citations for academic journals. [**OpenAlex**](appendices/app_databases.qmd#sec-openalex), an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. [**Dimensions**](appendices/app_databases.qmd#sec-dimensions), developed by Digital Science, offers a hybrid model that provides both free and subscription-based access to its citation database. Unlike Scopus, which primarily indexes peer-reviewed journal articles, and OpenAlex, which emphasizes open-access content, Dimensions aggregates a broad spectrum of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. It integrates citation data with funding information, making it a useful tool for assessing the impact of research beyond traditional academic publishing.
+Three citation databases are compared: Elsevier’s Scopus, OurResearch's OpenAlex, and Digital Science's Dimensions.ai. 
+
+1. [**Scopus**](appendices/app_databases.qmd#sec-scopus) charges for access to its citation database. It indexes peer-reviewed, including journal articles, conference papers, and books, and provides metadata on authorship, institutional affiliation, funding sources, and citations. For this study, Scopus was used to identify dataset mentions through a two-step process: first, Elsevier executed queries against the full-text ScienceDirect corpus and reference lists within Scopus; second, publications likely to mention USDA datasets were filtered based on keyword matching and machine learning models.
+
+2. [**OpenAlex**](appendices/app_databases.qmd#sec-openalex), an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. In this study, we used two approaches to identify dataset mentions in OpenAlex: a full-text search, which scans publication metadata fields such as titles and abstracts for references to USDA datasets,^[Full-text search in OpenAlex refers to querying the entire database for textual mentions of dataset names within titles, abstracts, and other fields.] and a seed corpus search, which starts with a targeted set of publications based on journal, author, and topic criteria, then downloads the full text of each paper to identify mentions of USDA datasets.^[The seed corpus search involves selecting a targeted set of publications based on journal, author, and topic filters. Full-text PDFs are downloaded and analyzed to identify mentions of USDA datasets not captured through metadata alone.] 
+
+3. [**Dimensions**](appendices/app_databases.qmd#sec-dimensions), developed by Digital Science, is a citation database that combines free and subscription-based access. It indexes a range of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. Dimensions also links publications to grant and funding information. For this study, publications in Dimensions that reference USDA datasets were identified by **Add Rafael's text**. To maintain consistency with the criteria applied to Scopus and OpenAlex, the study focuses only on publications classified as journal articles.
 
 To compare how these databases track dataset usage, we focus on six USDA datasets commonly used in agricultural, economic, and food policy research:
 
@@ -51,47 +57,37 @@ These datasets were selected for their policy relevance, known usage frequency, 
 
 # What Did the Study Find? {.unnumbered}
 
-Accurate tracking of dataset mentions relies heavily on how publications are indexed across citation databases. For two citation databases -- Scopus and OpenAlex -- carefully constructed seed corpora were needed to track dataset mentions. 
+Accurate tracking of dataset mentions relies heavily on how publications are indexed across citation databases. For two citation databases -- Scopus and OpenAlex -- carefully constructed seed corpora were needed to track dataset mentions.
 
 **Preview of Results from Database Comparison:**
 
 1. Across databases, there is limited publication overlap between citation databases. For example:
 
 - Less than 10% of DOIs typically appear in both Scopus and OpenAlex in any combination.
-
 - 51.8% of Food Access Research Atlas DOIs appear only in Scopus.
-
 - 60.9% of Household Food Security Survey Module DOIs appear only in Scopus.
-
 - 78.5% of ARMS DOIs appear only in OpenAlex Full Text.
 
 2. Journal coverage by source (Scopus or OpenAlex) varies significantly by dataset:
 
 - Scopus recovers the most publications MORE HERE.
-
 - OpenAlex "Full Text" recovers the most publications MORE HERE.
-
 - OpenAlex "Seed Search" identifies the most publications MORE HERE.
 
 3. Topical coverage reflects the varied policy and disciplinary relevance of each dataset:
 
 - ARMS: Research citing this dataset emphasizes agricultural management, accounting, and environmental topics.
-
 - The Census of Agriculture: Research mentioning this dataset has a wide breadth, spanning accounting and environmental applications.
-
+- Food Access Research Atlas: Publications focus on food security, public health, and urban planning.
+- The Food Acquisition and Purchase Survey: This dataset is mentioned in studies of consumer behavior, nutrition economics, and household spending.
+- The Household Food Security Survey Module: Research mentioning this dataset frequently cites topics such as food insecurity, poverty, and social policy evaluation.
 - The Rural-Urban Continuum Code: Research citing this dataset includes rural classification, regional planning, and spatial analysis.
 
-- Food Access Research Atlas: Publications focus on food security, public health, and urban planning.
+**Key Takeaway:** These patterns suggest that relying on a single citation database may undercount dataset usage, and may also obscure variation in the types of research topics being conducted with each dataset.
 
-- FoodAPS: This dataset is mentioned in studies of consumer behavior, nutrition economics, and household spending.
+# How to Use This Report {.unnumbered}
 
-- HHFSS: Research mentioning this dataset frequently cites topics such as food insecurity, poverty, and social policy evaluation.
-
-**Key Takeaway:** These patterns suggest that relying on a single citation database may undercount dataset usage, and may also obscure variation in the types of research being conducted with each dataset.
-
-# What are the Contributions of this Study? {.unnumbered}
-
-Our methodology provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. We developed procedures for:
+The report is preliminary in nature. It provides an initial approach to characterizing dataset mentions about food and agriculture research datasets in research papers reported in various databases, specifically Scopus, OpenAlex, and Dimensions. It includes procedures for:
 
 -   Identifying publication coverage across citation databases
 -   Cross-referencing publications between datasets
@@ -100,11 +96,8 @@ Our methodology provides a systematic approach for assessing citation databases�
 The methodology produced these reusable components:
 
 -   Code repository for data cleaning and standardization
--   Crosswalk table structure linking Scopus and OpenAlex publication records and institutions
 -   <a href="https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_crosswalk.html" target="_blank" rel="noopener">Data schemas by citation database</a>
 <!-- -   Cleaned author tables with disambiguated names and institutional affiliations -->
 -   Standardized institution tables using IPEDS identifiers
 
 The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.
-
-<!---Beyond platform comparison, this methodology examines inclusivity in research coverage, particularly representation of MSIs. This component helps identify potential gaps in dataset accessibility and adoption across different types of research institutions.--->

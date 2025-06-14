@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-06-13">
+<meta name="dcterms.date" content="2025-06-14">
 
 <title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
@@ -225,6 +225,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./appendices/app_institutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cleaning IPEDS and MSI Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./appendices/app_ipeds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Classifying Institutions with the IPEDS Database</span></a>
   </div>
@@ -318,8 +324,9 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#institutional-comparison" id="toc-institutional-comparison" class="nav-link" data-scroll-target="#institutional-comparison"><span class="header-section-number">3.5</span> Institutional Comparison</a>
   <ul class="collapse">
-  <li><a href="#ipeds-and-msi-classifications" id="toc-ipeds-and-msi-classifications" class="nav-link" data-scroll-target="#ipeds-and-msi-classifications"><span class="header-section-number">3.5.1</span> IPEDS and MSI Classifications</a></li>
-  <li><a href="#results-of-institutional-comparision" id="toc-results-of-institutional-comparision" class="nav-link" data-scroll-target="#results-of-institutional-comparision"><span class="header-section-number">3.5.2</span> Results of Institutional Comparision</a></li>
+  <li><a href="#scopus" id="toc-scopus" class="nav-link" data-scroll-target="#scopus"><span class="header-section-number">3.5.1</span> Scopus</a></li>
+  <li><a href="#dimensions-1" id="toc-dimensions-1" class="nav-link" data-scroll-target="#dimensions-1"><span class="header-section-number">3.5.2</span> Dimensions</a></li>
+  <li><a href="#openalex" id="toc-openalex" class="nav-link" data-scroll-target="#openalex"><span class="header-section-number">3.5.3</span> OpenAlex</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4</span> Conclusion</a></li>
@@ -344,7 +351,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 13, 2025</p>
+      <p class="date">June 14, 2025</p>
     </div>
   </div>
   
@@ -921,7 +928,7 @@ Click to enlarge
 <section id="the-census-of-agriculture-3" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="the-census-of-agriculture-3">The Census of Agriculture</h3>
 <figure style="text-align: center;" class="figure">
-<a href="graphics/tilemaps/census_of_agriculture_top_20_author_overlap.png" target="_blank"> <img src="graphics/treemaps/census_of_agriculture_top_20_author_overlap.png" style="width:80%; height:auto;" alt="Ag Census Tilemap" class="figure-img"> </a>
+<a href="graphics/tilemaps/census_of_agriculture_top_20_author_overlap.png" target="_blank"> <img src="graphics/tilemaps/census_of_agriculture_top_20_author_overlap.png" style="width:80%; height:auto;" alt="Ag Census Tilemap" class="figure-img"> </a>
 </figure>
 </section>
 <section id="food-access-research-atlas-3" class="level3 unnumbered">
@@ -951,21 +958,24 @@ Click to enlarge
 </section>
 <section id="institutional-comparison" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="institutional-comparison"><span class="header-section-number">3.5</span> Institutional Comparison</h2>
-<p>In addition to examining dataset mention coverage, the report also evaluates differences in institutional representation across Scopus, OpenAlex, and Dimensions. Each of the featured citation databases represent some portion of the global research landscape, yet their inclusion criteria and institutional coverage may vary. The purpose of this analysis is to assess which institutions are represented in each source, with particular attention to coverage of underrepresented and Minority-Serving Institutions (MSIs).</p>
-<p>To create a harmonsized dataset of institutional coverage across datasets, institutional affiliation data associated with each publication’s athor(s) are linked to institutional records using IPEDS identifiers. Linking the publication metadata with IPEDS institutional data adds information not available in the publication affiliation data alone. This additional information includes public or private institution (control), degree level, MSI designation, and geographic location. Special attention is given to coverage of underrepresented institutions and Minority-Serving Institutions (MSIs).</p>
-<section id="ipeds-and-msi-classifications" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="ipeds-and-msi-classifications"><span class="header-section-number">3.5.1</span> IPEDS and MSI Classifications</h3>
-<!-- In this section, I document the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023.  -->
-<p>First, a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time is created. Two sources were used: (1) the MSI Data Project (Nguyen et al., 2023) identifies MSI institutions from 2017–2021 and (2) Rutgers CMSI identifies MSI institutions for 2022–2023. These datasets were cleaned and merged with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. Data cleaning steps included: addressing inconsistencies in eligibility labels, removing duplicates, and creating summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are available in the report appendices<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> and MSI<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>.</p>
+<p>In addition to examining dataset mention coverage, the report also evaluates differences in institutional representation across Scopus, OpenAlex, and Dimensions. Each of the featured citation databases represent some portion of the global research landscape, yet their inclusion criteria and institutional coverage may vary. The purpose of this analysis is to assess which institutions are represented in each source.</p>
+<section id="scopus" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="scopus"><span class="header-section-number">3.5.1</span> Scopus</h3>
 <figure style="text-align: center;" class="figure">
-<a href="data/ipeds_msi/msi_eligibility_plot.png" target="_blank"> <img src="data/ipeds_msi/msi_eligibility_plot.png" style="width:80%; height:auto;" alt="MSI Eligibility Plot" class="figure-img"> </a>
-<figcaption style="font-size: 0.9em; margin-top: 0.5em;">
-<em>Source code used to generate graphic:</em> <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/blob/main/data/ipeds_msi/build_ipeds_msi.R" target="_blank">Available here</a>.
-</figcaption>
+<a href="graphics/maps/scopus_normalized_dois_per_institution.png" target="_blank"> <img src="graphics/maps/scopus_normalized_dois_per_institution.png" style="width:80%; height:auto;" alt="Scopus Map" class="figure-img"> </a>
 </figure>
 </section>
-<section id="results-of-institutional-comparision" class="level3" data-number="3.5.2">
-<h3 data-number="3.5.2" class="anchored" data-anchor-id="results-of-institutional-comparision"><span class="header-section-number">3.5.2</span> Results of Institutional Comparision</h3>
+<section id="dimensions-1" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="dimensions-1"><span class="header-section-number">3.5.2</span> Dimensions</h3>
+<figure style="text-align: center;" class="figure">
+<a href="graphics/maps/dimensions_normalized_dois_per_institution.png" target="_blank"> <img src="graphics/maps/dimensions_normalized_dois_per_institution.png" style="width:80%; height:auto;" alt="Scopus Map" class="figure-img"> </a>
+</figure>
+</section>
+<section id="openalex" class="level3" data-number="3.5.3">
+<h3 data-number="3.5.3" class="anchored" data-anchor-id="openalex"><span class="header-section-number">3.5.3</span> OpenAlex</h3>
+<figure style="text-align: center;" class="figure">
+<a href="graphics/maps/openalex_normalized_dois_per_institution.png" target="_blank"> <img src="graphics/maps/openalex_normalized_dois_per_institution.png" style="width:80%; height:auto;" alt="Scopus Map" class="figure-img"> </a>
+</figure>
 </section>
 </section>
 </section>
@@ -1525,8 +1535,6 @@ Table&nbsp;6: Top 25 Authors by First Run Count Table
 <li id="fn4"><p>This procedure increased the likelihood of capturing genuine dataset references rather than incidental matches to individual words. Initial drafts of the query incorrectly included terms like “NASS” and “USDA” in the alias list. This was corrected to ensure that aliases strictly referred to dataset names, and flag terms referred to organizations.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p><code>Pyalex</code> is an open-source library designed to facilitate interaction with the OpenAlex API; see <a href="https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex">https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex</a> for more information. The package manages request formatting and automates compliance with OpenAlex’s “polite pool” rate limits, which restrict the number of requests per minute and impose backoff delays. Pyalex introduced automatic pauses between requests, with a default <code>retry_backoff_factor</code> of 100 milliseconds, to ensure stable and continuous retrieval. This setup enabled systematic querying while adhering to OpenAlex’s usage policies.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>In cases where a publication appeared in more than one source, manual and programmatic checks confirmed that metadata values, such as journal titles and publication years, were consistent across sources. No conflicting values were detected.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p><a href="./appendices/app_ipeds.html">IPEDS appendix available here</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p><a href="./appendices/app_msi.html">MSI appendix available here</a><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
