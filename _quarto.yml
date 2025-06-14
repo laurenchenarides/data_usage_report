@@ -27,10 +27,8 @@ website:
     search: true
     collapse-level: 1
     contents:
-      - href: home.qmd
-        text: Report Summary
       - href: index.qmd
-        text: Project Background
+        text: Report Summary
       - href: report.qmd
         text: Full Report
       - section: appendix.qmd

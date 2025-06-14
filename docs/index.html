@@ -6,7 +6,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-05-04">
+<meta name="author" content="Lauren Chenarides, Ph.D.">
+<meta name="author" content="Calvin Bryan, Ph.D.">
+<meta name="author" content="Rafael Ladislau">
+<meta name="author" content="Julia Lane, Ph.D.">
+<meta name="author" content="Ming Wang">
+<meta name="dcterms.date" content="2025-06-14">
 
 <title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
@@ -31,7 +36,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./report.html" rel="next">
-<link href="./home.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Project Background</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Report Summary</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -112,14 +116,8 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./home.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Report Summary</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Project Background</span></a>
+ <span class="menu-text">Report Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -249,11 +247,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-background" id="toc-project-background" class="nav-link active" data-scroll-target="#project-background">Project Background</a>
-  <ul class="collapse">
-  <li><a href="#project-objective" id="toc-project-objective" class="nav-link" data-scroll-target="#project-objective">Project Objective</a></li>
-  <li><a href="#specific-aims" id="toc-specific-aims" class="nav-link" data-scroll-target="#specific-aims">Specific Aims</a></li>
-  </ul></li>
+  <li><a href="#what-is-the-issue" id="toc-what-is-the-issue" class="nav-link active" data-scroll-target="#what-is-the-issue">What Is the Issue?</a></li>
+  <li><a href="#how-was-the-study-conducted" id="toc-how-was-the-study-conducted" class="nav-link" data-scroll-target="#how-was-the-study-conducted">How Was the Study Conducted?</a></li>
+  <li><a href="#what-did-the-study-find" id="toc-what-did-the-study-find" class="nav-link" data-scroll-target="#what-did-the-study-find">What Did the Study Find?</a></li>
+  <li><a href="#how-to-use-this-report" id="toc-how-to-use-this-report" class="nav-link" data-scroll-target="#how-to-use-this-report">How to Use This Report</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -263,18 +260,63 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Methodology for Comparing Citation Database Coverage of Dataset Usage</h1>
-<p class="subtitle lead">Project Background</p>
+<p class="subtitle lead">Report Summary</p>
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Lauren Chenarides, Ph.D. <a href="mailto:Lauren.Chenarides@colostate.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Colorado State University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Calvin Bryan, Ph.D. <a href="mailto:calvinrbryan@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Colorado State University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Rafael Ladislau <a href="mailto:rafa.ladis@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            RL Desenvolvimento de Sistemas LTDA
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Julia Lane, Ph.D. <a href="mailto:julia.lane@nyu.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            New York University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Ming Wang <a href="mailto:Ming.Wang@colostate.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Colorado State University
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
-    
+      
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 4, 2025</p>
+      <p class="date">June 14, 2025</p>
     </div>
   </div>
   
@@ -286,58 +328,93 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-background" class="level1 unnumbered">
-<h1 class="unnumbered">Project Background</h1>
-<p>Tracking how federal datasets are used in academic research has been a priority for agencies such as the U.S. Department of Agriculture (USDA). The DemocratizingData.ai platform was created to support this effort by reporting on dataset usage through citation analysis. The platform was developed to ingest publication metadata from Scopus, a proprietary citation database, to identify and count publications that reference USDA datasets. Scopus offers reliable metadata and a structured indexing system, bu it is costly to access and does not fully align with goals around open science and public transparency.</p>
-<p>As interest in open-access infrastructure has grown, OpenAlex, a free and open-source citation database developed by OurResearch, has emerged as a potential alternative. OpenAlex claims broad coverage of research outputs, including journal articles, preprints, conference proceedings, and reports. Replacing Scopus with OpenAlex could lower operational costs for federal agencies and align with broader efforts to promote open data ecosystems. However, transitioning platforms raises important questions about data reliability, coverage completeness, and potential trade-offs in representation.</p>
-<p>To support an informed decision about this transition, a systematic comparison was conducted across three citation databases—Scopus, OpenAlex, and Dimensions—to assess their relative strengths and weaknesses for tracking dataset mentions in agricultural and food systems research. Dimensions, a third database developed by Digital Science, offers a hybrid model combining free and subscription-based access and was included to provide a broader benchmark across commercial and open platforms.</p>
-<p>Initial comparisons between Scopus and OpenAlex revealed unexpected differences in coverage, with notable gaps in publication indexing and metadata quality. These patterns suggest that simply substituting one citation source for another could lead to incomplete or biased tracking of dataset usage, potentially affecting public reporting and research visibility. This project responds to those concerns by developing a structured, reproducible methodology for evaluating database coverage across multiple dimensions: publication metadata, journal inclusion, dataset topic area, institutional affiliation, and authorship.</p>
-<section id="project-objective" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="project-objective">Project Objective</h2>
-<p>The objective of this project is to assess whether open-access citation databases, such as OpenAlex, can serve as viable alternatives to proprietary platforms like Scopus for tracking the use of USDA datasets in academic research. To inform this decision, we compare the coverage, structure, and metadata quality of three citation databases—Scopus, OpenAlex, and Dimensions—focusing on their ability to support consistent and transparent dataset usage metrics across the research landscape.</p>
+<section id="what-is-the-issue" class="level1 unnumbered">
+<h1 class="unnumbered">What Is the Issue?</h1>
+<p>Federal datasets play an important role in supporting research across a range of disciplines. Measuring how these datasets are used can help evaluate their impact and inform future data investments. Agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like <em>Democratizing Data’s</em> <a href="https://democratizingdata.ai/tools/dashboard/food-agricultural-research/">Food and Agricultural Research Data Usage Dashboard</a> and <a href="https://www.nass.usda.gov/Data_Visualization/5W/index.php">NASS’s 5 W’s Data Usage Dashboard</a>. These tools rely on identifying <em>dataset mentions</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in published research to develop usage statistics. Beyond reporting usage statistics, this type of analysis can also provide information about the research topics where federal datasets are applied. Understanding where federal datasets are applied helps characterize their disciplinary reach, including use in areas such as food security, nutrition, and climate, which are inherently multidisciplinary. This informs future work on identifying alternative datasets that researchers use to study similar questions across fields.</p>
+<p>The process of identifying dataset mentions in academic research output has two requirements. First, citation databases provide structured access to large volumes of publication metadata, including titles, abstracts, authors, affiliations, and sometimes full-text content. Second, tracking dataset usage requires developing methods that scan publication text for dataset mentions. It is feasible to systematically identify where specific datasets are referenced across a broad set of research outputs by applying <a href="https://github.com/democratizingdata/democratizingdata-ml-algorithms/tree/main">machine-learning algorithms</a> to publication corpora collected from citation databases, allowing for scalable search and retrieval of relevant publications where datasets are mentioned. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. However, different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports - and dataset tracking requires reliable citation data from citation databases.</p>
+<p>This report presents a methodology for identifying dataset mentions in research publications across various citation databases. In doing so, we compare publication, journal, and topic coverage across Scopus, OpenAlex, and Dimensions [forthcoming] as primary sources. The purpose is to establish a consistent set of statistics for comparing results and evaluating differences in dataset tracking across citation databases. This allows for insights into how publication scope and indexing strategies influence dataset usage statistics.</p>
 </section>
-<section id="specific-aims" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="specific-aims">Specific Aims</h2>
+<section id="how-was-the-study-conducted" class="level1 unnumbered">
+<h1 class="unnumbered">How Was the Study Conducted?</h1>
+<p>Three citation databases are compared: Elsevier’s Scopus, OurResearch’s OpenAlex, and Digital Science’s Dimensions.ai.</p>
 <ol type="1">
-<li><p><strong>Evaluate differences in publication coverage across citation databases.</strong> Measure the extent to which Scopus, OpenAlex, and Dimensions capture research publications that reference USDA datasets. Identify how publication inclusion varies across platforms.</p></li>
-<li><p><strong>Compare journal indexing and scope.</strong> Compare the journals indexed by each database and examine how differences in journal coverage influence visibility of dataset-linked research.</p></li>
-<li><p><strong>Analyze topic coverage.</strong> Examine the research areas where USDA datasets are mentioned. Identify patterns in topic classification and assess how different citation databases support subject-level tracking of dataset usage.</p></li>
-<li><p><strong>Examine institutional representation.</strong> Evaluate how each platform captures and standardizes institutional affiliations. Pay particular attention to differences in coverage for Minority-Serving Institutions (MSIs), land-grant universities, and other public or underrepresented institutions.</p></li>
-<li><p><strong>Evaluate author representation.</strong> Compare how author names are recorded across platforms, including the completeness of author metadata and potential implications for attribution and visibility.</p></li>
-<li><p><strong>Develop a reproducible methodology for cross-platform comparison.</strong> Create a generalizable workflow for comparing citation databases, including steps for record linkage, deduplication, author and institution standardization, and identification of dataset mentions.</p></li>
+<li><p><a href="./appendices/app_databases.html#sec-scopus"><strong>Scopus</strong></a> charges for access to its citation database. It indexes peer-reviewed, including journal articles, conference papers, and books, and provides metadata on authorship, institutional affiliation, funding sources, and citations. For this study, Scopus was used to identify dataset mentions through a two-step process: first, Elsevier executed queries against the full-text ScienceDirect corpus and reference lists within Scopus; second, publications likely to mention USDA datasets were filtered based on keyword matching and machine learning models.</p></li>
+<li><p><a href="./appendices/app_databases.html#sec-openalex"><strong>OpenAlex</strong></a>, an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. In this study, we used two approaches to identify dataset mentions in OpenAlex: a full-text search, which scans publication metadata fields such as titles and abstracts for references to USDA datasets,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and a seed corpus search, which starts with a targeted set of publications based on journal, author, and topic criteria, then downloads the full text of each paper to identify mentions of USDA datasets.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p></li>
+<li><p><a href="./appendices/app_databases.html#sec-dimensions"><strong>Dimensions</strong></a>, developed by Digital Science, is a citation database that combines free and subscription-based access. It indexes a range of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. Dimensions also links publications to grant and funding information. For this study, publications in Dimensions that reference USDA datasets were identified by <strong>Add Rafael’s text</strong>. To maintain consistency with the criteria applied to Scopus and OpenAlex, the study focuses only on publications classified as journal articles.</p></li>
 </ol>
-<p>These aims guide the development of a methodology for comparing citation databases, focusing on four areas:</p>
+<p>To compare how these databases track dataset usage, we focus on six USDA datasets commonly used in agricultural, economic, and food policy research:</p>
 <ol type="1">
-<li><strong>Publication tracking:</strong></li>
+<li>Agricultural Resource Management Survey (ARMS)</li>
+<li>Census of Agriculture (Ag Census)</li>
+<li>Rural-Urban Continuum Code (RUCC)</li>
+<li>Food Access Research Atlas (FARA)</li>
+<li>Food Acquisition and Purchase Survey (FoodAPS)</li>
+<li>Household Food Security Survey Module (HHFSS)</li>
+</ol>
+<p>These datasets were selected for their policy relevance, known usage frequency, and disciplinary breadth. We developed seed corpora for each dataset to identify relevant publications, then used those corpora to evaluate database coverage, topical scope, and metadata consistency.</p>
+</section>
+<section id="what-did-the-study-find" class="level1 unnumbered">
+<h1 class="unnumbered">What Did the Study Find?</h1>
+<p>Accurate tracking of dataset mentions relies heavily on how publications are indexed across citation databases. For two citation databases – Scopus and OpenAlex – carefully constructed seed corpora were needed to track dataset mentions.</p>
+<p><strong>Preview of Results from Database Comparison:</strong></p>
+<ol type="1">
+<li>Across databases, there is limited publication overlap between citation databases. For example:</li>
 </ol>
 <ul>
-<li>Comparing how each platform captures publications within indexed journals</li>
+<li>Less than 10% of DOIs typically appear in both Scopus and OpenAlex in any combination.</li>
+<li>51.8% of Food Access Research Atlas DOIs appear only in Scopus.</li>
+<li>60.9% of Household Food Security Survey Module DOIs appear only in Scopus.</li>
+<li>78.5% of ARMS DOIs appear only in OpenAlex Full Text.</li>
 </ul>
 <ol start="2" type="1">
-<li><strong>Journal coverage:</strong></li>
+<li>Journal coverage by source (Scopus or OpenAlex) varies significantly by dataset:</li>
 </ol>
 <ul>
-<li>Determining which journals each platform indexes</li>
+<li>Scopus recovers the most publications MORE HERE.</li>
+<li>OpenAlex “Full Text” recovers the most publications MORE HERE.</li>
+<li>OpenAlex “Seed Search” identifies the most publications MORE HERE.</li>
 </ul>
 <ol start="3" type="1">
-<li><strong>Topic scope:</strong></li>
+<li>Topical coverage reflects the varied policy and disciplinary relevance of each dataset:</li>
 </ol>
 <ul>
-<li>Evaluating the research areas of publications that cite USDA datasets</li>
+<li>ARMS: Research citing this dataset emphasizes agricultural management, accounting, and environmental topics.</li>
+<li>The Census of Agriculture: Research mentioning this dataset has a wide breadth, spanning accounting and environmental applications.</li>
+<li>Food Access Research Atlas: Publications focus on food security, public health, and urban planning.</li>
+<li>The Food Acquisition and Purchase Survey: This dataset is mentioned in studies of consumer behavior, nutrition economics, and household spending.</li>
+<li>The Household Food Security Survey Module: Research mentioning this dataset frequently cites topics such as food insecurity, poverty, and social policy evaluation.</li>
+<li>The Rural-Urban Continuum Code: Research citing this dataset includes rural classification, regional planning, and spatial analysis.</li>
 </ul>
-<ol start="4" type="1">
-<li><strong>Institution recognition:</strong></li>
-</ol>
+<p><strong>Key Takeaway:</strong> These patterns suggest that relying on a single citation database may undercount dataset usage, and may also obscure variation in the types of research topics being conducted with each dataset.</p>
+</section>
+<section id="how-to-use-this-report" class="level1 unnumbered">
+<h1 class="unnumbered">How to Use This Report</h1>
+<p>The report is preliminary in nature. It provides an initial approach to characterizing dataset mentions about food and agriculture research datasets in research papers reported in various databases, specifically Scopus, OpenAlex, and Dimensions. It includes procedures for:</p>
 <ul>
-<li>Determining how each platform records institutional information</li>
+<li>Identifying publication coverage across citation databases</li>
+<li>Cross-referencing publications between datasets</li>
+<li>Analyzing research themes and institutional representation</li>
 </ul>
-<p>The scope of work includes comparing publication coverage across Scopus, OpenAlex, and Dimensions that mention select USDA datasets. This inclusion provides a comprehensive assessment of citation databases, particularly in evaluating dataset coverage across both proprietary and open-access platforms. For more information on each citation database, refer to <a href="https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_crosswalk.html">this Appendix.</a> The methodology described in this report provides a systematic approach for assessing citation databases’ strengths and limitations in tracking dataset usage across research papers. It also examines variations in dataset usage across different types of research institutions. These methods can be applied to other citation databases as alternatives to current data sources.</p>
+<p>The methodology produced these reusable components:</p>
+<ul>
+<li>Code repository for data cleaning and standardization</li>
+<li><a href="https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_crosswalk.html" target="_blank" rel="noopener">Data schemas by citation database</a> <!-- -   Cleaned author tables with disambiguated names and institutional affiliations --></li>
+<li>Standardized institution tables using IPEDS identifiers</li>
+</ul>
+<p>The methods described can be applied to evaluate other citation databases such as Web of Science, Crossref, and Microsoft Academic, to name a few.</p>
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>A dataset mention refers to an instance in which a specific dataset is referenced, cited, or named within a research publication. This can occur in various parts of the text, such as the abstract, methods, data section, footnotes, or references, and typically indicates that the dataset was used, analyzed, or discussed in the study.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Full-text search in OpenAlex refers to querying the entire database for textual mentions of dataset names within titles, abstracts, and other fields.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The seed corpus search involves selecting a targeted set of publications based on journal, author, and topic filters. Full-text PDFs are downloaded and analyzed to identify mentions of USDA datasets not captured through metadata alone.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -757,9 +834,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./home.html" class="pagination-link" aria-label="Report Summary">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Report Summary</span>
-      </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./report.html" class="pagination-link" aria-label="Full Report">
