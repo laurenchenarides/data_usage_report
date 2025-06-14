@@ -201,20 +201,14 @@
     "href": "conclusions.html#expanding-dataset-usage",
     "title": "Methodology for Comparing Citation Database Coverage of Dataset Usage",
     "section": "Expanding Dataset Usage",
-    "text": "Expanding Dataset Usage\nThis report analyzes USDA dataset usage patterns across both platforms and recommends specific strategies for expanding dataset use in underrepresented research communities.\nGiven the small percentage of MSI’s represented in our institutional analysis, it is evident that user engagement is central to increasing usage rates of the datasets, regardless of citation database.",
-    "crumbs": [
-      "Study Limitations"
-    ]
+    "text": "Expanding Dataset Usage\nThis report analyzes USDA dataset usage patterns across both platforms and recommends specific strategies for expanding dataset use in underrepresented research communities.\nGiven the small percentage of MSI’s represented in our institutional analysis, it is evident that user engagement is central to increasing usage rates of the datasets, regardless of citation database."
   },
   {
     "objectID": "conclusions.html#next-steps",
     "href": "conclusions.html#next-steps",
     "title": "Methodology for Comparing Citation Database Coverage of Dataset Usage",
     "section": "Next Steps",
-    "text": "Next Steps",
-    "crumbs": [
-      "Study Limitations"
-    ]
+    "text": "Next Steps"
   },
   {
     "objectID": "appendices/app_scopus.html",
@@ -223,8 +217,7 @@
     "section": "",
     "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\nPLACEHOLDER\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Scopus Data Dictionary"
     ]
   },
@@ -235,8 +228,7 @@
     "section": "",
     "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\nPLACEHOLDER\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Scopus Data Dictionary"
     ]
   },
@@ -247,8 +239,7 @@
     "section": "Data Dictionary",
     "text": "Data Dictionary\n\n\n\n\n\n\nDownload Scopus Source Files\n\n\n\nYou can download the source files from this link.\n\n\n\npublication.csv (Primary table)\n\nDescription: Central table with metadata about publications.\nColumns:\n\nid: Unique publication identifier\ntitle: Publication title\ndoi: Digital Object Identifier\nyear, month: Date of publication\ncitation_count, pub_type: Additional metadata\n\n\n\n\ndataset_alias.csv\n\nDescription: Lists dataset aliases (alternate names).\nColumns:\n\nalias_id: Unique alias identifier\nparent_alias_id: Primary alias identifier (if alias_id = parent_alias_id, it’s primary)\nalias: Name of the alias\n\nHow to use:\n\nIdentify primary aliases where alias_id = parent_alias_id\nFind all aliases by filtering on parent_alias_id\n\n\n\n\ndyad.csv\n\nDescription: Links publications (publication.csv) and dataset aliases (dataset_alias.csv).\nColumns:\n\nid: Unique identifier for each mention (dyad)\npublication_id: Foreign key to publication.csv\nalias_id: Foreign key to dataset_alias.csv\nmention_candidate: Mention text from publication\n\n\n\n\nmodel.csv\n\nDescription: Lists methods/models for identifying dataset mentions.\nColumns:\n\nid: Unique model identifier\nname: Name of the identification model\n\n\n\n\ndyad_model.csv\n\nDescription: Connects dyads and models used to identify them.\nColumns:\n\ndyad_id: Foreign key to dyad.csv\nmodel_id: Foreign key to model.csv\nscore: Confidence or relevance score\n\nHow to use:\n\nFilter mentions by joining with dyad.csv on dyad_id and filtering by model_id",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Scopus Data Dictionary"
     ]
   },
@@ -259,8 +250,7 @@
     "section": "Sample Data",
     "text": "Sample Data\n\npublication.csvdataset_alias.csvdyad.csvmodel.csvdyad_model.csv\n\n\n\n\n\n\n\n\n\n\n\n\nid\ntitle\ndoi\nyear\nmonth\n\n\n\n\n321613\nNew estimates for CRNA vacancies\n\n2009\n4\n\n\n321614\nCrossing county lines: The impact of crash location and driver’s…\n10.1016/j.aap.2006…\n2006\n7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nid\nalias_id\nparent_alias_id\nalias\n\n\n\n\n1676\n87\n89\nCensus of Agriculture\n\n\n1673\n12\n282\nARMS Farm Financial and Crop Production Practices\n\n\n\n\n\n\n\n\nid\npublication_id\nalias_id\nmention_candidate\n\n\n\n\n2569\n1211491\n87\ncensus of agriculture\n\n\n2573\n1199598\n88\nusda census of agriculture\n\n\n\n\n\n\n\n\nid\nname\n\n\n\n\n1\nstring_matching\n\n\n5\nrefmatch\n\n\n\n\n\n\n\n\nid\ndyad_id\nmodel_id\nscore\n\n\n\n\n4928\n2569\n1\n2.0\n\n\n4929\n2569\n4\n1.0\n\n\n4930\n2569\n2\n1.0",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Scopus Data Dictionary"
     ]
   },
@@ -271,8 +261,7 @@
     "section": "How to Extract Publications for a Specific Dataset",
     "text": "How to Extract Publications for a Specific Dataset\nTo find all publications associated with a particular dataset, such as the NASS Census of Agriculture, follow these steps:\n\nIdentify the Main Alias:\n\nFind the alias_id where alias_id equals parent_alias_id for the dataset.\nFor NASS Census of Agriculture, the main alias has alias_id = 89.\n\nGet All Aliases:\n\nIn dataset_alias.csv, filter rows where parent_alias_id equals 89.\nThis gives you all aliases associated with the NASS Census of Agriculture dataset.\n\nLink Aliases to Publications:\n\nIn dyad.csv, filter rows where alias_id matches any of the alias_ids obtained in step 2.\nThis will give you publication_ids of publications mentioning any alias of the dataset.\n\nRetrieve Publication Details:\n\nUsing the publication_ids from step 3, retrieve the corresponding records from publication.csv.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Scopus Data Dictionary"
     ]
   },
@@ -283,8 +272,7 @@
     "section": "Filtering Publications by Specific Models",
     "text": "Filtering Publications by Specific Models\nSince we’re interested in mentions identified by the string_matching and refmatch models (models with id 1 and 5), follow these steps:\n\nFilter Dyads by Model:\n\nIn dyad_model.csv, filter rows where model_id is 1 or 5.\nThis gives you dyad_ids linked to these models.\n\nGet Relevant Dyads:\n\nPerform an inner join with dyad.csv on dyad_id.\nThis filters dyads to only those identified by the specified models.\n\nProceed as Before:\n\nContinue with the steps in the previous section, but using the filtered dyads from step 2.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Scopus Data Dictionary"
     ]
   },
@@ -295,8 +283,7 @@
     "section": "",
     "text": "The Minority-Serving Institutions (MSI) Data captures institutions eligible for federal MSI programs, as determined by the U.S. Department of Education and other sources. In this project, MSI data is used to analyze institutional characteristics in relation to research publications identified in Scopus, OpenAlex, and Dimensions.\nThis dataset provides information on institutions eligible or potentially eligible for at least one MSI designation and includes data from 2017 to 2023. The MSI dataset integrates information from multiple sources and is merged with IPEDS data to track research output across different institution types.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Identifying Minority Serving Institutions (MSIs)"
     ]
   },
@@ -307,8 +294,7 @@
     "section": "Summary of the MSI data",
     "text": "Summary of the MSI data\n\nTotal Institutions by MSI StatusPrivate Institutions by MSI StatusPrivate For-Profit Institutions by MSI StatusPrivate Not-for-Profit Institutions by MSI StatusPublic Institutions by MSI StatusPublic 2-year Institutions by MSI StatusPublic 4-year Institutions by MSI StatusPrivate 2-year Institutions by MSI StatusPrivate 4-year Institutions by MSI Status\n\n\n\n\n\nYear\nTotal\nMSI %\nNot_MSI %\n\n\n\n\n2017\n5242\n8.13\n91.87\n\n\n2018\n5242\n7.69\n92.31\n\n\n2019\n5242\n7.84\n92.16\n\n\n2020\n5242\n7.80\n92.20\n\n\n2021\n5242\n8.81\n91.19\n\n\n2022\n5242\n16.73\n83.27\n\n\n2023\n5242\n16.58\n83.42\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n1837\n5.66\n94.34\n\n\n2018\n1837\n5.72\n94.28\n\n\n2019\n1837\n5.72\n94.28\n\n\n2020\n1837\n5.77\n94.23\n\n\n2021\n1837\n5.88\n94.12\n\n\n2022\n1837\n14.81\n85.19\n\n\n2023\n1837\n14.81\n85.19\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n1409\n0.00\n100.00\n\n\n2018\n1409\n0.00\n100.00\n\n\n2019\n1409\n0.00\n100.00\n\n\n2020\n1409\n0.00\n100.00\n\n\n2021\n1409\n0.00\n100.00\n\n\n2022\n1409\n0.14\n99.86\n\n\n2023\n1409\n0.21\n99.79\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n26\n0.00\n100.00\n\n\n2018\n26\n0.00\n100.00\n\n\n2019\n26\n0.00\n100.00\n\n\n2020\n26\n0.00\n100.00\n\n\n2021\n26\n0.00\n100.00\n\n\n2022\n26\n3.85\n96.15\n\n\n2023\n26\n3.85\n96.15\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n1678\n19.18\n80.81\n\n\n2018\n1678\n17.76\n82.24\n\n\n2019\n1678\n18.24\n81.76\n\n\n2020\n1678\n18.06\n81.94\n\n\n2021\n1678\n21.10\n78.90\n\n\n2022\n1678\n33.86\n66.15\n\n\n2023\n1678\n35.34\n64.66\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n933\n19.72\n80.28\n\n\n2018\n933\n16.93\n83.07\n\n\n2019\n933\n17.04\n82.96\n\n\n2020\n933\n17.15\n82.85\n\n\n2021\n933\n20.15\n79.85\n\n\n2022\n933\n36.66\n63.34\n\n\n2023\n933\n35.05\n64.95\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n807\n17.10\n82.90\n\n\n2018\n807\n17.35\n82.65\n\n\n2019\n807\n18.22\n81.78\n\n\n2020\n807\n17.82\n82.18\n\n\n2021\n807\n20.57\n79.43\n\n\n2022\n807\n32.09\n67.91\n\n\n2023\n807\n32.96\n67.04\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n139\n2.88\n97.12\n\n\n2018\n139\n2.88\n97.12\n\n\n2019\n139\n2.16\n97.84\n\n\n2020\n139\n2.16\n97.84\n\n\n2021\n139\n2.88\n97.12\n\n\n2022\n139\n12.23\n87.77\n\n\n2023\n139\n12.23\n87.77\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n1714\n5.83\n94.17\n\n\n2018\n1714\n5.84\n94.16\n\n\n2019\n1714\n5.95\n94.05\n\n\n2020\n1714\n6.01\n93.99\n\n\n2021\n1714\n6.07\n93.93\n\n\n2022\n1714\n14.88\n85.12\n\n\n2023\n1714\n14.88\n85.12",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Identifying Minority Serving Institutions (MSIs)"
     ]
   },
@@ -319,8 +305,7 @@
     "section": "Data Processing and Standardization",
     "text": "Data Processing and Standardization\n\nVariable Name Changes and Formatting:\n\nyear was added to track MSI status over time.\nUNITID is the primary key to merge MSI and IPEDS datasets.\n\nHandling Missing Data and Filters:\n\nInstitutions without UNITID were excluded.\nNon-relevant columns were removed.\n\nMerging Strategy:\n\nThe 2017-2021 MSI data was directly compatible with IPEDS.\nThe 2022-2023 MSI data required additional formatting before merging.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Identifying Minority Serving Institutions (MSIs)"
     ]
   },
@@ -331,8 +316,7 @@
     "section": "How to Merge with IPEDS Data",
     "text": "How to Merge with IPEDS Data\nThe MSI dataset can be linked with IPEDS data using the UNITID and year variables. This allows for:\n\nTracking institutional MSI status over time.\nComparing MSI and non-MSI institutions within Scopus, OpenAlex, and Dimensions.\nAssessing dataset usage patterns across different institution types.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Identifying Minority Serving Institutions (MSIs)"
     ]
   },
@@ -343,8 +327,7 @@
     "section": "Footnotes",
     "text": "Footnotes\n\n\nThe 2017-2021 MSI data was sourced from the Minority Serving Institutions (MSI) Data Project by Nguyen et al. (2023), which merges the U.S. Department of Education’s MSI eligibility metrics (2017-2021) with IPEDS data.↩︎\nThe 2022-2023 MSI data was obtained from the Rutgers Graduate School of Education, which maintains annual MSI eligibility lists.↩︎\nThe 2022-2023 MSI data was obtained from the Rutgers Graduate School of Education, which maintains annual MSI eligibility lists.↩︎",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Identifying Minority Serving Institutions (MSIs)"
     ]
   },
@@ -355,8 +338,7 @@
     "section": "",
     "text": "This appendix documents the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023.\nTo create a harmonsized dataset of institutional coverage across datasets, institutional affiliation data associated with each publication’s athor(s) are linked to institutional records using IPEDS identifiers. Linking the publication metadata with IPEDS institutional data adds information not available in the publication affiliation data alone. This additional information includes public or private institution (control), degree level, MSI designation, and geographic location. Special attention is given to coverage of underrepresented institutions and Minority-Serving Institutions (MSIs).\nFirst, a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time is created. Two sources were used: (1) the MSI Data Project (Nguyen et al., 2023) identifies MSI institutions from 2017–2021 and (2) Rutgers CMSI identifies MSI institutions for 2022–2023. These datasets were cleaned and merged with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. Data cleaning steps included: addressing inconsistencies in eligibility labels, removing duplicates, and creating summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are available in the report appendices1 and MSI2.\n\n  \n\nSource code used to generate graphic: Available here.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Cleaning IPEDS and MSI Data"
     ]
   },
@@ -367,8 +349,7 @@
     "section": "Footnotes",
     "text": "Footnotes\n\n\nIPEDS appendix available here↩︎\nMSI appendix available here↩︎",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Cleaning IPEDS and MSI Data"
     ]
   },
@@ -379,8 +360,7 @@
     "section": "",
     "text": "Research partners at the University of Utah have access to Dimensions.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Dimensions Data Dictionary"
     ]
   },
@@ -391,31 +371,28 @@
     "section": "",
     "text": "Research partners at the University of Utah have access to Dimensions.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Dimensions Data Dictionary"
     ]
   },
   {
     "objectID": "appendices/app_crosswalk.html",
     "href": "appendices/app_crosswalk.html",
-    "title": "Data Schemas",
+    "title": "Project Documentation",
     "section": "",
-    "text": "Scopus Schema\n\n\nDimensions Schema\n\n\nOpenAlex Schemas\n\n\n\n\n\n\n  \n\n\n  \n\n\n  \n\nFull Text Search\n\n\n\n  \n\nSeed Corpus\nNote: All schemas were built using DBDiagram.io.",
+    "text": "All project files are available in our GitHub repository. This section provides reference material.",
     "crumbs": [
-      "Appendices",
-      "Data Schemas"
+      "Project Documentation"
     ]
   },
   {
     "objectID": "appendices/app_crosswalk.html#file-inventory",
     "href": "appendices/app_crosswalk.html#file-inventory",
-    "title": "Data Schemas",
+    "title": "Project Documentation",
     "section": "File Inventory",
     "text": "File Inventory\n\nScopus FilesOpenAlex FilesDimensions Files\n\n\n\nPrimary Table: publication\nSupporting Tables:\n\nagency_run\nasjc\nauthor\nauthor_affiliation\ndataset_alias\ndyad\ndyad_model\nissn\njournal\nmodel\npublication_affiliation\npublication_asjc\npublication_author\npublication_topic\npublication_ufc\npublisher\ntopic\n\n\nRefer to the schema for additional column-level details.\n\n\n\nFull Text\n\nPrimary Table: main\nSupporting Tables:\n\n_id\napc_list\napc_paid\nauthorships\nbest_oa_location\nbiblio\ncitation_normalized_percentile\ncited_by_percentile_year\ncorresponding_author_ids\ncorresponding_institution_ids\ncounts_by_year\ndataset\ndatasets\ngrants\nids\nindexed_in\nopen_access\nprimary_location\nprimary_topic\ntopics\n\n\n\n\nSeed Corpus\n\nPrimary Table: main\nSupporting Tables:\n\n\n\n\n\nPrimary Table: main\nSupporting Tables:\n\nThe accompanying schema focuses on the primary linking fields between tables. Due to the large number of columns within each table, only key identifiers are included.",
     "crumbs": [
-      "Appendices",
-      "Data Schemas"
+      "Project Documentation"
     ]
   },
   {
@@ -432,8 +409,7 @@
     "section": "",
     "text": "The Integrated Postsecondary Education Data System (IPEDS) is a national dataset maintained by the National Center for Education Statistics (NCES). It collects data from all U.S. institutions participating in federal financial aid programs. In this project, IPEDS data is used to analyze institutional characteristics (e.g., size, classification, location, and financial indicators) in relation to research publications identified in Scopus, OpenAlex, and Dimensions.\nThe raw IPEDS data was obtained from the IPEDS website: IPEDS Data Center.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Classifying Institutions with the IPEDS Database"
     ]
   },
@@ -444,8 +420,7 @@
     "section": "Summary of the IPEDS Data",
     "text": "Summary of the IPEDS Data\n\nDistinct institutions by yearDistinct institutions by year and controlDistinct institutions by year and level: Public UniversitiesDistinct institutions by year and level: Private Universities\n\n\n\n\n\nYear\nNo. Institutions\n\n\n\n\n2017\n7153\n\n\n2018\n6857\n\n\n2019\n6559\n\n\n2020\n6440\n\n\n2021\n6289\n\n\n2022\n6256\n\n\n2023\n6163\n\n\n\n\n\n\n\n\nYear\nPrivate for-profit\nPrivate not-for-profit\nPublic\n\n\n\n\n2017\n3093\n1959\n2069\n\n\n2018\n2793\n1930\n2077\n\n\n2019\n2566\n1905\n2056\n\n\n2020\n2463\n1889\n2036\n\n\n2021\n2411\n1868\n1994\n\n\n2022\n2352\n1855\n2019\n\n\n2023\n2299\n1836\n1999\n\n\n\n“Control” is defined as Public, Private Nonprofit, and Private For-Profit.\n\n\n\n\n\nYear\n2-year\n4-year\n\n\n\n\n2017\n1003\n817\n\n\n2018\n989\n840\n\n\n2019\n968\n852\n\n\n2020\n949\n852\n\n\n2021\n930\n829\n\n\n2022\n924\n859\n\n\n2023\n899\n868\n\n\n\n\n\n\n\n\nYear\n2-year\n4-year\n\n\n\n\n2017\n1034\n2371\n\n\n2018\n917\n2167\n\n\n2019\n774\n2081\n\n\n2020\n736\n2046\n\n\n2021\n709\n2016\n\n\n2022\n681\n2009\n\n\n2023\n664\n1996",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Classifying Institutions with the IPEDS Database"
     ]
   },
@@ -456,8 +431,7 @@
     "section": "Data Processing and Standardization",
     "text": "Data Processing and Standardization\n\nVariable Name Changes and Formatting:\n\nUNITID and year serve as the primary keys to merge datasets for analysis.\nyear was added to datasets that lacked it.\n\nHandling Missing Data and Filters:\n\nNon-relevant columns were removed.\nDatasets were filtered to retain only institutions with complete enrollment and classification data.\n\nMerging Strategy:\n\nDatasets can be joined using UNITID and year as unique identifiers.\nInstitutions missing UNITID were excluded.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Classifying Institutions with the IPEDS Database"
     ]
   },
@@ -468,8 +442,7 @@
     "section": "How to Merge with MSI Data",
     "text": "How to Merge with MSI Data\nThe IPEDS dataset can be linked with the MSI dataset using the UNITID and year variables. This allows for:\n\nIdentifying MSI institutions within IPEDS to analyze institutional characteristics.\nComparing institutional characteristics of MSI and non-MSI institutions, such as enrollment size, Carnegie classification, and financial indicators.\n\n\n\n\n\n\n\nNote\n\n\n\nAfter merging the IPEDS-MSI data with the cleaned institutional data from the citation databases, this dataset also allows for assessing research output and dataset usage by institution type, and examining trends over time in MSI status and institutional characteristics.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "Classifying Institutions with the IPEDS Database"
     ]
   },
@@ -480,8 +453,7 @@
     "section": "",
     "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\nPLACEHOLDER\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "OpenAlex Data Dictionary"
     ]
   },
@@ -492,8 +464,7 @@
     "section": "",
     "text": "This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.\nBelow is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the data schema.\n\n\nPLACEHOLDER\n\n\n\nCategory\nFile Path & Link\n\n\n\n\nProcessed IPEDS Dataset\ncompare_scopus_openalex/resources/IPEDS/IPEDS.csv\n\n\nRaw IPEDS Data\ncompare_scopus_openalex/resources/raw_data_IPEDS/\n\n\nData Processing Code\ncompare_scopus_openalex/resources/documentation/IPEDSdata.rmd\n\n\nData Documentation\ncompare_scopus_openalex/resources/documentation/IPEDS_Data.md",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "OpenAlex Data Dictionary"
     ]
   },
@@ -504,8 +475,7 @@
     "section": "Data Dictionary",
     "text": "Data Dictionary\n\n\n\n\n\n\nDownload OpenAlex Source Files\n\n\n\nYou can download the source files from this link.\n\n\n\ndataset.csv\n\nDescription: Lists all datasets identified in OpenAlex. This contains details of all USDA datasets.\n\n\n\npublication_dataset_links.csv\n\nDescription: Connects publications with one or more datasets in the OpenAlex data. Indicates which publications are associated with which datasets.\n\n\n\npublication.csv\n\nDescription: This file contains information about publications, which are the central entities in this dataset.\nKey Columns:\n\nid: Unique identifier for each publication.\ntitle: Title of the publication.\ndoi: Digital Object Identifier of the publication.\nyear and month: Publication date.\nOther metadata such as citation_count, pub_type, etc.\n\n\n\n\ndataset_alias.csv\n\nDescription: Contains all the aliases (alternative names) of datasets. This helps in identifying datasets that might be referred to by different names in publications.\nKey Columns:\n\nalias_id: Unique identifier for each alias.\nparent_alias_id: Identifies the main alias for a dataset. If parent_alias_id equals alias_id, it is the primary alias.\nalias: The alias name of the dataset.\n\n\nNote: The search in OpenAlex was performed using the same aliases and flag terms applied in the Scopus data, without any optimization.\nHow to Use:\n\nTo find the main alias of a dataset, look for rows where alias_id equals parent_alias_id.\nTo find all aliases of a dataset, filter by parent_alias_id corresponding to the main alias.\n\n\n\ndyad.csv\n\nDescription: Represents the mentions of dataset aliases found within publications. Acts as a linking table between publication.csv and dataset_alias.csv.\nKey Columns:\n\nid: Unique identifier for each dyad (mention).\npublication_id: References the id in publication.csv.\nalias_id: References the alias_id in dataset_alias.csv.\nmention_candidate: The actual text mentioning the dataset in the publication.\n\n\n\n\nmodel.csv\n\nDescription: Lists the different models or methods used to identify dataset mentions within publications.\nKey Columns:\n\nid: Unique identifier for each model.\nname: Name of the model (e.g., string_matching, refmatch).\n\n\nRelevant Models:\n\nModel ID 1: string_matching\nModel ID 5: refmatch\n\nThese are the models we are focusing on to compare with data extracted from OpenAlex, as no Kaggle model has been applied there.\n\n\ndyad_model.csv\n\nDescription: Connects dyads with the models that identified them. Allows filtering dyads based on the models used.\nKey Columns:\n\ndyad_id: References the id in dyad.csv.\nmodel_id: References the id in model.csv.\n\n\nHow to Use:\n\nTo filter dyads (and thus publications) identified by specific models, perform an inner join with dyad.csv on dyad_id and filter by model_id.\n\n\n\n\n\n\n\nHow the Files are Related\n\n\n\nThe files are structured to represent entities (publications, journals, institutions, authors) and their relationships. The main publication data is in publications_main.csv, and the details about journals, institutions, and authors are in their respective files.\nThe link files (publication_journal_links.csv, publication_institution_links.csv, publication_author_links.csv) represent the many-to-many relationships between publications and these entities.\nTo find all publications by a specific author, you can use authors.csv to find the author’s author_openalex_id and then use publication_author_links.csv to find the associated publications.\nTo analyze the distribution of publications across journals, you can join publications_main.csv, publication_journal_links.csv, and journals.csv on publication_openalex_id and journal_openalex_id.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "OpenAlex Data Dictionary"
     ]
   },
@@ -516,8 +486,7 @@
     "section": "Sample Data",
     "text": "Sample Data\n\npublication.csvdataset_alias.csvdyad.csvmodel.csvdyad_model.csv\n\n\n\n\n\n\n\n\n\n\n\n\nid\ntitle\ndoi\nyear\nmonth\n\n\n\n\n321613\nNew estimates for CRNA vacancies\n\n2009\n4\n\n\n321614\nCrossing county lines: The impact of crash location and driver’s…\n10.1016/j.aap.2006…\n2006\n7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nid\nalias_id\nparent_alias_id\nalias\n\n\n\n\n1676\n87\n89\nCensus of Agriculture\n\n\n1673\n12\n282\nARMS Farm Financial and Crop Production Practices\n\n\n1671\n88\n89\nUSDA Census of Agriculture\n\n\n\n\n\n\n\n\nid\npublication_id\nalias_id\nmention_candidate\n\n\n\n\n2569\n1211491\n87\ncensus of agriculture\n\n\n2573\n1199598\n88\nusda census of agriculture\n\n\n\n\n\n\n\n\nid\nname\n\n\n\n\n1\nstring_matching\n\n\n5\nrefmatch\n\n\n\n\n\n\n\n\nid\ndyad_id\nmodel_id\nscore\n\n\n\n\n4928\n2569\n1\n2.0\n\n\n4929\n2569\n4\n1.0\n\n\n4930\n2569\n2\n1.0",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "OpenAlex Data Dictionary"
     ]
   },
@@ -528,8 +497,7 @@
     "section": "How to Extract Publications for a Specific Dataset",
     "text": "How to Extract Publications for a Specific Dataset\nTo find all publications associated with a particular dataset, such as the NASS Census of Agriculture, follow these steps:\n\nIdentify the Main Alias:\n\nFind the alias_id where alias_id equals parent_alias_id for the dataset.\nFor NASS Census of Agriculture, the main alias has alias_id = 89.\n\nGet All Aliases:\n\nIn dataset_alias.csv, filter rows where parent_alias_id equals 89.\nThis gives you all aliases associated with the NASS Census of Agriculture dataset.\n\nLink Aliases to Publications:\n\nIn dyad.csv, filter rows where alias_id matches any of the alias_ids obtained in step 2.\nThis will give you publication_ids of publications mentioning any alias of the dataset.\n\nRetrieve Publication Details:\n\nUsing the publication_ids from step 3, retrieve the corresponding records from publication.csv.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "OpenAlex Data Dictionary"
     ]
   },
@@ -540,8 +508,7 @@
     "section": "Filtering Publications by Specific Models",
     "text": "Filtering Publications by Specific Models\nSince we’re interested in mentions identified by the string_matching and refmatch models (models with id 1 and 5), follow these steps:\n\nFilter Dyads by Model:\n\nIn dyad_model.csv, filter rows where model_id is 1 or 5.\nThis gives you dyad_ids linked to these models.\n\nGet Relevant Dyads:\n\nPerform an inner join with dyad.csv on dyad_id.\nThis filters dyads to only those identified by the specified models.\n\nProceed as Before:\n\nContinue with the steps in the previous section, but using the filtered dyads from step 2.",
     "crumbs": [
-      "Appendices",
-      "Reference Files",
+      "Project Documentation",
       "OpenAlex Data Dictionary"
     ]
   },

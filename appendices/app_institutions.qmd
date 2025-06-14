@@ -19,8 +19,8 @@ First, a clean, panel-form dataset of U.S. higher education institutions, includ
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
-  <a href="data/ipeds_msi/msi_eligibility_plot.png" target="_blank">
-    <img src="data/ipeds_msi/msi_eligibility_plot.png" style="width:80%; height:auto;" alt="MSI Eligibility Plot">
+  <a href="../data/ipeds_msi/msi_eligibility_plot.png" target="_blank">
+    <img src="../data/ipeds_msi/msi_eligibility_plot.png" style="width:80%; height:auto;" alt="MSI Eligibility Plot">
   </a>
   <figcaption style="font-size: 0.9em; margin-top: 0.5em;">
     <em>Source code used to generate graphic:</em> <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/blob/main/data/ipeds_msi/build_ipeds_msi.R" target="_blank">Available here</a>.
@@ -29,9 +29,9 @@ First, a clean, panel-form dataset of U.S. higher education institutions, includ
 :::
 
 ::: {.content-visible when-format="pdf"}
-![](data/ipeds_msi/msi_eligibility_plot.png){fig-cap="MSI Eligibility Trends 2017-2023"}
+![](../data/ipeds_msi/msi_eligibility_plot.png){fig-cap="MSI Eligibility Trends 2017-2023"}
 :::
 
-### Results of Institutional Comparision
+### Results of Institutional Comparision {.unnumbered}
 
 

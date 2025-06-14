@@ -1,5 +1,5 @@
 ---
-title: "Data Schemas"
+title: "Project Documentation"
 date: last-modified  # Auto-updates based on Git commits
 format:
   html:
@@ -7,7 +7,15 @@ format:
     css: styles.css
 ---
 
-<!-- # Data Schema {.unnumbered} -->
+# Overview {.unnumbered}
+
+All project files are available in our GitHub repository. This section provides reference material.
+
+
+# Data Schema {.unnumbered}
+
+The construction of data schemas is central to this project. As metadata was gathered from three different sources, the data schemas were constructed to ensure all relevant information was available for matching purposes.
+
 
 <table>
   <thead>
