@@ -11,7 +11,7 @@
 <meta name="author" content="Rafael Ladislau">
 <meta name="author" content="Julia Lane, Ph.D.">
 <meta name="author" content="Ming Wang">
-<meta name="dcterms.date" content="2025-06-14">
+<meta name="dcterms.date" content="2025-06-18">
 
 <title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
@@ -316,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 14, 2025</p>
+      <p class="date">June 18, 2025</p>
     </div>
   </div>
   
@@ -337,10 +337,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="how-was-the-study-conducted" class="level1 unnumbered">
 <h1 class="unnumbered">How Was the Study Conducted?</h1>
 <p>Three citation databases are compared: Elsevier’s Scopus, OurResearch’s OpenAlex, and Digital Science’s Dimensions.ai.</p>
+<p>Three citation databases are compared: Elsevier’s Scopus, OurResearch’s OpenAlex, and Digital Science’s Dimensions.ai.</p>
 <ol type="1">
 <li><p><a href="./appendices/app_databases.html#sec-scopus"><strong>Scopus</strong></a> charges for access to its citation database. It indexes peer-reviewed, including journal articles, conference papers, and books, and provides metadata on authorship, institutional affiliation, funding sources, and citations. For this study, Scopus was used to identify dataset mentions through a two-step process: first, Elsevier executed queries against the full-text ScienceDirect corpus and reference lists within Scopus; second, publications likely to mention USDA datasets were filtered based on keyword matching and machine learning models.</p></li>
 <li><p><a href="./appendices/app_databases.html#sec-openalex"><strong>OpenAlex</strong></a>, an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. In this study, we used two approaches to identify dataset mentions in OpenAlex: a full-text search, which scans publication metadata fields such as titles and abstracts for references to USDA datasets,<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> and a seed corpus search, which starts with a targeted set of publications based on journal, author, and topic criteria, then downloads the full text of each paper to identify mentions of USDA datasets.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p></li>
-<li><p><a href="./appendices/app_databases.html#sec-dimensions"><strong>Dimensions</strong></a>, developed by Digital Science, is a citation database that combines free and subscription-based access. It indexes a range of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. Dimensions also links publications to grant and funding information. For this study, publications in Dimensions that reference USDA datasets were identified by <strong>Add Rafael’s text</strong>. To maintain consistency with the criteria applied to Scopus and OpenAlex, the study focuses only on publications classified as journal articles.</p></li>
+<li><p><a href="./appendices/app_databases.html#sec-dimensions"><strong>Dimensions</strong></a>, developed by Digital Science, is a citation database that combines free and subscription-based access. It indexes a range of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. Dimensions also links publications to grant and funding information. For this study, publications in Dimensions that reference USDA datasets were identified by constructing structured queries in Dimensions’ Domain Specific Language (DSL) that combined dataset aliases with institutional affiliation terms. These were executed via the <code>dimcli</code> API to return English-language articles from 2017–2023 with at least one U.S.-affiliated author. To maintain consistency with the criteria applied to Scopus and OpenAlex, the study focuses only on publications classified as journal articles.</p></li>
 </ol>
 <p>To compare how these databases track dataset usage, we focus on six USDA datasets commonly used in agricultural, economic, and food policy research:</p>
 <ol type="1">
