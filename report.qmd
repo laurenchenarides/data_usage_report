@@ -37,7 +37,7 @@ Three citation databases are compared: Elsevier’s Scopus, OurResearch's OpenAl
 
 2. [**OpenAlex**](appendices/app_databases.qmd#sec-openalex), an open-source platform, offers free metadata access. It covers both traditional academic publications and other research outputs like preprints and technical reports. In this study, we used two approaches to identify dataset mentions in OpenAlex: a full-text search, which scans publication metadata fields such as titles and abstracts for references to USDA datasets,^[Full-text search in OpenAlex refers to querying the entire database for textual mentions of dataset names within titles, abstracts, and other fields.] and a seed corpus search, which starts with a targeted set of publications based on journal, author, and topic criteria, then downloads the full text of each paper to identify mentions of USDA datasets.^[The seed corpus search involves selecting a targeted set of publications based on journal, author, and topic filters. Full-text PDFs are downloaded and analyzed to identify mentions of USDA datasets not captured through metadata alone.] 
 
-3. [**Dimensions**](appendices/app_databases.qmd#sec-dimensions), developed by Digital Science, is a citation database that combines free and subscription-based access. It indexes a range of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. Dimensions also links publications to grant and funding information. For this study, publications in Dimensions that reference USDA datasets were identified by **Add Rafael's text**. To maintain consistency with the criteria applied to Scopus and OpenAlex, the study focuses only on publications classified as journal articles.
+3. [**Dimensions**](appendices/app_databases.qmd#sec-dimensions), developed by Digital Science, is a citation database that combines free and subscription-based access. It indexes a range of research outputs, including journal articles, books, clinical trials, patents, datasets, and policy documents. Dimensions also links publications to grant and funding information. For this study, publications in Dimensions that reference USDA datasets were identified by constructing structured queries in Dimensions’ Domain Specific Language (DSL) that combined dataset aliases with institutional affiliation terms. These were executed via the `dimcli` API to return English-language articles from 2017–2023 with at least one U.S.-affiliated author. To maintain consistency with the criteria applied to Scopus and OpenAlex, the study focuses only on publications classified as journal articles.
 
 To compare how these databases track dataset usage, we focus on six USDA datasets commonly used in agricultural, economic, and food policy research:
 
@@ -285,9 +285,9 @@ Overall, the Dimensions.ai approach aligned with our methods for Scopus and Open
 
 ## Data Processing
 
-To produce a consistent count of unique publications referencing each USDA dataset, we consolidated records from three sources-Scopus, OpenAlex, and Dimensions-each of which identified publications through a different mechanism, described above. 
+To produce a consistent count of unique publications referencing each USDA dataset, records from three sources-Scopus, OpenAlex, and Dimensions-were consolidated, each of which identified publications through a different mechanism, described above. 
 
-For each source, publication-level metadata, including DOIs, journal titles, ISSNs (when available), and source-specific topic classifications was extracted. DOIs were standardized (e.g., removing URL prefixes, `https://doi.org/`) for consistent matching across sources. Duplicate DOIs within each source were removed. All DOIs compared in this report are associated with publications classified as document type = 'article' and were published between 2017 and 2023.
+For each source, publication-level metadata, including DOIs, journal titles, ISSNs (when available), and source-specific topic classifications was extracted. DOIs were standardized (e.g., removing URL prefixes, `https://doi.org/`) for consistent matching across sources. Duplicate DOIs within each source were removed. All DOIs compared in this report are associated with publications classified as document type = `article` and were published between 2017 and 2023.
 
 # Results 
 
@@ -307,12 +307,12 @@ This process ensured that each publication was counted once, even if it appeared
 
 | Dataset Name               | Number of Unique Publications    |
 |:---------------------------------|:------|
-| ARMS                                            | 1,611 |
-| Census of Agriculture                           | 6,206 |
-| Food Access Research Atlas                      | 639  |
-| Food Acquisition and Purchase Survey            | 839  |
-| Household Food Security Survey Module           | 1,537 |
-| Rural-Urban Continuum Code                      | 2,431 |
+| ARMS                                            | 1,581 |
+| Census of Agriculture                           | 5,835 |
+| Food Access Research Atlas                      | 590  |
+| Food Acquisition and Purchase Survey            | 808  |
+| Household Food Security Survey Module           | 1,408 |
+| Rural-Urban Continuum Code                      | 2,215 |
 
 : Unique Publications with Metadata across Sources {#tbl-pub-counts}
 
@@ -320,11 +320,17 @@ All code used to clean, deduplicate, and merge records is provided in the [GitHu
 
 ## Publication Coverage
 
-An objective of this report is to understand differences in publication coverage across Scopus and OpenAlex. Specifically, this section asks: (1) how many and which publications referencing USDA datasets appear in each citation database, and (2) how many and which journals publishing these articles overlap between the two sources. In addition, the analysis evaluates whether the different search strategies used in OpenAlex—the full-text metadata search versus the seed-corpus approach—yield substantially different sets of results.
+An objective of this report is to understand differences in publication coverage across Scopus, OpenAlex, and Dimensions. Specifically, this section asks: 
+(1) how many and which publications referencing USDA datasets appear in each citation database, and 
+(2) how many and which journals publishing these articles overlap between the two sources. 
 
-For each of the six USDA datasets featured in this study, a treemap visualization is presented to summarize publication coverage across the citation databases. Because two search strategies were applied to OpenAlex, the results distinguish publications identified separately. Each treemap groups publications into mutually exclusive categories based on their presence in one or more of the data sources: Scopus, OpenAlex Full Text, OpenAlex Seed Corpus, Dimensions. The size of each box is proportional to the number of distinct DOIs in that group, providing a visual summary of the relative coverage across sources. For example, a large “Scopus only” segment indicates a high number of publications indexed exclusively in Scopus, while overlapping segments (e.g., “Scopus ∩ OA Seed”) reflect shared coverage between platforms.
+In addition, the analysis evaluates whether the different search strategies used in OpenAlex—the full-text metadata search versus the seed-corpus approach—yield substantially different sets of results.
 
-### ARMS Financial and Crop Production Practices {.unnumbered}
+For each of the six USDA datasets (@tbl-usda-datasets) featured in this study, a treemap visualization summarizes publication coverage across the three citation databases. Each treemap groups publications into mutually exclusive categories based on their presence in one or more of the sources. The size of each box is proportional to the number of distinct DOIs in that group, providing a visual summary of relative coverage. For example, a large “Scopus only” segment indicates a high number of publications indexed exclusively in Scopus, while overlapping segments (e.g., “Scopus ∩ Dimensions”) reflect shared coverage between platforms.
+
+### Agricultural Resource Management Survey (ARMS) {.unnumbered}
+
+OpenAlex dominates coverage for ARMS-related publications, capturing nearly 76% of all distinct DOIs exclusively. In contrast, Scopus and Dimensions contribute relatively little: just 8.9% and 5.6% of DOIs appear exclusively in those sources, respectively. Overlaps are modest, with 2.5% of DOIs shared by OpenAlex and Dimensions, and only 1.9% captured by all three. This suggests OpenAlex’s broader indexing of ARMS publications relative to the other databases.
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
@@ -341,6 +347,8 @@ For each of the six USDA datasets featured in this study, a treemap visualizatio
 
 
 ### The Census of Agriculture {.unnumbered}
+
+Scopus provides the broadest exclusive coverage for the Census of Agriculture, accounting for 41.3% of DOIs. Dimensions follows at 18.8%, while OpenAlex accounts for just 9.2% exclusively. The largest overlap is between Scopus and Dimensions (22.8%), with limited three-way overlap (3.6%). These results indicate that Scopus and Dimensions are the primary sources capturing publications referencing this dataset.
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
@@ -359,6 +367,8 @@ For each of the six USDA datasets featured in this study, a treemap visualizatio
 
 ### Food Access Research Atlas {.unnumbered}
 
+Coverage for this dataset is more evenly distributed. Scopus and Scopus ∩ Dimensions each account for about 24%, while OpenAlex-only coverage is 14.6%, and Dimensions-only is 11.9%. Notably, 11% of DOIs appear in all three sources. This more balanced distribution suggests broader and more consistent indexing across platforms, without a single source dominating.
+
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
   <a href="graphics/treemaps/Food_Access_Research_Atlas_treemap.png" target="_blank">
@@ -373,6 +383,8 @@ For each of the six USDA datasets featured in this study, a treemap visualizatio
 
 
 ### The Food Acquisition and Purchase Survey (FoodAPS) {.unnumbered}
+
+OpenAlex again provides the widest exclusive coverage (46.7%), while Scopus and Scopus ∩ Dimensions each contribute 17.8%. Dimensions-only coverage is modest (7.7%), and 4.7% of DOIs are shared across all three. This indicates that OpenAlex is especially important for capturing FoodAPS-related work, but combined use of all three sources increases overall visibility.
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
@@ -389,6 +401,8 @@ For each of the six USDA datasets featured in this study, a treemap visualizatio
 
 ### The Household Food Security Survey Module {.unnumbered}
 
+Scopus has the highest exclusive coverage (34.7%), followed by Scopus ∩ Dimensions (22.3%) and Dimensions-only (17.5%). OpenAlex-only coverage is lower at 12.8%, and just 5.8% of DOIs are indexed by all three. This indicates stronger coverage for HFSSM-related publications in Scopus and Dimensions compared to OpenAlex.
+
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
   <a href="graphics/treemaps/Household_Food_Security_Survey_Module_treemap.png" target="_blank">
@@ -404,6 +418,8 @@ For each of the six USDA datasets featured in this study, a treemap visualizatio
 
 ### Rural-Urban Continuum Code {.unnumbered}
 
+Coverage is again led by Scopus (30.8%) and Dimensions (25%), with Scopus ∩ Dimensions contributing another 24.2%. OpenAlex-only coverage is relatively low at 8.1%, and only 5.9% of DOIs are shared across all three. This pattern is consistent with datasets where OpenAlex’s coverage is more limited.
+
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
   <a href="graphics/treemaps/Rural-Urban_Continuum_Code_treemap.png" target="_blank">
@@ -417,15 +433,29 @@ For each of the six USDA datasets featured in this study, a treemap visualizatio
 :::
 
 
+:::{.callout-note title="Synthesis of DOI Coverage by Source (Percent of Total DOIs)"}
+
+| Dataset                    | Total DOIs | Scopus only (%) | OpenAlex only (%) | Dimensions only (%) | Scopus ∩ OpenAlex (%) | Scopus ∩ Dimensions (%) | OpenAlex ∩ Dimensions (%) | All three (%) |
+|----------------------------|------------|------------------|--------------------|----------------------|------------------------|--------------------------|-----------------------------|----------------|
+| ARMS                       | 1581       | 8.9              | 75.8               | 5.6                  | 0.7                    | 4.6                      | 2.5                         | 1.9            |
+| Census of Agriculture      | 5835       | 41.3             | 9.2                | 18.8                 | 1.6                    | 22.8                     | 2.8                         | 3.6            |
+| Food Access Research Atlas | 590        | 24.4             | 14.6               | 11.9                 | 5.1                    | 24.7                     | 8.3                         | 11.0           |
+| FoodAPS                    | 808        | 17.8             | 46.7               | 7.7                  | 1.7                    | 17.8                     | 3.6                         | 4.7            |
+| HFSSM                      | 1408       | 34.7             | 12.8               | 17.5                 | 2.2                    | 22.3                     | 4.6                         | 5.8            |
+| RUCC                       | 2215       | 30.8             | 8.1                | 25.0                 | 2.3                    | 24.2                     | 3.7                         | 5.9            |
+
+:::
+
 
 ## Journal Coverage
 
-Now that we have compared journal coverage across the two citation databases, we next examine the publications within journals that are indexed in both Scopus and OpenAlex. We report these results for the full-text search approach and the seed-corpus approach in OpenAlex.
+The previous section documented substantial variation in publication coverage across Scopus, OpenAlex, and Dimensions. One potential explanation for these differences is variation in journal indexing across sources. This section examines that possibility by looking at journal coverage, specifically, whether each citation database indexes the journals where USDA dataset-related publications appear.
 
+For each dataset, the analysis identifies the top 40 journals (by DOI count) and determines which citation databases index them. Sankey diagrams illustrate the relationship between citation databases (left) and journals (right). Flows indicate coverage, with journals indexed in multiple sources connected to each. While only the top 40 journals are visualized, a complete list is available in the [GitHub repository](https://github.com/laurenchenarides/compare_scopus_openalex_report/tree/main/graphics/sankey_plots2).
 
+### Agricultural Resource Management Survey (ARMS) {.unnumbered}
 
-### ARMS Financial and Crop Production Practices {.unnumbered}
-
+Most top journals referencing ARMS are indexed by OpenAlex, including several high-DOI outlets such as *Applied Economic Perspectives and Policy* and the *American Journal of Agricultural Economics*. Fewer journals are exclusive to Scopus or Dimensions. This pattern aligns with OpenAlex's dominant coverage of ARMS publications in the previous section.
 
 ::: {.content-visible when-format="html"}
 
@@ -446,6 +476,7 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ### The Census of Agriculture {.unnumbered}
 
+Journal coverage for Census-related publications is distributed more evenly across the three sources. Several journals—particularly in environmental and remote sensing fields—are indexed only in Scopus or Dimensions. Shared indexing is common for journals like *Food Policy* and *Agricultural Systems*, helping to explain the high level of overlap between Scopus and Dimensions.
 
 ::: {.content-visible when-format="html"}
 
@@ -467,6 +498,7 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ### Food Access Research Atlas {.unnumbered}
 
+This dataset is associated with journals that are broadly indexed across sources. Titles such as the *Journal of Agricultural and Applied Economics* and *Ecological Economics* are covered in all three databases. The strong overlap in journal indexing corresponds with the relatively balanced publication coverage observed in the prior section.
 
 ::: {.content-visible when-format="html"}
 
@@ -488,6 +520,8 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ### The Food Acquisition and Purchase Survey (FoodAPS) {.unnumbered}
 
+Many FoodAPS-related journals fall within the nutrition and behavioral sciences domains, and several of these—such as *Appetite* and *Frontiers in Nutrition*—are indexed in OpenAlex. While a subset of journals is also covered by Scopus and Dimensions, OpenAlex appears to index more of the high-volume titles, consistent with its higher share of FoodAPS-related DOIs.
+
 ::: {.content-visible when-format="html"}
 
 <figure style="text-align: center;">
@@ -507,6 +541,8 @@ Now that we have compared journal coverage across the two citation databases, we
 
 
 ### The Household Food Security Survey Module {.unnumbered}
+
+This dataset draws from a wide range of journals in public health, food policy, and applied economics. Journals such as *Food Security* and *Journal of Nutrition Education and Behavior* appear in all three sources, but some health-focused titles are only indexed in Scopus or Dimensions. These differences likely contribute to the stronger coverage seen in Scopus and Dimensions.
 
 ::: {.content-visible when-format="html"}
 
@@ -528,6 +564,7 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ### Rural-Urban Continuum Code {.unnumbered}
 
+Journals citing RUCC span health, epidemiology, and rural development. Many are indexed in Scopus and Dimensions, including *Environmental Research*, *BMC Public Health*, and *Drug and Alcohol Dependence*. OpenAlex has more limited coverage of these titles, consistent with its lower representation of RUCC-related DOIs.
 
 ::: {.content-visible when-format="html"}
 
@@ -546,10 +583,72 @@ Now that we have compared journal coverage across the two citation databases, we
 
 :::
 
+:::{.callout-note title="Summary of Journal Coverage by Dataset"}
+
+
+| Dataset                    | Dominant Source       | Notable Journals Indexed in All Sources     | Notable Journals Missing from Some Sources                      |
+|----------------------------|------------------------|----------------------------------------------|------------------------------------------------------------------|
+| ARMS                       | OpenAlex               | AJAE, AEPP, Agribusiness                     | Few missing; OpenAlex covers most top journals                  |
+| Census of Agriculture      | Scopus / Dimensions    | Food Policy, Agricultural Systems            | Environmental/remote sensing journals missing in OpenAlex      |
+| Food Access Research Atlas | Shared                 | JAAEA, Ecological Economics                  | Broad overlap; minimal gaps                                     |
+| FoodAPS                    | OpenAlex               | Food Security, Frontiers in Nutrition        | Some nutrition journals missing in Scopus/Dimensions            |
+| HFSSM                      | Scopus / Dimensions    | JNED, Food Security                          | Some public health journals missing in OpenAlex                 |
+| RUCC                       | Scopus / Dimensions    | Environmental Research, Food Policy          | Several epidemiology/health titles missing in OpenAlex          |
+:::
 
 ## Publication Topics
 
-### ARMS Financial and Crop Production Practices {.unnumbered}
+In addition to differences in coverage and journal indexing, citation databases vary in how they classify research content. Each system applies a distinct taxonomy—often algorithmically generated—to assign topics to publications. These systems function like thematic filters, shaping how research is organized, discovered, and interpreted.
+
+To understand how topic classification differs across sources, this section compares the most frequent topics assigned to the same set of publications by Scopus, OpenAlex, and Dimensions.
+
+**Why Focus on Overlapping Publications?**
+
+To ensure comparability, the analysis is restricted to DOIs that appear in all three databases. This approach isolates differences in classification by holding the underlying publication set constant. Any observed variation reflects how each database labels and groups the same publications.
+
+**Word Cloud Construction**
+
+For each dataset, the word clouds are based on frequency tables constructed from topic metadata assigned by each source. Specifically:
+
+- The analysis filters to DOIs indexed by all three sources
+- For each source, the corresponding topic classification schema is used to generate a count of how many DOIs are linked to each topic
+- The word clouds visualize the top 100 most frequent topics assigned by each source to those shared DOIs
+
+Source-specific classification methods include:
+
+- Scopus: Author keywords and ASJC codes
+- OpenAlex: Topic field from OpenAlex’s hierarchical ontology
+- Dimensions: Concepts assigned using machine learning (per Dimensions API codebook)
+
+A separate frequency table was generated for each source and dataset combination. These topic counts form the basis of the word clouds shown below.
+
+
+### Agricultural Resource Management Survey (ARMS) {.unnumbered}
+
+For the 35 publications referencing ARMS and indexed in all three sources, topic classification reveals some consistent patterns alongside differences in emphasis across systems.
+
+Dimensions assigns a range of applied and operational topics, including Soil Health, Marketing Channels, Dairy Farms, and Crop Insurance. Several topics focus on production decisions and management practices, such as Farm Size, Data Privacy, and N Leaching. The prominence of terms related to input use, conservation, and cost structures reflects a policy- and practice-oriented framing.
+
+OpenAlex yields a more consolidated view, emphasizing broad thematic categories like Agricultural Innovations and Practices, Organic Food and Agriculture, and Economics of Agriculture and Food Markets. Fewer distinct terms are present, and the focus is more conceptual, with attention to sustainability, risk, and valuation.
+
+Scopus includes disciplinary terms in Economics, Agronomy, and Environmental Science, alongside practical topics such as Farm Size, Cover Crops, and Weather Derivatives. The classification reflects both domain-specific and cross-cutting areas, consistent with the broader journal base in Scopus.
+
+Taken together, these results suggest that while all three sources capture core agricultural themes, Dimensions emphasizes policy tools and production systems, OpenAlex foregrounds conceptual linkages to sustainability and innovation, and Scopus presents a broader disciplinary framing. These differences have implications for how research using ARMS data might be surfaced in topic-based search or evaluation.
+
+:::{.panel-tabset}
+
+#### Scopus
+![](graphics/word_clouds/shared_dois/dataset01_wordcloud_shared_scopus.png){target=_blank}
+
+#### OpenAlex
+![](graphics/word_clouds/shared_dois/dataset01_wordcloud_shared_openalex.png){target=_blank}
+
+#### Dimensions
+![](graphics/word_clouds/shared_dois/dataset01_wordcloud_shared_dimensions.png){target=_blank}
+
+:::
+
+::: {.callout-note title="Additional Word Cloud Variants" collapse="true"}
 
 ::: {.content-visible when-format="html"}
 
@@ -578,12 +677,40 @@ Now that we have compared journal coverage across the two citation databases, we
 
 </div>
 :::
+:::
 
 ::: {.content-visible when-format="pdf"}
 
 :::
 
+
 ### The Census of Agriculture {.unnumbered}
+
+The 247 publications referencing the Census of Agriculture and indexed in all three databases provide a rich basis for comparing classification systems. Each source assigns distinct topics to these shared DOIs, revealing differences in how agricultural, environmental, and economic research is categorized.
+
+Dimensions emphasizes applied agricultural practice and land management topics, such as Cover Crops, Food Systems, Land Use, and No-Till. Many terms are operational, with a focus on production practices, conservation techniques, and farm-level outcomes (e.g., Manure, Calf Care, Biosecurity Practices).
+
+OpenAlex presents a broader thematic range, incorporating environmental, behavioral, and economic dimensions. Terms like Urban Agriculture and Sustainability, Economic and Environmental Valuation, Soil Carbon and Nitrogen Dynamics, and Food Waste Reduction suggest a wider scope of inquiry, including sustainability science, agroecology, and interdisciplinary research.
+
+Scopus emphasizes core disciplinary areas such as Ecology, Food Science, Economics and Econometrics, and Agronomy and Crop Science. The word cloud includes scientific and policy-oriented terms like Soil Emission, Pollution, and Land Titling, along with geographic or global framing (e.g., China, Urban Agriculture).
+
+These differences demonstrate how the same set of publications can be interpreted through varied conceptual lenses. Dimensions leans toward practice- and system-level terms, OpenAlex emphasizes sustainability and complexity, while Scopus highlights scientific domains and applied economic constructs.
+
+
+:::{.panel-tabset}
+
+#### Scopus
+![](graphics/word_clouds/shared_dois/dataset05_wordcloud_shared_scopus.png){target=_blank}
+
+#### OpenAlex
+![](graphics/word_clouds/shared_dois/dataset05_wordcloud_shared_openalex.png){target=_blank}
+
+#### Dimensions
+![](graphics/word_clouds/shared_dois/dataset05_wordcloud_shared_dimensions.png){target=_blank}
+
+:::
+
+::: {.callout-note title="Additional Word Cloud Variants" collapse="true"}
 
 ::: {.content-visible when-format="html"}
 
@@ -612,12 +739,38 @@ Now that we have compared journal coverage across the two citation databases, we
 
 </div>
 :::
+:::
 
 ::: {.content-visible when-format="pdf"}
 
 :::
 
 ### Food Access Research Atlas {.unnumbered}
+
+For the 84 shared DOIs referencing the Food Access Research Atlas, each citation database surfaces a different emphasis in topic classification, reflecting both overlapping and diverging conceptual frames.
+
+Dimensions centers on topics related to Food Deserts, Food Access, and Healthy Food Availability, with strong links to public assistance programs (SNAP, Supplemental Nutrition Assistance Program, Food Insecurity). Additional terms such as Census Tracts, Community Gardening, and Diet Cost point to an applied and community-level framing of food access challenges.
+
+OpenAlex takes a broader thematic approach, highlighting population health topics such as Food Security and Health in Diverse Populations and Obesity, Physical Activity, Diet. There is a noticeable emphasis on intersectional and structural themes—Urban Transport and Accessibility, Health Disparities, Homelessness and Social Issues—alongside sustainability-oriented terms like Urban Agriculture and Sustainability.
+
+Scopus shows a wide spread of disciplinary and technical topics, including Obesity, Grocery Stores, Farmers’ Markets, and Public Health. Additional terms such as Anthropology, Surgery, and Roboehtics reflect the influence of journals from medical and applied sciences, sometimes extending beyond food policy and nutrition per se.
+
+Together, these perspectives suggest that Dimensions tends to classify FARA-linked publications in the context of policy and access programs, OpenAlex emphasizes broader social determinants and urban health intersections, while Scopus reflects a more disciplinary and biomedical scope. This variation may shape how researchers and policymakers interpret or retrieve work related to food environments and neighborhood-level food access.
+
+:::{.panel-tabset}
+
+#### Scopus
+![](graphics/word_clouds/shared_dois/dataset08_wordcloud_shared_scopus.png){target=_blank}
+
+#### OpenAlex
+![](graphics/word_clouds/shared_dois/dataset08_wordcloud_shared_openalex.png){target=_blank}
+
+#### Dimensions
+![](graphics/word_clouds/shared_dois/dataset08_wordcloud_shared_dimensions.png){target=_blank}
+
+:::
+
+::: {.callout-note title="Additional Word Cloud Variants" collapse="true"}
 
 ::: {.content-visible when-format="html"}
 
@@ -646,6 +799,7 @@ Now that we have compared journal coverage across the two citation databases, we
 
 </div>
 :::
+:::
 
 ::: {.content-visible when-format="pdf"}
 
@@ -653,6 +807,31 @@ Now that we have compared journal coverage across the two citation databases, we
 
 
 ### The Food Acquisition and Purchase Survey (FoodAPS) {.unnumbered}
+
+Among the 45 DOIs referencing FoodAPS that appear in all three sources, each citation database reflects different emphases in how research topics are classified.
+
+Dimensions assigns topics closely aligned with food assistance and economic access, including Diet Cost, Food Environment, Thrifty Food Plan, and Supplemental Nutrition Assistance Program. Many topics reference federal nutrition programs, purchasing behavior, and measures of food affordability, which align with common policy applications of the dataset.
+
+OpenAlex emphasizes broader public health themes, such as Food Security and Health in Diverse Populations and Obesity, Physical Activity, Diet. Related topics highlight structural and behavioral factors, including Homelessness and Social Issues, Urban Agriculture and Sustainability, and Consumer Attitudes and Food Labeling.
+
+Scopus includes a mix of applied and disciplinary topics, with frequent terms like Obesity, Grocery Stores, Farmers’ Markets, and Nutrition and Dietetics. Additional topics such as Brand Placement, Food Labeling, and Program Participation suggest greater representation of behavioral nutrition, labeling policy, and intervention studies.
+
+Overall, Dimensions tends to classify FoodAPS-related work in terms of food policy and program evaluation, OpenAlex highlights public health and social determinants, and Scopus reflects more disciplinary and intervention-focused research.
+
+:::{.panel-tabset}
+
+#### Scopus
+![](graphics/word_clouds/shared_dois/dataset09_wordcloud_shared_scopus.png){target=_blank}
+
+#### OpenAlex
+![](graphics/word_clouds/shared_dois/dataset09_wordcloud_shared_openalex.png){target=_blank}
+
+#### Dimensions
+![](graphics/word_clouds/shared_dois/dataset09_wordcloud_shared_dimensions.png){target=_blank}
+
+:::
+
+::: {.callout-note title="Additional Word Cloud Variants" collapse="true"}
 
 ::: {.content-visible when-format="html"}
 
@@ -681,12 +860,38 @@ Now that we have compared journal coverage across the two citation databases, we
 
 </div>
 :::
+:::
 
 ::: {.content-visible when-format="pdf"}
 
 :::
 
 ### The Household Food Security Survey Module {.unnumbered}
+
+Among the 98 DOIs indexed in Scopus, OpenAlex, and Dimensions, publications referencing the Household Food Security Survey Module (HFSSM) reflect a wide-ranging set of topics, though the emphasis varies by source.
+
+Dimensions associates HFSSM-related publications most frequently with topics such as food insecurity, supplemental nutrition assistance, diet quality, older adults, and mental health. Many of these topics connect to program evaluation, food access, and health outcomes in low-income or vulnerable populations.
+
+Scopus similarly highlights food pantries, program participation, and family characteristics, but also includes a broader range of biomedical and psychological research, with terms like epigenetics, autism, clinical features, and mental disease. This broader disciplinary coverage reflects the indexing structure of Scopus, which spans both health and social science fields.
+
+In OpenAlex, topic classifications are more concentrated. The most common labels include food security and health in diverse populations, obesity, physical activity, and diet, and homelessness and social issues. These reflect a more sociomedical framing and suggest a focus on population-level health disparities and structural determinants.
+
+Taken together, these differences in topical classification illustrate how each database frames HFSSM-related research through its own taxonomic lens. While there is substantial thematic overlap, the terminology and granularity used to describe research topics can shape how a dataset’s contributions appear across bibliographic sources.
+
+:::{.panel-tabset}
+
+#### Scopus
+![](graphics/word_clouds/shared_dois/dataset10_wordcloud_shared_scopus.png){target=_blank}
+
+#### OpenAlex
+![](graphics/word_clouds/shared_dois/dataset10_wordcloud_shared_openalex.png){target=_blank}
+
+#### Dimensions
+![](graphics/word_clouds/shared_dois/dataset10_wordcloud_shared_dimensions.png){target=_blank}
+
+:::
+
+::: {.callout-note title="Additional Word Cloud Variants" collapse="true"}
 
 ::: {.content-visible when-format="html"}
 
@@ -715,6 +920,7 @@ Now that we have compared journal coverage across the two citation databases, we
 
 </div>
 :::
+:::
 
 ::: {.content-visible when-format="pdf"}
 
@@ -722,6 +928,25 @@ Now that we have compared journal coverage across the two citation databases, we
 
 
 ### Rural-Urban Continuum Code {.unnumbered}
+
+There are 164 DOIs referencing RUCC that appear in all three sources. Topic classifications for these publications center on public health, healthcare access, and rural disparities, but the emphasis varies across systems. 
+
+Dimensions highlights county-level metrics and rural health infrastructure, with terms like rural counties, older adults, and cancer survivors being especially prominent. OpenAlex places greater weight on population health and health disparities, frequently tagging topics such as opioid use disorder treatment, global cancer incidence, and primary care and health outcomes. In Scopus, classifications reflect a broad span of public health themes—including obesity, health policy, Medicaid, and exercise—as well as clinical topics like cancer and surgery. These differences reflect each source’s unique tagging schema, reinforcing the value of triangulating across systems when analyzing policy-relevant publication domains.
+
+:::{.panel-tabset}
+
+#### Scopus
+![](graphics/word_clouds/shared_dois/dataset06_wordcloud_shared_scopus.png){target=_blank}
+
+#### OpenAlex
+![](graphics/word_clouds/shared_dois/dataset06_wordcloud_shared_openalex.png){target=_blank}
+
+#### Dimensions
+![](graphics/word_clouds/shared_dois/dataset06_wordcloud_shared_dimensions.png){target=_blank}
+
+:::
+
+::: {.callout-note title="Additional Word Cloud Variants" collapse="true"}
 
 ::: {.content-visible when-format="html"}
 
@@ -750,6 +975,7 @@ Now that we have compared journal coverage across the two citation databases, we
 
 </div>
 :::
+:::
 
 ::: {.content-visible when-format="pdf"}
 
@@ -759,7 +985,31 @@ Now that we have compared journal coverage across the two citation databases, we
 
 ## Author Comparison
 
-### ARMS Financial and Crop Production Practices {.unnumbered}
+To identify and compare authors across Scopus, OpenAlex, and Dimensions, a multi-step disambiguation process was implemented. Because not all authors have persistent identifiers (e.g., ORCIDs), and because name formatting, use of initials, and institutional affiliations vary across and within sources, a harmonization pipeline was developed. This process follows the structure of the [PatentsView disambiguation methodology](https://patentsview.org/disambiguation) and includes the following steps:
+
+1. **Name Normalization and Source-Specific Cleaning:** Author names were extracted from each source and cleaned using a consistent normalization function. This involved transliterating special characters, removing punctuation, standardizing case, and collapsing whitespace. In each database, author records were linked to publication DOIs and enriched with affiliation information where available.
+
+2. **ORCID-Based Canonical Resolution:** When an author’s ORCID was present—either directly in OpenAlex or indirectly via Dimensions—it was used as the canonical identifier. ORCID lookups were performed for all DOIs across sources, and a lookup table was constructed to resolve shared authors using both ORCID and cleaned name/DOI matches.
+
+3. **Blocking Using Canopy Construction:** For authors without ORCID identifiers, blocking keys were constructed by combining the first initial and last name to form “canopy” groups. This reduced the number of pairwise comparisons needed for clustering by limiting them to plausible matches.
+
+4. **String Similarity Clustering Within Canopies:** Within each canopy group, Jaro-Winkler string distances were calculated using the cleaned full names. Hierarchical clustering with average linkage was applied, and clusters were formed using a similarity threshold. Each cluster was then assigned a synthetic canonical ID based on the first observed name.
+
+5. **Merging and Source Propagation:** Author mentions across all three sources were merged into a master long-format table, with canonical IDs assigned based on ORCID or string-based clustering. For each publication, flags were added to indicate whether an author appeared in Scopus, OpenAlex, or Dimensions. These flags were propagated to all mentions of a given author within the same DOI.
+
+6. **Institutional Consolidation:** Author affiliations were collapsed across sources by pivoting to a wide format (institution_1, institution_2, etc.) and summarizing into a primary institution field. This structure supported subsequent author-level aggregation and topic classification.
+
+This approach enables the identification of unique authors across bibliometric systems, even in the absence of persistent identifiers. It supports comparisons of author counts, top contributors, and topic-specific participation across Scopus, OpenAlex, and Dimensions.
+
+**Main Takeaway**
+
+Across all datasets, the authors most visible in one platform are not always discoverable in others. The top contributors to a dataset can vary significantly depending on which citation database is used. These differences stem from inconsistencies in metadata, name disambiguation, and indexing practices. As a result, evaluations or dashboards based on a single source may misrepresent who is using a dataset, leading to undercounting or omission of active researchers. Using multiple sources helps create a more accurate and equitable picture of scholarly engagement.
+
+:::{.panel-tabset}
+
+###  ARMS {.unnumbered}
+
+For ARMS, the top 20 authors identified in each platform show limited overlap. While some authors are discoverable across all three sources, others appear only in one, particularly in OpenAlex or Dimensions. This reflects inconsistencies in how author names are indexed and matched across platforms, especially for researchers who publish under multiple name variants or without ORCID identifiers.
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
@@ -775,7 +1025,9 @@ Now that we have compared journal coverage across the two citation databases, we
 
 
 
-### The Census of Agriculture {.unnumbered}
+### Census of Ag {.unnumbered}
+
+The Census of Agriculture shows relatively higher agreement across platforms, with many top authors appearing in multiple sources. However, there are still noticeable differences, with some authors ranked highly in one platform but not appearing at all in others. These discrepancies are likely tied to variations in how author metadata and institutional affiliations are recorded.
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
@@ -792,7 +1044,9 @@ Now that we have compared journal coverage across the two citation databases, we
 
 
 
-### Food Access Research Atlas {.unnumbered}
+### FARA {.unnumbered}
+
+FARA displays substantial divergence in author coverage. A number of top authors are visible in only one platform, and overlap across all three is relatively limited. This dataset seems particularly affected by platform-specific indexing practices—likely because much of the associated research is interdisciplinary and published across a range of journal types.
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
@@ -807,7 +1061,9 @@ Now that we have compared journal coverage across the two citation databases, we
 :::
 
 
-### The Food Acquisition and Purchase Survey (FoodAPS) {.unnumbered}
+### FoodAPS {.unnumbered}
+
+FoodAPS has uneven author coverage across platforms. While some authors are picked up consistently, others are captured by only one source. OpenAlex includes several authors who are not visible in Scopus or Dimensions, suggesting that coverage differences may be especially pronounced for newer researchers or those publishing in open-access venues.
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
@@ -822,7 +1078,9 @@ Now that we have compared journal coverage across the two citation databases, we
 :::
 
 
-### The Household Food Security Survey Module {.unnumbered}
+### HFSSM {.unnumbered}
+
+The HFSSM dataset exhibits moderate agreement in author coverage. Most top authors are represented in at least two sources, but each platform still identifies several authors not seen in the others. This suggests that while the dataset has relatively broad exposure, gaps remain that could affect who is counted or highlighted in bibliometric analyses.
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
@@ -837,7 +1095,9 @@ Now that we have compared journal coverage across the two citation databases, we
 :::
 
 
-### Rural-Urban Continuum Code {.unnumbered}
+### RUCC {.unnumbered}
+
+RUCC shows the widest variation in author rankings. Many authors appear in only one of the three sources, and very few are consistently represented across all. This fragmentation likely reflects the broad disciplinary scope of RUCC-related research, which spans public health, demography, and social science—fields that are not uniformly indexed across platforms.
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
@@ -850,13 +1110,15 @@ Now that we have compared journal coverage across the two citation databases, we
 ::: {.content-visible when-format="pdf"}
 ![](graphics/tilemaps/rural_urban_continuum_code_top_20_author_overlap.png)
 :::
-
+:::
 
 
 ## Institutional Comparison
 
 In addition to examining dataset mention coverage, the report also evaluates differences in institutional representation across Scopus, OpenAlex, and Dimensions. Each of the featured citation databases represent some portion of the global research landscape, yet their inclusion criteria and institutional coverage may vary. The purpose of this analysis is to assess which institutions are represented in each source. 
 
+
+:::{.panel-tabset}
 ### Scopus
 
 ::: {.content-visible when-format="html"}
@@ -900,6 +1162,7 @@ In addition to examining dataset mention coverage, the report also evaluates dif
 
 :::
 
+:::
 
 # Conclusion
 
