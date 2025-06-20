@@ -136,24 +136,14 @@
     "href": "workflow/results/compare_pub_data.html",
     "title": "Methodology for Comparing Citation Database Coverage of Dataset Usage",
     "section": "",
-    "text": "The goal of this step is to develop statistics that measure dataset tracking accuracy.\n\n\n\n\nContinuing with our case study, we use the datasets produced in Step 4 to produce counts of the number of journals with Ag Census publications that:\n\nonly appear in Scopus,\nonly appear in OpenAlex, or\nappear in both.\n\nFor journals that contain Ag Census data in both citation databases, we summarize the coverage of publications that appear in both Scopus and OpenAlex.\nThen, we investigate discrepancies based on factors like missing identifiers, mismatched journal information (ISSNs), and additional publications accessed through OpenAlex’s API.\nAdd here: What are the steps in producing Table AA\n\nScopusOpenAlex\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis section presents results after matching (which type varies – deterministic vs fuzzy)\n\n\n\n\n\n\n\n\n\n\n\n\n\nSummary of Matching Methods\n\n\n\n\n\n\nRule-based matching for exact matches\nProbabilistic matching for handling variations\nMachine learning methods for complex cases\n\n\n\n\nTable 1: Summary of Methods\n\n\n\n\n\n\n\n\n\n\n\n\nMethod\nConsiderations\nExample\nPros\nCons\n\n\n\n\nSearching for dataset names within Scopus\n\n\n\n\n\n\nSearching for dataset names within OpenAlex\n“Location” field set to “journal”\n\n\n\n\n\nDisambiguation of authors\n\n\n\n\n\n\nDisambiguation of institutions\n\n\n\n\n\n\nStandardization of institutions\n\n\n\n\n\n\nSearching based on the frequency of dataset appearance in journals\n\n\n\n\n\n\nMORE . . .\n\n\n\n\n\n\nFiltering on keywords to determine themes\n\n\n\n\n\n\n\n\n\n\n\n\n\nAll appendices referenced throughout the report are located on this page.",
-    "crumbs": [
-      "Appendices",
-      "Project Workflow",
-      "Step 04: Compare Results"
-    ]
+    "text": "The goal of this step is to develop statistics that measure dataset tracking accuracy.\n\n\n\n\nContinuing with our case study, we use the datasets produced in Step 4 to produce counts of the number of journals with Ag Census publications that:\n\nonly appear in Scopus,\nonly appear in OpenAlex, or\nappear in both.\n\nFor journals that contain Ag Census data in both citation databases, we summarize the coverage of publications that appear in both Scopus and OpenAlex.\nThen, we investigate discrepancies based on factors like missing identifiers, mismatched journal information (ISSNs), and additional publications accessed through OpenAlex’s API.\nAdd here: What are the steps in producing Table AA\n\nScopusOpenAlex\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis section presents results after matching (which type varies – deterministic vs fuzzy)\n\n\n\n\n\n\n\n\n\n\n\n\n\nSummary of Matching Methods\n\n\n\n\n\n\nRule-based matching for exact matches\nProbabilistic matching for handling variations\nMachine learning methods for complex cases\n\n\n\n\nTable 1: Summary of Methods\n\n\n\n\n\n\n\n\n\n\n\n\nMethod\nConsiderations\nExample\nPros\nCons\n\n\n\n\nSearching for dataset names within Scopus\n\n\n\n\n\n\nSearching for dataset names within OpenAlex\n“Location” field set to “journal”\n\n\n\n\n\nDisambiguation of authors\n\n\n\n\n\n\nDisambiguation of institutions\n\n\n\n\n\n\nStandardization of institutions\n\n\n\n\n\n\nSearching based on the frequency of dataset appearance in journals\n\n\n\n\n\n\nMORE . . .\n\n\n\n\n\n\nFiltering on keywords to determine themes\n\n\n\n\n\n\n\n\n\n\n\n\n\nAll appendices referenced throughout the report are located on this page."
   },
   {
     "objectID": "workflow/results/compare_pub_data.html#sec-matching",
     "href": "workflow/results/compare_pub_data.html#sec-matching",
     "title": "Methodology for Comparing Citation Database Coverage of Dataset Usage",
     "section": "",
-    "text": "The goal of this step is to develop statistics that measure dataset tracking accuracy.\n\n\n\n\nContinuing with our case study, we use the datasets produced in Step 4 to produce counts of the number of journals with Ag Census publications that:\n\nonly appear in Scopus,\nonly appear in OpenAlex, or\nappear in both.\n\nFor journals that contain Ag Census data in both citation databases, we summarize the coverage of publications that appear in both Scopus and OpenAlex.\nThen, we investigate discrepancies based on factors like missing identifiers, mismatched journal information (ISSNs), and additional publications accessed through OpenAlex’s API.\nAdd here: What are the steps in producing Table AA\n\nScopusOpenAlex\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis section presents results after matching (which type varies – deterministic vs fuzzy)\n\n\n\n\n\n\n\n\n\n\n\n\n\nSummary of Matching Methods\n\n\n\n\n\n\nRule-based matching for exact matches\nProbabilistic matching for handling variations\nMachine learning methods for complex cases\n\n\n\n\nTable 1: Summary of Methods\n\n\n\n\n\n\n\n\n\n\n\n\nMethod\nConsiderations\nExample\nPros\nCons\n\n\n\n\nSearching for dataset names within Scopus\n\n\n\n\n\n\nSearching for dataset names within OpenAlex\n“Location” field set to “journal”\n\n\n\n\n\nDisambiguation of authors\n\n\n\n\n\n\nDisambiguation of institutions\n\n\n\n\n\n\nStandardization of institutions\n\n\n\n\n\n\nSearching based on the frequency of dataset appearance in journals\n\n\n\n\n\n\nMORE . . .\n\n\n\n\n\n\nFiltering on keywords to determine themes\n\n\n\n\n\n\n\n\n\n\n\n\n\nAll appendices referenced throughout the report are located on this page.",
-    "crumbs": [
-      "Appendices",
-      "Project Workflow",
-      "Step 04: Compare Results"
-    ]
+    "text": "The goal of this step is to develop statistics that measure dataset tracking accuracy.\n\n\n\n\nContinuing with our case study, we use the datasets produced in Step 4 to produce counts of the number of journals with Ag Census publications that:\n\nonly appear in Scopus,\nonly appear in OpenAlex, or\nappear in both.\n\nFor journals that contain Ag Census data in both citation databases, we summarize the coverage of publications that appear in both Scopus and OpenAlex.\nThen, we investigate discrepancies based on factors like missing identifiers, mismatched journal information (ISSNs), and additional publications accessed through OpenAlex’s API.\nAdd here: What are the steps in producing Table AA\n\nScopusOpenAlex\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis section presents results after matching (which type varies – deterministic vs fuzzy)\n\n\n\n\n\n\n\n\n\n\n\n\n\nSummary of Matching Methods\n\n\n\n\n\n\nRule-based matching for exact matches\nProbabilistic matching for handling variations\nMachine learning methods for complex cases\n\n\n\n\nTable 1: Summary of Methods\n\n\n\n\n\n\n\n\n\n\n\n\nMethod\nConsiderations\nExample\nPros\nCons\n\n\n\n\nSearching for dataset names within Scopus\n\n\n\n\n\n\nSearching for dataset names within OpenAlex\n“Location” field set to “journal”\n\n\n\n\n\nDisambiguation of authors\n\n\n\n\n\n\nDisambiguation of institutions\n\n\n\n\n\n\nStandardization of institutions\n\n\n\n\n\n\nSearching based on the frequency of dataset appearance in journals\n\n\n\n\n\n\nMORE . . .\n\n\n\n\n\n\nFiltering on keywords to determine themes\n\n\n\n\n\n\n\n\n\n\n\n\n\nAll appendices referenced throughout the report are located on this page."
   },
   {
     "objectID": "terminology.html",
@@ -245,7 +235,8 @@
     "section": "",
     "text": "The Integrated Postsecondary Education Data System (IPEDS) is a national dataset maintained by the National Center for Education Statistics (NCES). It collects data from all U.S. institutions participating in federal financial aid programs. In this project, IPEDS data is used to analyze institutional characteristics (e.g., size, classification, location, and financial indicators) in relation to research publications identified in Scopus, OpenAlex, and Dimensions.\nThe raw IPEDS data was obtained from the IPEDS website: IPEDS Data Center.",
     "crumbs": [
-      "Project Documentation",
+      "Appendices",
+      "Cleaning IPEDS and MSI Data",
       "Classifying Institutions with the IPEDS Database"
     ]
   },
@@ -256,7 +247,8 @@
     "section": "Summary of the IPEDS Data",
     "text": "Summary of the IPEDS Data\n\nDistinct institutions by yearDistinct institutions by year and controlDistinct institutions by year and level: Public UniversitiesDistinct institutions by year and level: Private Universities\n\n\n\n\n\nYear\nNo. Institutions\n\n\n\n\n2017\n7153\n\n\n2018\n6857\n\n\n2019\n6559\n\n\n2020\n6440\n\n\n2021\n6289\n\n\n2022\n6256\n\n\n2023\n6163\n\n\n\n\n\n\n\n\nYear\nPrivate for-profit\nPrivate not-for-profit\nPublic\n\n\n\n\n2017\n3093\n1959\n2069\n\n\n2018\n2793\n1930\n2077\n\n\n2019\n2566\n1905\n2056\n\n\n2020\n2463\n1889\n2036\n\n\n2021\n2411\n1868\n1994\n\n\n2022\n2352\n1855\n2019\n\n\n2023\n2299\n1836\n1999\n\n\n\n“Control” is defined as Public, Private Nonprofit, and Private For-Profit.\n\n\n\n\n\nYear\n2-year\n4-year\n\n\n\n\n2017\n1003\n817\n\n\n2018\n989\n840\n\n\n2019\n968\n852\n\n\n2020\n949\n852\n\n\n2021\n930\n829\n\n\n2022\n924\n859\n\n\n2023\n899\n868\n\n\n\n\n\n\n\n\nYear\n2-year\n4-year\n\n\n\n\n2017\n1034\n2371\n\n\n2018\n917\n2167\n\n\n2019\n774\n2081\n\n\n2020\n736\n2046\n\n\n2021\n709\n2016\n\n\n2022\n681\n2009\n\n\n2023\n664\n1996",
     "crumbs": [
-      "Project Documentation",
+      "Appendices",
+      "Cleaning IPEDS and MSI Data",
       "Classifying Institutions with the IPEDS Database"
     ]
   },
@@ -267,7 +259,8 @@
     "section": "Data Processing and Standardization",
     "text": "Data Processing and Standardization\n\nVariable Name Changes and Formatting:\n\nUNITID and year serve as the primary keys to merge datasets for analysis.\nyear was added to datasets that lacked it.\n\nHandling Missing Data and Filters:\n\nNon-relevant columns were removed.\nDatasets were filtered to retain only institutions with complete enrollment and classification data.\n\nMerging Strategy:\n\nDatasets can be joined using UNITID and year as unique identifiers.\nInstitutions missing UNITID were excluded.",
     "crumbs": [
-      "Project Documentation",
+      "Appendices",
+      "Cleaning IPEDS and MSI Data",
       "Classifying Institutions with the IPEDS Database"
     ]
   },
@@ -278,7 +271,8 @@
     "section": "How to Merge with MSI Data",
     "text": "How to Merge with MSI Data\nThe IPEDS dataset can be linked with the MSI dataset using the UNITID and year variables. This allows for:\n\nIdentifying MSI institutions within IPEDS to analyze institutional characteristics.\nComparing institutional characteristics of MSI and non-MSI institutions, such as enrollment size, Carnegie classification, and financial indicators.\n\n\n\n\n\n\n\nNote\n\n\n\nAfter merging the IPEDS-MSI data with the cleaned institutional data from the citation databases, this dataset also allows for assessing research output and dataset usage by institution type, and examining trends over time in MSI status and institutional characteristics.",
     "crumbs": [
-      "Project Documentation",
+      "Appendices",
+      "Cleaning IPEDS and MSI Data",
       "Classifying Institutions with the IPEDS Database"
     ]
   },
@@ -296,7 +290,8 @@
     "section": "",
     "text": "All project files are available in our GitHub repository. This section provides reference material.",
     "crumbs": [
-      "Project Documentation"
+      "Appendices",
+      "Data Schema"
     ]
   },
   {
@@ -306,7 +301,8 @@
     "section": "File Inventory",
     "text": "File Inventory\n\nScopus FilesOpenAlex FilesDimensions Files\n\n\n\nPrimary Table: publication\nSupporting Tables:\n\nagency_run\nasjc\nauthor\nauthor_affiliation\ndataset_alias\ndyad\ndyad_model\nissn\njournal\nmodel\npublication_affiliation\npublication_asjc\npublication_author\npublication_topic\npublication_ufc\npublisher\ntopic\n\n\nRefer to the schema for additional column-level details.\n\n\n\nFull Text\n\nPrimary Table: main\nSupporting Tables:\n\n_id\napc_list\napc_paid\nauthorships\nbest_oa_location\nbiblio\ncitation_normalized_percentile\ncited_by_percentile_year\ncorresponding_author_ids\ncorresponding_institution_ids\ncounts_by_year\ndataset\ndatasets\ngrants\nids\nindexed_in\nopen_access\nprimary_location\nprimary_topic\ntopics\n\n\n\n\nSeed Corpus\n\nPrimary Table: main\nSupporting Tables:\n\n\n\n\n\nPrimary Table: main\nSupporting Tables:\n\nThe accompanying schema focuses on the primary linking fields between tables. Due to the large number of columns within each table, only key identifiers are included.",
     "crumbs": [
-      "Project Documentation"
+      "Appendices",
+      "Data Schema"
     ]
   },
   {
@@ -330,7 +326,7 @@
     "section": "",
     "text": "This appendix documents the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023.\nTo create a harmonsized dataset of institutional coverage across datasets, institutional affiliation data associated with each publication’s athor(s) are linked to institutional records using IPEDS identifiers. Linking the publication metadata with IPEDS institutional data adds information not available in the publication affiliation data alone. This additional information includes public or private institution (control), degree level, MSI designation, and geographic location. Special attention is given to coverage of underrepresented institutions and Minority-Serving Institutions (MSIs).\nFirst, a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time is created. Two sources were used: (1) the MSI Data Project (Nguyen et al., 2023) identifies MSI institutions from 2017–2021 and (2) Rutgers CMSI identifies MSI institutions for 2022–2023. These datasets were cleaned and merged with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. Data cleaning steps included: addressing inconsistencies in eligibility labels, removing duplicates, and creating summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are available in the report appendices1 and MSI2.",
     "crumbs": [
-      "Project Documentation",
+      "Appendices",
       "Cleaning IPEDS and MSI Data"
     ]
   },
@@ -341,7 +337,7 @@
     "section": "Footnotes",
     "text": "Footnotes\n\n\nIPEDS appendix available here↩︎\nMSI appendix available here↩︎",
     "crumbs": [
-      "Project Documentation",
+      "Appendices",
       "Cleaning IPEDS and MSI Data"
     ]
   },
@@ -352,7 +348,8 @@
     "section": "",
     "text": "The Minority-Serving Institutions (MSI) Data captures institutions eligible for federal MSI programs, as determined by the U.S. Department of Education and other sources. In this project, MSI data is used to analyze institutional characteristics in relation to research publications identified in Scopus, OpenAlex, and Dimensions.\nThis dataset provides information on institutions eligible or potentially eligible for at least one MSI designation and includes data from 2017 to 2023. The MSI dataset integrates information from multiple sources and is merged with IPEDS data to track research output across different institution types.",
     "crumbs": [
-      "Project Documentation",
+      "Appendices",
+      "Cleaning IPEDS and MSI Data",
       "Identifying Minority Serving Institutions (MSIs)"
     ]
   },
@@ -363,7 +360,8 @@
     "section": "Summary of the MSI data",
     "text": "Summary of the MSI data\n\nTotal Institutions by MSI StatusPrivate Institutions by MSI StatusPrivate For-Profit Institutions by MSI StatusPrivate Not-for-Profit Institutions by MSI StatusPublic Institutions by MSI StatusPublic 2-year Institutions by MSI StatusPublic 4-year Institutions by MSI StatusPrivate 2-year Institutions by MSI StatusPrivate 4-year Institutions by MSI Status\n\n\n\n\n\nYear\nTotal\nMSI %\nNot_MSI %\n\n\n\n\n2017\n5242\n8.13\n91.87\n\n\n2018\n5242\n7.69\n92.31\n\n\n2019\n5242\n7.84\n92.16\n\n\n2020\n5242\n7.80\n92.20\n\n\n2021\n5242\n8.81\n91.19\n\n\n2022\n5242\n16.73\n83.27\n\n\n2023\n5242\n16.58\n83.42\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n1837\n5.66\n94.34\n\n\n2018\n1837\n5.72\n94.28\n\n\n2019\n1837\n5.72\n94.28\n\n\n2020\n1837\n5.77\n94.23\n\n\n2021\n1837\n5.88\n94.12\n\n\n2022\n1837\n14.81\n85.19\n\n\n2023\n1837\n14.81\n85.19\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n1409\n0.00\n100.00\n\n\n2018\n1409\n0.00\n100.00\n\n\n2019\n1409\n0.00\n100.00\n\n\n2020\n1409\n0.00\n100.00\n\n\n2021\n1409\n0.00\n100.00\n\n\n2022\n1409\n0.14\n99.86\n\n\n2023\n1409\n0.21\n99.79\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n26\n0.00\n100.00\n\n\n2018\n26\n0.00\n100.00\n\n\n2019\n26\n0.00\n100.00\n\n\n2020\n26\n0.00\n100.00\n\n\n2021\n26\n0.00\n100.00\n\n\n2022\n26\n3.85\n96.15\n\n\n2023\n26\n3.85\n96.15\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n1678\n19.18\n80.81\n\n\n2018\n1678\n17.76\n82.24\n\n\n2019\n1678\n18.24\n81.76\n\n\n2020\n1678\n18.06\n81.94\n\n\n2021\n1678\n21.10\n78.90\n\n\n2022\n1678\n33.86\n66.15\n\n\n2023\n1678\n35.34\n64.66\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n933\n19.72\n80.28\n\n\n2018\n933\n16.93\n83.07\n\n\n2019\n933\n17.04\n82.96\n\n\n2020\n933\n17.15\n82.85\n\n\n2021\n933\n20.15\n79.85\n\n\n2022\n933\n36.66\n63.34\n\n\n2023\n933\n35.05\n64.95\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n807\n17.10\n82.90\n\n\n2018\n807\n17.35\n82.65\n\n\n2019\n807\n18.22\n81.78\n\n\n2020\n807\n17.82\n82.18\n\n\n2021\n807\n20.57\n79.43\n\n\n2022\n807\n32.09\n67.91\n\n\n2023\n807\n32.96\n67.04\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n139\n2.88\n97.12\n\n\n2018\n139\n2.88\n97.12\n\n\n2019\n139\n2.16\n97.84\n\n\n2020\n139\n2.16\n97.84\n\n\n2021\n139\n2.88\n97.12\n\n\n2022\n139\n12.23\n87.77\n\n\n2023\n139\n12.23\n87.77\n\n\n\n\n\n\n\n\nYear\nTotal\n% MSI\n% Not MSI\n\n\n\n\n2017\n1714\n5.83\n94.17\n\n\n2018\n1714\n5.84\n94.16\n\n\n2019\n1714\n5.95\n94.05\n\n\n2020\n1714\n6.01\n93.99\n\n\n2021\n1714\n6.07\n93.93\n\n\n2022\n1714\n14.88\n85.12\n\n\n2023\n1714\n14.88\n85.12",
     "crumbs": [
-      "Project Documentation",
+      "Appendices",
+      "Cleaning IPEDS and MSI Data",
       "Identifying Minority Serving Institutions (MSIs)"
     ]
   },
@@ -374,7 +372,8 @@
     "section": "Data Processing and Standardization",
     "text": "Data Processing and Standardization\n\nVariable Name Changes and Formatting:\n\nyear was added to track MSI status over time.\nUNITID is the primary key to merge MSI and IPEDS datasets.\n\nHandling Missing Data and Filters:\n\nInstitutions without UNITID were excluded.\nNon-relevant columns were removed.\n\nMerging Strategy:\n\nThe 2017-2021 MSI data was directly compatible with IPEDS.\nThe 2022-2023 MSI data required additional formatting before merging.",
     "crumbs": [
-      "Project Documentation",
+      "Appendices",
+      "Cleaning IPEDS and MSI Data",
       "Identifying Minority Serving Institutions (MSIs)"
     ]
   },
@@ -385,7 +384,8 @@
     "section": "How to Merge with IPEDS Data",
     "text": "How to Merge with IPEDS Data\nThe MSI dataset can be linked with IPEDS data using the UNITID and year variables. This allows for:\n\nTracking institutional MSI status over time.\nComparing MSI and non-MSI institutions within Scopus, OpenAlex, and Dimensions.\nAssessing dataset usage patterns across different institution types.",
     "crumbs": [
-      "Project Documentation",
+      "Appendices",
+      "Cleaning IPEDS and MSI Data",
       "Identifying Minority Serving Institutions (MSIs)"
     ]
   },
@@ -396,7 +396,8 @@
     "section": "Footnotes",
     "text": "Footnotes\n\n\nThe 2017-2021 MSI data was sourced from the Minority Serving Institutions (MSI) Data Project by Nguyen et al. (2023), which merges the U.S. Department of Education’s MSI eligibility metrics (2017-2021) with IPEDS data.↩︎\nThe 2022-2023 MSI data was obtained from the Rutgers Graduate School of Education, which maintains annual MSI eligibility lists.↩︎\nThe 2022-2023 MSI data was obtained from the Rutgers Graduate School of Education, which maintains annual MSI eligibility lists.↩︎",
     "crumbs": [
-      "Project Documentation",
+      "Appendices",
+      "Cleaning IPEDS and MSI Data",
       "Identifying Minority Serving Institutions (MSIs)"
     ]
   },
@@ -575,7 +576,7 @@
     "crumbs": [
       "Appendices",
       "Project Workflow",
-      "Step 01: Define Data Assets"
+      "Define Data Assets"
     ]
   },
   {
@@ -587,7 +588,7 @@
     "crumbs": [
       "Appendices",
       "Project Workflow",
-      "Step 01: Define Data Assets"
+      "Define Data Assets"
     ]
   },
   {
@@ -613,7 +614,7 @@
     "crumbs": [
       "Appendices",
       "Project Workflow",
-      "Step 02: Extract Dataset Mentions"
+      "Extract Dataset Mentions"
     ]
   },
   {
@@ -625,7 +626,7 @@
     "crumbs": [
       "Appendices",
       "Project Workflow",
-      "Step 02: Extract Dataset Mentions"
+      "Extract Dataset Mentions"
     ]
   },
   {
@@ -637,7 +638,7 @@
     "crumbs": [
       "Appendices",
       "Project Workflow",
-      "Step 02: Extract Dataset Mentions"
+      "Extract Dataset Mentions"
     ]
   },
   {
@@ -683,23 +684,13 @@
     "href": "workflow/step03/clean_pub_data.html",
     "title": "Methodology for Comparing Citation Database Coverage of Dataset Usage",
     "section": "",
-    "text": "The goal of this step is to standardize and resolve inconsistencies in publication records by disambiguating journal names, author affiliations, and institutions across the three databases.\n\nTo compare publication coverage across citation databases, we first identify all journals that contain publications using each dataset in Scopus, OpenAlex, and Dimensions. Refer to “Define Data Assets” for the list of the datasets for which we evaluate coverage.\nWe subset the publication dataset from Step 2 by filtering for dataset mentions. For example, if a publication references Ag Census, it is included in the Ag Census sub-dataset; otherwise, it is excluded. This process identifies dataset-specific publication patterns in Scopus, OpenAlex, and Dimensions.\nOur approach follows a hierarchical approach to understand how USDA data assets appear in these citation databases.\n\nJournal Level – Identifies journals publishing research using USDA datasets. A journal is included if at least one of its publications references the dataset, but this does not indicate overall dataset prevalence within that journal.\nPublication Level – Examines individual publications within these journals to assess how often and in what context USDA datasets appear.\nAuthor Level – Tracks authors of these publications, analyzing institutional affiliations and research networks to understand dataset reach.\nInstitution Level – Maps dataset usage across institutions to identify geographic and organizational research patterns.\n\nThis structured approach standardizes dataset mention analysis across databases, allowing for direct comparisons of coverage and research impact.\n\n\n\nTo illustrate the data cleaning and disambiguation process, we use the Census of Agriculture as a case study to systematically compare coverage, overlap, and differences between the three citation databases. The Census of Agriculture (also referred to as “Ag Census”) is widely used in agricultural and economic research, making it an ideal dataset for assessing database differences.\n\n\n\nScopus\n\n\n\n\nTo analyze journal coverage in Scopus, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. This dataset is built from an initial publication-level dataset, which captures individual research articles mentioning Ag Census.\nWe construct the publication-level dataset for only Ag Census mentions using the following metadata from the publication-level data:\n\nPublication identifier (DOI)\nJournal name\nPublisher\nISSN (International Standard Serial Number, a unique journal identifier)\nDataset alias (alternate names used to reference Ag Census)\nDyad (dataset mention pair)\n\nThis data structure follows the format outlined in the data schema (Figure XX).\n\n\n\n\n\n\nCrosswalk of Dataset Identifiers between Scopus and OpenAlex\n\n\n\n\n\nScopus assigns multiple identifiers to the same dataset depending on how it is reported, rather than a single, standardized identifier. Therefore, the authors create a crosswalk between Scopus and OpenAlex so that each dataset can have one common identifier.\nLink to crosswalk file\n\n\n\nAfter assembling the publication-level dataset, the final step in preparing the Scopus journal-level dataset is to aggregate publications at the journal level based on their ISSN.\n\n\n\nCOMING SOON\n\n\n\nCOMING SOON\n\n\n\n\n\n\n\n\n\nThis section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset\nStep 4 produces two publication-level datasets: one of all academic papers released through Scopus that use Ag Census data and a similar one for OpenAlex.\nThere are 4712 unique publications reported in Scopus and 1266 in OpenAlex. These data are collapsed into a journal-level dataset based on the International Standard Serial Number (ISSN) that is unique to each academic journal.",
-    "crumbs": [
-      "Appendices",
-      "Project Workflow",
-      "Step 03: Clean Publication Data"
-    ]
+    "text": "The goal of this step is to standardize and resolve inconsistencies in publication records by disambiguating journal names, author affiliations, and institutions across the three databases.\n\nTo compare publication coverage across citation databases, we first identify all journals that contain publications using each dataset in Scopus, OpenAlex, and Dimensions. Refer to “Define Data Assets” for the list of the datasets for which we evaluate coverage.\nWe subset the publication dataset from Step 2 by filtering for dataset mentions. For example, if a publication references Ag Census, it is included in the Ag Census sub-dataset; otherwise, it is excluded. This process identifies dataset-specific publication patterns in Scopus, OpenAlex, and Dimensions.\nOur approach follows a hierarchical approach to understand how USDA data assets appear in these citation databases.\n\nJournal Level – Identifies journals publishing research using USDA datasets. A journal is included if at least one of its publications references the dataset, but this does not indicate overall dataset prevalence within that journal.\nPublication Level – Examines individual publications within these journals to assess how often and in what context USDA datasets appear.\nAuthor Level – Tracks authors of these publications, analyzing institutional affiliations and research networks to understand dataset reach.\nInstitution Level – Maps dataset usage across institutions to identify geographic and organizational research patterns.\n\nThis structured approach standardizes dataset mention analysis across databases, allowing for direct comparisons of coverage and research impact.\n\n\n\nTo illustrate the data cleaning and disambiguation process, we use the Census of Agriculture as a case study to systematically compare coverage, overlap, and differences between the three citation databases. The Census of Agriculture (also referred to as “Ag Census”) is widely used in agricultural and economic research, making it an ideal dataset for assessing database differences.\n\n\n\nScopus\n\n\n\n\nTo analyze journal coverage in Scopus, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. This dataset is built from an initial publication-level dataset, which captures individual research articles mentioning Ag Census.\nWe construct the publication-level dataset for only Ag Census mentions using the following metadata from the publication-level data:\n\nPublication identifier (DOI)\nJournal name\nPublisher\nISSN (International Standard Serial Number, a unique journal identifier)\nDataset alias (alternate names used to reference Ag Census)\nDyad (dataset mention pair)\n\nThis data structure follows the format outlined in the data schema (Figure XX).\n\n\n\n\n\n\nCrosswalk of Dataset Identifiers between Scopus and OpenAlex\n\n\n\n\n\nScopus assigns multiple identifiers to the same dataset depending on how it is reported, rather than a single, standardized identifier. Therefore, the authors create a crosswalk between Scopus and OpenAlex so that each dataset can have one common identifier.\nLink to crosswalk file\n\n\n\nAfter assembling the publication-level dataset, the final step in preparing the Scopus journal-level dataset is to aggregate publications at the journal level based on their ISSN.\n\n\n\nCOMING SOON\n\n\n\nCOMING SOON\n\n\n\n\n\n\n\n\n\nThis section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset\nStep 4 produces two publication-level datasets: one of all academic papers released through Scopus that use Ag Census data and a similar one for OpenAlex.\nThere are 4712 unique publications reported in Scopus and 1266 in OpenAlex. These data are collapsed into a journal-level dataset based on the International Standard Serial Number (ISSN) that is unique to each academic journal."
   },
   {
     "objectID": "workflow/step03/clean_pub_data.html#sec-disambiguation",
     "href": "workflow/step03/clean_pub_data.html#sec-disambiguation",
     "title": "Methodology for Comparing Citation Database Coverage of Dataset Usage",
     "section": "",
-    "text": "The goal of this step is to standardize and resolve inconsistencies in publication records by disambiguating journal names, author affiliations, and institutions across the three databases.\n\nTo compare publication coverage across citation databases, we first identify all journals that contain publications using each dataset in Scopus, OpenAlex, and Dimensions. Refer to “Define Data Assets” for the list of the datasets for which we evaluate coverage.\nWe subset the publication dataset from Step 2 by filtering for dataset mentions. For example, if a publication references Ag Census, it is included in the Ag Census sub-dataset; otherwise, it is excluded. This process identifies dataset-specific publication patterns in Scopus, OpenAlex, and Dimensions.\nOur approach follows a hierarchical approach to understand how USDA data assets appear in these citation databases.\n\nJournal Level – Identifies journals publishing research using USDA datasets. A journal is included if at least one of its publications references the dataset, but this does not indicate overall dataset prevalence within that journal.\nPublication Level – Examines individual publications within these journals to assess how often and in what context USDA datasets appear.\nAuthor Level – Tracks authors of these publications, analyzing institutional affiliations and research networks to understand dataset reach.\nInstitution Level – Maps dataset usage across institutions to identify geographic and organizational research patterns.\n\nThis structured approach standardizes dataset mention analysis across databases, allowing for direct comparisons of coverage and research impact.\n\n\n\nTo illustrate the data cleaning and disambiguation process, we use the Census of Agriculture as a case study to systematically compare coverage, overlap, and differences between the three citation databases. The Census of Agriculture (also referred to as “Ag Census”) is widely used in agricultural and economic research, making it an ideal dataset for assessing database differences.\n\n\n\nScopus\n\n\n\n\nTo analyze journal coverage in Scopus, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. This dataset is built from an initial publication-level dataset, which captures individual research articles mentioning Ag Census.\nWe construct the publication-level dataset for only Ag Census mentions using the following metadata from the publication-level data:\n\nPublication identifier (DOI)\nJournal name\nPublisher\nISSN (International Standard Serial Number, a unique journal identifier)\nDataset alias (alternate names used to reference Ag Census)\nDyad (dataset mention pair)\n\nThis data structure follows the format outlined in the data schema (Figure XX).\n\n\n\n\n\n\nCrosswalk of Dataset Identifiers between Scopus and OpenAlex\n\n\n\n\n\nScopus assigns multiple identifiers to the same dataset depending on how it is reported, rather than a single, standardized identifier. Therefore, the authors create a crosswalk between Scopus and OpenAlex so that each dataset can have one common identifier.\nLink to crosswalk file\n\n\n\nAfter assembling the publication-level dataset, the final step in preparing the Scopus journal-level dataset is to aggregate publications at the journal level based on their ISSN.\n\n\n\nCOMING SOON\n\n\n\nCOMING SOON\n\n\n\n\n\n\n\n\n\nThis section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset\nStep 4 produces two publication-level datasets: one of all academic papers released through Scopus that use Ag Census data and a similar one for OpenAlex.\nThere are 4712 unique publications reported in Scopus and 1266 in OpenAlex. These data are collapsed into a journal-level dataset based on the International Standard Serial Number (ISSN) that is unique to each academic journal.",
-    "crumbs": [
-      "Appendices",
-      "Project Workflow",
-      "Step 03: Clean Publication Data"
-    ]
+    "text": "The goal of this step is to standardize and resolve inconsistencies in publication records by disambiguating journal names, author affiliations, and institutions across the three databases.\n\nTo compare publication coverage across citation databases, we first identify all journals that contain publications using each dataset in Scopus, OpenAlex, and Dimensions. Refer to “Define Data Assets” for the list of the datasets for which we evaluate coverage.\nWe subset the publication dataset from Step 2 by filtering for dataset mentions. For example, if a publication references Ag Census, it is included in the Ag Census sub-dataset; otherwise, it is excluded. This process identifies dataset-specific publication patterns in Scopus, OpenAlex, and Dimensions.\nOur approach follows a hierarchical approach to understand how USDA data assets appear in these citation databases.\n\nJournal Level – Identifies journals publishing research using USDA datasets. A journal is included if at least one of its publications references the dataset, but this does not indicate overall dataset prevalence within that journal.\nPublication Level – Examines individual publications within these journals to assess how often and in what context USDA datasets appear.\nAuthor Level – Tracks authors of these publications, analyzing institutional affiliations and research networks to understand dataset reach.\nInstitution Level – Maps dataset usage across institutions to identify geographic and organizational research patterns.\n\nThis structured approach standardizes dataset mention analysis across databases, allowing for direct comparisons of coverage and research impact.\n\n\n\nTo illustrate the data cleaning and disambiguation process, we use the Census of Agriculture as a case study to systematically compare coverage, overlap, and differences between the three citation databases. The Census of Agriculture (also referred to as “Ag Census”) is widely used in agricultural and economic research, making it an ideal dataset for assessing database differences.\n\n\n\nScopus\n\n\n\n\nTo analyze journal coverage in Scopus, we generate a dataset containing all unique journals that include at least one publication referencing Ag Census data. This dataset is built from an initial publication-level dataset, which captures individual research articles mentioning Ag Census.\nWe construct the publication-level dataset for only Ag Census mentions using the following metadata from the publication-level data:\n\nPublication identifier (DOI)\nJournal name\nPublisher\nISSN (International Standard Serial Number, a unique journal identifier)\nDataset alias (alternate names used to reference Ag Census)\nDyad (dataset mention pair)\n\nThis data structure follows the format outlined in the data schema (Figure XX).\n\n\n\n\n\n\nCrosswalk of Dataset Identifiers between Scopus and OpenAlex\n\n\n\n\n\nScopus assigns multiple identifiers to the same dataset depending on how it is reported, rather than a single, standardized identifier. Therefore, the authors create a crosswalk between Scopus and OpenAlex so that each dataset can have one common identifier.\nLink to crosswalk file\n\n\n\nAfter assembling the publication-level dataset, the final step in preparing the Scopus journal-level dataset is to aggregate publications at the journal level based on their ISSN.\n\n\n\nCOMING SOON\n\n\n\nCOMING SOON\n\n\n\n\n\n\n\n\n\nThis section presents overall statistics for Scopus and OA. Each subsection will have results reported for each dataset\nStep 4 produces two publication-level datasets: one of all academic papers released through Scopus that use Ag Census data and a similar one for OpenAlex.\nThere are 4712 unique publications reported in Scopus and 1266 in OpenAlex. These data are collapsed into a journal-level dataset based on the International Standard Serial Number (ISSN) that is unique to each academic journal."
   }
 ]
