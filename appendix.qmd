@@ -16,10 +16,9 @@ csl: apa.csl  # Optional: Use a specific citation style (e.g., APA)
 | **Appendix**                | **Links to Sources** |
 |-----------------------------|----------------------|
 | **Data Schema**         | [View the primary fields and table structure.](appendices/app_crosswalk.qmd) |
-| **Scopus Reference Files**    | [View the Scopus source files.](appendices/app_scopus.qmd) |
-| **OpenAlex Reference Files**      | [View the OpenAlex source files.](appendices/app_openalex.qmd) |
-| **Dimensions Reference Files**      | [View the Dimensions source files.](appendices/app_dimensions.qmd) |
 | **IPEDS Reference Files**      | [View the IPEDS source files and methodology.](appendices/app_ipeds.qmd) |
 | **MSI Reference Files**      | [View the MSI source files and methodology.](appendices/app_msi.qmd) |
+| **Replication Code**      | [Access the replication code here.](https://laurenchenarides.github.io/compare_scopus_openalex_report/appendix.html) |
+| **README File**      | [Access the README file associated with replication code here.](code/README.nb.html) |
 
 

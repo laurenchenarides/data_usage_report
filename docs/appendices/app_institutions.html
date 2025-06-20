@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-06-14">
+<meta name="dcterms.date" content="2025-06-20">
 
 <title>Cleaning IPEDS and MSI Data – Citation Database Assessment</title>
 <style>
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../appendices/app_ipeds.html" rel="next">
-<link href="../appendices/app_dimensions.html" rel="prev">
+<link href="../appendices/app_crosswalk.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -191,24 +191,6 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_scopus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Scopus Data Dictionary</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../appendices/app_openalex.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">OpenAlex Data Dictionary</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../appendices/app_dimensions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dimensions Data Dictionary</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../appendices/app_institutions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Cleaning IPEDS and MSI Data</span></a>
   </div>
@@ -238,15 +220,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#results-of-institutional-comparision" id="toc-results-of-institutional-comparision" class="nav-link" data-scroll-target="#results-of-institutional-comparision">Results of Institutional Comparision</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_institutions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -264,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 14, 2025</p>
+      <p class="date">June 20, 2025</p>
     </div>
   </div>
   
@@ -276,8 +251,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="overview">Overview</h3>
 <p>This appendix documents the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023.</p>
 <p>To create a harmonsized dataset of institutional coverage across datasets, institutional affiliation data associated with each publication’s athor(s) are linked to institutional records using IPEDS identifiers. Linking the publication metadata with IPEDS institutional data adds information not available in the publication affiliation data alone. This additional information includes public or private institution (control), degree level, MSI designation, and geographic location. Special attention is given to coverage of underrepresented institutions and Minority-Serving Institutions (MSIs).</p>
 <p>First, a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time is created. Two sources were used: (1) the MSI Data Project (Nguyen et al., 2023) identifies MSI institutions from 2017–2021 and (2) Rutgers CMSI identifies MSI institutions for 2022–2023. These datasets were cleaned and merged with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. Data cleaning steps included: addressing inconsistencies in eligibility labels, removing duplicates, and creating summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are available in the report appendices<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and MSI<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
@@ -287,12 +260,8 @@ ul.task-list li input[type="checkbox"] {
 <em>Source code used to generate graphic:</em> <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/blob/main/data/ipeds_msi/build_ipeds_msi.R" target="_blank">Available here</a>.
 </figcaption>
 </figure>
-</section>
-<section id="results-of-institutional-comparision" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="results-of-institutional-comparision">Results of Institutional Comparision</h3>
 
 
-</section>
 
 
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
@@ -721,8 +690,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../appendices/app_dimensions.html" class="pagination-link" aria-label="Dimensions Data Dictionary">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Dimensions Data Dictionary</span>
+      <a href="../appendices/app_crosswalk.html" class="pagination-link" aria-label="Project Documentation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Project Documentation</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -739,7 +708,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_institutions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/edit/main/appendices/app_institutions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

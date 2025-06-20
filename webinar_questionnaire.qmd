@@ -12,10 +12,6 @@ toc: false
 
 # {.unnumbered}
 
-<!-- Trusted data on food and agriculture are essential for high quality research and decision-making. Our current ecosystem has been shaken by the removal of important, trusted, public datasets and web-based tools used by decision makers. This fragility has introduced uncertainty for the food and agricultural research community whose work is foundational to expanding economic opportunities, ensuring agricultural sustainability, and protecting natural resources. New approaches must be developed. -->
-
-<!-- We want your voice to be heard. Please take a few minutes to complete a short, anonymous, five-question questionnaire^[This questionnaire is for internal informational purposes only. Data collected will not be used for generalizable research, publication, or public dissemination. As such, it does not constitute human subjects research requiring IRB approval.] by **June 16, 2025**. Your input will inform the webinar discussion. -->
-
 ---
 
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKJ_rNlmOtO_BctfyZgdXDSfDrN5uaEQkmc7dTkK9MA1uaGg/viewform?usp=header" target="_blank">

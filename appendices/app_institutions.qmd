@@ -9,7 +9,6 @@ format:
     css: styles.css
 ---
 
-### Overview {.unnumbered}
 
 This appendix documents the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023. 
 
@@ -32,6 +31,5 @@ First, a clean, panel-form dataset of U.S. higher education institutions, includ
 ![](../data/ipeds_msi/msi_eligibility_plot.png){fig-cap="MSI Eligibility Trends 2017-2023"}
 :::
 
-### Results of Institutional Comparision {.unnumbered}
 
 

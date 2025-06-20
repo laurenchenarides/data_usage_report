@@ -52,9 +52,6 @@ website:
       - href: appendices/app_crosswalk.qmd # Summary of Scopus, OpenAlex, and Dimensions
         text: "Project Documentation"
         contents:
-            - appendices/app_scopus.qmd # Scopus reference files
-            - appendices/app_openalex.qmd # OpenAlex reference files
-            - appendices/app_dimensions.qmd # Dimensions reference files
             - appendices/app_institutions.qmd 
             - appendices/app_ipeds.qmd # Ming's work on IPEDS
             - appendices/app_msi.qmd # Ming's work on MSIs

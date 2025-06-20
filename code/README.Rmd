@@ -1,0 +1,218 @@
+---
+title: "README"
+output: html_notebook
+---
+
+# Methodology for Comparing Citation Database Coverage of Dataset Usage
+
+This repository contains a set of R scripts that process, harmonize, and compare publication-level datasets from Scopus, OpenAlex (seed corpus and full-text), and Dimensions. The workflow supports analysis of dataset usage across platforms, topic-level comparisons, and source intersections.
+
+---
+
+## Program Order
+
+1. `process_openalex.R`  
+2. `process_scopus_seed_corpus.R`  
+3. `process_dimensions.R`  
+
+4. `compare_publications.R`  
+5. `construct_treemaps.R`  
+6. `construct_sankey_plots.R`
+
+7. `aggregate_topics.R`  
+8. `construct_bubble_charts.R`  
+9. `construct_word_clouds.R`
+
+10. `clean_author_names.R`  
+11. `clean_institutional_affil.R`  
+12. `construct_maps.R`
+
+13. `build_all_df.R`
+
+---
+
+## Workflow Overview
+
+The main R script is `00_master_script.R`. It sequentially sources individual scripts to process input files, generate harmonized datasets, and produce comparative visualizations and tables.
+
+---
+
+## Script Descriptions (Execution Order)
+
+### Part 1: Cleaning and Deduplicating Data
+
+#### Step 1: Clean OpenAlex Publications 
+
+**Script name:** `01_process_openalex.R`
+
+Processes OpenAlex full-text and seed corpus data and deduplicates records by dataset.
+
+**Note:** Prior to running this script, you must run the `flatten_openalex_all_datasets.ipynb` Jupyter Notebook. This notebook processes the raw JSON files from the OpenAlex Seed Search Corpus and flattens them into structured CSV tables. Refer to the OpenAlex data schema for a full overview of available fields.
+
+**Outputs retained:**
+
+- `master_openalex`
+
+---
+
+#### Step 2: Clean Scopus Publications
+
+**Script name:** `02_process_scopus_seed_corpus.R`
+
+Processes matched Scopus publications using the same seed DOIs. Structures the output to match OpenAlex and supports dataset-level comparisons.
+
+**Additional outputs:**
+
+- `master_scopus`, `scopus_pubs`  
+- `scopus_doi`, `scopus_topic`, `scopus_author`  
+- `dyad_model_dataset`
+
+---
+
+#### Step 3: Clean Dimensions Publications
+
+**Script name:** `03_process_dimensions.R`
+
+Processes Dimensions publication metadata, focusing on concept tags, authorship, and dataset mentions.
+
+**Additional outputs:**
+
+- `master_dimensions`, `dim_publications`  
+- `dim_authors`, `dim_affiliations`, `dim_concepts`  
+- `dataset_reference_table`
+
+---
+
+### Part 2: Comparing Publications
+
+#### Step 1: Build a comparable sample  
+
+**Script name:** `04_compare_publications.R`
+
+Filters for articles published between 2017–2023. Merges all four datasets and compares coverage and intersections.
+
+**Outputs:**
+
+- Unified publication-level dataset  
+- Source flags: `scopus_yes`, `oa_yes`, `dim_yes`  
+- Harmonized dataset indicators
+
+---
+
+#### Step 2: Construct treemap visualizations
+
+**Script name:** `05_construct_treemaps.R`
+
+Visualizes the overlap in publication coverage using treemaps across 15 mutually exclusive source combinations.
+
+**Output:**
+
+- Treemaps (one per dataset) saved as PNG files
+
+---
+
+### Part 3: Comparing Journals
+
+#### Step 1: Construct Sankey plots 
+
+**Script name:** `06_construct_sankey_plots.R`
+
+Generates Sankey plots to show source pathways for dataset mentions across citation platforms.
+
+**Output:**
+
+- PNG diagrams representing flow across sources
+
+---
+
+### Part 4: Comparing Topics
+
+#### Step 1: Harmonize topics across sources
+
+**Script name:** `07_aggregate_topics.R`
+
+Harmonizes and aggregates topic metadata across all four sources. Produces a unified dataset used for topic-level summaries.
+
+**Outputs:**
+
+- `dataset##_topics` for each dataset  
+- `master_topics_df`, `food_security_flag_terms`  
+- Count tables for topics by source and overlap group
+
+---
+
+#### Step 2: Construct bubble charts
+
+**Script name:** `08_construct_bubble_charts.R`
+
+Creates bubble charts of topic coverage by dataset and source. Topics are aggregated using harmonized labels.
+
+**Output:**
+
+- PNG files grouped by dataset  
+- Aggregated topic flags
+
+---
+
+#### Step 3: Construct word clouds
+
+**Script name:** `09_construct_word_clouds.R`
+
+Generates word clouds for top topics flagged as relevant to food security or other themes of interest.
+
+**Output:**
+
+- Word cloud PNGs by dataset and topic flag
+
+---
+
+### Part 5: Comparing Authors and Institutions
+
+#### Step 1: Clean and standardize author names
+
+**Script name:** `10_clean_author_names.R`
+
+Standardizes and deduplicates author names for consistent identification across citation sources.
+
+---
+
+#### Step 2: Clean institutional affiliations
+
+**Script name:** `11_clean_institutional_affil.R`
+
+Standardizes and assigns ROR identifiers to institutional affiliations, where available.
+
+---
+
+#### Step 3: Construct maps
+
+**Script name:** `12_construct_maps.R`
+
+Maps institutional affiliations by dataset and source, using geocoded or ROR-derived location data.
+
+---
+
+#### Step 4: Merge all entities
+
+**Script name:** `13_build_all_df.R`
+
+Merges author-, institution-, and publication-level metadata into a final consolidated table.
+
+**Output:**
+
+- `all_df`: a harmonized dataframe with DOIs, authors, affiliations, and source-level indicators
+
+---
+
+## Notes on Replicability
+
+- All scripts assume that required paths are defined at the top of `00_master_script.R`.
+- A `keep_list` strategy is used in each script to manage memory and retain only needed objects.
+- Output directories for each figure type are defined explicitly before sourcing visualization scripts.
+
+---
+
+For access to the input data, please contact the authors.  
+To cite this workflow, please use:  
+**Chenarides, L., Bryan, C., & Ladislau, R. (2025). Methodology for comparing citation database coverage of dataset usage.**  
+Available at: [https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html](https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html)
