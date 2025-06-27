@@ -16,7 +16,7 @@ default-output-format: [html, pdf]
 ---
 
 :::{.callout-note title="How to Cite:"}
-Chenarides, L., Bryan, C., & Ladislau, R. (2025). Methodology for comparing citation database coverage of dataset usage. Available at: [https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html](https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html)
+Chenarides, L., Bryan, C., & Ladislau, R. (2025). *Methodology for comparing citation database coverage of dataset usage*. Available at: [https://laurenchenarides.github.io/data_usage_report/report.html](https://laurenchenarides.github.io/data_usage_report/report.html)
 :::
 
 [Download PDF Version](report.pdf){.btn .btn-success}

@@ -11,20 +11,18 @@ author:
   - name: "Rafael Ladislau"
     email: "rafa.ladis@gmail.com"
     affiliation: "RL Desenvolvimento de Sistemas LTDA"
-  - name: "Julia Lane, Ph.D."
-    email: "julia.lane@nyu.edu"
-    affiliation: "New York University"
-  - name: "Ming Wang"
-    email: "Ming.Wang@colostate.edu"
-    affiliation: "Colorado State University"
 date: last-modified  # Auto-updates based on Git commits
 format:
   html:
     toc: true  # Enables TOC on this page
     toc-location: right
-    toc-depth: 3
+    toc-depth: 1
     css: styles.css
 ---
+
+:::{.callout-note title="How to Cite:"}
+Chenarides, L., Bryan, C., & Ladislau, R. (2025). *Methodology for comparing citation database coverage of dataset usage*. Available at: [https://laurenchenarides.github.io/data_usage_report/report.html](https://laurenchenarides.github.io/data_usage_report/report.html)
+:::
 
 # What Is the Issue? {.unnumbered}
 
@@ -115,6 +113,14 @@ The report includes methods for:
 Reusable components produced as part of this effort include:
 
 -   A code repository for data cleaning and standardization
--   <a href="https://laurenchenarides.github.io/compare_scopus_openalex_report/appendices/app_crosswalk.html" target="_blank" rel="noopener">A crosswalk of data schemas by citation database</a>
+-   <a href="https://laurenchenarides.github.io/data_usage_report/appendices/app_crosswalk.html" target="_blank" rel="noopener">A crosswalk of data schemas by citation database</a>
 
 The general framework developed here can be extended to other citation systems, including Web of Science, Crossref, and Microsoft Academic, for similar evaluations of dataset coverage and usage.
+
+## Acknowledgements {.unnumbered}
+
+We gratefully acknowledge the contributions of the following individuals:
+
+- **Julia Lane, Ph.D.** (New York University) – for guidance on methodology and feedback on drafts.
+- **Ming Wang, Ph.D.** (Colorado State University) – for research assistance.
+
