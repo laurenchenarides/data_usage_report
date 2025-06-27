@@ -1,0 +1,423 @@
+## OpenAlex
+
+### Rationale {.unnumbered}
+
+Given the limitations of OpenAlex full text search, a **Seed Corpus** and **Search Corpus** were used to facilitate more accurate identification of USDA dataset mentions in scholarly publications within the OpenAlex citation database.
+
+### Description of the Problem {.unnumbered}
+
+Publications identified by dataset mention searches using Scopus were cross-verified in OpenAlex by searching their DOIs. These publications were confirmed to be open-access and available for full-text searches in OpenAlex. However, upon closer investigation, two primary issues were identified with OpenAlex's full-text indexing methods:
+
+1. **PDF vs. NGRAMS Indexing Methods**:
+    - **PDF Method**: OpenAlex receives the publication's full text in PDF format and indexes the content directly.
+    - **NGRAMS Method**: OpenAlex receives from the author or publisher a preprocessed set of words or phrases (ngrams) extracted from the publication's full text.
+
+2. **Specific Issues**:
+    - **PDF Method Issue**: Although undocumented, we observed that the text from the references section of the publications was not indexed by OpenAlex. This occurs because OpenAlex processes the references section specifically to create pointers to other OpenAlex works being referenced. While this approach functions well for publications referencing other scholarly publications, it fails to identify dataset mentions in the references.
+    - **NGRAMS Method Issue**: The provided set of ngrams might not include all relevant words or phrases required for dataset identification. For example, if searching for a specific alias such as "USDA Census," the provided ngrams might not contain the exact phrase or all necessary words, causing missed dataset mentions.
+
+These limitations with OpenAlex's indexing methods highlighted the need to create dedicated seed and search corpora for accurate dataset mention identification.
+
+### Creating the Seed Corpus {.unnumbered}
+
+The seed corpus generation aims to create an effective subset of publications available in OpenAlex to download locally and subsequently run text searches for dataset aliases and flagged terms.
+
+### Filtering Criteria {.unnumbered}
+
+To define the seed corpus, several criteria were established based on topics, publication type, publication year, language, and open-access availability. Below are detailed descriptions of the chosen criteria and associated publication counts.
+
+### Topics {.unnumbered}
+
+We identified relevant topics based on their frequency and relevance. Below are the top 100 topics by publication count:
+
+| **Topic ID**                | **Topic Name**                                                    | **First Run Count** | **OpenAlex Total Count** |
+|-----------------------------|-------------------------------------------------------------------|---------------------|--------------------------|
+T11610 | Impact of Food Insecurity on Health Outcomes                      | 313                 | 78661                    |
+T11610 | Food Security and Health in Diverse Populations                   | 236                 | 78661                    |
+T10010 | Global Trends in Obesity and Overweight Research                  | 149                 | 111686                   |
+T11066 | Comparative Analysis of Organic Agricultural Practices            | 141                 | 41275                    |
+T12253 | Urban Agriculture and Community Development                       | 140                 | 27383                    |
+T10010 | Obesity, Physical Activity, Diet                                  | 123                 | 111686                   |
+T10367 | Agricultural Innovation and Livelihood Diversification            | 110                 | 49818                    |
+T11066 | Organic Food and Agriculture                                      | 106                 | 41275                    |
+T11464 | Impact of Homelessness on Health and Well-being                   | 101                 | 101019                   |
+T12253 | Urban Agriculture and Sustainability                              | 82                  | 27383                    |
+T12033 | European Agricultural Policy and Reform                           | 77                  | 88980                    |
+T10367 | Agricultural Innovations and Practices                            | 76                  | 49818                    |
+T11464 | Homelessness and Social Issues                                    | 74                  | 101019                   |
+T10841 | Discrete Choice Models in Economics and Health Care               | 72                  | 66757                    |
+T10596 | Maternal and Child Nutrition in Developing Countries              | 71                  | 118727                   |
+T11898 | Impacts of Food Prices on Consumption and Poverty                 | 70                  | 29110                    |
+T11259 | Sustainable Diets and Environmental Impact                        | 65                  | 45082                    |
+T12033 | Agricultural Economics and Policy                                 | 60                  | 88980                    |
+T10841 | Economic and Environmental Valuation                              | 54                  | 66757                    |
+T10439 | Adaptation to Climate Change in Agriculture                       | 50                  | 27311                    |
+T10235 | Impact of Social Factors on Health Outcomes                       | 49                  | 86076                    |
+T10866 | Role of Mediterranean Diet in Health Outcomes                     | 48                  | 76894                    |
+T10596 | Child Nutrition and Water Access                                  | 45                  | 118727                   |
+T11259 | Agriculture Sustainability and Environmental Impact               | 44                  | 45082                    |
+T10330 | Hydrological Modeling and Water Resource Management               | 43                  | 132216                   |
+T11886 | Risk Management and Vulnerability in Agriculture                  | 43                  | 44755                    |
+T11898 | Economics of Agriculture and Food Markets                         | 43                  | 29110                    |
+T11311 | Soil and Water Nutrient Dynamics                                  | 42                  | 52847                    |
+T11311 | Biogeochemical Cycling of Nutrients in Aquatic Ecosystems         | 42                  | 52847                    |
+T10226 | Global Analysis of Ecosystem Services and Land Use                | 40                  | 84104                    |
+T10969 | Optimal Operation of Water Resources Systems                      | 39                  | 97570                    |
+T12732 | Impact of Farming on Health and Safety                            | 33                  | 29731                    |
+T10235 | Health disparities and outcomes                                   | 32                  | 86076                    |
+T10226 | Land Use and Ecosystem Services                                   | 31                  | 84104                    |
+T11753 | Forest Management and Policy                                      | 31                  | 75196                    |
+T10969 | Water resources management and optimization                       | 31                  | 97570                    |
+T12098 | Rural development and sustainability                              | 30                  | 62114                    |
+T12724 | Integrated Management of Water, Energy, and Food Resources        | 30                  | 40148                    |
+T11886 | Agricultural risk and resilience                                  | 30                  | 44755                    |
+T11753 | Climate Change Impacts on Forest Carbon Sequestration             | 29                  | 75196                    |
+T11711 | Impacts of COVID-19 on Global Economy and Markets                 | 29                  | 69059                    |
+T10111 | Remote Sensing in Vegetation Monitoring and Phenology             | 28                  | 56452                    |
+T11404 | Deficit Irrigation for Agricultural Water Management              | 27                  | 49715                    |
+T10439 | Climate change impacts on agriculture                             | 27                  | 27311                    |
+T11862 | Agroecology and Global Food Systems                               | 26                  | 34753                    |
+T12583 | Food Waste Management and Reduction                               | 26                  | 27144                    |
+T10004 | Soil Carbon Dynamics and Nutrient Cycling in Ecosystems           | 26                  | 101907                   |
+T10330 | Hydrology and Watershed Management Studies                        | 26                  | 132216                   |
+T10556 | Global Cancer Incidence and Mortality Patterns                    | 25                  | 64063                    |
+T12098 | Rural Development and Change in Agricultural Landscapes           | 24                  | 62114                    |
+T10111 | Remote Sensing in Agriculture                                     | 24                  | 56452                    |
+T10556 | Global Cancer Incidence and Screening                             | 24                  | 64063                    |
+T10866 | Nutritional Studies and Diet                                      | 22                  | 76894                    |
+T11560 | Dynamics of Livestock Disease Transmission and Control            | 22                  | 68578                    |
+T10266 | Global Forest Drought Response and Climate Change                 | 22                  | 73291                    |
+T12904 | Agricultural Education and School Gardening Research              | 21                  | 110210                   |
+T12003 | Development and Impacts of Bioenergy Crops                        | 21                  | 36853                    |
+T10298 | Influence of Built Environment on Active Travel                   | 21                  | 86890                    |
+T10029 | Climate Change and Variability Research                           | 20                  | 113541                   |
+T11711 | COVID-19 Pandemic Impacts                                         | 20                  | 69059                    |
+T10266 | Plant Water Relations and Carbon Dynamics                         | 20                  | 73291                    |
+T11544 | Gender Inequality and Labor Force Dynamics                        | 19                  | 98755                    |
+T13388 | Factors Affecting Sagebrush Ecosystems and Wildlife Conservation  | 19                  | 58614                    |
+T12904 | Diverse Educational Innovations Studies                           | 18                  | 110210                   |
+T12773 | Water Quality and Hydrogeology Research                           | 18                  | 50724                    |
+T10435 | Environmental Impact and Sustainability                           | 18                  | 55580                    |
+T11862 | Agriculture, Land Use, Rural Development                          | 18                  | 34753                    |
+T10435 | Life Cycle Assessment and Environmental Impact Analysis           | 18                  | 55580                    |
+T13393 | Feeding Disorders in Children with Autism Spectrum Disorders      | 17                  | 50595                    |
+T12724 | Water-Energy-Food Nexus Studies                                   | 17                  | 40148                    |
+T11404 | Irrigation Practices and Water Management                         | 17                  | 49715                    |
+T11560 | Animal Disease Management and Epidemiology                        | 17                  | 68578                    |
+T13393 | Child Nutrition and Feeding Issues                                | 16                  | 50595                    |
+T11544 | Gender, Labor, and Family Dynamics                                | 16                  | 98755                    |
+T10298 | Urban Transport and Accessibility                                 | 15                  | 86890                    |
+T11789 | Land Tenure and Property Rights in Agriculture                    | 15                  | 46627                    |
+T10391 | Economics of Health Care Systems and Policies                     | 15                  | 260472                   |
+T10692 | Impact of Urban Green Space on Public Health                      | 15                  | 40686                    |
+T10889 | Soil Erosion and Agricultural Sustainability                      | 15                  | 72441                    |
+T10004 | Soil Carbon and Nitrogen Dynamics                                 | 14                  | 101907                   |
+T10446 | Income, Poverty, and Inequality                                   | 14                  | 62906                    |
+T12057 | Impact of Ultra-Processed Foods on Health                         | 14                  | 28199                    |
+T12873 | Impact of Nutrition and Eating Habits on Health                   | 14                  | 43157                    |
+T11645 | Effects of Residential Segregation on Communities and Individuals | 14                  | 50639                    |
+T12583 | Food Waste Reduction and Sustainability                           | 13                  | 27144                    |
+T12310 | Factors Affecting Maize Yield and Lodging Resistance              | 13                  | 105863                   |
+T10889 | Soil erosion and sediment transport                               | 13                  | 72441                    |
+T10487 | Impact of Pollinator Decline on Ecosystems and Agriculture        | 13                  | 218697                   |
+T10576 | Opioid Epidemic in the United States                              | 13                  | 50143                    |
+T11186 | Global Drought Monitoring and Assessment                          | 13                  | 35695                    |
+T10552 | Global Trends in Colorectal Cancer Research                       | 13                  | 70491                    |
+T11925 | Food Tourism and Gastronomy Research                              | 13                  | 95356                    |
+T12399 | Factors Influencing Wine Tourism and Consumer Behavior            | 13                  | 50383                    |
+T12003 | Bioenergy crop production and management                          | 13                  | 36853                    |
+T13388 | Rangeland and Wildlife Management                                 | 12                  | 58614                    |
+T10410 | Modeling the Dynamics of COVID-19 Pandemic                        | 12                  | 67192                    |
+T10190 | Health Effects of Air Pollution                                   | 12                  | 125501                   |
+T12733 | Bluetongue Virus and Culicoides-Borne Diseases in Europe          | 12                  | 34477                    |
+T11546 | Plant Physiology and Cultivation Studies                          | 12                  | 189058                   |
+T11552 | Governance of Global Value Chains and Production Networks         | 12                  | 46357                    |
+
+
+Filters applied:
+- **Language**: English (en)
+- **Publication Year**: >2017
+- **Type**: article, review
+- **Open Access**: True
+
+Filtered publications count: **1,192,809**.
+
+### Journals {.unnumbered}
+
+We selected the top journals to further refine our corpus. The following table lists the top 100 journals by publication count:
+
+| **Journal ID**                   | **Journal Name**                                                  | **First Run Count** | **OpenAlex Total Count** |
+|----------------------------------|-------------------------------------------------------------------|---------------------|--------------------------|
+S2764628096 | Journal of Agriculture Food Systems and Community Development     | 57                  | 825                      |
+S115427279  | Public Health Nutrition                                           | 51                  | 3282                     |
+S206696595  | Journal of Nutrition Education and Behavior                       | 41                  | 3509                     |
+S15239247   | International Journal of Environmental Research and Public Health | 39                  | 59130                    |
+S4210201861 | Applied Economic Perspectives and Policy                          | 39                  | 647                      |
+S10134376   | Sustainability                                                    | 35                  | 87533                    |
+S5832799    | Journal of Soil and Water Conservation                            | 34                  | 556                      |
+S2739393555 | Journal of Agricultural and Applied Economics                     | 34                  | 329                      |
+S202381698  | PLoS ONE                                                          | 30                  | 143568                   |
+S124372222  | Renewable Agriculture and Food Systems                            | 30                  | 426                      |
+S91754907   | American Journal of Agricultural Economics                        | 28                  | 876                      |
+S200437886  | BMC Public Health                                                 | 28                  | 18120                    |
+S18733340   | Journal of the Academy of Nutrition and Dietetics                 | 27                  | 5301                     |
+S78512408   | Agriculture and Human Values                                      | 27                  | 938                      |
+S2764593300 | Agricultural and Resource Economics Review                        | 25                  | 247                      |
+S110785341  | Nutrients                                                         | 25                  | 30911                    |
+S4210212157 | Frontiers in Sustainable Food Systems                             | 23                  | 3776                     |
+S69340840   | The Journal of Rural Health                                       | 20                  | 749                      |
+S63571384   | Food Policy                                                       | 20                  | 1069                     |
+S19383905   | Agricultural Finance Review                                       | 18                  | 327                      |
+S4210234824 | EDIS                                                              | 18                  | 3714                     |
+S119228529  | Journal of Hunger & Environmental Nutrition                       | 17                  | 467                      |
+S204691207  | HortTechnology                                                    | 14                  | 847                      |
+S4210212179 | Journal of Extension                                              | 14                  | 1004                     |
+S43295729   | Remote Sensing                                                    | 14                  | 33899                    |
+S2738397068 | Land                                                              | 14                  | 9774                     |
+S80485027   | Land Use Policy                                                   | 14                  | 4559                     |
+S4210217848 | JAMA Network Open                                                 | 13                  | 12933                    |
+S139338987  | Environmental Research Letters                                    | 13                  | 6399                     |
+S2595931848 | Frontiers in Public Health                                        | 12                  | 19316                    |
+S122347013  | American Journal of Obstetrics and Gynecology                     | 12                  | 15259                    |
+S204847658  | Water Resources Research                                          | 12                  | 5305                     |
+S73449225   | Food Security                                                     | 12                  | 899                      |
+S4210219560 | Current Developments in Nutrition                                 | 12                  | 10807                    |
+S183652945  | HortScience                                                       | 11                  | 2415                     |
+S196734849  | Scientific Reports                                                | 11                  | 198095                   |
+S139950591  | Agronomy Journal                                                  | 10                  | 2675                     |
+S86852077   | The Science of The Total Environment                              | 10                  | 56249                    |
+S37976914   | JAWRA Journal of the American Water Resources Association         | 9                   | 852                      |
+S2764587901 | Journal of Applied Communications                                 | 9                   | 250                      |
+S2607323502 | Scientific Data                                                   | 9                   | 5287                     |
+S44455300   | Journal of Environmental Management                               | 9                   | 17835                    |
+S4210220469 | Journal of Applied Farm Economics                                 | 8                   | 39                       |
+S141808269  | Remote Sensing of Environment                                     | 8                   | 4135                     |
+S129060628  | Diabetes                                                          | 8                   | 17439                    |
+S2475403985 | Preventing Chronic Disease                                        | 8                   | 1068                     |
+S156283932  | California Agriculture                                            | 8                   | 233                      |
+S157560195  | Agricultural Systems                                              | 8                   | 1722                     |
+S136211407  | Ecological Economics                                              | 8                   | 2684                     |
+S23642417   | Society & Natural Resources                                       | 8                   | 792                      |
+S2574783    | Gynecologic Oncology                                              | 8                   | 8756                     |
+S149285975  | Land Economics                                                    | 8                   | 399                      |
+S2594976040 | Frontiers in Veterinary Science                                   | 7                   | 9896                     |
+S8391440    | Cancer Epidemiology Biomarkers & Prevention                       | 7                   | 6099                     |
+S6596815    | Rural Sociology                                                   | 7                   | 467                      |
+S4210180312 | Journal of the Agricultural and Applied Economics Association     | 7                   | 161                      |
+S4210202585 | Agriculture                                                       | 7                   | 9931                     |
+S79054089   | BMJ Open                                                          | 7                   | 31973                    |
+S2764832999 | Scientific investigations report                                  | 7                   | 1270                     |
+S180723199  | Agribusiness                                                      | 7                   | 583                      |
+S154775064  | Agricultural Economics                                            | 7                   | 729                      |
+S2738534743 | Journal of Nutritional Science                                    | 6                   | 659                      |
+S2754843627 | Cancer Medicine                                                   | 6                   | 7317                     |
+S2228914    | Health Services Research                                          | 6                   | 1855                     |
+S2764680059 | Statistical Journal of the IAOS                                   | 6                   | 852                      |
+S76844451   | Annual Review of Resource Economics                               | 6                   | 206                      |
+S207068962  | Community Development                                             | 6                   | 516                      |
+S148307540  | Ecology and Society                                               | 6                   | 1281                     |
+S4210194219 | Antarctica A Keystone in a Changing World                         | 6                   | 1110                     |
+S4210186936 | Journal of Agricultural Science                                   | 6                   | 2412                     |
+S12132826   | The International Food and Agribusiness Management Review         | 6                   | 464                      |
+S4210197466 | Agroecology and Sustainable Food Systems                          | 6                   | 645                      |
+S204799461  | Climatic Change                                                   | 6                   | 1992                     |
+S139838620  | Obstetrics and Gynecology                                         | 6                   | 8132                     |
+S2596909297 | Frontiers in Nutrition                                            | 6                   | 9700                     |
+S168049282  | American Journal of Public Health                                 | 6                   | 4777                     |
+S106822843  | Social Science & Medicine                                         | 5                   | 5847                     |
+S134216166  | Water                                                             | 5                   | 25819                    |
+S28036099   | Journal of Rural Studies                                          | 5                   | 2034                     |
+S2737313858 | Agricultural & Environmental Letters                              | 5                   | 262                      |
+S32361082   | European Review of Agricultural Economics                         | 5                   | 362                      |
+S178566096  | Preventive Veterinary Medicine                                    | 5                   | 1907                     |
+S150168663  | Cancer Causes & Control                                           | 5                   | 1136                     |
+S106908163  | Neuro-Oncology                                                    | 5                   | 18986                    |
+S178182516  | Journal of Agromedicine                                           | 5                   | 565                      |
+S116775814  | Computers and Electronics in Agriculture                          | 5                   | 5965                     |
+S176659572  | Health & Social Care in the Community                             | 5                   | 2064                     |
+S2764613780 | Journal of Agricultural Safety and Health                         | 5                   | 138                      |
+S99400149   | Journal of Health Care for the Poor and Underserved               | 5                   | 1197                     |
+S42419699   | Precision Agriculture                                             | 5                   | 1130                     |
+S130750583  | Global Environmental Change                                       | 5                   | 1092                     |
+S2492648963 | Transactions of the ASABE                                         | 5                   | 894                      |
+S135458494  | Plant Disease                                                     | 5                   | 8264                     |
+S72684844   | Journal of Animal Science                                         | 5                   | 15499                    |
+S173554290  | Journal of Community Health                                       | 5                   | 1126                     |
+S28349394   | Journal of Dairy Science                                          | 5                   | 8060                     |
+S88153332   | Journal of Nutrition                                              | 5                   | 3469                     |
+S199825796  | Applied Engineering in Agriculture                                | 5                   | 722                      |
+S95823145   | Forest Policy and Economics                                       | 5                   | 1509                     |
+S104641133  | Agricultural Water Management                                     | 5                   | 4298                     |
+
+
+Filters applied:
+- **Language**: English (en)
+- **Publication Year**: >2017
+- **Type**: article, review
+- **Open Access**: True
+
+Filtered publications count: **770,522**.
+
+### Authors {.unnumbered}
+
+Authors with American affiliations were selected to enhance corpus relevance:
+
+| **Author ID**                    | **Author Name**          | **First Run Count** | **OpenAlex Total Count** |
+|----------------------------------|--------------------------|---------------------|--------------------------|
+A5016803484 | Heather A. Eicher‐Miller | 15                  | 140                      |
+A5024975191 | Edward A. Frongillo      | 13                  | 351                      |
+A5055158106 | Becca B.R. Jablonski     | 12                  | 60                       |
+A5047780964 | Meredith T. Niles        | 11                  | 200                      |
+A5015017711 | Jeffrey K. O’Hara        | 10                  | 27                       |
+A5062679478 | J. Gordon Arbuckle       | 10                  | 68                       |
+A5068812455 | Cindy W. Leung           | 10                  | 170                      |
+A5076121862 | Sheri D. Weiser          | 10                  | 241                      |
+A5081656928 | Whitney E. Zahnd         | 9                   | 147                      |
+A5008463933 | Catherine Brinkley       | 8                   | 34                       |
+A5027684365 | Dayton M. Lambert        | 8                   | 110                      |
+A5002438645 | Phyllis C. Tien          | 8                   | 244                      |
+A5081012770 | Linda J. Young           | 8                   | 51                       |
+A5030548116 | Michele Ver Ploeg        | 8                   | 33                       |
+A5035584432 | Angela D. Liese          | 8                   | 172                      |
+A5032940306 | Lisa Harnack             | 7                   | 89                       |
+A5008296893 | Eryka Wentz              | 7                   | 33                       |
+A5006129622 | Carmen Byker Shanks      | 7                   | 103                      |
+A5053170901 | Ani L. Katchova          | 7                   | 62                       |
+A5024127854 | Eduardo Villamor         | 7                   | 84                       |
+A5060802257 | Tracey E. Wilson         | 7                   | 102                      |
+A5050792105 | Jennifer L. Moss         | 7                   | 90                       |
+A5040727809 | George B. Frisvold       | 7                   | 66                       |
+A5056021318 | Nathan Hendricks         | 7                   | 320                      |
+A5034750133 | Lila A. Sheira           | 7                   | 61                       |
+A5044317355 | Daniel Merenstein        | 7                   | 113                      |
+A5002732604 | Julia A. Wolfson         | 7                   | 137                      |
+A5015455112 | Hikaru Hanawa Peterson   | 7                   | 56                       |
+A5024248662 | Adebola Adedimeji        | 7                   | 137                      |
+A5038610136 | Christopher N. Boyer     | 7                   | 115                      |
+A5101813658 | Christian J. Peters      | 7                   | 32                       |
+A5035164673 | Stephan J. Goetz         | 6                   | 90                       |
+A5029397288 | Amy L. Yaroch            | 6                   | 113                      |
+A5022651324 | Seth A. Berkowitz        | 6                   | 158                      |
+A5083470674 | Mardge H. Cohen          | 6                   | 205                      |
+A5070284513 | Timothy S. Griffin       | 6                   | 59                       |
+A5026810637 | Joleen C. Hadrich        | 6                   | 30                       |
+A5013419936 | Nigel Key                | 6                   | 25                       |
+A5062332393 | Alessandro Bonanno       | 6                   | 61                       |
+A5012666568 | Hilary K. Seligman       | 6                   | 123                      |
+A5071854708 | Burton C. English        | 6                   | 68                       |
+A5069981543 | Megan Konar              | 6                   | 86                       |
+A5083406390 | Zach Conrad              | 6                   | 123                      |
+A5074296013 | Suat Irmak               | 6                   | 151                      |
+A5079036202 | James A. Larson          | 6                   | 49                       |
+A5038417176 | Adaora A. Adimora        | 6                   | 334                      |
+A5045489628 | Selena Ahmed             | 6                   | 89                       |
+A5057302432 | Alan W. Hodges           | 6                   | 73                       |
+A5091590760 | Craig Gundersen          | 6                   | 69                       |
+A5089578074 | Parke Wilde              | 6                   | 107                      |
+A5063008522 | A. D. Kendall            | 6                   | 119                      |
+A5100771544 | Hanqin Tian              | 6                   | 434                      |
+A5072286156 | D. W. Hyndman            | 6                   | 130                      |
+A5052456209 | Kartika Palar            | 6                   | 59                       |
+A5042679164 | Jeffrey Gillespie        | 6                   | 30                       |
+A5091103546 | Kimberly L. Jensen       | 6                   | 65                       |
+A5014800024 | Kartik K. Venkatesh      | 5                   | 244                      |
+A5003088939 | Frances Hardin‐Fanning   | 5                   | 32                       |
+A5028409673 | Lauri M. Baker           | 5                   | 60                       |
+A5087431618 | Gabrielle Roesch‐McNally | 5                   | 36                       |
+A5112481717 | Jianhong E. Mu           | 5                   | 20                       |
+A5067158518 | Lisa R. Metsch           | 5                   | 133                      |
+A5051019392 | Dawn Thilmany McFadden   | 5                   | 20                       |
+A5065308164 | Edward C. Jaenicke       | 5                   | 59                       |
+A5035062421 | Katherine Dentzman       | 5                   | 35                       |
+A5011693138 | Ryan S. Miller           | 5                   | 163                      |
+A5019910416 | Holly Gibbs              | 5                   | 69                       |
+A5014991206 | Margarita Velandia       | 5                   | 29                       |
+A5081521085 | Mark Lubell              | 5                   | 80                       |
+A5007931812 | Tyler J. Lark            | 5                   | 77                       |
+A5078358162 | Janet M. Turan           | 5                   | 189                      |
+A5089582462 | Lynn M. Yee              | 5                   | 426                      |
+A5040186224 | Nathanael M. Thompson    | 5                   | 32                       |
+A5070695418 | Ighovwerha Ofotokun      | 5                   | 105                      |
+A5018179894 | Amir M. Rahmani          | 5                   | 264                      |
+A5057015263 | Dawn Thilmany            | 5                   | 34                       |
+A5038972534 | Jyotsna S. Jagai         | 5                   | 48                       |
+A5003676504 | Landon Marston           | 5                   | 84                       |
+A5079390198 | Chen Zhen                | 5                   | 48                       |
+A5043968039 | W. David Mulkey          | 5                   | 7                        |
+A5072793478 | Clayton Hallman          | 5                   | 11                       |
+A5016915956 | John Tyndall             | 5                   | 35                       |
+A5044462604 | John M. Antle            | 5                   | 49                       |
+A5105267439 | Colleen T. Webb          | 5                   | 44                       |
+A5016997673 | Miguel I. Gómez          | 5                   | 138                      |
+A5006518901 | Andrea Leschewski        | 5                   | 18                       |
+A5022734861 | Allison Bauman           | 5                   | 32                       |
+A5010819579 | Lisa Chase               | 5                   | 34                       |
+A5044003446 | W. Jay Christian         | 5                   | 50                       |
+A5022220353 | Bailey Houghtaling       | 5                   | 72                       |
+A5066919611 | Rick Welsh               | 5                   | 20                       |
+A5053832932 | Eric M. Clark            | 4                   | 41                       |
+A5002482027 | Benjamin M. Gramig       | 4                   | 46                       |
+A5029506929 | Courtney D. Lynch        | 4                   | 84                       |
+A5031318120 | Jessica Rudnick          | 4                   | 15                       |
+A5046729938 | Steven R. Browning       | 4                   | 23                       |
+A5052396793 | Lindsay M. Beck‐Johnson  | 4                   | 13                       |
+A5027592346 | Dennis P. Swaney         | 4                   | 26                       |
+A5042166415 | David H. Fleisher        | 4                   | 69                       |
+A5008867112 | Katie Portacci           | 4                   | 14                       |
+
+
+Filters applied:
+- **Language**: English (en)
+- **Publication Year**: >2017
+- **Type**: article, review
+- **Open Access**: True
+
+Filtered publications count: **3,714**.
+
+### Generating the Search Corpus {.unnumbered}
+ 
+Upon applying the agreed filters, the final seed corpus resulted in **1,774,245 unique publications**. An initial Python script was developed to collect full texts of these publications.
+
+### Initial Full Text Download Results {.unnumbered}
+
+| Metric | Result |
+|--------|--------|
+| Total publications attempted | 2,774 |
+| Successfully downloaded full-texts | 974 |
+| Success Rate | 35% |
+| Estimated full texts (projected) | 625,000 out of 1,774,245 |
+| Total estimated processing time | ~124 days |
+
+The relatively low success rate indicates significant challenges in accessing full texts, primarily due to missing or inaccessible OA URLs.
+
+### Current Limitations and Considerations {.unnumbered}
+ 
+- Only **35%** success rate in downloading full texts.
+- The existing process is slow, computationally intensive, and likely to require improvements or distributed computing.
+- Comparison with OpenAlex's built-in full-text search shows it might be sufficient in certain cases, potentially reducing the necessity of local processing.
+
+### Next Steps {.unnumbered}
+
+- Implement distributed processing to accelerate corpus generation.
+- Assess the adequacy of OpenAlex’s built-in full-text search for practical usage scenarios.
+- Balance the need for accuracy with available resources (time and cost).
+
+### References {.unnumbered}
+
+- OpenAlex API documentation: [OpenAlex Works API](https://docs.openalex.org/api-entities/works)
+- OA filtered results: [OpenAlex Filtered Corpus](https://api.openalex.org/works?filter=is_oa:true,language:en,publication_year:%3E2017,type:article|review,...)
+- OpenAlex: <https://docs.openalex.org>
+
+### Conclusion {.unnumbered}
+
+Creating a locally processed seed corpus from OpenAlex significantly improves dataset mention accuracy but poses considerable resource demands. While local full-text processing enhances specificity, careful consideration is required regarding when OpenAlex’s native search capabilities are sufficient.
+
+---
+
+**References**:
+- OpenAlex API Documentation: [https://docs.openalex.org](https://docs.openalex.org)
+- Democratizing Data project repository and guidelines *(internal documentation, 2025)*.
+- USDA Dataset Project Documentation (Internal Document, 2025).
+
+
+

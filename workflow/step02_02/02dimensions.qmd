@@ -1,3 +1,0 @@
-## Dimensions
-
-*The seed corpus approach was only applied to Scopus.*

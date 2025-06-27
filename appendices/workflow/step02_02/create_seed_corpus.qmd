@@ -1,0 +1,39 @@
+---
+title: "Methodology for Comparing Citation Database Coverage of Dataset Usage"
+subtitle: "Creating a Seed Corpus"
+date: last-modified  # Auto-updates based on Git commits
+format:
+  html:
+    toc: true  # Enables TOC on this page
+    toc-location: right
+    toc-depth: 3
+    css: styles.css
+---
+
+## Creating a Seed Corpus: Scopus {#sec-seed-corpus .unnumbered}
+
+For Scopus and OpenAlex, a structured seed corpus was used to establish a more targeted search space. This seed corpus approach was necessary to balance recall (capturing relevant mentions) and precision (minimizing false positives). The process involved:
+
+- Restricted search strategies using reference lists and available full-text searches
+- Machine learning-assisted review to refine dataset mentions
+- Manual refinements to resolve ambiguities, consolidate duplicate aliases, and incorporate missing terms.
+
+This structured search space helped mitigate the constraints of Scopus's API and address the limitations of the OpenAlex full-text search to ensure that dataset mentions were captured as comprehensively as possible.
+
+::: panel-tabset
+{{< include 02scopus.qmd >}}
+
+{{< include 02openalex.qmd >}}
+
+{{< include 02dimensions.qmd >}}
+:::
+
+
+<!-- -   Collect an initial set of publications. -->
+<!-- -   Analyze how datasets are referenced. -->
+<!-- -   Determine how well the dataset name variations (from Step 1) are retrieved from the publications. -->
+<!-- -   Adjust searches to improve accuracy. -->
+
+<!-- **Result:** A set of seed publications to inform dataset identification and search procedures. -->
+
+

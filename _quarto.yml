@@ -7,8 +7,8 @@ project:
 website:
   page-navigation: true
   title: "Citation Database Assessment"
-  site-url: "https://laurenchenarides.github.io/compare_scopus_openalex_report/"
-  repo-url: https://github.com/laurenchenarides/compare_scopus_openalex_report
+  site-url: "https://laurenchenarides.github.io/data_usage_report/"
+  repo-url: https://github.com/laurenchenarides/data_usage_report
   repo-actions: [edit, issue]
   
   page-footer: 
@@ -20,7 +20,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: "https://github.com/laurenchenarides/compare_scopus_openalex_report"
+        href: "https://github.com/laurenchenarides/data_usage_report"
         aria-label: "GitHub Repository"
     
     style: "docked"
@@ -34,19 +34,19 @@ website:
       - section: appendix.qmd
         text: "Appendices"
         contents:
-          - href: terminology.qmd
+          - href: appendices/terminology.qmd
             text: Terminology
-          - href: workflow.qmd
-            text: Project Workflow
+          - href: appendices/workflow.qmd
+            text: Workflow
             contents: 
-            - href: workflow/step01/define_data_assets.qmd
+            - href: appendices/workflow/step01/define_data_assets.qmd
               text: "Define Data Assets"
-            - href: workflow/step02_01/extract_dataset_mentions.qmd
+            - href: appendices/workflow/step02_01/extract_dataset_mentions.qmd
               text: "Extract Dataset Mentions"
-            - href: workflow/step02_02/create_seed_corpus.qmd
+            - href: appendices/workflow/step02_02/create_seed_corpus.qmd
               text: "Creating a Seed Corpus"
           - href: appendices/app_crosswalk.qmd # Summary of Scopus, OpenAlex, and Dimensions
-            text: "Data Schema"
+            text: "Documentation"
           - href: appendices/app_institutions.qmd
             contents:
             - href: appendices/app_ipeds.qmd # Ming's work on IPEDS

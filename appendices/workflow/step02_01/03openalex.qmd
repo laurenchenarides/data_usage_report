@@ -1,0 +1,36 @@
+## OpenAlex
+
+### Search Routines
+
+The second citation database used is OpenAlex, an open catalog of scholarly publications that provides public acess to metadata and, when available, full-text content for open-access publications via its [API](https://docs.openalex.org/how-to-use-the-api/api-overview). Unlike Scopus, which provides controls access to licensed content, OpenAlex indexes only open-access publications or those for which open metadata has been made available by publishers. 
+
+Two methods were used to identify USDA dataset mentions in OpenAlex: a full-text search (described below) and a seed corpus approach (described in the [following section](../step02_02/02openalex)). Both methods focused on peer-reviewed journal articles published between 2017 and 2023 and restricted the dataset to final published versions, excluding preprints and earlier drafts to avoid duplication across versions.
+
+The full-text search relied on querying OpenAlex's full-text search index using combinations of dataset aliases (e.g., alternate names, acronyms) and institutional flag terms (e.g., "USDA," "NASS"). The combination of dataset alias and flag terms ensured that retrieved publications made an explicit connection to the correct data source. A "true" dataset mention was recorded only when at least one alias and one flag term appeared in the same publication, increasing the precision of captured dataset mentions.^[This procedure increased the likelihood of capturing genuine dataset references rather than incidental matches to individual words. Initial drafts of the query incorrectly included terms like "NASS" and "USDA" in the alias list. This was corrected to ensure that aliases strictly referred to dataset names, and flag terms referred to organizations.]
+
+Queries were implemented using the `pyalex` Python package^[`Pyalex` is an open-source library designed to facilitate interaction with the OpenAlex API; see [https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex](https://help.openalex.org/hc/en-us/articles/27086501974551-Projects-Using-OpenAlex) for more information. The package manages request formatting and automates compliance with OpenAlex's "polite pool" rate limits, which restrict the number of requests per minute and impose backoff delays. Pyalex introduced automatic pauses between requests, with a default `retry_backoff_factor` of 100 milliseconds, to ensure stable and continuous retrieval. This setup enabled systematic querying while adhering to OpenAlex's usage policies.], which manages API requests and enforces OpenAlex's usage rate limits. The search used the [`search`](https://docs.openalex.org/api-entities/works/search-works) and [`filter`](https://docs.openalex.org/api-entities/works/filter-works) endpoints, targeting English-language, open-access articles or reviews published after 2017. Results were returned in JSON format based on the OpenAlex [Work object](https://docs.openalex.org/api-entities/works/work-object) schema, including fields for publication metadata, authorship, journal, concepts, citations, and open access status. Each record included metadata fields such as:
+
+  - `display_name` (publication title)
+  - `authorships` (authors and affiliations)
+  - `host_venue.display_name` (journal)
+  - `doi` (digital object identifier)
+  - `concepts` (topics)
+  - `cited_by_count` (citation counts)
+  - `type` (publication type, e.g., "article")
+  - `publication_year` (year article was publish)
+  - `language` (language, English only)
+  - `is_oa` (open access)
+
+The code used to implement this querying and filtering process is publicly available [here](https://laurenchenarides.github.io/compare_scopus_openalex_report/appendix.html).
+
+#### Limitations of Full-Text Search Method
+
+Although the OpenAlex API provides access to full-text search, limitations in content ingestion affect result completeness. OpenAlex receives publication text through two primary ingestion methods: PDF extraction and [n-grams delivery](https://docs.openalex.org/api-entities/works/get-n-grams). 
+
+In the PDF ingestion method, OpenAlex extracts text directly from the article PDF. However, the references section is not included in the searchable text. References are processed separately to create citation pointers between scholarly works, meaning that mentions of datasets appearing only in bibliographies are not discoverable through full-text search.
+
+In the n-grams ingestion method, OpenAlex does not receive the full article text. Instead, it receives a set of extracted word sequences (n-grams) from the publisher or author. These n-grams represent fragments of text—typically short sequences of one, two, or three words—which are not guaranteed to preserve full continuous phrases. As a result, complete dataset names may be broken apart or omitted, reducing the likelihood that search queries match the intended aliases.
+
+These ingestion and indexing limitations affect the completeness of results when relying solely on OpenAlex full-text search. Mentions of USDA datasets that appear either exclusively in references or are fragmented within n-grams may be missed. To address these limitations, an alternative search method was developed based on constructing a filtered seed corpus of publications for local full-text analysis.
+
+Refer to [this Appendix](../../app_crosswalk.qmd) for additional details on file construction.

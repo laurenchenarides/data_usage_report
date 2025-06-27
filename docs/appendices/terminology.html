@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-30">
+<meta name="dcterms.date" content="2025-03-16">
 
-<title>OpenAlex Data Dictionary – Citation Database Assessment</title>
+<title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,6 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../appendices/workflow.html" rel="next">
+<link href="../appendix.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -80,9 +102,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Citation Database Assessment
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/terminology.html">Terminology</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -126,14 +146,14 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../appendix.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/terminology.html" class="sidebar-item-text sidebar-link">
+  <a href="../appendices/terminology.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Terminology</span></a>
   </div>
 </li>
@@ -213,32 +233,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-app-openalex" id="toc-sec-app-openalex" class="nav-link active" data-scroll-target="#sec-app-openalex">Overview of OpenAlex Reference Files</a>
-  <ul class="collapse">
-  <li><a href="#file-organization-in-github-repository" id="toc-file-organization-in-github-repository" class="nav-link" data-scroll-target="#file-organization-in-github-repository">File Organization in GitHub Repository</a></li>
-  </ul></li>
-  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data Dictionary</a>
-  <ul class="collapse">
-  <li><a href="#dataset.csv" id="toc-dataset.csv" class="nav-link" data-scroll-target="#dataset.csv"><code>dataset.csv</code></a></li>
-  <li><a href="#publication_dataset_links.csv" id="toc-publication_dataset_links.csv" class="nav-link" data-scroll-target="#publication_dataset_links.csv"><code>publication_dataset_links.csv</code></a></li>
-  <li><a href="#publication.csv" id="toc-publication.csv" class="nav-link" data-scroll-target="#publication.csv"><code>publication.csv</code></a></li>
-  <li><a href="#dataset_alias.csv" id="toc-dataset_alias.csv" class="nav-link" data-scroll-target="#dataset_alias.csv"><code>dataset_alias.csv</code></a></li>
-  <li><a href="#dyad.csv" id="toc-dyad.csv" class="nav-link" data-scroll-target="#dyad.csv"><code>dyad.csv</code></a></li>
-  <li><a href="#model.csv" id="toc-model.csv" class="nav-link" data-scroll-target="#model.csv"><code>model.csv</code></a></li>
-  <li><a href="#dyad_model.csv" id="toc-dyad_model.csv" class="nav-link" data-scroll-target="#dyad_model.csv"><code>dyad_model.csv</code></a></li>
-  </ul></li>
-  <li><a href="#sample-data" id="toc-sample-data" class="nav-link" data-scroll-target="#sample-data">Sample Data</a></li>
-  <li><a href="#how-to-extract-publications-for-a-specific-dataset" id="toc-how-to-extract-publications-for-a-specific-dataset" class="nav-link" data-scroll-target="#how-to-extract-publications-for-a-specific-dataset">How to Extract Publications for a Specific Dataset</a></li>
-  <li><a href="#filtering-publications-by-specific-models" id="toc-filtering-publications-by-specific-models" class="nav-link" data-scroll-target="#filtering-publications-by-specific-models">Filtering Publications by Specific Models</a></li>
+  <li><a href="#terminology" id="toc-terminology" class="nav-link active" data-scroll-target="#terminology">Terminology</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">1</span> References</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/data_usage_report/edit/main/appendices/app_openalex.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/data_usage_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/data_usage_report/edit/main/appendices/terminology.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/data_usage_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../appendices/terminology.html">Terminology</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">OpenAlex Data Dictionary</h1>
+<h1 class="title">Methodology for Comparing Citation Database Coverage of Dataset Usage</h1>
+<p class="subtitle lead">Terminology</p>
 </div>
 
 
@@ -249,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 30, 2025</p>
+      <p class="date">March 16, 2025</p>
     </div>
   </div>
   
@@ -261,386 +267,46 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="sec-app-openalex" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-app-openalex">Overview of OpenAlex Reference Files</h2>
-<p>This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.</p>
-<p>Below is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the <a href="../appendices/app_crosswalk.html">data schema.</a></p>
-<section id="file-organization-in-github-repository" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="file-organization-in-github-repository">File Organization in GitHub Repository</h3>
-<p><strong>PLACEHOLDER</strong></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th><strong>Category</strong></th>
-<th><strong>File Path &amp; Link</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Processed IPEDS Dataset</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS"><code>compare_scopus_openalex/resources/IPEDS/IPEDS.csv</code></a></td>
-</tr>
-<tr class="even">
-<td><strong>Raw IPEDS Data</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS/raw_data_IPEDS"><code>compare_scopus_openalex/resources/raw_data_IPEDS/</code></a></td>
-</tr>
-<tr class="odd">
-<td><strong>Data Processing Code</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/IPEDSdata.rmd</code></a></td>
-</tr>
-<tr class="even">
-<td><strong>Data Documentation</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/IPEDS_Data.md</code></a></td>
-</tr>
-</tbody>
-</table>
+<section id="terminology" class="level1 unnumbered">
+<h1 class="unnumbered">Terminology</h1>
+<p>Citation databases form the foundation of modern research tracking and analysis. Digital repositories, like the test cases featured in this report, systematically catalog scholarly publications and their references to each other <span class="citation" data-cites="debellis2009bibliometrics">(<a href="#ref-debellis2009bibliometrics" role="doc-biblioref">De Bellis, 2009</a>)</span>. Citation databases differ in their approaches to curating and maintaining this information. Some focus exclusively on peer-reviewed journal articles with strict inclusion criteria, while others index a broader range of research outputs including preprints, technical reports, and conference proceedings <span class="citation" data-cites="martin2021google mongeon2016journal">(<a href="#ref-martin2021google" role="doc-biblioref">Martín-Martín et al., 2021</a>; <a href="#ref-mongeon2016journal" role="doc-biblioref">Mongeon &amp; Paul-Hus, 2016</a>)</span>. These curation approaches affect how comprehensively each database captures research impact <span class="citation" data-cites="visser2021large">(<a href="#ref-visser2021large" role="doc-biblioref">Visser et al., 2021</a>)</span>.</p>
+<p>Understanding how these databases work requires familiarity with bibliometrics - the statistical analysis of published works and their impact <span class="citation" data-cites="broadus1987toward">(<a href="#ref-broadus1987toward" role="doc-biblioref">Broadus, 1987</a>)</span>. Bibliometric analysis examines patterns in publication, citation networks, and research influence <span class="citation" data-cites="hood2001literature">(<a href="#ref-hood2001literature" role="doc-biblioref">Hood &amp; Wilson, 2001</a>)</span>. The field emerged from early citation indices, which mapped relationships between papers through their references <span class="citation" data-cites="garfield1955citation">(<a href="#ref-garfield1955citation" role="doc-biblioref">Garfield, 1955</a>)</span>.</p>
+<p>For tracking USDA dataset usage, these concepts directly apply. Accurate tracking of dataset usage in scientific literature serves multiple purposes. For federal agencies like the USDA, it helps monitor the return on public data investments, find gaps in dataset use, plan future data collection, and support evidence-based policy decisions. This tracking requires reliable citation data from citation databases. Unlike standard citations, researchers often reference datasets within the text of their publications rather than citing them formally. This makes tracking dataset usage more complex.</p>
+<p>To solve this tracking challenge, methods have been developed that scan publication text for dataset mentions <span class="citation" data-cites="lane2022data">(<a href="#ref-lane2022data" role="doc-biblioref">Lane et al., 2022</a>)</span>. The scope and accuracy of our dataset tracking depends on what publications we can access and analyze. Because different databases curate content in different ways, it creates variation in what dataset mentions they capture and their frequency. Variations in content across sources affect our ability to accurately track dataset impact and adoption. The DemocratizingData.ai platform, for example, uses bibliometric data to monitor these dataset usage patterns, helping USDA understand how its data supports research. By comparing how different citation databases track this information, we can better understand their strengths and limitations for monitoring research impact.</p>
 </section>
-</section>
-<section id="data-dictionary" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="data-dictionary">Data Dictionary</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="Download OpenAlex Source Files">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Download OpenAlex Source Files
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can download the source files from <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/tree/main/appendices/scopus_files" target="_blank">this link</a>.</p>
-</div>
-</div>
-<section id="dataset.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="dataset.csv"><code>dataset.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: Lists all datasets identified in OpenAlex. This contains details of all USDA datasets.</li>
-</ul>
-</section>
-<section id="publication_dataset_links.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="publication_dataset_links.csv"><code>publication_dataset_links.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: Connects publications with one or more datasets in the OpenAlex data. Indicates which publications are associated with which datasets.</li>
-</ul>
-</section>
-<section id="publication.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="publication.csv"><code>publication.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: This file contains information about publications, which are the central entities in this dataset.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>id</code>: Unique identifier for each publication.</li>
-<li><code>title</code>: Title of the publication.</li>
-<li><code>doi</code>: Digital Object Identifier of the publication.</li>
-<li><code>year</code> and <code>month</code>: Publication date.</li>
-<li>Other metadata such as <code>citation_count</code>, <code>pub_type</code>, etc.</li>
-</ul></li>
-</ul>
-</section>
-<section id="dataset_alias.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="dataset_alias.csv"><code>dataset_alias.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: Contains all the aliases (alternative names) of datasets. This helps in identifying datasets that might be referred to by different names in publications.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>alias_id</code>: Unique identifier for each alias.</li>
-<li><code>parent_alias_id</code>: Identifies the main alias for a dataset. If <code>parent_alias_id</code> equals <code>alias_id</code>, it is the primary alias.</li>
-<li><code>alias</code>: The alias name of the dataset.</li>
-</ul></li>
-</ul>
-<p><strong>Note</strong>: The search in OpenAlex was performed using the same aliases and flag terms applied in the Scopus data, without any optimization.</p>
-<p><strong>How to Use</strong>:</p>
-<ul>
-<li>To find the main alias of a dataset, look for rows where <code>alias_id</code> equals <code>parent_alias_id</code>.</li>
-<li>To find all aliases of a dataset, filter by <code>parent_alias_id</code> corresponding to the main alias.</li>
-</ul>
-</section>
-<section id="dyad.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="dyad.csv"><code>dyad.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: Represents the mentions of dataset aliases found within publications. Acts as a linking table between <code>publication.csv</code> and <code>dataset_alias.csv</code>.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>id</code>: Unique identifier for each dyad (mention).</li>
-<li><code>publication_id</code>: References the <code>id</code> in <code>publication.csv</code>.</li>
-<li><code>alias_id</code>: References the <code>alias_id</code> in <code>dataset_alias.csv</code>.</li>
-<li><code>mention_candidate</code>: The actual text mentioning the dataset in the publication.</li>
-</ul></li>
-</ul>
-</section>
-<section id="model.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="model.csv"><code>model.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: Lists the different models or methods used to identify dataset mentions within publications.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>id</code>: Unique identifier for each model.</li>
-<li><code>name</code>: Name of the model (e.g., <code>string_matching</code>, <code>refmatch</code>).</li>
-</ul></li>
-</ul>
-<p><strong>Relevant Models</strong>:</p>
-<ul>
-<li><strong>Model ID 1</strong>: <code>string_matching</code></li>
-<li><strong>Model ID 5</strong>: <code>refmatch</code></li>
-</ul>
-<p>These are the models we are focusing on to compare with data extracted from OpenAlex, as no Kaggle model has been applied there.</p>
-</section>
-<section id="dyad_model.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="dyad_model.csv"><code>dyad_model.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: Connects dyads with the models that identified them. Allows filtering dyads based on the models used.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>dyad_id</code>: References the <code>id</code> in <code>dyad.csv</code>.</li>
-<li><code>model_id</code>: References the <code>id</code> in <code>model.csv</code>.</li>
-</ul></li>
-</ul>
-<p><strong>How to Use</strong>:</p>
-<ul>
-<li>To filter dyads (and thus publications) identified by specific models, perform an inner join with <code>dyad.csv</code> on <code>dyad_id</code> and filter by <code>model_id</code>.</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled" title="How the Files are Related">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-How the Files are Related
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The files are structured to represent entities (publications, journals, institutions, authors) and their relationships. The main publication data is in <code>publications_main.csv</code>, and the details about journals, institutions, and authors are in their respective files.</p>
-<p>The link files (<code>publication_journal_links.csv</code>, <code>publication_institution_links.csv</code>, <code>publication_author_links.csv</code>) represent the many-to-many relationships between publications and these entities.</p>
-<p>To find all publications by a specific author, you can use <code>authors.csv</code> to find the author’s <code>author_openalex_id</code> and then use <code>publication_author_links.csv</code> to find the associated publications.</p>
-<p>To analyze the distribution of publications across journals, you can join <code>publications_main.csv</code>, <code>publication_journal_links.csv</code>, and <code>journals.csv</code> on <code>publication_openalex_id</code> and <code>journal_openalex_id</code>.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="sample-data" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sample-data">Sample Data</h2>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page"><code>publication.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><code>dataset_alias.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><code>dyad.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false"><code>model.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false"><code>dyad_model.csv</code></a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 59%">
-<col style="width: 22%">
-<col style="width: 5%">
-<col style="width: 5%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>id</th>
-<th>title</th>
-<th>doi</th>
-<th>year</th>
-<th>month</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>321613</td>
-<td>New estimates for CRNA vacancies</td>
-<td></td>
-<td>2009</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td>321614</td>
-<td>Crossing county lines: The impact of crash location and driver’s…</td>
-<td>10.1016/j.aap.2006…</td>
-<td>2006</td>
-<td>7</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 7%">
-<col style="width: 11%">
-<col style="width: 20%">
-<col style="width: 61%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>id</th>
-<th>alias_id</th>
-<th>parent_alias_id</th>
-<th>alias</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1676</td>
-<td>87</td>
-<td>89</td>
-<td>Census of Agriculture</td>
-</tr>
-<tr class="even">
-<td>1673</td>
-<td>12</td>
-<td>282</td>
-<td>ARMS Farm Financial and Crop Production Practices</td>
-</tr>
-<tr class="odd">
-<td>1671</td>
-<td>88</td>
-<td>89</td>
-<td>USDA Census of Agriculture</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>id</th>
-<th>publication_id</th>
-<th>alias_id</th>
-<th>mention_candidate</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2569</td>
-<td>1211491</td>
-<td>87</td>
-<td>census of agriculture</td>
-</tr>
-<tr class="even">
-<td>2573</td>
-<td>1199598</td>
-<td>88</td>
-<td>usda census of agriculture</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>id</th>
-<th>name</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>string_matching</td>
-</tr>
-<tr class="even">
-<td>5</td>
-<td>refmatch</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>id</th>
-<th>dyad_id</th>
-<th>model_id</th>
-<th>score</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>4928</td>
-<td>2569</td>
-<td>1</td>
-<td>2.0</td>
-</tr>
-<tr class="even">
-<td>4929</td>
-<td>2569</td>
-<td>4</td>
-<td>1.0</td>
-</tr>
-<tr class="odd">
-<td>4930</td>
-<td>2569</td>
-<td>2</td>
-<td>1.0</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="how-to-extract-publications-for-a-specific-dataset" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-to-extract-publications-for-a-specific-dataset">How to Extract Publications for a Specific Dataset</h2>
-<p>To find all publications associated with a particular dataset, such as the <strong>NASS Census of Agriculture</strong>, follow these steps:</p>
-<ol type="1">
-<li><p><strong>Identify the Main Alias</strong>:</p>
-<ul>
-<li>Find the <code>alias_id</code> where <code>alias_id</code> equals <code>parent_alias_id</code> for the dataset.</li>
-<li>For <strong>NASS Census of Agriculture</strong>, the main alias has <code>alias_id</code> = <strong>89</strong>.</li>
-</ul></li>
-<li><p><strong>Get All Aliases</strong>:</p>
-<ul>
-<li>In <code>dataset_alias.csv</code>, filter rows where <code>parent_alias_id</code> equals <strong>89</strong>.</li>
-<li>This gives you all aliases associated with the <strong>NASS Census of Agriculture</strong> dataset.</li>
-</ul></li>
-<li><p><strong>Link Aliases to Publications</strong>:</p>
-<ul>
-<li>In <code>dyad.csv</code>, filter rows where <code>alias_id</code> matches any of the <code>alias_id</code>s obtained in step 2.</li>
-<li>This will give you <code>publication_id</code>s of publications mentioning any alias of the dataset.</li>
-</ul></li>
-<li><p><strong>Retrieve Publication Details</strong>:</p>
-<ul>
-<li>Using the <code>publication_id</code>s from step 3, retrieve the corresponding records from <code>publication.csv</code>.</li>
-</ul></li>
-</ol>
-</section>
-<section id="filtering-publications-by-specific-models" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="filtering-publications-by-specific-models">Filtering Publications by Specific Models</h2>
-<p>Since we’re interested in mentions identified by the <strong><code>string_matching</code></strong> and <strong><code>refmatch</code></strong> models (models with <code>id</code> 1 and 5), follow these steps:</p>
-<ol type="1">
-<li><p><strong>Filter Dyads by Model</strong>:</p>
-<ul>
-<li>In <code>dyad_model.csv</code>, filter rows where <code>model_id</code> is <strong>1</strong> or <strong>5</strong>.</li>
-<li>This gives you <code>dyad_id</code>s linked to these models.</li>
-</ul></li>
-<li><p><strong>Get Relevant Dyads</strong>:</p>
-<ul>
-<li>Perform an inner join with <code>dyad.csv</code> on <code>dyad_id</code>.</li>
-<li>This filters dyads to only those identified by the specified models.</li>
-</ul></li>
-<li><p><strong>Proceed as Before</strong>:</p>
-<ul>
-<li>Continue with the steps in the previous section, but using the filtered dyads from step 2.</li>
-</ul></li>
-</ol>
-<!-- ### Practical Example -->
-<!-- **Objective**: Find all publications mentioning the **NASS Census of Agriculture** dataset using the `string_matching` and `refmatch` models. -->
-<!-- **Steps**: -->
-<!-- 1. **Find Main Alias ID**: -->
-<!--    - Main alias `alias_id` = **89**. -->
-<!-- 2. **Get All Aliases**: -->
-<!--    - From `dataset_alias.csv`, extract all `alias_id`s where `parent_alias_id` = **89**. -->
-<!-- 3. **Filter Dyads by Models**: -->
-<!--    - From `dyad_model.csv`, get `dyad_id`s where `model_id` is **1** or **5**. -->
-<!-- 4. **Get Dyads for Dataset**: -->
-<!--    - From `dyad.csv`, select rows where: -->
-<!--      - `alias_id` is in the list from step 2, and -->
-<!--      - `id` (dyad_id) is in the list from step 3. -->
-<!-- 5. **Retrieve Publications**: -->
-<!--    - Use `publication_id`s from the filtered dyads to get detailed information from `publication.csv`. -->
+<section id="references" class="level1" data-number="1">
+
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">1 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-broadus1987toward" class="csl-entry" role="listitem">
+Broadus, R. N. (1987). Toward a definition of <span>“bibliometrics.”</span> <em>Scientometrics</em>, <em>12</em>, 373–379. <a href="https://doi.org/10.1007/bf02016680">https://doi.org/10.1007/bf02016680</a>
+</div>
+<div id="ref-debellis2009bibliometrics" class="csl-entry" role="listitem">
+De Bellis, N. (2009). <em>Bibliometrics and citation analysis: From the science citation index to cybermetrics</em>. Scarecrow Press. <a href="https://doi.org/10.1002/asi.21181">https://doi.org/10.1002/asi.21181</a>
+</div>
+<div id="ref-garfield1955citation" class="csl-entry" role="listitem">
+Garfield, E. (1955). Citation indexes for science: A new dimension in documentation through association of ideas. <em>Science</em>, <em>122</em>(3159), 108–111. <a href="https://doi.org/10.1126/science.122.3159.108">https://doi.org/10.1126/science.122.3159.108</a>
+</div>
+<div id="ref-hood2001literature" class="csl-entry" role="listitem">
+Hood, W. W., &amp; Wilson, C. S. (2001). The literature of bibliometrics, scientometrics, and informetrics. <em>Scientometrics</em>, <em>52</em>, 291–314. <a href="https://doi.org/10.1023/A:1017919924342">https://doi.org/10.1023/A:1017919924342</a>
+</div>
+<div id="ref-lane2022data" class="csl-entry" role="listitem">
+Lane, J., Gimeno, E., Levitskaya, E., Zhang, Z., &amp; Zigoni, A. (2022). Data inventories for the modern age? Using data science to open government data. <em>Harvard Data Science Review</em>, <em>4</em>(2). <a href="https://doi.org/10.1162/99608f92.8a3f2336">https://doi.org/10.1162/99608f92.8a3f2336</a>
+</div>
+<div id="ref-martin2021google" class="csl-entry" role="listitem">
+Martín-Martín, A., Thelwall, M., Orduna-Malea, E., &amp; Delgado López-Cózar, E. (2021). Google scholar, microsoft academic, scopus, dimensions, web of science, and OpenCitations’ COCI: A multidisciplinary comparison of coverage via citations. <em>Scientometrics</em>, <em>126</em>(1), 871–906. <a href="https://doi.org/10.1007/s11192-020-03690-4">https://doi.org/10.1007/s11192-020-03690-4</a>
+</div>
+<div id="ref-mongeon2016journal" class="csl-entry" role="listitem">
+Mongeon, P., &amp; Paul-Hus, A. (2016). The journal coverage of web of science and scopus: A comparative analysis. <em>Scientometrics</em>, <em>106</em>, 213–228. <a href="https://doi.org/10.1007/s11192-015-1765-5">https://doi.org/10.1007/s11192-015-1765-5</a>
+</div>
+<div id="ref-visser2021large" class="csl-entry" role="listitem">
+Visser, M., Van Eck, N. J., &amp; Waltman, L. (2021). Large-scale comparison of bibliographic data sources: Scopus, web of science, dimensions, crossref, and microsoft academic. <em>Quantitative Science Studies</em>, <em>2</em>(1), 20–41. <a href="https://doi.org/10.1162/qss_a_00112">https://doi.org/10.1162/qss_a_00112</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1058,6 +724,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../appendix.html" class="pagination-link" aria-label="Appendices">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Appendices</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../appendices/workflow.html" class="pagination-link" aria-label="Workflow">
+        <span class="nav-page-text">Workflow</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1066,7 +744,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/data_usage_report/edit/main/appendices/app_openalex.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/data_usage_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/data_usage_report/edit/main/appendices/terminology.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/data_usage_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

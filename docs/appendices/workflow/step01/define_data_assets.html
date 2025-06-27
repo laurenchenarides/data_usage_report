@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-03-30">
+<meta name="dcterms.date" content="2025-03-16">
 
-<title>OpenAlex Data Dictionary – Citation Database Assessment</title>
+<title>Methodology for Comparing Citation Database Coverage of Dataset Usage – Citation Database Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,21 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de84f8d6bb715db06a919283c2d1e787.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d301fa97554d6a596376198cc2832a7f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../appendices/workflow/step02_01/extract_dataset_mentions.html" rel="next">
+<link href="../../../appendices/workflow.html" rel="prev">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-de84f8d6bb715db06a919283c2d1e787.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-d301fa97554d6a596376198cc2832a7f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,9 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Citation Database Assessment
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../../appendices/workflow.html">Workflow</a></li><li class="breadcrumb-item"><a href="../../../appendices/workflow/step01/define_data_assets.html">Define Data Assets</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Citation Database Assessment</a> 
+      <a href="../../../">Citation Database Assessment</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/laurenchenarides/data_usage_report" title="" class="quarto-navigation-tool px-1" aria-label="GitHub Repository"><i class="bi bi-github"></i></a>
 </div>
@@ -112,55 +112,55 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Report Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../report.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../report.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Full Report</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../appendix.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../appendix.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/terminology.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../appendices/terminology.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Terminology</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../appendices/workflow.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../appendices/workflow.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workflow</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/workflow/step01/define_data_assets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../appendices/workflow/step01/define_data_assets.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Define Data Assets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/workflow/step02_01/extract_dataset_mentions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../appendices/workflow/step02_01/extract_dataset_mentions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Extract Dataset Mentions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/workflow/step02_02/create_seed_corpus.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../appendices/workflow/step02_02/create_seed_corpus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Creating a Seed Corpus</span></a>
   </div>
 </li>
@@ -168,13 +168,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../appendices/app_crosswalk.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Documentation</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../appendices/app_institutions.html" class="sidebar-item-text sidebar-link">
+            <a href="../../../appendices/app_institutions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Cleaning IPEDS and MSI Data</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -183,13 +183,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_ipeds.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../appendices/app_ipeds.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Classifying Institutions with the IPEDS Database</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendices/app_msi.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../appendices/app_msi.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Identifying Minority Serving Institutions (MSIs)</span></a>
   </div>
 </li>
@@ -199,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../webinar_questionnaire.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../webinar_questionnaire.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Questionnaire</span></a>
   </div>
 </li>
@@ -213,32 +213,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-app-openalex" id="toc-sec-app-openalex" class="nav-link active" data-scroll-target="#sec-app-openalex">Overview of OpenAlex Reference Files</a>
+  <li><a href="#sec-data" id="toc-sec-data" class="nav-link active" data-scroll-target="#sec-data">Define Scope of Data Assets to Be Searched</a>
   <ul class="collapse">
-  <li><a href="#file-organization-in-github-repository" id="toc-file-organization-in-github-repository" class="nav-link" data-scroll-target="#file-organization-in-github-repository">File Organization in GitHub Repository</a></li>
+  <li><a href="#national-agricultural-statistics-service-nass-data-assets" id="toc-national-agricultural-statistics-service-nass-data-assets" class="nav-link" data-scroll-target="#national-agricultural-statistics-service-nass-data-assets">National Agricultural Statistics Service (NASS) Data Assets</a></li>
+  <li><a href="#economic-research-service-ers-data-assets" id="toc-economic-research-service-ers-data-assets" class="nav-link" data-scroll-target="#economic-research-service-ers-data-assets">Economic Research Service (ERS) Data Assets</a></li>
+  <li><a href="#final-list-of-usda-data-assets" id="toc-final-list-of-usda-data-assets" class="nav-link" data-scroll-target="#final-list-of-usda-data-assets">Final List of USDA Data Assets</a></li>
   </ul></li>
-  <li><a href="#data-dictionary" id="toc-data-dictionary" class="nav-link" data-scroll-target="#data-dictionary">Data Dictionary</a>
-  <ul class="collapse">
-  <li><a href="#dataset.csv" id="toc-dataset.csv" class="nav-link" data-scroll-target="#dataset.csv"><code>dataset.csv</code></a></li>
-  <li><a href="#publication_dataset_links.csv" id="toc-publication_dataset_links.csv" class="nav-link" data-scroll-target="#publication_dataset_links.csv"><code>publication_dataset_links.csv</code></a></li>
-  <li><a href="#publication.csv" id="toc-publication.csv" class="nav-link" data-scroll-target="#publication.csv"><code>publication.csv</code></a></li>
-  <li><a href="#dataset_alias.csv" id="toc-dataset_alias.csv" class="nav-link" data-scroll-target="#dataset_alias.csv"><code>dataset_alias.csv</code></a></li>
-  <li><a href="#dyad.csv" id="toc-dyad.csv" class="nav-link" data-scroll-target="#dyad.csv"><code>dyad.csv</code></a></li>
-  <li><a href="#model.csv" id="toc-model.csv" class="nav-link" data-scroll-target="#model.csv"><code>model.csv</code></a></li>
-  <li><a href="#dyad_model.csv" id="toc-dyad_model.csv" class="nav-link" data-scroll-target="#dyad_model.csv"><code>dyad_model.csv</code></a></li>
-  </ul></li>
-  <li><a href="#sample-data" id="toc-sample-data" class="nav-link" data-scroll-target="#sample-data">Sample Data</a></li>
-  <li><a href="#how-to-extract-publications-for-a-specific-dataset" id="toc-how-to-extract-publications-for-a-specific-dataset" class="nav-link" data-scroll-target="#how-to-extract-publications-for-a-specific-dataset">How to Extract Publications for a Specific Dataset</a></li>
-  <li><a href="#filtering-publications-by-specific-models" id="toc-filtering-publications-by-specific-models" class="nav-link" data-scroll-target="#filtering-publications-by-specific-models">Filtering Publications by Specific Models</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/data_usage_report/edit/main/appendices/app_openalex.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/data_usage_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/laurenchenarides/data_usage_report/edit/main/appendices/workflow/step01/define_data_assets.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/data_usage_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../appendix.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../../appendices/workflow.html">Workflow</a></li><li class="breadcrumb-item"><a href="../../../appendices/workflow/step01/define_data_assets.html">Define Data Assets</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">OpenAlex Data Dictionary</h1>
+<h1 class="title">Methodology for Comparing Citation Database Coverage of Dataset Usage</h1>
+<p class="subtitle lead">Step 01: Define Data Assets</p>
 </div>
 
 
@@ -249,7 +239,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 30, 2025</p>
+      <p class="date">March 16, 2025</p>
     </div>
   </div>
   
@@ -261,383 +251,180 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="sec-app-openalex" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sec-app-openalex">Overview of OpenAlex Reference Files</h2>
-<p>This section describes the process of construction CSV files extracted from a SQL Server database. These files contain interconnected data about publications and datasets, specifically focusing on how datasets are mentioned within publications. The main goal is to enable you to analyze the relationships between publications and datasets, particularly those identified using specific search models.</p>
-<p>Below is a detailed explanation of primary tables and how they relate to one another. For a complete list of tables, please refer to the <a href="../appendices/app_crosswalk.html">data schema.</a></p>
-<section id="file-organization-in-github-repository" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="file-organization-in-github-repository">File Organization in GitHub Repository</h3>
-<p><strong>PLACEHOLDER</strong></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th><strong>Category</strong></th>
-<th><strong>File Path &amp; Link</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Processed IPEDS Dataset</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS"><code>compare_scopus_openalex/resources/IPEDS/IPEDS.csv</code></a></td>
-</tr>
-<tr class="even">
-<td><strong>Raw IPEDS Data</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/IPEDS/raw_data_IPEDS"><code>compare_scopus_openalex/resources/raw_data_IPEDS/</code></a></td>
-</tr>
-<tr class="odd">
-<td><strong>Data Processing Code</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/IPEDSdata.rmd</code></a></td>
-</tr>
-<tr class="even">
-<td><strong>Data Documentation</strong></td>
-<td><a href="https://github.com/laurenchenarides/compare_scopus_openalex/tree/main/resources/documentation"><code>compare_scopus_openalex/resources/documentation/IPEDS_Data.md</code></a></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="data-dictionary" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="data-dictionary">Data Dictionary</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="Download OpenAlex Source Files">
+<section id="sec-data" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="sec-data">Define Scope of Data Assets to Be Searched</h2>
+<div style="background-color: #f9f5d7; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 0;">
+<strong>The goal of this step is to compile a structured list of dataset names and their commonly used variations.</strong>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Download OpenAlex Source Files
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You can download the source files from <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/tree/main/appendices/scopus_files" target="_blank">this link</a>.</p>
+<p>The data assets featured here consist of those collected by the USDA, primarily from the Economic Research Service (ERS) and the National Agricultural Statistics Service (NASS). These data assets are widely used in agricultural economics and food systems research.</p>
 </div>
 </div>
-<section id="dataset.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="dataset.csv"><code>dataset.csv</code></h3>
+<section id="national-agricultural-statistics-service-nass-data-assets" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="national-agricultural-statistics-service-nass-data-assets">National Agricultural Statistics Service (NASS) Data Assets</h3>
+<p>In late July 2023, an initial set of 21 reports were received containing a report name and a URL link to database curated by Cornell University. These reports are part of the USDA’s efforts to track data usage across various research applications. However, the names of these reports were highly generic, making it difficult to precisely identify them in citation databases. Examples include reports titled “Agricultural Prices” and “Farm Labor,” which lack specificity when compared to more structured dataset identifiers.</p>
+<p><strong>Data Processing and Standardization</strong></p>
+<p>To improve identification and searchability, the input was analyzed and transformed into a structured list that included:</p>
 <ul>
-<li><strong>Description</strong>: Lists all datasets identified in OpenAlex. This contains details of all USDA datasets.</li>
+<li>International Standard Serial Numbers (ISSNs): Each of the 21 reports was assigned an ISSN, where available, to provide a standardized identifier.</li>
+<li>Alias Creation: Generic report names were appended with the term report to better distinguish them from other similarly named publications in research literature.</li>
+<li>Expanded Search Terms: Additional variations of dataset names were included to account for different citation styles and possible ways authors reference these reports.</li>
 </ul>
+<p>The final dataset classification involved:</p>
+<ul>
+<li>Main Data Asset (Parent Record): The original 21 reports, each representing a distinct dataset.</li>
+<li>Aliases: ISSNs and URLs served as aliases to improve retrieval accuracy.</li>
+<li>Search Term Expansion: Combining report names with different citation formats led to a total of 64 search terms (21 parent records + 43 aliases).</li>
+</ul>
+<p>This standardization process improved the efficiency of identifying NASS datasets across publications indexed by citation databases such as Scopus, OpenAlex, and Dimensions.</p>
 </section>
-<section id="publication_dataset_links.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="publication_dataset_links.csv"><code>publication_dataset_links.csv</code></h3>
+<section id="economic-research-service-ers-data-assets" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="economic-research-service-ers-data-assets">Economic Research Service (ERS) Data Assets</h3>
+<p>The process of identifying ERS data assets occurred in two phases: (1) an initial dataset compilation, and (2) a refinement process incorporating feedback from a team of agricultural economists at Colorado State University (CSU). This process was meant to yield a list of data assets was both comprehensive and relevant to the research community tracking USDA dataset usage.</p>
+<p><strong>Phase 1: Initial Compilation of ERS Data Assets</strong></p>
+<p>In October 2023, an initial list of 2,103 ERS records was compiled. These records included dataset names and, in some cases, associated aliases. The list was then reviewed by Professor Julia Lane, who identified and removed 144 records that were not suitable for machine learning-based dataset tracking.</p>
+<p><strong>Reasons for Exclusion</strong></p>
 <ul>
-<li><strong>Description</strong>: Connects publications with one or more datasets in the OpenAlex data. Indicates which publications are associated with which datasets.</li>
+<li>Records were too generic – Terms such as “Milk, Cotton, and CSV Format of National Data” were too broad to be meaningfully identified in citation databases.</li>
+<li>Records were too specific – Entries such as “Table 15—Agricultural Chemical Input” and “Southeast: 1982-91, 1992-97” were references within broader reports rather than standalone data assets.</li>
 </ul>
+<p>After these exclusions, the remaining 1,959 records represented the initial list of ERS data assets.</p>
+<p><strong>Phase 2: Refinement with CSU Team</strong></p>
+<p>A team of agricultural economists at CSU were consulted to refine the list so that it accurately captured key USDA datasets that may have been overlooked in the initial process. This involved:</p>
+<ul>
+<li>Reviewing dataset usage in prior USDA research – Identifying which datasets were frequently cited.</li>
+<li>Cross-checking with known data users – Ensuring that key datasets used by agricultural economists were included.</li>
+<li>Expanding alias definitions – Recognizing dataset acronyms and alternative naming conventions.</li>
+</ul>
+<p>As part of this process, an additional set of assets was incorporated, including datasets that had been previously identified in the Year 1 USDA project. Notably, datasets such as the Census of Agriculture and the Agricultural Resource Management Survey (ARMS) were added, along with key acronyms like FoodAPS. This phase contributed:</p>
+<ul>
+<li>12 new parent records</li>
+<li>8 additional alias records</li>
+<li>Total: 20 new search terms</li>
+</ul>
+<p><strong>Final Data Asset Identification</strong></p>
+<p>Unlike NASS data assets, which had ISSNs and DOIs, ERS datasets were primarily linked through URLs. The final structured dataset included:</p>
+<ul>
+<li>1,959 parent records (main ERS datasets)</li>
+<li>1,959 alias records (URLs serving as dataset identifiers)</li>
+<li>20 additional records from the CSU consultation</li>
+<li>Total: 3,918 search terms</li>
+</ul>
+<p>Through this two-phase process, the list of ERS data assets evolved from an initial broad set of records into a refined, structured collection of datasets that could be effectively tracked across citation databases.</p>
 </section>
-<section id="publication.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="publication.csv"><code>publication.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: This file contains information about publications, which are the central entities in this dataset.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>id</code>: Unique identifier for each publication.</li>
-<li><code>title</code>: Title of the publication.</li>
-<li><code>doi</code>: Digital Object Identifier of the publication.</li>
-<li><code>year</code> and <code>month</code>: Publication date.</li>
-<li>Other metadata such as <code>citation_count</code>, <code>pub_type</code>, etc.</li>
-</ul></li>
-</ul>
-</section>
-<section id="dataset_alias.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="dataset_alias.csv"><code>dataset_alias.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: Contains all the aliases (alternative names) of datasets. This helps in identifying datasets that might be referred to by different names in publications.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>alias_id</code>: Unique identifier for each alias.</li>
-<li><code>parent_alias_id</code>: Identifies the main alias for a dataset. If <code>parent_alias_id</code> equals <code>alias_id</code>, it is the primary alias.</li>
-<li><code>alias</code>: The alias name of the dataset.</li>
-</ul></li>
-</ul>
-<p><strong>Note</strong>: The search in OpenAlex was performed using the same aliases and flag terms applied in the Scopus data, without any optimization.</p>
-<p><strong>How to Use</strong>:</p>
-<ul>
-<li>To find the main alias of a dataset, look for rows where <code>alias_id</code> equals <code>parent_alias_id</code>.</li>
-<li>To find all aliases of a dataset, filter by <code>parent_alias_id</code> corresponding to the main alias.</li>
-</ul>
-</section>
-<section id="dyad.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="dyad.csv"><code>dyad.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: Represents the mentions of dataset aliases found within publications. Acts as a linking table between <code>publication.csv</code> and <code>dataset_alias.csv</code>.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>id</code>: Unique identifier for each dyad (mention).</li>
-<li><code>publication_id</code>: References the <code>id</code> in <code>publication.csv</code>.</li>
-<li><code>alias_id</code>: References the <code>alias_id</code> in <code>dataset_alias.csv</code>.</li>
-<li><code>mention_candidate</code>: The actual text mentioning the dataset in the publication.</li>
-</ul></li>
-</ul>
-</section>
-<section id="model.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="model.csv"><code>model.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: Lists the different models or methods used to identify dataset mentions within publications.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>id</code>: Unique identifier for each model.</li>
-<li><code>name</code>: Name of the model (e.g., <code>string_matching</code>, <code>refmatch</code>).</li>
-</ul></li>
-</ul>
-<p><strong>Relevant Models</strong>:</p>
-<ul>
-<li><strong>Model ID 1</strong>: <code>string_matching</code></li>
-<li><strong>Model ID 5</strong>: <code>refmatch</code></li>
-</ul>
-<p>These are the models we are focusing on to compare with data extracted from OpenAlex, as no Kaggle model has been applied there.</p>
-</section>
-<section id="dyad_model.csv" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="dyad_model.csv"><code>dyad_model.csv</code></h3>
-<ul>
-<li><strong>Description</strong>: Connects dyads with the models that identified them. Allows filtering dyads based on the models used.</li>
-<li><strong>Key Columns</strong>:
-<ul>
-<li><code>dyad_id</code>: References the <code>id</code> in <code>dyad.csv</code>.</li>
-<li><code>model_id</code>: References the <code>id</code> in <code>model.csv</code>.</li>
-</ul></li>
-</ul>
-<p><strong>How to Use</strong>:</p>
-<ul>
-<li>To filter dyads (and thus publications) identified by specific models, perform an inner join with <code>dyad.csv</code> on <code>dyad_id</code> and filter by <code>model_id</code>.</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled" title="How the Files are Related">
+<section id="final-list-of-usda-data-assets" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="final-list-of-usda-data-assets">Final List of USDA Data Assets</h3>
+<p>The data assets represent those most frequently used in agricultural economics research, spanning topics from farm management to food security. The final set of data assets, their producing agencies, and descriptions are presented in <a href="#tbl-usda-datasets" class="quarto-xref">Table&nbsp;1</a>.</p>
+<div id="tbl-usda-datasets" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-usda-datasets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: List of USDA Data Assets
+</figcaption>
+<div aria-describedby="tbl-usda-datasets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Dataset Name</th>
+<th style="text-align: left;">Produced By</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.nass.usda.gov/AgCensus/">Census of Agriculture</a></td>
+<td style="text-align: left;">NASS</td>
+<td style="text-align: left;">Conducted every five years, it provides comprehensive data on U.S. farms, ranches, and producers.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/arms-farm-financial-and-crop-production-practices/">Agricultural Resource Management Survey (ARMS)</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">A USDA survey on farm financials, production practices, and resource use.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/foodaps-national-household-food-acquisition-and-purchase-survey/">Food Acquisition and Purchase Survey (FoodAPS)</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">A nationally representative survey tracking U.S. household food purchases and acquisitions.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/food-security-in-the-united-states">Current Population Survey Food Security Supplement (CPS-FSS)</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">An annual supplement to the Current Population Survey (CPS) measuring U.S. household food security.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/">Food Access Research Atlas (FARA)</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">A USDA tool mapping food access based on store locations and socioeconomic data.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/rural-urban-continuum-codes/">Rural-Urban Continuum Code (RUCC)</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">A classification system distinguishing U.S. counties by rural and urban characteristics.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/survey-tools/">Household Food Security Survey Module</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">A USDA survey module used to assess food insecurity levels in households.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Local_Food/">Local Food Marketing Practices Survey</a></td>
+<td style="text-align: left;">NASS</td>
+<td style="text-align: left;">A USDA survey on U.S. farms’ local food sales, direct-to-consumer marketing, and supply chains.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://farmtoschoolcensus.fns.usda.gov/">Farm to School Census</a></td>
+<td style="text-align: left;">FNS</td>
+<td style="text-align: left;">A USDA survey tracking school food procurement and local farm partnerships.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.ers.usda.gov/data-products/quarterly-food-at-home-price-database/">Quarterly Food at Home Price Database (QFAHPD)</a></td>
+<td style="text-align: left;">ERS</td>
+<td style="text-align: left;">A database of U.S. retail food prices by product, region, and time.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/TOTAL/">Tenure Ownership and Transition of Agricultural Land (TOTAL)</a></td>
+<td style="text-align: left;">NASS</td>
+<td style="text-align: left;">A survey collecting data on farmland ownership, leasing, and transfer.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/TOTAL/">Transition of Agricultural Land Survey</a></td>
+<td style="text-align: left;">NASS</td>
+<td style="text-align: left;">A component of TOTAL that examines farmland ownership changes and succession plans.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://www.iriworldwide.com/en-us/solutions/consumer-panel/infoscan">Information Resources, Inc.&nbsp;(IRI) InfoScan</a></td>
+<td style="text-align: left;">Circana (formerly IRI)</td>
+<td style="text-align: left;">A commercial scanner dataset tracking retail food and consumer goods purchases.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-How the Files are Related
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The files are structured to represent entities (publications, journals, institutions, authors) and their relationships. The main publication data is in <code>publications_main.csv</code>, and the details about journals, institutions, and authors are in their respective files.</p>
-<p>The link files (<code>publication_journal_links.csv</code>, <code>publication_institution_links.csv</code>, <code>publication_author_links.csv</code>) represent the many-to-many relationships between publications and these entities.</p>
-<p>To find all publications by a specific author, you can use <code>authors.csv</code> to find the author’s <code>author_openalex_id</code> and then use <code>publication_author_links.csv</code> to find the associated publications.</p>
-<p>To analyze the distribution of publications across journals, you can join <code>publications_main.csv</code>, <code>publication_journal_links.csv</code>, and <code>journals.csv</code> on <code>publication_openalex_id</code> and <code>journal_openalex_id</code>.</p>
+<p>To provide a comprehensive reference for dataset tracking, <a href="../../appendices/app_dyads.qmd">this Appendix</a> includes a detailed list of data assets and their corresponding aliases, collectively referred to as <strong>dyads</strong>. Each dyad represents a dataset-name and alias pair used in citation database searches, allowing for more precise identification of dataset mentions in research publications. These aliases include acronyms, alternate spellings, dataset variations, and associated URLs, ensuring broad coverage across different citation practices. The dyad list serves as the foundation for dataset extraction and disambiguation across Scopus, OpenAlex, and Dimensions.</p>
 </div>
 </div>
-</section>
-</section>
-<section id="sample-data" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="sample-data">Sample Data</h2>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page"><code>publication.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><code>dataset_alias.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><code>dyad.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false"><code>model.csv</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false"><code>dyad_model.csv</code></a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 59%">
-<col style="width: 22%">
-<col style="width: 5%">
-<col style="width: 5%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>id</th>
-<th>title</th>
-<th>doi</th>
-<th>year</th>
-<th>month</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>321613</td>
-<td>New estimates for CRNA vacancies</td>
-<td></td>
-<td>2009</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td>321614</td>
-<td>Crossing county lines: The impact of crash location and driver’s…</td>
-<td>10.1016/j.aap.2006…</td>
-<td>2006</td>
-<td>7</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 7%">
-<col style="width: 11%">
-<col style="width: 20%">
-<col style="width: 61%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>id</th>
-<th>alias_id</th>
-<th>parent_alias_id</th>
-<th>alias</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1676</td>
-<td>87</td>
-<td>89</td>
-<td>Census of Agriculture</td>
-</tr>
-<tr class="even">
-<td>1673</td>
-<td>12</td>
-<td>282</td>
-<td>ARMS Farm Financial and Crop Production Practices</td>
-</tr>
-<tr class="odd">
-<td>1671</td>
-<td>88</td>
-<td>89</td>
-<td>USDA Census of Agriculture</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>id</th>
-<th>publication_id</th>
-<th>alias_id</th>
-<th>mention_candidate</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2569</td>
-<td>1211491</td>
-<td>87</td>
-<td>census of agriculture</td>
-</tr>
-<tr class="even">
-<td>2573</td>
-<td>1199598</td>
-<td>88</td>
-<td>usda census of agriculture</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>id</th>
-<th>name</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>string_matching</td>
-</tr>
-<tr class="even">
-<td>5</td>
-<td>refmatch</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>id</th>
-<th>dyad_id</th>
-<th>model_id</th>
-<th>score</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>4928</td>
-<td>2569</td>
-<td>1</td>
-<td>2.0</td>
-</tr>
-<tr class="even">
-<td>4929</td>
-<td>2569</td>
-<td>4</td>
-<td>1.0</td>
-</tr>
-<tr class="odd">
-<td>4930</td>
-<td>2569</td>
-<td>2</td>
-<td>1.0</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="how-to-extract-publications-for-a-specific-dataset" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-to-extract-publications-for-a-specific-dataset">How to Extract Publications for a Specific Dataset</h2>
-<p>To find all publications associated with a particular dataset, such as the <strong>NASS Census of Agriculture</strong>, follow these steps:</p>
-<ol type="1">
-<li><p><strong>Identify the Main Alias</strong>:</p>
-<ul>
-<li>Find the <code>alias_id</code> where <code>alias_id</code> equals <code>parent_alias_id</code> for the dataset.</li>
-<li>For <strong>NASS Census of Agriculture</strong>, the main alias has <code>alias_id</code> = <strong>89</strong>.</li>
-</ul></li>
-<li><p><strong>Get All Aliases</strong>:</p>
-<ul>
-<li>In <code>dataset_alias.csv</code>, filter rows where <code>parent_alias_id</code> equals <strong>89</strong>.</li>
-<li>This gives you all aliases associated with the <strong>NASS Census of Agriculture</strong> dataset.</li>
-</ul></li>
-<li><p><strong>Link Aliases to Publications</strong>:</p>
-<ul>
-<li>In <code>dyad.csv</code>, filter rows where <code>alias_id</code> matches any of the <code>alias_id</code>s obtained in step 2.</li>
-<li>This will give you <code>publication_id</code>s of publications mentioning any alias of the dataset.</li>
-</ul></li>
-<li><p><strong>Retrieve Publication Details</strong>:</p>
-<ul>
-<li>Using the <code>publication_id</code>s from step 3, retrieve the corresponding records from <code>publication.csv</code>.</li>
-</ul></li>
-</ol>
-</section>
-<section id="filtering-publications-by-specific-models" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="filtering-publications-by-specific-models">Filtering Publications by Specific Models</h2>
-<p>Since we’re interested in mentions identified by the <strong><code>string_matching</code></strong> and <strong><code>refmatch</code></strong> models (models with <code>id</code> 1 and 5), follow these steps:</p>
-<ol type="1">
-<li><p><strong>Filter Dyads by Model</strong>:</p>
-<ul>
-<li>In <code>dyad_model.csv</code>, filter rows where <code>model_id</code> is <strong>1</strong> or <strong>5</strong>.</li>
-<li>This gives you <code>dyad_id</code>s linked to these models.</li>
-</ul></li>
-<li><p><strong>Get Relevant Dyads</strong>:</p>
-<ul>
-<li>Perform an inner join with <code>dyad.csv</code> on <code>dyad_id</code>.</li>
-<li>This filters dyads to only those identified by the specified models.</li>
-</ul></li>
-<li><p><strong>Proceed as Before</strong>:</p>
-<ul>
-<li>Continue with the steps in the previous section, but using the filtered dyads from step 2.</li>
-</ul></li>
-</ol>
-<!-- ### Practical Example -->
-<!-- **Objective**: Find all publications mentioning the **NASS Census of Agriculture** dataset using the `string_matching` and `refmatch` models. -->
-<!-- **Steps**: -->
-<!-- 1. **Find Main Alias ID**: -->
-<!--    - Main alias `alias_id` = **89**. -->
-<!-- 2. **Get All Aliases**: -->
-<!--    - From `dataset_alias.csv`, extract all `alias_id`s where `parent_alias_id` = **89**. -->
-<!-- 3. **Filter Dyads by Models**: -->
-<!--    - From `dyad_model.csv`, get `dyad_id`s where `model_id` is **1** or **5**. -->
-<!-- 4. **Get Dyads for Dataset**: -->
-<!--    - From `dyad.csv`, select rows where: -->
-<!--      - `alias_id` is in the list from step 2, and -->
-<!--      - `id` (dyad_id) is in the list from step 3. -->
-<!-- 5. **Retrieve Publications**: -->
-<!--    - Use `publication_id`s from the filtered dyads to get detailed information from `publication.csv`. -->
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1058,6 +845,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../../appendices/workflow.html" class="pagination-link" aria-label="Workflow">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Workflow</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../../appendices/workflow/step02_01/extract_dataset_mentions.html" class="pagination-link" aria-label="Extract Dataset Mentions">
+        <span class="nav-page-text">Extract Dataset Mentions</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1066,7 +865,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/data_usage_report/edit/main/appendices/app_openalex.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/data_usage_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/laurenchenarides/data_usage_report/edit/main/appendices/workflow/step01/define_data_assets.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/laurenchenarides/data_usage_report/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

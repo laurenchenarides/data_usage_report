@@ -7,9 +7,9 @@ format:
     css: styles.css
 ---
 
-# Overview {.unnumbered}
+# Project Files {.unnumbered}
 
-All project files are available in our GitHub repository. This section provides reference material.
+All project files are available in our GitHub repository. This section provides additional reference material.
 
 
 # Data Schema {.unnumbered}
@@ -58,7 +58,8 @@ The construction of data schemas is central to this project. As metadata was gat
   <em>Note:</em> All schemas were built using <a href="https://dbdiagram.io/d/scopus_schema-67d71fa375d75cc84445d40b" target="_blank">DBDiagram.io</a>.
 </p>
 
-## File Inventory {.unnumbered}
+
+## File Inventory
 
 ::: {.panel-tabset}
 
@@ -86,7 +87,9 @@ The construction of data schemas is central to this project. As metadata was gat
 
 *Refer to the schema for additional column-level details.*
 
+
 ### OpenAlex Files
+
 
 #### Full Text {.unnumbered}
 

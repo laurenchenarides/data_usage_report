@@ -1,0 +1,24 @@
+## Dimensions
+
+### Search Routines
+
+To identify publications mentioning USDA datasets, we used the Dimensions.ai API, following the same general methodology applied in Scopus and OpenAlex. We reused the same dataset aliases, institutional flag terms, and overall search criteria to ensure consistency across sources. The search covered scholarly publications from 2017 to 2023 and was restricted to works authored by at least one researcher affiliated with a U.S.-based institution.
+
+Dimensions queries are written using a structured Domain Specific Language (DSL). We constructed boolean queries that combined multiple dataset aliases (e.g., "NASS Census of Agriculture", "USDA Census", "Agricultural Census") with institutional identifiers (e.g., "USDA", "NASS", "U.S. Department of Agriculture"). As with Scopus and OpenAlex, both a dataset alias and an institutional flag term were required to appear in each result. These terms were grouped using `OR` within each category and then combined with an `AND` across categories. For example:
+
+> ("NASS Census of Agriculture" OR "Census of Agriculture" OR "USDA Census of Agriculture" OR "Agricultural Census" OR "USDA Census" OR "AG Census") AND (USDA OR "US Department of Agriculture" OR "United States Department of Agriculture" OR NASS OR "National Agricultural Statistics Service")
+
+We implemented this process using the `dimcli` Python library, which provides a streamlined interface to the [Dimensions.ai API](https://docs.dimensions.ai/dsl/?_gl=1*tdhazg*_ga*MTgxOTE1MDE2Ny4xNzQ2NjUwMDkw*_ga_CHDNWH4YDX*czE3NDk3NjQzNzkkbzIkZzEkdDE3NDk3NjQzODIkajU3JGwwJGgw) and automates result pagination. A significant advantage of this approach is the capability of the Dimensions.ai platform to manage complex searches directly, resulting in precise results and reduced computational overhead. By executing these queries directly through the API, we avoided the technical complexity associated with downloading and locally processing large amounts of textual content. Moreover, the Dimensions.ai API results can be automatically structured into an analysis-ready DataFrame format. This simplified data structure greatly facilitated our subsequent validation, data integration, and analytical workflows.
+
+To maintain methodological consistency with Scopus and OpenAlex, the following filters were applied to the search:
+
+- English-language publications
+- Works published between 2017-2023
+- Document types: articles, chapters, proceedings, monographs, and preprints
+- Author affiliations: Publications were filtered to include only those authored by researchers affiliated with at least one U.S.-based institution.
+
+For comparability with the Scopus and OpenAlex samples, only publications classified as "articles" were retained for final analysis. This restriction reduces duplication across versions (e.g., preprints, proceedings) and reflects our focus on peer-reviewed scholarly output.
+
+For each article, we retrieved metadata including title, authors, DOI, journal, abstract, publication date, citation counts, subject classifications, and links. These fields supported topic-level analysis, author and institution mapping, and validation of dataset mentions.
+
+Using Dimensions.ai provided two main technical advantages. First, because the platform supports full-text query execution natively, we avoided the need to download or parse external files. Second, the API responses were easily converted into analysis-ready DataFrames, which simplified downstream validation and integration with other sources.

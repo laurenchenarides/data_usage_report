@@ -1,1 +1,0 @@
-Sitemap: https://laurenchenarides.github.io/compare_scopus_openalex_report/sitemap.xml
