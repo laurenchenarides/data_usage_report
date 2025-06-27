@@ -1,0 +1,15 @@
+dataset_id,filename,parent_alias_id,dataset_title
+dataset01,ARMS.json,282,agricultural resource management survey
+dataset02,Current Population Survey Food Security Supplement.json,1006002,current population survey food security supplement
+dataset03,Farm to School Census.json,1006003,farm-to-school
+dataset04,"Information Resources, Inc. (IRI) InfoScan.json",1006000,"information resources, inc."
+dataset04,"Information Resources, Inc. (IRI) InfoScan.json",1006001,"information resources, inc."
+dataset05,NASS Census of Agriculture.json,89,census of agriculture
+dataset06,RUCC.json,1007000,rural-urban continuum codes
+dataset07,"Tenure, ownership, and transition of agricultural land.json",1006019,"tenure, ownership, and transition of agricultural land"
+dataset08,food access research atlas.json,1006007,food access research atlas
+dataset09,food acquisition and purchase survey.json,1006005,national household food acquisition
+dataset10,household food security survey module.json,1006009,household food security survey module
+dataset11,local food marketing practices survey.json,1006010,local food marketing practices survey
+dataset12,quarterly food at home price database.json,1006006,quarterly food at home price database
+dataset13,transition of agricultural land survey.json,1006011,transition of agricultural land survey

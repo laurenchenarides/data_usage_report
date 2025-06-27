@@ -330,7 +330,7 @@ This process ensured that each publication was counted once, even if it appeared
 
 : Unique Publications with Metadata across Sources {#tbl-pub-counts}
 
-All code used to clean, deduplicate, and merge records is provided in the [GitHub repository](https://github.com/laurenchenarides/dataset_usage_report).
+All code used to clean, deduplicate, and merge records is provided in the [GitHub repository](https://github.com/laurenchenarides/data_usage_report/tree/main/code).
 
 ### Publication Coverage
 
@@ -1034,7 +1034,7 @@ This approach enables the identification of unique authors across bibliometric s
 
 Across all datasets, the authors most visible in one platform are not always discoverable in others. The top contributors to a dataset can vary significantly depending on which citation database is used. These differences stem from inconsistencies in metadata, name disambiguation, and indexing practices. As a result, evaluations or dashboards based on a single source may misrepresent who is using a dataset, leading to undercounting or omission of active researchers. Using multiple sources helps create a more accurate and equitable picture of scholarly engagement.
 
-### Author Mentions by Dataset and Citation Database (2017–2023, Article-Type Only)
+::: {.callout-note title="Author Mentions by Dataset and Citation Database (2017–2023, Article-Type Only)"}
 
 | USDA Dataset                               | Unique Authors (Scopus) | Unique Authors (OpenAlex) | Unique Authors (Dimensions) |
 |-------------------------------------------|--------------------------|----------------------------|------------------------------|
@@ -1048,6 +1048,8 @@ Across all datasets, the authors most visible in one platform are not always dis
 *Note: Author counts reflect unique individuals associated with article-type publications from 2017 to 2023 that mention the specified USDA dataset in Scopus, OpenAlex, or Dimensions. Each citation database represents its own independently derived corpus, with publication inclusion determined by dataset keyword searches and metadata filters.*
 
 The full author-level summary by dataset and citation source is available [here](graphics/tilemaps/all_author_summaries_by_source.csv).
+
+:::
 
 For purposes of this report, we feature the top 20 authors by publication count for each dataset and source. These visualizations help illustrate how platform-specific indexing affects which researchers appear most prominently. Comparing leading authors across Scopus, OpenAlex, and Dimensions reveals potential disparities in dataset visibility and discoverability.
 
