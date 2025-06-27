@@ -485,7 +485,7 @@ Most top journals referencing ARMS are indexed by OpenAlex, including several hi
 
 
 ::: {.content-visible when-format="pdf"}
-
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#journal-coverage)
 :::
 
 #### The Census of Agriculture {.unnumbered}
@@ -506,7 +506,7 @@ Journal coverage for Census-related publications is distributed more evenly acro
 
 
 ::: {.content-visible when-format="pdf"}
-
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#journal-coverage)
 :::
 
 
@@ -526,9 +526,8 @@ This dataset is associated with journals that are broadly indexed across sources
 :::
 
 
-
 ::: {.content-visible when-format="pdf"}
-
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#journal-coverage)
 :::
 
 
@@ -550,7 +549,7 @@ Many FoodAPS-related journals fall within the nutrition and behavioral sciences 
 
 
 ::: {.content-visible when-format="pdf"}
-
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#journal-coverage)
 :::
 
 
@@ -570,9 +569,8 @@ This dataset draws from a wide range of journals in public health, food policy, 
 :::
 
 
-
 ::: {.content-visible when-format="pdf"}
-
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#journal-coverage)
 :::
 
 
@@ -592,9 +590,8 @@ Journals citing RUCC span health, epidemiology, and rural development. Many are 
 :::
 
 
-
 ::: {.content-visible when-format="pdf"}
-
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#journal-coverage)
 :::
 
 :::{.callout-note title="Summary of Journal Coverage by Dataset"}
@@ -696,7 +693,7 @@ The next set of word clouds summarizes the most frequent research topics associa
 :::
 
 ::: {.content-visible when-format="pdf"}
-
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#publication-topics)
 :::
 
 
@@ -761,7 +758,7 @@ The next set of word clouds summarizes the most frequent research topics associa
 :::
 
 ::: {.content-visible when-format="pdf"}
-
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#publication-topics)
 :::
 
 #### Food Access Research Atlas {.unnumbered}
@@ -823,7 +820,7 @@ The next set of word clouds summarizes the most frequent research topics associa
 :::
 
 ::: {.content-visible when-format="pdf"}
-
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#publication-topics)
 :::
 
 
@@ -948,9 +945,8 @@ The next set of word clouds summarizes the most frequent research topics associa
 :::
 
 ::: {.content-visible when-format="pdf"}
-
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#publication-topics)
 :::
-
 
 #### Rural-Urban Continuum Code {.unnumbered}
 
@@ -1011,7 +1007,7 @@ The next set of word clouds summarizes the most frequent research topics associa
 :::
 
 ::: {.content-visible when-format="pdf"}
-
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#publication-topics)
 :::
 
 
