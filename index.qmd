@@ -112,8 +112,8 @@ The report includes methods for:
 
 Reusable components produced as part of this effort include:
 
--   A code repository for data cleaning and standardization
--   <a href="https://laurenchenarides.github.io/data_usage_report/appendices/app_crosswalk.html" target="_blank" rel="noopener">A crosswalk of data schemas by citation database</a>
+-   [A code repository for data cleaning and standardization](code/)
+-   [A crosswalk of data schemas by citation database](appendices/app_crosswalk.qmd)
 
 The general framework developed here can be extended to other citation systems, including Web of Science, Crossref, and Microsoft Academic, for similar evaluations of dataset coverage and usage.
 

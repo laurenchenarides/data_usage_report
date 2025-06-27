@@ -27,8 +27,6 @@ This repository contains a set of R scripts that process, harmonize, and compare
 11. `clean_institutional_affil.R`  
 12. `construct_maps.R`
 
-13. `build_all_df.R`
-
 ---
 
 ## Workflow Overview
@@ -192,18 +190,6 @@ Maps institutional affiliations by dataset and source, using geocoded or ROR-der
 
 ---
 
-#### Step 4: Merge all entities
-
-**Script name:** `13_build_all_df.R`
-
-Merges author-, institution-, and publication-level metadata into a final consolidated table.
-
-**Output:**
-
-- `all_df`: a harmonized dataframe with DOIs, authors, affiliations, and source-level indicators
-
----
-
 ## Notes on Replicability
 
 - All scripts assume that required paths are defined at the top of `00_master_script.R`.
@@ -215,4 +201,4 @@ Merges author-, institution-, and publication-level metadata into a final consol
 For access to the input data, please contact the authors.  
 To cite this workflow, please use:  
 **Chenarides, L., Bryan, C., & Ladislau, R. (2025). Methodology for comparing citation database coverage of dataset usage.**  
-Available at: [https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html](https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html)
+Available at: [https://laurenchenarides.github.io/data_usage_report/report.html](https://laurenchenarides.github.io/data_usage_report/report.html)

@@ -14,7 +14,7 @@ All project files are available in our GitHub repository. This section provides 
 
 # Data Schema {.unnumbered}
 
-The construction of data schemas is central to this project. As metadata was gathered from three different sources, the data schemas were constructed to ensure all relevant information was available for matching purposes.
+Metadata was gathered from three different sources and used to construct the following data schemas. Click on the icons below to view the data schema associated with each source.
 
 
 <table>
@@ -59,7 +59,7 @@ The construction of data schemas is central to this project. As metadata was gat
 </p>
 
 
-## File Inventory
+## File Inventory {.unnumbered}
 
 ::: {.panel-tabset}
 

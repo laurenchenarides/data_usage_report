@@ -1,16 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://laurenchenarides.github.io/data_usage_report/report.html</loc>
-    <lastmod>2025-06-27T15:42:35.362Z</lastmod>
-  </url>
-  <url>
     <loc>https://laurenchenarides.github.io/data_usage_report/webinar_questionnaire.html</loc>
     <lastmod>2025-06-20T23:12:46.635Z</lastmod>
   </url>
   <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/index.html</loc>
+    <lastmod>2025-06-27T15:58:09.486Z</lastmod>
+  </url>
+  <url>
     <loc>https://laurenchenarides.github.io/data_usage_report/code/flatten_openalex_all_datasets.html</loc>
     <lastmod>2025-04-29T02:23:27.492Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow.html</loc>
+    <lastmod>2025-03-16T23:22:10.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/step03/04scopus.html</loc>
+    <lastmod>2025-03-17T01:30:30.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/step02_02/02scopus.html</loc>
+    <lastmod>2025-03-17T00:44:02.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/step02_02/02dimensions.html</loc>
+    <lastmod>2025-06-27T14:56:57.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/step02_01/03scopus.html</loc>
+    <lastmod>2025-03-16T23:25:52.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/step02_01/03dimensions.html</loc>
+    <lastmod>2025-06-27T15:12:16.033Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/results/compare_pub_data.html</loc>
+    <lastmod>2025-03-17T00:49:43.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/results/05openalex.html</loc>
+    <lastmod>2025-03-17T00:49:08.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/app_scopus.html</loc>
+    <lastmod>2025-03-31T01:35:08.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/app_msi.html</loc>
+    <lastmod>2025-03-31T01:41:46.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/app_institutions.html</loc>
+    <lastmod>2025-06-20T22:58:02.040Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/app_dimensions.html</loc>
+    <lastmod>2025-03-17T20:49:19.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/app_crosswalk.html</loc>
+    <lastmod>2025-06-27T16:00:51.233Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/about.html</loc>
+    <lastmod>2025-02-01T23:25:14.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/app_databases.html</loc>
+    <lastmod>2025-04-26T18:33:29.986Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/app_dyads.html</loc>
+    <lastmod>2025-06-02T13:47:42.402Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/app_ipeds.html</loc>
+    <lastmod>2025-03-30T21:42:40.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/app_openalex.html</loc>
+    <lastmod>2025-03-31T01:35:02.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/terminology.html</loc>
+    <lastmod>2025-03-16T22:58:46.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/results/05scopus.html</loc>
+    <lastmod>2025-03-17T00:49:10.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/step01/define_data_assets.html</loc>
+    <lastmod>2025-03-17T00:57:33.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/step02_01/03openalex.html</loc>
+    <lastmod>2025-06-27T15:12:14.725Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/step02_01/extract_dataset_mentions.html</loc>
+    <lastmod>2025-06-27T15:05:48.840Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/step02_02/02openalex.html</loc>
+    <lastmod>2025-06-27T14:58:37.381Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/step02_02/create_seed_corpus.html</loc>
+    <lastmod>2025-06-27T15:14:55.033Z</lastmod>
+  </url>
+  <url>
+    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/workflow/step03/clean_pub_data.html</loc>
+    <lastmod>2025-03-17T00:46:23.000Z</lastmod>
   </url>
   <url>
     <loc>https://laurenchenarides.github.io/data_usage_report/appendix.html</loc>
@@ -21,7 +125,7 @@
     <lastmod>2025-03-17T01:02:37.000Z</lastmod>
   </url>
   <url>
-    <loc>https://laurenchenarides.github.io/data_usage_report/appendices/app_msi.html</loc>
-    <lastmod>2025-03-31T01:41:46.000Z</lastmod>
+    <loc>https://laurenchenarides.github.io/data_usage_report/report.html</loc>
+    <lastmod>2025-06-27T16:07:43.865Z</lastmod>
   </url>
 </urlset>
