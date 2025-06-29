@@ -955,6 +955,35 @@ Summary of Journal Coverage by Dataset
 </div>
 </div>
 </section>
+<section id="explaining-differences-in-database-coverage" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="explaining-differences-in-database-coverage">Explaining Differences in Database Coverage</h4>
+<p>We observed that OpenAlex indexes more publications referencing ARMS and FoodAPS than either Scopus or Dimensions. One possible reason for this difference is that OpenAlex may include a broader range of journals, including some that are less frequently indexed by other databases. However, we were unable to directly compare journal selectivity using standardized metrics like CiteScore, which are only available for journals indexed in Scopus.</p>
+<p>To provide supporting evidence, we conducted two analyses using available article- and journal-level information:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Journal Exclusivity</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Citation Patterns</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>The first analysis examines the extent to which journals are uniquely indexed by each bibliographic database. The orange bar chart below reports the share of journals that appear only in OpenAlex, only in Scopus, or only in Dimensions, based on journals that include at least one article referencing ARMS or FoodAPS. This provides a measure of database exclusivity at the journal level.</p>
+<figure style="text-align: center;" class="figure">
+<a href="graphics/check01_journals.png" target="_blank"> <img src="graphics/check01_journals.png" alt="RUCC Sankey preview" style="width:80%; height:auto;" class="figure-img"> </a>
+<figcaption style="font-size: 0.9em; color: #555;">
+Click to enlarge
+</figcaption>
+</figure>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>The second analysis focuses on article-level citations. The green bar chart below reports the median citation count of publications, grouped by the combination of sources in which each article appears (e.g., only in OpenAlex, in both OpenAlex and Dimensions, etc.). Citation counts were averaged across values reported in OpenAlex, Scopus, and Dimensions when available. Results are shown separately for ARMS and FoodAPS.</p>
+<figure style="text-align: center;" class="figure">
+<a href="graphics/check02_citations.png" target="_blank"> <img src="graphics/check02_citations.png" alt="RUCC Sankey preview" style="width:80%; height:auto;" class="figure-img"> </a>
+<figcaption style="font-size: 0.9em; color: #555;">
+Click to enlarge
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Taken together, these two pieces of evidence suggest that OpenAlex’s broader coverage may reflect its inclusion of a wider set of journals, suggesting that it may index a longer tail of lower-cited publications that may not appear in databases like Dimensions and Scopus, and that articles found only in OpenAlex tend to have lower citation counts than those indexed in Dimensions or shared across sources.</p>
+</section>
 </section>
 <section id="publication-topics" class="level3" data-number="2.3.3">
 <h3 data-number="2.3.3" class="anchored" data-anchor-id="publication-topics"><span class="header-section-number">2.3.3</span> Publication Topics</h3>
@@ -984,15 +1013,15 @@ Summary of Journal Coverage by Dataset
 <p>Scopus features broader disciplinary categories and methodological terms including economics and econometrics, biofuel, development food science, and soil science.</p>
 <p>The variation in topical emphasis reflects platform-specific differences in indexing practices, subject classification systems, and coverage of applied versus theoretical scholarship.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Dimensions</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset01_wordcloud_shared_scopus.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset01_wordcloud_shared_openalex.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset01_wordcloud_shared_dimensions.png" class="img-fluid" target="_blank"></p>
 </div>
 </div>
@@ -1034,15 +1063,15 @@ Additional Word Cloud Variants
 <p>Scopus reflects more traditional disciplinary structures, with emphasis on Ecology, Food Science, Economics and Econometrics, and Soil Emission. The presence of terms like China and Urban Agriculture points to geographic and policy framing as well.</p>
 <p>These differences reflect variation in how each source structures and assigns topical metadata to the same publications.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Dimensions</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset05_wordcloud_shared_scopus.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset05_wordcloud_shared_openalex.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset05_wordcloud_shared_dimensions.png" class="img-fluid" target="_blank"></p>
 </div>
 </div>
@@ -1083,15 +1112,15 @@ Additional Word Cloud Variants
 <p>Scopus displays a mix of disciplinary and clinical topics, including Obesity, Grocery Stores, Farmers’ Markets, and Public Health. Additional terms such as Anthropology, Exercise, Surgery, and Biomedical Engineering reflect coverage from journals in the health sciences, indicating a more biomedical orientation.</p>
 <p>Together, these differences suggest that Dimensions frames FARA-related research through the lens of policy and programmatic access, OpenAlex places greater emphasis on social context and urban health, and Scopus reflects disciplinary classifications from medicine, biology, and public health. These variations may influence how different audiences encounter and interpret research using this dataset.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Dimensions</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset08_wordcloud_shared_scopus.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset08_wordcloud_shared_openalex.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset08_wordcloud_shared_dimensions.png" class="img-fluid" target="_blank"></p>
 </div>
 </div>
@@ -1132,15 +1161,15 @@ Additional Word Cloud Variants
 <p>Scopus shows more disciplinary and intervention-related topics. Terms like Grocery Stores, Farmers’ Markets, Nutrition and Dietetics, and Obesity appear frequently, alongside topics such as Brand Placement, Food Labeling, and Program Participation, indicating interest in behavioral nutrition, food marketing, and policy evaluation.</p>
 <p>These differences suggest that Dimensions favors classification by programmatic and economic relevance, OpenAlex aligns more with public health and social research, and Scopus tends to organize around disciplinary domains and evaluation studies.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Dimensions</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
-<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset09_wordcloud_shared_scopus.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset09_wordcloud_shared_openalex.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset09_wordcloud_shared_dimensions.png" class="img-fluid" target="_blank"></p>
 </div>
 </div>
@@ -1181,15 +1210,15 @@ Additional Word Cloud Variants
 <p>Scopus features terms like Food Pantries, Program Participation, and Family Characteristic, consistent with food access research. But it also brings in more disciplinary and biomedical language—Epigenetics, Cancer, Autism, and Mindfulness—pointing to research that draws on HFSSM data to explore clinical and psychological outcomes.</p>
 <p>Together, these patterns show how different databases frame the same set of publications through different classification systems. While the core themes of food security and health are shared, each source emphasizes different disciplinary, policy, or structural dimensions of the research.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false">Dimensions</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
-<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset10_wordcloud_shared_scopus.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset10_wordcloud_shared_openalex.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset10_wordcloud_shared_dimensions.png" class="img-fluid" target="_blank"></p>
 </div>
 </div>
@@ -1230,15 +1259,15 @@ Additional Word Cloud Variants
 <p>Scopus reflects a broader mix of clinical and disciplinary topics. Frequent terms include Covid-19, cancer, public health, obesity, and health policy. Additional tags such as smoking ban, rural poverty, and Medicaid point to both policy-oriented and biomedical lines of research.</p>
 <p>Together, these differences illustrate how the same publications are categorized through different topical lenses, depending on the underlying classification systems used by each database.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">Dimensions</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">OpenAlex</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false">Dimensions</a></li></ul>
 <div class="tab-content">
-<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset06_wordcloud_shared_scopus.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset06_wordcloud_shared_openalex.png" class="img-fluid" target="_blank"></p>
 </div>
-<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
 <p><img src="graphics/word_clouds/shared_dois/dataset06_wordcloud_shared_dimensions.png" class="img-fluid" target="_blank"></p>
 </div>
 </div>
@@ -1356,39 +1385,39 @@ Author Mentions by Dataset and Citation Database (2017–2023, Article-Type Only
 </div>
 <p>For purposes of this report, we feature the top 20 authors by publication count for each dataset and source. These visualizations help illustrate how platform-specific indexing affects which researchers appear most prominently. Comparing leading authors across Scopus, OpenAlex, and Dimensions reveals potential disparities in dataset visibility and discoverability.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">ARMS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">Census of Ag</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-3" role="tab" aria-controls="tabset-7-3" aria-selected="false">FARA</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-4" role="tab" aria-controls="tabset-7-4" aria-selected="false">FoodAPS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-5" role="tab" aria-controls="tabset-7-5" aria-selected="false">HFSSM</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-6" role="tab" aria-controls="tabset-7-6" aria-selected="false">RUCC</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true">ARMS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false">Census of Ag</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-3" role="tab" aria-controls="tabset-8-3" aria-selected="false">FARA</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-4" role="tab" aria-controls="tabset-8-4" aria-selected="false">FoodAPS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-5" role="tab" aria-controls="tabset-8-5" aria-selected="false">HFSSM</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-6" role="tab" aria-controls="tabset-8-6" aria-selected="false">RUCC</a></li></ul>
 <div class="tab-content">
-<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
 <p>For ARMS, the top 20 authors identified in each platform show limited overlap. While some authors are discoverable across all three sources, others appear only in one, particularly in OpenAlex or Dimensions. This reflects inconsistencies in how author names are indexed and matched across platforms, especially for researchers who publish under multiple name variants or without ORCID identifiers.</p>
 <figure style="text-align: center;" class="figure">
 <a href="graphics/tilemaps/arms_top_20_author_overlap.png" target="_blank"> <img src="graphics/tilemaps/arms_top_20_author_overlap.png" style="width:80%; height:auto;" alt="ARMS Treemap" class="figure-img"> </a>
 </figure>
 </div>
-<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
 <p>The Census of Agriculture shows relatively higher agreement across platforms, with many top authors appearing in multiple sources. However, there are still noticeable differences, with some authors ranked highly in one platform but not appearing at all in others. These discrepancies are likely tied to variations in how author metadata and institutional affiliations are recorded.</p>
 <figure style="text-align: center;" class="figure">
 <a href="graphics/tilemaps/census_of_agriculture_top_20_author_overlap.png" target="_blank"> <img src="graphics/tilemaps/census_of_agriculture_top_20_author_overlap.png" style="width:80%; height:auto;" alt="Ag Census Tilemap" class="figure-img"> </a>
 </figure>
 </div>
-<div id="tabset-7-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-3-tab">
+<div id="tabset-8-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-3-tab">
 <p>FARA displays substantial divergence in author coverage. A number of top authors are visible in only one platform, and overlap across all three is relatively limited. This dataset seems particularly affected by platform-specific indexing practices—likely because much of the associated research is interdisciplinary and published across a range of journal types.</p>
 <figure style="text-align: center;" class="figure">
 <a href="graphics/tilemaps/food_access_research_atlas_top_20_author_overlap.png" target="_blank"> <img src="graphics/tilemaps/food_access_research_atlas_top_20_author_overlap.png" style="width:80%; height:auto;" alt="FARA Tilemap" class="figure-img"> </a>
 </figure>
 </div>
-<div id="tabset-7-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-4-tab">
+<div id="tabset-8-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-4-tab">
 <p>FoodAPS has uneven author coverage across platforms. While some authors are picked up consistently, others are captured by only one source. OpenAlex includes several authors who are not visible in Scopus or Dimensions, suggesting that coverage differences may be especially pronounced for newer researchers or those publishing in open-access venues.</p>
 <figure style="text-align: center;" class="figure">
 <a href="graphics/tilemaps/food_acquisition_and_purchase_survey_top_20_author_overlap.png" target="_blank"> <img src="graphics/tilemaps/food_acquisition_and_purchase_survey_top_20_author_overlap.png" style="width:80%; height:auto;" alt="FoodAPS Tilemap" class="figure-img"> </a>
 </figure>
 </div>
-<div id="tabset-7-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-5-tab">
+<div id="tabset-8-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-5-tab">
 <p>The HFSSM dataset exhibits moderate agreement in author coverage. Most top authors are represented in at least two sources, but each platform still identifies several authors not seen in the others. This suggests that while the dataset has relatively broad exposure, gaps remain that could affect who is counted or highlighted in bibliometric analyses.</p>
 <figure style="text-align: center;" class="figure">
 <a href="graphics/tilemaps/household_food_security_survey_module_top_20_author_overlap.png" target="_blank"> <img src="graphics/tilemaps/household_food_security_survey_module_top_20_author_overlap.png" style="width:80%; height:auto;" alt="HFSSM Tilemap" class="figure-img"> </a>
 </figure>
 </div>
-<div id="tabset-7-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-6-tab">
+<div id="tabset-8-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-6-tab">
 <p>RUCC shows the widest variation in author rankings. Many authors appear in only one of the three sources, and very few are consistently represented across all. This fragmentation likely reflects the broad disciplinary scope of RUCC-related research, which spans public health, demography, and social science—fields that are not uniformly indexed across platforms.</p>
 <figure style="text-align: center;" class="figure">
 <a href="graphics/tilemaps/rural_urban_continuum_code_top_20_author_overlap.png" target="_blank"> <img src="graphics/tilemaps/rural_urban_continuum_code_top_20_author_overlap.png" style="width:80%; height:auto;" alt="RUCC Tilemap" class="figure-img"> </a>
@@ -1401,19 +1430,19 @@ Author Mentions by Dataset and Citation Database (2017–2023, Article-Type Only
 <h3 data-number="2.3.5" class="anchored" data-anchor-id="institutional-comparison"><span class="header-section-number">2.3.5</span> Institutional Comparison</h3>
 <p>In addition to examining dataset mention coverage, the report also evaluates differences in institutional representation across Scopus, OpenAlex, and Dimensions. Each of the featured citation databases represent some portion of the global research landscape, yet their inclusion criteria and institutional coverage may vary. The purpose of this analysis is to assess which institutions are represented in each source.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false">Dimensions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-3" role="tab" aria-controls="tabset-8-3" aria-selected="false">OpenAlex</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true">Scopus</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false">Dimensions</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-3" role="tab" aria-controls="tabset-9-3" aria-selected="false">OpenAlex</a></li></ul>
 <div class="tab-content">
-<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
 <figure style="text-align: center;" class="figure">
 <a href="graphics/maps/scopus_normalized_dois_per_institution.png" target="_blank"> <img src="graphics/maps/scopus_normalized_dois_per_institution.png" style="width:80%; height:auto;" alt="Scopus Map" class="figure-img"> </a>
 </figure>
 </div>
-<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
 <figure style="text-align: center;" class="figure">
 <a href="graphics/maps/dimensions_normalized_dois_per_institution.png" target="_blank"> <img src="graphics/maps/dimensions_normalized_dois_per_institution.png" style="width:80%; height:auto;" alt="Scopus Map" class="figure-img"> </a>
 </figure>
 </div>
-<div id="tabset-8-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-3-tab">
+<div id="tabset-9-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-3-tab">
 <figure style="text-align: center;" class="figure">
 <a href="graphics/maps/openalex_normalized_dois_per_institution.png" target="_blank"> <img src="graphics/maps/openalex_normalized_dois_per_institution.png" style="width:80%; height:auto;" alt="Scopus Map" class="figure-img"> </a>
 </figure>

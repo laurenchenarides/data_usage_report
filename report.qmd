@@ -605,6 +605,60 @@ Journals citing RUCC span health, epidemiology, and rural development. Many are 
 | RUCC                       | Scopus / Dimensions    | Environmental Research, Food Policy          | Several epidemiology/health titles missing in OpenAlex          |
 :::
 
+#### Explaining Differences in Database Coverage {.unnumbered}
+
+We observed that OpenAlex indexes more publications referencing ARMS and FoodAPS than either Scopus or Dimensions. One possible reason for this difference is that OpenAlex may include a broader range of journals, including some that are less frequently indexed by other databases. However, we were unable to directly compare journal selectivity using standardized metrics like CiteScore, which are only available for journals indexed in Scopus.
+
+To provide supporting evidence, we conducted two analyses using available article- and journal-level information:
+
+::: {.panel-tabset}
+
+
+##### Journal Exclusivity {.unnumbered}
+
+The first analysis examines the extent to which journals are uniquely indexed by each bibliographic database. The orange bar chart below reports the share of journals that appear only in OpenAlex, only in Scopus, or only in Dimensions, based on journals that include at least one article referencing ARMS or FoodAPS. This provides a measure of database exclusivity at the journal level.
+
+::: {.content-visible when-format="html"}
+
+<figure style="text-align: center;">
+  <a href="graphics/check01_journals.png" target="_blank">
+    <img src="graphics/check01_journals.png" alt="RUCC Sankey preview" style="width:80%; height:auto;" />
+  </a>
+  <figcaption style="font-size: 0.9em; color: #555;">Click to enlarge</figcaption>
+</figure>
+
+:::
+
+
+::: {.content-visible when-format="pdf"}
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#journal-coverage)
+:::
+
+
+##### Citation Patterns {.unnumbered}
+
+The second analysis focuses on article-level citations. The green bar chart below reports the median citation count of publications, grouped by the combination of sources in which each article appears (e.g., only in OpenAlex, in both OpenAlex and Dimensions, etc.). Citation counts were averaged across values reported in OpenAlex, Scopus, and Dimensions when available. Results are shown separately for ARMS and FoodAPS.
+
+::: {.content-visible when-format="html"}
+
+<figure style="text-align: center;">
+  <a href="graphics/check02_citations.png" target="_blank">
+    <img src="graphics/check02_citations.png" alt="RUCC Sankey preview" style="width:80%; height:auto;" />
+  </a>
+  <figcaption style="font-size: 0.9em; color: #555;">Click to enlarge</figcaption>
+</figure>
+
+:::
+
+
+::: {.content-visible when-format="pdf"}
+[*Refer to report website for graphics.*](https://laurenchenarides.github.io/data_usage_report/report.html#journal-coverage)
+:::
+
+:::
+
+Taken together, these two pieces of evidence suggest that OpenAlex's broader coverage may reflect its inclusion of a wider set of journals, suggesting that it may index a longer tail of lower-cited publications that may not appear in databases like Dimensions and Scopus, and that articles found only in OpenAlex tend to have lower citation counts than those indexed in Dimensions or shared across sources.
+
 ### Publication Topics
 
 In addition to differences in coverage and journal indexing, citation databases vary in how they classify research content. Each system applies a distinct taxonomy—often algorithmically generated—to assign topics to publications. These systems function like thematic filters, shaping how research is organized, discovered, and interpreted.
