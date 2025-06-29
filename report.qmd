@@ -66,7 +66,7 @@ Overlap across databases is limited. For most datasets, fewer than 10% of DOIs a
 
 Scopus emphasizes disciplinary journals, particularly in health, economics, and social science. OpenAlex includes a mix of traditional and nontraditional outlets, including open-access platforms. Dimensions covers many of the same journals as Scopus but with a stronger presence of applied policy and public health titles.
 
-### 3. Topics:
+### 3. Topics {.unnumbered}
 
 While the same datasets appear across all three sources, the topical classifications differ.
 
