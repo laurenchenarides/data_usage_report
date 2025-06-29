@@ -14,7 +14,13 @@ This appendix documents the construction and visualization of MSI (Minority-Serv
 
 To create a harmonsized dataset of institutional coverage across datasets, institutional affiliation data associated with each publication's athor(s) are linked to institutional records using IPEDS identifiers. Linking the publication metadata with IPEDS institutional data adds information not available in the publication affiliation data alone. This additional information includes public or private institution (control), degree level, MSI designation, and geographic location. Special attention is given to coverage of underrepresented institutions and Minority-Serving Institutions (MSIs). 
 
-First, a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time is created. Two sources were used: (1) the MSI Data Project (Nguyen et al., 2023) identifies MSI institutions from 2017–2021 and (2) Rutgers CMSI identifies MSI institutions for 2022–2023. These datasets were cleaned and merged with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. Data cleaning steps included: addressing inconsistencies in eligibility labels, removing duplicates, and creating summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are available in the report appendices^[[IPEDS appendix available here](app_ipeds.qmd)] and MSI^[[MSI appendix available here](app_msi.qmd)].
+To support this linkage, a standardized panel dataset of U.S. higher education institutions was developed, capturing consistent MSI designations over time. Two sources were used: (1) the MSI Data Project (Nguyen et al., 2023) for the years 2017–2021 and (2) Rutgers CMSI for 2022–2023. These datasets were cleaned and merged with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. Data cleaning steps included: 
+
+- Addressing inconsistencies in eligibility labels, 
+- Removing duplicates, and 
+- Creating summary measures of MSI eligibility by year. 
+
+The resulting visualization below graphs both the number and percent of institutions designated as MSIs over time, with a notable increase observed in 2022. The accompanying plot and source code are available in the [IPEDS appendix available here](app_ipeds.qmd) and [MSI appendix available here](app_msi.qmd).
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
@@ -31,5 +37,5 @@ First, a clean, panel-form dataset of U.S. higher education institutions, includ
 ![](../data/ipeds_msi/msi_eligibility_plot.png){fig-cap="MSI Eligibility Trends 2017-2023"}
 :::
 
-
+This is where the analysis concluded. Future work would need to examine the reasons behind the observed increase in MSI designations, which may reflect changes in classification rules, institutional characteristics, or reporting practices. Additionally, extending the analysis would involve linking these institutional records to the affiliations of publication authors identified across Scopus, OpenAlex, and Dimensions. This would allow for a more detailed examination of which types of institutions, and particularly which MSIs, are represented in dataset-linked research, helping to determine patterns of inclusion, visibility, and institutional participation in federally funded data ecosystems.
 

@@ -55,19 +55,17 @@ These datasets were selected for their policy relevance, known usage frequency, 
 
 # What Did the Study Find? {.unnumbered}
 
-Tracking dataset mentions varies significantly depending on which citation database is used. This analysis compares Scopus, OpenAlex, and Dimensions to determine how each citation database captures research mentioning key USDA datasets.
+Tracking dataset mentions varies significantly depending on which citation database is used. This analysis compares Scopus, OpenAlex, and Dimensions to determine how each citation database captures research mentioning key USDA datasets. Key findings are detailed below.
 
-**Key Findings Across Sources:**
-
-1. Publications:
+### 1. Publications {.unnumbered}
 
 Overlap across databases is limited. For most datasets, fewer than 10% of DOIs appear in all three sources. Scopus often identifies the largest share of indexed DOIs, especially for public health–related datasets. OpenAlex captures a broader set of publication types, including preprints and working papers. Dimensions often sits in the middle but includes the highest number of matched DOIs for some datasets.
 
-2. Journals:
+### 2. Journals {.unnumbered}
 
 Scopus emphasizes disciplinary journals, particularly in health, economics, and social science. OpenAlex includes a mix of traditional and nontraditional outlets, including open-access platforms. Dimensions covers many of the same journals as Scopus but with a stronger presence of applied policy and public health titles.
 
-3. Topics:
+### 3. Topics {.unnumbered}
 
 While the same datasets appear across all three sources, the topical classifications differ.
 
@@ -80,15 +78,15 @@ While the same datasets appear across all three sources, the topical classificat
 
 Each source applies a different classification system, which affects how these themes are surfaced and grouped.
 
-4. Authors:
+### 4. Authors {.unnumbered}
 
 Scopus and Dimensions tend to recover more academic authors in applied economics, public health, and nutrition. OpenAlex often identifies a wider array of author types. Across sources, many of the most active authors are affiliated with USDA Economic Research Service, major land-grant universities, and schools of public health.
 
-5. Institutions:
+### 5. Institutions {.unnumbered}
 
 Institutional representation varies, with Scopus and Dimensions surfacing more authors from top-tier research universities and federal agencies. OpenAlex includes more community-based organizations and international institutions not always indexed in Scopus.
 
-**Evaluating Corpus Coverage Across Sources**
+### Evaluating Corpus Coverage Across Sources {.unnumbered}
 
 Among the three sources examined, Dimensions offered the most consistently structured metadata linking datasets to publications. Its combination of broad journal coverage, funder metadata, and curated topic tags allowed for easier identification of research that referenced USDA datasets, particularly in applied and policy-relevant contexts.
 

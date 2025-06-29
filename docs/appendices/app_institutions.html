@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-06-20">
+<meta name="dcterms.date" content="2025-06-29">
 
 <title>Cleaning IPEDS and MSI Data – Citation Database Assessment</title>
 <style>
@@ -227,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 20, 2025</p>
+      <p class="date">June 29, 2025</p>
     </div>
   </div>
   
@@ -241,24 +241,24 @@ ul.task-list li input[type="checkbox"] {
 
 <p>This appendix documents the construction and visualization of MSI (Minority-Serving Institution) eligibility trends from 2017 to 2023.</p>
 <p>To create a harmonsized dataset of institutional coverage across datasets, institutional affiliation data associated with each publication’s athor(s) are linked to institutional records using IPEDS identifiers. Linking the publication metadata with IPEDS institutional data adds information not available in the publication affiliation data alone. This additional information includes public or private institution (control), degree level, MSI designation, and geographic location. Special attention is given to coverage of underrepresented institutions and Minority-Serving Institutions (MSIs).</p>
-<p>First, a clean, panel-form dataset of U.S. higher education institutions, including consistent MSI designations over time is created. Two sources were used: (1) the MSI Data Project (Nguyen et al., 2023) identifies MSI institutions from 2017–2021 and (2) Rutgers CMSI identifies MSI institutions for 2022–2023. These datasets were cleaned and merged with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. Data cleaning steps included: addressing inconsistencies in eligibility labels, removing duplicates, and creating summary measures of MSI eligibility by year. The resulting visualization highlights both the number and percent of institutions designated as MSIs over time, with a sharp increase observed in 2022. The accompanying plot and source code are available in the report appendices<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and MSI<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>To support this linkage, a standardized panel dataset of U.S. higher education institutions was developed, capturing consistent MSI designations over time. Two sources were used: (1) the MSI Data Project (Nguyen et al., 2023) for the years 2017–2021 and (2) Rutgers CMSI for 2022–2023. These datasets were cleaned and merged with IPEDS institutional data, filtered to include only 2- and 4-year institutions in the 50 U.S. states. Data cleaning steps included:</p>
+<ul>
+<li>Addressing inconsistencies in eligibility labels,</li>
+<li>Removing duplicates, and</li>
+<li>Creating summary measures of MSI eligibility by year.</li>
+</ul>
+<p>The resulting visualization below graphs both the number and percent of institutions designated as MSIs over time, with a notable increase observed in 2022. The accompanying plot and source code are available in the <a href="../appendices/app_ipeds.html">IPEDS appendix available here</a> and <a href="../appendices/app_msi.html">MSI appendix available here</a>.</p>
 <figure style="text-align: center;" class="figure">
 <a href="../data/ipeds_msi/msi_eligibility_plot.png" target="_blank"> <img src="../data/ipeds_msi/msi_eligibility_plot.png" style="width:80%; height:auto;" alt="MSI Eligibility Plot" class="figure-img"> </a>
 <figcaption style="font-size: 0.9em; margin-top: 0.5em;">
 <em>Source code used to generate graphic:</em> <a href="https://github.com/laurenchenarides/compare_scopus_openalex_report/blob/main/data/ipeds_msi/build_ipeds_msi.R" target="_blank">Available here</a>.
 </figcaption>
 </figure>
+<p>This is where the analysis concluded. Future work would need to examine the reasons behind the observed increase in MSI designations, which may reflect changes in classification rules, institutional characteristics, or reporting practices. Additionally, extending the analysis would involve linking these institutional records to the affiliations of publication authors identified across Scopus, OpenAlex, and Dimensions. This would allow for a more detailed examination of which types of institutions, and particularly which MSIs, are represented in dataset-linked research, helping to determine patterns of inclusion, visibility, and institutional participation in federally funded data ecosystems.</p>
 
 
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p><a href="../appendices/app_ipeds.html">IPEDS appendix available here</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p><a href="../appendices/app_msi.html">MSI appendix available here</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

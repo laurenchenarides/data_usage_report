@@ -56,19 +56,17 @@ These datasets were selected for their policy relevance, known usage frequency, 
 
 ## What Did the Study Find? {.unnumbered}
 
-Tracking dataset mentions varies significantly depending on which citation database is used. This analysis compares Scopus, OpenAlex, and Dimensions to determine how each citation database captures research mentioning key USDA datasets.
+Tracking dataset mentions varies significantly depending on which citation database is used. This analysis compares Scopus, OpenAlex, and Dimensions to determine how each citation database captures research mentioning key USDA datasets.  Key findings are detailed below.
 
-**Key Findings Across Sources:**
-
-1. Publications:
+### 1. Publications {.unnumbered}
 
 Overlap across databases is limited. For most datasets, fewer than 10% of DOIs appear in all three sources. Scopus often identifies the largest share of indexed DOIs, especially for public health–related datasets. OpenAlex captures a broader set of publication types, including preprints and working papers. Dimensions often sits in the middle but includes the highest number of matched DOIs for some datasets.
 
-2. Journals:
+### 2. Journals {.unnumbered}
 
 Scopus emphasizes disciplinary journals, particularly in health, economics, and social science. OpenAlex includes a mix of traditional and nontraditional outlets, including open-access platforms. Dimensions covers many of the same journals as Scopus but with a stronger presence of applied policy and public health titles.
 
-3. Topics:
+### 3. Topics:
 
 While the same datasets appear across all three sources, the topical classifications differ.
 
@@ -81,15 +79,15 @@ While the same datasets appear across all three sources, the topical classificat
 
 Each source applies a different classification system, which affects how these themes are surfaced and grouped.
 
-4. Authors:
+### 4. Authors {.unnumbered}
 
 Scopus and Dimensions tend to recover more academic authors in applied economics, public health, and nutrition. OpenAlex often identifies a wider array of author types. Across sources, many of the most active authors are affiliated with USDA Economic Research Service, major land-grant universities, and schools of public health.
 
-5. Institutions:
+### 5. Institutions {.unnumbered}
 
 Institutional representation varies, with Scopus and Dimensions surfacing more authors from top-tier research universities and federal agencies. OpenAlex includes more community-based organizations and international institutions not always indexed in Scopus.
 
-**Evaluating Corpus Coverage Across Sources**
+### Evaluating Corpus Coverage Across Sources {.unnumbered}
 
 Among the three sources examined, Dimensions offered the most consistently structured metadata linking datasets to publications. Its combination of broad journal coverage, funder metadata, and curated topic tags allowed for easier identification of research that referenced USDA datasets, particularly in applied and policy-relevant contexts.
 
@@ -194,7 +192,7 @@ The second citation database used is OpenAlex, an open catalog of scholarly publ
 
 Two methods were used to identify USDA dataset mentions in OpenAlex: a full-text search and a seed corpus approach. Both methods focused on peer-reviewed journal articles published between 2017 and 2023 and restricted the dataset to final published versions, excluding preprints and earlier drafts to avoid duplication across versions.
 
-#### Method 1: Full-Text Search
+#### Method 1: Full-Text Search {.unnumbered}
 
 This method relied on querying OpenAlex's full-text search index using combinations of dataset aliases (e.g., alternate names, acronyms) and institutional flag terms (e.g., "USDA," "NASS"). The combination of dataset alias and flag terms ensured that retrieved publications made an explicit connection to the correct data source. A "true" dataset mention was recorded only when at least one alias and one flag term appeared in the same publication, increasing the precision of captured dataset mentions.^[This procedure increased the likelihood of capturing genuine dataset references rather than incidental matches to individual words. Initial drafts of the query incorrectly included terms like "NASS" and "USDA" in the alias list. This was corrected to ensure that aliases strictly referred to dataset names, and flag terms referred to organizations.]
 
@@ -213,7 +211,7 @@ Queries were implemented using the `pyalex` Python package^[`Pyalex` is an open-
 
 Full documentation of the OpenAlex search routine, including query construction and extraction procedures, is available in [this appendix.](appendices/workflow/step02_01/extract_dataset_mentions.qmd).
 
-##### Limitations of Full-Text Search Method
+##### Limitations of Full-Text Search Method {.unnumbered}
 
 Although the OpenAlex API provides access to full-text search, limitations in content ingestion affect result completeness. OpenAlex receives publication text through two primary ingestion methods: PDF extraction and [n-grams delivery](https://docs.openalex.org/api-entities/works/get-n-grams). 
 
@@ -223,7 +221,7 @@ In the n-grams ingestion method, OpenAlex does not receive the full article text
 
 These ingestion and indexing limitations affect the completeness of results when relying solely on OpenAlex full-text search. Mentions of USDA datasets that appear either exclusively in references or are fragmented within n-grams may be missed. To address these limitations, an alternative search method was developed based on constructing a filtered seed corpus of publications for local full-text analysis.
 
-#### Method 2: Seed Corpus
+#### Method 2: Seed Corpus {.unnumbered}
 
 To overcome the limitations of the full-text metadata search, a seed corpus approach was developed. This method created a filtered subset of publications for local full-text analysis, targeting likely mentions of USDA datasets.
 
@@ -402,14 +400,14 @@ OpenAlex again provides the widest exclusive coverage (46.7%), while Scopus and 
 
 ::: {.content-visible when-format="html"}
 <figure style="text-align: center;">
-  <a href="graphics/treemaps/Food_Acquisition_and_Purchase_Survey_(FoodAPS)_treemap.png" target="_blank">
-    <img src="graphics/treemaps/Food_Acquisition_and_Purchase_Survey_(FoodAPS)_treemap.png" style="width:80%; height:auto;" alt="FoodAPS Treemap">
+  <a href="graphics/treemaps/Food_Acquisition_and_Purchase_Survey_treemap.png" target="_blank">
+    <img src="graphics/treemaps/Food_Acquisition_and_Purchase_Survey_treemap.png" style="width:80%; height:auto;" alt="FoodAPS Treemap">
   </a>
 </figure>
 :::
 
 ::: {.content-visible when-format="pdf"}
-![](graphics/treemaps/Food_Acquisition_and_Purchase_Survey_(FoodAPS)_treemap.png)
+![](graphics/treemaps/Food_Acquisition_and_Purchase_Survey_treemap.png)
 :::
 
 
@@ -1215,6 +1213,8 @@ In addition to examining dataset mention coverage, the report also evaluates dif
 ## Conclusion
 
 This report compares how publications referencing the Census of Agriculture are captured across Scopus, OpenAlex, and Dimensions. Each platform provides only partial coverage of relevant publications, with limited overlap between sources. Variation in indexing practices, topic classification systems, and metadata availability contributes to differences in which publications, research topics, and authors are included. These discrepancies have implications for measuring the reach and influence of federal datasets and underscore the importance of carefully evaluating citation sources when assessing research use.
+
+The current study aimed to include institution-level analysis using integrated IPEDS and MSI data, but full implementation was beyond the scope of the current work. [An appendix](appendices/app_institutions.qmd) provides preliminary documentation and visualization of institutional coverage patterns using harmonized IPEDS and MSI datasets from 2017 to 2023. These materials outline the steps to continue the analysis of institutional representation, particularly for Minority-Serving Institutions, but were not included in the primary results.
 
 \newpage
 
