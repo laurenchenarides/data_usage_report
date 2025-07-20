@@ -1,0 +1,26 @@
+---
+title: "Envisioning food and agricultural data for the future"
+subtitle: "2025 Presentations"
+page-layout: full
+css: styles.css
+listing:
+
+- id: presentation
+  contents: /presentations/presentation*.qmd
+  sort: "date asc"
+  type: grid
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  feed: false
+  fields: [title, description, date]
+
+#page-layout: full
+page-navigation: false
+title-block-banner: false
+repo-actions: false
+---
+
+:::{#presentations}
+:::
+

@@ -1,0 +1,44 @@
+---
+title: "Envisioning food and agricultural data for the future"
+subtitle: "Engaging communities to identify trusted data"
+description: "The Council on Food, Agricultural, and Resource Economcis Webinar Series"
+author: "Lauren Chenarides"
+date: June 20, 2025
+date-format: long
+format:
+  revealjs:
+    theme: white
+ #   embed-resources: true
+    slide-number: true
+    preview-links: auto
+    link-external-newwindow: true
+    citations-hover: true
+    auto-stretch: true
+    r-fit-text: true
+    center: false
+    scrollable: true
+    css: /styles.css
+    footer: Read more about our work [here](https://laurenchenarides.github.io/data_usage_report/).
+---
+## Webinar Slides
+
+<iframe src="2025.06.19%20CFARE%20Webinar.pdf" width="100%" height="600px" style="border: 1px solid #ccc;"></iframe>
+
+## Webinar Recording
+
+Watch the full recording [here](https://www.youtube.com/embed/NqCPUJQOzRA)  
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/NqCPUJQOzRA" title="C-FARE Webinar Recording" frameborder="0" allowfullscreen></iframe>
+
+## Webinar Synopsis
+
+Read a summary [here](https://www.cfare.org/items/foodandagdata)  
+<iframe src="https://www.cfare.org/items/foodandagdata" width="100%" height="500px" style="border: 1px solid #ccc;"></iframe>
+
+## Market Corner Article (June 2025)
+
+Read blog post written by Lauren Chenarides and Julia Lane [here](https://www.cfare.org/items/marketcornerjune25)  
+<iframe src="https://www.cfare.org/items/marketcornerjune25" width="100%" height="600px" style="border: 1px solid #ccc;"></iframe>
+
+::: footer
+Back to All [Talks](../presentations.qmd) or Learn More About [Democratizing Data](https://democratizingdata.ai/)
+:::

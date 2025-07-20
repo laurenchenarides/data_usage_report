@@ -1,0 +1,198 @@
+---
+title: "Engaging Editors, Researchers, and Sections in Data Democratization"
+subtitle: "AAEA 2025 — Denver, Colorado"
+description: "FAMPS Section Meeting"
+author: "Lauren Chenarides"
+date: July 27, 2025
+date-format: long
+format:
+  revealjs:
+    theme: white
+ #   embed-resources: true
+    slide-number: true
+    preview-links: auto
+    link-external-newwindow: true
+    citations-hover: true
+    auto-stretch: true
+    r-fit-text: true
+    center: false
+    scrollable: true
+    css: /styles.css
+    footer: Read more about our work [here](https://laurenchenarides.github.io/data_usage_report/).
+---
+
+
+## Background
+
+- Food and agriculture researchers face growing obstacles to using data:
+  - Limited and/or time-consuming discoverability of datasets  
+  - Barriers to access (e.g. cost, application processes, restricted use)  
+  - Lack of standards for citation, metadata, and linkage
+
+## Background
+
+- Meanwhile, demand for interoperable data-driven research is rising:
+  - Policymakers and funders want more *evidence-based* insights  
+  - Reviewers and editors are being asked to review submissions with more complex data  
+  - Early-career researchers struggle to know where or how to start
+
+
+## The Initiative
+
+This project responds by building tools that:
+
+(1) surface food + ag data (search and discovery)
+(2) connect researchers (citability)
+(3) contextualize food + ag data (metadata standardization)
+
+
+## Why This Work Matters (Big Picture)
+
+- Federal data systems are under strain
+- Financial resources are bleak
+- Many food + ag datasets are fragmented, underused, or difficult to access
+- Researchers in food + ag are missing opportunities to contribute 
+
+
+## Does This Infrastructure Already Exist?
+
+In short, no.<br>
+
+The components are there, but none are tailored specifically for food + ag.
+
+```{=html}
+<div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+
+  <a href="https://datacommons.org/" target="_blank" style="flex: 1; min-width: 200px; text-align: center; padding: 20px; background: #f4f4f4; border: 1px solid #ccc; text-decoration: none; color: #333; border-radius: 8px;">
+    Data Commons (Search for and Discover Data)
+  </a>
+
+  <a href="https://datadryad.org/" target="_blank" style="flex: 1; min-width: 200px; text-align: center; padding: 20px; background: #f4f4f4; border: 1px solid #ccc; text-decoration: none; color: #333; border-radius: 8px;">
+    Dryad (Generate Dataset DOIs)
+  </a>
+
+  <a href="https://mlcommons.org/working-groups/data/croissant/" target="_blank" style="flex: 1; min-width: 200px; text-align: center; padding: 20px; background: #f4f4f4; border: 1px solid #ccc; text-decoration: none; color: #333; border-radius: 8px;">
+    Croissant (Metadata Standardization)
+  </a>
+
+</div>
+```
+
+<br>
+
+
+## What We’re Building
+
+- Metadata & research navigation layers  
+- Linked dashboards (e.g., [USDA FAR Dashboard](https://democratizingdata.ai/tools/dashboard/food-agricultural-research/), [Digital Science Data Explorer](https://appserver.democratizingdata.ai/), [National Data Platform](https://nationaldataplatform.org/))
+- Researcher-facing tools to:
+  - Discover data sources
+  - Find collaborators (and referees!)
+  - See who funds what
+  - More...
+
+
+## Demo Video - Data Explorer
+
+<video width="100%" height="auto" controls>
+  <source src="dataset_explorer.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+## Why Food & Ag Marketing Policy Section (FAMPS)?
+
+- FAMPS researchers often rely on proprietary, restricted, or siloed data  
+- Projects increasingly integrate sources like scanner data, retail promotions, and household behavior  
+- It's not always clear what's available, who funds it, or how it’s being used
+
+**This work supports:**
+
+- Discoverability of marketing-relevant datasets  
+- Visibility into underused or emerging sources (e.g., loyalty card data, branded content, spatial pricing)  
+- Opportunities to surface funding patterns and potential collaborators  
+
+
+
+## What Data Are Researchers Actually Using?
+
+We reviewed thousands of food security publications to identify dataset usage.
+
+**Finding:**
+
+> 11 commonly used food and agriculture datasets account for **only 2%** of all research published on food security.
+
+<small>Read more [here](https://laurenchenarides.github.io/data_usage_report/report.html) and [here](presentation-cfare.qmd).</small>
+
+**So what *is* being used?**
+We’re cataloging and analyzing those patterns to inform future infrastructure needs.
+
+- Most food security research is **not** using USDA, ERS, or Census-linked datasets
+- Many are drawing on novel, proprietary, or administrative sources
+- Citation patterns suggest major discoverability and standardization gaps
+
+
+
+## Supporting the Food & Ag Marketing Policy Section
+
+- Use dashboard to find collaborators, review data usage, and find trends on topics of interest to FAMPS
+
+**Example: Specialty Crops (S-1088)**
+
+- Use dashboard metadata to explore funding trends on specialty crop research
+- Hatch renewal comment: “Expand members” → dashboard can help!
+- Meeting idea: live demo + brainstorming researchable questions
+
+
+What would FAMPS be interested in looking at? 
+
+- E.g., track session proposals, pre/post conference workshop ideas...
+
+
+## Get Involved
+
+Would you be interested in:
+
+- Reviewing draft publication?
+- Participating in tool testing?
+- Helping secure funding?
+- Validating trust standards for datasets?
+- Suggesting sub-field use cases (current focus: food security)?
+
+<small>Talk with or email me directly.</small>
+
+
+## Use Cases
+
+- Pediatric asthma + environmental exposure
+- Workforce mobility + job/skills data
+- Climate mitigation/adaptation research
+- **Food and Ag**
+
+
+
+## Thank You
+
+💬 Questions?  
+📩 <Lauren.Chenarides@colostate.edu>  
+🌐 [democratizingdata.ai](democratizingdata.ai)
+
+:::{.callout-note icon=false title="Our Vision"}
+
+To build a trusted, transparent, and researcher-informed data infrastructure that supports food and agricultural research.
+
+- Centered on usability, not just access  
+- Built with — not just for — the research community  
+- Designed to help different user communities (researchers, reviewers, and policymakers) make better decisions  
+
+A future where food and ag researchers can:
+
+- Find the right data — quickly  
+- Understand how it’s been used  
+- Trust the infrastructure behind it  
+- Build on each other’s work — not start from scratch — and get attribution  
+:::
+
+::: footer
+Back to All [Talks](../presentations.qmd) or Learn More About [Democratizing Data](https://democratizingdata.ai/)
+:::
