@@ -46,12 +46,6 @@ This project responds by building tools that:
 (3) contextualize food + ag data (metadata standardization)
 
 
-## Why This Work Matters (Big Picture)
-
-- Federal data systems are under strain
-- Financial resources are bleak
-- Many food + ag datasets are fragmented, underused, or difficult to access
-- Researchers in food + ag are missing opportunities to contribute 
 
 
 ## Does This Infrastructure Already Exist?
@@ -94,10 +88,7 @@ The components are there, but none are tailored specifically for food + ag.
 
 ## Demo Video - Data Explorer
 
-<video width="100%" height="auto" controls>
-  <source src="dataset_explorer.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/ZsKeTTLbWNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Why Food Safety & Nutrition (FSN) Section?
@@ -125,10 +116,9 @@ We reviewed thousands of food security publications to identify dataset usage.
 **So what *is* being used?**
 We’re cataloging and analyzing those patterns to inform future infrastructure needs.
 
-- Most food security research is **not** using USDA, ERS, or Census-linked datasets
+- Most food security research is **not** using USDA data
 - Many are drawing on novel, proprietary, or administrative sources
-- Citation patterns suggest major discoverability and standardization gaps
-
+- Citation practices (or lack thereof) make discoverability and standardization very difficult
 
 
 ## Supporting the Food Safety & Nutrition Section
@@ -158,6 +148,14 @@ Would you be interested in:
 - Suggesting sub-field use cases (current focus: food security)?
 
 <small>Talk with or email me directly.</small>
+
+
+## Why This Work Matters (Big Picture)
+
+- Federal data systems are under strain
+- Financial resources are bleak
+- Many food + ag datasets are fragmented, underused, or difficult to access
+- Researchers in food + ag are missing opportunities to contribute 
 
 
 ## Use Cases
