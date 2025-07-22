@@ -1,6 +1,6 @@
 ---
-title: "Engaging Editors, Researchers, and Sections in Data Democratization"
-subtitle: "AAEA 2025 — Denver, Colorado"
+title: "Dataset Search & Discovery"
+subtitle: "<b>Initial findings & opportunities to collaborate</b> <br> AAEA 2025 — Denver, Colorado"
 description: "AJAE Editorial Board Meeting"
 author: "Lauren Chenarides"
 date: July 27, 2025
@@ -8,7 +8,7 @@ date-format: long
 format:
   revealjs:
     theme: white
- #   embed-resources: true
+    # embed-resources: true
     slide-number: true
     preview-links: auto
     link-external-newwindow: true
@@ -16,173 +16,159 @@ format:
     auto-stretch: true
     r-fit-text: true
     center: false
+    smaller: true
     scrollable: true
     css: /styles.css
-    footer: Read more about our work [here](https://laurenchenarides.github.io/data_usage_report/).
+    # footer: Read more about USDA data usage [here](https://laurenchenarides.github.io/data_usage_report/).
 ---
 
+## Who uses USDA data, and how?
 
-## Background
-
-- Food and agriculture researchers face growing obstacles to using data:
-  - Limited and/or time-consuming discoverability of datasets  
-  - Barriers to access (e.g. cost, application processes, restricted use)  
-  - Lack of standards for citation, metadata, and linkage
-
-## Background
-
-- Meanwhile, demand for interoperable data-driven research is rising:
-  - Policymakers and funders want more *evidence-based* insights  
-  - Reviewers and editors are being asked to review submissions with more complex data  
-  - Early-career researchers struggle to know where or how to start
-
-
-## The Initiative
-
-This project responds by building tools that:
-
-(1) surface food + ag data (search and discovery)
-(2) connect researchers (citability)
-(3) contextualize food + ag data (metadata standardization)
-
-
-## Does This Infrastructure Already Exist?
-
-In short, no.<br>
-
-The components are there, but none are tailored specifically for food + ag.
-
-```{=html}
-<div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
-
-  <a href="https://datacommons.org/" target="_blank" style="flex: 1; min-width: 200px; text-align: center; padding: 20px; background: #f4f4f4; border: 1px solid #ccc; text-decoration: none; color: #333; border-radius: 8px;">
-    Data Commons (Search for and Discover Data)
-  </a>
-
-  <a href="https://datadryad.org/" target="_blank" style="flex: 1; min-width: 200px; text-align: center; padding: 20px; background: #f4f4f4; border: 1px solid #ccc; text-decoration: none; color: #333; border-radius: 8px;">
-    Dryad (Generate Dataset DOIs)
-  </a>
-
-  <a href="https://mlcommons.org/working-groups/data/croissant/" target="_blank" style="flex: 1; min-width: 200px; text-align: center; padding: 20px; background: #f4f4f4; border: 1px solid #ccc; text-decoration: none; color: #333; border-radius: 8px;">
-    Croissant (Metadata Standardization)
-  </a>
-
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="dashboard.png" style="max-width: 100%; max-height: 750px;" />
 </div>
-```
 
-<br>
+<small>We searched a large publication corpus (Dimensions) to find mentions of <b>11 USDA datasets</b> and found that <b>17,311 authors</b> mentioned these datasets across <b>8,290 publications</b> in <b>1,664 journals</b>.</small>
 
+:::{.callout-note title="Details about this exercise"}
 
-## What We’re Building
+Searched articles published between 2015-2025.
 
-- Metadata & research navigation layers  
-- Linked dashboards (e.g., [USDA FAR Dashboard](https://democratizingdata.ai/tools/dashboard/food-agricultural-research/), [Digital Science Data Explorer](https://appserver.democratizingdata.ai/), [National Data Platform](https://nationaldataplatform.org/))
-- Researcher-facing tools to:
-  - Discover data sources
-  - Find collaborators (and referees!)
-  - See who funds what
-  - More...
+Data source: Dimensions via Google BigQuery
 
+Datasets searched:
 
-## Demo Video - Data Explorer
+1. Agricultural Resource Management Survey (ARMS)
+2. Current Population Survey Food Security Supplement
+3. Farm to School Census
+4. Information Resources, Inc. (IRI) InfoScan (through USDA TPAA)
+5. NASS Census of Agriculture
+6. Tenure, ownership, and transition of agricultural land (TOTAL) survey
+7. Food Access Research Atlas
+8. Food Acquisition and Purchase Survey
+9. Household Food Security Survey Module
+10. Local Food Marketing Practices Survey
+11. Quarterly Food at Home Price Database
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/ZsKeTTLbWNA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+Mentions of datasets can be found in publications by applying ML models and other methods.
 
+References:
 
-## Why AJAE?
+- [*Harvard Data Science Review 2024 Democratizing Data: Discovering Data Use and Value for Research and Policy* Special Issue]( https://hdsr.mitpress.mit.edu/specialissue4)
 
-- High volume of applied research with policy relevance  
-- Referees increasingly being asked to review submissions using linked or nontraditional datasets  
-- Gaps in data transparency can slow publication process or cause confusion  
-- Editors have no shared tools to support “data-aware” peer review  
+- [Hausen, Ryan, and Hosein Azarbonyad. "Discovering data sets through machine learning: An ensemble approach to uncovering the prevalence of government-funded data sets." *Harvard Data Science Review* Special Issue 4 (2024).]( https://hdsr.mitpress.mit.edu/pub/ou89oggk/release/7?readingCollection=a6db7dff)
 
-**We’re seeing:**
+- Chenarides, L., Bryan, C., & Ladislau, R. (2025). [*Methodology for comparing citation database coverage of dataset usage.*](https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html)
+:::
 
-- Sourcing for food + ag datasets in replication appendices not always available
-- New datasets being used for research published in high-quality journals - how do we validate these?
-- Growing need for guidance around restricted-use and proprietary data citation
+::: footer
+Work was funded by the US Department of Agricultural (Economic Research Service and National Agricultural Statistics Service), the National Center for Science and Engineering Statistics, and the National Center for Education Statistics. Read more about this work [here.](https://laurenchenarides.github.io/data_usage_report/report.html)
+:::
 
+::: {.notes}
+Many of us depend on publicly available data to answer food and agricultural research questions.
+:::
 
-## What Data Are Researchers Actually Using?
+## Zooming *in*: AJAE
 
-We reviewed thousands of food security publications to identify dataset usage.
+![](dashboard_topics_ajae.png)
 
-**Finding:**
+<small>Only <b>1.06% of publications</b> that mention these 11 USDA datasets appear in AJAE (2015–2025). 
+About <b>11% of these articles</b> are published on *food security-related topics*, e.g., SNAP. *The word cloud shows the frequency of associated topics — larger words indicate more publications on that topic.* </small>
 
-> 11 commonly used food and agriculture datasets account for **only 2%** of all research published on food security.
-
-<small>Read more [here](https://laurenchenarides.github.io/data_usage_report/report.html) and [here](presentation-cfare.qmd).</small>
-
-**So what *is* being used?**
-We’re cataloging and analyzing those patterns to inform future infrastructure needs.
-
-- Most food security research is **not** using USDA data
-- Many are drawing on novel, proprietary, or administrative sources
-- Citation practices (or lack thereof) make discoverability and standardization very difficult
-
-
-
-## Supporting Editors & Reviewers
-
-We’re building tools and infrastructure to help editors and reviewers navigate a data-rich publication landscape.  
-
-We’re looking for feedback to help make these resources useful in real editorial contexts.
-
-Current project outputs of interest:
-
-- Draft technical paper for publication  
-- Early access to tools  
-
-## Get Involved
-
-Would you be interested in:
-
-- Reviewing draft publication?
-- Participating in tool testing?
-- Helping inform what reviewer guidance (“data referees”) could look like?
-- Validating trust standards for datasets?
-- Suggesting sub-field use cases (current focus: food security)?
-
-<small>Talk with or email me directly.</small>
+::: footer
+Access the Democratizing Data FAR Data Dashboard [here](https://democratizingdata.ai/tools/dashboard/dimensions/food-agricultural-research/#dashboard-container). 
+:::
 
 
-## Why This Work Matters (Big Picture)
+## Zooming *out*: USDA data and food security-related research
 
-- Federal data systems are under strain
-- Financial resources are bleak
-- Many food + ag datasets are fragmented, underused, or difficult to access
-- Researchers in food + ag are missing opportunities to contribute 
+![](dashboard_food_insecurity.png)
+<small>Among the topics associated with publications mentioning USDA datasets across all journals, **food insecurity** is one of the most frequently occurring.</small>
 
-## Use Cases
+::: footer
+Access the Democratizing Data FAR Data Dashboard [here](https://democratizingdata.ai/tools/dashboard/dimensions/food-agricultural-research/#dashboard-container). 
+:::
 
-- Pediatric asthma + environmental exposure
-- Workforce mobility + job/skills data
-- Climate mitigation/adaptation research
-- **Food and Ag**
+## USDA data and food security-related research, over time (2015-2024)
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="usda_dataset_mention_growth.png" style="max-width: 75%; max-height: 750px;" />
+</div>
+
+**Takeaways:**
+
+- Author use has grown more than 6x, suggesting strong interest across the research community  
+- Publications have grown, but pace has leveled off slightly in recent years  
+- Institutional growth is slower, perhaps due to potential concentration or reuse within organizations  
+
+## What proportion of *all* food security-related research uses these datasets?
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="usda_dataset_proportion.png" style="max-width: 75%; max-height: 750px;" />
+</div>
+
+
+:::{.callout-note title="Details about this figure"}
+This figure compares:
+
+- Denominator: All publications in the Dimensions database (via Google BigQuery) that mention food security–related terms, published between 2015 and 2025, excluding preprints and conditional on at least one US-affiliated author.
+- Numerator: The subset of those publications that also mention one or more USDA datasets.
+
+Terms used to define food security research include: “food security”, “food insecurity”, “food security status”, “Supplemental Nutrition Assistance Program (SNAP)”, “Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)”, “food access”, “food availability”, “prevalence of food insecurity”, “food pantries”, and “Nutrition Assistance Program”.
+
+> *Food security–related research accounts for ~19% of all published work in this sample (2015–2025).*
+
+Data source: Dimensions via Google BigQuery
+:::
+
+## What these trends tells us
+
+These USDA datasets are important -- accounting for ~21%, on average, of food security-related publications from 2015-2015.
+
+But, ~79% of food security research relies on *other* data sources (or doesn't name the data at all).
+
+So... what other datasets are researchers using for food security-related research?
+
+
+## AJAE-specific discussion questions 
+
+- Are there opportunities to encourage better practices for consistent dataset mentions in our editorial and review processes? 
+
+> [e.g., Wiley's Data Citation Policy](https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html)
+
+- Are there specific topics--aside from food security--where data transparency or reproducibility seems like a bigger issue?
+
+
+
+- As we identify more datasets, we can also identify the researchers using them and potentially build networks of topic experts, reviewers, and collaborators around them.
+
+> Potential to partner ag economists + data scientists
+
+At this stage, there's a lot more we *could* do — but we would need resources and the right partners.
 
 
 ## Thank You
 
-💬 Questions?  
-📩 <Lauren.Chenarides@colostate.edu>  
+💬 Questions?\
+📩 [Lauren.Chenarides\@colostate.edu](mailto:Lauren.Chenarides@colostate.edu){.email}\
 🌐 [democratizingdata.ai](democratizingdata.ai)
 
-:::{.callout-note icon=false title="Our Vision"}
+<!-- ::: {.callout-note icon="false" title="Our Vision"} -->
+<!-- To build a trusted, transparent, and researcher-informed data infrastructure that supports food and agricultural research. -->
 
-To build a trusted, transparent, and researcher-informed data infrastructure that supports food and agricultural research.
+<!-- -   Centered on usability, not just access\ -->
+<!-- -   Built with — not just for — the research community\ -->
+<!-- -   Designed to help different user communities (researchers, reviewers, and policymakers) make better decisions -->
 
-- Centered on usability, not just access  
-- Built with — not just for — the research community  
-- Designed to help different user communities (researchers, reviewers, and policymakers) make better decisions  
+<!-- A future where food and ag researchers can: -->
 
-A future where food and ag researchers can:
-
-- Find the right data — quickly  
-- Understand how it’s been used  
-- Trust the infrastructure behind it  
-- Build on each other’s work — not start from scratch — and get attribution  
-:::
+<!-- -   Find the right data — quickly\ -->
+<!-- -   Understand how it’s been used\ -->
+<!-- -   Trust the infrastructure behind it\ -->
+<!-- -   Build on each other’s work — not start from scratch — and get attribution\ -->
+<!-- ::: -->
 
 ::: footer
-Back to All [Talks](../presentations.qmd) or Learn More About [Democratizing Data](https://democratizingdata.ai/)
+Back to All [Talks](../presentations.qmd).
 :::
