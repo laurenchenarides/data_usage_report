@@ -6,3 +6,8 @@
   padding: 10px;
   margin: 10px 0;
 }
+
+/* Make slide titles (h2 by default) smaller */
+.reveal h2 {
+  font-size: 1.5em !important;  /* You can adjust this size */
+}
