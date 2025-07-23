@@ -210,7 +210,7 @@ $\rightarrow$ Currently working on answering this. Requires LLMs trained on full
 
 - Last year, we discussed online SIs...what about one selecting articles featuring a core dataset as the common thread?
 
-- Aside from food security, what other topics where data transparency or reproducibility may be of interest?
+- Aside from food security, what other topics to understand data visibility may be of interest?
 
 **Broader scope:**
 
