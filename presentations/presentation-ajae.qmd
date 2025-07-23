@@ -99,9 +99,12 @@ Access the Democratizing Data FAR Data Dashboard [here](https://democratizingdat
 :::
 
 
-## Zooming *out*: USDA data and food security-related research
+## Zooming *out*: All journals
+<!-- USDA data and food security-related research -->
 
-<span style="font-size: 85%;">Among the topics associated with publications mentioning USDA datasets across all journals, **food insecurity** is one of the most frequently occurring.</span>
+<span style="font-size: 85%;">**Food insecurity** is one of the most frequently occurring topics among publications mentioning selected USDA datasets across all journals.<br>
+$\rightarrow$ *What portion of all food security-related research do these datasets account for?*
+</span>
 
 ![](dashboard_food_insecurity.png)
 
@@ -109,32 +112,32 @@ Access the Democratizing Data FAR Data Dashboard [here](https://democratizingdat
 Access the Democratizing Data FAR Data Dashboard [here](https://democratizingdata.ai/tools/dashboard/dimensions/food-agricultural-research/#dashboard-container). 
 :::
 
-## USDA dataset mentions have increased significantly among food security-related research over time.
+<!-- ## USDA dataset mentions have increased significantly among food security-related research over time. -->
 
-<div style="display: flex; justify-content: center; align-items: center;">
-  <img src="usda_dataset_mention_growth.png" style="max-width: 75%; max-height: 750px;" />
-</div>
+<!-- <div style="display: flex; justify-content: center; align-items: center;"> -->
+<!--   <img src="usda_dataset_mention_growth.png" style="max-width: 75%; max-height: 750px;" /> -->
+<!-- </div> -->
 
-**Takeaways:**
+<!-- **Takeaways:** -->
 
-- Authors have grown more than 6x, suggesting strong interest across the research community  
-- Publications have grown, but pace has leveled off slightly in recent years  
-- Institutional growth is slower, perhaps due to potential concentration within organizations  
+<!-- - Authors have grown more than 6x, suggesting strong interest across the research community   -->
+<!-- - Publications have grown, but pace has leveled off slightly in recent years   -->
+<!-- - Institutional growth is slower, perhaps due to potential concentration within organizations   -->
 
-:::{.callout-note title="Details about this figure"}
-This figure plots an index of unique publications, authors, or institutions mentioning the selected USDA datasets from 2015-2024, where 2015 is the base year (index = 1). For example, there were 595 publications in 2024 and 134 in 2015, so the index is 595 / 134 = 4.44.
+<!-- :::{.callout-note title="Details about this figure"} -->
+<!-- This figure plots an index of unique publications, authors, or institutions mentioning the selected USDA datasets from 2015-2024, where 2015 is the base year (index = 1). For example, there were 595 publications in 2024 and 134 in 2015, so the index is 595 / 134 = 4.44. -->
 
-Terms used to define food security research include: “food security”, “food insecurity”, “food security status”, “Supplemental Nutrition Assistance Program (SNAP)”, “Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)”, “food access”, “food availability”, “prevalence of food insecurity”, “food pantries”, and “Nutrition Assistance Program”.
+<!-- Terms used to define food security research include: “food security”, “food insecurity”, “food security status”, “Supplemental Nutrition Assistance Program (SNAP)”, “Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)”, “food access”, “food availability”, “prevalence of food insecurity”, “food pantries”, and “Nutrition Assistance Program”. -->
 
-Data source: Dimensions via Google BigQuery
-:::
+<!-- Data source: Dimensions via Google BigQuery -->
+<!-- ::: -->
 
-::: {.notes}
-First, establishing that USDA datasets are integral to food security-related research.
-:::
+<!-- ::: {.notes} -->
+<!-- Establish that USDA datasets are integral to food security-related research. -->
+<!-- ::: -->
 
 
-## However, publications mentioning selected USDA datasets only account for 21% of all food security-related publications.
+## Publications mentioning selected USDA datasets only account for 21% of all food security-related publications.
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <img src="usda_dataset_proportion.png" style="max-width: 75%; max-height: 750px;" />
@@ -155,10 +158,10 @@ Data source: Dimensions via Google BigQuery
 :::
 
 ::: {.notes}
-Second, we wanted to determine what proportion of *all* food security-related research mentions these datasets.
+We wanted to determine what proportion of *all* food security-related research mentions these datasets.
 :::
 
-## Taken together: Food security-related research is growing, but USDA dataset mentions are leveling off.
+## Mentions of selected USDA datasets are leveling off as food security-related research continues to grow. 
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <img src="usda_dataset_all_fs_pubs.png" style="max-width: 75%; max-height: 750px;" />
@@ -177,11 +180,11 @@ Data source: Dimensions via Google BigQuery
 :::
 
 
-## What these trends tells us
+## What these trends tell us
 
-These USDA datasets are important -- accounting for ~21%, on average, of food security-related publications from 2015-2024.
+These USDA datasets are important, accounting for ~21%, on average, of food security-related publications from 2015-2024.
 
-But, ~79% of food security research relies on *other* data sources (or doesn't name the data at all).
+But, ~79% of food security-related research relies on *other* data sources (or doesn't name the data at all).
 
 Next question: **What other datasets are researchers using for food security-related research?**
 
@@ -210,7 +213,7 @@ $\rightarrow$ Currently working on answering this. Requires LLMs trained on full
 
 - Last year, we discussed online SIs...what about one selecting articles featuring a core dataset as the common thread?
 
-- Aside from food security, what other topics to understand data visibility may be of interest?
+- Aside from food security, what other topics may be of interest to understand data visibility?
 
 **Broader scope:**
 
