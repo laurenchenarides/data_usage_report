@@ -137,7 +137,7 @@ This example will show:
 <br>
 <small>*Food security-related research includes articles with topics such as: “food security,” “SNAP,” “WIC,” “food access,” “food availability,” “food insecurity prevalence,” and “Nutrition Assistance Program.”</small>
 
-## Mentions of USDA datasets have grown over time in food security–related research.
+## Mentions of selected USDA datasets have grown over time in food security–related research.
 
 ::: {.columns}
 
