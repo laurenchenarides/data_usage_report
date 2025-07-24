@@ -335,7 +335,11 @@ Data source: Dimensions via Google BigQuery
 💬 Questions?\
 <br>
 📩 [Lauren.Chenarides\@colostate.edu](mailto:Lauren.Chenarides@colostate.edu){.email}\
-🌐 [democratizingdata.ai](democratizingdata.ai)
+🌐 [democratizingdata.ai](democratizingdata.ai)\
+<a href="https://github.com/laurenchenarides/data_usage_report/tree/main/code" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-Repository-black?logo=github" alt="GitHub Repo" />
+</a>
+
 :::
 
 ::: {.column width="50%"}
