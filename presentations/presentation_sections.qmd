@@ -238,7 +238,7 @@ $\rightarrow$ Answering this requires access to full-text data and LLMs trained 
     Click to enlarge
   </div>
 </div>
-<small>*Food security–related research accounts for ~19% of all published work in this sample (2015–2025).*</small>
+<small>*Food security–related research accounts for 6.5% of all published work in this sample (2015–2025).*</small>
 :::
 
 :::
