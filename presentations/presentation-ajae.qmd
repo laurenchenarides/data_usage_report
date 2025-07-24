@@ -124,8 +124,8 @@ Access the Democratizing Data FAR Data Dashboard [here](https://democratizingdat
 
 ## Use case: A new food security submission arrives. Who should review it?
 
-<span style="font-size: 85%;">Food security–related articles make up 11% of AJAE publications in this sample.<br>
-The dashboard supports topic filtering to identify active authors and view their broader publishing activity.</span>
+<span style="font-size: 85%;">Within this sample, **food security–related articles** make up **11% of AJAE publications**.<br>
+The dashboard supports topic filtering to identify active authors and view their broader publishing activity, narrowing the scope of possible referees.</span>
 
 ::: {.columns}
 ::: {.column width="50%"}
@@ -135,7 +135,7 @@ The dashboard supports topic filtering to identify active authors and view their
 
 ::: {.column width="50%"}
 ![](dashboard_authors_ajae.png)
-<small>Additional customized filtering is available to search by author name, among other key metadata fields.</small>
+<small>You can also apply custom filters, such as searching by author name or other key metadata fields.</small>
 :::
 
 :::
@@ -165,18 +165,18 @@ Access the Democratizing Data FAR Data Dashboard [here](https://democratizingdat
 
 - We can only track what we can see. If authors are not writing about the datasets they use we won't see it. Most authors don't cite their data.
 
-- Publication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) -- available from [OpenAlexAPI](https://docs.openalex.org/api-entities/works/work-object) or by partnering with [Digital Science (Dimensions)](https://docs.dimensions.ai/dsl/datasource-publications.html).
-
 - As an author, I find myself wanting better tools to find comparable studies using the same dataset -- being able to search *within* publications that share a dataset is useful.
+
+- Publication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) -- available from [OpenAlexAPI](https://docs.openalex.org/api-entities/works/work-object) or by partnering with [Digital Science (Dimensions)](https://docs.dimensions.ai/dsl/datasource-publications.html).
 
 
 ## What could be done from here
 
-*At this stage, there's a lot more we <b>could</b> do — but we would need resources and the right partners.*
+*At this stage, there's a lot more we <b>could</b> do — but we would need resources and interested collaborators.*
 
 **At AJAE:** 
 
-- Last year, we discussed online SIs...what about one selecting articles featuring a core dataset as the common thread?
+- Last year, we discussed the idea of online special issues. One option could be curating a set of articles that all use the same core dataset.
 
 - Beyond food security, what other topics may be of interest to understand data usage?
 

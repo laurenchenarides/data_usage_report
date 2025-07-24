@@ -24,22 +24,45 @@ format:
 
 ## Setting
 
-Over the past several months, I've been working on a project that looks at how USDA datasets are mentioned in research publications.
+Over the past several months, I've been working on a project that looks at <br><span style="color: purple;">how USDA datasets are mentioned in research publications</span>.
+<br> 
+<br> 
 
 In the following slides, I'd like to share some of these initial findings and ask:
 <br> 
 
-**What would be useful for AAEA Sections?**
+**What would be useful for AAEA section members?**
+<br>
+<br>
 
-Possible questions to reflect on as you're listening...
+::: {.callout-note icon=false title="Possible questions to reflect on as you're listening"}
+- Are there emerging research topics that could inform next year’s track session proposals?
+- Could this type of platform help identify potential collaborators or build working groups?
+- What can metadata on funding and topic trends tell us about who is supporting research in your section’s area of focus?
+:::
 
-<!-- - Could better visibility into dataset usage help with reviewer selection? -->
-<!-- - Are there recurring data-related challenges in the peer-review process? -->
-<!-- - Are there opportunities to encourage better practices for dataset mentions/citations in our editorial and review processes? -->
-<!-- - How might this work inform benchmarking AJAE publications against other field journals? -->
+## Why USDA data?
 
+USDA ERS and NASS were interested in tracking how their datasets are referenced in research papers.
 
-## Who uses USDA data, and how?
+Two dashboards that track <em>mentions</em>* of **11 key datasets** in articles were built.
+
+This helps:
+
+- Summarize dataset usage over time
+- Identify where and in what topics USDA data shows up
+- Highlight research across areas like food security, crop production, and others...
+
+These 11 datasets were selected based on relevance and input from USDA staff and researchers.
+
+<br>
+<small>*A dataset mention refers to an instance in which a specific dataset is referenced, cited, or named within a research publication. This can occur in various parts of the text, such as the abstract, methods, data section, footnotes, or references, and typically indicates that the dataset was used, analyzed, or discussed in the study.</small>
+
+::: footer
+Read more about this project [here](https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html).
+:::
+
+## Who uses USDA data...
 
 <span style="font-size: 85%;">We searched a large publication corpus (Dimensions) to find mentions of <b>11 USDA datasets</b> and found that <b>17,311 authors</b> mentioned these datasets across <b>8,290 publications</b> in <b>1,664 journals</b>.</span>
 
@@ -71,11 +94,11 @@ Mentions of datasets can be found in publications by applying ML models and othe
 
 References:
 
-- [*Harvard Data Science Review 2024 Democratizing Data: Discovering Data Use and Value for Research and Policy* Special Issue]( https://hdsr.mitpress.mit.edu/specialissue4)
+- [Harvard Data Science Review. (2024). *Democratizing Data: Discovering Data Use and Value for Research and Policy*. Special Issue 4.](https://hdsr.mitpress.mit.edu/specialissue4)
 
-- [Hausen, Ryan, and Hosein Azarbonyad. "Discovering data sets through machine learning: An ensemble approach to uncovering the prevalence of government-funded data sets." *Harvard Data Science Review* Special Issue 4 (2024).]( https://hdsr.mitpress.mit.edu/pub/ou89oggk/release/7?readingCollection=a6db7dff)
+- [Hausen, Ryan, and Hosein Azarbonyad. (2024). "Discovering data sets through machine learning: An ensemble approach to uncovering the prevalence of government-funded data sets." *Harvard Data Science Review*, Special Issue 4.]( https://hdsr.mitpress.mit.edu/pub/ou89oggk/release/7?readingCollection=a6db7dff)
 
-- Chenarides, L., Bryan, C., & Ladislau, R. (2025). [*Methodology for comparing citation database coverage of dataset usage.*](https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html)
+- [Chenarides, L., Bryan, C., & Ladislau, R. (2025). *Methodology for comparing citation database coverage of dataset usage.*](https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html)
 :::
 
 ::: footer
@@ -86,36 +109,32 @@ Work was funded by the US Department of Agricultural (Economic Research Service 
 Many of us depend on publicly available data to answer food and agricultural research questions.
 :::
 
-## Why USDA data? And, why these 11 datasets?
+## ...and how?
 
-USDA ERS and NASS were interested in tracking how their datasets are referenced in research papers.
-
-Two dashboards that track <em>mentions</em>* of 11 key datasets in articles were built.
-
-This helps:
-
-- Summarize dataset usage over time
-- Identify where and in what topics USDA data shows up
-- Highlight research across areas like food security, crop production, and others...
-
-These 11 datasets were selected based on relevance and input from USDA staff and researchers.
-
-<br>
-<small>*A dataset mention refers to an instance in which a specific dataset is referenced, cited, or named within a research publication. This can occur in various parts of the text, such as the abstract, methods, data section, footnotes, or references, and typically indicates that the dataset was used, analyzed, or discussed in the study.</small>
-
-
-## Selected USDA datasets are commonly used for food security-related
-
-<span style="font-size: 85%;">**Food insecurity** is one of the most frequently occurring topics among publications mentioning selected USDA datasets across all journals.<br>
-$\rightarrow$ *What portion of all food security-related research do these datasets account for?*
-</span>
+<span style="font-size: 85%;">**Food insecurity** is one of the most frequently occurring topics among publications mentioning selected USDA datasets across all journals.</span>
 
 ![](dashboard_food_insecurity.png)
 <small>*The word cloud shows the frequency of associated topics — larger words indicate more publications on that topic.* </small>
 
+
 ::: footer
 Access the Democratizing Data FAR Data Dashboard [here](https://democratizingdata.ai/tools/dashboard/dimensions/food-agricultural-research/#dashboard-container). 
 :::
+
+## Use case: What can we observe from a focused topic area?
+
+To better understand how USDA datasets are used, we examined one area in more detail: <b>food security–related research</b>.*
+
+This example will show:
+
+1. The extent to which selected USDA datasets are mentioned within a topic area
+
+2. The share of food security research that explicitly mentions these datasets 
+
+3. How dataset usage has changed over time relative to all published work in this area
+
+<br>
+<small>*Food security-related research includes articles with topics such as: “food security,” “SNAP,” “WIC,” “food access,” “food availability,” “food insecurity prevalence,” and “Nutrition Assistance Program.”</small>
 
 ## USDA dataset mentions have increased significantly among food security-related research over time.
 
@@ -194,32 +213,49 @@ Next question: **What other datasets are researchers using for food security-rel
 
 $\rightarrow$ Currently working on answering this. Requires LLMs trained on full-text data.
 
-
-## What I've learned 
-
-- Publication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) -- available from [OpenAlexAPI](https://docs.openalex.org/api-entities/works/work-object) or by partnering with [Dimensions](https://docs.dimensions.ai/dsl/datasource-publications.html).
-
-- As an author, I find myself wanting better tools to find information that can help me benchmark measures and methods (especially ones that I want to replicate) -- being able to search *within* publications that share a dataset is useful.
+::: {.notes}
+**Importance:** Additional analysis that helps clarify patterns in data use can inform the tradeoffs between using trusted datasets (e.g., selected USDA datasets) and novel or emerging data sources (yet to be validated by the community)
+:::
 
 ## Reflecting on value to AAEA Sections
+
+:::{.callout-note icon=false title="Questions to consider"}
+- Are there emerging research topics that could inform next year’s track session proposals?
+- Could this type of platform help identify potential collaborators or build working groups?
+- What can metadata on funding and topic trends tell us about who is supporting research in your section’s area of focus?
+:::
+
+**What I've learned:** 
+
+- We can only track what we can see. If authors are not writing about the datasets they use we won't see it. Most authors don't cite their data.
+
+- As an author, I find myself wanting better tools to find comparable studies using the same dataset -- being able to search *within* publications that share a dataset is useful.
+
+- Publication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) -- available from [OpenAlexAPI](https://docs.openalex.org/api-entities/works/work-object) or by partnering with [Digital Science (Dimensions)](https://docs.dimensions.ai/dsl/datasource-publications.html).
 
 
 ## What could be done from here
 
 *At this stage, there's a lot more we <b>could</b> do — but we would need resources and the right partners.*
 
-**At AJAE:** 
+**For you:** 
 
-- Last year, we discussed online SIs...what about one selecting articles featuring a core dataset as the common thread?
+- Use dashboard to find collaborators, review data usage, and find trends on topics of interest
+
+- What would FSN be interested in looking at? 
+  - E.g., track session proposals, pre/post conference workshop ideas...
 
 - Aside from food security, what other topics may be of interest to understand data visibility?
 
-**Broader scope:**
+**For our research community:**
 
 - If we can identify the "other" datasets (via LLMs, for example), we can also identify the researchers using them and potentially build networks of topic experts, reviewers, and collaborators around them.
 
-
-<!-- > [e.g., Wiley's Data Citation Policy](https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html) -->
+::: {.callout-note icon=false title="Example: Specialty Crops (S-1088)"}
+- Use dashboard metadata to explore funding trends on specialty crop research
+- Hatch renewal comment: “Expand members” → dashboard can help!
+- Meeting idea: live demo + brainstorming researchable questions
+:::
 
 
 
