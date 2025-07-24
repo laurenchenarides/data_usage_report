@@ -11,7 +11,7 @@
     "href": "presentations.html",
     "title": "Envisioning food and agricultural data for the future",
     "section": "",
-    "text": "Envisioning food and agricultural data for the future\n\n\nThe Council on Food, Agricultural, and Resource Economcis Webinar Series\n\n\n\nJun 20, 2025\n\n\n\n\n\n\n\n\n\n\n\nDataset Search & Discovery\n\n\nAJAE Editorial Board Meeting\n\n\n\nJul 27, 2025\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "Envisioning food and agricultural data for the future\n\n\nThe Council on Food, Agricultural, and Resource Economcis Webinar Series\n\n\n\nJun 20, 2025\n\n\n\n\n\n\n\n\n\n\n\nDataset Search & Discovery\n\n\nAJAE Editorial Board Meeting\n\n\n\nJul 27, 2025\n\n\n\n\n\n\n\n\n\n\n\nDataset Search & Discovery\n\n\nAAEA Section Meetings\n\n\n\nJul 27, 2025\n\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Presentations"
     ]
@@ -49,14 +49,14 @@
     "href": "presentations/presentation-ajae.html#use-case-a-new-food-security-submission-arrives.-who-should-review-it",
     "title": "Dataset Search & Discovery",
     "section": "Use case: A new food security submission arrives. Who should review it?",
-    "text": "Use case: A new food security submission arrives. Who should review it?\nWithin this sample, food security–related articles make up 11% of AJAE publications. The dashboard supports topic filtering to identify active authors and view their broader publishing activity, narrowing the scope of possible referees.\n\n\n Filter by topic, publication title, or dataset directly from the dashboard.\n\n You can also apply custom filters, such as searching by author name or other key metadata fields.\n\n\nCould better visibility into dataset usage help with reviewer selection?\n\n\nAccess the Democratizing Data FAR Data Dashboard here."
+    "text": "Use case: A new food security submission arrives. Who should review it?\nWithin this sample, food security–related articles make up 11% of AJAE publications. The dashboard supports topic filtering to identify active authors and view their broader publishing activity, narrowing the scope of possible referees.\n\n\n Filter by topic, publication title, or dataset directly from the dashboard.\n\n You can also apply custom filters, such as searching by author name or other key metadata fields.\n\nThis example is one possible application of this type of metadata integrated into an interactive user interface.\n\nCould better visibility into dataset usage help with reviewer selection?\n\n\nAccess the Democratizing Data FAR Data Dashboard here."
   },
   {
     "objectID": "presentations/presentation-ajae.html#reflecting-on-value-to-ajae",
     "href": "presentations/presentation-ajae.html#reflecting-on-value-to-ajae",
     "title": "Dataset Search & Discovery",
     "section": "Reflecting on value to AJAE",
-    "text": "Reflecting on value to AJAE\n\n\n\n\nQuestions to consider\n\n\n\nCould better visibility into dataset usage help with reviewer selection?\nAre there opportunities to encourage better practices for dataset mentions/citations in our editorial and review processes?\nHow might this work inform benchmarking AJAE against other field journals?\n\n\n\n\n\nWhat I’ve learned:\n\nWe can only track what we can see. If authors are not writing about the datasets they use we won’t see it. Most authors don’t cite their data.\nAs an author, I find myself wanting better tools to find comparable studies using the same dataset – being able to search within publications that share a dataset is useful.\nPublication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) – available from OpenAlexAPI or by partnering with Digital Science (Dimensions)."
+    "text": "Reflecting on value to AJAE\n\n\n\n\nQuestions to consider\n\n\n\nCould better visibility into dataset usage help with reviewer selection?\nAre there opportunities to encourage better practices for dataset mentions/citations in our editorial and review processes?\nHow might this work inform benchmarking AJAE against other field journals?\n\n\n\n\n\n\nLast year, we discussed the idea of online special issues. One option could be curating a set of articles that all use the same core dataset.  \\(\\rightarrow\\) Use the dashboard for this.\nBeyond food security, what other topics may be of interest to understand data usage?  \\(\\rightarrow\\) Use metadata for this.\nWiley already encourages data citation (see Wiley’s Data Citation Policy)  \\(\\rightarrow\\) Is it enforced? What are the metrics on compliance since implementation? Could stronger practices improve transparency?"
   },
   {
     "objectID": "presentations/presentation-ajae.html#what-could-be-done-from-here",
@@ -803,5 +803,138 @@
     "crumbs": [
       "Full Report"
     ]
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#setting",
+    "href": "presentations/presentation_sections.html#setting",
+    "title": "Dataset Search & Discovery",
+    "section": "Setting",
+    "text": "Setting\nOver the past several months, I’ve been working on a project that looks at how USDA datasets are mentioned in research publications.  \nIn the following slides, I’d like to share some of these initial findings and ask: \nWhat would be useful for AAEA section members?  \n\n\n\n\nPossible questions to reflect on as you’re listening\n\n\n\nWhat can metadata on topic trends tell us about research in your section’s area of focus?\nCould this type of platform help identify potential collaborators or build working groups?\nAre there emerging research topics that could inform next year’s track session proposals?\nWhat can metadata on funding tell us about who is supporting research in your section’s area of focus?"
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#why-usda-data",
+    "href": "presentations/presentation_sections.html#why-usda-data",
+    "title": "Dataset Search & Discovery",
+    "section": "Why USDA data?",
+    "text": "Why USDA data?\nUSDA ERS and NASS were interested in tracking how their datasets are referenced in research papers.\nTwo dashboards that track mentions* of 11 key datasets in articles were built.\nThis helps:\n\nSummarize dataset usage over time\nIdentify where and in what topics USDA data shows up\nHighlight research across areas like food security, crop production, and others…\n\nThese 11 datasets were selected based on relevance and input from USDA staff and researchers.\n *A dataset mention refers to an instance in which a specific dataset is referenced, cited, or named within a research publication. This can occur in various parts of the text, such as the abstract, methods, data section, footnotes, or references, and typically indicates that the dataset was used, analyzed, or discussed in the study.\n\nRead more about this project here."
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#who-uses-usda-data",
+    "href": "presentations/presentation_sections.html#who-uses-usda-data",
+    "title": "Dataset Search & Discovery",
+    "section": "Who uses USDA data…",
+    "text": "Who uses USDA data…\nWe searched a large publication corpus (Dimensions) to find mentions of 11 USDA datasets and found that 17,311 authors mentioned these datasets across 8,290 publications in 1,664 journals.\n\n\n\n\n\n\n\n\n\n\nDetails about this exercise\n\n\nSearched articles published between 2015-2025.\nData source: Dimensions via Google BigQuery\nDatasets searched:\n\nAgricultural Resource Management Survey (ARMS)\nCurrent Population Survey Food Security Supplement\nFarm to School Census\nInformation Resources, Inc. (IRI) InfoScan (through USDA TPAA)\nNASS Census of Agriculture\nTenure, ownership, and transition of agricultural land (TOTAL) survey\nFood Access Research Atlas\nFood Acquisition and Purchase Survey\nHousehold Food Security Survey Module\nLocal Food Marketing Practices Survey\nQuarterly Food at Home Price Database\n\nMentions of datasets can be found in publications by applying ML models and other methods.\nReferences:\n\nHarvard Data Science Review. (2024). Democratizing Data: Discovering Data Use and Value for Research and Policy. Special Issue 4.\nHausen, Ryan, and Hosein Azarbonyad. (2024). “Discovering data sets through machine learning: An ensemble approach to uncovering the prevalence of government-funded data sets.” Harvard Data Science Review, Special Issue 4.\nChenarides, L., Bryan, C., & Ladislau, R. (2025). Methodology for comparing citation database coverage of dataset usage.\n\n\n\n\n\n\nWork was funded by the US Department of Agricultural (Economic Research Service and National Agricultural Statistics Service), the National Center for Science and Engineering Statistics, and the National Center for Education Statistics.\n\n\nMany of us depend on publicly available data to answer food and agricultural research questions."
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#and-how",
+    "href": "presentations/presentation_sections.html#and-how",
+    "title": "Dataset Search & Discovery",
+    "section": "…and how?",
+    "text": "…and how?\nFood insecurity is one of the most frequently occurring topics among publications mentioning selected USDA datasets across all journals.\n The word cloud shows the frequency of associated topics — larger words indicate more publications on that topic. \n\nAccess the Democratizing Data FAR Data Dashboard here."
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#use-case-what-can-we-observe-from-a-focused-topic-area",
+    "href": "presentations/presentation_sections.html#use-case-what-can-we-observe-from-a-focused-topic-area",
+    "title": "Dataset Search & Discovery",
+    "section": "Use case: What can we observe from a focused topic area?",
+    "text": "Use case: What can we observe from a focused topic area?\nTo better understand how USDA datasets are used, we examined one area in more detail: food security–related research.*\nThis example will show:\n\nThe extent to which selected USDA datasets are mentioned within a topic area over time\nThe share of food security-related research that explicitly mentions these datasets\nHow USDA dataset usage has changed over time relative to all published work in this area\n\n *Food security-related research includes articles with topics such as: “food security,” “SNAP,” “WIC,” “food access,” “food availability,” “food insecurity prevalence,” and “Nutrition Assistance Program.”"
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#usda-dataset-mentions-have-increased-significantly-among-food-security-related-research-over-time.",
+    "href": "presentations/presentation_sections.html#usda-dataset-mentions-have-increased-significantly-among-food-security-related-research-over-time.",
+    "title": "Dataset Search & Discovery",
+    "section": "USDA dataset mentions have increased significantly among food security-related research over time.",
+    "text": "USDA dataset mentions have increased significantly among food security-related research over time.\n\n\n\nAuthors have grown more than 6x, suggesting strong interest across the research community\nPublications have grown, but pace has leveled off slightly in recent years\nInstitutional growth is slower, perhaps due to potential concentration within organizations\n\n\n\n  \n\nClick to enlarge\n\n\n\n\n\n\n\n\n\n\nDetails about this figure\n\n\nThis figure plots an index of unique publications, authors, or institutions mentioning the selected USDA datasets from 2015-2024, where 2015 is the base year (index = 1). For example, there were 595 publications in 2024 and 134 in 2015, so the index is 595 / 134 = 4.44.\nTerms used to define food security research include: “food security”, “food insecurity”, “food security status”, “Supplemental Nutrition Assistance Program (SNAP)”, “Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)”, “food access”, “food availability”, “prevalence of food insecurity”, “food pantries”, and “Nutrition Assistance Program”.\nData source: Dimensions via Google BigQuery\n\n\n\n\n\nEstablish that USDA datasets are integral to food security-related research."
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#publications-mentioning-selected-usda-datasets-only-account-for-21-of-all-food-security-related-publications.",
+    "href": "presentations/presentation_sections.html#publications-mentioning-selected-usda-datasets-only-account-for-21-of-all-food-security-related-publications.",
+    "title": "Dataset Search & Discovery",
+    "section": "Publications mentioning selected USDA datasets only account for 21% of all food security-related publications.",
+    "text": "Publications mentioning selected USDA datasets only account for 21% of all food security-related publications.\n\n  \n\nClick to enlarge\n\n\nFood security–related research accounts for ~19% of all published work in this sample (2015–2025).\n\n\n\n\n\n\n\nDetails about this figure\n\n\nThis figure compares:\n\nDenominator: All publications in the Dimensions database (via Google BigQuery) that mention food security–related terms, published between 2015 and 2024, excluding preprints and conditional on at least one US-affiliated author and falling within the fields of research “3801 Applied economics” or “30 AGRICULTURAL, VETERINARY AND FOOD SCIENCES”.\nNumerator: The subset of those publications that also mention one or more of the 11 USDA datasets.\n\nTerms used to define food security research include: “food security”, “food insecurity”, “food security status”, “Supplemental Nutrition Assistance Program (SNAP)”, “Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)”, “food access”, “food availability”, “prevalence of food insecurity”, “food pantries”, and “Nutrition Assistance Program”.\nData source: Dimensions via Google BigQuery\n\n\n\n\n\nWe wanted to determine what proportion of all food security-related research mentions these datasets."
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#mentions-of-selected-usda-datasets-are-leveling-off-as-food-security-related-research-continues-to-grow.",
+    "href": "presentations/presentation_sections.html#mentions-of-selected-usda-datasets-are-leveling-off-as-food-security-related-research-continues-to-grow.",
+    "title": "Dataset Search & Discovery",
+    "section": "Mentions of selected USDA datasets are leveling off as food security-related research continues to grow.",
+    "text": "Mentions of selected USDA datasets are leveling off as food security-related research continues to grow.\n\n\nNext question: What other datasets are researchers using for food security-related research?\n\\(\\rightarrow\\) Answering this requires access to full-text data and LLMs trained to identify dataset usage.\nCurrently working on this.\n\n\n  \n\nClick to enlarge\n\n\nFood security–related research accounts for ~19% of all published work in this sample (2015–2025).\n\n\n\n\n\n\n\n\nDetails about this figure\n\n\nThis figure shows two trends in food security–related research from 2015 to 2024:\n\nBars (left axis): Total number of food security–related publications per year across the Dimensions corpus. These publications have been filtered to include only those with at least one author affiliated with an American institution and falling within the fields of research “3801 Applied economics” or “30 AGRICULTURAL, VETERINARY AND FOOD SCIENCES”.\nLine (right axis): Share of those publications that mention one or more USDA datasets.\n\nTerms used to define food security research include: “food security”, “food insecurity”, “food security status”, “Supplemental Nutrition Assistance Program (SNAP)”, “Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)”, “food access”, “food availability”, “prevalence of food insecurity”, “food pantries”, and “Nutrition Assistance Program”.\nData source: Dimensions via Google BigQuery\n\n\n\n\n\nImportance: Additional analysis that helps clarify patterns in data use can inform the tradeoffs between using trusted datasets (e.g., selected USDA datasets) and novel or emerging data sources (yet to be validated by the community)"
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#what-these-trends-tell-us",
+    "href": "presentations/presentation_sections.html#what-these-trends-tell-us",
+    "title": "Dataset Search & Discovery",
+    "section": "What these trends tell us",
+    "text": "What these trends tell us\nThese USDA datasets are important, accounting for ~21%, on average, of food security-related publications from 2015-2024.\nBut, ~79% of food security-related research relies on other data sources (or doesn’t name the data at all).\nNext question: What other datasets are researchers using for food security-related research?\n\\(\\rightarrow\\) Currently working on answering this. Requires LLMs trained on full-text data.\n\nImportance: Additional analysis that helps clarify patterns in data use can inform the tradeoffs between using trusted datasets (e.g., selected USDA datasets) and novel or emerging data sources (yet to be validated by the community)"
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#reflecting-on-value-to-aaea-sections",
+    "href": "presentations/presentation_sections.html#reflecting-on-value-to-aaea-sections",
+    "title": "Dataset Search & Discovery",
+    "section": "Reflecting on value to AAEA Sections",
+    "text": "Reflecting on value to AAEA Sections\n\n\n\n\nQuestions to consider\n\n\n\nWhat can metadata on topic trends tell us about research in your section’s area of focus?\nCould this type of platform help identify potential collaborators or build working groups?\nAre there emerging research topics that could inform next year’s track session proposals?\nWhat can metadata on funding tell us about who is supporting research in your section’s area of focus?\n\n\n\n\n\nFor you:\n\nUse dashboard to find collaborators and review broad data usage statistics.\nWith access to the publication metadata, additional trends on topics of interest can be explored further.\n\nFor our research community:\n\nIf we can identify the “other” datasets (via LLMs, for example), we can also identify the researchers using them and potentially build networks of topic experts, reviewers, and collaborators around them."
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#what-could-be-done-from-here",
+    "href": "presentations/presentation_sections.html#what-could-be-done-from-here",
+    "title": "Dataset Search & Discovery",
+    "section": "What could be done from here",
+    "text": "What could be done from here\nAt this stage, there’s a lot more we could do — but we would need resources and the right partners.\nFor you:\n\nUse dashboard to find collaborators, review data usage, and find trends on topics of interest\nWhat would FSN be interested in looking at?\n\nE.g., track session proposals, pre/post conference workshop ideas…\n\nAside from food security, what other topics may be of interest to understand data visibility?\n\nFor our research community:\n\nIf we can identify the “other” datasets (via LLMs, for example), we can also identify the researchers using them and potentially build networks of topic experts, reviewers, and collaborators around them.\n\n\n\n\n\nExample: Specialty Crops (S-1088)\n\n\n\nUse dashboard metadata to explore funding trends on specialty crop research\nHatch renewal comment: “Expand members” → dashboard can help!\nMeeting idea: live demo + brainstorming researchable questions"
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#thank-you",
+    "href": "presentations/presentation_sections.html#thank-you",
+    "title": "Dataset Search & Discovery",
+    "section": "Thank You",
+    "text": "Thank You\n\n\n💬 Questions?\n 📩 Lauren.Chenarides@colostate.edu\n🌐 democratizingdata.ai\n\nAcknowledgements:\n\nJulia Lane\nRafael Ladislau\nNick Pallotta\nSpiro Stefanou\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBack to All Talks."
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#mentions-of-usda-datasets-have-grown-over-time-in-food-securityrelated-research",
+    "href": "presentations/presentation_sections.html#mentions-of-usda-datasets-have-grown-over-time-in-food-securityrelated-research",
+    "title": "Dataset Search & Discovery",
+    "section": "Mentions of USDA datasets have grown over time in food security–related research",
+    "text": "Mentions of USDA datasets have grown over time in food security–related research\n\n\n\nAuthors have grown more than 6x, suggesting strong interest across the research community\nPublications have grown, but pace has leveled off slightly in recent years\nInstitutional growth is slower, perhaps due to potential concentration within organizations\n\n\n\n  \n\nClick to enlarge\n\n\n\n\n\n\n\n\n\n\nDetails about this figure\n\n\nThis figure plots an index of unique publications, authors, or institutions mentioning the selected USDA datasets from 2015-2024, where 2015 is the base year (index = 1). For example, there were 595 publications in 2024 and 134 in 2015, so the index is 595 / 134 = 4.44.\nTerms used to define food security research include: “food security”, “food insecurity”, “food security status”, “Supplemental Nutrition Assistance Program (SNAP)”, “Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)”, “food access”, “food availability”, “prevalence of food insecurity”, “food pantries”, and “Nutrition Assistance Program”.\nData source: Dimensions via Google BigQuery\n\n\n\n\n\nEstablish that USDA datasets are integral to food security-related research."
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#mentions-of-usda-datasets-have-grown-over-time-in-food-securityrelated-research.",
+    "href": "presentations/presentation_sections.html#mentions-of-usda-datasets-have-grown-over-time-in-food-securityrelated-research.",
+    "title": "Dataset Search & Discovery",
+    "section": "Mentions of USDA datasets have grown over time in food security–related research.",
+    "text": "Mentions of USDA datasets have grown over time in food security–related research.\n\n\n\nMentions in publications have grown, but pace has leveled off slightly in recent years\nAuthors mentioning datasets have grown more than 6x, suggesting strong interest across the research community\nInstitutions mentioning datasets has grown slowly, perhaps due to potential concentration within organizations\n\n\n\n  \n\nClick to enlarge\n\n\n\n\n\n\n\n\n\n\nDetails about this figure\n\n\nThis figure plots an index of unique publications, authors, or institutions mentioning the selected USDA datasets from 2015-2024, where 2015 is the base year (index = 1). For example, there were 595 publications in 2024 and 134 in 2015, so the index is 595 / 134 = 4.44.\nTerms used to define food security research include: “food security”, “food insecurity”, “food security status”, “Supplemental Nutrition Assistance Program (SNAP)”, “Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)”, “food access”, “food availability”, “prevalence of food insecurity”, “food pantries”, and “Nutrition Assistance Program”.\nData source: Dimensions via Google BigQuery\n\n\n\n\n\nEstablish that USDA datasets are integral to food security-related research."
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#publications-mentioning-selected-usda-datasets-account-for-21-of-all-food-security-related-publications.",
+    "href": "presentations/presentation_sections.html#publications-mentioning-selected-usda-datasets-account-for-21-of-all-food-security-related-publications.",
+    "title": "Dataset Search & Discovery",
+    "section": "Publications mentioning selected USDA datasets account for 21% of all food security-related publications.",
+    "text": "Publications mentioning selected USDA datasets account for 21% of all food security-related publications.\n\n\nThis implies that 79% of food security-related research uses other datasets (or doesn’t name the data at all).\nThat might not raise concern if mentions of USDA datasets were declining in line with overall trends in food security research.\nBut as we’ll see next, the volume of food security publications continues to grow while USDA dataset mentions have plateaued.\n\n\n  \n\nClick to enlarge\n\n\n\n\n\n\n\n\n\n\nDetails about this figure\n\n\nThis figure compares:\n\nDenominator: All publications in the Dimensions database (via Google BigQuery) that mention food security–related terms, published between 2015 and 2024, excluding preprints and conditional on at least one US-affiliated author and falling within the fields of research “3801 Applied economics” or “30 AGRICULTURAL, VETERINARY AND FOOD SCIENCES”.\nNumerator: The subset of those publications that also mention one or more of the 11 USDA datasets.\n\nTerms used to define food security research include: “food security”, “food insecurity”, “food security status”, “Supplemental Nutrition Assistance Program (SNAP)”, “Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)”, “food access”, “food availability”, “prevalence of food insecurity”, “food pantries”, and “Nutrition Assistance Program”.\nData source: Dimensions via Google BigQuery\n\n\n\n\n\nWe wanted to determine what proportion of all food security-related research mentions these datasets."
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#what-ive-learned",
+    "href": "presentations/presentation_sections.html#what-ive-learned",
+    "title": "Dataset Search & Discovery",
+    "section": "What I’ve learned",
+    "text": "What I’ve learned\n\nWe can only track what we can see. If authors are not writing about the datasets they use we won’t see it. Most authors don’t cite their data.\nAs an author, I find myself wanting better tools to find comparable studies using the same dataset – being able to search within publications that share a dataset is useful.\nPublication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) – available from OpenAlexAPI or by partnering with Digital Science (Dimensions).\n\nAt this stage, there’s a lot more we could do — but we would need resources and interested collaborators."
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#final-thoughts",
+    "href": "presentations/presentation_sections.html#final-thoughts",
+    "title": "Dataset Search & Discovery",
+    "section": "Final thoughts",
+    "text": "Final thoughts\n\n\n\nHow might AAEA Sections use this dashboard?\n\nTrack session proposals\nPre/post conference workshop ideas\nCollaborators for working groups outside of meetings\n\n\n\n\nAside from food security, what other topics may be of interest to understand data visibility?\n\nSpecialty crops\nFood safety\nFood marketing\n\n\n\n\n\n\n\n\nExample: Specialty Crops (S-1088)\n\n\n\nUse dashboard metadata to explore funding trends on specialty crop research\nHatch renewal comment: “Expand members” → dashboard can help!\nMeeting idea: live demo + brainstorming researchable questions"
+  },
+  {
+    "objectID": "presentations/presentation_sections.html#parting-words",
+    "href": "presentations/presentation_sections.html#parting-words",
+    "title": "Dataset Search & Discovery",
+    "section": "Parting words",
+    "text": "Parting words\n\n\n\nHow might AAEA Sections use this dashboard?\n\nTrack session proposals\nPre/post conference workshop ideas\nCollaborators for working groups outside of meetings\n\n\n\n\nAside from food security, what other topics may be of interest to understand data visibility?\n\nSpecialty crops\nFood safety\nFood marketing\n\n\n\n\n\n\n\n\nExample: Specialty Crops (S-1088)\n\n\n\nUse dashboard metadata to explore funding trends on specialty crop research\nHatch renewal comment: “Expand members” → dashboard can help!\nMeeting idea: live demo + brainstorming researchable questions"
+  },
+  {
+    "objectID": "presentations/presentation-ajae.html#what-ive-learned",
+    "href": "presentations/presentation-ajae.html#what-ive-learned",
+    "title": "Dataset Search & Discovery",
+    "section": "What I’ve learned",
+    "text": "What I’ve learned\nStepping back from the dashboard itself, this work has informed me of broader insights about how researchers use data, what’s visible to us as readers and editors, and what tools might help fill in the gaps.\n\nWe can only track what we can see. If authors are not writing about the datasets they use we won’t see it. Most authors don’t cite their data.\nAs an author, I find myself wanting better tools to find comparable studies using the same dataset – being able to search within publications that share a dataset is useful.\nPublication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) – available from OpenAlexAPI or by partnering with Digital Science (Dimensions).\n\nAt this stage, there’s a lot more we could do — but we would need resources and interested collaborators."
   }
 ]

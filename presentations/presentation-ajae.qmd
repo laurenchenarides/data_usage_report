@@ -140,6 +140,7 @@ The dashboard supports topic filtering to identify active authors and view their
 
 :::
 
+<span style="font-size: 85%;">*This example is one possible application of this type of metadata integrated into an interactive user interface.*</span> 
 
 ::: {.notes}
 Could better visibility into dataset usage help with reviewer selection?
@@ -150,6 +151,17 @@ Access the Democratizing Data FAR Data Dashboard [here](https://democratizingdat
 :::
 
 
+## What I've learned
+
+Stepping back from the dashboard itself, this work has informed me of broader insights about how researchers use data, what's visible to us as readers and editors, and what tools might help fill in the gaps.
+
+- We can only track what we can see. If authors are not writing about the datasets they use we won't see it. Most authors don't cite their data.
+
+- As an author, I find myself wanting better tools to find comparable studies using the same dataset -- being able to search *within* publications that share a dataset is useful.
+
+- Publication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) -- available from [OpenAlexAPI](https://docs.openalex.org/api-entities/works/work-object) or by partnering with [Digital Science (Dimensions)](https://docs.dimensions.ai/dsl/datasource-publications.html).
+
+*At this stage, there's a lot more we <b>could</b> do — but we would need resources and interested collaborators.*
 
 ## Reflecting on value to AJAE
 
@@ -161,27 +173,14 @@ Access the Democratizing Data FAR Data Dashboard [here](https://democratizingdat
 - How might this work inform benchmarking AJAE against other field journals?
 :::
 
-**What I've learned:** 
+- Last year, we discussed the idea of online special issues. One option could be curating a set of articles that all use the same core dataset. <br>
+  $\rightarrow$ Use the dashboard for this.
 
-- We can only track what we can see. If authors are not writing about the datasets they use we won't see it. Most authors don't cite their data.
-
-- As an author, I find myself wanting better tools to find comparable studies using the same dataset -- being able to search *within* publications that share a dataset is useful.
-
-- Publication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) -- available from [OpenAlexAPI](https://docs.openalex.org/api-entities/works/work-object) or by partnering with [Digital Science (Dimensions)](https://docs.dimensions.ai/dsl/datasource-publications.html).
-
-
-## What could be done from here
-
-*At this stage, there's a lot more we <b>could</b> do — but we would need resources and interested collaborators.*
-
-**At AJAE:** 
-
-- Last year, we discussed the idea of online special issues. One option could be curating a set of articles that all use the same core dataset.
-
-- Beyond food security, what other topics may be of interest to understand data usage?
-
-- Wiley already encourages data citation [(see Wiley's Data Citation Policy)](https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html) — but is it enforced? What are the metrics on compliance since implementation? Could stronger practices improve transparency? 
-
+- Beyond food security, what other topics may be of interest to understand data usage? <br>
+  $\rightarrow$ Use metadata for this.
+  
+- Wiley already encourages data citation [(see Wiley's Data Citation Policy)](https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html) <br>
+  $\rightarrow$ Is it enforced? What are the metrics on compliance since implementation? Could stronger practices improve transparency? 
 
 
 ## Thank You
