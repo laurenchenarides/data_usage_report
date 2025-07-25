@@ -125,17 +125,35 @@ Access the Democratizing Data FAR Data Dashboard [here](https://democratizingdat
 ## Use case: A new food security submission arrives. Who should review it?
 
 <span style="font-size: 85%;">Within this sample, **food security–related articles** make up **11% of AJAE publications**.<br>
-The dashboard supports topic filtering to identify active authors and view their broader publishing activity, narrowing the scope of possible referees.</span>
+$\rightarrow$ The dashboard supports topic filtering to identify active authors contributing to this (and other) topic area, view their broader publishing activity, thereby narrowing the scope of possible referees.</span>
 
 ::: {.columns}
 ::: {.column width="50%"}
-![](dashboard_topics_ajae.png)
 <small>Filter by topic, publication title, or dataset directly from the dashboard.</small>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <a href="dashboard_reviewers_ajae.png" target="_blank">
+    <img src="dashboard_reviewers_ajae.png" style="max-width: 100%; max-height: 750px;" />
+  </a>
+  <div style="text-align: center; color: grey; font-style: italic; margin-top: 8px;">
+    Click to enlarge
+  </div>
+</div>
+
 :::
 
 ::: {.column width="50%"}
-![](dashboard_authors_ajae.png)
 <small>You can also apply custom filters, such as searching by author name or other key metadata fields.</small>
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <a href="dashboard_authors_ajae.png" target="_blank">
+    <img src="dashboard_authors_ajae.png" style="max-width: 100%; max-height: 750px;" />
+  </a>
+  <div style="text-align: center; color: grey; font-style: italic; margin-top: 8px;">
+    Click to enlarge
+  </div>
+</div>
+
 :::
 
 :::
