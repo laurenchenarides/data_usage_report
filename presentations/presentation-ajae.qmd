@@ -58,24 +58,8 @@ These 11 datasets were selected based on relevance and input from USDA staff and
 <br>
 <small>*A dataset mention refers to an instance in which a specific dataset is referenced, cited, or named within a research publication. This can occur in various parts of the text, such as the abstract, methods, data section, footnotes, or references, and typically indicates that the dataset was used, analyzed, or discussed in the study.</small>
 
-::: footer
-Read more about this project [here](https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html).
-:::
-
-
-## Who uses USDA data...
-
-<span style="font-size: 85%;">We searched a large publication corpus (Dimensions) to find mentions of <b>11 USDA datasets</b> and found that <b>17,311 authors</b> mentioned these datasets across <b>8,290 publications</b> in <b>1,664 journals</b>.</span>
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <img src="dashboard.png" style="max-width: 100%; max-height: 750px;" />
-</div>
 
 :::{.callout-note title="Details about this exercise"}
-
-Searched articles published between 2015-2025.
-
-Data source: Dimensions via Google BigQuery
 
 Datasets searched:
 
@@ -91,7 +75,12 @@ Datasets searched:
 10. Local Food Marketing Practices Survey
 11. Quarterly Food at Home Price Database
 
+
+Searched articles published between 2015-2025.
+
 Mentions of datasets can be found in publications by applying ML models and other methods.
+
+Data source: Dimensions via Google BigQuery
 
 References:
 
@@ -101,6 +90,20 @@ References:
 
 - [Chenarides, L., Bryan, C., & Ladislau, R. (2025). *Methodology for comparing citation database coverage of dataset usage.*](https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html)
 :::
+
+
+::: footer
+Read more about this project [here](https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html).
+:::
+
+
+## Who uses USDA data...
+
+<span style="font-size: 85%;">We searched a large publication corpus (Dimensions) to find mentions of <b>11 USDA datasets</b> and found that <b>17,311 authors</b> mentioned these datasets across <b>8,290 publications</b> in <b>1,664 journals</b>.</span>
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <img src="dashboard.png" style="max-width: 100%; max-height: 750px;" />
+</div>
 
 ::: footer
 Work was funded by the US Department of Agricultural (Economic Research Service and National Agricultural Statistics Service), the National Center for Science and Engineering Statistics, and the National Center for Education Statistics.
