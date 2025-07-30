@@ -29,8 +29,9 @@ website:
     contents:
       - href: index.qmd
         text: "Data Usage in Food & Agriculture"
-      - text: "Data Usage Report"
-        menu:                           
+      - section: summary.qmd
+        text: "Data Usage Report"
+        contents:
         - href: summary.qmd
           text: "Report Summary"
         - href: report.qmd
@@ -64,7 +65,7 @@ website:
 format:
   html:
     toc: true  # Enables table of contents
-    toc-depth: 3  # Adjust depth of TOC levels
+    toc-depth: 4  # Adjust depth of TOC levels
     toc-location: left  # Options: left, right
     theme: default  # You can customize this
     number-sections: true  # Number sections if desired
