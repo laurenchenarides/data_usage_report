@@ -6,7 +6,7 @@ project:
 
 website:
   page-navigation: true
-  title: "USDA Data Usage"
+  title: "Data Usage in Food & Ag"
   site-url: "https://laurenchenarides.github.io/data_usage_report/"
   repo-url: https://github.com/laurenchenarides/data_usage_report
   repo-actions: [edit, issue]
@@ -28,33 +28,37 @@ website:
     collapse-level: 1
     contents:
       - href: index.qmd
-        text: Report Summary
-      - href: report.qmd
-        text: Full Report
-      - section: appendix.qmd
-        text: "Appendices"
-        contents:
-          - href: appendices/terminology.qmd
-            text: Terminology
-          - href: appendices/workflow.qmd
-            text: Workflow
-            contents: 
-            - href: appendices/workflow/step01/define_data_assets.qmd
-              text: "Define Data Assets"
-            - href: appendices/workflow/step02_01/extract_dataset_mentions.qmd
-              text: "Extract Dataset Mentions"
-            - href: appendices/workflow/step02_02/create_seed_corpus.qmd
-              text: "Creating a Seed Corpus"
-          - href: appendices/app_crosswalk.qmd # Summary of Scopus, OpenAlex, and Dimensions
-            text: "Documentation"
-          - href: appendices/app_institutions.qmd
-            contents:
-            - href: appendices/app_ipeds.qmd # Ming's work on IPEDS
-            - href: appendices/app_msi.qmd # Ming's work on MSIs
+        text: "Data Usage in Food & Agriculture"
+      - text: "Data Usage Report"
+        menu:                           
+        - href: summary.qmd
+          text: "Report Summary"
+        - href: report.qmd
+          text: "Full Report"
+        - section: appendix.qmd
+          text: "Appendices"
+          contents:
+            - href: appendices/terminology.qmd
+              text: "Terminology"
+            - href: appendices/workflow.qmd
+              text: "Workflow"
+              contents: 
+              - href: appendices/workflow/step01/define_data_assets.qmd
+                text: "Define Data Assets"
+              - href: appendices/workflow/step02_01/extract_dataset_mentions.qmd
+                text: "Extract Dataset Mentions"
+              - href: appendices/workflow/step02_02/create_seed_corpus.qmd
+                text: "Creating a Seed Corpus"
+            - href: appendices/app_crosswalk.qmd # Summary of Scopus, OpenAlex, and Dimensions
+              text: "Documentation"
+            - href: appendices/app_institutions.qmd
+              contents:
+              - href: appendices/app_ipeds.qmd # Ming's work on IPEDS
+              - href: appendices/app_msi.qmd # Ming's work on MSIs
       # - href: webinar_questionnaire.qmd
       #   text: Questionnaire
       - href: presentations.qmd
-        text: Presentations
+        text: "Presentations"
 
       
 format:
@@ -66,6 +70,10 @@ format:
     number-sections: true  # Number sections if desired
     highlight-style: github  # Code highlighting style
     author-title: false
+    citations-hover: true
+    footnotes-hover: true
+    link-external-icon: false
+    link-external-newwindow: true
     
 editor: source
 
