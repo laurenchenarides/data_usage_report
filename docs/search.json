@@ -861,7 +861,7 @@
     "href": "index.html",
     "title": "Dataset Usage in Food & Ag",
     "section": "",
-    "text": "Federal datasets play an important role in supporting research across a range of disciplines. Measuring how these datasets are used can help evaluate their impact and inform future data investments. Agencies like the US Department of Agriculture (USDA) track how their datasets are referenced in research papers and disseminate data usage statistics through platforms like Democratizing Data’s Food and Agricultural Research Data Usage Dashboard and NASS’s 5 W’s Data Usage Dashboard. These tools rely on identifying dataset mentions1 in published research to develop usage statistics. Beyond reporting usage statistics, this type of analysis can also provide information about the research topics where federal datasets are applied. Understanding how federal datasets are applied helps characterize their disciplinary reach, including use in areas such as food security, nutrition, and climate, which are inherently multidisciplinary. This informs future work on identifying alternative datasets that researchers use to study similar questions across fields.\nThe process of identifying dataset mentions in academic research output has two requirements. First, citation databases provide structured access to large volumes of publication metadata, including titles, abstracts, authors, affiliations, and sometimes full-text content. Second, tracking dataset usage requires developing methods that scan publication text for dataset mentions. It is feasible to systematically identify where specific datasets are referenced across a broad set of research outputs by applying machine-learning algorithms to publication corpora collected from citation databases, allowing for scalable search and retrieval of relevant publications where datasets are mentioned. The accuracy of dataset tracking depends on the scope of research output we can access and analyze. However, different databases curate content (i.e., research output) in different ways - some focus on peer-reviewed journals while others include preprints and technical reports - and dataset tracking requires reliable citation data from citation databases.\nThis report presents a systematic review of identifying dataset mentions in research publications across various citation databases. In doing so, we compare publication, journal, and topic coverage across Scopus, OpenAlex, and Dimensions as primary sources. The purpose is to establish a consistent set of statistics for comparing results and evaluating differences in dataset tracking across citation databases. This allows for insights into how publication scope and indexing strategies influence dataset usage statistics.",
+    "text": "A systematic review of identifying dataset mentions in research publications across various citation databases.\n\nView project → \n\n\n\n\n\n\n\nC‑FARE project connecting funded projects with published papers to map topic areas and impact.\n\nView project → \n\n\n\n\n\n\n\nAJAE collaboration analyzing the drivers behind higher‑impact publications.\n\nView project →",
     "crumbs": [
       "Data Usage in Food & Agriculture"
     ]
@@ -952,6 +952,16 @@
     "text": "Footnotes\n\n\nA dataset mention refers to an instance in which a specific dataset is referenced, cited, or named within a research publication. This can occur in various parts of the text, such as the abstract, methods, data section, footnotes, or references, and typically indicates that the dataset was used, analyzed, or discussed in the study.↩︎\nFull-text search in OpenAlex refers to querying the entire database for textual mentions of dataset names within titles, abstracts, and other fields.↩︎\nThe seed corpus search involves selecting a targeted set of publications based on journal, author, and topic filters. Full-text PDFs are downloaded and analyzed to identify mentions of USDA datasets not captured through metadata alone.↩︎",
     "crumbs": [
       "Data Usage Report"
+    ]
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Dataset Usage in Food & Ag",
+    "section": "",
+    "text": "A systematic review of identifying dataset mentions in research publications across various citation databases.\n\nView project → \n\n\n\n\n\n\n\nC‑FARE project connecting funded projects with published papers to map topic areas and impact.\n\nView project → \n\n\n\n\n\n\n\nAJAE collaboration analyzing the drivers behind higher‑impact publications.\n\nView project →",
+    "crumbs": [
+      "Data Usage in Food & Agriculture"
     ]
   }
 ]
