@@ -24,13 +24,13 @@ page-layout: full
 
 ::: {.g-col-12 .g-col-md-6}
 
-<div class="tile"> <a class="tile-link" href="summary.qmd"> <h3>Linking Research and Funding</h3> <p>C‑FARE project connecting funded projects with published papers to map topic areas and impact.</p> <span class="tile-cta">View project →</span> </a> </div> 
+<div class="tile"> <a class="tile-link" href="summary.qmd"> <h3>Linking Research and Funding</h3> <p>Project connecting funded projects with published papers to map topic areas and impact.</p> <span class="tile-cta">View project →</span> </a> </div> 
 
 :::
 
 ::: {.g-col-12 .g-col-md-6}
 
-<div class="tile"> <a class="tile-link" href="summary.qmd"> <h3>Understanding Journal Influence</h3> <p>AJAE collaboration analyzing the drivers behind higher‑impact publications.</p> <span class="tile-cta">View project →</span> </a> </div> 
+<div class="tile"> <a class="tile-link" href="summary.qmd"> <h3>Understanding Journal Influence</h3> <p>Project analyzing the drivers behind higher‑impact publications.</p> <span class="tile-cta">View project →</span> </a> </div> 
 
 :::
 
