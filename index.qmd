@@ -24,14 +24,14 @@ page-layout: full
 
 ::: {.g-col-12 .g-col-md-6}
 
-<div class="tile"> <a class="tile-link" href="summary.qmd"> <h3>Linking Research and Funding</h3> <p>Project connecting funded projects with published papers to map topic areas and impact.</p> <span class="tile-cta">View project →</span> </a> </div> 
+<div class="tile"> <a class="tile-link" href="summary.qmd"> <h3>Mapping Research in Food and Agricultural Economics to Funding Sources</h3> <p>Coming soon.</p> <span class="tile-cta">View project →</span> </a> </div> 
 
 :::
 
-::: {.g-col-12 .g-col-md-6}
+<!-- ::: {.g-col-12 .g-col-md-6} -->
 
-<div class="tile"> <a class="tile-link" href="summary.qmd"> <h3>Understanding Journal Influence</h3> <p>Project analyzing the drivers behind higher‑impact publications.</p> <span class="tile-cta">View project →</span> </a> </div> 
+<!-- <div class="tile"> <a class="tile-link" href="summary.qmd"> <h3>Understanding Drivers of Journal Impact</h3> <p>Coming soon.</p> <span class="tile-cta">View project →</span> </a> </div>  -->
 
-:::
+<!-- ::: -->
 
 :::
