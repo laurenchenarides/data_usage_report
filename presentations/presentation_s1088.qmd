@@ -274,12 +274,13 @@ Selected USDA datasets are important, accounting for ~21%, on average, of food s
 
 But, ~79% of food security-related research relies on *other* data sources (or doesn't name the data at all).
 
+::: fragment
 Next question: **What other datasets are researchers using for food security-related research?**
 
 $\rightarrow$ Answering this requires access to full-text data and LLMs trained to identify dataset usage. 
 
 *Currently working on this.*
-
+:::
 
 ## Then this...
 
@@ -296,15 +297,22 @@ $\rightarrow$ Answering this requires access to full-text data and LLMs trained 
 <!-- ::: -->
 
 
-## What I learned 
+## Lessons from tracking data usage
 
-- We can only track what we can see. If authors are not writing about the datasets they use we won't see it. Most authors don't cite their data.
+1. We can only track what we can see. If authors are not writing about the datasets they use we won't see it. Most authors don't cite their data.
 
-- As an author, I find myself wanting better tools to find comparable studies using the same dataset -- being able to search *within* publications that share a dataset is useful.
+2. As an author, I find myself wanting better tools to find comparable studies using the same dataset -- being able to search *within* publications that share a dataset is useful.
 
-- Publication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) -- available from [OpenAlexAPI](https://docs.openalex.org/api-entities/works/work-object) or by partnering with [Digital Science (Dimensions)](https://docs.dimensions.ai/dsl/datasource-publications.html).
+3. Publication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) -- available from [OpenAlexAPI](https://docs.openalex.org/api-entities/works/work-object) or by partnering with [Digital Science (Dimensions)](https://docs.dimensions.ai/dsl/datasource-publications.html).
 
 *At this stage, there's a lot more we <b>could</b> do — but we would need resources and interested collaborators.*
+
+## Another pain point
+
+**Funding outlook:** State and federal budgets are shifting, with greater uncertainty around traditional sources.
+
+**Challenge:** When our usual funders are constrained, or there is greater competition, how do we spot credible alternative funders aligned with our research?
+
 
 ## What does the metadata tell us about S-1088 research?
 
@@ -321,19 +329,75 @@ $\rightarrow$ Answering this requires access to full-text data and LLMs trained 
 5. **Analyze funding outlets:** Identify which agencies and programs are supporting work in these areas.
 
 
-## What does the metadata tell us about S-1088 research?
+## Results (1/3)
 
-**Results:**
+::: {.columns}
 
-1. 48 registered mebers of S-1088. 41 with ORCIDs. After cleaning, **22 members** were searchable.
+::: {.column width="40%"}
+**Membership and coverage**
 
-2. 1,476 "works" were identified. After de-duplication (966), and restricting to only works of type `article`, resulted in **740 publications.**
+- 48 registered members of S-1088. 41 with ORCIDs. 
+- After cleaning, **22 members** matched to OpenAlex author IDs.
 
-3. Common research concepts across these articles include XXX, and common funders include YYY.   
+**Publications**
 
-4. *How do the themes connected to S-1088 activities compare with the broader research landscape?*
+- 2,054 "works" identified. 
+- After de-duplication and restricting to only works of type `article`, resulted in **1,146 publications** published between 1977 and 2025.
+:::
 
-5. *Which agencies and programs are supporting work in these areas?*
+::: {.column width="60%"}
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <a href="num_dois_by_year.png" target="_blank">
+    <img src="num_dois_by_year.png" style="max-width: 100%; max-height: 750px;" />
+  </a>
+  <div style="text-align: center; color: grey; font-style: italic; margin-top: 8px;">
+    Click to enlarge
+  </div>
+</div>
+:::
+:::
+
+## Results (2/3)
+
+Common research **topics**:
+
+1. Organic Food and Agriculture 
+2. Economic and Environmental Valuation
+3. Economics of Agriculture and Food Markets
+4. Wine Industry and Tourism
+5. Consumer Market Behavior and Pricing
+
+Common research **concepts**:
+
+1. Willingness to pay
+2. Business
+3. Agriculture
+4. Biology
+5. Purchasing
+
+*Sample size: 1,138 articles*
+
+## Results (3/3)
+
+Common **funders**:
+
+1. National Institute of Food and Agriculture 
+2. U.S. Department of Agriculture
+3. National Natural Science Foundation of China
+4. Economic Research Service
+5. National Institutes of Health
+
+Others: Robert Wood Johnson Foundation, Organic Farming Research Foundation, university and department seed funding, international funders
+
+<br>
+<br>
+*Sample size: 287 of 1,146 publications acknowledged grant funding.*
+
+## Next steps using these metadata
+
+**Benchmarking:** How do the themes connected to S-1088 activities compare with the broader research landscape?
+
+**Funding Strategy:** Which agencies and programs are supporting work in these areas?
 
 
 ## Reflecting on value to S-1088
@@ -350,6 +414,8 @@ $\rightarrow$ Answering this requires access to full-text data and LLMs trained 
 
 - With access to the publication metadata, additional trends on topics of interest can be explored further.
 
+- What signals (topics, co-authorships, acknowledgments) could we use to surface new funders?
+
 **For our research community:**
 
 - If we can identify the "other" datasets (via LLMs, for example), we can also identify the researchers using them and potentially build networks of topic experts, reviewers, and collaborators around them.
@@ -364,6 +430,8 @@ $\rightarrow$ Answering this requires access to full-text data and LLMs trained 
   - Locate collaborators for working groups outside of meetings
   - Brainstorm pre/post conference workshop ideas
   - Recruit new members for hatch projects
+- Where have you successfully diversified funding in the past year?
+  - Look at related work to identify alternative funding sources
 :::
 
 ::: {.column width="50%"}

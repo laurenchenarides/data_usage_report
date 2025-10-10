@@ -1039,7 +1039,7 @@
     "href": "presentations/presentation_s1088.html#what-these-trends-tell-us",
     "title": "Dataset Search & Discovery",
     "section": "What these trends tell us",
-    "text": "What these trends tell us\nSelected USDA datasets are important, accounting for ~21%, on average, of food security-related publications from 2015-2024.\nBut, ~79% of food security-related research relies on other data sources (or doesn’t name the data at all).\nNext question: What other datasets are researchers using for food security-related research?\n\\(\\rightarrow\\) Answering this requires access to full-text data and LLMs trained to identify dataset usage.\nCurrently working on this."
+    "text": "What these trends tell us\nSelected USDA datasets are important, accounting for ~21%, on average, of food security-related publications from 2015-2024.\nBut, ~79% of food security-related research relies on other data sources (or doesn’t name the data at all).\n\nNext question: What other datasets are researchers using for food security-related research?\n\\(\\rightarrow\\) Answering this requires access to full-text data and LLMs trained to identify dataset usage.\nCurrently working on this."
   },
   {
     "objectID": "presentations/presentation_s1088.html#then-this",
@@ -1060,14 +1060,14 @@
     "href": "presentations/presentation_s1088.html#reflecting-on-value-to-s-1088",
     "title": "Dataset Search & Discovery",
     "section": "Reflecting on value to S-1088",
-    "text": "Reflecting on value to S-1088\n\n\n\n\nQuestions to consider\n\n\n\nCould this kind of platform help identify potential collaborators or shared research interests?\nWhat could metadata patterns reveal about activity in your research area?\nWhat does the funding metadata suggest about who is investing in your field?\n\n\n\n\n\nFor you:\n\nUse dashboard to find collaborators and review broad data usage statistics.\nWith access to the publication metadata, additional trends on topics of interest can be explored further.\n\nFor our research community:\n\nIf we can identify the “other” datasets (via LLMs, for example), we can also identify the researchers using them and potentially build networks of topic experts, reviewers, and collaborators around them."
+    "text": "Reflecting on value to S-1088\n\n\n\n\nQuestions to consider\n\n\n\nCould this kind of platform help identify potential collaborators or shared research interests?\nWhat could metadata patterns reveal about activity in your research area?\nWhat does the funding metadata suggest about who is investing in your field?\n\n\n\n\n\nFor you:\n\nUse dashboard to find collaborators and review broad data usage statistics.\nWith access to the publication metadata, additional trends on topics of interest can be explored further.\nWhat signals (topics, co-authorships, acknowledgments) could we use to surface new funders?\n\nFor our research community:\n\nIf we can identify the “other” datasets (via LLMs, for example), we can also identify the researchers using them and potentially build networks of topic experts, reviewers, and collaborators around them."
   },
   {
     "objectID": "presentations/presentation_s1088.html#final-thoughts",
     "href": "presentations/presentation_s1088.html#final-thoughts",
     "title": "Dataset Search & Discovery",
     "section": "Final thoughts",
-    "text": "Final thoughts\n\n\n\nHow might you use this dashboard and the underlying metadata?\n\nLocate collaborators for working groups outside of meetings\nBrainstorm pre/post conference workshop ideas\nRecruit new members for hatch projects\n\n\n\n\nAside from food security, what other topics may be of interest to understand data visibility?\n\nSpecialty crops\nFood safety\nFood marketing"
+    "text": "Final thoughts\n\n\n\nHow might you use this dashboard and the underlying metadata?\n\nLocate collaborators for working groups outside of meetings\nBrainstorm pre/post conference workshop ideas\nRecruit new members for hatch projects\n\nWhere have you successfully diversified funding in the past year?\n\nLook at related work to identify alternative funding sources\n\n\n\n\nAside from food security, what other topics may be of interest to understand data visibility?\n\nSpecialty crops\nFood safety\nFood marketing"
   },
   {
     "objectID": "presentations/presentation_s1088.html#thank-you",
@@ -1109,6 +1109,55 @@
     "href": "presentations/presentation_s1088.html#what-does-the-metadata-tell-us-about-s-1088-research-1",
     "title": "Dataset Search & Discovery",
     "section": "What does the metadata tell us about S-1088 research?",
-    "text": "What does the metadata tell us about S-1088 research?\nResults:\n\n48 registered mebers of S-1088. 41 with ORCIDs. After cleaning, 22 members were searchable.\n1,476 “works” were identified. After de-duplication (966), and restricting to only works of type article, resulted in 740 publications.\nCommon research concepts across these articles include XXX, and common funders include YYY.\nHow do the themes connected to S-1088 activities compare with the broader research landscape?\nWhich agencies and programs are supporting work in these areas?"
+    "text": "What does the metadata tell us about S-1088 research?\nResults:\n\n48 registered mebers of S-1088. 41 with ORCIDs. After cleaning, 22 members were searchable in OpenAlexR (API).\n1,476 “works” were identified. After de-duplication (966), and restricting to only works of type article, resulted in 740 publications.\nCommon research concepts across these articles include XXX, and common funders include YYY.\nHow do the themes connected to S-1088 activities compare with the broader research landscape?\nWhich agencies and programs are supporting work in these areas?"
+  },
+  {
+    "objectID": "presentations/presentation_s1088.html#lessons-from-tracking-data-usage",
+    "href": "presentations/presentation_s1088.html#lessons-from-tracking-data-usage",
+    "title": "Dataset Search & Discovery",
+    "section": "Lessons from tracking data usage",
+    "text": "Lessons from tracking data usage\n\nWe can only track what we can see. If authors are not writing about the datasets they use we won’t see it. Most authors don’t cite their data.\nAs an author, I find myself wanting better tools to find comparable studies using the same dataset – being able to search within publications that share a dataset is useful.\nPublication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) – available from OpenAlexAPI or by partnering with Digital Science (Dimensions).\n\nAt this stage, there’s a lot more we could do — but we would need resources and interested collaborators."
+  },
+  {
+    "objectID": "presentations/presentation_s1088.html#results-13",
+    "href": "presentations/presentation_s1088.html#results-13",
+    "title": "Dataset Search & Discovery",
+    "section": "Results (1/3)",
+    "text": "Results (1/3)\n\n\nMembership and coverage\n\n48 registered members of S-1088. 41 with ORCIDs.\nAfter cleaning, 22 members matched to OpenAlex author IDs.\n\nPublications\n\n2,054 “works” identified.\nAfter de-duplication and restricting to only works of type article, resulted in 1,146 publications published between 1977 and 2025.\n\n\n\n  \n\nClick to enlarge"
+  },
+  {
+    "objectID": "presentations/presentation_s1088.html#results-23",
+    "href": "presentations/presentation_s1088.html#results-23",
+    "title": "Dataset Search & Discovery",
+    "section": "Results (2/3)",
+    "text": "Results (2/3)\nCommon research topics:\n\nOrganic Food and Agriculture\nEconomic and Environmental Valuation\nEconomics of Agriculture and Food Markets\nWine Industry and Tourism\nConsumer Market Behavior and Pricing\n\nCommon research concepts:\n\nWillingness to pay\nBusiness\nAgriculture\nBiology\nPurchasing\n\nSample size: 1,138 articles"
+  },
+  {
+    "objectID": "presentations/presentation_s1088.html#results-33",
+    "href": "presentations/presentation_s1088.html#results-33",
+    "title": "Dataset Search & Discovery",
+    "section": "Results (3/3)",
+    "text": "Results (3/3)\nCommon funders:\n\nNational Institute of Food and Agriculture\nU.S. Department of Agriculture\nNational Natural Science Foundation of China\nEconomic Research Service\nNational Institutes of Health\n\nOthers: Robert Wood Johnson Foundation, Organic Farming Research Foundation, university and department seed funding, international funders\n  Sample size: 287 of 1,146 publications acknowledged grant funding."
+  },
+  {
+    "objectID": "presentations/presentation_s1088.html#next-steps",
+    "href": "presentations/presentation_s1088.html#next-steps",
+    "title": "Dataset Search & Discovery",
+    "section": "Next steps",
+    "text": "Next steps\nHow do the themes connected to S-1088 activities compare with the broader research landscape?\n \nWhich agencies and programs are supporting work in these areas?"
+  },
+  {
+    "objectID": "presentations/presentation_s1088.html#another-pain-point",
+    "href": "presentations/presentation_s1088.html#another-pain-point",
+    "title": "Dataset Search & Discovery",
+    "section": "Another pain point",
+    "text": "Another pain point\nFunding outlook: State and federal budgets are shifting, with greater uncertainty around traditional sources.\nChallenge: When our usual funders are constrained, or there is greater competition, how do we spot credible alternative funders aligned with our research?"
+  },
+  {
+    "objectID": "presentations/presentation_s1088.html#next-steps-using-these-metadata",
+    "href": "presentations/presentation_s1088.html#next-steps-using-these-metadata",
+    "title": "Dataset Search & Discovery",
+    "section": "Next steps using these metadata",
+    "text": "Next steps using these metadata\nBenchmarking: How do the themes connected to S-1088 activities compare with the broader research landscape?\nFunding Strategy: Which agencies and programs are supporting work in these areas?"
   }
 ]

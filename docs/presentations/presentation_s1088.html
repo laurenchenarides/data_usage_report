@@ -422,9 +422,11 @@ Lauren Chenarides
 <h2>What these trends tell us</h2>
 <p>Selected USDA datasets are important, accounting for ~21%, on average, of food security-related publications from 2015-2024.</p>
 <p>But, ~79% of food security-related research relies on <em>other</em> data sources (or doesn’t name the data at all).</p>
+<div class="fragment">
 <p>Next question: <strong>What other datasets are researchers using for food security-related research?</strong></p>
 <p><span class="math inline">\(\rightarrow\)</span> Answering this requires access to full-text data and LLMs trained to identify dataset usage.</p>
 <p><em>Currently working on this.</em></p>
+</div>
 </section>
 <section id="then-this" class="slide level2">
 <h2>Then this…</h2>
@@ -435,14 +437,19 @@ Lauren Chenarides
 <!-- **What if...** - [The Doctors Building a Public-Health Universe Outside the Government](https://www.wsj.com/health/healthcare/public-health-kennedy-vaccine-guidance-a64cc122?st=CbKgmb&reflink=article_email_share) -->
 <!-- ::: -->
 </section>
-<section id="what-i-learned" class="slide level2">
-<h2>What I learned</h2>
-<ul>
+<section id="lessons-from-tracking-data-usage" class="slide level2 scrollable">
+<h2>Lessons from tracking data usage</h2>
+<ol type="1">
 <li><p>We can only track what we can see. If authors are not writing about the datasets they use we won’t see it. Most authors don’t cite their data.</p></li>
 <li><p>As an author, I find myself wanting better tools to find comparable studies using the same dataset – being able to search <em>within</em> publications that share a dataset is useful.</p></li>
 <li><p>Publication metadata contains rich, underused information (e.g., open access, funders, citations, article processing charges) – available from <a href="https://docs.openalex.org/api-entities/works/work-object">OpenAlexAPI</a> or by partnering with <a href="https://docs.dimensions.ai/dsl/datasource-publications.html">Digital Science (Dimensions)</a>.</p></li>
-</ul>
+</ol>
 <p><em>At this stage, there’s a lot more we <b>could</b> do — but we would need resources and interested collaborators.</em></p>
+</section>
+<section id="another-pain-point" class="slide level2">
+<h2>Another pain point</h2>
+<p><strong>Funding outlook:</strong> State and federal budgets are shifting, with greater uncertainty around traditional sources.</p>
+<p><strong>Challenge:</strong> When our usual funders are constrained, or there is greater competition, how do we spot credible alternative funders aligned with our research?</p>
 </section>
 <section id="what-does-the-metadata-tell-us-about-s-1088-research" class="slide level2 scrollable">
 <h2>What does the metadata tell us about S-1088 research?</h2>
@@ -455,16 +462,66 @@ Lauren Chenarides
 <li><p><strong>Analyze funding outlets:</strong> Identify which agencies and programs are supporting work in these areas.</p></li>
 </ol>
 </section>
-<section id="what-does-the-metadata-tell-us-about-s-1088-research-1" class="slide level2 scrollable">
-<h2>What does the metadata tell us about S-1088 research?</h2>
-<p><strong>Results:</strong></p>
+<section id="results-13" class="slide level2">
+<h2>Results (1/3)</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><strong>Membership and coverage</strong></p>
+<ul>
+<li>48 registered members of S-1088. 41 with ORCIDs.</li>
+<li>After cleaning, <strong>22 members</strong> matched to OpenAlex author IDs.</li>
+</ul>
+<p><strong>Publications</strong></p>
+<ul>
+<li>2,054 “works” identified.</li>
+<li>After de-duplication and restricting to only works of type <code>article</code>, resulted in <strong>1,146 publications</strong> published between 1977 and 2025.</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<div style="display: flex; flex-direction: column; align-items: center;">
+<a href="num_dois_by_year.png" target="_blank"> <img src="num_dois_by_year.png" style="max-width: 100%; max-height: 750px;"> </a>
+<div style="text-align: center; color: grey; font-style: italic; margin-top: 8px;">
+<pre><code>Click to enlarge</code></pre>
+</div>
+</div>
+</div></div>
+</section>
+<section id="results-23" class="slide level2 scrollable">
+<h2>Results (2/3)</h2>
+<p>Common research <strong>topics</strong>:</p>
 <ol type="1">
-<li><p>48 registered mebers of S-1088. 41 with ORCIDs. After cleaning, <strong>22 members</strong> were searchable.</p></li>
-<li><p>1,476 “works” were identified. After de-duplication (966), and restricting to only works of type <code>article</code>, resulted in <strong>740 publications.</strong></p></li>
-<li><p>Common research concepts across these articles include XXX, and common funders include YYY.</p></li>
-<li><p><em>How do the themes connected to S-1088 activities compare with the broader research landscape?</em></p></li>
-<li><p><em>Which agencies and programs are supporting work in these areas?</em></p></li>
+<li>Organic Food and Agriculture</li>
+<li>Economic and Environmental Valuation</li>
+<li>Economics of Agriculture and Food Markets</li>
+<li>Wine Industry and Tourism</li>
+<li>Consumer Market Behavior and Pricing</li>
 </ol>
+<p>Common research <strong>concepts</strong>:</p>
+<ol type="1">
+<li>Willingness to pay</li>
+<li>Business</li>
+<li>Agriculture</li>
+<li>Biology</li>
+<li>Purchasing</li>
+</ol>
+<p><em>Sample size: 1,138 articles</em></p>
+</section>
+<section id="results-33" class="slide level2 scrollable">
+<h2>Results (3/3)</h2>
+<p>Common <strong>funders</strong>:</p>
+<ol type="1">
+<li>National Institute of Food and Agriculture</li>
+<li>U.S. Department of Agriculture</li>
+<li>National Natural Science Foundation of China</li>
+<li>Economic Research Service</li>
+<li>National Institutes of Health</li>
+</ol>
+<p>Others: Robert Wood Johnson Foundation, Organic Farming Research Foundation, university and department seed funding, international funders</p>
+<p><br> <br> <em>Sample size: 287 of 1,146 publications acknowledged grant funding.</em></p>
+</section>
+<section id="next-steps-using-these-metadata" class="slide level2">
+<h2>Next steps using these metadata</h2>
+<p><strong>Benchmarking:</strong> How do the themes connected to S-1088 activities compare with the broader research landscape?</p>
+<p><strong>Funding Strategy:</strong> Which agencies and programs are supporting work in these areas?</p>
 </section>
 <section id="reflecting-on-value-to-s-1088" class="slide level2">
 <h2>Reflecting on value to S-1088</h2>
@@ -488,6 +545,7 @@ Lauren Chenarides
 <ul>
 <li><p>Use dashboard to find collaborators and review broad data usage statistics.</p></li>
 <li><p>With access to the publication metadata, additional trends on topics of interest can be explored further.</p></li>
+<li><p>What signals (topics, co-authorships, acknowledgments) could we use to surface new funders?</p></li>
 </ul>
 <p><strong>For our research community:</strong></p>
 <ul>
@@ -504,6 +562,10 @@ Lauren Chenarides
 <li>Locate collaborators for working groups outside of meetings</li>
 <li>Brainstorm pre/post conference workshop ideas</li>
 <li>Recruit new members for hatch projects</li>
+</ul></li>
+<li>Where have you successfully diversified funding in the past year?
+<ul>
+<li>Look at related work to identify alternative funding sources</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
