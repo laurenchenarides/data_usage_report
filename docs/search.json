@@ -1123,21 +1123,21 @@
     "href": "presentations/presentation_s1088.html#results-13",
     "title": "Dataset Search & Discovery",
     "section": "Results (1/3)",
-    "text": "Results (1/3)\n\n\nMembership and coverage\n\n48 registered members of S-1088. 41 with ORCIDs.\nAfter cleaning, 22 members matched to OpenAlex author IDs.\n\nPublications\n\n2,054 “works” identified.\nAfter de-duplication and restricting to only works of type article, resulted in 1,146 publications published between 1977 and 2025.\n\n\n\n  \n\nClick to enlarge"
+    "text": "Results (1/3)\n\n\nAnalysis was done using the openalexR package in R.\nMembership and coverage\n\n48 registered members of S-1088. 41 with ORCIDs.\nAfter cleaning, 22 members matched to OpenAlex author IDs.\n\nPublications\n\n2,054 “works” identified.\nAfter de-duplication and restricting to only works of type article, resulted in 1,146 publications published between 1977 and 2025.\n\n\n\n  \n\nClick to enlarge"
   },
   {
     "objectID": "presentations/presentation_s1088.html#results-23",
     "href": "presentations/presentation_s1088.html#results-23",
     "title": "Dataset Search & Discovery",
     "section": "Results (2/3)",
-    "text": "Results (2/3)\nCommon research topics:\n\nOrganic Food and Agriculture\nEconomic and Environmental Valuation\nEconomics of Agriculture and Food Markets\nWine Industry and Tourism\nConsumer Market Behavior and Pricing\n\nCommon research concepts:\n\nWillingness to pay\nBusiness\nAgriculture\nBiology\nPurchasing\n\nSample size: 1,138 articles"
+    "text": "Results (2/3)\nCommon research topics:1\n\nOrganic Food and Agriculture\nEconomic and Environmental Valuation\nEconomics of Agriculture and Food Markets\nWine Industry and Tourism\nConsumer Market Behavior and Pricing\n\nCommon research concepts:2\n\nWillingness to pay\nBusiness\nAgriculture\nBiology\nPurchasing\n\nSample size: 1,138 articles\nIn the OpenAlex API, a Topic is a tag automatically assigned to a Work (a scholarly document like a paper, book, or dataset) based on its content. These assignments are made using an automated system that analyzes information such as the work’s title, abstract, source (journal) name, and citations.In the OpenAlex API, the “concepts” field within a Work object refers to a list of concepts that have been assigned to that specific scholarly work. These concepts represent the subject matter or topics covered by the work."
   },
   {
     "objectID": "presentations/presentation_s1088.html#results-33",
     "href": "presentations/presentation_s1088.html#results-33",
     "title": "Dataset Search & Discovery",
     "section": "Results (3/3)",
-    "text": "Results (3/3)\nCommon funders:\n\nNational Institute of Food and Agriculture\nU.S. Department of Agriculture\nNational Natural Science Foundation of China\nEconomic Research Service\nNational Institutes of Health\n\nOthers: Robert Wood Johnson Foundation, Organic Farming Research Foundation, university and department seed funding, international funders\n  Sample size: 287 of 1,146 publications acknowledged grant funding."
+    "text": "Results (3/3)\nCommon funders:1\n\nNational Institute of Food and Agriculture\nU.S. Department of Agriculture\nNational Natural Science Foundation of China\nEconomic Research Service\nNational Institutes of Health\n\nOthers: Robert Wood Johnson Foundation, Organic Farming Research Foundation, university and department seed funding, international funders\n  Sample size: 287 of 1,146 publications acknowledged grant funding.\nIn the OpenAlex API, the “grants” work object is a property of a “Work” entity. It represents the funding information associated with a scholarly work, such as a journal article, book, or dataset."
   },
   {
     "objectID": "presentations/presentation_s1088.html#next-steps",

@@ -334,6 +334,8 @@ $\rightarrow$ Answering this requires access to full-text data and LLMs trained 
 ::: {.columns}
 
 ::: {.column width="40%"}
+Analysis was done using the [`openalexR`](https://docs.ropensci.org/openalexR/) package in `R`.
+
 **Membership and coverage**
 
 - 48 registered members of S-1088. 41 with ORCIDs. 
@@ -359,7 +361,7 @@ $\rightarrow$ Answering this requires access to full-text data and LLMs trained 
 
 ## Results (2/3)
 
-Common research **topics**:
+Common research **topics**:^[In the OpenAlex API, a Topic is a tag automatically assigned to a Work (a scholarly document like a paper, book, or dataset) based on its content. These assignments are made using an automated system that analyzes information such as the work's title, abstract, source (journal) name, and citations.]
 
 1. Organic Food and Agriculture 
 2. Economic and Environmental Valuation
@@ -367,7 +369,7 @@ Common research **topics**:
 4. Wine Industry and Tourism
 5. Consumer Market Behavior and Pricing
 
-Common research **concepts**:
+Common research **concepts**:^[In the OpenAlex API, the "concepts" field within a Work object refers to a list of concepts that have been assigned to that specific scholarly work. These concepts represent the subject matter or topics covered by the work.]
 
 1. Willingness to pay
 2. Business
@@ -379,7 +381,7 @@ Common research **concepts**:
 
 ## Results (3/3)
 
-Common **funders**:
+Common **funders**:^[In the OpenAlex API, the "grants" work object is a property of a "Work" entity. It represents the funding information associated with a scholarly work, such as a journal article, book, or dataset.]
 
 1. National Institute of Food and Agriculture 
 2. U.S. Department of Agriculture
