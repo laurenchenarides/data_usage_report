@@ -30,8 +30,10 @@ format:
 
 *What do you value most from participating in a Multi-State Project (e.g., S-1088)?*
 
-- Networking (highest)
-- Data sharing and reuse (low)
+- Networking 
+- Data sharing 
+- Collaborating on papers
+- Research collaboration
 
 *What would members find most useful going forward?*
 
