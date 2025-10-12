@@ -2,7 +2,11 @@
 title: "Dataset Search & Discovery"
 subtitle: "<b>Initial findings & opportunities to collaborate</b> <br> S-1088 Annual Meeting"
 description: "S-1088 Annual Meeting"
-author: "Lauren Chenarides"
+author: 
+  - name: "Lauren Chenarides"
+    affiliation: 
+      - "Assistant Professor"
+      - "Colorado State University"
 date: October 12, 2025
 date-format: long
 format:
@@ -108,6 +112,17 @@ Data source: Dimensions via Google BigQuery
 ::: footer
 Read more about this project [here](https://laurenchenarides.github.io/compare_scopus_openalex_report/report.html).
 :::
+
+## Scan QR code to access the Dashboard and follow along
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <a href="dd_dashboard_qr.png" target="_blank">
+    <img src="dd_dashboard_qr.png" style="max-width: 80%; max-height: 750px;" />
+  </a>
+  <div style="text-align: center; color: grey; font-style: italic; margin-top: 8px;">
+    https://democratizingdata.ai/tools/dashboard/dimensions/food-agricultural-research/
+  </div>
+</div>
 
 ## Who uses USDA data?
 
@@ -275,7 +290,9 @@ Selected USDA datasets are important, accounting for ~21%, on average, of food s
 But, ~79% of food security-related research relies on *other* data sources (or doesn't name the data at all).
 
 ::: fragment
-Next question: **What other datasets are researchers using for food security-related research?**
+Next question: 
+<br>
+**What other datasets are researchers using for food security-related research?**
 
 $\rightarrow$ Answering this requires access to full-text data and LLMs trained to identify dataset usage. 
 
@@ -461,6 +478,14 @@ Others: Robert Wood Johnson Foundation, Organic Farming Research Foundation, uni
   <img src="https://img.shields.io/badge/GitHub-Repository-black?logo=github" alt="GitHub Repo" />
 </a>
 
+<div style="display: flex; flex-direction: column; align-items: left;">
+  <div style="text-align: left; color: grey; font-style: italic; margin-top: 8px;">
+    Scan QR code access these slides
+  <a href="s1088_slides_qr.png" target="_blank">
+    <img src="s1088_slides_qr.png" style="max-width: 50%; max-height: 750px;" />
+  </a>
+  </div>
+</div>
 :::
 
 ::: {.column width="50%"}

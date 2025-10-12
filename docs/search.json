@@ -1039,7 +1039,7 @@
     "href": "presentations/presentation_s1088.html#what-these-trends-tell-us",
     "title": "Dataset Search & Discovery",
     "section": "What these trends tell us",
-    "text": "What these trends tell us\nSelected USDA datasets are important, accounting for ~21%, on average, of food security-related publications from 2015-2024.\nBut, ~79% of food security-related research relies on other data sources (or doesn’t name the data at all).\n\nNext question: What other datasets are researchers using for food security-related research?\n\\(\\rightarrow\\) Answering this requires access to full-text data and LLMs trained to identify dataset usage.\nCurrently working on this."
+    "text": "What these trends tell us\nSelected USDA datasets are important, accounting for ~21%, on average, of food security-related publications from 2015-2024.\nBut, ~79% of food security-related research relies on other data sources (or doesn’t name the data at all).\n\nNext question:  What other datasets are researchers using for food security-related research?\n\\(\\rightarrow\\) Answering this requires access to full-text data and LLMs trained to identify dataset usage.\nCurrently working on this."
   },
   {
     "objectID": "presentations/presentation_s1088.html#then-this",
@@ -1074,7 +1074,7 @@
     "href": "presentations/presentation_s1088.html#thank-you",
     "title": "Dataset Search & Discovery",
     "section": "Thank You",
-    "text": "Thank You\n\n\n💬 Questions?\n 📩 Lauren.Chenarides@colostate.edu\n🌐 democratizingdata.ai\n  \n\nAcknowledgements:\n\nJulia Lane\nRafael Ladislau\nNick Pallotta\nSpiro Stefanou\nConnor Whalen (undergrad at University of Nebraska-Lincoln)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBack to All Talks."
+    "text": "Thank You\n\n\n💬 Questions?\n 📩 Lauren.Chenarides@colostate.edu\n🌐 democratizingdata.ai\n  \n\n\nScan QR code access these slides\n  \n\n\n\nAcknowledgements:\n\nJulia Lane\nRafael Ladislau\nNick Pallotta\nSpiro Stefanou\nConnor Whalen (undergrad at University of Nebraska-Lincoln)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBack to All Talks."
   },
   {
     "objectID": "presentations/presentation_s1088.html#tracking-usage-of-usda-datasets",
@@ -1159,5 +1159,19 @@
     "title": "Dataset Search & Discovery",
     "section": "Next steps using these metadata",
     "text": "Next steps using these metadata\nBenchmarking: How do the themes connected to S-1088 activities compare with the broader research landscape?\nFunding Strategy: Which agencies and programs are supporting work in these areas?"
+  },
+  {
+    "objectID": "presentations/presentation_s1088.html#access-the-dashboard-to-follow-along",
+    "href": "presentations/presentation_s1088.html#access-the-dashboard-to-follow-along",
+    "title": "Dataset Search & Discovery",
+    "section": "Access the Dashboard to Follow Along",
+    "text": "Access the Dashboard to Follow Along\n\n  \n\nhttps://democratizingdata.ai/tools/dashboard/dimensions/food-agricultural-research/"
+  },
+  {
+    "objectID": "presentations/presentation_s1088.html#scan-qr-code-to-access-the-dashboard-and-follow-along",
+    "href": "presentations/presentation_s1088.html#scan-qr-code-to-access-the-dashboard-and-follow-along",
+    "title": "Dataset Search & Discovery",
+    "section": "Scan QR code to access the Dashboard and follow along",
+    "text": "Scan QR code to access the Dashboard and follow along\n\n  \n\nhttps://democratizingdata.ai/tools/dashboard/dimensions/food-agricultural-research/"
   }
 ]
